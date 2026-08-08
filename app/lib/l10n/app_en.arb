@@ -1,1 +1,120 @@
+{
+  "@@locale": "en",
 
+  "appName": "Atrament",
+  "retry": "Retry",
+  "errorGeneric": "Something went wrong",
+
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "undo": "Undo",
+  "redo": "Redo",
+  "untitledNote": "Untitled",
+
+  "deleteConfirmBody": "This can't be undone.",
+  "deleteNoteTitle": "Delete this note?",
+  "deleteNotebookTitle": "Delete \"{name}\"?",
+  "@deleteNotebookTitle": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+
+  "saveFailedMessage": "Couldn't save. Please try again.",
+  "exportFailedMessage": "Couldn't export this note. Please try again.",
+  "shareFailedMessage": "Couldn't open the share sheet. Please try again.",
+
+  "settingsTitle": "Settings",
+  "searchHint": "Search notes",
+
+  "emptyNotebooksTitle": "No notebooks yet",
+  "emptyNotebooksBody": "Create your first notebook to start writing.",
+  "emptySearchTitle": "No results",
+  "emptySearchBody": "Try a different search term.",
+  "emptyNotebookTitle": "No notes yet",
+  "emptyNotebookBody": "Tap the + button to write your first note.",
+
+  "newNotebookTitle": "New Notebook",
+  "notebookNameHint": "Notebook name",
+  "newNoteTitle": "New Note",
+
+  "sortOptionsTitle": "Sort",
+  "sortByModified": "Last edited",
+  "sortByCreated": "Date created",
+  "sortByTitle": "Title",
+
+  "formatBold": "Bold",
+  "formatItalic": "Italic",
+  "formatUnderline": "Underline",
+  "formatHeading": "Heading",
+  "formatBulletList": "Bullet list",
+  "formatChecklist": "Checklist",
+  "formatQuote": "Quote",
+  "formatCodeBlock": "Code block",
+
+  "penFountainPen": "Fountain Pen",
+  "penGelPen": "Gel Pen",
+  "penPencil": "Pencil",
+  "penHighlighter": "Highlighter",
+  "penEraser": "Eraser",
+  "penStrokeWidth": "Stroke width",
+
+  "toggleHandwritingMode": "Switch between typing and drawing",
+  "biometricLockReason": "Unlock to view this note",
+  "noteLockedMessage": "This note is locked",
+  "unlockButton": "Unlock",
+
+  "exportTitle": "Export",
+  "exportAsTxt": "Export as Text",
+  "exportAsPdf": "Export as PDF",
+
+  "paperStyleSectionTitle": "Paper Style",
+  "paperStyleLined": "Lined",
+  "paperStyleDotGrid": "Dot Grid",
+  "paperStyleGrid": "Grid",
+  "paperStyleBlank": "Blank",
+  "paperStyleCream": "Cream",
+  "paperStyleParchment": "Parchment",
+  "paperStyleVellum": "Vellum",
+
+  "fontSectionTitle": "Note Font",
+  "fontSystem": "System",
+  "fontSerif": "Serif",
+
+  "themeSectionTitle": "Appearance",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "themeParchment": "Parchment",
+
+  "verseSectionTitle": "Daily Verse Display",
+  "verseModeWatermark": "Watermark",
+  "verseModeHeader": "Header",
+  "verseModeFooter": "Footer",
+  "verseModeOff": "Off",
+
+  "notificationsSectionTitle": "Notifications",
+  "dailyReminderToggle": "Daily verse reminder",
+  "reminderTimeLabel": "Reminder time",
+  "notificationPermissionDenied": "Notifications are turned off in system settings.",
+  "dailyReminderBody": "Your daily verse is ready.",
+
+  "privacySectionTitle": "Privacy",
+  "biometricLockToggle": "Lock notes with Face ID / fingerprint",
+
+  "premiumSectionTitle": "Premium",
+  "removeAdsTitle": "Remove Ads",
+  "restorePurchasesButton": "Restore Purchases",
+  "proLabel": "Pro",
+
+  "languageSectionTitle": "Language",
+  "languageFollowsSystem": "Follows your device language setting",
+
+  "premiumScreenTitle": "Remove Ads",
+  "premiumHeadline": "Write without distraction",
+  "premiumBody": "Atrament is free with one small banner ad on the home screen. Removing it doesn't unlock anything else — every feature is already yours.",
+  "premiumMonthlyLabel": "Monthly",
+  "premiumYearlyLabel": "Yearly",
+  "premiumMonthlyPrice": "$0.99/mo",
+  "premiumYearlyPrice": "$9.99/yr",
+  "premiumRestoreButton": "Restore Purchases",
+  "premiumAlreadyProMessage": "You already have Remove Ads. Thank you!"
+}
