@@ -2,7 +2,7 @@ import 'dart:math';
 
 /// Generates locally-unique identifiers for new notes and notebooks.
 ///
-/// Tabula is offline-first with no cross-device sync (Section 1), so a
+/// Atrament is offline-first with no cross-device sync (Section 1), so a
 /// full RFC-4122 UUID (and the extra `uuid` package dependency it would
 /// require) isn't necessary — collision risk only matters within a single
 /// device's local database, and a timestamp + random suffix is more than

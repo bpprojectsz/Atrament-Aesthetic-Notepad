@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-/// Semantic design tokens for Parchment (Section 17 of the blueprint).
+/// Semantic design tokens for Atrament (Section 17 of the blueprint).
 ///
 /// Widget code must never reference raw hex values directly — always go
 /// through [AppColors], [AppTypography], [AppSpacing], or [AppRadius] so a
@@ -250,7 +250,7 @@ class AppMotion {
 class AppConstants {
   const AppConstants._();
 
-  static const String appName = 'Parchment';
+  static const String appName = 'Atrament';
 
   // SharedPreferences keys
   static const String prefThemeMode = 'pref_theme_mode';
@@ -265,7 +265,7 @@ class AppConstants {
   static const String prefHasSeenOnboarding = 'pref_has_seen_onboarding';
 
   // SQLite
-  static const String dbName = 'parchment.db';
+  static const String dbName = 'atrament.db';
   static const int dbVersion = 1;
   static const String tableNotes = 'notes';
   static const String tableNotebooks = 'notebooks';
@@ -279,13 +279,13 @@ class AppConstants {
   // REPLACE: confirm these match App Store Connect / Play Console exactly
   // before submission (see Section 1a of the blueprint).
   static const String iapMonthlyProductId =
-      'com.[youraccount].parchment.pro.monthly';
+      'com.[youraccount].atrament.pro.monthly';
   static const String iapYearlyProductId =
-      'com.[youraccount].parchment.pro.yearly';
+      'com.[youraccount].atrament.pro.yearly';
 
   // External URLs
-  static const String privacyPolicyUrl = 'https://parchment.app/privacy.html';
-  static const String supportUrl = 'https://parchment.app/support.html';
+  static const String privacyPolicyUrl = 'https://atrament.app/privacy.html';
+  static const String supportUrl = 'https://atrament.app/support.html';
 
   // Notification
   static const int dailyVerseNotificationId = 1001;

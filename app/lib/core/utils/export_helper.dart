@@ -132,6 +132,6 @@ class ExportHelper {
     final sanitized = trimmed
         .replaceAll(RegExp(r'[^\w\s-]'), '')
         .replaceAll(RegExp(r'\s+'), '_');
-    return sanitized.isEmpty ? 'parchment_note' : sanitized;
+    return sanitized.isEmpty ? 'atrament_note' : sanitized;
   }
 }
