@@ -1,13 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';
 import 'package:atrament/core/providers/subscription_provider.dart';
 import 'package:atrament/main.dart';
 import 'package:atrament/screens/home_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() {
   setUpAll(() {

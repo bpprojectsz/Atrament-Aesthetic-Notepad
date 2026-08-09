@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:atrament/core/models/note_model.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final createdAt = DateTime(2026, 1, 15, 9, 30);
@@ -78,7 +78,7 @@ void main() {
 
     test('fromJson throws on malformed input rather than silently corrupting data', () {
       expect(
-        () => NoteModel.fromJson(<String, dynamic>{'id': 'note_1'}),
+        () => NoteModel.fromJson(const <String, dynamic>{'id': 'note_1'}),
         throwsA(anything),
       );
     });
