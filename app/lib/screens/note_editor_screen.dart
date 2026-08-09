@@ -259,7 +259,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
 
     return PopScope(
       canPop: false,
-      onPopInvoked: (bool didPop) async {
+      onPopInvokedWithResult: (bool didPop, Object? result) async {
         if (didPop) return;
         await _handlePop();
       },
@@ -423,9 +423,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               size: 48,
               color: AppColors.accent.resolve(mode),
             ),
-            SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.md),
             Text(l10n.noteLockedMessage),
-            SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.md),
             FilledButton(
               onPressed: _checkBiometricLock,
               child: Text(l10n.unlockButton),

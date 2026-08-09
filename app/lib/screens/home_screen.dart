@@ -150,11 +150,11 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSpacing.md),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: AppSpacing.sm),
+            const SizedBox(height: AppSpacing.sm),
             TextField(
               controller: _searchController,
               onChanged: widget.noteProvider.search,
@@ -169,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.md),
             Expanded(
               child: ListenableBuilder(
                 listenable: widget.noteProvider.searchQuery,

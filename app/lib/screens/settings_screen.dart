@@ -171,7 +171,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return AppScaffold(
       title: l10n.settingsTitle,
       body: ListView(
-        padding: EdgeInsets.all(AppSpacing.md),
+        padding: const EdgeInsets.all(AppSpacing.md),
         children: [
           _SectionHeader(l10n.themeSectionTitle),
           ListenableBuilder(
@@ -198,7 +198,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               );
             },
           ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.paperStyleSectionTitle),
           ListTile(
@@ -216,7 +216,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onSelected: _setDefaultPaperStyle,
             ),
           ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.fontSectionTitle),
           FontSelector(
@@ -225,7 +225,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             serifLabel: l10n.fontSerif,
             onChanged: _setFontChoice,
           ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.verseSectionTitle),
           ListenableBuilder(
@@ -247,7 +247,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               );
             },
           ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.notificationsSectionTitle),
           SwitchListTile(
@@ -263,7 +263,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               trailing: Text(_reminderTime.format(context)),
               onTap: _pickReminderTime,
             ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.privacySectionTitle),
           if (_biometricSupported)
@@ -273,7 +273,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               value: _biometricLockEnabled,
               onChanged: _setBiometricLockEnabled,
             ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.premiumSectionTitle),
           ListenableBuilder(
@@ -286,7 +286,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   if (isPro)
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: AppSpacing.sm),
+                      padding: const EdgeInsets.symmetric(vertical: AppSpacing.sm),
                       child: ProBadge(label: l10n.proLabel),
                     )
                   else
@@ -312,7 +312,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               );
             },
           ),
-          SizedBox(height: AppSpacing.lg),
+          const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.languageSectionTitle),
           ListTile(
@@ -371,7 +371,7 @@ class _SectionHeader extends StatelessWidget {
         ? AppThemeMode.dark
         : AppThemeMode.light;
     return Padding(
-      padding: EdgeInsets.only(bottom: AppSpacing.sm),
+      padding: const EdgeInsets.only(bottom: AppSpacing.sm),
       child: Text(
         label,
         style: TextStyle(

@@ -175,7 +175,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
                 Container(
                   width: double.infinity,
                   color: AppColors.warning.resolve(mode).withOpacity(0.15),
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: AppSpacing.md,
                     vertical: AppSpacing.sm,
                   ),
@@ -223,7 +223,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
           background: Container(
             color: AppColors.error.resolve(mode),
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.md),
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
             child: const Icon(Icons.delete_outline, color: Colors.white),
           ),
           confirmDismiss: (_) => ConfirmationDialog.show(

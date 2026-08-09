@@ -53,7 +53,7 @@ class PremiumScreen extends StatelessWidget {
           final error = subscriptionProvider.lastErrorMessage.value;
 
           return Padding(
-            padding: EdgeInsets.all(AppSpacing.lg),
+            padding: const EdgeInsets.all(AppSpacing.lg),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -62,7 +62,7 @@ class PremiumScreen extends StatelessWidget {
                   size: 48,
                   color: AppColors.accent.resolve(mode),
                 ),
-                SizedBox(height: AppSpacing.md),
+                const SizedBox(height: AppSpacing.md),
                 Text(
                   l10n.premiumHeadline,
                   style: TextStyle(
@@ -71,7 +71,7 @@ class PremiumScreen extends StatelessWidget {
                     color: AppColors.textPrimary.resolve(mode),
                   ),
                 ),
-                SizedBox(height: AppSpacing.sm),
+                const SizedBox(height: AppSpacing.sm),
                 Text(
                   l10n.premiumBody,
                   style: TextStyle(
@@ -80,7 +80,7 @@ class PremiumScreen extends StatelessWidget {
                     color: AppColors.textSecondary.resolve(mode),
                   ),
                 ),
-                SizedBox(height: AppSpacing.xl),
+                const SizedBox(height: AppSpacing.xl),
 
                 if (isPro)
                   Text(
@@ -102,7 +102,7 @@ class PremiumScreen extends StatelessWidget {
                         ? null
                         : subscriptionProvider.purchaseMonthly,
                   ),
-                  SizedBox(height: AppSpacing.sm),
+                  const SizedBox(height: AppSpacing.sm),
                   _PlanOption(
                     label: l10n.premiumYearlyLabel,
                     price: _priceFor(
@@ -114,7 +114,7 @@ class PremiumScreen extends StatelessWidget {
                         ? null
                         : subscriptionProvider.purchaseYearly,
                   ),
-                  SizedBox(height: AppSpacing.md),
+                  const SizedBox(height: AppSpacing.md),
                   if (isProcessing)
                     const Center(child: LoadingIndicator())
                   else if (error != null)
@@ -125,7 +125,7 @@ class PremiumScreen extends StatelessWidget {
                         fontSize: AppTypography.footnote.size,
                       ),
                     ),
-                  SizedBox(height: AppSpacing.md),
+                  const SizedBox(height: AppSpacing.md),
                   Center(
                     child: TextButton(
                       onPressed: isProcessing
@@ -172,7 +172,7 @@ class _PlanOption extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(AppRadius.button),
         child: Container(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.md,
             vertical: AppSpacing.md,
           ),
