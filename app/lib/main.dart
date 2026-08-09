@@ -78,14 +78,14 @@ class _AtramentAppState extends State<AtramentApp> {
         return Material(
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(AppSpacing.lg),
+              padding: const EdgeInsets.all(AppSpacing.lg),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Icon(Icons.error_outline, size: 48),
-                  SizedBox(height: AppSpacing.md),
+                  const SizedBox(height: AppSpacing.md),
                   Text(l10n?.errorGeneric ?? 'Something went wrong'),
-                  SizedBox(height: AppSpacing.md),
+                  const SizedBox(height: AppSpacing.md),
                   FilledButton(
                     onPressed: () {
                       // A full app restart isn't available from here, but
