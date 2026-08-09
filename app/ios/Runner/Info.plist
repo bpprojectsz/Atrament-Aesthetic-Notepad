@@ -1,1 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.zdmgold.atrament</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>atrament</string>
+	<key>CFBundleDisplayName</key>
+	<string>Atrament</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>14.0</string>
+
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+
+	<!--
+	  Face ID usage description (Section 12: Apple 5.1.3).
+	  Specific to the actual feature — never generic — per the
+	  compliance mapping's explicit requirement.
+	-->
+	<key>NSFaceIDUsageDescription</key>
+	<string>To lock your notes with Face ID or fingerprint</string>
+
+	<!--
+	  App Tracking Transparency (Section 12: ATT, required because
+	  AdMob is active). Shown once on first launch before any
+	  ad-tracking-relevant request is made.
+	-->
+	<key>NSUserTrackingUsageDescription</key>
+	<string>To show relevant ads and support free note-taking</string>
+
+	<!-- Local notification permission context (daily verse reminder) -->
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>To send your daily verse reminder at the time you choose</string>
+
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+
+	<key>FLTEnableImpeller</key>
+	<false/>
+</dict>
+</plist>
