@@ -6,7 +6,6 @@ import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
-import '../core/providers/theme_provider.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/id_generator.dart';
