@@ -259,7 +259,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
 
     return PopScope(
       canPop: false,
-      onPopInvokedWithCanPop: (didPop, result) async {
+      onPopInvoked: (bool didPop) async {
         if (didPop) return;
         await _handlePop();
       },
@@ -329,7 +329,11 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                 Expanded(
                   child: _isHandwritingMode
                       ? HandwritingCanvas(controller: _handwritingController)
-                      : quill.QuillEditor.basic(controller: _quillController),
+                      : quill.QuillEditor.basic(
+                          configurations: quill.QuillEditorConfigurations(
+                            controller: _quillController,
+                          ),
+                        ),
                 ),
                 _isHandwritingMode
                     ? PenToolbar(
