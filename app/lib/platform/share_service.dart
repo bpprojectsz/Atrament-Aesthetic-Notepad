@@ -14,6 +14,11 @@ class ShareResult {
 /// This is the only file that imports `share_plus` directly — all other
 /// export flow lives in `core/services/export_service.dart`, which writes
 /// bytes to disk but never presents UI.
+///
+/// Uses the static `Share.shareXFiles` / `Share.share` API, which is what
+/// `share_plus ^9.0.0` (the pinned version) exposes — the newer
+/// `SharePlus.instance.share(ShareParams(...))` instance API was
+/// introduced in a later major version and isn't available here.
 class ShareService {
   const ShareService();
 
@@ -25,9 +30,7 @@ class ShareService {
     String? subject,
   }) async {
     try {
-      await SharePlus.instance.share(
-        ShareParams(files: [XFile(filePath)], subject: subject),
-      );
+      await Share.shareXFiles([XFile(filePath)], subject: subject);
       return const ShareResult.success();
     } catch (error, stackTrace) {
       ErrorHandler.report(
@@ -45,9 +48,7 @@ class ShareService {
   /// associated file.
   Future<ShareResult> shareText(String text, {String? subject}) async {
     try {
-      await SharePlus.instance.share(
-        ShareParams(text: text, subject: subject),
-      );
+      await Share.share(text, subject: subject);
       return const ShareResult.success();
     } catch (error, stackTrace) {
       ErrorHandler.report(
