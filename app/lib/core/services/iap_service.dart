@@ -77,10 +77,10 @@ class IapService {
 
       _purchaseSubscription = _iap.purchaseStream.listen(
         _handlePurchaseUpdates,
-        onError: (error, stackTrace) {
+        onError: (Object error, StackTrace stackTrace) {
           ErrorHandler.report(
             error,
-            stackTrace as StackTrace? ?? StackTrace.current,
+            stackTrace,
             message: 'Purchase stream error',
             context: 'iap_service.purchaseStream',
             severity: ErrorSeverity.warning,
