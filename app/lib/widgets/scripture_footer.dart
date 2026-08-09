@@ -26,7 +26,7 @@ class ScriptureFooter extends StatelessWidget {
     );
 
     return Padding(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.md,
         vertical: AppSpacing.sm,
       ),

@@ -30,7 +30,7 @@ class PaperSelector extends StatelessWidget {
   }) {
     return showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(AppRadius.bottomSheetTop),
         ),
@@ -52,7 +52,7 @@ class PaperSelector extends StatelessWidget {
 
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(AppSpacing.md),
+        padding: const EdgeInsets.all(AppSpacing.md),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +65,7 @@ class PaperSelector extends StatelessWidget {
                 color: AppColors.textPrimary.resolve(mode),
               ),
             ),
-            SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.md),
             GridView.count(
               crossAxisCount: 3,
               shrinkWrap: true,
@@ -132,7 +132,7 @@ class _PaperTile extends StatelessWidget {
             children: [
               Expanded(
                 child: ClipRRect(
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(AppRadius.card - 2),
                   ),
                   child: Image.asset(
@@ -148,7 +148,7 @@ class _PaperTile extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: AppSpacing.xxs),
+                padding: const EdgeInsets.symmetric(vertical: AppSpacing.xxs),
                 child: Text(
                   label,
                   maxLines: 1,

@@ -61,7 +61,7 @@ class VerseDisplay extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(text!, style: baseStyle, textAlign: textAlign),
-          SizedBox(height: AppSpacing.xxs),
+          const SizedBox(height: AppSpacing.xxs),
           Text(
             reference,
             style: baseStyle.copyWith(

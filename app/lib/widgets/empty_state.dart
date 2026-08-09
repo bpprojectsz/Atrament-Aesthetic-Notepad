@@ -30,12 +30,12 @@ class EmptyState extends StatelessWidget {
 
     return Center(
       child: Padding(
-        padding: EdgeInsets.all(AppSpacing.xl),
+        padding: const EdgeInsets.all(AppSpacing.xl),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(icon, size: 56, color: iconColor),
-            SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.md),
             Text(
               title,
               textAlign: TextAlign.center,
@@ -46,7 +46,7 @@ class EmptyState extends StatelessWidget {
                 color: titleColor,
               ),
             ),
-            SizedBox(height: AppSpacing.xs),
+            const SizedBox(height: AppSpacing.xs),
             Text(
               body,
               textAlign: TextAlign.center,
@@ -57,7 +57,7 @@ class EmptyState extends StatelessWidget {
               ),
             ),
             if (action != null) ...[
-              SizedBox(height: AppSpacing.lg),
+              const SizedBox(height: AppSpacing.lg),
               action!,
             ],
           ],

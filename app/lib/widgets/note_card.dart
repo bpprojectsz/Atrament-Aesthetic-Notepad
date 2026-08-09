@@ -55,7 +55,7 @@ class NoteCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(AppRadius.card),
                   ),
                   child: AspectRatio(
@@ -74,7 +74,7 @@ class NoteCard extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(AppSpacing.sm),
+                  padding: const EdgeInsets.all(AppSpacing.sm),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -89,7 +89,7 @@ class NoteCard extends StatelessWidget {
                           color: titleColor,
                         ),
                       ),
-                      SizedBox(height: AppSpacing.xxs),
+                      const SizedBox(height: AppSpacing.xxs),
                       Text(
                         dateLabel,
                         style: TextStyle(

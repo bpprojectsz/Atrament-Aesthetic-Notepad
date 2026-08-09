@@ -20,7 +20,7 @@ class ProBadge extends StatelessWidget {
     return Semantics(
       label: label,
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.sm,
           vertical: AppSpacing.xxs,
         ),

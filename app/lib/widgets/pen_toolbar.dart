@@ -58,7 +58,7 @@ class PenToolbar extends StatelessWidget {
             color: bgColor,
             border: Border(top: BorderSide(color: borderColor, width: 0.5)),
           ),
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.sm,
             vertical: AppSpacing.xs,
           ),

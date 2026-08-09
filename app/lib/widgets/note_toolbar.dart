@@ -76,7 +76,7 @@ class NoteToolbar extends StatelessWidget {
         color: bgColor,
         border: Border(top: BorderSide(color: borderColor, width: 0.5)),
       ),
-      padding: EdgeInsets.symmetric(horizontal: AppSpacing.xs),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xs),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(

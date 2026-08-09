@@ -43,7 +43,7 @@ class NoteListItem extends StatelessWidget {
           constraints: const BoxConstraints(
             minHeight: AppElevation.minTouchTarget,
           ),
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.md,
             vertical: AppSpacing.sm,
           ),
@@ -68,7 +68,7 @@ class NoteListItem extends StatelessWidget {
                       ),
                     ),
                     if (previewText.trim().isNotEmpty) ...[
-                      SizedBox(height: AppSpacing.xxs),
+                      const SizedBox(height: AppSpacing.xxs),
                       Text(
                         previewText,
                         maxLines: 1,
@@ -83,7 +83,7 @@ class NoteListItem extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: AppSpacing.sm),
+              const SizedBox(width: AppSpacing.sm),
               Text(
                 dateLabel,
                 style: TextStyle(
