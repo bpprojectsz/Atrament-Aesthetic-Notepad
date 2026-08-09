@@ -53,6 +53,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^4.0.0
   flutter_native_splash: ^2.4.1
+  sqflite_common_ffi: ^2.3.3 # required for local_storage_test.dart — sqflite needs a platform channel that plain `flutter test` doesn't provide; ffi runs real SQLite on the test VM instead
 
 flutter:
   uses-material-design: true
