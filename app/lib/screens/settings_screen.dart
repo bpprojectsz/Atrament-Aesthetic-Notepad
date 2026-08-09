@@ -160,9 +160,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final themeProvider = context.read<ThemeProvider>();
     final verseProvider = context.read<VerseProvider>();
     final subscriptionProvider = context.read<SubscriptionProvider>();
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
 
     if (_loadingPrefs) {
       return AppScaffold(
