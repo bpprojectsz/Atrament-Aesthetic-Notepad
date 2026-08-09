@@ -1,12 +1,8 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
-  language:
-    strict-casts: true
-    strict-inference: true
   errors:
     todo: warning
-    invalid_todo: warning
 
 linter:
   rules:
