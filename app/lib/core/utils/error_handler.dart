@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/foundation.dart';
 
 /// Severity classification for reported errors. Used to decide whether a
