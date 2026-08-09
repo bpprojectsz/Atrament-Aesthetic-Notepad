@@ -94,7 +94,7 @@ class ExportHelper {
                   color: PdfColors.grey600,
                 ),
               ),
-              pw.SizedBox(height: 16),
+              const pw.SizedBox(height: 16),
               pw.Text(
                 note.plainTextContent,
                 style: pw.TextStyle(
