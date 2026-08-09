@@ -1,1 +1,59 @@
+workflows:
+  ios-workflow:
+    name: "Atrament iOS Build"
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        BUNDLE_ID: "com.zdmgold.atrament"
+      groups:
+        - app_store_credentials  # APP_STORE_CONNECT_KEY_ID, APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_PRIVATE_KEY — set in Codemagic UI, never committed
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          cd app
+          flutter pub get
 
+      - name: Verify no debug artifacts shipped
+        script: |
+          cd app
+          if grep -rn "TODO\|FIXME" lib/ --include="*.dart"; then
+            echo "TODO/FIXME markers found in lib/ — not allowed in shipped code"
+            exit 1
+          fi
+
+      - name: Analyze
+        script: |
+          cd app
+          flutter analyze
+
+      - name: Run tests
+        script: |
+          cd app
+          flutter test
+
+      - name: Install CocoaPods
+        script: |
+          cd app/ios
+          pod install --repo-update
+
+      - name: Build IPA
+        script: |
+          cd app
+          flutter build ipa --release \
+            --export-options-plist=ios/ExportOptions.plist
+
+    artifacts:
+      - app/build/ios/ipa/*.ipa
+      - app/build/ios/**/*.dSYM.zip
+
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_KEY_ID
+        api_issuer: $APP_STORE_CONNECT_ISSUER_ID
+        api_private_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        submit_to_testflight: true
+        submit_to_app_store: false
