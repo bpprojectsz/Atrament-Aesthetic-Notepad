@@ -30,6 +30,16 @@ Future<void> main() async {
   // throw (Section 15).
   ErrorHandler.install();
 
+  // ErrorWidget.builder is a global, app-wide hook — it belongs here at
+  // real startup, not inside AtramentApp's initState(). Setting it on a
+  // widget's lifecycle means every AtramentApp construction (including
+  // in widget tests, which build AtramentApp directly without going
+  // through main()) mutates global state the test framework doesn't
+  // expect and can't clean up, which fails
+  // TestWidgetsFlutterBinding's built-in check that ErrorWidget.builder
+  // is unchanged after a test.
+  ErrorWidget.builder = _buildErrorWidget;
+
   // Fire-and-forget platform SDK initialization. Both services degrade
   // gracefully on failure (Sections 7 and 14), so the app proceeds to
   // runApp regardless of outcome.
@@ -37,6 +47,46 @@ Future<void> main() async {
   unawaited(NotificationService.instance.initialize());
 
   runApp(const AtramentApp());
+}
+
+/// Fallback UI for any framework error, installed via [ErrorWidget.builder]
+/// in [main]. A top-level function rather than a widget-state method, since
+/// it needs no instance state and setting it belongs in `main()` (see the
+/// comment there).
+Widget _buildErrorWidget(FlutterErrorDetails details) {
+  return Builder(
+    builder: (context) {
+      final l10n = AppLocalizations.of(context);
+      return Material(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(AppSpacing.lg),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.error_outline, size: 48),
+                const SizedBox(height: AppSpacing.md),
+                Text(l10n?.errorGeneric ?? 'Something went wrong'),
+                const SizedBox(height: AppSpacing.md),
+                FilledButton(
+                  onPressed: () {
+                    // A full app restart isn't available from here, but
+                    // popping back to the previous route (if any) lets
+                    // the user retry without a full relaunch.
+                    final navigator = Navigator.maybeOf(context);
+                    if (navigator != null && navigator.canPop()) {
+                      navigator.pop();
+                    }
+                  },
+                  child: Text(l10n?.retry ?? 'Retry'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    },
+  );
 }
 
 class AtramentApp extends StatefulWidget {
@@ -62,49 +112,6 @@ class _AtramentAppState extends State<AtramentApp> {
     _noteProvider = NoteProvider();
     _notebookProvider = NotebookProvider();
     _verseProvider = VerseProvider()..init();
-
-    // ErrorWidget.builder must be set once, ideally after
-    // AppLocalizations is available — but ErrorWidget can render before a
-    // Localizations ancestor exists (e.g. very early framework errors),
-    // so this falls back to plain English rather than crashing on a null
-    // AppLocalizations lookup.
-    ErrorWidget.builder = _buildErrorWidget;
-  }
-
-  Widget _buildErrorWidget(FlutterErrorDetails details) {
-    return Builder(
-      builder: (context) {
-        final l10n = AppLocalizations.of(context);
-        return Material(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(AppSpacing.lg),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.error_outline, size: 48),
-                  const SizedBox(height: AppSpacing.md),
-                  Text(l10n?.errorGeneric ?? 'Something went wrong'),
-                  const SizedBox(height: AppSpacing.md),
-                  FilledButton(
-                    onPressed: () {
-                      // A full app restart isn't available from here, but
-                      // popping back to the previous route (if any) lets
-                      // the user retry without a full relaunch.
-                      final navigator = Navigator.maybeOf(context);
-                      if (navigator != null && navigator.canPop()) {
-                        navigator.pop();
-                      }
-                    },
-                    child: Text(l10n?.retry ?? 'Retry'),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        );
-      },
-    );
   }
 
   @override
