@@ -1,1 +1,14 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash background shown before Flutter draws its first frame.
+     flutter_native_splash (configured in pubspec.yaml) overwrites this
+     file at build time with the real logo centered on this background —
+     this hand-written version is the fallback if that build step is ever
+     skipped, so the app never shows a blank white flash either way. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher" />
+    </item>
+</layer-list>
