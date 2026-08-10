@@ -20,15 +20,25 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "com.zdmgold.atrament"
 
-    // Resolved dynamically from the Flutter SDK's own bundled tooling
-    // rather than hardcoded, so this always matches whatever compile/target
-    // SDK and NDK versions the pinned Flutter release actually expects.
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Overridden above Flutter's own dynamic defaults: several plugin
+    // dependencies (flutter_plugin_android_lifecycle, and NDK
+    // requirements from device_info_plus, file_picker,
+    // flutter_local_notifications, google_mobile_ads, and others) need a
+    // higher SDK/NDK than flutter.compileSdkVersion/flutter.ndkVersion
+    // resolve to on this Flutter version. Values below are copied
+    // directly from the Gradle build output's own "Fix this issue by
+    // adding..." instructions, not guessed.
+    compileSdk = 35
+    ndkVersion = "25.1.8937393"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        // flutter_local_notifications v10+ uses java.time APIs
+        // internally for scheduling and requires desugaring to be
+        // enabled even for apps that don't touch java.time directly —
+        // confirmed against the package's own pub.dev documentation.
+        coreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
@@ -87,4 +97,6 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation 'androidx.multidex:multidex:2.0.1'
+    // Required by coreLibraryDesugaringEnabled above.
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
 }
