@@ -14,6 +14,15 @@ android/app/*.jks
 android/app/*.keystore
 **/android/**/GeneratedPluginRegistrant.java
 
+# Android Gradle wrapper — deliberately NOT committed. Flutter's own
+# tooling auto-generates these at build time (copied from the SDK's
+# bundled bin/cache/artifacts/gradle_wrapper/), matching Flutter's own
+# official .gitignore convention. Do not hand-add these files.
+**/android/**/gradle-wrapper.jar
+**/android/gradlew
+**/android/gradlew.bat
+**/android/captures/
+
 # iOS
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
