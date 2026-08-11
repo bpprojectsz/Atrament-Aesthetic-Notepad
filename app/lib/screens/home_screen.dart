@@ -8,6 +8,7 @@ import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
+import '../core/utils/error_handler.dart';
 import '../core/utils/id_generator.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
@@ -85,13 +86,15 @@ class _HomeScreenState extends State<HomeScreen> {
     final trimmed = name?.trim();
     if (trimmed == null || trimmed.isEmpty || !mounted) return;
 
+    final now = DateTime.now();
     final notebook = NotebookModel(
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.value,
       paperStyleDefault: PaperStyleCatalog.all.first.id,
       sortOrder: widget.notebookProvider.notebooks.value.length,
-      createdAt: DateTime.now(),
+      createdAt: now,
+      modifiedAt: now,
     );
 
     final succeeded = await widget.notebookProvider.createNotebook(notebook);
@@ -107,7 +110,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
     } else {
-      _showSnackBar(l10n.saveFailedMessage);
+      // TEMPORARY DIAGNOSTIC: appends the real underlying exception to
+      // the failure message so this can be reported back precisely,
+      // instead of only showing the generic user-facing string. Remove
+      // once the actual root cause of "couldn't save" is confirmed and
+      // fixed — this is not something that should ship to real users,
+      // who shouldn't see raw exception text.
+      final rawError = ErrorHandler.lastError.value;
+      _showSnackBar(
+        '${l10n.saveFailedMessage}\n[DEBUG] ${rawError?.error ?? "no error captured"}',
+      );
     }
   }
 
@@ -271,7 +283,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return NoteCard(
               title: notebook.name,
               dateLabel: DateFormatter.short(
-                notebook.createdAt,
+                notebook.modifiedAt,
                 localeCode: Localizations.localeOf(context).languageCode,
               ),
               paperStyle: PaperStyleCatalog.byId(notebook.paperStyleDefault),
