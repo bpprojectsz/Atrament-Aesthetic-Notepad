@@ -11,8 +11,11 @@ import '../core/services/iap_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../platform/biometric_service.dart';
+import '../platform/debug_log_service.dart';
 import '../platform/notification_service.dart';
+import '../platform/share_service.dart';
 import '../widgets/app_scaffold.dart';
+import '../widgets/confirmation_dialog.dart';
 import '../widgets/font_selector.dart';
 import '../widgets/paper_selector.dart';
 import '../widgets/pro_badge.dart';
@@ -30,6 +33,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   final BiometricService _biometricService = BiometricService();
+  final ShareService _shareService = const ShareService();
 
   String _defaultPaperStyleId = 'cream';
   NoteFontChoice _fontChoice = NoteFontChoice.system;
@@ -152,6 +156,50 @@ class _SettingsScreenState extends State<SettingsScreen> {
     setState(() => _biometricLockEnabled = enabled);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(AppConstants.prefBiometricLockEnabled, enabled);
+  }
+
+  Future<void> _shareDebugLog() async {
+    final l10n = AppLocalizations.of(context)!;
+    final path = await DebugLogService.instance.exportableLogPath();
+
+    if (!mounted) return;
+
+    if (path == null) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(l10n.noDebugLogMessage)));
+      return;
+    }
+
+    final result = await _shareService.shareFile(
+      path,
+      subject: '${l10n.appName} debug log',
+    );
+
+    if (!mounted) return;
+    if (result.failed) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(l10n.shareFailedMessage)));
+    }
+  }
+
+  Future<void> _clearDebugLog() async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await ConfirmationDialog.show(
+      context,
+      title: l10n.clearDebugLogTitle,
+      body: l10n.clearDebugLogBody,
+      cancelLabel: l10n.cancel,
+      confirmLabel: l10n.delete,
+    );
+    if (confirmed != true) return;
+
+    await DebugLogService.instance.clearLog();
+    if (!mounted) return;
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(l10n.debugLogClearedMessage)));
   }
 
   @override
@@ -319,6 +367,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
             contentPadding: EdgeInsets.zero,
             title: Text(Localizations.localeOf(context).toLanguageTag()),
             subtitle: Text(l10n.languageFollowsSystem),
+          ),
+          const SizedBox(height: AppSpacing.lg),
+
+          _SectionHeader(l10n.supportSectionTitle),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.bug_report_outlined),
+            title: Text(l10n.shareDebugLogButton),
+            subtitle: Text(l10n.shareDebugLogSubtitle),
+            onTap: _shareDebugLog,
+          ),
+          TextButton(
+            onPressed: _clearDebugLog,
+            child: Text(l10n.clearDebugLogButton),
           ),
         ],
       ),
