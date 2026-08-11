@@ -10,6 +10,7 @@ class NotebookModel {
     required this.paperStyleDefault,
     required this.sortOrder,
     required this.createdAt,
+    required this.modifiedAt,
   });
 
   final String id;
@@ -27,6 +28,14 @@ class NotebookModel {
 
   final DateTime createdAt;
 
+  /// Last time this notebook's own fields (name, cover color, default
+  /// paper style) were edited — NOT bumped when notes inside it change,
+  /// since that would require every note save to also touch its parent
+  /// notebook row. Notebook cards on the home screen display this instead
+  /// of [createdAt], matching how note cards show their own
+  /// last-edited time rather than creation time.
+  final DateTime modifiedAt;
+
   NotebookModel copyWith({
     String? id,
     String? name,
@@ -34,6 +43,7 @@ class NotebookModel {
     String? paperStyleDefault,
     int? sortOrder,
     DateTime? createdAt,
+    DateTime? modifiedAt,
   }) {
     return NotebookModel(
       id: id ?? this.id,
@@ -42,6 +52,7 @@ class NotebookModel {
       paperStyleDefault: paperStyleDefault ?? this.paperStyleDefault,
       sortOrder: sortOrder ?? this.sortOrder,
       createdAt: createdAt ?? this.createdAt,
+      modifiedAt: modifiedAt ?? this.modifiedAt,
     );
   }
 
@@ -53,6 +64,7 @@ class NotebookModel {
       'paperStyleDefault': paperStyleDefault,
       'sortOrder': sortOrder,
       'createdAt': createdAt.toIso8601String(),
+      'modifiedAt': modifiedAt.toIso8601String(),
     };
   }
 
@@ -64,6 +76,13 @@ class NotebookModel {
       paperStyleDefault: json['paperStyleDefault'] as String,
       sortOrder: json['sortOrder'] as int,
       createdAt: DateTime.parse(json['createdAt'] as String),
+      // Backfills from createdAt for rows written before schema v2 added
+      // this column — see local_storage.dart's migration, which sets the
+      // same default at the SQL level, so this fallback is a second,
+      // redundant safety net rather than the primary mechanism.
+      modifiedAt: json['modifiedAt'] != null
+          ? DateTime.parse(json['modifiedAt'] as String)
+          : DateTime.parse(json['createdAt'] as String),
     );
   }
 
@@ -76,7 +95,8 @@ class NotebookModel {
         other.coverColor == coverColor &&
         other.paperStyleDefault == paperStyleDefault &&
         other.sortOrder == sortOrder &&
-        other.createdAt == createdAt;
+        other.createdAt == createdAt &&
+        other.modifiedAt == modifiedAt;
   }
 
   @override
@@ -87,6 +107,7 @@ class NotebookModel {
     paperStyleDefault,
     sortOrder,
     createdAt,
+    modifiedAt,
   );
 
   @override
