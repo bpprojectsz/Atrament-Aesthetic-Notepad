@@ -47,12 +47,17 @@ class NotebookProvider {
     return succeeded;
   }
 
+  /// Persists an edit to [notebook]'s own fields (name, cover color,
+  /// default paper style). Always bumps [NotebookModel.modifiedAt] to
+  /// now, regardless of what the caller passed in, so this can't be
+  /// forgotten at a call site.
   Future<bool> updateNotebook(NotebookModel notebook) async {
-    final succeeded = await _storage.saveNotebook(notebook);
+    final touched = notebook.copyWith(modifiedAt: DateTime.now());
+    final succeeded = await _storage.saveNotebook(touched);
     final current = List<NotebookModel>.from(notebooks.value);
-    final index = current.indexWhere((n) => n.id == notebook.id);
+    final index = current.indexWhere((n) => n.id == touched.id);
     if (index >= 0) {
-      current[index] = notebook;
+      current[index] = touched;
       notebooks.value = current;
     }
     if (!succeeded) {
