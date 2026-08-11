@@ -12,6 +12,7 @@ import 'core/providers/verse_provider.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
 import 'platform/admob_service.dart';
+import 'platform/debug_log_service.dart';
 import 'platform/notification_service.dart';
 import 'screens/home_screen.dart';
 
@@ -29,6 +30,12 @@ Future<void> main() async {
   // Global error boundary — must be installed before anything else can
   // throw (Section 15).
   ErrorHandler.install();
+
+  // Persists every reported error to a local file for later export via
+  // Settings → Share Debug Log. ErrorHandler stays platform-agnostic
+  // (core/); this hook is the one place that connects it to real file
+  // I/O (platform/).
+  ErrorHandler.reportHook = DebugLogService.instance.appendToLog;
 
   // ErrorWidget.builder is a global, app-wide hook — it belongs here at
   // real startup, not inside AtramentApp's initState(). Setting it on a
