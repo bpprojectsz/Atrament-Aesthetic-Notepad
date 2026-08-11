@@ -266,7 +266,7 @@ class AppConstants {
 
   // SQLite
   static const String dbName = 'atrament.db';
-  static const int dbVersion = 1;
+  static const int dbVersion = 2; // v2: added notebooks.modifiedAt
   static const String tableNotes = 'notes';
   static const String tableNotebooks = 'notebooks';
   static const String tableNotesFts = 'notes_fts';
@@ -279,9 +279,9 @@ class AppConstants {
   // REPLACE: confirm these match App Store Connect / Play Console exactly
   // before submission (see Section 1a of the blueprint).
   static const String iapMonthlyProductId =
-      'com.[youraccount].atrament.pro.monthly';
+      'com.zdmgold.atrament.pro.monthly';
   static const String iapYearlyProductId =
-      'com.[youraccount].atrament.pro.yearly';
+      'com.zdmgold.atrament.pro.yearly';
 
   // External URLs
   static const String privacyPolicyUrl = 'https://atrament.app/privacy.html';
