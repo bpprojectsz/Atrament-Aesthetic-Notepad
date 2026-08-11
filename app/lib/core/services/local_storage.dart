@@ -51,7 +51,8 @@ class LocalStorage {
             coverColor INTEGER NOT NULL,
             paperStyleDefault TEXT NOT NULL,
             sortOrder INTEGER NOT NULL,
-            createdAt TEXT NOT NULL
+            createdAt TEXT NOT NULL,
+            modifiedAt TEXT NOT NULL
           )
         ''');
 
@@ -88,10 +89,27 @@ class LocalStorage {
     );
   }
 
-  /// Placeholder migration chain for future schema versions. Each future
-  /// version bump adds a case here; nothing to do yet since we're at v1.
+  /// Migration chain for schema version bumps. Each version adds a case
+  /// here — never remove or renumber past cases, since a device could be
+  /// upgrading from any older version to the current one in one jump.
   Future<void> _migrate(Database db, int oldVersion, int newVersion) async {
-    // No migrations needed yet — AppConstants.dbVersion is still 1.
+    if (oldVersion < 2) {
+      // v2: added notebooks.modifiedAt (Section 15 — notebooks previously
+      // only tracked creation time, not last-edited time, unlike notes).
+      // SQLite requires a DEFAULT when adding a NOT NULL column to a
+      // table that may already have rows; backfilling with each row's
+      // own createdAt is the only sensible default, since we have no
+      // record of when an existing notebook was actually last edited.
+      await db.execute('''
+        ALTER TABLE ${AppConstants.tableNotebooks}
+        ADD COLUMN modifiedAt TEXT NOT NULL DEFAULT ''
+      ''');
+      await db.execute('''
+        UPDATE ${AppConstants.tableNotebooks}
+        SET modifiedAt = createdAt
+        WHERE modifiedAt = ''
+      ''');
+    }
   }
 
   Future<T> _guarded<T>(
