@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "$0.99/माह",
   "premiumYearlyPrice": "$9.99/वर्ष",
   "premiumRestoreButton": "खरीदारी पुनर्स्थापित करें",
-  "premiumAlreadyProMessage": "आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!"
+  "premiumAlreadyProMessage": "आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!",
+  "supportSectionTitle": "सहायता",
+  "shareDebugLogButton": "डीबग लॉग साझा करें",
+  "shareDebugLogSubtitle": "अगर कुछ काम नहीं कर रहा है तो तकनीकी रिपोर्ट भेजें",
+  "noDebugLogMessage": "अभी तक रिपोर्ट करने के लिए कुछ नहीं है।",
+  "clearDebugLogButton": "डीबग लॉग साफ़ करें",
+  "clearDebugLogTitle": "क्या डीबग लॉग साफ़ करना है?",
+  "clearDebugLogBody": "इससे आपके डिवाइस से सहेजी गई तकनीकी रिपोर्ट हट जाएगी।",
+  "debugLogClearedMessage": "डीबग लॉग साफ़ कर दिया गया।"
 }

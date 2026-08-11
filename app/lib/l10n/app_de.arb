@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "0,99 $/Monat",
   "premiumYearlyPrice": "9,99 $/Jahr",
   "premiumRestoreButton": "Käufe wiederherstellen",
-  "premiumAlreadyProMessage": "Du hast bereits Werbung entfernen. Danke!"
+  "premiumAlreadyProMessage": "Du hast bereits Werbung entfernen. Danke!",
+  "supportSectionTitle": "Support",
+  "shareDebugLogButton": "Debug-Protokoll teilen",
+  "shareDebugLogSubtitle": "Sende einen technischen Bericht, wenn etwas nicht funktioniert",
+  "noDebugLogMessage": "Bisher nichts zu melden.",
+  "clearDebugLogButton": "Debug-Protokoll löschen",
+  "clearDebugLogTitle": "Debug-Protokoll löschen?",
+  "clearDebugLogBody": "Dadurch wird der gespeicherte technische Bericht von deinem Gerät entfernt.",
+  "debugLogClearedMessage": "Debug-Protokoll gelöscht."
 }

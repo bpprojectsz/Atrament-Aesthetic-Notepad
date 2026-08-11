@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "0,99 $/mois",
   "premiumYearlyPrice": "9,99 $/an",
   "premiumRestoreButton": "Restaurer les achats",
-  "premiumAlreadyProMessage": "Vous avez déjà Supprimer les publicités. Merci !"
+  "premiumAlreadyProMessage": "Vous avez déjà Supprimer les publicités. Merci !",
+  "supportSectionTitle": "Assistance",
+  "shareDebugLogButton": "Partager le journal de débogage",
+  "shareDebugLogSubtitle": "Envoyez un rapport technique si quelque chose ne fonctionne pas",
+  "noDebugLogMessage": "Aucun problème à signaler pour l'instant.",
+  "clearDebugLogButton": "Effacer le journal de débogage",
+  "clearDebugLogTitle": "Effacer le journal de débogage ?",
+  "clearDebugLogBody": "Cela supprime le rapport technique enregistré sur votre appareil.",
+  "debugLogClearedMessage": "Journal de débogage effacé."
 }

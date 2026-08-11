@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "$0.99/月",
   "premiumYearlyPrice": "$9.99/年",
   "premiumRestoreButton": "購入を復元",
-  "premiumAlreadyProMessage": "すでに広告削除をご利用中です。ありがとうございます！"
+  "premiumAlreadyProMessage": "すでに広告削除をご利用中です。ありがとうございます！",
+  "supportSectionTitle": "サポート",
+  "shareDebugLogButton": "デバッグログを共有",
+  "shareDebugLogSubtitle": "不具合がある場合は技術レポートを送信してください",
+  "noDebugLogMessage": "報告する問題はまだありません。",
+  "clearDebugLogButton": "デバッグログを消去",
+  "clearDebugLogTitle": "デバッグログを消去しますか？",
+  "clearDebugLogBody": "デバイスに保存されている技術レポートが削除されます。",
+  "debugLogClearedMessage": "デバッグログを消去しました。"
 }

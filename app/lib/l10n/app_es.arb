@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "$0.99/mes",
   "premiumYearlyPrice": "$9.99/año",
   "premiumRestoreButton": "Restaurar compras",
-  "premiumAlreadyProMessage": "Ya tienes Quitar anuncios. ¡Gracias!"
+  "premiumAlreadyProMessage": "Ya tienes Quitar anuncios. ¡Gracias!",
+  "supportSectionTitle": "Soporte",
+  "shareDebugLogButton": "Compartir registro de depuración",
+  "shareDebugLogSubtitle": "Envía un informe técnico si algo no funciona",
+  "noDebugLogMessage": "Aún no hay incidencias que reportar.",
+  "clearDebugLogButton": "Borrar registro de depuración",
+  "clearDebugLogTitle": "¿Borrar el registro de depuración?",
+  "clearDebugLogBody": "Esto elimina el informe técnico guardado en tu dispositivo.",
+  "debugLogClearedMessage": "Registro de depuración borrado."
 }

@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "$0.99/月",
   "premiumYearlyPrice": "$9.99/年",
   "premiumRestoreButton": "恢复购买",
-  "premiumAlreadyProMessage": "你已拥有移除广告功能，谢谢！"
+  "premiumAlreadyProMessage": "你已拥有移除广告功能，谢谢！",
+  "supportSectionTitle": "支持",
+  "shareDebugLogButton": "分享调试日志",
+  "shareDebugLogSubtitle": "如果出现问题，请发送技术报告",
+  "noDebugLogMessage": "暂无需要报告的问题。",
+  "clearDebugLogButton": "清除调试日志",
+  "clearDebugLogTitle": "要清除调试日志吗？",
+  "clearDebugLogBody": "这将删除设备上保存的技术报告。",
+  "debugLogClearedMessage": "调试日志已清除。"
 }

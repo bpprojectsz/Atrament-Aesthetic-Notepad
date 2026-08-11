@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "0.99$/חודש",
   "premiumYearlyPrice": "9.99$/שנה",
   "premiumRestoreButton": "שחזור רכישות",
-  "premiumAlreadyProMessage": "כבר יש לך הסרת פרסומות. תודה!"
+  "premiumAlreadyProMessage": "כבר יש לך הסרת פרסומות. תודה!",
+  "supportSectionTitle": "תמיכה",
+  "shareDebugLogButton": "שתף יומן ניפוי באגים",
+  "shareDebugLogSubtitle": "שלח דוח טכני אם משהו לא עובד",
+  "noDebugLogMessage": "אין עדיין בעיות לדווח עליהן.",
+  "clearDebugLogButton": "נקה יומן ניפוי באגים",
+  "clearDebugLogTitle": "לנקות את יומן ניפוי הבאגים?",
+  "clearDebugLogBody": "פעולה זו מסירה את הדוח הטכני השמור מהמכשיר שלך.",
+  "debugLogClearedMessage": "יומן ניפוי הבאגים נוקה."
 }

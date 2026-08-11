@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "$0.99/월",
   "premiumYearlyPrice": "$9.99/년",
   "premiumRestoreButton": "구매 복원",
-  "premiumAlreadyProMessage": "이미 광고 제거를 이용 중입니다. 감사합니다!"
+  "premiumAlreadyProMessage": "이미 광고 제거를 이용 중입니다. 감사합니다!",
+  "supportSectionTitle": "지원",
+  "shareDebugLogButton": "디버그 로그 공유",
+  "shareDebugLogSubtitle": "문제가 있으면 기술 보고서를 보내주세요",
+  "noDebugLogMessage": "아직 보고할 문제가 없습니다.",
+  "clearDebugLogButton": "디버그 로그 지우기",
+  "clearDebugLogTitle": "디버그 로그를 지우시겠습니까?",
+  "clearDebugLogBody": "기기에 저장된 기술 보고서가 제거됩니다.",
+  "debugLogClearedMessage": "디버그 로그가 지워졌습니다."
 }

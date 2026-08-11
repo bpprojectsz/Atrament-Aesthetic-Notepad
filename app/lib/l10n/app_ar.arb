@@ -99,5 +99,13 @@
   "premiumMonthlyPrice": "0.99$/شهر",
   "premiumYearlyPrice": "9.99$/سنة",
   "premiumRestoreButton": "استعادة المشتريات",
-  "premiumAlreadyProMessage": "لديك بالفعل ميزة إزالة الإعلانات. شكرًا لك!"
+  "premiumAlreadyProMessage": "لديك بالفعل ميزة إزالة الإعلانات. شكرًا لك!",
+  "supportSectionTitle": "الدعم",
+  "shareDebugLogButton": "مشاركة سجل التصحيح",
+  "shareDebugLogSubtitle": "أرسل تقريرًا تقنيًا إذا كان هناك خلل ما",
+  "noDebugLogMessage": "لا توجد مشكلات للإبلاغ عنها بعد.",
+  "clearDebugLogButton": "مسح سجل التصحيح",
+  "clearDebugLogTitle": "هل تريد مسح سجل التصحيح؟",
+  "clearDebugLogBody": "سيؤدي هذا إلى إزالة التقرير التقني المحفوظ من جهازك.",
+  "debugLogClearedMessage": "تم مسح سجل التصحيح."
 }
