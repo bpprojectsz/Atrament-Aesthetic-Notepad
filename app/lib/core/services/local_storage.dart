@@ -1,4 +1,7 @@
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import '../models/note_model.dart';
 import '../models/notebook_model.dart';
@@ -27,6 +30,7 @@ class LocalStorage {
   static final LocalStorage instance = LocalStorage._internal();
 
   Database? _db;
+  bool _ffiInitialized = false;
 
   Future<Database> get _database async {
     final existing = _db;
@@ -37,8 +41,27 @@ class LocalStorage {
   }
 
   Future<Database> _open() async {
-    final path = await getDatabasesPath();
-    final fullPath = '$path/${AppConstants.dbName}';
+    // sqflite's default Android backend calls into
+    // android.database.sqlite.SQLiteDatabase — an OS framework class, not
+    // a loadable library an app can override. The device's system SQLite
+    // isn't guaranteed to include FTS5 (several Android builds omit it),
+    // and bundling sqlite3_flutter_libs alone doesn't help, since that
+    // only supplies a native library for Dart's direct FFI bindings.
+    // Explicitly switching to databaseFactoryFfi routes every call
+    // through those FFI bindings instead, which do use the bundled
+    // modern SQLite (with FTS5) rather than the OS-provided one.
+    if (!_ffiInitialized) {
+      sqfliteFfiInit();
+      databaseFactory = databaseFactoryFfi;
+      _ffiInitialized = true;
+    }
+
+    // getDatabasesPath() has an unreliable implementation under the ffi
+    // factory (per sqflite_common_ffi's own documentation) — resolving
+    // the path via path_provider instead, as that documentation itself
+    // recommends.
+    final dir = await getApplicationDocumentsDirectory();
+    final fullPath = p.join(dir.path, AppConstants.dbName);
 
     return openDatabase(
       fullPath,
