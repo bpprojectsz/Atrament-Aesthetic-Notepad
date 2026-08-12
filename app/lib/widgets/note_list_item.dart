@@ -13,6 +13,8 @@ class NoteListItem extends StatelessWidget {
     required this.dateLabel,
     required this.onTap,
     this.onLongPress,
+    this.onDelete,
+    this.deleteTooltip,
   });
 
   final String title;
@@ -20,6 +22,15 @@ class NoteListItem extends StatelessWidget {
   final String dateLabel;
   final VoidCallback onTap;
   final VoidCallback? onLongPress;
+
+  /// Explicit, always-visible delete action — shown as a trailing icon
+  /// button when provided, alongside (not instead of) any swipe-to-delete
+  /// gesture the caller wraps this widget in. Swipe alone has no visual
+  /// affordance hinting it exists, which makes deletion easy to miss
+  /// entirely; this gives every user a discoverable way to delete a note
+  /// regardless of whether they'd ever try swiping.
+  final VoidCallback? onDelete;
+  final String? deleteTooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +102,18 @@ class NoteListItem extends StatelessWidget {
                   color: dateColor,
                 ),
               ),
+              if (onDelete != null)
+                Semantics(
+                  button: true,
+                  label: deleteTooltip,
+                  child: IconButton(
+                    icon: const Icon(Icons.delete_outline),
+                    iconSize: 20,
+                    color: dateColor,
+                    tooltip: deleteTooltip,
+                    onPressed: onDelete,
+                  ),
+                ),
             ],
           ),
         ),
