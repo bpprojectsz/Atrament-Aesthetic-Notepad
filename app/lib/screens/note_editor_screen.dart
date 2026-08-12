@@ -165,8 +165,22 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
     return jsonEncode(_quillController.document.toDelta().toJson());
   }
 
+  /// True when this is a never-before-saved note that the user hasn't
+  /// actually put anything into — no title, no text, no strokes. Used to
+  /// avoid silently persisting an empty "Untitled" note every time
+  /// someone taps + and backs out without writing anything.
+  bool get _isUntouchedNewNote {
+    if (!widget.isNewNote) return false;
+    if (_titleController.text.trim().isNotEmpty) return false;
+    if (_isHandwritingMode) {
+      return _handwritingController.strokes.isEmpty;
+    }
+    return _quillController.document.toPlainText().trim().isEmpty;
+  }
+
   Future<bool> _save() async {
     if (_isSaving) return true;
+    if (_isUntouchedNewNote) return true;
     _isSaving = true;
 
     final updated = widget.note.copyWith(
@@ -332,6 +346,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                       : quill.QuillEditor.basic(
                           configurations: quill.QuillEditorConfigurations(
                             controller: _quillController,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: AppSpacing.lg,
+                              vertical: AppSpacing.md,
+                            ),
                           ),
                         ),
                 ),

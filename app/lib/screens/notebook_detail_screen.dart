@@ -226,13 +226,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
             child: const Icon(Icons.delete_outline, color: Colors.white),
           ),
-          confirmDismiss: (_) => ConfirmationDialog.show(
-            context,
-            title: l10n.deleteNoteTitle,
-            body: l10n.deleteConfirmBody,
-            cancelLabel: l10n.cancel,
-            confirmLabel: l10n.delete,
-          ),
+          confirmDismiss: (_) => _confirmDeleteNote(context, l10n),
           onDismissed: (_) => widget.noteProvider.deleteNote(note.id),
           child: NoteListItem(
             title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
@@ -242,9 +236,29 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
               localeCode: Localizations.localeOf(context).languageCode,
             ),
             onTap: () => _openNote(note),
+            deleteTooltip: l10n.delete,
+            onDelete: () async {
+              final confirmed = await _confirmDeleteNote(context, l10n);
+              if (confirmed == true) {
+                await widget.noteProvider.deleteNote(note.id);
+              }
+            },
           ),
         );
       },
+    );
+  }
+
+  /// Shared by both the swipe-to-delete gesture and the explicit delete
+  /// icon button, so there's exactly one confirmation dialog to keep in
+  /// sync rather than two copies drifting apart.
+  Future<bool?> _confirmDeleteNote(BuildContext context, AppLocalizations l10n) {
+    return ConfirmationDialog.show(
+      context,
+      title: l10n.deleteNoteTitle,
+      body: l10n.deleteConfirmBody,
+      cancelLabel: l10n.cancel,
+      confirmLabel: l10n.delete,
     );
   }
 }
