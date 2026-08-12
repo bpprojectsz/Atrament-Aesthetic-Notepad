@@ -346,7 +346,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                       : quill.QuillEditor.basic(
                           configurations: quill.QuillEditorConfigurations(
                             controller: _quillController,
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                               horizontal: AppSpacing.lg,
                               vertical: AppSpacing.md,
                             ),
