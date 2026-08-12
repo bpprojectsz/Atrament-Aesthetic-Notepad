@@ -94,6 +94,13 @@ class PaperStyleCatalog {
 
   static const List<PaperStyleModel> all = [
     PaperStyleModel(
+      id: 'blank',
+      name: 'Blank',
+      assetPath: 'assets/paper_textures/blank.png',
+      textColor: 0xFF2C2416,
+      isDark: false,
+    ),
+    PaperStyleModel(
       id: 'lined',
       name: 'Lined',
       assetPath: 'assets/paper_textures/lined.png',
@@ -111,13 +118,6 @@ class PaperStyleCatalog {
       id: 'grid',
       name: 'Grid',
       assetPath: 'assets/paper_textures/grid.png',
-      textColor: 0xFF2C2416,
-      isDark: false,
-    ),
-    PaperStyleModel(
-      id: 'blank',
-      name: 'Blank',
-      assetPath: 'assets/paper_textures/blank.png',
       textColor: 0xFF2C2416,
       isDark: false,
     ),
