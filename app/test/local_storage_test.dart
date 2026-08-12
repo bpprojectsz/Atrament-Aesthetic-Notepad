@@ -1,10 +1,28 @@
+import 'dart:io';
+
 import 'package:atrament/core/models/note_model.dart';
 import 'package:atrament/core/models/notebook_model.dart';
 import 'package:atrament/core/services/local_storage.dart';
 import 'package:atrament/core/utils/constants.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
+import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
+import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+
+/// Fakes path_provider's platform channel, which has no implementation
+/// under plain `flutter test` and throws MissingPluginException without
+/// this — local_storage.dart calls getApplicationDocumentsDirectory() to
+/// resolve where the database file lives.
+class _FakePathProviderPlatform extends PathProviderPlatform
+    with MockPlatformInterfaceMixin {
+  final String _tempPath = Directory.systemTemp
+      .createTempSync('atrament_test_docs_')
+      .path;
+
+  @override
+  Future<String?> getApplicationDocumentsPath() async => _tempPath;
+}
 
 void main() {
   // sqflite's default implementation talks to a real Android/iOS platform
@@ -14,6 +32,7 @@ void main() {
   setUpAll(() {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
+    PathProviderPlatform.instance = _FakePathProviderPlatform();
   });
 
   late LocalStorage storage;
@@ -24,8 +43,15 @@ void main() {
     // rows saved by one test would leak into the next test's assertions
     // (e.g. an exact-list-equality check would fail once unrelated
     // notebooks from earlier tests are also present).
-    final dbPath = await databaseFactory.getDatabasesPath();
-    final fullPath = p.join(dbPath, AppConstants.dbName);
+    //
+    // This must match local_storage.dart's own path resolution exactly
+    // (getApplicationDocumentsDirectory(), not getDatabasesPath() — the
+    // latter has an unreliable implementation under the ffi factory per
+    // sqflite_common_ffi's own documentation, so local_storage.dart
+    // doesn't use it).
+    final docsPath = await PathProviderPlatform.instance
+        .getApplicationDocumentsPath();
+    final fullPath = p.join(docsPath!, AppConstants.dbName);
     await databaseFactory.deleteDatabase(fullPath);
 
     storage = LocalStorage.instance;
