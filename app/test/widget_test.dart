@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';
 import 'package:atrament/core/providers/subscription_provider.dart';
@@ -7,13 +9,30 @@ import 'package:atrament/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
+import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+
+/// Fakes path_provider's platform channel, which has no implementation
+/// under plain `flutter test` and throws MissingPluginException without
+/// this — local_storage.dart calls getApplicationDocumentsDirectory() to
+/// resolve where the database file lives.
+class _FakePathProviderPlatform extends PathProviderPlatform
+    with MockPlatformInterfaceMixin {
+  final String _tempPath = Directory.systemTemp
+      .createTempSync('atrament_test_docs_')
+      .path;
+
+  @override
+  Future<String?> getApplicationDocumentsPath() async => _tempPath;
+}
 
 void main() {
   setUpAll(() {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
+    PathProviderPlatform.instance = _FakePathProviderPlatform();
 
     // ThemeProvider, VerseProvider, and others call
     // SharedPreferences.getInstance() during init(). Without a mock,
