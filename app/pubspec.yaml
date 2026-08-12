@@ -63,6 +63,13 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^4.0.0
   flutter_native_splash: ^2.4.1
+  # Used directly in test files to fake path_provider's platform channel.
+  # `any` rather than a pinned version: both already resolve transitively
+  # through path_provider/sqflite_common_ffi, so this just satisfies the
+  # analyzer's depend_on_referenced_packages lint without risking a
+  # version conflict against whatever's already resolved.
+  path_provider_platform_interface: any
+  plugin_platform_interface: any
 
 flutter:
   uses-material-design: true
