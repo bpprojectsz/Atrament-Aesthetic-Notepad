@@ -68,56 +68,59 @@ class ExportHelper {
   /// Builds a single-note PDF document. Rendering (`document.save()`) is
   /// left to the caller (`export_service.dart`) so this helper stays
   /// synchronous and easily unit-testable.
+  ///
+  /// Uses `pw.MultiPage`, not `pw.Page` — `pw.Page` renders exactly one
+  /// fixed page and does not auto-paginate; any note long enough to
+  /// overflow a single page would be silently clipped instead of
+  /// flowing onto page 2. `MultiPage`'s `build` callback returns a flat
+  /// list of widgets (not one widget tree), and lets that top-level list
+  /// span multiple pages automatically.
   static pw.Document buildPdfDocument(ExportableNote note) {
     final document = pw.Document();
 
     document.addPage(
-      pw.Page(
+      pw.MultiPage(
         pageFormat: PdfPageFormat.a4,
         margin: const pw.EdgeInsets.all(ExportLayout.pdfPageMarginPt),
-        build: (context) {
-          return pw.Column(
-            crossAxisAlignment: pw.CrossAxisAlignment.start,
-            children: [
-              pw.Text(
-                note.title,
-                style: pw.TextStyle(
-                  fontSize: ExportLayout.pdfTitleFontSizePt,
-                  fontWeight: pw.FontWeight.bold,
-                ),
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        build: (context) => [
+          pw.Text(
+            note.title,
+            style: pw.TextStyle(
+              fontSize: ExportLayout.pdfTitleFontSizePt,
+              fontWeight: pw.FontWeight.bold,
+            ),
+          ),
+          pw.SizedBox(height: 4),
+          pw.Text(
+            note.createdAtLabel,
+            style: const pw.TextStyle(
+              fontSize: ExportLayout.pdfFooterFontSizePt,
+              color: PdfColors.grey600,
+            ),
+          ),
+          pw.SizedBox(height: 16),
+          pw.Text(
+            note.plainTextContent,
+            style: const pw.TextStyle(
+              fontSize: ExportLayout.pdfBodyFontSizePt,
+              lineSpacing:
+                  ExportLayout.pdfBodyFontSizePt *
+                  (ExportLayout.pdfLineSpacing - 1),
+            ),
+          ),
+          if (note.verseReferenceLabel != null) ...[
+            pw.SizedBox(height: 24),
+            pw.Text(
+              '— ${note.verseReferenceLabel}',
+              style: pw.TextStyle(
+                fontSize: ExportLayout.pdfFooterFontSizePt,
+                fontStyle: pw.FontStyle.italic,
+                color: PdfColors.grey600,
               ),
-              pw.SizedBox(height: 4),
-              pw.Text(
-                note.createdAtLabel,
-                style: const pw.TextStyle(
-                  fontSize: ExportLayout.pdfFooterFontSizePt,
-                  color: PdfColors.grey600,
-                ),
-              ),
-              pw.SizedBox(height: 16),
-              pw.Text(
-                note.plainTextContent,
-                style: const pw.TextStyle(
-                  fontSize: ExportLayout.pdfBodyFontSizePt,
-                  lineSpacing:
-                      ExportLayout.pdfBodyFontSizePt *
-                      (ExportLayout.pdfLineSpacing - 1),
-                ),
-              ),
-              if (note.verseReferenceLabel != null) ...[
-                pw.SizedBox(height: 24),
-                pw.Text(
-                  '— ${note.verseReferenceLabel}',
-                  style: pw.TextStyle(
-                    fontSize: ExportLayout.pdfFooterFontSizePt,
-                    fontStyle: pw.FontStyle.italic,
-                    color: PdfColors.grey600,
-                  ),
-                ),
-              ],
-            ],
-          );
-        },
+            ),
+          ],
+        ],
       ),
     );
 
