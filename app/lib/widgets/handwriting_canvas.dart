@@ -5,23 +5,48 @@ import 'package:flutter/material.dart';
 
 import '../core/models/pen_style_model.dart';
 
-/// A single freehand stroke: the pen used and its sequence of points, in
-/// the canvas's local coordinate space.
+/// A single freehand stroke: its points, and the exact visual appearance
+/// it was drawn with (color, width, highlighter flag) — captured at draw
+/// time rather than stored as a live reference to [PenStyleCatalog].
+///
+/// This matters: strokes are re-rendered from this data on every repaint
+/// (e.g. while drawing a *later* stroke). If a stroke only stored
+/// `penStyleId` and re-resolved its appearance from the catalog each
+/// time, then adjusting the stroke-width slider for the active pen would
+/// make every *already-drawn* stroke using that same pen ID silently
+/// snap to the new width too — a real mark on paper doesn't change
+/// thickness after the fact just because you adjust the pen you're
+/// currently holding.
 class HandwritingStroke {
-  const HandwritingStroke({required this.penStyleId, required this.points});
+  const HandwritingStroke({
+    required this.penStyleId,
+    required this.points,
+    required this.color,
+    required this.strokeWidth,
+    required this.isHighlighter,
+  });
 
   final String penStyleId;
   final List<Offset> points;
+  final int color;
+  final double strokeWidth;
+  final bool isHighlighter;
 
   Map<String, dynamic> toJson() {
     return {
       'penStyleId': penStyleId,
       'points': points.map((p) => [p.dx, p.dy]).toList(),
+      'color': color,
+      'strokeWidth': strokeWidth,
+      'isHighlighter': isHighlighter,
     };
   }
 
   factory HandwritingStroke.fromJson(Map<String, dynamic> json) {
     final rawPoints = json['points'] as List<dynamic>;
+    // Falls back to the catalog default appearance for strokes saved
+    // before this fix, which only ever recorded a penStyleId.
+    final fallbackPen = PenStyleCatalog.byId(json['penStyleId'] as String);
     return HandwritingStroke(
       penStyleId: json['penStyleId'] as String,
       points: rawPoints
@@ -32,6 +57,11 @@ class HandwritingStroke {
             ),
           )
           .toList(),
+      color: json['color'] as int? ?? fallbackPen.color,
+      strokeWidth: (json['strokeWidth'] as num?)?.toDouble() ??
+          fallbackPen.strokeWidth,
+      isHighlighter:
+          json['isHighlighter'] as bool? ?? fallbackPen.isHighlighter,
     );
   }
 }
@@ -58,6 +88,16 @@ class HandwritingCanvasController extends ChangeNotifier {
   void setActivePen(PenStyleModel pen) {
     _activePen = pen;
     _erasing = false;
+    notifyListeners();
+  }
+
+  /// Adjusts the stroke width of whichever pen is currently active — used
+  /// by the toolbar's width slider. Only affects the in-progress stroke
+  /// and strokes drawn after this call; strokes already committed via
+  /// [addStroke] keep the width they were actually drawn with (see
+  /// [HandwritingStroke]'s doc comment for why that matters).
+  void setActivePenStrokeWidth(double width) {
+    _activePen = _activePen.copyWith(strokeWidth: width);
     notifyListeners();
   }
 
@@ -162,6 +202,9 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
       HandwritingStroke(
         penStyleId: widget.controller.activePen.id,
         points: _currentPoints,
+        color: widget.controller.activePen.color,
+        strokeWidth: widget.controller.activePen.strokeWidth,
+        isHighlighter: widget.controller.activePen.isHighlighter,
       ),
     );
     setState(() => _currentPoints = []);
@@ -201,15 +244,21 @@ class _HandwritingPainter extends CustomPainter {
   final List<Offset> inProgress;
   final PenStyleModel inProgressPen;
 
-  void _paintStroke(Canvas canvas, List<Offset> points, PenStyleModel pen) {
+  void _paintStroke(
+    Canvas canvas,
+    List<Offset> points, {
+    required int color,
+    required double strokeWidth,
+    required bool isHighlighter,
+  }) {
     if (points.length < 2) return;
 
     final paint = Paint()
-      ..color = Color(pen.color)
-      ..strokeWidth = pen.strokeWidth
-      ..strokeCap = pen.isHighlighter ? StrokeCap.square : StrokeCap.round
+      ..color = Color(color)
+      ..strokeWidth = strokeWidth
+      ..strokeCap = isHighlighter ? StrokeCap.square : StrokeCap.round
       ..style = PaintingStyle.stroke
-      ..blendMode = pen.isHighlighter ? BlendMode.multiply : BlendMode.srcOver;
+      ..blendMode = isHighlighter ? BlendMode.multiply : BlendMode.srcOver;
 
     final path = ui.Path()..moveTo(points.first.dx, points.first.dy);
     for (final point in points.skip(1)) {
@@ -221,9 +270,21 @@ class _HandwritingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     for (final stroke in strokes) {
-      _paintStroke(canvas, stroke.points, PenStyleCatalog.byId(stroke.penStyleId));
+      _paintStroke(
+        canvas,
+        stroke.points,
+        color: stroke.color,
+        strokeWidth: stroke.strokeWidth,
+        isHighlighter: stroke.isHighlighter,
+      );
     }
-    _paintStroke(canvas, inProgress, inProgressPen);
+    _paintStroke(
+      canvas,
+      inProgress,
+      color: inProgressPen.color,
+      strokeWidth: inProgressPen.strokeWidth,
+      isHighlighter: inProgressPen.isHighlighter,
+    );
   }
 
   @override
