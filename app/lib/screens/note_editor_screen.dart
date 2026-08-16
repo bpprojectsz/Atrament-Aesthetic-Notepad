@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_quill/flutter_quill.dart' as quill;
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/models/note_model.dart';
@@ -65,6 +66,15 @@ class NoteEditorScreen extends StatefulWidget {
 
   final NoteModel note;
   final NoteProvider noteProvider;
+
+  /// Optional override, used by tests to inject a specific instance
+  /// without needing a full Provider tree. In real app usage this is
+  /// never passed — the screens between the home screen and here
+  /// (NotebookDetailScreen, etc.) never had a verseProvider parameter to
+  /// thread it through, which meant this was always null in production
+  /// and the scripture overlay never rendered at all. Resolving it from
+  /// the ambient Provider tree instead (see `_buildVerseOverlay`) removes
+  /// the need for every screen in the chain to know about it.
   final VerseProvider? verseProvider;
   final bool isNewNote;
 
@@ -368,7 +378,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                           undo: l10n.undo,
                           redo: l10n.redo,
                         ),
-                        onStrokeWidthChanged: (_) {},
+                        onStrokeWidthChanged: (width) =>
+                            _handwritingController.setActivePenStrokeWidth(
+                              width,
+                            ),
                       )
                     : NoteToolbar(
                         controller: _quillController,
@@ -381,6 +394,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                           checklist: l10n.formatChecklist,
                           quote: l10n.formatQuote,
                           codeBlock: l10n.formatCodeBlock,
+                          undo: l10n.undo,
+                          redo: l10n.redo,
                         ),
                       ),
               ],
@@ -392,8 +407,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
   }
 
   Widget _buildVerseOverlay(BuildContext context) {
-    final verseProvider = widget.verseProvider;
-    if (verseProvider == null) return const SizedBox.shrink();
+    // Falls back to the ambient Provider tree when no explicit override
+    // was passed — see the doc comment on widget.verseProvider for why
+    // this fallback is the actual production path, not an edge case.
+    final verseProvider = widget.verseProvider ?? context.read<VerseProvider>();
 
     return ListenableBuilder(
       listenable: Listenable.merge([
