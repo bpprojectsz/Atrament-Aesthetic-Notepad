@@ -93,11 +93,7 @@
   "languageFollowsSystem": "Suit la langue configurée sur votre appareil",
   "premiumScreenTitle": "Supprimer les publicités",
   "premiumHeadline": "Écrivez sans distraction",
-  "premiumBody": "Atrament est gratuit avec une petite bannière publicitaire sur l'écran d'accueil. La supprimer ne débloque rien d'autre : toutes les fonctionnalités sont déjà à vous.",
-  "premiumMonthlyLabel": "Mensuel",
-  "premiumYearlyLabel": "Annuel",
-  "premiumMonthlyPrice": "0,99 $/mois",
-  "premiumYearlyPrice": "9,99 $/an",
+  "premiumBody": "Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d'autre — toutes les fonctionnalités sont déjà à vous.",
   "premiumRestoreButton": "Restaurer les achats",
   "premiumAlreadyProMessage": "Vous avez déjà Supprimer les publicités. Merci !",
   "supportSectionTitle": "Assistance",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "Effacer le journal de débogage",
   "clearDebugLogTitle": "Effacer le journal de débogage ?",
   "clearDebugLogBody": "Cela supprime le rapport technique enregistré sur votre appareil.",
-  "debugLogClearedMessage": "Journal de débogage effacé."
+  "debugLogClearedMessage": "Journal de débogage effacé.",
+  "premiumUnlockLabel": "Supprimer les pubs définitivement",
+  "premiumUnlockPriceFallback": "$14.99"
 }

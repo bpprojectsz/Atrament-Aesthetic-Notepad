@@ -45,10 +45,7 @@ class SubscriptionProvider {
     });
   }
 
-  Future<void> purchaseMonthly() =>
-      _purchase(AppConstants.iapMonthlyProductId);
-
-  Future<void> purchaseYearly() => _purchase(AppConstants.iapYearlyProductId);
+  Future<void> purchase() => _purchase(AppConstants.iapAdFreeProductId);
 
   Future<void> _purchase(String productId) async {
     isProcessingPurchase.value = true;

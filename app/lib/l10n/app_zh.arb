@@ -93,11 +93,7 @@
   "languageFollowsSystem": "跟随设备语言设置",
   "premiumScreenTitle": "移除广告",
   "premiumHeadline": "专注写作，无干扰",
-  "premiumBody": "Atrament 是免费应用，主屏幕上有一个小型横幅广告。移除广告不会解锁其他任何内容——所有功能你已经拥有。",
-  "premiumMonthlyLabel": "包月",
-  "premiumYearlyLabel": "包年",
-  "premiumMonthlyPrice": "$0.99/月",
-  "premiumYearlyPrice": "$9.99/年",
+  "premiumBody": "Atrament 免费使用，附带一个小型横幅广告。移除广告为一次性购买，不会解锁其他内容 — 所有功能已经属于您。",
   "premiumRestoreButton": "恢复购买",
   "premiumAlreadyProMessage": "你已拥有移除广告功能，谢谢！",
   "supportSectionTitle": "支持",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "清除调试日志",
   "clearDebugLogTitle": "要清除调试日志吗？",
   "clearDebugLogBody": "这将删除设备上保存的技术报告。",
-  "debugLogClearedMessage": "调试日志已清除。"
+  "debugLogClearedMessage": "调试日志已清除。",
+  "premiumUnlockLabel": "永久移除广告",
+  "premiumUnlockPriceFallback": "$14.99"
 }

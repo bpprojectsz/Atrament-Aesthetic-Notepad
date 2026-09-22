@@ -7,7 +7,7 @@ import 'package:atrament/core/services/local_storage.dart';
 import 'package:atrament/main.dart';
 import 'package:atrament/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';

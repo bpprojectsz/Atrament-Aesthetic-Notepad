@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:atrament/l10n/generated/app_localizations.dart';
 
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';

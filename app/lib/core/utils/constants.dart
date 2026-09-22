@@ -275,17 +275,13 @@ class AppConstants {
   static const String dailyVersesAssetPath = 'assets/json/daily_verses.json';
   static const String kjvAssetPath = 'assets/json/kjv.json';
 
-  // In-app purchase product IDs.
-  // REPLACE: confirm these match App Store Connect / Play Console exactly
-  // before submission (see Section 1a of the blueprint).
-  static const String iapMonthlyProductId =
-      'com.zdmgold.atrament.pro.monthly';
-  static const String iapYearlyProductId =
-      'com.zdmgold.atrament.pro.yearly';
+  // In-app purchase product ID — one-time ad removal unlock.
+  // Register this ID in Play Console and App Store Connect before submission.
+  static const String iapAdFreeProductId = 'com.zdmgold.atrament.adfree';
 
   // External URLs
-  static const String privacyPolicyUrl = 'https://atrament.app/privacy.html';
-  static const String supportUrl = 'https://atrament.app/support.html';
+  static const String privacyPolicyUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/privacy';
+  static const String supportUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/support';
 
   // Notification
   static const int dailyVerseNotificationId = 1001;

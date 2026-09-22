@@ -35,7 +35,7 @@ class PurchaseAttemptResult {
 }
 
 /// Wraps `in_app_purchase` (StoreKit on iOS, Play Billing on Android) for
-/// the two ad-removal subscription products. This is the only file that
+/// the single one-time ad-removal purchase. This is the only file that
 /// imports `in_app_purchase` directly — `subscription_provider.dart`
 /// listens to [statusStream] rather than touching the plugin.
 class IapService {
@@ -104,10 +104,7 @@ class IapService {
   }
 
   Future<void> _queryProducts() async {
-    const ids = {
-      AppConstants.iapMonthlyProductId,
-      AppConstants.iapYearlyProductId,
-    };
+    const ids = {AppConstants.iapAdFreeProductId};
     final response = await _iap.queryProductDetails(ids);
     if (response.error != null) {
       ErrorHandler.report(
@@ -186,8 +183,7 @@ class IapService {
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
           final isKnownProduct =
-              purchase.productID == AppConstants.iapMonthlyProductId ||
-              purchase.productID == AppConstants.iapYearlyProductId;
+              purchase.productID == AppConstants.iapAdFreeProductId;
           if (isKnownProduct) {
             hasActivePro = true;
           }

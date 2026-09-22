@@ -93,11 +93,7 @@
   "languageFollowsSystem": "يتبع لغة جهازك",
   "premiumScreenTitle": "إزالة الإعلانات",
   "premiumHeadline": "اكتب دون تشتيت",
-  "premiumBody": "تطبيق أترامنت مجاني مع شريط إعلاني صغير واحد في الشاشة الرئيسية. إزالته لا تفتح أي شيء آخر — جميع الميزات متاحة لك بالفعل.",
-  "premiumMonthlyLabel": "شهري",
-  "premiumYearlyLabel": "سنوي",
-  "premiumMonthlyPrice": "0.99$/شهر",
-  "premiumYearlyPrice": "9.99$/سنة",
+  "premiumBody": "Atrament مجاني مع إعلان بانر صغير واحد. إزالته عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.",
   "premiumRestoreButton": "استعادة المشتريات",
   "premiumAlreadyProMessage": "لديك بالفعل ميزة إزالة الإعلانات. شكرًا لك!",
   "supportSectionTitle": "الدعم",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "مسح سجل التصحيح",
   "clearDebugLogTitle": "هل تريد مسح سجل التصحيح؟",
   "clearDebugLogBody": "سيؤدي هذا إلى إزالة التقرير التقني المحفوظ من جهازك.",
-  "debugLogClearedMessage": "تم مسح سجل التصحيح."
+  "debugLogClearedMessage": "تم مسح سجل التصحيح.",
+  "premiumUnlockLabel": "إزالة الإعلانات نهائيًا",
+  "premiumUnlockPriceFallback": "$14.99"
 }

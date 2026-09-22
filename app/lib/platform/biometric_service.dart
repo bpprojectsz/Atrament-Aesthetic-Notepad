@@ -52,10 +52,8 @@ class BiometricService {
 
       final didAuthenticate = await _auth.authenticate(
         localizedReason: reason,
-        options: const AuthenticationOptions(
-          biometricOnly: false, // Allow device PIN/passcode as fallback.
-          stickyAuth: true,
-        ),
+        biometricOnly: false, // Allow device PIN/passcode as fallback.
+        persistAcrossBackgrounding: true,
       );
       return didAuthenticate
           ? BiometricAuthResult.success

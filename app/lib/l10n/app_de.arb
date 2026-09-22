@@ -93,11 +93,7 @@
   "languageFollowsSystem": "Folgt der Spracheinstellung deines Geräts",
   "premiumScreenTitle": "Werbung entfernen",
   "premiumHeadline": "Schreibe ohne Ablenkung",
-  "premiumBody": "Atrament ist kostenlos mit einem kleinen Werbebanner auf dem Startbildschirm. Das Entfernen schaltet nichts weiter frei – alle Funktionen gehören dir bereits.",
-  "premiumMonthlyLabel": "Monatlich",
-  "premiumYearlyLabel": "Jährlich",
-  "premiumMonthlyPrice": "0,99 $/Monat",
-  "premiumYearlyPrice": "9,99 $/Jahr",
+  "premiumBody": "Atrament ist kostenlos mit einem kleinen Banner-Werbeplatz. Die Entfernung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.",
   "premiumRestoreButton": "Käufe wiederherstellen",
   "premiumAlreadyProMessage": "Du hast bereits Werbung entfernen. Danke!",
   "supportSectionTitle": "Support",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "Debug-Protokoll löschen",
   "clearDebugLogTitle": "Debug-Protokoll löschen?",
   "clearDebugLogBody": "Dadurch wird der gespeicherte technische Bericht von deinem Gerät entfernt.",
-  "debugLogClearedMessage": "Debug-Protokoll gelöscht."
+  "debugLogClearedMessage": "Debug-Protokoll gelöscht.",
+  "premiumUnlockLabel": "Werbung dauerhaft entfernen",
+  "premiumUnlockPriceFallback": "$14.99"
 }

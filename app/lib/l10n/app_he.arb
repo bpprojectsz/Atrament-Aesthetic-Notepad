@@ -93,11 +93,7 @@
   "languageFollowsSystem": "בהתאם לשפת המכשיר שלך",
   "premiumScreenTitle": "הסרת פרסומות",
   "premiumHeadline": "כתוב ללא הסחות דעת",
-  "premiumBody": "אטרמנט חינמי עם באנר פרסומת קטן אחד במסך הבית. הסרתו אינה פותחת דבר נוסף — כל התכונות כבר שייכות לך.",
-  "premiumMonthlyLabel": "חודשי",
-  "premiumYearlyLabel": "שנתי",
-  "premiumMonthlyPrice": "0.99$/חודש",
-  "premiumYearlyPrice": "9.99$/שנה",
+  "premiumBody": "Atrament חינמית עם באנר פרסום קטן אחד. הסרתו היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.",
   "premiumRestoreButton": "שחזור רכישות",
   "premiumAlreadyProMessage": "כבר יש לך הסרת פרסומות. תודה!",
   "supportSectionTitle": "תמיכה",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "נקה יומן ניפוי באגים",
   "clearDebugLogTitle": "לנקות את יומן ניפוי הבאגים?",
   "clearDebugLogBody": "פעולה זו מסירה את הדוח הטכני השמור מהמכשיר שלך.",
-  "debugLogClearedMessage": "יומן ניפוי הבאגים נוקה."
+  "debugLogClearedMessage": "יומן ניפוי הבאגים נוקה.",
+  "premiumUnlockLabel": "הסרת פרסומות לתמיד",
+  "premiumUnlockPriceFallback": "$14.99"
 }

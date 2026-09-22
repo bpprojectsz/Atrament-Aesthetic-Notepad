@@ -93,11 +93,7 @@
   "languageFollowsSystem": "デバイスの言語設定に従います",
   "premiumScreenTitle": "広告を削除",
   "premiumHeadline": "気を散らさずに書く",
-  "premiumBody": "Atramentはホーム画面に小さなバナー広告が1つ表示される無料アプリです。広告を削除しても他に何かがアンロックされるわけではありません。すべての機能はすでにご利用いただけます。",
-  "premiumMonthlyLabel": "月額",
-  "premiumYearlyLabel": "年額",
-  "premiumMonthlyPrice": "$0.99/月",
-  "premiumYearlyPrice": "$9.99/年",
+  "premiumBody": "Atrament は小さなバナー広告付きで無料です。広告の削除は一度きりの購入で、他の機能は何もロックされていません — すべての機能はすでにあなたのものです。",
   "premiumRestoreButton": "購入を復元",
   "premiumAlreadyProMessage": "すでに広告削除をご利用中です。ありがとうございます！",
   "supportSectionTitle": "サポート",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "デバッグログを消去",
   "clearDebugLogTitle": "デバッグログを消去しますか？",
   "clearDebugLogBody": "デバイスに保存されている技術レポートが削除されます。",
-  "debugLogClearedMessage": "デバッグログを消去しました。"
+  "debugLogClearedMessage": "デバッグログを消去しました。",
+  "premiumUnlockLabel": "広告を完全に削除",
+  "premiumUnlockPriceFallback": "$14.99"
 }

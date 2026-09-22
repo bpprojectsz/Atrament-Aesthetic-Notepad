@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter_quill/flutter_quill.dart' as quill;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -354,9 +354,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                   child: _isHandwritingMode
                       ? HandwritingCanvas(controller: _handwritingController)
                       : quill.QuillEditor.basic(
-                          configurations: quill.QuillEditorConfigurations(
-                            controller: _quillController,
-                            padding: const EdgeInsets.symmetric(
+                          controller: _quillController,
+                          config: const quill.QuillEditorConfig(
+                            padding: EdgeInsets.symmetric(
                               horizontal: AppSpacing.lg,
                               vertical: AppSpacing.md,
                             ),

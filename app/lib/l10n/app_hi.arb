@@ -93,11 +93,7 @@
   "languageFollowsSystem": "आपके डिवाइस की भाषा सेटिंग का अनुसरण करता है",
   "premiumScreenTitle": "विज्ञापन हटाएं",
   "premiumHeadline": "बिना ध्यान भटकाए लिखें",
-  "premiumBody": "एट्रामेंट होम स्क्रीन पर एक छोटे बैनर विज्ञापन के साथ मुफ़्त है। इसे हटाने से कुछ और अनलॉक नहीं होता — सभी सुविधाएं पहले से ही आपकी हैं।",
-  "premiumMonthlyLabel": "मासिक",
-  "premiumYearlyLabel": "वार्षिक",
-  "premiumMonthlyPrice": "$0.99/माह",
-  "premiumYearlyPrice": "$9.99/वर्ष",
+  "premiumBody": "Atrament एक छोटे बैनर विज्ञापन के साथ मुफ़्त है। इसे हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।",
   "premiumRestoreButton": "खरीदारी पुनर्स्थापित करें",
   "premiumAlreadyProMessage": "आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!",
   "supportSectionTitle": "सहायता",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "डीबग लॉग साफ़ करें",
   "clearDebugLogTitle": "क्या डीबग लॉग साफ़ करना है?",
   "clearDebugLogBody": "इससे आपके डिवाइस से सहेजी गई तकनीकी रिपोर्ट हट जाएगी।",
-  "debugLogClearedMessage": "डीबग लॉग साफ़ कर दिया गया।"
+  "debugLogClearedMessage": "डीबग लॉग साफ़ कर दिया गया।",
+  "premiumUnlockLabel": "विज्ञापन हमेशा के लिए हटाएँ",
+  "premiumUnlockPriceFallback": "$14.99"
 }

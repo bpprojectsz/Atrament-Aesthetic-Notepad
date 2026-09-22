@@ -93,11 +93,7 @@
   "languageFollowsSystem": "Segue o idioma configurado no seu dispositivo",
   "premiumScreenTitle": "Remover anúncios",
   "premiumHeadline": "Escreva sem distrações",
-  "premiumBody": "O Atrament é gratuito com um pequeno banner de anúncio na tela inicial. Removê-lo não desbloqueia mais nada — todos os recursos já são seus.",
-  "premiumMonthlyLabel": "Mensal",
-  "premiumYearlyLabel": "Anual",
-  "premiumMonthlyPrice": "US$ 0,99/mês",
-  "premiumYearlyPrice": "US$ 9,99/ano",
+  "premiumBody": "O Atrament é gratuito com um pequeno banner de anúncio. Removê-lo é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.",
   "premiumRestoreButton": "Restaurar compras",
   "premiumAlreadyProMessage": "Você já tem Remover anúncios. Obrigado!",
   "supportSectionTitle": "Suporte",
@@ -107,5 +103,7 @@
   "clearDebugLogButton": "Limpar registro de depuração",
   "clearDebugLogTitle": "Limpar o registro de depuração?",
   "clearDebugLogBody": "Isso remove o relatório técnico salvo no seu dispositivo.",
-  "debugLogClearedMessage": "Registro de depuração limpo."
+  "debugLogClearedMessage": "Registro de depuração limpo.",
+  "premiumUnlockLabel": "Remover anúncios para sempre",
+  "premiumUnlockPriceFallback": "$14.99"
 }

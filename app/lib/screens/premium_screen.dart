@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:in_app_purchase/in_app_purchase.dart' show ProductDetails;
 
 import '../core/providers/subscription_provider.dart';
@@ -17,15 +17,17 @@ class PremiumScreen extends StatelessWidget {
 
   final SubscriptionProvider subscriptionProvider;
 
-  /// Returns the store's actual localized price for [productId] if the
-  /// product catalog has loaded, falling back to a static approximate
-  /// price (e.g. while offline) only when the live price isn't available
-  /// yet. The live price is always correct for the user's currency and
-  /// exactly matches what they'll be charged; the fallback exists purely
-  /// so the screen isn't blank before `IapService.initialize()` finishes.
-  String _priceFor(String productId, {required String fallback}) {
+  /// Returns the store's actual localized price for the ad-removal
+  /// product if the catalog has loaded, falling back to a static
+  /// approximate price (e.g. while offline) only when the live price
+  /// isn't available yet. The live price is always correct for the
+  /// user's currency and exactly matches what they'll be charged; the
+  /// fallback exists purely so the screen isn't blank before
+  /// `IapService.initialize()` finishes.
+  String _priceFor({required String fallback}) {
     final products = subscriptionProvider.availableProducts;
-    final match = products.where((p) => p.id == productId);
+    final match =
+        products.where((p) => p.id == AppConstants.iapAdFreeProductId);
     if (match.isEmpty) return fallback;
     final ProductDetails product = match.first;
     return product.price;
@@ -93,26 +95,14 @@ class PremiumScreen extends StatelessWidget {
                   )
                 else ...[
                   _PlanOption(
-                    label: l10n.premiumMonthlyLabel,
+                    label: l10n.premiumUnlockLabel,
                     price: _priceFor(
-                      AppConstants.iapMonthlyProductId,
-                      fallback: l10n.premiumMonthlyPrice,
-                    ),
-                    onTap: isProcessing
-                        ? null
-                        : subscriptionProvider.purchaseMonthly,
-                  ),
-                  const SizedBox(height: AppSpacing.sm),
-                  _PlanOption(
-                    label: l10n.premiumYearlyLabel,
-                    price: _priceFor(
-                      AppConstants.iapYearlyProductId,
-                      fallback: l10n.premiumYearlyPrice,
+                      fallback: l10n.premiumUnlockPriceFallback,
                     ),
                     highlighted: true,
                     onTap: isProcessing
                         ? null
-                        : subscriptionProvider.purchaseYearly,
+                        : subscriptionProvider.purchase,
                   ),
                   const SizedBox(height: AppSpacing.md),
                   if (isProcessing)

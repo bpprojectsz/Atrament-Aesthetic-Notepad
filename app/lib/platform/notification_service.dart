@@ -39,7 +39,7 @@ class NotificationService {
       );
 
       await _plugin.initialize(
-        const InitializationSettings(
+        settings: const InitializationSettings(
           android: androidSettings,
           iOS: iosSettings,
         ),
@@ -120,11 +120,11 @@ class NotificationService {
       final scheduledDate = _nextInstanceOf(hour, minute);
 
       await _plugin.zonedSchedule(
-        AppConstants.dailyVerseNotificationId,
-        verseTitle,
-        verseBody,
-        scheduledDate,
-        const NotificationDetails(
+        id: AppConstants.dailyVerseNotificationId,
+        title: verseTitle,
+        body: verseBody,
+        scheduledDate: scheduledDate,
+        notificationDetails: const NotificationDetails(
           android: AndroidNotificationDetails(
             AppConstants.dailyVerseNotificationChannelId,
             'Daily Verse',
@@ -135,8 +135,6 @@ class NotificationService {
           iOS: DarwinNotificationDetails(),
         ),
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
         matchDateTimeComponents: DateTimeComponents.time,
       );
       return true;
@@ -154,7 +152,7 @@ class NotificationService {
 
   Future<void> cancelDailyReminder() async {
     try {
-      await _plugin.cancel(AppConstants.dailyVerseNotificationId);
+      await _plugin.cancel(id: AppConstants.dailyVerseNotificationId);
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,

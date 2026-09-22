@@ -5,7 +5,7 @@ version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: '3.24.0'
+  flutter: '>=3.47.0 <3.48.0'
 
 dependencies:
   flutter:
@@ -17,7 +17,7 @@ dependencies:
   provider: ^6.1.2
 
   # Rich text editor
-  flutter_quill: ^9.3.20
+  flutter_quill: ^11.6.0
 
   # Local persistence
   sqflite: ^2.3.3+1
@@ -25,7 +25,7 @@ dependencies:
   # Android/iOS, since the device's own system SQLite isn't guaranteed
   # to include FTS5 — several Android manufacturers/OS builds ship
   # without it, which sqflite alone can't work around.
-  sqlite3_flutter_libs: ^0.5.24
+  sqlite3_flutter_libs: ^0.6.0+eol
   # Now also a production dependency, not just a test one: local_storage.dart
   # explicitly routes through databaseFactoryFfi at runtime (see the comment
   # there) so notes/notebooks work correctly even on Android builds whose
@@ -36,24 +36,24 @@ dependencies:
   shared_preferences: ^2.2.3
 
   # Export / sharing
-  share_plus: ^9.0.0
-  file_picker: ^8.0.3
+  share_plus: ^13.3.0
+  file_picker: ^13.1.0
   pdf: ^3.11.0
   screenshot: ^3.0.0
 
   # Monetization
-  google_mobile_ads: ^5.1.0
+  google_mobile_ads: ^9.1.0
   in_app_purchase: ^3.2.0
 
   # Security
-  local_auth: ^2.2.0
+  local_auth: ^3.0.2
 
   # Notifications
-  flutter_local_notifications: ^17.2.1+2
-  timezone: ^0.9.4
+  flutter_local_notifications: ^22.3.1
+  timezone: ^0.11.1
 
   # Formatting / i18n
-  intl: ^0.19.0
+  intl: ^0.20.3
 
   # Icons
   cupertino_icons: ^1.0.8
@@ -61,7 +61,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
   flutter_native_splash: ^2.4.1
   # Used directly in test files to fake path_provider's platform channel.
   # `any` rather than a pinned version: both already resolve transitively
