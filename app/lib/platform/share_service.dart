@@ -15,10 +15,9 @@ class ShareResult {
 /// export flow lives in `core/services/export_service.dart`, which writes
 /// bytes to disk but never presents UI.
 ///
-/// Uses the static `Share.shareXFiles` / `Share.share` API, which is what
-/// `share_plus ^9.0.0` (the pinned version) exposes — the newer
-/// `SharePlus.instance.share(ShareParams(...))` instance API was
-/// introduced in a later major version and isn't available here.
+/// Uses the `SharePlus.instance.share(ShareParams(...))` instance API,
+/// the current form as of share_plus ^13.3.0. The older static
+/// `Share.shareXFiles` / `Share.share` API is deprecated.
 class ShareService {
   const ShareService();
 
