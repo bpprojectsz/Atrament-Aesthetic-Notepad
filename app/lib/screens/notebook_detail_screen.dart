@@ -1,14 +1,17 @@
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
+import '../core/providers/subscription_provider.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/id_generator.dart';
 import '../widgets/app_scaffold.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/loading_indicator.dart';
@@ -121,9 +124,11 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     final mode = Theme.of(context).brightness == Brightness.dark
         ? AppThemeMode.dark
         : AppThemeMode.light;
+    final subscriptionProvider = context.read<SubscriptionProvider>();
 
     return AppScaffold(
       title: title,
+      bottomAdSlot: BannerAdWidget(subscriptionProvider: subscriptionProvider),
       actions: [
         ListenableBuilder(
           listenable: widget.noteProvider.sortOrder,

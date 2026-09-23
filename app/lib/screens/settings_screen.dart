@@ -15,6 +15,7 @@ import '../platform/debug_log_service.dart';
 import '../platform/notification_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/app_scaffold.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/font_selector.dart';
 import '../widgets/paper_selector.dart';
@@ -218,6 +219,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     return AppScaffold(
       title: l10n.settingsTitle,
+      bottomAdSlot: BannerAdWidget(subscriptionProvider: subscriptionProvider),
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.md),
         children: [
