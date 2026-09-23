@@ -35,6 +35,10 @@ jobs:
           EOF
         working-directory: app
 
+      - name: Guard pbxproj integrity
+        run: ./tools/check_pbxproj.sh
+        working-directory: .
+
       - name: Install dependencies
         run: flutter pub get
         working-directory: app
