@@ -19,6 +19,22 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Decode Android keystore
+        run: |
+          mkdir -p android/app
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > android/app/upload-keystore.jks
+        working-directory: app
+
+      - name: Write key.properties
+        run: |
+          cat > android/key.properties <<EOF
+          storePassword=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
+          keyAlias=${{ secrets.ANDROID_KEY_ALIAS }}
+          storeFile=upload-keystore.jks
+          EOF
+        working-directory: app
+
       - name: Install dependencies
         run: flutter pub get
         working-directory: app
@@ -49,6 +65,12 @@ jobs:
         run: |
           flutter build apk --release \
             --obfuscate --split-debug-info=build/symbols
+        working-directory: app
+
+      - name: Cleanup signing credentials
+        if: always()
+        run: |
+          rm -f android/key.properties android/app/upload-keystore.jks
         working-directory: app
 
       - uses: actions/upload-artifact@v4
