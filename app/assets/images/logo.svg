@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512" width="512" height="512">
+
+  <defs>
+    <!-- Ring gradient: lighter gold at inner edge, darker toward outer -->
+    <radialGradient id="ringGrad" cx="256" cy="256" r="256"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0"    stop-color="#73571A"/>
+      <stop offset="0.83" stop-color="#73571A"/>
+      <stop offset="1"    stop-color="#6B5010"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Outer gold ring (radial gradient) -->
+  <circle cx="256" cy="256" r="256" fill="url(#ringGrad)"/>
+
+  <!-- 2. Dark rim where ring meets interior -->
+  <circle cx="256" cy="256" r="214" fill="none"
+          stroke="#553F0E" stroke-width="2"/>
+
+  <!-- 3. Cream interior -->
+  <circle cx="256" cy="256" r="213" fill="#F5F1E8"/>
+
+  <!-- 4. Thin semi-transparent inner border -->
+  <circle cx="256" cy="256" r="203" fill="none"
+          stroke="#D0C4A0" stroke-width="3" opacity="0.78"/>
+
+  <!-- 5. Serif "A" — Merriweather Bold -->
+  <text x="256" y="345"
+        text-anchor="middle"
+        font-family="Merriweather, Georgia, serif"
+        font-weight="700"
+        font-size="300"
+        fill="#2C2416">A</text>
+</svg>
