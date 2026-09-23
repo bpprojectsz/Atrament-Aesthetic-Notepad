@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -28,6 +29,22 @@ class NotificationService {
 
     try {
       tz_data.initializeTimeZones();
+
+      // tz.local defaults to UTC until explicitly set. Read the device
+      // zone and pin it so the user's chosen hour is honored locally,
+      // including DST transitions.
+      try {
+        final tzInfo = await FlutterTimezone.getLocalTimezone();
+        tz.setLocalLocation(tz.getLocation(tzInfo.identifier));
+      } catch (error, stackTrace) {
+        ErrorHandler.report(
+          error,
+          stackTrace,
+          message: 'Failed to set local timezone; defaulting to UTC',
+          context: 'notification_service.setLocalTimezone',
+          severity: ErrorSeverity.warning,
+        );
+      }
 
       const androidSettings = AndroidInitializationSettings(
         '@mipmap/ic_launcher',
@@ -134,7 +151,7 @@ class NotificationService {
           ),
           iOS: DarwinNotificationDetails(),
         ),
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         matchDateTimeComponents: DateTimeComponents.time,
       );
       return true;

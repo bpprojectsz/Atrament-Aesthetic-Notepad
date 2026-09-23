@@ -61,6 +61,7 @@ dependencies:
 
   # Icons
   cupertino_icons: ^1.0.8
+  flutter_timezone: ^5.1.0
 
 dev_dependencies:
   flutter_test:
