@@ -85,7 +85,7 @@ flutter test
   search index) + `SharedPreferences` (settings). No backend, no cloud
   sync, entirely local.
 - **Monetization**: free tier with every feature fully functional; a
-  single home-screen banner ad; $0.99/mo or $9.99/yr removes the ad and
+  single small banner ad; a one-time $14.99 purchase removes the ad and
   unlocks nothing else, since nothing is gated.
 - **Localization**: 11 languages via ARB files and
   `flutter_localizations`, including RTL support for Arabic and Hebrew.

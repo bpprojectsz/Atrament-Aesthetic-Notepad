@@ -46,8 +46,8 @@ and share however you like.
 
 Every feature is free, permanently — handwriting, every paper texture,
 every font, unlimited notes, exports, biometric lock, and notifications.
-Removing the one home-screen banner ad costs $0.99/month or $9.99/year
-and doesn't unlock anything else, because there's nothing left to unlock.
+Removing the one small banner ad is a one-time $14.99 purchase that
+doesn't unlock anything else, because there's nothing left to unlock.
 
 Available in English, Spanish, French, German, Portuguese, Arabic, Hindi,
 Japanese, Korean, Chinese, and Hebrew.

@@ -51,7 +51,7 @@ requested per Apple's policy since AdMob may use it (see below).
 
 | Category | Type | Collected | Shared | Purpose |
 |---|---|---|---|---|
-| Financial info | Purchase history | Yes | No (processed by Play Billing) | App functionality (subscription status) |
+| Financial info | Purchase history | Yes | No (processed by Play Billing) | App functionality (purchase status) |
 | App activity | App interactions | Yes (AdMob only) | Yes (Google) | Advertising |
 | Device or other IDs | Advertising ID | Yes | Yes (Google) | Advertising |
 
