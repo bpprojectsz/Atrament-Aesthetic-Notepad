@@ -10,6 +10,7 @@ import '../core/providers/subscription_provider.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/id_generator.dart';
+import '../platform/interstitial_service.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
@@ -97,6 +98,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     );
 
     if (!mounted) return;
+    InterstitialService.instance.recordNoteCreate();
     _openNote(note, isNewNote: true);
   }
 

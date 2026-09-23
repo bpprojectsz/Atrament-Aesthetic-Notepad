@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 
+import '../../platform/interstitial_service.dart';
 import '../models/notebook_model.dart';
 import '../services/local_storage.dart';
 
@@ -76,6 +79,7 @@ class NotebookProvider {
             ? notebooks.value.first.id
             : null;
       }
+      unawaited(InterstitialService.instance.showAfterNotebookDelete());
     } else {
       persistenceWarning.value =
           'Could not delete this notebook. Please try again.';

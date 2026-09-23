@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:atrament/l10n/generated/app_localizations.dart';
@@ -15,6 +16,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';
 import '../platform/biometric_service.dart';
+import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/handwriting_canvas.dart';
 import '../widgets/note_toolbar.dart';
@@ -258,6 +260,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         SnackBar(content: Text(l10n.shareFailedMessage)),
       );
     }
+    unawaited(InterstitialService.instance.showAfterExport());
   }
 
   @override

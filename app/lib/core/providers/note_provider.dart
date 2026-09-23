@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 
+import '../../platform/interstitial_service.dart';
 import '../models/note_model.dart';
 import '../services/local_storage.dart';
 
@@ -109,6 +112,7 @@ class NoteProvider {
     }
 
     _upsertInMemory(note);
+    unawaited(InterstitialService.instance.recordNoteSave());
     return true;
   }
 

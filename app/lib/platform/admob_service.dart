@@ -32,6 +32,43 @@ class AdMobService {
     return 'ca-app-pub-3940256099942544/6300978111'; // Google test unit
   }
 
+  String get interstitialAdUnitId {
+    if (Platform.isIOS) {
+      // REPLACE: ca-app-pub-xxxxxxxx/xxxxxxxx (AdMob — iOS Interstitial Unit ID)
+      return 'ca-app-pub-3940256099942544/4411468910'; // Google test unit
+    }
+    // REPLACE: ca-app-pub-xxxxxxxx/xxxxxxxx (AdMob — Android Interstitial Unit ID)
+    return 'ca-app-pub-3940256099942544/1033173712'; // Google test unit
+  }
+
+  /// Loads a single interstitial. Returns `null` on any failure — network,
+  /// fill, SDK not initialized — so callers can safely no-op.
+  Future<InterstitialAd?> loadInterstitial() async {
+    if (!isAvailable) return null;
+
+    final completer = Completer<InterstitialAd?>();
+    InterstitialAd.load(
+      adUnitId: interstitialAdUnitId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          if (!completer.isCompleted) completer.complete(ad);
+        },
+        onAdFailedToLoad: (error) {
+          ErrorHandler.report(
+            Exception(error.message),
+            StackTrace.current,
+            message: 'Interstitial ad failed to load',
+            context: 'admob_service.loadInterstitial',
+            severity: ErrorSeverity.warning,
+          );
+          if (!completer.isCompleted) completer.complete(null);
+        },
+      ),
+    );
+    return completer.future;
+  }
+
   /// Initializes the Mobile Ads SDK. Safe to call once at app startup;
   /// never throws — failures are caught and recorded so [isAvailable]
   /// reports false and callers can skip ad requests entirely.
