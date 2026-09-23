@@ -212,6 +212,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get themeParchment => 'Pergaminho';
 
   @override
+  String get themeSystem => 'Sistema';
+
+  @override
   String get verseSectionTitle => 'Exibição do versículo diário';
 
   @override

@@ -209,6 +209,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get themeParchment => '양피지';
 
   @override
+  String get themeSystem => '시스템';
+
+  @override
   String get verseSectionTitle => '오늘의 말씀 표시';
 
   @override

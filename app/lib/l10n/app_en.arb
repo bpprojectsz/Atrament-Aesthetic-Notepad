@@ -73,6 +73,7 @@
   "themeLight": "Light",
   "themeDark": "Dark",
   "themeParchment": "Parchment",
+  "themeSystem": "System",
   "verseSectionTitle": "Daily Verse Display",
   "verseModeWatermark": "Watermark",
   "verseModeHeader": "Header",

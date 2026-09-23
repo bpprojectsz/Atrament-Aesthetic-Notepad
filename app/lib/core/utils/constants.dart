@@ -8,6 +8,13 @@ import 'package:flutter/widgets.dart';
 
 enum AppThemeMode { light, dark, parchment }
 
+/// The user's stored theme choice. Distinct from [AppThemeMode] because
+/// [system] is a preference that resolves to one of the three concrete
+/// modes at runtime, depending on the device brightness. Widgets never
+/// receive a [ThemePreference]; they only ever see the resolved
+/// [AppThemeMode] via [AppColors.resolve].
+enum ThemePreference { system, light, dark, parchment }
+
 /// Color tokens. Each field holds the value for all three theme modes so
 /// callers can resolve via [AppColors.resolve].
 class AppColorToken {

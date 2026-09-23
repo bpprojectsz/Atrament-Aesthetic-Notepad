@@ -214,6 +214,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get themeParchment => 'Pergament';
 
   @override
+  String get themeSystem => 'System';
+
+  @override
   String get verseSectionTitle => 'Anzeige des Tagesverses';
 
   @override

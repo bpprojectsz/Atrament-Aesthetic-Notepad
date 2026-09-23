@@ -214,6 +214,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get themeParchment => 'Parchemin';
 
   @override
+  String get themeSystem => 'Système';
+
+  @override
   String get verseSectionTitle => 'Affichage du verset du jour';
 
   @override

@@ -512,6 +512,12 @@ abstract class AppLocalizations {
   /// **'Parchment'**
   String get themeParchment;
 
+  /// No description provided for @themeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get themeSystem;
+
   /// No description provided for @verseSectionTitle.
   ///
   /// In en, this message translates to:

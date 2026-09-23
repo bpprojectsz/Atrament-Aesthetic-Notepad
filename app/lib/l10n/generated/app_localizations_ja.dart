@@ -209,6 +209,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get themeParchment => 'パーチメント';
 
   @override
+  String get themeSystem => 'システム';
+
+  @override
   String get verseSectionTitle => 'デイリーバース表示';
 
   @override

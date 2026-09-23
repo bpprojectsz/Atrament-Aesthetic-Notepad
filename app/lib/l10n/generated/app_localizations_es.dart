@@ -213,6 +213,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get themeParchment => 'Pergamino';
 
   @override
+  String get themeSystem => 'Sistema';
+
+  @override
   String get verseSectionTitle => 'Visualización del versículo diario';
 
   @override

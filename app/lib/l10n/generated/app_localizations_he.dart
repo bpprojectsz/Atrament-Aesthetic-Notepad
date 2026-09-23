@@ -210,6 +210,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get themeParchment => 'קלף';
 
   @override
+  String get themeSystem => 'מערכת';
+
+  @override
   String get verseSectionTitle => 'תצוגת פסוק יומי';
 
   @override

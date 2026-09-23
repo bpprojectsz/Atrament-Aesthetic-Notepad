@@ -212,6 +212,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get themeParchment => 'पार्चमेंट';
 
   @override
+  String get themeSystem => 'सिस्टम';
+
+  @override
   String get verseSectionTitle => 'दैनिक वचन प्रदर्शन';
 
   @override

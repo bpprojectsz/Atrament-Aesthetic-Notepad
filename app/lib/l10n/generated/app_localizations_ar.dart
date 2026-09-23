@@ -211,6 +211,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get themeParchment => 'رقّ';
 
   @override
+  String get themeSystem => 'النظام';
+
+  @override
   String get verseSectionTitle => 'عرض آية اليوم';
 
   @override

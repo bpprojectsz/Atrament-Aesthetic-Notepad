@@ -225,26 +225,30 @@ class _SettingsScreenState extends State<SettingsScreen> {
         children: [
           _SectionHeader(l10n.themeSectionTitle),
           ListenableBuilder(
-            listenable: themeProvider.mode,
+            listenable: themeProvider.preference,
             builder: (context, _) {
-              return SegmentedButton<AppThemeMode>(
+              return SegmentedButton<ThemePreference>(
                 segments: [
                   ButtonSegment(
-                    value: AppThemeMode.light,
+                    value: ThemePreference.system,
+                    label: Text(l10n.themeSystem),
+                  ),
+                  ButtonSegment(
+                    value: ThemePreference.light,
                     label: Text(l10n.themeLight),
                   ),
                   ButtonSegment(
-                    value: AppThemeMode.dark,
+                    value: ThemePreference.dark,
                     label: Text(l10n.themeDark),
                   ),
                   ButtonSegment(
-                    value: AppThemeMode.parchment,
+                    value: ThemePreference.parchment,
                     label: Text(l10n.themeParchment),
                   ),
                 ],
-                selected: {themeProvider.mode.value},
+                selected: {themeProvider.preference.value},
                 onSelectionChanged: (selection) =>
-                    themeProvider.setMode(selection.first),
+                    themeProvider.setPreference(selection.first),
               );
             },
           ),

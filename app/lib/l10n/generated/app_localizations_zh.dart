@@ -209,6 +209,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get themeParchment => '羊皮纸';
 
   @override
+  String get themeSystem => '系统';
+
+  @override
   String get verseSectionTitle => '每日经文显示';
 
   @override

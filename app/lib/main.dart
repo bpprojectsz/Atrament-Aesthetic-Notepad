@@ -103,7 +103,8 @@ class AtramentApp extends StatefulWidget {
   State<AtramentApp> createState() => _AtramentAppState();
 }
 
-class _AtramentAppState extends State<AtramentApp> {
+class _AtramentAppState extends State<AtramentApp>
+    with WidgetsBindingObserver {
   late final ThemeProvider _themeProvider;
   late final SubscriptionProvider _subscriptionProvider;
   late final NoteProvider _noteProvider;
@@ -113,6 +114,7 @@ class _AtramentAppState extends State<AtramentApp> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
 
     _themeProvider = ThemeProvider()..init();
     _subscriptionProvider = SubscriptionProvider()..init();
@@ -123,12 +125,21 @@ class _AtramentAppState extends State<AtramentApp> {
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _themeProvider.dispose();
     _subscriptionProvider.dispose();
     _noteProvider.dispose();
     _notebookProvider.dispose();
     _verseProvider.dispose();
     super.dispose();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    super.didChangePlatformBrightness();
+    _themeProvider.onSystemBrightnessChanged(
+      WidgetsBinding.instance.platformDispatcher.platformBrightness,
+    );
   }
 
   ThemeData _buildTheme(AppThemeMode mode) {
