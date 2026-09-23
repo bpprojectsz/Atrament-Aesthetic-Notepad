@@ -62,6 +62,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.0
   flutter_native_splash: ^2.4.1
   # Used directly in test files to fake path_provider's platform channel.
   # `any` rather than a pinned version: both already resolve transitively
@@ -92,11 +93,22 @@ flutter:
 # flutter_native_splash configuration (Section 10)
 flutter_native_splash:
   color: "#F5F1E8"
-  image: assets/images/logo.png
+  image: assets/images/splash_logo.png
   color_dark: "#1A1612"
-  image_dark: assets/images/logo.png
+  image_dark: assets/images/splash_logo.png
   android_12:
     color: "#F5F1E8"
-    image: assets/images/logo.png
+    image: assets/images/splash_logo.png
     color_dark: "#1A1612"
-    image_dark: assets/images/logo.png
+    image_dark: assets/images/splash_logo.png
+
+# flutter_launcher_icons configuration.
+# Source: assets/images/icon_source.png (1024x1024, opaque, rendered from logo.svg).
+# Regenerate the source PNG via tools/generate_assets.sh before running
+# `dart run flutter_launcher_icons`.
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/images/icon_source.png"
+  remove_alpha_ios: true
+  min_sdk_android: 21
