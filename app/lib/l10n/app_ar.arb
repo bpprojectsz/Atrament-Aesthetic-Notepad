@@ -92,6 +92,8 @@
   "proLabel": "مميز",
   "languageSectionTitle": "اللغة",
   "languageFollowsSystem": "يتبع لغة جهازك",
+  "languageSystem": "الافتراضي للنظام",
+  "languagePickerTitle": "اختر اللغة",
   "premiumScreenTitle": "إزالة الإعلانات",
   "premiumHeadline": "اكتب دون تشتيت",
   "premiumBody": "Atrament مجاني مع إعلان بانر صغير واحد. إزالته عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.",

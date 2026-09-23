@@ -274,6 +274,12 @@ class AppLocalizationsFr extends AppLocalizations {
       'Suit la langue configurée sur votre appareil';
 
   @override
+  String get languageSystem => 'Par défaut du système';
+
+  @override
+  String get languagePickerTitle => 'Choisir la langue';
+
+  @override
   String get premiumScreenTitle => 'Supprimer les publicités';
 
   @override

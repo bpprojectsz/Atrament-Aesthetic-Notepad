@@ -4,6 +4,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'core/providers/locale_provider.dart';
 import 'core/providers/note_provider.dart';
 import 'core/providers/notebook_provider.dart';
 import 'core/providers/subscription_provider.dart';
@@ -105,6 +106,7 @@ class AtramentApp extends StatefulWidget {
 
 class _AtramentAppState extends State<AtramentApp>
     with WidgetsBindingObserver {
+  late final LocaleProvider _localeProvider;
   late final ThemeProvider _themeProvider;
   late final SubscriptionProvider _subscriptionProvider;
   late final NoteProvider _noteProvider;
@@ -116,6 +118,7 @@ class _AtramentAppState extends State<AtramentApp>
     super.initState();
     WidgetsBinding.instance.addObserver(this);
 
+    _localeProvider = LocaleProvider()..init();
     _themeProvider = ThemeProvider()..init();
     _subscriptionProvider = SubscriptionProvider()..init();
     _noteProvider = NoteProvider();
@@ -126,6 +129,7 @@ class _AtramentAppState extends State<AtramentApp>
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _localeProvider.dispose();
     _themeProvider.dispose();
     _subscriptionProvider.dispose();
     _noteProvider.dispose();
@@ -163,6 +167,7 @@ class _AtramentAppState extends State<AtramentApp>
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        Provider<LocaleProvider>.value(value: _localeProvider),
         Provider<ThemeProvider>.value(value: _themeProvider),
         Provider<SubscriptionProvider>.value(value: _subscriptionProvider),
         Provider<NoteProvider>.value(value: _noteProvider),
@@ -170,11 +175,15 @@ class _AtramentAppState extends State<AtramentApp>
         Provider<VerseProvider>.value(value: _verseProvider),
       ],
       child: ListenableBuilder(
-        listenable: _themeProvider.mode,
+        listenable: Listenable.merge([
+          _themeProvider.mode,
+          _localeProvider.preference,
+        ]),
         builder: (context, _) {
           return MaterialApp(
             title: AppConstants.appName,
             debugShowCheckedModeBanner: false,
+            locale: _localeProvider.preference.value,
             theme: _buildTheme(_themeProvider.mode.value),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,

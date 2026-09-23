@@ -92,6 +92,8 @@
   "proLabel": "Pro",
   "languageSectionTitle": "言語",
   "languageFollowsSystem": "デバイスの言語設定に従います",
+  "languageSystem": "システムのデフォルト",
+  "languagePickerTitle": "言語を選択",
   "premiumScreenTitle": "広告を削除",
   "premiumHeadline": "気を散らさずに書く",
   "premiumBody": "Atrament は小さなバナー広告付きで無料です。広告の削除は一度きりの購入で、他の機能は何もロックされていません — すべての機能はすでにあなたのものです。",

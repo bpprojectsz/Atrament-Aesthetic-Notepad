@@ -92,6 +92,8 @@
   "proLabel": "Pro",
   "languageSectionTitle": "Idioma",
   "languageFollowsSystem": "Sigue el idioma configurado en tu dispositivo",
+  "languageSystem": "Predeterminado del sistema",
+  "languagePickerTitle": "Elegir idioma",
   "premiumScreenTitle": "Quitar anuncios",
   "premiumHeadline": "Escribe sin distracciones",
   "premiumBody": "Atrament es gratis con un pequeño banner publicitario. Eliminarlo es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.",

@@ -266,6 +266,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get languageFollowsSystem => '跟随设备语言设置';
 
   @override
+  String get languageSystem => '系统默认';
+
+  @override
+  String get languagePickerTitle => '选择语言';
+
+  @override
   String get premiumScreenTitle => '移除广告';
 
   @override

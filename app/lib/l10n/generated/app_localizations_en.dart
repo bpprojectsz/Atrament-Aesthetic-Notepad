@@ -270,6 +270,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get languageFollowsSystem => 'Follows your device language setting';
 
   @override
+  String get languageSystem => 'System default';
+
+  @override
+  String get languagePickerTitle => 'Choose language';
+
+  @override
   String get premiumScreenTitle => 'Remove Ads';
 
   @override

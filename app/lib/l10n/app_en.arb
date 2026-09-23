@@ -92,6 +92,8 @@
   "proLabel": "Pro",
   "languageSectionTitle": "Language",
   "languageFollowsSystem": "Follows your device language setting",
+  "languageSystem": "System default",
+  "languagePickerTitle": "Choose language",
   "premiumScreenTitle": "Remove Ads",
   "premiumHeadline": "Write without distraction",
   "premiumBody": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",

@@ -270,6 +270,7 @@ class AppConstants {
   static const String prefReminderMinute = 'pref_reminder_minute';
   static const String prefBiometricLockEnabled = 'pref_biometric_lock_enabled';
   static const String prefHasSeenOnboarding = 'pref_has_seen_onboarding';
+  static const String prefLocale = 'pref_locale';
 
   // SQLite
   static const String dbName = 'atrament.db';

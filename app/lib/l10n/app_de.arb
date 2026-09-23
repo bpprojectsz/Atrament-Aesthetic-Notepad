@@ -92,6 +92,8 @@
   "proLabel": "Pro",
   "languageSectionTitle": "Sprache",
   "languageFollowsSystem": "Folgt der Spracheinstellung deines Geräts",
+  "languageSystem": "Systemeinstellung",
+  "languagePickerTitle": "Sprache wählen",
   "premiumScreenTitle": "Werbung entfernen",
   "premiumHeadline": "Schreibe ohne Ablenkung",
   "premiumBody": "Atrament ist kostenlos mit einem kleinen Banner-Werbeplatz. Die Entfernung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.",

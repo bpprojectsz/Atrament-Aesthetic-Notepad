@@ -626,6 +626,18 @@ abstract class AppLocalizations {
   /// **'Follows your device language setting'**
   String get languageFollowsSystem;
 
+  /// No description provided for @languageSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System default'**
+  String get languageSystem;
+
+  /// No description provided for @languagePickerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose language'**
+  String get languagePickerTitle;
+
   /// No description provided for @premiumScreenTitle.
   ///
   /// In en, this message translates to:

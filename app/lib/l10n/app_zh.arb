@@ -92,6 +92,8 @@
   "proLabel": "专业版",
   "languageSectionTitle": "语言",
   "languageFollowsSystem": "跟随设备语言设置",
+  "languageSystem": "系统默认",
+  "languagePickerTitle": "选择语言",
   "premiumScreenTitle": "移除广告",
   "premiumHeadline": "专注写作，无干扰",
   "premiumBody": "Atrament 免费使用，附带一个小型横幅广告。移除广告为一次性购买，不会解锁其他内容 — 所有功能已经属于您。",

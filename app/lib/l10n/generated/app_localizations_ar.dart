@@ -269,6 +269,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get languageFollowsSystem => 'يتبع لغة جهازك';
 
   @override
+  String get languageSystem => 'الافتراضي للنظام';
+
+  @override
+  String get languagePickerTitle => 'اختر اللغة';
+
+  @override
   String get premiumScreenTitle => 'إزالة الإعلانات';
 
   @override

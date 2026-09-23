@@ -266,6 +266,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get languageFollowsSystem => 'デバイスの言語設定に従います';
 
   @override
+  String get languageSystem => 'システムのデフォルト';
+
+  @override
+  String get languagePickerTitle => '言語を選択';
+
+  @override
   String get premiumScreenTitle => '広告を削除';
 
   @override

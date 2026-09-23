@@ -267,6 +267,12 @@ class AppLocalizationsHe extends AppLocalizations {
   String get languageFollowsSystem => 'בהתאם לשפת המכשיר שלך';
 
   @override
+  String get languageSystem => 'ברירת מחדל של המערכת';
+
+  @override
+  String get languagePickerTitle => 'בחר שפה';
+
+  @override
   String get premiumScreenTitle => 'הסרת פרסומות';
 
   @override

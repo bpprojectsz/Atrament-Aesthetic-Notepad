@@ -271,6 +271,12 @@ class AppLocalizationsHi extends AppLocalizations {
       'आपके डिवाइस की भाषा सेटिंग का अनुसरण करता है';
 
   @override
+  String get languageSystem => 'सिस्टम डिफ़ॉल्ट';
+
+  @override
+  String get languagePickerTitle => 'भाषा चुनें';
+
+  @override
   String get premiumScreenTitle => 'विज्ञापन हटाएं';
 
   @override

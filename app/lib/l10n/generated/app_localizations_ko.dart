@@ -266,6 +266,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get languageFollowsSystem => '기기의 언어 설정을 따릅니다';
 
   @override
+  String get languageSystem => '시스템 기본값';
+
+  @override
+  String get languagePickerTitle => '언어 선택';
+
+  @override
   String get premiumScreenTitle => '광고 제거';
 
   @override

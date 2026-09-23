@@ -92,6 +92,8 @@
   "proLabel": "פרו",
   "languageSectionTitle": "שפה",
   "languageFollowsSystem": "בהתאם לשפת המכשיר שלך",
+  "languageSystem": "ברירת מחדל של המערכת",
+  "languagePickerTitle": "בחר שפה",
   "premiumScreenTitle": "הסרת פרסומות",
   "premiumHeadline": "כתוב ללא הסחות דעת",
   "premiumBody": "Atrament חינמית עם באנר פרסום קטן אחד. הסרתו היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.",

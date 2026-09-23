@@ -92,6 +92,8 @@
   "proLabel": "Pro",
   "languageSectionTitle": "언어",
   "languageFollowsSystem": "기기의 언어 설정을 따릅니다",
+  "languageSystem": "시스템 기본값",
+  "languagePickerTitle": "언어 선택",
   "premiumScreenTitle": "광고 제거",
   "premiumHeadline": "방해받지 않고 글쓰기",
   "premiumBody": "Atrament은 작은 배너 광고와 함께 무료입니다. 광고 제거는 일회성 구매이며 다른 것은 잠금 해제되지 않습니다 — 모든 기능은 이미 당신의 것입니다.",

@@ -272,6 +272,12 @@ class AppLocalizationsPt extends AppLocalizations {
       'Segue o idioma configurado no seu dispositivo';
 
   @override
+  String get languageSystem => 'Padrão do sistema';
+
+  @override
+  String get languagePickerTitle => 'Escolher idioma';
+
+  @override
   String get premiumScreenTitle => 'Remover anúncios';
 
   @override
