@@ -11,6 +11,7 @@ import '../core/models/note_model.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/verse_provider.dart';
+import '../core/services/engagement_service.dart';
 import '../core/services/export_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
@@ -211,6 +212,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
       plainTextContent: plainText,
     );
 
+    if (succeeded) {
+      unawaited(EngagementService.instance.recordNoteSave());
+    }
+
     _isSaving = false;
     return succeeded;
   }
@@ -261,6 +266,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
       );
     }
     unawaited(InterstitialService.instance.showAfterExport());
+    unawaited(EngagementService.instance.recordExport());
   }
 
   @override

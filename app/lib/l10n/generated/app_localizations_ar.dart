@@ -263,6 +263,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get proLabel => 'مميز';
 
   @override
+  String get engagementSectionTitle => 'المزيد';
+
+  @override
+  String get rateAppTitle => 'قيّم Atrament';
+
+  @override
+  String get rateAppSubtitle => 'هل تستمتع بالتطبيق؟ اترك تقييمًا';
+
+  @override
+  String get shareAppTitle => 'شارك Atrament';
+
+  @override
+  String get shareAppSubtitle => 'أخبر صديقًا';
+
+  @override
+  String get shareAppMessage =>
+      'جرّب Atrament — مفكرة بلا تشتيت مع أوراق مميزة.';
+
+  @override
   String get languageSectionTitle => 'اللغة';
 
   @override

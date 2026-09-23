@@ -614,6 +614,42 @@ abstract class AppLocalizations {
   /// **'Pro'**
   String get proLabel;
 
+  /// No description provided for @engagementSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get engagementSectionTitle;
+
+  /// No description provided for @rateAppTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate Atrament'**
+  String get rateAppTitle;
+
+  /// No description provided for @rateAppSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoying the app? Leave a review'**
+  String get rateAppSubtitle;
+
+  /// No description provided for @shareAppTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Atrament'**
+  String get shareAppTitle;
+
+  /// No description provided for @shareAppSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell a friend'**
+  String get shareAppSubtitle;
+
+  /// No description provided for @shareAppMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Try Atrament — a distraction-free notepad with paper textures.'**
+  String get shareAppMessage;
+
   /// No description provided for @languageSectionTitle.
   ///
   /// In en, this message translates to:

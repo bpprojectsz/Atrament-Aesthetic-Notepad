@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,6 +10,7 @@ import '../core/providers/locale_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/verse_provider.dart';
+import '../core/services/engagement_service.dart';
 import '../core/services/iap_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
@@ -372,6 +375,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const SizedBox(height: AppSpacing.lg),
 
+          _SectionHeader(l10n.engagementSectionTitle),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.star_outline),
+            title: Text(l10n.rateAppTitle),
+            subtitle: Text(l10n.rateAppSubtitle),
+            onTap: EngagementService.instance.openStoreListingForReview,
+          ),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.favorite_outline),
+            title: Text(l10n.shareAppTitle),
+            subtitle: Text(l10n.shareAppSubtitle),
+            onTap: _shareApp,
+          ),
+          const SizedBox(height: AppSpacing.lg),
+
           _SectionHeader(l10n.languageSectionTitle),
           ListenableBuilder(
             listenable: localeProvider.preference,
@@ -409,6 +429,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Future<void> _shareApp() async {
+    final l10n = AppLocalizations.of(context)!;
+    final url = Platform.isIOS
+        ? AppConstants.appStoreUrl
+        : AppConstants.playStoreUrl;
+    await _shareService.shareText(
+      '${l10n.shareAppMessage}\n$url',
+      subject: l10n.shareAppTitle,
     );
   }
 

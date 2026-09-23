@@ -260,6 +260,24 @@ class AppLocalizationsKo extends AppLocalizations {
   String get proLabel => 'Pro';
 
   @override
+  String get engagementSectionTitle => '더보기';
+
+  @override
+  String get rateAppTitle => 'Atrament 평가';
+
+  @override
+  String get rateAppSubtitle => '앱이 마음에 드시나요? 리뷰를 남겨주세요';
+
+  @override
+  String get shareAppTitle => 'Atrament 공유';
+
+  @override
+  String get shareAppSubtitle => '친구에게 알리기';
+
+  @override
+  String get shareAppMessage => 'Atrament를 사용해보세요 — 종이 질감의 집중 가능한 노트패드.';
+
+  @override
   String get languageSectionTitle => '언어';
 
   @override

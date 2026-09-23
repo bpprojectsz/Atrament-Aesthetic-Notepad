@@ -10,6 +10,7 @@ import 'core/providers/notebook_provider.dart';
 import 'core/providers/subscription_provider.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/verse_provider.dart';
+import 'core/services/engagement_service.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
 import 'platform/admob_service.dart';
@@ -53,6 +54,7 @@ Future<void> main() async {
   // runApp regardless of outcome.
   unawaited(AdMobService.instance.initialize());
   unawaited(NotificationService.instance.initialize());
+  unawaited(EngagementService.instance.ensureInstallDate());
 
   runApp(const AtramentApp());
 }

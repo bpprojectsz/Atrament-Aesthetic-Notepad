@@ -260,6 +260,24 @@ class AppLocalizationsZh extends AppLocalizations {
   String get proLabel => '专业版';
 
   @override
+  String get engagementSectionTitle => '更多';
+
+  @override
+  String get rateAppTitle => '评价 Atrament';
+
+  @override
+  String get rateAppSubtitle => '喜欢这个应用？留下评价';
+
+  @override
+  String get shareAppTitle => '分享 Atrament';
+
+  @override
+  String get shareAppSubtitle => '告诉朋友';
+
+  @override
+  String get shareAppMessage => '试试 Atrament —— 一款带有纸张纹理的无干扰记事本。';
+
+  @override
   String get languageSectionTitle => '语言';
 
   @override

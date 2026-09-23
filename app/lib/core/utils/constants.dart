@@ -271,6 +271,14 @@ class AppConstants {
   static const String prefBiometricLockEnabled = 'pref_biometric_lock_enabled';
   static const String prefHasSeenOnboarding = 'pref_has_seen_onboarding';
   static const String prefLocale = 'pref_locale';
+  static const String prefInstallDate = 'pref_install_date';
+  static const String prefNoteSaveCount = 'pref_note_save_count';
+  static const String prefExportCount = 'pref_export_count';
+  static const String prefLastReviewPrompt = 'pref_last_review_prompt';
+  static const String prefLastSharePrompt = 'pref_last_share_prompt';
+  static const String prefLastNotificationPrompt =
+      'pref_last_notification_prompt';
+  static const String prefAttRequested = 'pref_att_requested';
 
   // SQLite
   static const String dbName = 'atrament.db';
@@ -286,6 +294,14 @@ class AppConstants {
   // In-app purchase product ID — one-time ad removal unlock.
   // Register this ID in Play Console and App Store Connect before submission.
   static const String iapAdFreeProductId = 'com.zdmgold.atrament.adfree';
+
+  // Store listings (used by the Share Atrament flow)
+  static const String playStoreUrl =
+      'https://play.google.com/store/apps/details?id=com.zdmgold.atrament';
+  // App Store ID is assigned on first App Store Connect submission;
+  // this placeholder is replaced before the iOS launch.
+  static const String appStoreUrl =
+      'https://apps.apple.com/app/id0000000000';
 
   // External URLs
   static const String privacyPolicyUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/privacy';

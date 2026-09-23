@@ -264,6 +264,25 @@ class AppLocalizationsEn extends AppLocalizations {
   String get proLabel => 'Pro';
 
   @override
+  String get engagementSectionTitle => 'More';
+
+  @override
+  String get rateAppTitle => 'Rate Atrament';
+
+  @override
+  String get rateAppSubtitle => 'Enjoying the app? Leave a review';
+
+  @override
+  String get shareAppTitle => 'Share Atrament';
+
+  @override
+  String get shareAppSubtitle => 'Tell a friend';
+
+  @override
+  String get shareAppMessage =>
+      'Try Atrament — a distraction-free notepad with paper textures.';
+
+  @override
   String get languageSectionTitle => 'Language';
 
   @override

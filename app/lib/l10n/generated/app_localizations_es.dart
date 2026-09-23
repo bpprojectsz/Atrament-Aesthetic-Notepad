@@ -266,6 +266,25 @@ class AppLocalizationsEs extends AppLocalizations {
   String get proLabel => 'Pro';
 
   @override
+  String get engagementSectionTitle => 'Más';
+
+  @override
+  String get rateAppTitle => 'Valora Atrament';
+
+  @override
+  String get rateAppSubtitle => '¿Te gusta la app? Deja una reseña';
+
+  @override
+  String get shareAppTitle => 'Comparte Atrament';
+
+  @override
+  String get shareAppSubtitle => 'Cuéntale a un amigo';
+
+  @override
+  String get shareAppMessage =>
+      'Prueba Atrament — un bloc de notas sin distracciones con texturas de papel.';
+
+  @override
   String get languageSectionTitle => 'Idioma';
 
   @override

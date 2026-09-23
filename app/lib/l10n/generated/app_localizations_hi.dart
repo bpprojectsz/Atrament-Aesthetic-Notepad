@@ -264,6 +264,25 @@ class AppLocalizationsHi extends AppLocalizations {
   String get proLabel => 'प्रो';
 
   @override
+  String get engagementSectionTitle => 'अधिक';
+
+  @override
+  String get rateAppTitle => 'Atrament को रेट करें';
+
+  @override
+  String get rateAppSubtitle => 'ऐप पसंद आ रहा है? समीक्षा छोड़ें';
+
+  @override
+  String get shareAppTitle => 'Atrament शेयर करें';
+
+  @override
+  String get shareAppSubtitle => 'किसी दोस्त को बताएँ';
+
+  @override
+  String get shareAppMessage =>
+      'Atrament आज़माएँ — कागज़ की बनावट वाला बिना ध्यान-भंग नोटपैड।';
+
+  @override
   String get languageSectionTitle => 'भाषा';
 
   @override

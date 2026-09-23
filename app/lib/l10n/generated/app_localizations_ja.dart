@@ -260,6 +260,24 @@ class AppLocalizationsJa extends AppLocalizations {
   String get proLabel => 'Pro';
 
   @override
+  String get engagementSectionTitle => 'その他';
+
+  @override
+  String get rateAppTitle => 'Atrament を評価';
+
+  @override
+  String get rateAppSubtitle => 'アプリは気に入りましたか？レビューを残す';
+
+  @override
+  String get shareAppTitle => 'Atrament を共有';
+
+  @override
+  String get shareAppSubtitle => '友達に伝える';
+
+  @override
+  String get shareAppMessage => 'Atrament を試す — 紙の質感を備えた集中できるノートパッド。';
+
+  @override
   String get languageSectionTitle => '言語';
 
   @override

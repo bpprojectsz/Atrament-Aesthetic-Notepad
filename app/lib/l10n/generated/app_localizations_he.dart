@@ -261,6 +261,25 @@ class AppLocalizationsHe extends AppLocalizations {
   String get proLabel => 'פרו';
 
   @override
+  String get engagementSectionTitle => 'עוד';
+
+  @override
+  String get rateAppTitle => 'דרג את Atrament';
+
+  @override
+  String get rateAppSubtitle => 'נהנה מהאפליקציה? השאר ביקורת';
+
+  @override
+  String get shareAppTitle => 'שתף את Atrament';
+
+  @override
+  String get shareAppSubtitle => 'ספר לחבר';
+
+  @override
+  String get shareAppMessage =>
+      'נסה את Atrament — פנקס רשימות ללא הסחות דעת עם טקסטורות נייר.';
+
+  @override
   String get languageSectionTitle => 'שפה';
 
   @override
