@@ -66,10 +66,9 @@ class AdMobService {
       return null;
     }
 
-    final sizeResult =
-        await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-          adaptiveWidth,
-        );
+    final sizeResult = await AdSize.getLargeAnchoredAdaptiveBannerAdSize(
+      adaptiveWidth,
+    );
     if (sizeResult == null) {
       onFailed();
       return null;

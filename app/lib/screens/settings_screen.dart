@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -279,19 +279,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ListenableBuilder(
             listenable: verseProvider.displayMode,
             builder: (context, _) {
-              return Column(
-                children: [
-                  for (final displayMode in VerseDisplayMode.values)
-                    RadioListTile<VerseDisplayMode>(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(_verseModeLabel(l10n, displayMode)),
-                      value: displayMode,
-                      groupValue: verseProvider.displayMode.value,
-                      onChanged: (value) {
-                        if (value != null) verseProvider.setDisplayMode(value);
-                      },
-                    ),
-                ],
+              return RadioGroup<VerseDisplayMode>(
+                groupValue: verseProvider.displayMode.value,
+                onChanged: (value) {
+                  if (value != null) verseProvider.setDisplayMode(value);
+                },
+                child: Column(
+                  children: [
+                    for (final displayMode in VerseDisplayMode.values)
+                      RadioListTile<VerseDisplayMode>(
+                        contentPadding: EdgeInsets.zero,
+                        title: Text(_verseModeLabel(l10n, displayMode)),
+                        value: displayMode,
+                      ),
+                  ],
+                ),
               );
             },
           ),

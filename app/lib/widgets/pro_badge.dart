@@ -25,9 +25,9 @@ class ProBadge extends StatelessWidget {
           vertical: AppSpacing.xxs,
         ),
         decoration: BoxDecoration(
-          color: accent.withOpacity(0.12),
+          color: accent.withValues(alpha: 0.12),
           borderRadius: BorderRadius.circular(AppRadius.button),
-          border: Border.all(color: accent.withOpacity(0.4), width: 1),
+          border: Border.all(color: accent.withValues(alpha: 0.4), width: 1),
         ),
         child: Text(
           label,

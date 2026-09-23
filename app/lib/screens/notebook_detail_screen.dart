@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/material.dart';
 
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
@@ -174,7 +174,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
               if (warning != null)
                 Container(
                   width: double.infinity,
-                  color: AppColors.warning.resolve(mode).withOpacity(0.15),
+                  color: AppColors.warning.resolve(mode).withValues(alpha: 0.15),
                   padding: const EdgeInsets.symmetric(
                     horizontal: AppSpacing.md,
                     vertical: AppSpacing.sm,

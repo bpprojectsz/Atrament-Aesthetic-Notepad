@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/material.dart';
 
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final notebook = NotebookModel(
       id: IdGenerator.generate(),
       name: trimmed,
-      coverColor: AppColors.accent.light.value,
+      coverColor: AppColors.accent.light.toARGB32(),
       paperStyleDefault: PaperStyleCatalog.all.first.id,
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,

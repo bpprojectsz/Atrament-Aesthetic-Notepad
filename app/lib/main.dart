@@ -1,7 +1,7 @@
 import 'dart:async' show unawaited;
 
-import 'package:flutter/material.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'core/providers/note_provider.dart';

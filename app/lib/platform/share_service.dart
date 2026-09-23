@@ -30,7 +30,9 @@ class ShareService {
     String? subject,
   }) async {
     try {
-      await Share.shareXFiles([XFile(filePath)], subject: subject);
+      await SharePlus.instance.share(
+        ShareParams(files: [XFile(filePath)], subject: subject),
+      );
       return const ShareResult.success();
     } catch (error, stackTrace) {
       ErrorHandler.report(
@@ -48,7 +50,9 @@ class ShareService {
   /// associated file.
   Future<ShareResult> shareText(String text, {String? subject}) async {
     try {
-      await Share.share(text, subject: subject);
+      await SharePlus.instance.share(
+        ShareParams(text: text, subject: subject),
+      );
       return const ShareResult.success();
     } catch (error, stackTrace) {
       ErrorHandler.report(

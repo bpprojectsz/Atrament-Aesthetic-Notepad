@@ -192,9 +192,9 @@ class _ToolbarButton extends StatelessWidget {
         child: IconButton(
           icon: Icon(icon),
           style: IconButton.styleFrom(
-            foregroundColor: isActive ? accent : accent.withOpacity(0.7),
-            disabledForegroundColor: accent.withOpacity(0.35),
-            backgroundColor: isActive ? accent.withOpacity(0.15) : null,
+            foregroundColor: isActive ? accent : accent.withValues(alpha: 0.7),
+            disabledForegroundColor: accent.withValues(alpha: 0.35),
+            backgroundColor: isActive ? accent.withValues(alpha: 0.15) : null,
           ),
           onPressed: onPressed,
         ),

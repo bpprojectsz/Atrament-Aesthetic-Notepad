@@ -86,7 +86,7 @@ class ExportHelper {
         build: (context) => [
           pw.Text(
             note.title,
-            style: pw.TextStyle(
+            style: const pw.TextStyle(
               fontSize: ExportLayout.pdfTitleFontSizePt,
               fontWeight: pw.FontWeight.bold,
             ),
@@ -113,7 +113,7 @@ class ExportHelper {
             pw.SizedBox(height: 24),
             pw.Text(
               '— ${note.verseReferenceLabel}',
-              style: pw.TextStyle(
+              style: const pw.TextStyle(
                 fontSize: ExportLayout.pdfFooterFontSizePt,
                 fontStyle: pw.FontStyle.italic,
                 color: PdfColors.grey600,

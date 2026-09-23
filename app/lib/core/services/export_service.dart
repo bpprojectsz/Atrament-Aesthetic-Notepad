@@ -75,7 +75,7 @@ class ExportService {
       final document = ExportHelper.buildPdfDocument(note);
       final bytes = await document.save();
       final stem = ExportHelper.safeFileNameStem(note.title);
-      return _writeBytes(bytes, stem, 'pdf');
+      return await _writeBytes(bytes, stem, 'pdf');
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,
