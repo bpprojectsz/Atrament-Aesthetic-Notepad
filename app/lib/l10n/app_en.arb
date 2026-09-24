@@ -129,5 +129,17 @@
   "noteActionShare": "Share",
   "moveToNotebookTitle": "Move to Notebook",
   "moveToNotebookEmptyBody": "No other notebooks yet. Create one to organise this note.",
-  "moveToNotebookCreateRow": "Create new notebook"
+  "moveToNotebookCreateRow": "Create new notebook",
+  "notebookActionRename": "Rename",
+  "notebookActionChangeCover": "Change cover",
+  "notebookRenameDialogTitle": "Rename Notebook",
+  "notebookCoverPickerTitle": "Choose a cover color",
+  "deleteNotebookWithCountBody": "This will delete the notebook and its {count} notes. This can't be undone.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

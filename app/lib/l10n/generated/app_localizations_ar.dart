@@ -386,4 +386,21 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get moveToNotebookCreateRow => 'Create new notebook';
+
+  @override
+  String get notebookActionRename => 'Rename';
+
+  @override
+  String get notebookActionChangeCover => 'Change cover';
+
+  @override
+  String get notebookRenameDialogTitle => 'Rename Notebook';
+
+  @override
+  String get notebookCoverPickerTitle => 'Choose a cover color';
+
+  @override
+  String deleteNotebookWithCountBody(int count) {
+    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+  }
 }

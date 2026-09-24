@@ -853,6 +853,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create new notebook'**
   String get moveToNotebookCreateRow;
+
+  /// No description provided for @notebookActionRename.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename'**
+  String get notebookActionRename;
+
+  /// No description provided for @notebookActionChangeCover.
+  ///
+  /// In en, this message translates to:
+  /// **'Change cover'**
+  String get notebookActionChangeCover;
+
+  /// No description provided for @notebookRenameDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename Notebook'**
+  String get notebookRenameDialogTitle;
+
+  /// No description provided for @notebookCoverPickerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a cover color'**
+  String get notebookCoverPickerTitle;
+
+  /// No description provided for @deleteNotebookWithCountBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This will delete the notebook and its {count} notes. This can\'t be undone.'**
+  String deleteNotebookWithCountBody(int count);
 }
 
 class _AppLocalizationsDelegate

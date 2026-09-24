@@ -157,6 +157,17 @@ class NoteProvider {
     notes.value = _sorted(current);
   }
 
+  /// Returns how many notes currently live in [notebookId]. Used by the
+  /// notebook-delete confirmation to state the impact before the user
+  /// commits to the destructive action (A1). Delegates to storage so the
+  /// count is always fresh — the in-memory [notes] list may hold a
+  /// different notebook's scope.
+  Future<int> countNotesIn(String notebookId) async {
+    final result = await _storage.getNotesForNotebook(notebookId);
+    if (result.failed) return -1;
+    return result.data.length;
+  }
+
   Future<bool> deleteNote(String id) async {
     final succeeded = await _storage.deleteNote(id);
     if (succeeded) {

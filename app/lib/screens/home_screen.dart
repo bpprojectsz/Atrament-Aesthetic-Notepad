@@ -25,6 +25,7 @@ import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/chips_row.dart';
 import '../widgets/confirmation_dialog.dart';
+import '../widgets/cover_color_picker.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/language_picker.dart';
 import '../widgets/loading_indicator.dart';
@@ -32,7 +33,9 @@ import '../widgets/move_to_notebook_sheet.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
+import '../widgets/notebook_actions_menu.dart';
 import '../widgets/rename_note_dialog.dart';
+import '../widgets/rename_notebook_dialog.dart';
 import 'note_editor_screen.dart';
 import 'notebook_detail_screen.dart';
 import 'settings_screen.dart';
@@ -271,6 +274,62 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _handleNotebookAction(NotebookModel notebook) async {
+    final action = await showNotebookActionsMenu(context);
+    if (action == null || !mounted) return;
+
+    switch (action) {
+      case NotebookAction.rename:
+        await _handleNotebookRename(notebook);
+        break;
+      case NotebookAction.changeCover:
+        await _handleNotebookChangeCover(notebook);
+        break;
+      case NotebookAction.delete:
+        await _handleNotebookDelete(notebook);
+        break;
+    }
+  }
+
+  Future<void> _handleNotebookRename(NotebookModel notebook) async {
+    final newName = await showRenameNotebookDialog(context, notebook.name);
+    if (newName == null || !mounted) return;
+    await widget.notebookProvider.updateNotebook(
+      notebook.copyWith(name: newName),
+    );
+  }
+
+  Future<void> _handleNotebookChangeCover(NotebookModel notebook) async {
+    final picked = await showCoverColorPicker(
+      context,
+      currentColor: notebook.coverColor,
+    );
+    if (picked == null || !mounted) return;
+    if (picked == notebook.coverColor) return;
+    await widget.notebookProvider.updateNotebook(
+      notebook.copyWith(coverColor: picked),
+    );
+  }
+
+  Future<void> _handleNotebookDelete(NotebookModel notebook) async {
+    final l10n = AppLocalizations.of(context)!;
+    final count = await widget.noteProvider.countNotesIn(notebook.id);
+    if (!mounted) return;
+    final body = count > 0
+        ? l10n.deleteNotebookWithCountBody(count)
+        : l10n.deleteConfirmBody;
+    final confirmed = await ConfirmationDialog.show(
+      context,
+      title: l10n.deleteNotebookTitle(notebook.name),
+      body: body,
+      cancelLabel: l10n.cancel,
+      confirmLabel: l10n.delete,
+    );
+    if (confirmed == true) {
+      await widget.notebookProvider.deleteNotebook(notebook.id);
+    }
   }
 
   Future<void> _handleNoteAction(NoteModel note) async {
@@ -705,6 +764,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 localeCode: Localizations.localeOf(context).languageCode,
               ),
               paperStyle: PaperStyleCatalog.byId(notebook.paperStyleDefault),
+              coverColor: notebook.coverColor,
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -716,18 +776,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
-              onLongPress: () async {
-                final confirmed = await ConfirmationDialog.show(
-                  context,
-                  title: l10n.deleteNotebookTitle(notebook.name),
-                  body: l10n.deleteConfirmBody,
-                  cancelLabel: l10n.cancel,
-                  confirmLabel: l10n.delete,
-                );
-                if (confirmed == true) {
-                  await widget.notebookProvider.deleteNotebook(notebook.id);
-                }
-              },
+              onLongPress: () => _handleNotebookDelete(notebook),
+              onMore: () => _handleNotebookAction(notebook),
             );
           },
         );

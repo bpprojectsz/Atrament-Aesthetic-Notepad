@@ -14,6 +14,8 @@ class NoteCard extends StatelessWidget {
     required this.paperStyle,
     required this.onTap,
     this.onLongPress,
+    this.coverColor,
+    this.onMore,
   });
 
   final String title;
@@ -21,6 +23,16 @@ class NoteCard extends StatelessWidget {
   final PaperStyleModel paperStyle;
   final VoidCallback onTap;
   final VoidCallback? onLongPress;
+
+  /// Optional ARGB value rendered as a 6px strip across the top edge.
+  /// Notebook cards pass the user's chosen cover colour; note cards pass
+  /// nothing and render without the strip.
+  final int? coverColor;
+
+  /// Optional trailing menu callback. When non-null, renders a 3-dot
+  /// button in the top-right corner of the paper thumbnail, floating
+  /// over the texture with a translucent scrim for contrast.
+  final VoidCallback? onMore;
 
   @override
   Widget build(BuildContext context) {
@@ -54,23 +66,58 @@ class NoteCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                if (coverColor != null)
+                  Container(
+                    height: 6,
+                    decoration: BoxDecoration(
+                      color: Color(coverColor!),
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(AppRadius.card),
+                      ),
+                    ),
+                  ),
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(AppRadius.card),
                   ),
-                  child: AspectRatio(
-                    aspectRatio: 4 / 3,
-                    child: Image.asset(
-                      paperStyle.assetPath,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return ColoredBox(
-                          color: paperStyle.isDark
-                              ? Colors.black12
-                              : Colors.white,
-                        );
-                      },
-                    ),
+                  child: Stack(
+                    children: [
+                      AspectRatio(
+                        aspectRatio: 4 / 3,
+                        child: Image.asset(
+                          paperStyle.assetPath,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return ColoredBox(
+                              color: paperStyle.isDark
+                                  ? Colors.black12
+                                  : Colors.white,
+                            );
+                          },
+                        ),
+                      ),
+                      if (onMore != null)
+                        Positioned(
+                          top: 4,
+                          right: 4,
+                          child: Material(
+                            color: Colors.black.withValues(alpha: 0.35),
+                            shape: const CircleBorder(),
+                            child: InkWell(
+                              customBorder: const CircleBorder(),
+                              onTap: onMore,
+                              child: const Padding(
+                                padding: EdgeInsets.all(6),
+                                child: Icon(
+                                  Icons.more_vert,
+                                  size: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
                   ),
                 ),
                 Padding(
