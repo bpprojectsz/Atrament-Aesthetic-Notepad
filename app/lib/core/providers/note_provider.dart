@@ -47,6 +47,22 @@ class NoteProvider {
     isLoading.value = false;
   }
 
+  /// Loads every note regardless of notebook. Used by the home "All"
+  /// and "Recent" chip scopes.
+  Future<void> loadAllNotes() async {
+    _activeNotebookId = null;
+    searchQuery.value = '';
+    isLoading.value = true;
+
+    final result = await _storage.getAllNotes();
+    notes.value = _sorted(result.data);
+    persistenceWarning.value = result.failed
+        ? 'Could not load all notes. Showing what\'s available.'
+        : null;
+
+    isLoading.value = false;
+  }
+
   /// Runs an indexed full-text search across all notebooks. Passing an
   /// empty string clears search and falls back to the active notebook.
   Future<void> search(String query) async {

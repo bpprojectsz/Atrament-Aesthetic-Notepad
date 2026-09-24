@@ -282,7 +282,7 @@ class AppConstants {
 
   // SQLite
   static const String dbName = 'atrament.db';
-  static const int dbVersion = 2; // v2: added notebooks.modifiedAt
+  static const int dbVersion = 3; // v3: notes.notebookId becomes nullable
   static const String tableNotes = 'notes';
   static const String tableNotebooks = 'notebooks';
   static const String tableNotesFts = 'notes_fts';

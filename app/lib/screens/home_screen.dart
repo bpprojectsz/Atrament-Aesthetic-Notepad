@@ -16,6 +16,7 @@ import '../widgets/empty_state.dart';
 import '../widgets/loading_indicator.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
+import 'note_editor_screen.dart';
 import 'notebook_detail_screen.dart';
 import 'settings_screen.dart';
 
@@ -219,16 +220,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 localeCode: Localizations.localeOf(context).languageCode,
               ),
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => NotebookDetailScreen.editingNote(
-                      noteId: note.id,
-                      notebookId: note.notebookId,
-                      notebookProvider: widget.notebookProvider,
-                      noteProvider: widget.noteProvider,
+                final notebookId = note.notebookId;
+                if (notebookId == null) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => NoteEditorScreen(
+                        note: note,
+                        noteProvider: widget.noteProvider,
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => NotebookDetailScreen.editingNote(
+                        noteId: note.id,
+                        notebookId: notebookId,
+                        notebookProvider: widget.notebookProvider,
+                        noteProvider: widget.noteProvider,
+                      ),
+                    ),
+                  );
+                }
               },
             );
           },

@@ -5,12 +5,12 @@ void main() {
   final createdAt = DateTime(2026, 1, 15, 9, 30);
   final modifiedAt = DateTime(2026, 1, 16, 10, 0);
 
-  NoteModel buildNote({String? verseReference}) {
+  NoteModel buildNote({String? verseReference, String? notebookId = 'notebook_1'}) {
     return NoteModel(
       id: 'note_1',
       title: 'Morning Thoughts',
       content: '[{"insert":"Hello world\\n"}]',
-      notebookId: 'notebook_1',
+      notebookId: notebookId,
       paperStyle: 'cream',
       createdAt: createdAt,
       modifiedAt: modifiedAt,
@@ -81,6 +81,39 @@ void main() {
         () => NoteModel.fromJson(const <String, dynamic>{'id': 'note_1'}),
         throwsA(anything),
       );
+    });
+
+    test('notebookId may be null - round-trips through JSON', () {
+      final note = buildNote(notebookId: null);
+      expect(note.notebookId, isNull);
+      final restored = NoteModel.fromJson(note.toJson());
+      expect(restored.notebookId, isNull);
+      expect(restored, equals(note));
+    });
+
+    test('copyWith clearNotebook sets notebookId to null', () {
+      final note = buildNote();
+      expect(note.notebookId, isNotNull);
+      final cleared = note.copyWith(clearNotebook: true);
+      expect(cleared.notebookId, isNull);
+    });
+
+    test('copyWith without clearNotebook preserves notebookId', () {
+      final note = buildNote();
+      final updated = note.copyWith(title: 'New title');
+      expect(updated.notebookId, note.notebookId);
+    });
+
+    test('copyWith can set notebookId from null to a value', () {
+      final note = buildNote(notebookId: null);
+      final filed = note.copyWith(notebookId: 'nb_sermons');
+      expect(filed.notebookId, 'nb_sermons');
+    });
+
+    test('equality distinguishes null and non-null notebookId', () {
+      final a = buildNote(notebookId: null);
+      final b = buildNote(notebookId: 'nb_x');
+      expect(a, isNot(equals(b)));
     });
   });
 }

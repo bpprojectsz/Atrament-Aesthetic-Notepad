@@ -9,7 +9,7 @@ class NoteModel {
     required this.id,
     required this.title,
     required this.content,
-    required this.notebookId,
+    this.notebookId,
     required this.paperStyle,
     required this.createdAt,
     required this.modifiedAt,
@@ -25,7 +25,7 @@ class NoteModel {
   final String content;
 
   /// Foreign key into `notebooks.id`.
-  final String notebookId;
+  final String? notebookId;
 
   /// Foreign key into the paper style catalog, e.g. 'parchment', 'lined'.
   final String paperStyle;
@@ -47,12 +47,13 @@ class NoteModel {
     DateTime? modifiedAt,
     String? verseReference,
     bool clearVerseReference = false,
+    bool clearNotebook = false,
   }) {
     return NoteModel(
       id: id ?? this.id,
       title: title ?? this.title,
       content: content ?? this.content,
-      notebookId: notebookId ?? this.notebookId,
+      notebookId: clearNotebook ? null : (notebookId ?? this.notebookId),
       paperStyle: paperStyle ?? this.paperStyle,
       createdAt: createdAt ?? this.createdAt,
       modifiedAt: modifiedAt ?? this.modifiedAt,
@@ -80,7 +81,7 @@ class NoteModel {
       id: json['id'] as String,
       title: json['title'] as String,
       content: json['content'] as String,
-      notebookId: json['notebookId'] as String,
+      notebookId: json['notebookId'] as String?,
       paperStyle: json['paperStyle'] as String,
       createdAt: DateTime.parse(json['createdAt'] as String),
       modifiedAt: DateTime.parse(json['modifiedAt'] as String),

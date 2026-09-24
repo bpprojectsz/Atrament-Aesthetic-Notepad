@@ -83,7 +83,7 @@ class LocalStorage {
             id TEXT PRIMARY KEY,
             title TEXT NOT NULL,
             content TEXT NOT NULL,
-            notebookId TEXT NOT NULL,
+            notebookId TEXT,
             paperStyle TEXT NOT NULL,
             createdAt TEXT NOT NULL,
             modifiedAt TEXT NOT NULL,
@@ -131,6 +131,38 @@ class LocalStorage {
         SET modifiedAt = createdAt
         WHERE modifiedAt = ''
       ''');
+    }
+
+    if (oldVersion < 3) {
+      await db.execute('''
+        CREATE TABLE ${AppConstants.tableNotes}_new (
+          id TEXT PRIMARY KEY,
+          title TEXT NOT NULL,
+          content TEXT NOT NULL,
+          notebookId TEXT,
+          paperStyle TEXT NOT NULL,
+          createdAt TEXT NOT NULL,
+          modifiedAt TEXT NOT NULL,
+          verseReference TEXT,
+          FOREIGN KEY (notebookId) REFERENCES ${AppConstants.tableNotebooks}(id)
+            ON DELETE CASCADE
+        )
+      ''');
+      await db.execute('''
+        INSERT INTO ${AppConstants.tableNotes}_new
+        SELECT id, title, content, notebookId, paperStyle, createdAt,
+               modifiedAt, verseReference
+        FROM ${AppConstants.tableNotes}
+      ''');
+      await db.execute('DROP TABLE ${AppConstants.tableNotes}');
+      await db.execute('''
+        ALTER TABLE ${AppConstants.tableNotes}_new
+        RENAME TO ${AppConstants.tableNotes}
+      ''');
+      await db.execute(
+        'CREATE INDEX idx_notes_notebookId ON '
+        '${AppConstants.tableNotes}(notebookId)',
+      );
     }
   }
 
@@ -235,6 +267,28 @@ class LocalStorage {
         );
       },
       context: 'local_storage.getNotesForNotebook',
+      fallback: null,
+    );
+
+    if (rows == null) return const StorageResult.failure([]);
+
+    final notes = rows
+        .map((row) => NoteModel.fromJson(Map<String, dynamic>.from(row)))
+        .toList();
+    return StorageResult.success(notes);
+  }
+
+  /// Returns every note in the database regardless of notebook membership.
+  Future<StorageResult<List<NoteModel>>> getAllNotes() async {
+    final rows = await _guarded<List<Map<String, Object?>>?>(
+      () async {
+        final db = await _database;
+        return db.query(
+          AppConstants.tableNotes,
+          orderBy: 'modifiedAt DESC',
+        );
+      },
+      context: 'local_storage.getAllNotes',
       fallback: null,
     );
 

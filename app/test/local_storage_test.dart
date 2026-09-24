@@ -163,6 +163,140 @@ void main() {
     });
   });
 
+  group('getAllNotes', () {
+    test('returns notes with null notebookId alongside filed notes', () async {
+      await storage.saveNotebook(buildNotebook('nb_all'));
+      await storage.saveNote(
+        buildNote('note_filed', 'nb_all', title: 'Filed'),
+        plainTextContent: 'filed body',
+      );
+
+      final nullNote = NoteModel(
+        id: 'note_loose',
+        title: 'Loose',
+        content: '[{"insert":"loose body\\n"}]',
+        notebookId: null,
+        paperStyle: 'cream',
+        createdAt: DateTime(2026, 1, 20),
+        modifiedAt: DateTime(2026, 1, 20),
+      );
+      await storage.saveNote(nullNote, plainTextContent: 'loose body');
+
+      final result = await storage.getAllNotes();
+      expect(result.failed, isFalse);
+      expect(result.data.length, 2);
+      expect(result.data.any((n) => n.id == 'note_filed'), isTrue);
+      expect(result.data.any((n) => n.id == 'note_loose'), isTrue);
+      expect(
+        result.data.firstWhere((n) => n.id == 'note_loose').notebookId,
+        isNull,
+      );
+    });
+
+    test('returns empty list when no notes exist', () async {
+      final result = await storage.getAllNotes();
+      expect(result.failed, isFalse);
+      expect(result.data, isEmpty);
+    });
+  });
+
+  group('Schema migration v2 to v3', () {
+    test('preserves notes and FTS when upgrading from a v2 database', () async {
+      final docsPath = await PathProviderPlatform.instance
+          .getApplicationDocumentsPath();
+      final fullPath = p.join(docsPath!, AppConstants.dbName);
+
+      final v2 = await databaseFactory.openDatabase(
+        fullPath,
+        options: OpenDatabaseOptions(
+          version: 2,
+          onCreate: (db, version) async {
+            await db.execute('''
+              CREATE TABLE notebooks (
+                id TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                coverColor INTEGER NOT NULL,
+                paperStyleDefault TEXT NOT NULL,
+                sortOrder INTEGER NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL
+              )
+            ''');
+            await db.execute('''
+              CREATE TABLE notes (
+                id TEXT PRIMARY KEY,
+                title TEXT NOT NULL,
+                content TEXT NOT NULL,
+                notebookId TEXT NOT NULL,
+                paperStyle TEXT NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL,
+                verseReference TEXT,
+                FOREIGN KEY (notebookId) REFERENCES notebooks(id)
+                  ON DELETE CASCADE
+              )
+            ''');
+            await db.execute('''
+              CREATE VIRTUAL TABLE notes_fts USING fts5(
+                id UNINDEXED, title, plainText,
+                tokenize='porter unicode61'
+              )
+            ''');
+            await db.execute(
+              'CREATE INDEX idx_notes_notebookId ON notes(notebookId)',
+            );
+          },
+        ),
+      );
+
+      await v2.insert('notebooks', {
+        'id': 'nb_v2',
+        'name': 'Legacy Notebook',
+        'coverColor': 0xFF8B6914,
+        'paperStyleDefault': 'cream',
+        'sortOrder': 0,
+        'createdAt': DateTime(2026, 1, 1).toIso8601String(),
+        'modifiedAt': DateTime(2026, 1, 1).toIso8601String(),
+      });
+      await v2.insert('notes', {
+        'id': 'note_v2',
+        'title': 'Legacy Note',
+        'content': '[{"insert":"legacy\\n"}]',
+        'notebookId': 'nb_v2',
+        'paperStyle': 'cream',
+        'createdAt': DateTime(2026, 1, 1).toIso8601String(),
+        'modifiedAt': DateTime(2026, 1, 1).toIso8601String(),
+        'verseReference': null,
+      });
+      await v2.insert('notes_fts', {
+        'id': 'note_v2',
+        'title': 'Legacy Note',
+        'plainText': 'lighthouse body prose',
+      });
+      await v2.close();
+
+      final notes = await storage.getNotesForNotebook('nb_v2');
+      expect(notes.failed, isFalse);
+      expect(notes.data.length, 1);
+      expect(notes.data.first.id, 'note_v2');
+
+      final search = await storage.searchNotes('lighthouse');
+      expect(search.data.any((n) => n.id == 'note_v2'), isTrue);
+
+      final loose = NoteModel(
+        id: 'note_post_migration',
+        title: 'Loose',
+        content: '[{"insert":"\\n"}]',
+        notebookId: null,
+        paperStyle: 'cream',
+        createdAt: DateTime(2026, 1, 2),
+        modifiedAt: DateTime(2026, 1, 2),
+      );
+      final saved = await storage.saveNote(loose, plainTextContent: 'loose');
+      expect(saved, isTrue);
+    });
+  });
+
   group('Full-text search', () {
     test('searchNotes finds a note by title', () async {
       await storage.saveNotebook(buildNotebook('nb_search'));
