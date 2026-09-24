@@ -121,5 +121,13 @@
   "emptyAllNotesTitle": "No notes yet",
   "emptyAllNotesBody": "Tap the + button to write your first note.",
   "emptyRecentNotesTitle": "Nothing recent",
-  "emptyRecentNotesBody": "Notes you edit will show up here."
+  "emptyRecentNotesBody": "Notes you edit will show up here.",
+  "noteActionRename": "Rename",
+  "noteActionMoveToNotebook": "Move to Notebook",
+  "noteActionEdit": "Edit",
+  "noteActionExport": "Export",
+  "noteActionShare": "Share",
+  "moveToNotebookTitle": "Move to Notebook",
+  "moveToNotebookEmptyBody": "No other notebooks yet. Create one to organise this note.",
+  "moveToNotebookCreateRow": "Create new notebook"
 }

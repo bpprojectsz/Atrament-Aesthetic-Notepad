@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import '../../platform/interstitial_service.dart';
 import '../models/note_model.dart';
 import '../services/local_storage.dart';
+import '../utils/quill_content_helper.dart';
 
 enum NoteSortOrder { modifiedDesc, createdDesc, titleAsc }
 
@@ -111,9 +112,22 @@ class NoteProvider {
   /// Saves [note]. [plainTextContent] is the Quill Delta flattened to
   /// plain text by the caller (the editor screen), used only to update the
   /// search index. Returns `true` on success.
+  ///
+  /// Auto-titles an untitled note: if [note]'s title is empty after
+  /// trimming, the first non-empty line of [plainTextContent] becomes the
+  /// title. Fires on every save, regardless of caller (decision F2 = B).
+  /// If the content has no text either (e.g. handwriting), the title stays
+  /// empty and the display layer falls back to `l10n.untitledNote`.
   Future<bool> saveNote(NoteModel note, {required String plainTextContent}) async {
+    final derived = note.title.trim().isEmpty
+        ? firstNonEmptyLine(plainTextContent)
+        : '';
+    final effectiveNote = derived.isEmpty
+        ? note
+        : note.copyWith(title: derived);
+
     final succeeded = await _storage.saveNote(
-      note,
+      effectiveNote,
       plainTextContent: plainTextContent,
     );
 
@@ -123,11 +137,11 @@ class NoteProvider {
       // Graceful in-memory fallback: reflect the edit in the current list
       // even though it didn't persist, so the user doesn't lose visible
       // work mid-session.
-      _upsertInMemory(note);
+      _upsertInMemory(effectiveNote);
       return false;
     }
 
-    _upsertInMemory(note);
+    _upsertInMemory(effectiveNote);
     unawaited(InterstitialService.instance.recordNoteSave());
     return true;
   }

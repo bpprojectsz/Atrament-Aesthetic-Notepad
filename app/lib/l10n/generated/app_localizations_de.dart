@@ -368,4 +368,29 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+
+  @override
+  String get noteActionRename => 'Rename';
+
+  @override
+  String get noteActionMoveToNotebook => 'Move to Notebook';
+
+  @override
+  String get noteActionEdit => 'Edit';
+
+  @override
+  String get noteActionExport => 'Export';
+
+  @override
+  String get noteActionShare => 'Share';
+
+  @override
+  String get moveToNotebookTitle => 'Move to Notebook';
+
+  @override
+  String get moveToNotebookEmptyBody =>
+      'No other notebooks yet. Create one to organise this note.';
+
+  @override
+  String get moveToNotebookCreateRow => 'Create new notebook';
 }

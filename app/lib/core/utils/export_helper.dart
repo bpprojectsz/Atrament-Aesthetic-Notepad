@@ -100,8 +100,8 @@ class ExportHelper {
             ),
           ),
           pw.SizedBox(height: 16),
-          pw.Text(
-            note.plainTextContent,
+          pw.Paragraph(
+            text: note.plainTextContent,
             style: const pw.TextStyle(
               fontSize: ExportLayout.pdfBodyFontSizePt,
               lineSpacing:

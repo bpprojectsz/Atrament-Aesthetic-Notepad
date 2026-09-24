@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,9 +13,14 @@ import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
+import '../core/services/export_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
+import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/quill_content_helper.dart';
+import '../platform/interstitial_service.dart';
+import '../platform/share_service.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/chips_row.dart';
@@ -21,8 +28,11 @@ import '../widgets/confirmation_dialog.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/language_picker.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/move_to_notebook_sheet.dart';
+import '../widgets/note_actions_menu.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
+import '../widgets/rename_note_dialog.dart';
 import 'note_editor_screen.dart';
 import 'notebook_detail_screen.dart';
 import 'settings_screen.dart';
@@ -263,7 +273,221 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Future<void> _openNoteMenu(NoteModel note) async {
+  Future<void> _handleNoteAction(NoteModel note) async {
+    final action = await showNoteActionsMenu(context);
+    if (action == null || !mounted) return;
+
+    switch (action) {
+      case NoteAction.rename:
+        await _handleRename(note);
+        break;
+      case NoteAction.moveToNotebook:
+        await _handleMoveToNotebook(note);
+        break;
+      case NoteAction.edit:
+        _openNoteForEdit(note);
+        break;
+      case NoteAction.export:
+        await _handleExport(note);
+        break;
+      case NoteAction.share:
+        await _handleShare(note);
+        break;
+      case NoteAction.delete:
+        await _handleDelete(note);
+        break;
+    }
+  }
+
+  Future<void> _handleRename(NoteModel note) async {
+    final newTitle = await showRenameNoteDialog(context, note.title);
+    if (newTitle == null || !mounted) return;
+    final updated = note.copyWith(title: newTitle, modifiedAt: DateTime.now());
+    await widget.noteProvider.saveNote(
+      updated,
+      plainTextContent: plainTextFromContent(note.content),
+    );
+  }
+
+  Future<void> _handleMoveToNotebook(NoteModel note) async {
+    final target = await showMoveToNotebookSheet(
+      context,
+      notebooks: widget.notebookProvider.notebooks.value,
+      currentNotebookId: note.notebookId,
+    );
+    if (target == null || !mounted) return;
+
+    final String targetId;
+    if (target == kCreateNotebookSentinel) {
+      final created = await _promptNewNotebookName();
+      if (created == null || !mounted) return;
+      targetId = created;
+    } else {
+      targetId = target;
+    }
+
+    final updated = note.copyWith(
+      notebookId: targetId,
+      modifiedAt: DateTime.now(),
+    );
+    await widget.noteProvider.saveNote(
+      updated,
+      plainTextContent: plainTextFromContent(note.content),
+    );
+  }
+
+  Future<String?> _promptNewNotebookName() async {
+    final l10n = AppLocalizations.of(context)!;
+    final nameController = TextEditingController();
+    final name = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.newNotebookTitle),
+        content: TextField(
+          controller: nameController,
+          autofocus: true,
+          decoration: InputDecoration(hintText: l10n.notebookNameHint),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(l10n.cancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(nameController.text),
+            child: Text(l10n.save),
+          ),
+        ],
+      ),
+    );
+    nameController.dispose();
+    final trimmed = name?.trim();
+    if (trimmed == null || trimmed.isEmpty || !mounted) return null;
+
+    final now = DateTime.now();
+    final notebook = NotebookModel(
+      id: IdGenerator.generate(),
+      name: trimmed,
+      coverColor: AppColors.accent.light.toARGB32(),
+      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      sortOrder: widget.notebookProvider.notebooks.value.length,
+      createdAt: now,
+      modifiedAt: now,
+    );
+    final succeeded = await widget.notebookProvider.createNotebook(notebook);
+    if (!succeeded) return null;
+    return notebook.id;
+  }
+
+  void _openNoteForEdit(NoteModel note) {
+    final notebookId = note.notebookId;
+    if (notebookId == null) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => NoteEditorScreen(
+            note: note,
+            noteProvider: widget.noteProvider,
+          ),
+        ),
+      );
+    } else {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => NotebookDetailScreen.editingNote(
+            noteId: note.id,
+            notebookId: notebookId,
+            notebookProvider: widget.notebookProvider,
+            noteProvider: widget.noteProvider,
+          ),
+        ),
+      );
+    }
+  }
+
+  Future<void> _handleExport(NoteModel note) async {
+    final l10n = AppLocalizations.of(context)!;
+    final format = await showModalBottomSheet<ExportFormat>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.description_outlined),
+              title: Text(l10n.exportAsTxt),
+              onTap: () => Navigator.pop(context, ExportFormat.txt),
+            ),
+            ListTile(
+              leading: const Icon(Icons.picture_as_pdf_outlined),
+              title: Text(l10n.exportAsPdf),
+              onTap: () => Navigator.pop(context, ExportFormat.pdf),
+            ),
+          ],
+        ),
+      ),
+    );
+    if (format == null || !mounted) return;
+
+    final exportable = _buildExportable(note, l10n);
+    const exportService = ExportService();
+    final result = format == ExportFormat.txt
+        ? await exportService.exportAsTxt(exportable)
+        : await exportService.exportAsPdf(exportable);
+    if (!mounted) return;
+
+    if (!result.succeeded) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(result.errorMessage ?? l10n.exportFailedMessage),
+        ),
+      );
+      return;
+    }
+
+    const shareService = ShareService();
+    final shareResult = await shareService.shareFile(
+      result.filePath!,
+      subject: exportable.title,
+    );
+    if (!mounted) return;
+    if (shareResult.failed) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.shareFailedMessage)),
+      );
+    }
+    unawaited(InterstitialService.instance.showAfterExport());
+  }
+
+  Future<void> _handleShare(NoteModel note) async {
+    final l10n = AppLocalizations.of(context)!;
+    final exportable = _buildExportable(note, l10n);
+    const shareService = ShareService();
+    final body = exportable.plainTextContent.isEmpty
+        ? exportable.title
+        : '${exportable.title}\n\n${exportable.plainTextContent}';
+    final result = await shareService.shareText(body, subject: exportable.title);
+    if (!mounted) return;
+    if (result.failed) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.shareFailedMessage)),
+      );
+    }
+  }
+
+  ExportableNote _buildExportable(NoteModel note, AppLocalizations l10n) {
+    return ExportableNote(
+      title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
+      plainTextContent: plainTextFromContent(note.content),
+      createdAtLabel: DateFormatter.short(
+        note.createdAt,
+        localeCode: Localizations.localeOf(context).languageCode,
+      ),
+      verseReferenceLabel: note.verseReference,
+    );
+  }
+
+  Future<void> _handleDelete(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
     final confirmed = await ConfirmationDialog.show(
       context,
@@ -337,12 +561,13 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildNoteList(List<NoteModel> notes) {
+    final l10n = AppLocalizations.of(context)!;
     return ListView.builder(
       itemCount: notes.length,
       itemBuilder: (context, index) {
         final note = notes[index];
         return NoteListItem(
-          title: note.title,
+          title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
           previewText: '',
           dateLabel: DateFormatter.short(
             note.modifiedAt,
@@ -372,7 +597,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
           },
-          onMore: () => _openNoteMenu(note),
+          onMore: () => _handleNoteAction(note),
         );
       },
     );
@@ -402,7 +627,7 @@ class _HomeScreenState extends State<HomeScreen> {
           itemBuilder: (context, index) {
             final note = results[index];
             return NoteListItem(
-              title: note.title,
+              title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
               previewText: '',
               dateLabel: DateFormatter.short(
                 note.modifiedAt,
@@ -432,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }
               },
-              onMore: () => _openNoteMenu(note),
+              onMore: () => _handleNoteAction(note),
             );
           },
         );

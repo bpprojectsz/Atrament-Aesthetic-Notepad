@@ -805,6 +805,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Notes you edit will show up here.'**
   String get emptyRecentNotesBody;
+
+  /// No description provided for @noteActionRename.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename'**
+  String get noteActionRename;
+
+  /// No description provided for @noteActionMoveToNotebook.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to Notebook'**
+  String get noteActionMoveToNotebook;
+
+  /// No description provided for @noteActionEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get noteActionEdit;
+
+  /// No description provided for @noteActionExport.
+  ///
+  /// In en, this message translates to:
+  /// **'Export'**
+  String get noteActionExport;
+
+  /// No description provided for @noteActionShare.
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get noteActionShare;
+
+  /// No description provided for @moveToNotebookTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to Notebook'**
+  String get moveToNotebookTitle;
+
+  /// No description provided for @moveToNotebookEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'No other notebooks yet. Create one to organise this note.'**
+  String get moveToNotebookEmptyBody;
+
+  /// No description provided for @moveToNotebookCreateRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Create new notebook'**
+  String get moveToNotebookCreateRow;
 }
 
 class _AppLocalizationsDelegate
