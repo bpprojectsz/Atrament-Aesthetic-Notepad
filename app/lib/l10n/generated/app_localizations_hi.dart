@@ -343,4 +343,25 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
+
+  @override
+  String get chipAll => 'All';
+
+  @override
+  String get chipNotebooks => 'Notebooks';
+
+  @override
+  String get chipRecent => 'Recent';
+
+  @override
+  String get emptyAllNotesTitle => 'No notes yet';
+
+  @override
+  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+
+  @override
+  String get emptyRecentNotesTitle => 'Nothing recent';
+
+  @override
+  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
 }

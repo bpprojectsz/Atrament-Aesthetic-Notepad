@@ -114,5 +114,12 @@
   "clearDebugLogBody": "This removes the saved technical report from your device.",
   "debugLogClearedMessage": "Debug log cleared.",
   "premiumUnlockLabel": "Remove Ads Forever",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "All",
+  "chipNotebooks": "Notebooks",
+  "chipRecent": "Recent",
+  "emptyAllNotesTitle": "No notes yet",
+  "emptyAllNotesBody": "Tap the + button to write your first note.",
+  "emptyRecentNotesTitle": "Nothing recent",
+  "emptyRecentNotesBody": "Notes you edit will show up here."
 }

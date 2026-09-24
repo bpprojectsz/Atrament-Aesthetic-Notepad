@@ -763,6 +763,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'\$14.99'**
   String get premiumUnlockPriceFallback;
+
+  /// No description provided for @chipAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get chipAll;
+
+  /// No description provided for @chipNotebooks.
+  ///
+  /// In en, this message translates to:
+  /// **'Notebooks'**
+  String get chipNotebooks;
+
+  /// No description provided for @chipRecent.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get chipRecent;
+
+  /// No description provided for @emptyAllNotesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No notes yet'**
+  String get emptyAllNotesTitle;
+
+  /// No description provided for @emptyAllNotesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the + button to write your first note.'**
+  String get emptyAllNotesBody;
+
+  /// No description provided for @emptyRecentNotesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing recent'**
+  String get emptyRecentNotesTitle;
+
+  /// No description provided for @emptyRecentNotesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes you edit will show up here.'**
+  String get emptyRecentNotesBody;
 }
 
 class _AppLocalizationsDelegate

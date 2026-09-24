@@ -1,18 +1,25 @@
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
+import '../core/providers/locale_provider.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
+import '../core/providers/theme_provider.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/id_generator.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
+import '../widgets/chips_row.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/empty_state.dart';
+import '../widgets/language_picker.dart';
 import '../widgets/loading_indicator.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
@@ -42,11 +49,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _searchController = TextEditingController();
+  HomeChip _selected = HomeChip.all;
 
   @override
   void initState() {
     super.initState();
     widget.notebookProvider.loadNotebooks();
+    widget.noteProvider.loadAllNotes();
   }
 
   @override
@@ -129,6 +138,24 @@ class _HomeScreenState extends State<HomeScreen> {
       title: l10n.appName,
       actions: [
         IconButton(
+          icon: const Icon(Icons.brightness_6),
+          tooltip: l10n.themeSectionTitle,
+          onPressed: _cycleTheme,
+        ),
+        IconButton(
+          icon: const Icon(Icons.translate),
+          tooltip: l10n.languageSectionTitle,
+          onPressed: () => showLanguagePicker(
+            context,
+            context.read<LocaleProvider>(),
+          ),
+        ),
+        IconButton(
+          icon: const Icon(Icons.note_add),
+          tooltip: l10n.newNotebookTitle,
+          onPressed: _createNotebook,
+        ),
+        IconButton(
           icon: const Icon(Icons.settings_outlined),
           tooltip: l10n.settingsTitle,
           onPressed: () {
@@ -139,8 +166,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
       floatingActionButton: FloatingActionButton(
-        onPressed: _createNotebook,
-        tooltip: l10n.newNotebookTitle,
+        onPressed: _createNote,
+        tooltip: l10n.newNoteTitle,
         child: const Icon(Icons.add),
       ),
       bottomAdSlot: ListenableBuilder(
@@ -172,6 +199,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            const SizedBox(height: AppSpacing.sm),
+            ChipsRow(
+              selected: _selected,
+              onSelected: (chip) => setState(() => _selected = chip),
+              allLabel: l10n.chipAll,
+              notebooksLabel: l10n.chipNotebooks,
+              recentLabel: l10n.chipRecent,
+            ),
             const SizedBox(height: AppSpacing.md),
             Expanded(
               child: ListenableBuilder(
@@ -179,13 +214,167 @@ class _HomeScreenState extends State<HomeScreen> {
                 builder: (context, _) {
                   final isSearching =
                       widget.noteProvider.searchQuery.value.trim().isNotEmpty;
-                  return isSearching ? _buildSearchResults() : _buildNotebookGrid();
+                  return isSearching ? _buildSearchResults() : _buildBodyForChip();
                 },
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  void _cycleTheme() {
+    final provider = context.read<ThemeProvider>();
+    const order = [
+      ThemePreference.system,
+      ThemePreference.light,
+      ThemePreference.dark,
+      ThemePreference.parchment,
+    ];
+    final current = provider.preference.value;
+    final next = order[(order.indexOf(current) + 1) % order.length];
+    provider.setPreference(next);
+  }
+
+  Future<void> _createNote() async {
+    final prefs = await SharedPreferences.getInstance();
+    final paperStyle =
+        prefs.getString(AppConstants.prefPaperStyleDefault) ?? 'cream';
+    final now = DateTime.now();
+    final note = NoteModel(
+      id: IdGenerator.generate(),
+      title: '',
+      content: '[{"insert":"\\n"}]',
+      notebookId: null,
+      paperStyle: paperStyle,
+      createdAt: now,
+      modifiedAt: now,
+    );
+    if (!mounted) return;
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => NoteEditorScreen(
+          note: note,
+          noteProvider: widget.noteProvider,
+          isNewNote: true,
+        ),
+      ),
+    );
+  }
+
+  Future<void> _openNoteMenu(NoteModel note) async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await ConfirmationDialog.show(
+      context,
+      title: l10n.deleteNoteTitle,
+      body: l10n.deleteConfirmBody,
+      cancelLabel: l10n.cancel,
+      confirmLabel: l10n.delete,
+    );
+    if (confirmed == true) {
+      await widget.noteProvider.deleteNote(note.id);
+    }
+  }
+
+  Widget _buildBodyForChip() {
+    switch (_selected) {
+      case HomeChip.all:
+        return _buildAllNotes();
+      case HomeChip.notebooks:
+        return _buildNotebookGrid();
+      case HomeChip.recent:
+        return _buildRecentNotes();
+    }
+  }
+
+  Widget _buildAllNotes() {
+    final l10n = AppLocalizations.of(context)!;
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        widget.noteProvider.notes,
+        widget.noteProvider.isLoading,
+      ]),
+      builder: (context, _) {
+        if (widget.noteProvider.isLoading.value) {
+          return const Center(child: LoadingIndicator());
+        }
+        final notes = widget.noteProvider.notes.value;
+        if (notes.isEmpty) {
+          return EmptyState(
+            icon: Icons.note_outlined,
+            title: l10n.emptyAllNotesTitle,
+            body: l10n.emptyAllNotesBody,
+          );
+        }
+        return _buildNoteList(notes);
+      },
+    );
+  }
+
+  Widget _buildRecentNotes() {
+    final l10n = AppLocalizations.of(context)!;
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        widget.noteProvider.notes,
+        widget.noteProvider.isLoading,
+      ]),
+      builder: (context, _) {
+        if (widget.noteProvider.isLoading.value) {
+          return const Center(child: LoadingIndicator());
+        }
+        final notes = widget.noteProvider.notes.value;
+        if (notes.isEmpty) {
+          return EmptyState(
+            icon: Icons.history,
+            title: l10n.emptyRecentNotesTitle,
+            body: l10n.emptyRecentNotesBody,
+          );
+        }
+        return _buildNoteList(notes);
+      },
+    );
+  }
+
+  Widget _buildNoteList(List<NoteModel> notes) {
+    return ListView.builder(
+      itemCount: notes.length,
+      itemBuilder: (context, index) {
+        final note = notes[index];
+        return NoteListItem(
+          title: note.title,
+          previewText: '',
+          dateLabel: DateFormatter.short(
+            note.modifiedAt,
+            localeCode: Localizations.localeOf(context).languageCode,
+          ),
+          onTap: () {
+            final notebookId = note.notebookId;
+            if (notebookId == null) {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => NoteEditorScreen(
+                    note: note,
+                    noteProvider: widget.noteProvider,
+                  ),
+                ),
+              );
+            } else {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => NotebookDetailScreen.editingNote(
+                    noteId: note.id,
+                    notebookId: notebookId,
+                    notebookProvider: widget.notebookProvider,
+                    noteProvider: widget.noteProvider,
+                  ),
+                ),
+              );
+            }
+          },
+          onMore: () => _openNoteMenu(note),
+        );
+      },
     );
   }
 
@@ -243,6 +432,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }
               },
+              onMore: () => _openNoteMenu(note),
             );
           },
         );

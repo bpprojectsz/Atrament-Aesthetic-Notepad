@@ -15,6 +15,8 @@ class NoteListItem extends StatelessWidget {
     this.onLongPress,
     this.onDelete,
     this.deleteTooltip,
+    this.onMore,
+    this.moreTooltip,
   });
 
   final String title;
@@ -31,6 +33,11 @@ class NoteListItem extends StatelessWidget {
   /// regardless of whether they'd ever try swiping.
   final VoidCallback? onDelete;
   final String? deleteTooltip;
+
+  /// Trailing 3-dot button. When non-null, renders an icon button in the
+  /// trailing position, next to the delete icon if both are provided.
+  final VoidCallback? onMore;
+  final String? moreTooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -102,6 +109,18 @@ class NoteListItem extends StatelessWidget {
                   color: dateColor,
                 ),
               ),
+              if (onMore != null)
+                Semantics(
+                  button: true,
+                  label: moreTooltip,
+                  child: IconButton(
+                    icon: const Icon(Icons.more_vert),
+                    iconSize: 20,
+                    color: dateColor,
+                    tooltip: moreTooltip,
+                    onPressed: onMore,
+                  ),
+                ),
               if (onDelete != null)
                 Semantics(
                   button: true,

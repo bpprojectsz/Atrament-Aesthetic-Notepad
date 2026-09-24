@@ -22,6 +22,7 @@ import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/font_selector.dart';
+import '../widgets/language_picker.dart';
 import '../widgets/paper_selector.dart';
 import '../widgets/pro_badge.dart';
 import 'premium_screen.dart';
@@ -399,7 +400,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               final current = localeProvider.preference.value;
               final title = current == null
                   ? l10n.languageSystem
-                  : _nativeNameFor(current.languageCode) ??
+                  : nativeNameFor(current.languageCode) ??
                         current.languageCode;
               final subtitle = current == null
                   ? l10n.languageFollowsSystem
@@ -409,7 +410,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 title: Text(title),
                 subtitle: subtitle == null ? null : Text(subtitle),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () => _pickLanguage(context, localeProvider),
+                onTap: () => showLanguagePicker(context, localeProvider),
               );
             },
           ),
@@ -441,100 +442,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       '${l10n.shareAppMessage}\n$url',
       subject: l10n.shareAppTitle,
     );
-  }
-
-  Future<void> _pickLanguage(
-    BuildContext context,
-    LocaleProvider localeProvider,
-  ) async {
-    final l10n = AppLocalizations.of(context)!;
-    final current = localeProvider.preference.value;
-
-    final picked = await showModalBottomSheet<String>(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) {
-        return SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(AppSpacing.md),
-                  child: Text(
-                    l10n.languagePickerTitle,
-                    style: TextStyle(
-                      fontSize: AppTypography.title2.size,
-                      fontWeight: AppTypography.title2.weight,
-                    ),
-                  ),
-                ),
-                const Divider(height: 1),
-                ListTile(
-                  title: Text(l10n.languageSystem),
-                  subtitle: Text(l10n.languageFollowsSystem),
-                  trailing: current == null ? const Icon(Icons.check) : null,
-                  onTap: () => Navigator.pop(context, ''),
-                ),
-                const Divider(height: 1),
-                for (final locale in AppLocalizations.supportedLocales)
-                  ListTile(
-                    title: Text(
-                      _nativeNameFor(locale.languageCode) ??
-                          locale.languageCode,
-                    ),
-                    trailing: current?.languageCode == locale.languageCode
-                        ? const Icon(Icons.check)
-                        : null,
-                    onTap: () => Navigator.pop(context, locale.languageCode),
-                  ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-
-    if (picked == null) return;
-    if (picked.isEmpty) {
-      await localeProvider.setLocale(null);
-    } else {
-      await localeProvider.setLocale(Locale(picked));
-    }
-  }
-
-  /// Native language names for the picker. Hardcoded: readers see their own
-  /// language in its own script, which is the conventional UX for language
-  /// selectors — a translated label would be unreadable to users who do not
-  /// yet speak the currently active language.
-  String? _nativeNameFor(String code) {
-    switch (code) {
-      case 'ar':
-        return 'العربية';
-      case 'de':
-        return 'Deutsch';
-      case 'en':
-        return 'English';
-      case 'es':
-        return 'Español';
-      case 'fr':
-        return 'Français';
-      case 'he':
-        return 'עברית';
-      case 'hi':
-        return 'हिन्दी';
-      case 'ja':
-        return '日本語';
-      case 'ko':
-        return '한국어';
-      case 'pt':
-        return 'Português';
-      case 'zh':
-        return '中文';
-      default:
-        return null;
-    }
   }
 
   String _paperStyleLabel(AppLocalizations l10n, String id) {
