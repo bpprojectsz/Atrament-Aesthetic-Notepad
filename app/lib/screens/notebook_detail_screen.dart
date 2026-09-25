@@ -254,20 +254,13 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
           onDismissed: (_) => widget.noteProvider.deleteNote(note.id),
           child: NoteListItem(
             title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
-            previewText: '',
+            previewText: _previewFor(note),
             dateLabel: DateFormatter.short(
               note.modifiedAt,
               localeCode: Localizations.localeOf(context).languageCode,
             ),
             onTap: () => _openNote(note),
             onMore: () => _handleNoteAction(note),
-            deleteTooltip: l10n.delete,
-            onDelete: () async {
-              final confirmed = await _confirmDeleteNote(context, l10n);
-              if (confirmed == true) {
-                await widget.noteProvider.deleteNote(note.id);
-              }
-            },
           ),
         );
       },
@@ -474,6 +467,26 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     if (confirmed == true) {
       await widget.noteProvider.deleteNote(note.id);
     }
+  }
+
+  /// Builds a preview string for [note]: plain text body with the line
+  /// already used as the title dropped, joined and clipped at 200 chars.
+  /// Handwriting notes have no text body and preview as empty.
+  String _previewFor(NoteModel note) {
+    final plain = plainTextFromContent(note.content);
+    if (plain.isEmpty) return '';
+    final lines = plain
+        .split('\n')
+        .map((l) => l.trim())
+        .where((l) => l.isNotEmpty)
+        .toList();
+    if (lines.isEmpty) return '';
+    // First non-empty line is what auto-title derives from. Drop it.
+    final body = lines.skip(1).join(' ');
+    if (body.length > 200) {
+      return '${body.substring(0, 200).trimRight()}…';
+    }
+    return body;
   }
 
   /// Shared by both the swipe-to-delete gesture and the explicit delete

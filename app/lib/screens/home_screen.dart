@@ -360,6 +360,25 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     }
   }
 
+  /// Builds a preview string for [note]: plain text body with the line
+  /// already used as the title dropped, joined and clipped at 200 chars.
+  /// Handwriting notes have no text body and preview as empty.
+  String _previewFor(NoteModel note) {
+    final plain = plainTextFromContent(note.content);
+    if (plain.isEmpty) return '';
+    final lines = plain
+        .split('\n')
+        .map((l) => l.trim())
+        .where((l) => l.isNotEmpty)
+        .toList();
+    if (lines.isEmpty) return '';
+    final body = lines.skip(1).join(' ');
+    if (body.length > 200) {
+      return '${body.substring(0, 200).trimRight()}…';
+    }
+    return body;
+  }
+
   Future<void> _handleNoteAction(NoteModel note) async {
     final action = await showNoteActionsMenu(context);
     if (action == null || !mounted) return;
@@ -655,7 +674,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         final note = notes[index];
         return NoteListItem(
           title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
-          previewText: '',
+          previewText: _previewFor(note),
           dateLabel: DateFormatter.short(
             note.modifiedAt,
             localeCode: Localizations.localeOf(context).languageCode,
@@ -715,7 +734,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
             final note = results[index];
             return NoteListItem(
               title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
-              previewText: '',
+              previewText: _previewFor(note),
               dateLabel: DateFormatter.short(
                 note.modifiedAt,
                 localeCode: Localizations.localeOf(context).languageCode,

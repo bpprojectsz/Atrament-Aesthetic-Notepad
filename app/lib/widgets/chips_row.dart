@@ -6,9 +6,8 @@ import '../core/utils/constants.dart';
 /// builder is shown when the search field is empty.
 enum HomeChip { all, notebooks, recent }
 
-/// Horizontal row of three filter chips shown below the search field on
-/// the home screen. Selected chip uses the accent color; unselected chips
-/// use the secondary background with a subtle border.
+/// iOS-style segmented control for the home screen. One rounded container
+/// with three equal-width segments and a sliding selection indicator.
 class ChipsRow extends StatelessWidget {
   const ChipsRow({
     super.key,
@@ -25,80 +24,133 @@ class ChipsRow extends StatelessWidget {
   final String notebooksLabel;
   final String recentLabel;
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        _Chip(
-          label: allLabel,
-          isSelected: selected == HomeChip.all,
-          onTap: () => onSelected(HomeChip.all),
-        ),
-        const SizedBox(width: AppSpacing.sm),
-        _Chip(
-          label: notebooksLabel,
-          isSelected: selected == HomeChip.notebooks,
-          onTap: () => onSelected(HomeChip.notebooks),
-        ),
-        const SizedBox(width: AppSpacing.sm),
-        _Chip(
-          label: recentLabel,
-          isSelected: selected == HomeChip.recent,
-          onTap: () => onSelected(HomeChip.recent),
-        ),
-      ],
-    );
-  }
-}
-
-class _Chip extends StatelessWidget {
-  const _Chip({
-    required this.label,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  final String label;
-  final bool isSelected;
-  final VoidCallback onTap;
+  static const double _height = 34;
+  static const double _outerRadius = 9;
+  static const double _innerRadius = 6;
+  static const double _innerPadding = 3;
+  static const Duration _animDuration = Duration(milliseconds: 200);
 
   @override
   Widget build(BuildContext context) {
     final mode = Theme.of(context).brightness == Brightness.dark
         ? AppThemeMode.dark
         : AppThemeMode.light;
-    final bg = isSelected
-        ? AppColors.accent.resolve(mode)
-        : AppColors.bgSecondary.resolve(mode);
-    final fg = isSelected
-        ? AppColors.bgPrimary.resolve(mode)
-        : AppColors.textPrimary.resolve(mode);
-    final border = isSelected
-        ? const Color(0x00000000)
-        : AppColors.borderSubtle.resolve(mode);
+    final containerFill = AppColors.bgTertiary.resolve(mode);
+    final segmentFill = AppColors.bgPrimary.resolve(mode);
+    final selectedText = AppColors.textPrimary.resolve(mode);
+    final unselectedText = AppColors.textSecondary.resolve(mode);
+    final shadow = mode == AppThemeMode.dark
+        ? null
+        : [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.08),
+              blurRadius: 3,
+              offset: const Offset(0, 1),
+            ),
+          ];
 
-    return Material(
-      color: bg,
-      borderRadius: BorderRadius.circular(AppRadius.button),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(AppRadius.button),
+    return SizedBox(
+      height: _height,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final innerWidth = constraints.maxWidth - 2 * _innerPadding;
+          final segmentWidth = innerWidth / 3;
+          final selectedIndex = HomeChip.values.indexOf(selected);
+
+          return Stack(
+            children: [
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: containerFill,
+                    borderRadius: BorderRadius.circular(_outerRadius),
+                  ),
+                ),
+              ),
+              AnimatedPositioned(
+                duration: _animDuration,
+                curve: Curves.easeOut,
+                left: _innerPadding + selectedIndex * segmentWidth,
+                top: _innerPadding,
+                bottom: _innerPadding,
+                width: segmentWidth,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: segmentFill,
+                    borderRadius: BorderRadius.circular(_innerRadius),
+                    boxShadow: shadow,
+                  ),
+                ),
+              ),
+              Positioned.fill(
+                child: Padding(
+                  padding: const EdgeInsets.all(_innerPadding),
+                  child: Row(
+                    children: [
+                      _Segment(
+                        label: allLabel,
+                        isSelected: selected == HomeChip.all,
+                        selectedColor: selectedText,
+                        unselectedColor: unselectedText,
+                        onTap: () => onSelected(HomeChip.all),
+                      ),
+                      _Segment(
+                        label: notebooksLabel,
+                        isSelected: selected == HomeChip.notebooks,
+                        selectedColor: selectedText,
+                        unselectedColor: unselectedText,
+                        onTap: () => onSelected(HomeChip.notebooks),
+                      ),
+                      _Segment(
+                        label: recentLabel,
+                        isSelected: selected == HomeChip.recent,
+                        selectedColor: selectedText,
+                        unselectedColor: unselectedText,
+                        onTap: () => onSelected(HomeChip.recent),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _Segment extends StatelessWidget {
+  const _Segment({
+    required this.label,
+    required this.isSelected,
+    required this.selectedColor,
+    required this.unselectedColor,
+    required this.onTap,
+  });
+
+  final String label;
+  final bool isSelected;
+  final Color selectedColor;
+  final Color unselectedColor;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: GestureDetector(
         onTap: onTap,
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.md,
-            vertical: AppSpacing.sm,
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppRadius.button),
-            border: Border.all(color: border, width: 0.5),
-          ),
-          child: Text(
-            label,
+        behavior: HitTestBehavior.opaque,
+        child: Center(
+          child: AnimatedDefaultTextStyle(
+            duration: ChipsRow._animDuration,
+            curve: Curves.easeOut,
             style: TextStyle(
               fontSize: AppTypography.footnote.size,
-              fontWeight: FontWeight.w600,
-              color: fg,
+              fontWeight: FontWeight.w500,
+              color: isSelected ? selectedColor : unselectedColor,
             ),
+            child: Text(label, maxLines: 1, overflow: TextOverflow.ellipsis),
           ),
         ),
       ),

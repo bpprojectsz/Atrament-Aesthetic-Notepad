@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../core/utils/constants.dart';
 
-/// Dense list tile used in `notebook_detail_screen.dart`. Trades the
-/// thumbnail image in [NoteCard] for a compact single-line layout suited
-/// to scanning many notes quickly.
+/// Note row used on the home screen and in `notebook_detail_screen.dart`.
+/// Layout: title, up to two preview lines, then a small date on its own
+/// line. Rows are separated by whitespace only — no dividers. The 3-dot
+/// menu is the only trailing control. Delete is reachable through the
+/// 3-dot menu and via swipe on notebook detail.
 class NoteListItem extends StatelessWidget {
   const NoteListItem({
     super.key,
@@ -13,8 +15,6 @@ class NoteListItem extends StatelessWidget {
     required this.dateLabel,
     required this.onTap,
     this.onLongPress,
-    this.onDelete,
-    this.deleteTooltip,
     this.onMore,
     this.moreTooltip,
   });
@@ -25,17 +25,8 @@ class NoteListItem extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback? onLongPress;
 
-  /// Explicit, always-visible delete action — shown as a trailing icon
-  /// button when provided, alongside (not instead of) any swipe-to-delete
-  /// gesture the caller wraps this widget in. Swipe alone has no visual
-  /// affordance hinting it exists, which makes deletion easy to miss
-  /// entirely; this gives every user a discoverable way to delete a note
-  /// regardless of whether they'd ever try swiping.
-  final VoidCallback? onDelete;
-  final String? deleteTooltip;
-
-  /// Trailing 3-dot button. When non-null, renders an icon button in the
-  /// trailing position, next to the delete icon if both are provided.
+  /// Trailing 3-dot menu. When non-null, renders an icon button aligned to
+  /// the top-right of the row, level with the title.
   final VoidCallback? onMore;
   final String? moreTooltip;
 
@@ -47,7 +38,6 @@ class NoteListItem extends StatelessWidget {
     final titleColor = AppColors.textPrimary.resolve(mode);
     final previewColor = AppColors.textSecondary.resolve(mode);
     final dateColor = AppColors.textTertiary.resolve(mode);
-    final borderColor = AppColors.borderSubtle.resolve(mode);
 
     final displayTitle = title.trim().isEmpty ? '' : title;
 
@@ -57,18 +47,13 @@ class NoteListItem extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         onLongPress: onLongPress,
-        child: Container(
-          constraints: const BoxConstraints(
-            minHeight: AppElevation.minTouchTarget,
-          ),
+        child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.md,
             vertical: AppSpacing.sm,
           ),
-          decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: borderColor, width: 0.5)),
-          ),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: Column(
@@ -79,9 +64,9 @@ class NoteListItem extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontSize: AppTypography.body.size,
-                        fontWeight: FontWeight.w600,
-                        height: AppTypography.body.height,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        height: 1.3,
                         color: titleColor,
                       ),
                     ),
@@ -89,24 +74,25 @@ class NoteListItem extends StatelessWidget {
                       const SizedBox(height: AppSpacing.xxs),
                       Text(
                         previewText,
-                        maxLines: 1,
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontSize: AppTypography.footnote.size,
-                          height: AppTypography.footnote.height,
+                          fontSize: 13,
+                          height: 1.35,
                           color: previewColor,
                         ),
                       ),
                     ],
+                    const SizedBox(height: AppSpacing.xs),
+                    Text(
+                      dateLabel,
+                      style: TextStyle(
+                        fontSize: 11,
+                        height: 1.2,
+                        color: dateColor,
+                      ),
+                    ),
                   ],
-                ),
-              ),
-              const SizedBox(width: AppSpacing.sm),
-              Text(
-                dateLabel,
-                style: TextStyle(
-                  fontSize: AppTypography.caption.size,
-                  color: dateColor,
                 ),
               ),
               if (onMore != null)
@@ -119,18 +105,6 @@ class NoteListItem extends StatelessWidget {
                     color: dateColor,
                     tooltip: moreTooltip,
                     onPressed: onMore,
-                  ),
-                ),
-              if (onDelete != null)
-                Semantics(
-                  button: true,
-                  label: deleteTooltip,
-                  child: IconButton(
-                    icon: const Icon(Icons.delete_outline),
-                    iconSize: 20,
-                    color: dateColor,
-                    tooltip: deleteTooltip,
-                    onPressed: onDelete,
                   ),
                 ),
             ],
