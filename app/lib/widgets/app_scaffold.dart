@@ -57,14 +57,7 @@ class AppScaffold extends StatelessWidget {
             ),
       floatingActionButton: floatingActionButton,
       body: SafeArea(child: body),
-      bottomNavigationBar: bottomAdSlot == null
-          ? null
-          : Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.sm,
-              ),
-              child: bottomAdSlot,
-            ),
+      bottomNavigationBar: bottomAdSlot,
     );
   }
 }

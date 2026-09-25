@@ -103,7 +103,6 @@ class AdMobService {
   /// (network, fill, SDK not initialized) — the caller
   /// (`banner_ad_widget.dart`) treats a null result as "render nothing."
   Future<BannerAd?> loadBanner({
-    required int adaptiveWidth,
     required void Function() onFailed,
   }) async {
     if (!isAvailable) {
@@ -111,13 +110,8 @@ class AdMobService {
       return null;
     }
 
-    final sizeResult = await AdSize.getLargeAnchoredAdaptiveBannerAdSize(
-      adaptiveWidth,
-    );
-    if (sizeResult == null) {
-      onFailed();
-      return null;
-    }
+    // KatharScan parity: fixed 320x50 standard banner, not anchored adaptive.
+    const sizeResult = AdSize.banner;
 
     BannerAd? banner;
     final completer = Completer<BannerAd?>();

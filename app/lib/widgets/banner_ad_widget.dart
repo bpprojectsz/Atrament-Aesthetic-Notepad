@@ -73,16 +73,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       return;
     }
 
-    // Reserve room for the horizontal padding applied by the scaffold so
-    // the loaded banner does not clip against the padded edge.
-    const int horizontalReserve = 16;
-    final screenWidth = MediaQuery.sizeOf(context).width.truncate();
-    final width = screenWidth > horizontalReserve
-        ? screenWidth - horizontalReserve
-        : screenWidth;
-
     final banner = await AdMobService.instance.loadBanner(
-      adaptiveWidth: width,
       onFailed: () {
         if (mounted) setState(() => _failed = true);
       },
@@ -123,10 +114,12 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       return const SizedBox.shrink();
     }
 
-    return SizedBox(
-      width: double.infinity,
-      height: banner.size.height.toDouble(),
-      child: AdWidget(ad: banner),
+    return SafeArea(
+      child: SizedBox(
+        width: banner.size.width.toDouble(),
+        height: banner.size.height.toDouble(),
+        child: AdWidget(ad: banner),
+      ),
     );
   }
 }
