@@ -27,6 +27,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   void initState() {
     super.initState();
     widget.subscriptionProvider.status.addListener(_onSubscriptionChanged);
+    AdMobService.instance.availability.addListener(_onAvailabilityChanged);
   }
 
   @override
@@ -51,12 +52,35 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
     setState(() {});
   }
 
+  /// Fires when the AdMob SDK finishes initializing. On cold start the
+  /// home screen mounts before the SDK is ready, so the first load
+  /// attempt is a no-op — this listener supplies the retry.
+  void _onAvailabilityChanged() {
+    if (!mounted) return;
+    if (AdMobService.instance.isAvailable && _banner == null && !_failed) {
+      _maybeLoadBanner();
+    }
+  }
+
   Future<void> _maybeLoadBanner() async {
     if (widget.subscriptionProvider.status.value == SubscriptionStatus.pro) {
       return;
     }
+    if (_banner != null) return;
+    if (!AdMobService.instance.isAvailable) {
+      // SDK not ready yet — the availability listener retries when it
+      // flips true. Do not mark as failed, this is normal on cold start.
+      return;
+    }
 
-    final width = MediaQuery.sizeOf(context).width.truncate();
+    // Reserve room for the horizontal padding applied by the scaffold so
+    // the loaded banner does not clip against the padded edge.
+    const int horizontalReserve = 16;
+    final screenWidth = MediaQuery.sizeOf(context).width.truncate();
+    final width = screenWidth > horizontalReserve
+        ? screenWidth - horizontalReserve
+        : screenWidth;
+
     final banner = await AdMobService.instance.loadBanner(
       adaptiveWidth: width,
       onFailed: () {
@@ -82,6 +106,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   void dispose() {
+    AdMobService.instance.availability.removeListener(_onAvailabilityChanged);
     widget.subscriptionProvider.status.removeListener(_onSubscriptionChanged);
     _disposeBanner();
     super.dispose();
@@ -99,7 +124,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
     }
 
     return SizedBox(
-      width: banner.size.width.toDouble(),
+      width: double.infinity,
       height: banner.size.height.toDouble(),
       child: AdWidget(ad: banner),
     );

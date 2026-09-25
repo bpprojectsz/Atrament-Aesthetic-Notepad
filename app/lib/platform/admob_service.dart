@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io' show Platform;
 
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/utils/error_handler.dart';
@@ -20,6 +21,11 @@ class AdMobService {
 
   bool _initialized = false;
   bool _initializationFailed = false;
+
+  /// Flipped to true once the SDK finishes initializing successfully.
+  /// Banner call sites listen for the false-to-true transition to retry
+  /// a load that was requested before the SDK was ready.
+  final ValueNotifier<bool> availability = ValueNotifier(false);
 
   bool get isAvailable => _initialized && !_initializationFailed;
 
@@ -78,9 +84,11 @@ class AdMobService {
     try {
       await MobileAds.instance.initialize();
       _initialized = true;
+      availability.value = true;
     } catch (error, stackTrace) {
       _initializationFailed = true;
       _initialized = true;
+      availability.value = false;
       ErrorHandler.report(
         error,
         stackTrace,
