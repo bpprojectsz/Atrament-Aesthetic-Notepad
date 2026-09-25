@@ -132,7 +132,14 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final title = widget.notebook?.name ?? '';
+    // In the `.editingNote` constructor path, `widget.notebook` is null
+    // (only the id override is set), so resolve the name from the provider
+    // to keep the AppBar titled instead of blank.
+    final title = widget.notebook?.name ??
+        widget.notebookProvider.notebooks.value
+            .where((n) => n.id == widget._notebookId)
+            .map((n) => n.name)
+            .firstWhere((_) => true, orElse: () => '');
     final mode = Theme.of(context).brightness == Brightness.dark
         ? AppThemeMode.dark
         : AppThemeMode.light;

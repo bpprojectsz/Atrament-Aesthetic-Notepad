@@ -13,6 +13,7 @@ import 'core/providers/verse_provider.dart';
 import 'core/services/engagement_service.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
+import 'core/utils/route_observer.dart';
 import 'platform/admob_service.dart';
 import 'platform/debug_log_service.dart';
 import 'platform/notification_service.dart';
@@ -185,6 +186,7 @@ class _AtramentAppState extends State<AtramentApp>
           return MaterialApp(
             title: AppConstants.appName,
             debugShowCheckedModeBanner: false,
+            navigatorObservers: [appRouteObserver],
             locale: _localeProvider.preference.value,
             theme: _buildTheme(_themeProvider.mode.value),
             localizationsDelegates: AppLocalizations.localizationsDelegates,

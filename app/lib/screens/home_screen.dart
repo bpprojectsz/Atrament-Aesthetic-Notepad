@@ -19,6 +19,7 @@ import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
 import '../core/utils/quill_content_helper.dart';
+import '../core/utils/route_observer.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/app_scaffold.dart';
@@ -60,9 +61,33 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with RouteAware {
   final TextEditingController _searchController = TextEditingController();
   HomeChip _selected = HomeChip.all;
+
+  bool _routeObserverSubscribed = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_routeObserverSubscribed) {
+      final route = ModalRoute.of(context);
+      if (route is PageRoute) {
+        appRouteObserver.subscribe(this, route);
+        _routeObserverSubscribed = true;
+      }
+    }
+  }
+
+  /// Reloads all notes when the user pops back to home. Screens pushed on
+  /// top of home (notebook detail, editor) call `noteProvider.loadNotebook`
+  /// which narrows the provider's `notes` to that notebook's subset.
+  /// Without this hook the home list would stay collapsed to that subset
+  /// until the next cold start.
+  @override
+  void didPopNext() {
+    widget.noteProvider.loadAllNotes();
+  }
 
   @override
   void initState() {
@@ -73,6 +98,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
+    if (_routeObserverSubscribed) {
+      appRouteObserver.unsubscribe(this);
+    }
     _searchController.dispose();
     super.dispose();
   }
