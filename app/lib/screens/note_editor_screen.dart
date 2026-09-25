@@ -416,7 +416,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                           ),
                         ),
                 ),
-                _isHandwritingMode
+                SafeArea(
+                  top: false,
+                  child: _isHandwritingMode
                     ? PenToolbar(
                         controller: _handwritingController,
                         labels: PenToolbarLabels(
@@ -451,6 +453,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                           redo: l10n.redo,
                         ),
                       ),
+                ),
               ],
             ),
           ],
