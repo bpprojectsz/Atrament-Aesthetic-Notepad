@@ -249,19 +249,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 segments: [
                   ButtonSegment(
                     value: ThemePreference.system,
-                    label: Text(l10n.themeSystem),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(l10n.themeSystem, maxLines: 1, softWrap: false),
+                    ),
                   ),
                   ButtonSegment(
                     value: ThemePreference.light,
-                    label: Text(l10n.themeLight),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(l10n.themeLight, maxLines: 1, softWrap: false),
+                    ),
                   ),
                   ButtonSegment(
                     value: ThemePreference.dark,
-                    label: Text(l10n.themeDark),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(l10n.themeDark, maxLines: 1, softWrap: false),
+                    ),
                   ),
                   ButtonSegment(
                     value: ThemePreference.parchment,
-                    label: Text(l10n.themeParchment),
+                    label: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(l10n.themeParchment, maxLines: 1, softWrap: false),
+                    ),
                   ),
                 ],
                 selected: {themeProvider.preference.value},
