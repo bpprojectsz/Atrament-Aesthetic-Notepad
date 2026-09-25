@@ -76,7 +76,8 @@ class NoteEditorScreen extends StatefulWidget {
   /// (NotebookDetailScreen, etc.) never had a verseProvider parameter to
   /// thread it through, which meant this was always null in production
   /// and the scripture overlay never rendered at all. Resolving it from
-  /// the ambient Provider tree instead (see `_buildVerseOverlay`) removes
+  /// the ambient Provider tree instead (see the two overlay builders
+  /// below) removes
   /// the need for every screen in the chain to know about it.
   final VerseProvider? verseProvider;
   final bool isNewNote;
@@ -85,7 +86,8 @@ class NoteEditorScreen extends StatefulWidget {
   State<NoteEditorScreen> createState() => _NoteEditorScreenState();
 }
 
-class _NoteEditorScreenState extends State<NoteEditorScreen> {
+class _NoteEditorScreenState extends State<NoteEditorScreen>
+    with WidgetsBindingObserver {
   late TextEditingController _titleController;
   late quill.QuillController _quillController;
   late HandwritingCanvasController _handwritingController;
@@ -103,6 +105,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _titleController = TextEditingController(text: widget.note.title);
     _paperStyleId = widget.note.paperStyle;
     _isHandwritingMode = _isHandwritingContent(widget.note.content);
@@ -270,7 +273,20 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
   }
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    if (state == AppLifecycleState.paused) {
+      // Fire-and-forget: save when the app backgrounds so typed content
+      // is not lost if the OS kills the process. Silently no-op when the
+      // note is untouched (the _isUntouchedNewNote guard in _save handles
+      // that case).
+      unawaited(_save());
+    }
+  }
+
+  @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _titleController.dispose();
     _quillController.dispose();
     super.dispose();
@@ -303,6 +319,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             style: TextStyle(
               fontSize: AppTypography.title1.size,
               fontWeight: AppTypography.title1.weight,
+              color: Color(paperStyle.textColor),
             ),
             decoration: InputDecoration(
               hintText: l10n.untitledNote,
@@ -356,21 +373,35 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         body: Stack(
           children: [
             PaperBackground(style: paperStyle),
-            _buildVerseOverlay(context),
+            _buildWatermarkOverlay(context),
             Column(
               children: [
                 Expanded(
-                  child: _isHandwritingMode
-                      ? HandwritingCanvas(controller: _handwritingController)
-                      : quill.QuillEditor.basic(
-                          controller: _quillController,
-                          config: const quill.QuillEditorConfig(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: AppSpacing.lg,
-                              vertical: AppSpacing.md,
+                  child: Stack(
+                    children: [
+                      _isHandwritingMode
+                          ? HandwritingCanvas(
+                              controller: _handwritingController,
+                            )
+                          : DefaultTextStyle.merge(
+                              style: TextStyle(
+                                color: Color(paperStyle.textColor),
+                                fontSize: AppTypography.body.size,
+                                height: AppTypography.body.height,
+                              ),
+                              child: quill.QuillEditor.basic(
+                                controller: _quillController,
+                                config: const quill.QuillEditorConfig(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: AppSpacing.lg,
+                                    vertical: AppSpacing.md,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
+                      _buildForegroundVerseOverlay(context),
+                    ],
+                  ),
                 ),
                 _isHandwritingMode
                     ? PenToolbar(
@@ -415,10 +446,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
     );
   }
 
-  Widget _buildVerseOverlay(BuildContext context) {
-    // Falls back to the ambient Provider tree when no explicit override
-    // was passed — see the doc comment on widget.verseProvider for why
-    // this fallback is the actual production path, not an edge case.
+  /// Watermark mode only. Rendered behind the editor content so typed
+  /// text sits on top of the verse. No-op for the other three modes.
+  Widget _buildWatermarkOverlay(BuildContext context) {
     final verseProvider = widget.verseProvider ?? context.read<VerseProvider>();
 
     return ListenableBuilder(
@@ -428,13 +458,39 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         verseProvider.scriptureFontScale,
       ]),
       builder: (context, _) {
+        if (verseProvider.displayMode.value != VerseDisplayMode.watermark) {
+          return const SizedBox.shrink();
+        }
+        final verse = verseProvider.todaysVerse.value;
+        if (verse == null) return const SizedBox.shrink();
+        return ScriptureWatermark(
+          verse: verse,
+          fontScale: verseProvider.scriptureFontScale.value,
+        );
+      },
+    );
+  }
+
+  /// Header and footer modes only. Rendered inside the editor area's own
+  /// Stack, on top of the writing surface and above the toolbar — so the
+  /// footer cannot be occluded by the bottom toolbar. No-op for the other
+  /// two modes.
+  Widget _buildForegroundVerseOverlay(BuildContext context) {
+    final verseProvider = widget.verseProvider ?? context.read<VerseProvider>();
+
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        verseProvider.displayMode,
+        verseProvider.todaysVerse,
+        verseProvider.scriptureFontScale,
+      ]),
+      builder: (context, _) {
+        final mode = verseProvider.displayMode.value;
         final verse = verseProvider.todaysVerse.value;
         if (verse == null) return const SizedBox.shrink();
         final scale = verseProvider.scriptureFontScale.value;
 
-        switch (verseProvider.displayMode.value) {
-          case VerseDisplayMode.watermark:
-            return ScriptureWatermark(verse: verse, fontScale: scale);
+        switch (mode) {
           case VerseDisplayMode.header:
             return Align(
               alignment: Alignment.topCenter,
@@ -445,6 +501,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               alignment: Alignment.bottomCenter,
               child: ScriptureFooter(verse: verse, fontScale: scale),
             );
+          case VerseDisplayMode.watermark:
           case VerseDisplayMode.off:
             return const SizedBox.shrink();
         }
