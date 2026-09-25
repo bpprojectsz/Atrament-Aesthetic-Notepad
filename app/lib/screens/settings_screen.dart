@@ -4,6 +4,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../core/models/paper_style_model.dart';
 import '../core/providers/locale_provider.dart';
@@ -162,6 +163,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
     setState(() => _biometricLockEnabled = enabled);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(AppConstants.prefBiometricLockEnabled, enabled);
+  }
+
+  Future<void> _openUrl(String url) async {
+    final l10n = AppLocalizations.of(context)!;
+    final uri = Uri.parse(url);
+    final opened = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!opened && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.openLinkFailedMessage)),
+      );
+    }
   }
 
   Future<void> _shareDebugLog() async {
@@ -416,7 +428,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const SizedBox(height: AppSpacing.lg),
 
-          _SectionHeader(l10n.supportSectionTitle),
+          _SectionHeader(l10n.legalAndSupportSectionTitle),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.open_in_new),
+            title: Text(l10n.privacyPolicyRow),
+            onTap: () => _openUrl(AppConstants.privacyPolicyUrl),
+          ),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.open_in_new),
+            title: Text(l10n.termsOfServiceRow),
+            onTap: () => _openUrl(AppConstants.termsUrl),
+          ),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.open_in_new),
+            title: Text(l10n.supportRow),
+            onTap: () => _openUrl(AppConstants.supportUrl),
+          ),
           ListTile(
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.bug_report_outlined),

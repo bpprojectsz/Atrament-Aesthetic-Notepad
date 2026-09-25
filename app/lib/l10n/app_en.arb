@@ -141,5 +141,10 @@
         "type": "int"
       }
     }
-  }
+  },
+  "legalAndSupportSectionTitle": "Legal & Support",
+  "privacyPolicyRow": "Privacy Policy",
+  "termsOfServiceRow": "Terms of Service",
+  "supportRow": "Support",
+  "openLinkFailedMessage": "Couldn't open the link. Please try again."
 }

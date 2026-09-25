@@ -883,6 +883,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'This will delete the notebook and its {count} notes. This can\'t be undone.'**
   String deleteNotebookWithCountBody(int count);
+
+  /// No description provided for @legalAndSupportSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Legal & Support'**
+  String get legalAndSupportSectionTitle;
+
+  /// No description provided for @privacyPolicyRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicyRow;
+
+  /// No description provided for @termsOfServiceRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service'**
+  String get termsOfServiceRow;
+
+  /// No description provided for @supportRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get supportRow;
+
+  /// No description provided for @openLinkFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t open the link. Please try again.'**
+  String get openLinkFailedMessage;
 }
 
 class _AppLocalizationsDelegate

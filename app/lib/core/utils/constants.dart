@@ -306,6 +306,7 @@ class AppConstants {
   // External URLs
   static const String privacyPolicyUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/privacy';
   static const String supportUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/support';
+  static const String termsUrl = 'https://atrament-aesthetic-notepad.bpprojectsz.workers.dev/terms';
 
   // Notification
   static const int dailyVerseNotificationId = 1001;

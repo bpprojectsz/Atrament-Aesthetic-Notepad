@@ -407,4 +407,20 @@ class AppLocalizationsEs extends AppLocalizations {
   String deleteNotebookWithCountBody(int count) {
     return 'This will delete the notebook and its $count notes. This can\'t be undone.';
   }
+
+  @override
+  String get legalAndSupportSectionTitle => 'Legal & Support';
+
+  @override
+  String get privacyPolicyRow => 'Privacy Policy';
+
+  @override
+  String get termsOfServiceRow => 'Terms of Service';
+
+  @override
+  String get supportRow => 'Support';
+
+  @override
+  String get openLinkFailedMessage =>
+      'Couldn\'t open the link. Please try again.';
 }
