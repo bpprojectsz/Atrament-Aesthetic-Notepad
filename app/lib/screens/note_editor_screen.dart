@@ -87,6 +87,20 @@ class NoteEditorScreen extends StatefulWidget {
 
 class _NoteEditorScreenState extends State<NoteEditorScreen>
     with WidgetsBindingObserver {
+  /// Disables the built-in HTML-to-Delta paste path used for rich text
+  /// pasted from external sources. That parser is fragile against large
+  /// or structurally unusual HTML and either hangs the UI thread or
+  /// throws. All three controller creation sites share this config so
+  /// no paste path can accidentally re-enable the built-in parser.
+  // ignore: experimental_member_use
+  static const _quillConfig = quill.QuillControllerConfig(
+    // ignore: experimental_member_use
+    clipboardConfig: quill.QuillClipboardConfig(
+      // ignore: experimental_member_use
+      enableExternalRichPaste: false,
+    ),
+  );
+
   late TextEditingController _titleController;
   late quill.QuillController _quillController;
   late HandwritingCanvasController _handwritingController;
@@ -113,7 +127,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       _handwritingController = HandwritingCanvasController.fromJsonString(
         _unwrapHandwritingStrokes(widget.note.content),
       );
-      _quillController = quill.QuillController.basic();
+      _quillController = quill.QuillController.basic(
+        config: _quillConfig,
+      );
     } else {
       _handwritingController = HandwritingCanvasController();
       _quillController = _buildQuillController(widget.note.content);
@@ -128,6 +144,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       return quill.QuillController(
         document: quill.Document.fromJson(delta),
         selection: const TextSelection.collapsed(offset: 0),
+        config: _quillConfig,
       );
     } catch (error, stackTrace) {
       ErrorHandler.report(
@@ -137,7 +154,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         context: 'note_editor_screen.buildQuillController',
         severity: ErrorSeverity.warning,
       );
-      return quill.QuillController.basic();
+      return quill.QuillController.basic(
+        config: _quillConfig,
+      );
     }
   }
 

@@ -59,14 +59,11 @@ class AppScaffold extends StatelessWidget {
       body: SafeArea(child: body),
       bottomNavigationBar: bottomAdSlot == null
           ? null
-          : SafeArea(
-              top: false,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.sm,
-                ),
-                child: bottomAdSlot,
+          : Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.sm,
               ),
+              child: bottomAdSlot,
             ),
     );
   }
