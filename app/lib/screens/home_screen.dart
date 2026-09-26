@@ -330,14 +330,19 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   }
 
   Future<void> _handleNotebookChangeCover(NotebookModel notebook) async {
-    final picked = await showCoverColorPicker(
+    var lastApplied = notebook.coverColor;
+    await showCoverColorPicker(
       context,
       currentColor: notebook.coverColor,
-    );
-    if (picked == null || !mounted) return;
-    if (picked == notebook.coverColor) return;
-    await widget.notebookProvider.updateNotebook(
-      notebook.copyWith(coverColor: picked),
+      onChanged: (color) {
+        if (color == lastApplied) return;
+        lastApplied = color;
+        unawaited(
+          widget.notebookProvider.updateNotebook(
+            notebook.copyWith(coverColor: color),
+          ),
+        );
+      },
     );
   }
 

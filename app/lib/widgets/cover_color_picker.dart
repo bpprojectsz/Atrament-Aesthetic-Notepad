@@ -4,29 +4,32 @@ import 'package:flutter/material.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/notebook_cover_palette.dart';
 
-/// Shows a bottom sheet with a live preview of the notebook card tinted
-/// by the currently-tapped swatch, a 4-column grid of the sixteen palette
-/// colors, and no custom-color entry. Returns the selected ARGB int, or
-/// null if dismissed.
-Future<int?> showCoverColorPicker(
+/// Shows a bottom sheet with a 4×4 grid of the sixteen palette colors.
+///
+/// Tapping a swatch immediately invokes [onChanged] and the sheet stays
+/// open so the user can keep trying colors. Dismiss by swipe-down or
+/// tapping outside. There is no Save button and no in-sheet mock preview:
+/// the notebook card on the home grid underneath is the preview, updated
+/// live through the callback on every tap.
+Future<void> showCoverColorPicker(
   BuildContext context, {
   required int currentColor,
+  required ValueChanged<int> onChanged,
 }) async {
   final l10n = AppLocalizations.of(context)!;
   final mode = Theme.of(context).brightness == Brightness.dark
       ? AppThemeMode.dark
       : AppThemeMode.light;
 
-  return showModalBottomSheet<int>(
+  await showModalBottomSheet<void>(
     context: context,
     showDragHandle: true,
-    builder: (context) {
-      return _PickerBody(
-        l10n: l10n,
-        mode: mode,
-        initialColor: currentColor,
-      );
-    },
+    builder: (context) => _PickerBody(
+      l10n: l10n,
+      mode: mode,
+      currentColor: currentColor,
+      onChanged: onChanged,
+    ),
   );
 }
 
@@ -34,28 +37,38 @@ class _PickerBody extends StatefulWidget {
   const _PickerBody({
     required this.l10n,
     required this.mode,
-    required this.initialColor,
+    required this.currentColor,
+    required this.onChanged,
   });
 
   final AppLocalizations l10n;
   final AppThemeMode mode;
-  final int initialColor;
+  final int currentColor;
+  final ValueChanged<int> onChanged;
 
   @override
   State<_PickerBody> createState() => _PickerBodyState();
 }
 
 class _PickerBodyState extends State<_PickerBody> {
-  late int _previewColor;
+  late int _selected;
 
   @override
   void initState() {
     super.initState();
-    _previewColor = widget.initialColor;
+    _selected = widget.currentColor;
+  }
+
+  void _handleTap(int color) {
+    if (color == _selected) return;
+    setState(() => _selected = color);
+    widget.onChanged(color);
   }
 
   @override
   Widget build(BuildContext context) {
+    final accent = AppColors.accent.resolve(widget.mode);
+
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(AppSpacing.md),
@@ -72,80 +85,43 @@ class _PickerBodyState extends State<_PickerBody> {
               ),
             ),
             const SizedBox(height: AppSpacing.md),
-            Center(
-              child: _Preview(
-                color: _previewColor,
-                mode: widget.mode,
-              ),
-            ),
-            const SizedBox(height: AppSpacing.md),
-            GridView.count(
-              crossAxisCount: 4,
+            GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
-              children: [
-                for (final color in NotebookCoverPalette.all)
-                  _Swatch(
-                    color: color,
-                    selected: color == _previewColor,
-                    accent: AppColors.accent.resolve(widget.mode),
-                    onTap: () => setState(() => _previewColor = color),
+              padding: EdgeInsets.zero,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
+                mainAxisExtent: 56,
+              ),
+              itemCount: NotebookCoverPalette.all.length,
+              itemBuilder: (context, index) {
+                final color = NotebookCoverPalette.all[index];
+                final selected = color == _selected;
+                return Semantics(
+                  button: true,
+                  label: NotebookCoverPalette.nameOf(color),
+                  selected: selected,
+                  child: GestureDetector(
+                    onTap: () => _handleTap(color),
+                    behavior: HitTestBehavior.opaque,
+                    child: Center(
+                      child: SizedBox(
+                        width: 48,
+                        height: 48,
+                        child: _Swatch(
+                          color: color,
+                          selected: selected,
+                          accent: accent,
+                        ),
+                      ),
+                    ),
                   ),
-              ],
-            ),
-            const SizedBox(height: AppSpacing.md),
-            FilledButton(
-              onPressed: () => Navigator.pop(context, _previewColor),
-              child: Text(widget.l10n.save),
+                );
+              },
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Small live preview of the notebook card, tinted with the currently
-/// selected swatch. Reduced to the essential shape — a rounded rectangle
-/// with a horizontal colour band, matching how the tint reads on the real
-/// card.
-class _Preview extends StatelessWidget {
-  const _Preview({required this.color, required this.mode});
-
-  final int color;
-  final AppThemeMode mode;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 72,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(AppRadius.card),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.08),
-            blurRadius: 6,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(AppRadius.card),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color(color).withValues(alpha: 0.75),
-                Color(color).withValues(alpha: 0.35),
-              ],
-            ),
-          ),
         ),
       ),
     );
@@ -157,47 +133,37 @@ class _Swatch extends StatelessWidget {
     required this.color,
     required this.selected,
     required this.accent,
-    required this.onTap,
   });
 
   final int color;
   final bool selected;
   final Color accent;
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
-      button: true,
-      label: NotebookCoverPalette.nameOf(color),
-      selected: selected,
-      child: GestureDetector(
-        onTap: onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
-          curve: Curves.easeOut,
-          decoration: BoxDecoration(
-            color: Color(color),
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: selected ? accent : Colors.transparent,
-              width: 2,
-            ),
-            boxShadow: selected
-                ? [
-                    BoxShadow(
-                      color: accent.withValues(alpha: 0.25),
-                      blurRadius: 8,
-                      spreadRadius: 1,
-                    ),
-                  ]
-                : null,
-          ),
-          child: selected
-              ? const Icon(Icons.check, color: Colors.white, size: 24)
-              : null,
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      curve: Curves.easeOut,
+      decoration: BoxDecoration(
+        color: Color(color),
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: selected ? accent : Colors.transparent,
+          width: 2,
         ),
+        boxShadow: selected
+            ? [
+                BoxShadow(
+                  color: accent.withValues(alpha: 0.25),
+                  blurRadius: 8,
+                  spreadRadius: 1,
+                ),
+              ]
+            : null,
       ),
+      child: selected
+          ? const Icon(Icons.check, color: Colors.white, size: 24)
+          : null,
     );
   }
 }
