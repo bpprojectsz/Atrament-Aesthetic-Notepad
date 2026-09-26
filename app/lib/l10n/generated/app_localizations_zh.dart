@@ -197,6 +197,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fontSerif => '衬线字体';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => '外观';
 
   @override

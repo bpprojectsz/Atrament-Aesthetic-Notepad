@@ -488,6 +488,18 @@ abstract class AppLocalizations {
   /// **'Serif'**
   String get fontSerif;
 
+  /// No description provided for @fontInter.
+  ///
+  /// In en, this message translates to:
+  /// **'Inter'**
+  String get fontInter;
+
+  /// No description provided for @fontLora.
+  ///
+  /// In en, this message translates to:
+  /// **'Lora'**
+  String get fontLora;
+
   /// No description provided for @themeSectionTitle.
   ///
   /// In en, this message translates to:

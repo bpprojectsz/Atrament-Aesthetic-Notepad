@@ -200,6 +200,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get fontSerif => 'Serifa';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => 'Aparência';
 
   @override

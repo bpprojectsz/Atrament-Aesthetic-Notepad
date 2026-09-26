@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/utils/constants.dart';
 
@@ -45,7 +46,10 @@ class NoteListItem extends StatelessWidget {
       button: true,
       label: '$displayTitle, $dateLabel',
       child: InkWell(
-        onTap: onTap,
+        onTap: () {
+          HapticFeedback.selectionClick();
+          onTap();
+        },
         onLongPress: onLongPress,
         child: Padding(
           padding: const EdgeInsets.symmetric(

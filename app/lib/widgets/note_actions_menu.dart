@@ -1,5 +1,6 @@
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/utils/constants.dart';
 
@@ -96,7 +97,10 @@ class _MenuRow extends StatelessWidget {
           color: color,
         ),
       ),
-      onTap: onTap,
+      onTap: () {
+        HapticFeedback.selectionClick();
+        onTap();
+      },
     );
   }
 }

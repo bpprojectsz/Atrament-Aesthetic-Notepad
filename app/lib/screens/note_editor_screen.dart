@@ -19,6 +19,7 @@ import '../core/utils/export_helper.dart';
 import '../platform/biometric_service.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
+import '../widgets/font_selector.dart';
 import '../widgets/handwriting_canvas.dart';
 import '../widgets/note_toolbar.dart';
 import '../widgets/paper_background.dart';
@@ -106,6 +107,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   late HandwritingCanvasController _handwritingController;
   late bool _isHandwritingMode;
   late String _paperStyleId;
+  NoteFontChoice _fontChoice = NoteFontChoice.system;
 
   final ExportService _exportService = const ExportService();
   final ShareService _shareService = const ShareService();
@@ -122,6 +124,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     _titleController = TextEditingController(text: widget.note.title);
     _paperStyleId = widget.note.paperStyle;
     _isHandwritingMode = _isHandwritingContent(widget.note.content);
+    _loadFontChoice();
 
     if (_isHandwritingMode) {
       _handwritingController = HandwritingCanvasController.fromJsonString(
@@ -157,6 +160,17 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       return quill.QuillController.basic(
         config: _quillConfig,
       );
+    }
+  }
+
+  Future<void> _loadFontChoice() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final stored = prefs.getString(AppConstants.prefFontChoice);
+      final choice = noteFontChoiceFromString(stored);
+      if (mounted) setState(() => _fontChoice = choice);
+    } catch (_) {
+      // Silently keep the system default on any prefs failure.
     }
   }
 
@@ -335,6 +349,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
           title: TextField(
             controller: _titleController,
             style: TextStyle(
+              fontFamily: noteFontFamilyStyle(_fontChoice)?.fontFamily,
               fontSize: AppTypography.title1.size,
               fontWeight: AppTypography.title1.weight,
               color: Color(paperStyle.textColor),
@@ -401,6 +416,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                         )
                       : DefaultTextStyle.merge(
                           style: TextStyle(
+                            fontFamily:
+                                noteFontFamilyStyle(_fontChoice)?.fontFamily,
                             color: Color(paperStyle.textColor),
                             fontSize: AppTypography.body.size,
                             height: AppTypography.body.height,

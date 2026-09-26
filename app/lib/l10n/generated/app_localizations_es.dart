@@ -201,6 +201,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get fontSerif => 'Serif';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => 'Apariencia';
 
   @override

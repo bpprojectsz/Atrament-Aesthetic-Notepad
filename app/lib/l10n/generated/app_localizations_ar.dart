@@ -199,6 +199,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get fontSerif => 'سيريف';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => 'المظهر';
 
   @override

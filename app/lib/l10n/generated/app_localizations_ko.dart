@@ -197,6 +197,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get fontSerif => '세리프';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => '모양';
 
   @override

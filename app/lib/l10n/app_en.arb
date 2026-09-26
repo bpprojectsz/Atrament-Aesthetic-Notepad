@@ -69,6 +69,8 @@
   "fontSectionTitle": "Note Font",
   "fontSystem": "System",
   "fontSerif": "Serif",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "Appearance",
   "themeLight": "Light",
   "themeDark": "Dark",

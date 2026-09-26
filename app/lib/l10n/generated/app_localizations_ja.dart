@@ -197,6 +197,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get fontSerif => 'セリフ体';
 
   @override
+  String get fontInter => 'Inter';
+
+  @override
+  String get fontLora => 'Lora';
+
+  @override
   String get themeSectionTitle => '外観';
 
   @override

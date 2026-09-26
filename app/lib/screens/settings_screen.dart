@@ -65,11 +65,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       setState(() {
         _defaultPaperStyleId =
             prefs.getString(AppConstants.prefPaperStyleDefault) ?? 'cream';
-        _fontChoice =
-            (prefs.getString(AppConstants.prefFontChoice) ?? 'system') ==
-                'serif'
-            ? NoteFontChoice.serif
-            : NoteFontChoice.system;
+        _fontChoice = noteFontChoiceFromString(
+          prefs.getString(AppConstants.prefFontChoice),
+        );
         _notificationsEnabled =
             prefs.getBool(AppConstants.prefNotificationsEnabled) ?? false;
         _reminderTime = TimeOfDay(
@@ -104,7 +102,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(
       AppConstants.prefFontChoice,
-      choice == NoteFontChoice.serif ? 'serif' : 'system',
+      choice.name,
     );
   }
 
@@ -307,6 +305,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
             value: _fontChoice,
             systemLabel: l10n.fontSystem,
             serifLabel: l10n.fontSerif,
+            interLabel: l10n.fontInter,
+            loraLabel: l10n.fontLora,
             onChanged: _setFontChoice,
           ),
           const SizedBox(height: AppSpacing.lg),
