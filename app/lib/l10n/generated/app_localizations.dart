@@ -925,6 +925,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Couldn\'t open the link. Please try again.'**
   String get openLinkFailedMessage;
+
+  /// No description provided for @openSourceLicensesRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Open-source licenses'**
+  String get openSourceLicensesRow;
 }
 
 class _AppLocalizationsDelegate

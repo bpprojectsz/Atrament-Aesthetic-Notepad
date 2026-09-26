@@ -427,4 +427,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get openLinkFailedMessage =>
       'Couldn\'t open the link. Please try again.';
+
+  @override
+  String get openSourceLicensesRow => 'Open-source licenses';
 }

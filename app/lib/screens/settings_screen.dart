@@ -470,6 +470,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onPressed: _clearDebugLog,
             child: Text(l10n.clearDebugLogButton),
           ),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.article_outlined),
+            title: Text(l10n.openSourceLicensesRow),
+            onTap: () => showLicensePage(
+              context: context,
+              applicationName: AppConstants.appName,
+            ),
+          ),
         ],
       ),
     );
