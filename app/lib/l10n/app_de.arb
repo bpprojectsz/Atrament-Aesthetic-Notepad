@@ -69,6 +69,8 @@
   "fontSectionTitle": "Notizschrift",
   "fontSystem": "System",
   "fontSerif": "Serif",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "Erscheinungsbild",
   "themeLight": "Hell",
   "themeDark": "Dunkel",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "Dadurch wird der gespeicherte technische Bericht von deinem Gerät entfernt.",
   "debugLogClearedMessage": "Debug-Protokoll gelöscht.",
   "premiumUnlockLabel": "Werbung dauerhaft entfernen",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "Alle",
+  "chipNotebooks": "Notizbücher",
+  "chipRecent": "Zuletzt",
+  "emptyAllNotesTitle": "Noch keine Notizen",
+  "emptyAllNotesBody": "Tippe auf +, um deine erste Notiz zu schreiben.",
+  "emptyRecentNotesTitle": "Nichts Neues",
+  "emptyRecentNotesBody": "Notizen, die du bearbeitest, erscheinen hier.",
+  "noteActionRename": "Umbenennen",
+  "noteActionMoveToNotebook": "In Notizbuch verschieben",
+  "noteActionEdit": "Bearbeiten",
+  "noteActionExport": "Exportieren",
+  "noteActionShare": "Teilen",
+  "moveToNotebookTitle": "In Notizbuch verschieben",
+  "moveToNotebookEmptyBody": "Noch keine weiteren Notizbücher. Erstelle eins, um diese Notiz zu organisieren.",
+  "moveToNotebookCreateRow": "Neues Notizbuch erstellen",
+  "notebookActionRename": "Umbenennen",
+  "notebookActionChangeCover": "Umschlag ändern",
+  "notebookRenameDialogTitle": "Notizbuch umbenennen",
+  "notebookCoverPickerTitle": "Umschlagfarbe wählen",
+  "deleteNotebookWithCountBody": "Dadurch werden das Notizbuch und seine {count} Notizen gelöscht. Dies kann nicht rückgängig gemacht werden.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "Rechtliches & Support",
+  "privacyPolicyRow": "Datenschutzerklärung",
+  "termsOfServiceRow": "Nutzungsbedingungen",
+  "supportRow": "Support",
+  "openLinkFailedMessage": "Link konnte nicht geöffnet werden. Bitte erneut versuchen.",
+  "openSourceLicensesRow": "Open-Source-Lizenzen"
 }

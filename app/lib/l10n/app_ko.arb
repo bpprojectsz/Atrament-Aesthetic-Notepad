@@ -69,6 +69,8 @@
   "fontSectionTitle": "노트 글꼴",
   "fontSystem": "시스템",
   "fontSerif": "세리프",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "모양",
   "themeLight": "라이트",
   "themeDark": "다크",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "기기에 저장된 기술 보고서가 제거됩니다.",
   "debugLogClearedMessage": "디버그 로그가 지워졌습니다.",
   "premiumUnlockLabel": "광고 영구 제거",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "전체",
+  "chipNotebooks": "노트북",
+  "chipRecent": "최근",
+  "emptyAllNotesTitle": "아직 노트가 없습니다",
+  "emptyAllNotesBody": "+ 버튼을 눌러 첫 노트를 작성하세요.",
+  "emptyRecentNotesTitle": "최근 항목 없음",
+  "emptyRecentNotesBody": "편집한 노트가 여기에 표시됩니다.",
+  "noteActionRename": "이름 바꾸기",
+  "noteActionMoveToNotebook": "노트북으로 이동",
+  "noteActionEdit": "편집",
+  "noteActionExport": "내보내기",
+  "noteActionShare": "공유",
+  "moveToNotebookTitle": "노트북으로 이동",
+  "moveToNotebookEmptyBody": "다른 노트북이 없습니다. 새로 만들어 이 노트를 정리하세요.",
+  "moveToNotebookCreateRow": "새 노트북 만들기",
+  "notebookActionRename": "이름 바꾸기",
+  "notebookActionChangeCover": "표지 변경",
+  "notebookRenameDialogTitle": "노트북 이름 바꾸기",
+  "notebookCoverPickerTitle": "표지 색상 선택",
+  "deleteNotebookWithCountBody": "이 노트북과 {count}개의 노트를 삭제합니다. 되돌릴 수 없습니다.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "법적 고지 및 지원",
+  "privacyPolicyRow": "개인정보 처리방침",
+  "termsOfServiceRow": "서비스 약관",
+  "supportRow": "지원",
+  "openLinkFailedMessage": "링크를 열 수 없습니다. 다시 시도해 주세요.",
+  "openSourceLicensesRow": "오픈 소스 라이선스"
 }

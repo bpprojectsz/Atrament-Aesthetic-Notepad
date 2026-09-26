@@ -352,84 +352,85 @@ class AppLocalizationsPt extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => 'Tudo';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => 'Cadernos';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => 'Recentes';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => 'Ainda não há notas';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => 'Toque em + para escrever sua primeira nota.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => 'Nada recente';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody =>
+      'As notas que você editar aparecerão aqui.';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => 'Renomear';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => 'Mover para caderno';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => 'Editar';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => 'Exportar';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => 'Compartilhar';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => 'Mover para caderno';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+      'Ainda não há outros cadernos. Crie um para organizar esta nota.';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => 'Criar novo caderno';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => 'Renomear';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => 'Alterar capa';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => 'Renomear caderno';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => 'Escolher uma cor de capa';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return 'Isso excluirá o caderno e suas $count notas. Esta ação não pode ser desfeita.';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => 'Jurídico e suporte';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => 'Política de Privacidade';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => 'Termos de Serviço';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => 'Suporte';
 
   @override
   String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+      'Não foi possível abrir o link. Tente novamente.';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => 'Licenças de código aberto';
 }

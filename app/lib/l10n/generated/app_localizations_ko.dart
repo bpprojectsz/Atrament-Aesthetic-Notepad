@@ -342,84 +342,82 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => '전체';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => '노트북';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => '최근';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => '아직 노트가 없습니다';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => '+ 버튼을 눌러 첫 노트를 작성하세요.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => '최근 항목 없음';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => '편집한 노트가 여기에 표시됩니다.';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => '이름 바꾸기';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => '노트북으로 이동';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => '편집';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => '내보내기';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => '공유';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => '노트북으로 이동';
 
   @override
-  String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+  String get moveToNotebookEmptyBody => '다른 노트북이 없습니다. 새로 만들어 이 노트를 정리하세요.';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => '새 노트북 만들기';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => '이름 바꾸기';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => '표지 변경';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => '노트북 이름 바꾸기';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => '표지 색상 선택';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return '이 노트북과 $count개의 노트를 삭제합니다. 되돌릴 수 없습니다.';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => '법적 고지 및 지원';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => '개인정보 처리방침';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => '서비스 약관';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => '지원';
 
   @override
-  String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+  String get openLinkFailedMessage => '링크를 열 수 없습니다. 다시 시도해 주세요.';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => '오픈 소스 라이선스';
 }

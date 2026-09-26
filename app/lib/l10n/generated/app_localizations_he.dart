@@ -345,84 +345,83 @@ class AppLocalizationsHe extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => 'הכל';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => 'מחברות';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => 'אחרונים';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => 'אין פתקים עדיין';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => 'הקש על + כדי לכתוב את הפתק הראשון שלך.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => 'אין חדש';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => 'פתקים שתערוך יופיעו כאן.';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => 'שנה שם';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => 'העבר למחברת';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => 'ערוך';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => 'ייצא';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => 'שתף';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => 'העבר למחברת';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+      'אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתק הזה.';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => 'צור מחברת חדשה';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => 'שנה שם';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => 'שנה כריכה';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => 'שנה שם מחברת';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => 'בחר צבע כריכה';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return 'פעולה זו תמחק את המחברת ואת $count הפתקים שבה. לא ניתן לבטל פעולה זו.';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => 'משפטי ותמיכה';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => 'מדיניות פרטיות';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => 'תנאי שירות';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => 'תמיכה';
 
   @override
-  String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+  String get openLinkFailedMessage => 'לא ניתן לפתוח את הקישור. נסה שוב.';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => 'רישיונות קוד פתוח';
 }

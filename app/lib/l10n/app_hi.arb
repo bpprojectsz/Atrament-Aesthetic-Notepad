@@ -69,6 +69,8 @@
   "fontSectionTitle": "नोट फ़ॉन्ट",
   "fontSystem": "सिस्टम",
   "fontSerif": "सेरिफ़",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "रूप-रंग",
   "themeLight": "लाइट",
   "themeDark": "डार्क",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "इससे आपके डिवाइस से सहेजी गई तकनीकी रिपोर्ट हट जाएगी।",
   "debugLogClearedMessage": "डीबग लॉग साफ़ कर दिया गया।",
   "premiumUnlockLabel": "विज्ञापन हमेशा के लिए हटाएँ",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "सभी",
+  "chipNotebooks": "नोटबुक",
+  "chipRecent": "हाल के",
+  "emptyAllNotesTitle": "अभी कोई नोट नहीं",
+  "emptyAllNotesBody": "अपना पहला नोट लिखने के लिए + बटन दबाएँ।",
+  "emptyRecentNotesTitle": "कुछ भी हाल का नहीं",
+  "emptyRecentNotesBody": "आपके द्वारा संपादित नोट यहाँ दिखेंगे।",
+  "noteActionRename": "नाम बदलें",
+  "noteActionMoveToNotebook": "नोटबुक में ले जाएँ",
+  "noteActionEdit": "संपादित करें",
+  "noteActionExport": "निर्यात करें",
+  "noteActionShare": "साझा करें",
+  "moveToNotebookTitle": "नोटबुक में ले जाएँ",
+  "moveToNotebookEmptyBody": "अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएँ।",
+  "moveToNotebookCreateRow": "नई नोटबुक बनाएँ",
+  "notebookActionRename": "नाम बदलें",
+  "notebookActionChangeCover": "कवर बदलें",
+  "notebookRenameDialogTitle": "नोटबुक का नाम बदलें",
+  "notebookCoverPickerTitle": "कवर रंग चुनें",
+  "deleteNotebookWithCountBody": "इससे नोटबुक और उसके {count} नोट हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "कानूनी और सहायता",
+  "privacyPolicyRow": "गोपनीयता नीति",
+  "termsOfServiceRow": "सेवा की शर्तें",
+  "supportRow": "सहायता",
+  "openLinkFailedMessage": "लिंक नहीं खोल सका। कृपया पुनः प्रयास करें।",
+  "openSourceLicensesRow": "ओपन-सोर्स लाइसेंस"
 }

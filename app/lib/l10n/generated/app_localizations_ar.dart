@@ -348,84 +348,83 @@ class AppLocalizationsAr extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => 'الكل';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => 'الدفاتر';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => 'الأحدث';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => 'لا توجد ملاحظات بعد';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => 'اضغط على + لكتابة ملاحظتك الأولى.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => 'لا شيء حديث';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => 'ستظهر الملاحظات التي تحررها هنا.';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => 'إعادة التسمية';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => 'نقل إلى دفتر';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => 'تحرير';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => 'تصدير';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => 'مشاركة';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => 'نقل إلى دفتر';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+      'لا توجد دفاتر أخرى بعد. أنشئ واحدًا لتنظيم هذه الملاحظة.';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => 'إنشاء دفتر جديد';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => 'إعادة التسمية';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => 'تغيير الغلاف';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => 'إعادة تسمية الدفتر';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => 'اختر لون الغلاف';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return 'سيؤدي هذا إلى حذف الدفتر وملاحظاته البالغ عددها $count. لا يمكن التراجع عن هذا الإجراء.';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => 'الشؤون القانونية والدعم';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => 'سياسة الخصوصية';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => 'شروط الخدمة';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => 'الدعم';
 
   @override
-  String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+  String get openLinkFailedMessage => 'تعذر فتح الرابط. حاول مرة أخرى.';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => 'تراخيص المصادر المفتوحة';
 }

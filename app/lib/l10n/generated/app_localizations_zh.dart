@@ -342,84 +342,82 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => '全部';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => '笔记本';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => '最近';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => '尚无笔记';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => '点击 + 按钮写下你的第一条笔记。';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => '暂无最近记录';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => '你编辑的笔记会显示在这里。';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => '重命名';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => '移动到笔记本';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => '编辑';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => '导出';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => '分享';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => '移动到笔记本';
 
   @override
-  String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+  String get moveToNotebookEmptyBody => '还没有其他笔记本。创建一个来整理这条笔记。';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => '创建新笔记本';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => '重命名';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => '更换封面';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => '重命名笔记本';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => '选择封面颜色';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return '这将删除该笔记本及其 $count 条笔记。此操作无法撤销。';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => '法律与支持';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => '隐私政策';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => '服务条款';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => '支持';
 
   @override
-  String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+  String get openLinkFailedMessage => '无法打开链接。请重试。';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => '开源许可';
 }

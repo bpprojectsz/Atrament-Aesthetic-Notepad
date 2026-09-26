@@ -69,6 +69,8 @@
   "fontSectionTitle": "גופן הפתקית",
   "fontSystem": "מערכת",
   "fontSerif": "סריף",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "מראה",
   "themeLight": "בהיר",
   "themeDark": "כהה",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "פעולה זו מסירה את הדוח הטכני השמור מהמכשיר שלך.",
   "debugLogClearedMessage": "יומן ניפוי הבאגים נוקה.",
   "premiumUnlockLabel": "הסרת פרסומות לתמיד",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "הכל",
+  "chipNotebooks": "מחברות",
+  "chipRecent": "אחרונים",
+  "emptyAllNotesTitle": "אין פתקים עדיין",
+  "emptyAllNotesBody": "הקש על + כדי לכתוב את הפתק הראשון שלך.",
+  "emptyRecentNotesTitle": "אין חדש",
+  "emptyRecentNotesBody": "פתקים שתערוך יופיעו כאן.",
+  "noteActionRename": "שנה שם",
+  "noteActionMoveToNotebook": "העבר למחברת",
+  "noteActionEdit": "ערוך",
+  "noteActionExport": "ייצא",
+  "noteActionShare": "שתף",
+  "moveToNotebookTitle": "העבר למחברת",
+  "moveToNotebookEmptyBody": "אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתק הזה.",
+  "moveToNotebookCreateRow": "צור מחברת חדשה",
+  "notebookActionRename": "שנה שם",
+  "notebookActionChangeCover": "שנה כריכה",
+  "notebookRenameDialogTitle": "שנה שם מחברת",
+  "notebookCoverPickerTitle": "בחר צבע כריכה",
+  "deleteNotebookWithCountBody": "פעולה זו תמחק את המחברת ואת {count} הפתקים שבה. לא ניתן לבטל פעולה זו.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "משפטי ותמיכה",
+  "privacyPolicyRow": "מדיניות פרטיות",
+  "termsOfServiceRow": "תנאי שירות",
+  "supportRow": "תמיכה",
+  "openLinkFailedMessage": "לא ניתן לפתוח את הקישור. נסה שוב.",
+  "openSourceLicensesRow": "רישיונות קוד פתוח"
 }

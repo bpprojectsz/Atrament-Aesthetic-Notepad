@@ -69,6 +69,8 @@
   "fontSectionTitle": "Fuente de la nota",
   "fontSystem": "Sistema",
   "fontSerif": "Serif",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "Apariencia",
   "themeLight": "Claro",
   "themeDark": "Oscuro",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "Esto elimina el informe técnico guardado en tu dispositivo.",
   "debugLogClearedMessage": "Registro de depuración borrado.",
   "premiumUnlockLabel": "Eliminar anuncios para siempre",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "Todo",
+  "chipNotebooks": "Cuadernos",
+  "chipRecent": "Recientes",
+  "emptyAllNotesTitle": "Aún no hay notas",
+  "emptyAllNotesBody": "Toca + para escribir tu primera nota.",
+  "emptyRecentNotesTitle": "Nada reciente",
+  "emptyRecentNotesBody": "Las notas que edites aparecerán aquí.",
+  "noteActionRename": "Renombrar",
+  "noteActionMoveToNotebook": "Mover a cuaderno",
+  "noteActionEdit": "Editar",
+  "noteActionExport": "Exportar",
+  "noteActionShare": "Compartir",
+  "moveToNotebookTitle": "Mover a cuaderno",
+  "moveToNotebookEmptyBody": "Aún no hay otros cuadernos. Crea uno para organizar esta nota.",
+  "moveToNotebookCreateRow": "Crear nuevo cuaderno",
+  "notebookActionRename": "Renombrar",
+  "notebookActionChangeCover": "Cambiar portada",
+  "notebookRenameDialogTitle": "Renombrar cuaderno",
+  "notebookCoverPickerTitle": "Elige un color de portada",
+  "deleteNotebookWithCountBody": "Esto eliminará el cuaderno y sus {count} notas. Esta acción no se puede deshacer.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "Legal y soporte",
+  "privacyPolicyRow": "Política de privacidad",
+  "termsOfServiceRow": "Términos de servicio",
+  "supportRow": "Soporte",
+  "openLinkFailedMessage": "No se pudo abrir el enlace. Inténtalo de nuevo.",
+  "openSourceLicensesRow": "Licencias de código abierto"
 }

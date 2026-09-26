@@ -69,6 +69,8 @@
   "fontSectionTitle": "Police de la note",
   "fontSystem": "Système",
   "fontSerif": "Serif",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "Apparence",
   "themeLight": "Clair",
   "themeDark": "Sombre",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "Cela supprime le rapport technique enregistré sur votre appareil.",
   "debugLogClearedMessage": "Journal de débogage effacé.",
   "premiumUnlockLabel": "Supprimer les pubs définitivement",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "Tout",
+  "chipNotebooks": "Carnets",
+  "chipRecent": "Récents",
+  "emptyAllNotesTitle": "Aucune note pour l'instant",
+  "emptyAllNotesBody": "Appuyez sur + pour écrire votre première note.",
+  "emptyRecentNotesTitle": "Rien de récent",
+  "emptyRecentNotesBody": "Les notes que vous modifiez apparaîtront ici.",
+  "noteActionRename": "Renommer",
+  "noteActionMoveToNotebook": "Déplacer vers un carnet",
+  "noteActionEdit": "Modifier",
+  "noteActionExport": "Exporter",
+  "noteActionShare": "Partager",
+  "moveToNotebookTitle": "Déplacer vers un carnet",
+  "moveToNotebookEmptyBody": "Aucun autre carnet pour l'instant. Créez-en un pour organiser cette note.",
+  "moveToNotebookCreateRow": "Créer un nouveau carnet",
+  "notebookActionRename": "Renommer",
+  "notebookActionChangeCover": "Changer la couverture",
+  "notebookRenameDialogTitle": "Renommer le carnet",
+  "notebookCoverPickerTitle": "Choisir une couleur de couverture",
+  "deleteNotebookWithCountBody": "Cela supprimera le carnet et ses {count} notes. Cette action est irréversible.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "Mentions légales et assistance",
+  "privacyPolicyRow": "Politique de confidentialité",
+  "termsOfServiceRow": "Conditions d'utilisation",
+  "supportRow": "Assistance",
+  "openLinkFailedMessage": "Impossible d'ouvrir le lien. Veuillez réessayer.",
+  "openSourceLicensesRow": "Licences open source"
 }

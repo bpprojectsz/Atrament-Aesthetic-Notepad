@@ -69,6 +69,8 @@
   "fontSectionTitle": "Fonte da nota",
   "fontSystem": "Sistema",
   "fontSerif": "Serifa",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "Aparência",
   "themeLight": "Claro",
   "themeDark": "Escuro",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "Isso remove o relatório técnico salvo no seu dispositivo.",
   "debugLogClearedMessage": "Registro de depuração limpo.",
   "premiumUnlockLabel": "Remover anúncios para sempre",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "Tudo",
+  "chipNotebooks": "Cadernos",
+  "chipRecent": "Recentes",
+  "emptyAllNotesTitle": "Ainda não há notas",
+  "emptyAllNotesBody": "Toque em + para escrever sua primeira nota.",
+  "emptyRecentNotesTitle": "Nada recente",
+  "emptyRecentNotesBody": "As notas que você editar aparecerão aqui.",
+  "noteActionRename": "Renomear",
+  "noteActionMoveToNotebook": "Mover para caderno",
+  "noteActionEdit": "Editar",
+  "noteActionExport": "Exportar",
+  "noteActionShare": "Compartilhar",
+  "moveToNotebookTitle": "Mover para caderno",
+  "moveToNotebookEmptyBody": "Ainda não há outros cadernos. Crie um para organizar esta nota.",
+  "moveToNotebookCreateRow": "Criar novo caderno",
+  "notebookActionRename": "Renomear",
+  "notebookActionChangeCover": "Alterar capa",
+  "notebookRenameDialogTitle": "Renomear caderno",
+  "notebookCoverPickerTitle": "Escolher uma cor de capa",
+  "deleteNotebookWithCountBody": "Isso excluirá o caderno e suas {count} notas. Esta ação não pode ser desfeita.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "Jurídico e suporte",
+  "privacyPolicyRow": "Política de Privacidade",
+  "termsOfServiceRow": "Termos de Serviço",
+  "supportRow": "Suporte",
+  "openLinkFailedMessage": "Não foi possível abrir o link. Tente novamente.",
+  "openSourceLicensesRow": "Licenças de código aberto"
 }

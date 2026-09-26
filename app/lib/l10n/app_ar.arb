@@ -69,6 +69,8 @@
   "fontSectionTitle": "خط الملاحظة",
   "fontSystem": "النظام",
   "fontSerif": "سيريف",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "المظهر",
   "themeLight": "فاتح",
   "themeDark": "داكن",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "سيؤدي هذا إلى إزالة التقرير التقني المحفوظ من جهازك.",
   "debugLogClearedMessage": "تم مسح سجل التصحيح.",
   "premiumUnlockLabel": "إزالة الإعلانات نهائيًا",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "الكل",
+  "chipNotebooks": "الدفاتر",
+  "chipRecent": "الأحدث",
+  "emptyAllNotesTitle": "لا توجد ملاحظات بعد",
+  "emptyAllNotesBody": "اضغط على + لكتابة ملاحظتك الأولى.",
+  "emptyRecentNotesTitle": "لا شيء حديث",
+  "emptyRecentNotesBody": "ستظهر الملاحظات التي تحررها هنا.",
+  "noteActionRename": "إعادة التسمية",
+  "noteActionMoveToNotebook": "نقل إلى دفتر",
+  "noteActionEdit": "تحرير",
+  "noteActionExport": "تصدير",
+  "noteActionShare": "مشاركة",
+  "moveToNotebookTitle": "نقل إلى دفتر",
+  "moveToNotebookEmptyBody": "لا توجد دفاتر أخرى بعد. أنشئ واحدًا لتنظيم هذه الملاحظة.",
+  "moveToNotebookCreateRow": "إنشاء دفتر جديد",
+  "notebookActionRename": "إعادة التسمية",
+  "notebookActionChangeCover": "تغيير الغلاف",
+  "notebookRenameDialogTitle": "إعادة تسمية الدفتر",
+  "notebookCoverPickerTitle": "اختر لون الغلاف",
+  "deleteNotebookWithCountBody": "سيؤدي هذا إلى حذف الدفتر وملاحظاته البالغ عددها {count}. لا يمكن التراجع عن هذا الإجراء.",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "الشؤون القانونية والدعم",
+  "privacyPolicyRow": "سياسة الخصوصية",
+  "termsOfServiceRow": "شروط الخدمة",
+  "supportRow": "الدعم",
+  "openLinkFailedMessage": "تعذر فتح الرابط. حاول مرة أخرى.",
+  "openSourceLicensesRow": "تراخيص المصادر المفتوحة"
 }

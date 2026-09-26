@@ -69,6 +69,8 @@
   "fontSectionTitle": "ノートのフォント",
   "fontSystem": "システム",
   "fontSerif": "セリフ体",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "外観",
   "themeLight": "ライト",
   "themeDark": "ダーク",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "デバイスに保存されている技術レポートが削除されます。",
   "debugLogClearedMessage": "デバッグログを消去しました。",
   "premiumUnlockLabel": "広告を完全に削除",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "すべて",
+  "chipNotebooks": "ノートブック",
+  "chipRecent": "最近",
+  "emptyAllNotesTitle": "まだノートがありません",
+  "emptyAllNotesBody": "+ をタップして最初のノートを書きましょう。",
+  "emptyRecentNotesTitle": "最近の項目はありません",
+  "emptyRecentNotesBody": "編集したノートがここに表示されます。",
+  "noteActionRename": "名前を変更",
+  "noteActionMoveToNotebook": "ノートブックに移動",
+  "noteActionEdit": "編集",
+  "noteActionExport": "エクスポート",
+  "noteActionShare": "共有",
+  "moveToNotebookTitle": "ノートブックに移動",
+  "moveToNotebookEmptyBody": "他のノートブックがまだありません。作成してこのノートを整理しましょう。",
+  "moveToNotebookCreateRow": "新しいノートブックを作成",
+  "notebookActionRename": "名前を変更",
+  "notebookActionChangeCover": "表紙を変更",
+  "notebookRenameDialogTitle": "ノートブックの名前を変更",
+  "notebookCoverPickerTitle": "表紙の色を選択",
+  "deleteNotebookWithCountBody": "このノートブックと {count} 件のノートを削除します。この操作は取り消せません。",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "法的事項とサポート",
+  "privacyPolicyRow": "プライバシーポリシー",
+  "termsOfServiceRow": "利用規約",
+  "supportRow": "サポート",
+  "openLinkFailedMessage": "リンクを開けませんでした。もう一度お試しください。",
+  "openSourceLicensesRow": "オープンソースライセンス"
 }

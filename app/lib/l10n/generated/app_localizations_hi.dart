@@ -351,84 +351,84 @@ class AppLocalizationsHi extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => 'सभी';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => 'नोटबुक';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => 'हाल के';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => 'अभी कोई नोट नहीं';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => 'अपना पहला नोट लिखने के लिए + बटन दबाएँ।';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => 'कुछ भी हाल का नहीं';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => 'आपके द्वारा संपादित नोट यहाँ दिखेंगे।';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => 'नाम बदलें';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => 'नोटबुक में ले जाएँ';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => 'संपादित करें';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => 'निर्यात करें';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => 'साझा करें';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => 'नोटबुक में ले जाएँ';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+      'अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएँ।';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => 'नई नोटबुक बनाएँ';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => 'नाम बदलें';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => 'कवर बदलें';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => 'नोटबुक का नाम बदलें';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => 'कवर रंग चुनें';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return 'इससे नोटबुक और उसके $count नोट हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => 'कानूनी और सहायता';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => 'गोपनीयता नीति';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => 'सेवा की शर्तें';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => 'सहायता';
 
   @override
   String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+      'लिंक नहीं खोल सका। कृपया पुनः प्रयास करें।';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => 'ओपन-सोर्स लाइसेंस';
 }

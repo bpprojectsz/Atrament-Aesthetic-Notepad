@@ -342,84 +342,82 @@ class AppLocalizationsJa extends AppLocalizations {
   String get premiumUnlockPriceFallback => '\$14.99';
 
   @override
-  String get chipAll => 'All';
+  String get chipAll => 'すべて';
 
   @override
-  String get chipNotebooks => 'Notebooks';
+  String get chipNotebooks => 'ノートブック';
 
   @override
-  String get chipRecent => 'Recent';
+  String get chipRecent => '最近';
 
   @override
-  String get emptyAllNotesTitle => 'No notes yet';
+  String get emptyAllNotesTitle => 'まだノートがありません';
 
   @override
-  String get emptyAllNotesBody => 'Tap the + button to write your first note.';
+  String get emptyAllNotesBody => '+ をタップして最初のノートを書きましょう。';
 
   @override
-  String get emptyRecentNotesTitle => 'Nothing recent';
+  String get emptyRecentNotesTitle => '最近の項目はありません';
 
   @override
-  String get emptyRecentNotesBody => 'Notes you edit will show up here.';
+  String get emptyRecentNotesBody => '編集したノートがここに表示されます。';
 
   @override
-  String get noteActionRename => 'Rename';
+  String get noteActionRename => '名前を変更';
 
   @override
-  String get noteActionMoveToNotebook => 'Move to Notebook';
+  String get noteActionMoveToNotebook => 'ノートブックに移動';
 
   @override
-  String get noteActionEdit => 'Edit';
+  String get noteActionEdit => '編集';
 
   @override
-  String get noteActionExport => 'Export';
+  String get noteActionExport => 'エクスポート';
 
   @override
-  String get noteActionShare => 'Share';
+  String get noteActionShare => '共有';
 
   @override
-  String get moveToNotebookTitle => 'Move to Notebook';
+  String get moveToNotebookTitle => 'ノートブックに移動';
 
   @override
-  String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+  String get moveToNotebookEmptyBody => '他のノートブックがまだありません。作成してこのノートを整理しましょう。';
 
   @override
-  String get moveToNotebookCreateRow => 'Create new notebook';
+  String get moveToNotebookCreateRow => '新しいノートブックを作成';
 
   @override
-  String get notebookActionRename => 'Rename';
+  String get notebookActionRename => '名前を変更';
 
   @override
-  String get notebookActionChangeCover => 'Change cover';
+  String get notebookActionChangeCover => '表紙を変更';
 
   @override
-  String get notebookRenameDialogTitle => 'Rename Notebook';
+  String get notebookRenameDialogTitle => 'ノートブックの名前を変更';
 
   @override
-  String get notebookCoverPickerTitle => 'Choose a cover color';
+  String get notebookCoverPickerTitle => '表紙の色を選択';
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'This will delete the notebook and its $count notes. This can\'t be undone.';
+    return 'このノートブックと $count 件のノートを削除します。この操作は取り消せません。';
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Legal & Support';
+  String get legalAndSupportSectionTitle => '法的事項とサポート';
 
   @override
-  String get privacyPolicyRow => 'Privacy Policy';
+  String get privacyPolicyRow => 'プライバシーポリシー';
 
   @override
-  String get termsOfServiceRow => 'Terms of Service';
+  String get termsOfServiceRow => '利用規約';
 
   @override
-  String get supportRow => 'Support';
+  String get supportRow => 'サポート';
 
   @override
-  String get openLinkFailedMessage =>
-      'Couldn\'t open the link. Please try again.';
+  String get openLinkFailedMessage => 'リンクを開けませんでした。もう一度お試しください。';
 
   @override
-  String get openSourceLicensesRow => 'Open-source licenses';
+  String get openSourceLicensesRow => 'オープンソースライセンス';
 }

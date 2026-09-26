@@ -69,6 +69,8 @@
   "fontSectionTitle": "笔记字体",
   "fontSystem": "系统字体",
   "fontSerif": "衬线字体",
+  "fontInter": "Inter",
+  "fontLora": "Lora",
   "themeSectionTitle": "外观",
   "themeLight": "浅色",
   "themeDark": "深色",
@@ -114,5 +116,38 @@
   "clearDebugLogBody": "这将删除设备上保存的技术报告。",
   "debugLogClearedMessage": "调试日志已清除。",
   "premiumUnlockLabel": "永久移除广告",
-  "premiumUnlockPriceFallback": "$14.99"
+  "premiumUnlockPriceFallback": "$14.99",
+  "chipAll": "全部",
+  "chipNotebooks": "笔记本",
+  "chipRecent": "最近",
+  "emptyAllNotesTitle": "尚无笔记",
+  "emptyAllNotesBody": "点击 + 按钮写下你的第一条笔记。",
+  "emptyRecentNotesTitle": "暂无最近记录",
+  "emptyRecentNotesBody": "你编辑的笔记会显示在这里。",
+  "noteActionRename": "重命名",
+  "noteActionMoveToNotebook": "移动到笔记本",
+  "noteActionEdit": "编辑",
+  "noteActionExport": "导出",
+  "noteActionShare": "分享",
+  "moveToNotebookTitle": "移动到笔记本",
+  "moveToNotebookEmptyBody": "还没有其他笔记本。创建一个来整理这条笔记。",
+  "moveToNotebookCreateRow": "创建新笔记本",
+  "notebookActionRename": "重命名",
+  "notebookActionChangeCover": "更换封面",
+  "notebookRenameDialogTitle": "重命名笔记本",
+  "notebookCoverPickerTitle": "选择封面颜色",
+  "deleteNotebookWithCountBody": "这将删除该笔记本及其 {count} 条笔记。此操作无法撤销。",
+  "@deleteNotebookWithCountBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalAndSupportSectionTitle": "法律与支持",
+  "privacyPolicyRow": "隐私政策",
+  "termsOfServiceRow": "服务条款",
+  "supportRow": "支持",
+  "openLinkFailedMessage": "无法打开链接。请重试。",
+  "openSourceLicensesRow": "开源许可"
 }
