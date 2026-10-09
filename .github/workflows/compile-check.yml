@@ -1,0 +1,51 @@
+name: Compile Check
+
+# MANUAL ONLY. Compiles and checks the code; never builds or uploads an APK/AAB,
+# and needs no signing secrets. The "Build and Deploy" workflow is separate.
+on:
+  workflow_dispatch:
+
+jobs:
+  compile-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.x'
+          channel: 'stable'
+          cache: true
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: app
+
+      - name: Lint and compile Dart (flutter analyze)
+        run: flutter analyze
+        working-directory: app
+
+      - name: Unit and widget tests
+        run: flutter test
+        working-directory: app
+
+      # gradlew is not committed (gitignored), so install the same Gradle
+      # version the wrapper pins and compile only the Kotlin sources.
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+
+      - name: Compile Kotlin (no APK)
+        run: gradle :app:compileDebugKotlin --no-daemon --stacktrace
+        working-directory: app/android
+
+      - name: Android lint (informational, non-blocking)
+        continue-on-error: true
+        run: gradle :app:lintDebug --no-daemon
+        working-directory: app/android
