@@ -60,5 +60,14 @@ jobs:
 
       - name: Android lint (informational, non-blocking)
         continue-on-error: true
-        run: ./gradlew :app:lintDebug --no-daemon
+        run: |
+          set +e
+          ./gradlew :app:lintDebug --no-daemon > "$RUNNER_TEMP/lint.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/lint.log"
+          if [ "$code" -ne 0 ]; then
+            key=$(grep -nE "What went wrong|Lint found|errors?, |warnings?|Error:|Execution failed|Could not " -A4 "$RUNNER_TEMP/lint.log" | head -n 50 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::warning title=Android lint (non-blocking) summary::$key"
+          fi
+          exit $code
         working-directory: app/android
