@@ -42,7 +42,19 @@ jobs:
           gradle-version: '8.14.3'
 
       - name: Compile Kotlin (no APK)
-        run: gradle :app:compileDebugKotlin --no-daemon --stacktrace
+        run: |
+          set +e
+          gradle :app:compileDebugKotlin --no-daemon --stacktrace > "$RUNNER_TEMP/kotlin.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/kotlin.log"
+          if [ "$code" -ne 0 ]; then
+            # Surface the failure as annotations so it is readable without log access.
+            key=$(grep -nE "What went wrong|^e: |error:|Could not |Execution failed|A problem occurred" -A6 "$RUNNER_TEMP/kotlin.log" | head -n 60 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            tail_=$(grep -vE '^[[:space:]]*$' "$RUNNER_TEMP/kotlin.log" | tail -n 40 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Kotlin key lines::$key"
+            echo "::error title=Kotlin log tail::$tail_"
+          fi
+          exit $code
         working-directory: app/android
 
       - name: Android lint (informational, non-blocking)
