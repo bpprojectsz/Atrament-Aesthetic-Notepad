@@ -35,16 +35,17 @@ jobs:
         run: flutter test
         working-directory: app
 
-      # gradlew is not committed (gitignored), so install the same Gradle
-      # version the wrapper pins and compile only the Kotlin sources.
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.14.3'
+      # gradlew is not committed (gitignored). `--config-only` runs Flutter's own
+      # project migrations (e.g. minSdk bump), writes local.properties and creates
+      # the Gradle wrapper, exactly as a real build would, but builds NO artifact.
+      - name: Prepare Android project (config only, no build)
+        run: flutter build apk --config-only
+        working-directory: app
 
       - name: Compile Kotlin (no APK)
         run: |
           set +e
-          gradle :app:compileDebugKotlin --no-daemon --stacktrace > "$RUNNER_TEMP/kotlin.log" 2>&1
+          ./gradlew :app:compileDebugKotlin --no-daemon --stacktrace > "$RUNNER_TEMP/kotlin.log" 2>&1
           code=$?
           cat "$RUNNER_TEMP/kotlin.log"
           if [ "$code" -ne 0 ]; then
@@ -59,5 +60,5 @@ jobs:
 
       - name: Android lint (informational, non-blocking)
         continue-on-error: true
-        run: gradle :app:lintDebug --no-daemon
+        run: ./gradlew :app:lintDebug --no-daemon
         working-directory: app/android
