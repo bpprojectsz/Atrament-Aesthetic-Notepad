@@ -108,7 +108,29 @@ class LocalStorage {
         );
       },
       onUpgrade: _migrate,
+      onOpen: _purgeOrphanSearchRows,
     );
+  }
+
+  /// Removes search-index rows whose note no longer exists. Earlier versions
+  /// deleted a notebook's notes without clearing their index rows, leaving
+  /// the deleted text readable inside the database file. Best-effort: a
+  /// failure here must never stop the database from opening.
+  Future<void> _purgeOrphanSearchRows(Database db) async {
+    try {
+      await db.execute(
+        'DELETE FROM ${AppConstants.tableNotesFts} WHERE id NOT IN '
+        '(SELECT id FROM ${AppConstants.tableNotes})',
+      );
+    } catch (error, stackTrace) {
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Could not purge orphaned search rows',
+        context: 'local_storage.purgeOrphanSearchRows',
+        severity: ErrorSeverity.warning,
+      );
+    }
   }
 
   /// Migration chain for schema version bumps. Each version adds a case
@@ -231,16 +253,27 @@ class LocalStorage {
     final result = await _guarded<bool>(
       () async {
         final db = await _database;
-        await db.delete(
-          AppConstants.tableNotes,
-          where: 'notebookId = ?',
-          whereArgs: [id],
-        );
-        await db.delete(
-          AppConstants.tableNotebooks,
-          where: 'id = ?',
-          whereArgs: [id],
-        );
+        // One transaction: either the notebook, its notes AND their search
+        // index rows are all removed, or nothing is. The index rows must go
+        // first (they are selected via the notes table) — otherwise the
+        // deleted notes' plain text would linger inside the database file.
+        await db.transaction((txn) async {
+          await txn.rawDelete(
+            'DELETE FROM ${AppConstants.tableNotesFts} WHERE id IN '
+            '(SELECT id FROM ${AppConstants.tableNotes} WHERE notebookId = ?)',
+            [id],
+          );
+          await txn.delete(
+            AppConstants.tableNotes,
+            where: 'notebookId = ?',
+            whereArgs: [id],
+          );
+          await txn.delete(
+            AppConstants.tableNotebooks,
+            where: 'id = ?',
+            whereArgs: [id],
+          );
+        });
         return true;
       },
       context: 'local_storage.deleteNotebook',

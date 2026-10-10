@@ -250,8 +250,16 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
             child: const Icon(Icons.delete_outline, color: Colors.white),
           ),
-          confirmDismiss: (_) => _confirmDeleteNote(context, l10n),
-          onDismissed: (_) => widget.noteProvider.deleteNote(note.id),
+          // Delete inside confirmDismiss and always report "not dismissed":
+          // on success the provider removes the row from the list itself, on
+          // failure the row snaps back — so a failed delete can never leave
+          // a dismissed-but-still-present ghost row behind.
+          confirmDismiss: (_) async {
+            final confirmed = await _confirmDeleteNote(context, l10n);
+            if (confirmed != true) return false;
+            await widget.noteProvider.deleteNote(note.id);
+            return false;
+          },
           child: NoteListItem(
             title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
             previewText: _previewFor(note),

@@ -86,6 +86,35 @@ void main() {
     );
   }
 
+
+  Future<String> dbPath() async {
+    final docsPath =
+        await PathProviderPlatform.instance.getApplicationDocumentsPath();
+    return p.join(docsPath!, AppConstants.dbName);
+  }
+
+  /// Runs [action] against the database file directly while LocalStorage is
+  /// closed, so tests can inspect (or tamper with) what is really on disk.
+  Future<T> withRawDb<T>(Future<T> Function(Database db) action) async {
+    await storage.close();
+    final db = await databaseFactory.openDatabase(await dbPath());
+    try {
+      return await action(db);
+    } finally {
+      await db.close();
+    }
+  }
+
+  Future<int> ftsRowCount(Database db, {String? id}) async {
+    final rows = id == null
+        ? await db.rawQuery('SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts}')
+        : await db.rawQuery(
+            'SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts} WHERE id = ?',
+            [id],
+          );
+    return rows.first['c'] as int;
+  }
+
   group('Notebook CRUD', () {
     test('saveNotebook then getNotebooks returns it', () async {
       final notebook = buildNotebook('nb_1');
@@ -337,6 +366,94 @@ void main() {
       final result = await storage.searchNotes('nonexistentxyz123');
       expect(result.failed, isFalse);
       expect(result.data, isEmpty);
+    });
+  });
+
+  group('Notebook deletion and search-index hygiene', () {
+    test('deleteNotebook also removes the deleted notes from the search index', () async {
+      await storage.saveNotebook(buildNotebook('nb_gone'));
+      await storage.saveNotebook(buildNotebook('nb_stay'));
+      await storage.saveNote(
+        buildNote('gone_1', 'nb_gone'),
+        plainTextContent: 'confidential zebrafish memo',
+      );
+      await storage.saveNote(
+        buildNote('stay_1', 'nb_stay'),
+        plainTextContent: 'harmless otter note',
+      );
+
+      expect(await storage.deleteNotebook('nb_gone'), isTrue);
+
+      final counts = await withRawDb((db) async {
+        final matchGone = await db.rawQuery(
+          'SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts} '
+          'WHERE ${AppConstants.tableNotesFts} MATCH ?',
+          ['zebrafish'],
+        );
+        return (
+          total: await ftsRowCount(db),
+          stay: await ftsRowCount(db, id: 'stay_1'),
+          gone: await ftsRowCount(db, id: 'gone_1'),
+          matches: matchGone.first['c'] as int,
+        );
+      });
+
+      expect(counts.gone, 0, reason: 'deleted note must leave the index');
+      expect(counts.matches, 0, reason: 'its text must not remain searchable on disk');
+      expect(counts.stay, 1, reason: 'other notebooks are untouched');
+      expect(counts.total, 1);
+    });
+
+    test('deleteNotebook is atomic: a failure rolls everything back', () async {
+      await storage.saveNotebook(buildNotebook('nb_atomic'));
+      await storage.saveNote(
+        buildNote('atomic_1', 'nb_atomic'),
+        plainTextContent: 'must survive a failed delete',
+      );
+
+      // Make the final step (deleting the notebook row) fail.
+      await withRawDb((db) async {
+        await db.execute(
+          'CREATE TRIGGER block_nb_delete BEFORE DELETE ON '
+          '${AppConstants.tableNotebooks} BEGIN '
+          "SELECT RAISE(ABORT, 'blocked'); END",
+        );
+      });
+
+      expect(await storage.deleteNotebook('nb_atomic'), isFalse);
+
+      final notes = await storage.getNotesForNotebook('nb_atomic');
+      expect(notes.data.map((n) => n.id), ['atomic_1']);
+      final indexed = await withRawDb((db) => ftsRowCount(db, id: 'atomic_1'));
+      expect(indexed, 1, reason: 'search row must be rolled back with the note');
+    });
+
+    test('opening the database purges search rows whose note no longer exists', () async {
+      await storage.saveNotebook(buildNotebook('nb_orphan'));
+      await storage.saveNote(
+        buildNote('real_1', 'nb_orphan'),
+        plainTextContent: 'a real note',
+      );
+
+      // Simulate rows left behind by the old delete behaviour.
+      await withRawDb((db) async {
+        await db.insert(AppConstants.tableNotesFts, {
+          'id': 'ghost_1',
+          'title': 'ghost',
+          'plainText': 'text of a note that was deleted long ago',
+        });
+        expect(await ftsRowCount(db, id: 'ghost_1'), 1);
+      });
+
+      // Any call reopens the database, which triggers the purge.
+      await storage.getNotebooks();
+
+      final after = await withRawDb((db) async => (
+            ghost: await ftsRowCount(db, id: 'ghost_1'),
+            real: await ftsRowCount(db, id: 'real_1'),
+          ));
+      expect(after.ghost, 0);
+      expect(after.real, 1);
     });
   });
 }

@@ -226,6 +226,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: AppSpacing.sm),
+            _buildStorageWarning(mode),
             TextField(
               controller: _searchController,
               onChanged: widget.noteProvider.search,
@@ -262,6 +263,53 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           ],
         ),
       ),
+    );
+  }
+
+  /// Shows storage problems (failed load/save/delete) that were previously
+  /// only visible inside a notebook. Tap to dismiss.
+  Widget _buildStorageWarning(AppThemeMode mode) {
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        widget.noteProvider.persistenceWarning,
+        widget.notebookProvider.persistenceWarning,
+      ]),
+      builder: (context, _) {
+        final warning = widget.noteProvider.persistenceWarning.value ??
+            widget.notebookProvider.persistenceWarning.value;
+        if (warning == null) return const SizedBox.shrink();
+        final color = AppColors.warning.resolve(mode);
+        return Padding(
+          padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+          child: Material(
+            color: color.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(AppRadius.textInput),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(AppRadius.textInput),
+              onTap: () {
+                widget.noteProvider.clearWarning();
+                widget.notebookProvider.clearWarning();
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.md,
+                  vertical: AppSpacing.sm,
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                    warning,
+                    style: TextStyle(
+                      color: color,
+                      fontSize: AppTypography.footnote.size,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 

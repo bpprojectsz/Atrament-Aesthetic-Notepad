@@ -118,7 +118,14 @@ class NoteProvider {
   /// title. Fires on every save, regardless of caller (decision F2 = B).
   /// If the content has no text either (e.g. handwriting), the title stays
   /// empty and the display layer falls back to `l10n.untitledNote`.
-  Future<bool> saveNote(NoteModel note, {required String plainTextContent}) async {
+  ///
+  /// [countsAsUserSave] is false for silent background/autosave writes so
+  /// they never advance the interstitial-ad counter.
+  Future<bool> saveNote(
+    NoteModel note, {
+    required String plainTextContent,
+    bool countsAsUserSave = true,
+  }) async {
     final derived = note.title.trim().isEmpty
         ? firstNonEmptyLine(plainTextContent)
         : '';
@@ -142,7 +149,11 @@ class NoteProvider {
     }
 
     _upsertInMemory(effectiveNote);
-    unawaited(InterstitialService.instance.recordNoteSave());
+    // A successful write means any earlier storage warning is stale.
+    persistenceWarning.value = null;
+    if (countsAsUserSave) {
+      unawaited(InterstitialService.instance.recordNoteSave());
+    }
     return true;
   }
 
@@ -172,6 +183,7 @@ class NoteProvider {
     final succeeded = await _storage.deleteNote(id);
     if (succeeded) {
       notes.value = notes.value.where((n) => n.id != id).toList();
+      persistenceWarning.value = null;
     } else {
       persistenceWarning.value =
           'Could not delete this note. Please try again.';

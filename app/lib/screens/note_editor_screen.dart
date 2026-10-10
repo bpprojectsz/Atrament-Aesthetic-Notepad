@@ -115,7 +115,24 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   bool _locked = false;
   bool _checkingLock = true;
-  bool _isSaving = false;
+
+  /// The save currently running, if any. Saves are serialized through this
+  /// so an overlapping save (e.g. app backgrounding while the user taps
+  /// back) always writes a fresh snapshot instead of being skipped.
+  Future<bool>? _inFlightSave;
+
+  /// Fingerprint (title + content + paper) of what is on disk. Null for a
+  /// new note that has never been written. An unchanged note is not
+  /// re-written, which also keeps unreadable stored content intact when the
+  /// user opens and closes it without editing.
+  String? _lastSavedSignature;
+
+  Timer? _autosaveTimer;
+  static const Duration _autosaveDelay = Duration(seconds: 2);
+
+  /// Back presses that ended in a failed save; the second one lets the
+  /// user leave anyway so they are never trapped on this screen.
+  int _failedExitAttempts = 0;
 
   @override
   void initState() {
@@ -127,9 +144,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     _loadFontChoice();
 
     if (_isHandwritingMode) {
-      _handwritingController = HandwritingCanvasController.fromJsonString(
-        _unwrapHandwritingStrokes(widget.note.content),
-      );
+      _handwritingController = _buildHandwritingController(widget.note.content);
       _quillController = quill.QuillController.basic(
         config: _quillConfig,
       );
@@ -138,10 +153,42 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       _quillController = _buildQuillController(widget.note.content);
     }
 
+    // Existing notes start with their on-disk state as the baseline; a new
+    // note has none until its first successful save.
+    if (!widget.isNewNote) {
+      _lastSavedSignature = _signature();
+    }
+
+    _titleController.addListener(_scheduleAutosave);
+    _quillController.addListener(_scheduleAutosave);
+    _handwritingController.addListener(_scheduleAutosave);
+
     _checkBiometricLock();
   }
 
+  /// A corrupted stroke payload must not crash the editor on open. The
+  /// original content stays on disk untouched until the user edits.
+  HandwritingCanvasController _buildHandwritingController(String content) {
+    try {
+      return HandwritingCanvasController.fromJsonString(
+        _unwrapHandwritingStrokes(content),
+      );
+    } catch (error, stackTrace) {
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Failed to parse handwriting content, starting blank',
+        context: 'note_editor_screen.buildHandwritingController',
+        severity: ErrorSeverity.warning,
+      );
+      return HandwritingCanvasController();
+    }
+  }
+
   quill.QuillController _buildQuillController(String content) {
+    if (content.trim().isEmpty) {
+      return quill.QuillController.basic(config: _quillConfig);
+    }
     try {
       final delta = jsonDecode(content) as List<dynamic>;
       return quill.QuillController(
@@ -206,12 +253,28 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     }
   }
 
+  /// Whether the note is persisted as handwriting. Only one kind of content
+  /// is stored per note, so the visible mode normally wins; but if the
+  /// visible mode is empty while the other holds content (e.g. the user
+  /// tapped the toggle by accident), the content that exists is kept
+  /// rather than being replaced by an empty page.
+  bool get _persistAsHandwriting {
+    final inkHasContent = _handwritingController.strokes.isNotEmpty;
+    final textHasContent =
+        _quillController.document.toPlainText().trim().isNotEmpty;
+    if (_isHandwritingMode) return inkHasContent || !textHasContent;
+    return !textHasContent && inkHasContent;
+  }
+
   String _currentContentJson() {
-    if (_isHandwritingMode) {
+    if (_persistAsHandwriting) {
       return _wrapHandwritingContent(_handwritingController.toJsonString());
     }
     return jsonEncode(_quillController.document.toDelta().toJson());
   }
+
+  String _signature() =>
+      '${_titleController.text.trim()}\u0000${_currentContentJson()}\u0000$_paperStyleId';
 
   /// True when this is a never-before-saved note that the user hasn't
   /// actually put anything into — no title, no text, no strokes. Used to
@@ -219,6 +282,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   /// someone taps + and backs out without writing anything.
   bool get _isUntouchedNewNote {
     if (!widget.isNewNote) return false;
+    // Already written once (e.g. by autosave): from here on every state,
+    // including an emptied note, must be saved.
+    if (_lastSavedSignature != null) return false;
     if (_titleController.text.trim().isNotEmpty) return false;
     if (_isHandwritingMode) {
       return _handwritingController.strokes.isEmpty;
@@ -226,38 +292,82 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     return _quillController.document.toPlainText().trim().isEmpty;
   }
 
-  Future<bool> _save() async {
-    if (_isSaving) return true;
-    if (_isUntouchedNewNote) return true;
-    _isSaving = true;
+  void _scheduleAutosave() {
+    if (_locked || _checkingLock) return;
+    _autosaveTimer?.cancel();
+    _autosaveTimer = Timer(_autosaveDelay, () {
+      if (!mounted) return;
+      unawaited(_save(userInitiated: false));
+    });
+  }
 
+  /// Saves the note. Concurrent calls queue behind the running save and
+  /// then write a fresh snapshot. Returns true when the note is safely on
+  /// disk (or there was nothing to write).
+  Future<bool> _save({bool userInitiated = true}) async {
+    while (_inFlightSave != null) {
+      try {
+        await _inFlightSave;
+      } catch (_) {
+        // The failed save already reported itself; fall through and retry.
+      }
+    }
+    if (_isUntouchedNewNote) return true;
+    final signature = _signature();
+    if (signature == _lastSavedSignature) return true;
+
+    final future = _persist(signature, userInitiated: userInitiated);
+    _inFlightSave = future;
+    try {
+      return await future;
+    } finally {
+      if (identical(_inFlightSave, future)) _inFlightSave = null;
+    }
+  }
+
+  Future<bool> _persist(String signature, {required bool userInitiated}) async {
+    final asHandwriting = _persistAsHandwriting;
     final updated = widget.note.copyWith(
       title: _titleController.text.trim(),
       content: _currentContentJson(),
       paperStyle: _paperStyleId,
       modifiedAt: DateTime.now(),
     );
-
-    final plainText = _isHandwritingMode
-        ? ''
-        : _quillController.document.toPlainText();
+    final plainText =
+        asHandwriting ? '' : _quillController.document.toPlainText();
 
     final succeeded = await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainText,
+      countsAsUserSave: userInitiated,
     );
 
     if (succeeded) {
-      unawaited(EngagementService.instance.recordNoteSave());
+      _lastSavedSignature = signature;
+      if (userInitiated) {
+        unawaited(EngagementService.instance.recordNoteSave());
+      }
     }
-
-    _isSaving = false;
     return succeeded;
   }
 
   Future<void> _handlePop() async {
-    await _save();
-    if (mounted) Navigator.of(context).pop();
+    _autosaveTimer?.cancel();
+    final saved = await _save();
+    if (!mounted) return;
+    final messenger = ScaffoldMessenger.of(context);
+    final failureText = AppLocalizations.of(context)!.saveFailedMessage;
+    if (!saved && _failedExitAttempts == 0) {
+      // First failure: stay, so the user can retry instead of silently
+      // losing the note. A second back press leaves regardless.
+      _failedExitAttempts = 1;
+      messenger.showSnackBar(SnackBar(content: Text(failureText)));
+      return;
+    }
+    Navigator.of(context).pop();
+    if (!saved) {
+      messenger.showSnackBar(SnackBar(content: Text(failureText)));
+    }
   }
 
   ExportableNote _buildExportableNote(AppLocalizations l10n) {
@@ -308,6 +418,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
     if (state == AppLifecycleState.paused) {
+      _autosaveTimer?.cancel();
       // Fire-and-forget: save when the app backgrounds so typed content
       // is not lost if the OS kills the process. Silently no-op when the
       // note is untouched (the _isUntouchedNewNote guard in _save handles
@@ -319,8 +430,13 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _autosaveTimer?.cancel();
+    _titleController.removeListener(_scheduleAutosave);
+    _quillController.removeListener(_scheduleAutosave);
+    _handwritingController.removeListener(_scheduleAutosave);
     _titleController.dispose();
     _quillController.dispose();
+    _handwritingController.dispose();
     super.dispose();
   }
 
