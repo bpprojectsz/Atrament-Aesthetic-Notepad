@@ -111,18 +111,23 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  testWidgets('opening and closing an unchanged note writes nothing', (
-    tester,
-  ) async {
-    final provider = _FakeNoteProvider();
-    final nav = await _openEditor(tester, _note(), provider);
+  testWidgets(
+    'opening and closing an unchanged note still saves it, as a user save',
+    (tester) async {
+      final provider = _FakeNoteProvider();
+      final nav = await _openEditor(tester, _note(), provider);
 
-    await _pressBack(tester, nav);
+      await _pressBack(tester, nav);
 
-    expect(provider.saved, isEmpty);
-    expect(find.byType(NoteEditorScreen), findsNothing);
-    await _closeAll(tester);
-  });
+      // Same behaviour as before Phase 1: the exit save always writes, which
+      // refreshes the modified time and counts toward the save counters.
+      expect(provider.saved, hasLength(1));
+      expect(provider.countedAsUserSave.single, isTrue);
+      expect(provider.saved.single.content, contains('Hello world'));
+      expect(find.byType(NoteEditorScreen), findsNothing);
+      await _closeAll(tester);
+    },
+  );
 
   testWidgets(
     'toggling handwriting mode on a typed note never replaces the text',
@@ -137,9 +142,13 @@ void main() {
 
       await _pressBack(tester, nav);
 
-      // Nothing changed, so nothing is written — in particular, no empty
-      // handwriting page over the typed text.
-      expect(provider.saved, isEmpty);
+      // The exit save writes, but it must write the typed text — never an
+      // empty handwriting page over it.
+      expect(provider.saved, hasLength(1));
+      final saved = provider.saved.single;
+      expect(jsonDecode(saved.content), isA<List<dynamic>>(),
+          reason: 'must stay typed content');
+      expect(saved.content, contains('Hello world'));
       await _closeAll(tester);
     },
   );
@@ -180,6 +189,21 @@ void main() {
     expect(provider.saved.single.title, 'Edited title');
     expect(provider.countedAsUserSave.single, isFalse,
         reason: 'autosave must not advance ad/review counters');
+    await _closeAll(tester);
+  });
+
+  testWidgets('autosave does not rewrite a note whose content did not change', (
+    tester,
+  ) async {
+    final provider = _FakeNoteProvider();
+    await _openEditor(tester, _note(), provider);
+
+    // Re-entering the identical title fires the change listeners but leaves
+    // title, text and paper exactly as saved.
+    await tester.enterText(find.byType(TextField).first, 'My note');
+    await _pumpFor(tester, const Duration(milliseconds: 2500));
+
+    expect(provider.saved, isEmpty);
     await _closeAll(tester);
   });
 

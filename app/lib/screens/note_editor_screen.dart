@@ -122,10 +122,15 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   Future<bool>? _inFlightSave;
 
   /// Fingerprint (title + content + paper) of what is on disk. Null for a
-  /// new note that has never been written. An unchanged note is not
-  /// re-written, which also keeps unreadable stored content intact when the
-  /// user opens and closes it without editing.
+  /// new note that has never been written. Used so autosave never rewrites
+  /// an unchanged note, and so unreadable stored content is never replaced
+  /// by a blank page.
   String? _lastSavedSignature;
+
+  /// True when the stored content could not be parsed on open. While the
+  /// user has not edited, saving is skipped so the original data on disk is
+  /// kept instead of being overwritten with an empty note.
+  bool _contentUnreadable = false;
 
   Timer? _autosaveTimer;
   static const Duration _autosaveDelay = Duration(seconds: 2);
@@ -174,6 +179,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         _unwrapHandwritingStrokes(content),
       );
     } catch (error, stackTrace) {
+      _contentUnreadable = true;
       ErrorHandler.report(
         error,
         stackTrace,
@@ -197,6 +203,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         config: _quillConfig,
       );
     } catch (error, stackTrace) {
+      _contentUnreadable = true;
       ErrorHandler.report(
         error,
         stackTrace,
@@ -297,14 +304,21 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     _autosaveTimer?.cancel();
     _autosaveTimer = Timer(_autosaveDelay, () {
       if (!mounted) return;
-      unawaited(_save(userInitiated: false));
+      unawaited(_save(userInitiated: false, skipIfUnchanged: true));
     });
   }
 
   /// Saves the note. Concurrent calls queue behind the running save and
   /// then write a fresh snapshot. Returns true when the note is safely on
   /// disk (or there was nothing to write).
-  Future<bool> _save({bool userInitiated = true}) async {
+  ///
+  /// Exit and background saves always write (so opening a note refreshes its
+  /// modified time, as before). [skipIfUnchanged] is used by autosave so
+  /// merely moving the cursor never rewrites the note.
+  Future<bool> _save({
+    bool userInitiated = true,
+    bool skipIfUnchanged = false,
+  }) async {
     while (_inFlightSave != null) {
       try {
         await _inFlightSave;
@@ -314,7 +328,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     }
     if (_isUntouchedNewNote) return true;
     final signature = _signature();
-    if (signature == _lastSavedSignature) return true;
+    final unchanged = signature == _lastSavedSignature;
+    if (unchanged && (skipIfUnchanged || _contentUnreadable)) return true;
 
     final future = _persist(signature, userInitiated: userInitiated);
     _inFlightSave = future;
@@ -344,6 +359,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
     if (succeeded) {
       _lastSavedSignature = signature;
+      _contentUnreadable = false;
       if (userInitiated) {
         unawaited(EngagementService.instance.recordNoteSave());
       }
