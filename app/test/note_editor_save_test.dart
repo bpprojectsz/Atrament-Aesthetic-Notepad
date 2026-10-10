@@ -96,7 +96,9 @@ Future<NavigatorState> _openEditor(
 
 Future<void> _pressBack(WidgetTester tester, NavigatorState nav) async {
   unawaited(nav.maybePop());
-  await _pumpFor(tester, const Duration(milliseconds: 400));
+  // Android's page transition takes ~800ms; wait it out so a popped route
+  // is really gone from the tree.
+  await _pumpFor(tester, const Duration(milliseconds: 1200));
 }
 
 Future<void> _closeAll(WidgetTester tester) async {
@@ -250,7 +252,7 @@ void main() {
     expect(find.byType(NoteEditorScreen), findsOneWidget);
 
     provider.gate!.complete(true);
-    await _pumpFor(tester, const Duration(milliseconds: 500));
+    await _pumpFor(tester, const Duration(milliseconds: 1500));
 
     expect(provider.saved, hasLength(2));
     expect(provider.saved.last.title, 'Second',
