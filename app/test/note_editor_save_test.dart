@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:atrament/core/models/note_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/verse_provider.dart';
+import 'package:atrament/core/services/app_lock.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:atrament/screens/note_editor_screen.dart';
 import 'package:flutter/material.dart';
@@ -109,6 +110,9 @@ Future<void> _closeAll(WidgetTester tester) async {
 void main() {
   setUp(() {
     SharedPreferences.setMockInitialValues({});
+    // The editor asks AppLock whether to prompt; give every test a fresh,
+    // lock-off instance so no state leaks between tests.
+    AppLock.instance = AppLock();
   });
 
   testWidgets(
