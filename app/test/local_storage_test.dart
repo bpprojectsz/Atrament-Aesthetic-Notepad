@@ -556,7 +556,7 @@ void main() {
         options: OpenDatabaseOptions(
           version: 3,
           onCreate: (db, version) async {
-            await db.execute("""
+            await db.execute('''
               CREATE TABLE notebooks (
                 id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
@@ -566,8 +566,8 @@ void main() {
                 createdAt TEXT NOT NULL,
                 modifiedAt TEXT NOT NULL
               )
-            """);
-            await db.execute("""
+            ''');
+            await db.execute('''
               CREATE TABLE notes (
                 id TEXT PRIMARY KEY,
                 title TEXT NOT NULL,
@@ -580,7 +580,7 @@ void main() {
                 FOREIGN KEY (notebookId) REFERENCES notebooks(id)
                   ON DELETE CASCADE
               )
-            """);
+            ''');
             await db.execute("""
               CREATE VIRTUAL TABLE notes_fts USING fts5(
                 id UNINDEXED, title, plainText,
