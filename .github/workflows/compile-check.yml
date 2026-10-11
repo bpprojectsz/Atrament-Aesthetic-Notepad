@@ -28,7 +28,16 @@ jobs:
         working-directory: app
 
       - name: Lint and compile Dart (flutter analyze)
-        run: flutter analyze
+        run: |
+          set +e
+          flutter analyze > "$RUNNER_TEMP/analyze.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/analyze.log"
+          if [ "$code" -ne 0 ]; then
+            msg=$(grep -E "(error|warning|info) •" "$RUNNER_TEMP/analyze.log" | head -n 40 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Analyzer findings::$msg"
+          fi
+          exit $code
         working-directory: app
 
       - name: Unit and widget tests

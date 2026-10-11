@@ -1,4 +1,5 @@
 import 'package:atrament/core/providers/note_provider.dart';
+import 'package:atrament/core/services/local_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'helpers/controlled_storage.dart';
