@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:atrament/core/models/note_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';
