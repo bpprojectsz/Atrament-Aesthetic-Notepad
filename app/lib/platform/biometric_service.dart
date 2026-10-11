@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:local_auth/local_auth.dart';
 
 import '../core/utils/error_handler.dart';
@@ -22,14 +23,13 @@ class BiometricService {
 
   final LocalAuthentication _auth = LocalAuthentication();
 
-  /// Whether the device supports and has biometrics enrolled. Used to
-  /// decide whether to show the "Lock with Face ID" toggle in Settings at
-  /// all.
+  /// Whether the device can authenticate the user at all: a biometric OR a
+  /// screen-lock PIN / pattern / passcode. (Requiring enrolled biometrics
+  /// would wrongly reject PIN-only devices, which [authenticate] fully
+  /// supports through its device-credential fallback.)
   Future<bool> isSupported() async {
     try {
-      final canCheck = await _auth.canCheckBiometrics;
-      final isDeviceSupported = await _auth.isDeviceSupported();
-      return canCheck && isDeviceSupported;
+      return await _auth.isDeviceSupported();
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,
@@ -41,6 +41,15 @@ class BiometricService {
       return false;
     }
   }
+
+  /// Errors that mean authentication cannot work on this device right now
+  /// or ever (nothing set up), as opposed to the user cancelling or a
+  /// temporary lockout.
+  @visibleForTesting
+  static bool codeMeansUnavailable(LocalAuthExceptionCode code) =>
+      code == LocalAuthExceptionCode.noCredentialsSet ||
+      code == LocalAuthExceptionCode.noBiometricsEnrolled ||
+      code == LocalAuthExceptionCode.noBiometricHardware;
 
   /// Prompts the user to authenticate. [reason] is the localized string
   /// shown in the system prompt (and, on iOS, must match the
@@ -58,6 +67,23 @@ class BiometricService {
       return didAuthenticate
           ? BiometricAuthResult.success
           : BiometricAuthResult.failed;
+    } on LocalAuthException catch (error, stackTrace) {
+      if (codeMeansUnavailable(error.code)) {
+        return BiometricAuthResult.unavailable;
+      }
+      final userChoice = error.code == LocalAuthExceptionCode.userCanceled ||
+          error.code == LocalAuthExceptionCode.systemCanceled ||
+          error.code == LocalAuthExceptionCode.userRequestedFallback;
+      if (!userChoice) {
+        ErrorHandler.report(
+          error,
+          stackTrace,
+          message: 'Biometric authentication failed (${error.code.name})',
+          context: 'biometric_service.authenticate',
+          severity: ErrorSeverity.warning,
+        );
+      }
+      return BiometricAuthResult.failed;
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,

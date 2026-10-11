@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/services/app_lock.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
@@ -22,6 +23,7 @@ import '../core/utils/quill_content_helper.dart';
 import '../core/utils/route_observer.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
+import '../widgets/lock_gate.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/chips_row.dart';
@@ -424,6 +426,9 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   /// already used as the title dropped, joined and clipped at 200 chars.
   /// Handwriting notes have no text body and preview as empty.
   String _previewFor(NoteModel note) {
+    // While the note lock is on and the app is locked, list screens show
+    // titles only — the first lines of a note are its private content.
+    if (AppLock.instance.contentHidden.value) return '';
     final plain = plainTextFromContent(note.content);
     if (plain.isEmpty) return '';
     final lines = plain
@@ -572,6 +577,8 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
 
   Future<void> _handleExport(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final format = await showModalBottomSheet<ExportFormat>(
       context: context,
       showDragHandle: true,
@@ -627,6 +634,8 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
 
   Future<void> _handleShare(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final exportable = _buildExportable(note, l10n);
     const shareService = ShareService();
     final body = exportable.plainTextContent.isEmpty
@@ -684,6 +693,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {
@@ -708,6 +718,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {
@@ -775,6 +786,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {

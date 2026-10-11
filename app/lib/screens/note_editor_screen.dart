@@ -16,7 +16,7 @@ import '../core/services/export_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';
-import '../platform/biometric_service.dart';
+import '../core/services/app_lock.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/font_selector.dart';
@@ -111,7 +111,6 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   final ExportService _exportService = const ExportService();
   final ShareService _shareService = const ShareService();
-  final BiometricService _biometricService = BiometricService();
 
   bool _locked = false;
   bool _checkingLock = true;
@@ -230,24 +229,27 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   Future<void> _checkBiometricLock() async {
     try {
-      final prefs = await SharedPreferences.getInstance();
-      final enabled =
-          prefs.getBool(AppConstants.prefBiometricLockEnabled) ?? false;
-      if (!enabled) {
-        if (mounted) setState(() => _checkingLock = false);
-        return;
-      }
-      if (mounted) setState(() => _locked = true);
+      // Also gives the first frame time to finish before we touch inherited
+      // widgets (this is called from initState).
+      await AppLock.instance.init();
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
-      final result = await _biometricService.authenticate(
-        reason: l10n.biometricLockReason,
-      );
+      final messenger = ScaffoldMessenger.of(context);
+      final lock = AppLock.instance;
+      if (lock.enabled && !lock.isUnlocked) {
+        setState(() => _locked = true);
+      }
+      final outcome = await lock.ensureUnlocked(reason: l10n.biometricLockReason);
       if (!mounted) return;
       setState(() {
-        _locked = result != BiometricAuthResult.success;
+        _locked = outcome == LockOutcome.denied;
         _checkingLock = false;
       });
+      if (outcome == LockOutcome.grantedLockDisabled) {
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.noteLockTurnedOffMessage)),
+        );
+      }
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,

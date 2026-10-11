@@ -10,6 +10,7 @@ import 'core/providers/notebook_provider.dart';
 import 'core/providers/subscription_provider.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/verse_provider.dart';
+import 'core/services/app_lock.dart';
 import 'core/services/engagement_service.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
@@ -56,6 +57,7 @@ Future<void> main() async {
   unawaited(AdMobService.instance.initialize());
   unawaited(NotificationService.instance.initialize());
   unawaited(EngagementService.instance.ensureInstallDate());
+  unawaited(AppLock.instance.init());
 
   runApp(const AtramentApp());
 }

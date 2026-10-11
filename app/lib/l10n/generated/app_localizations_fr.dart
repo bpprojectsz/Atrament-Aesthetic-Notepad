@@ -160,6 +160,24 @@ class AppLocalizationsFr extends AppLocalizations {
   String get unlockButton => 'Déverrouiller';
 
   @override
+  String get noteLockTurnedOffMessage => 'Le verrouillage des notes a été désactivé, car aucun verrouillage d’écran ni biométrie n’est configuré sur cet appareil.';
+
+  @override
+  String get biometricEnableReason => 'Confirmez votre identité pour activer le verrouillage des notes';
+
+  @override
+  String get biometricDisableReason => 'Confirmez votre identité pour désactiver le verrouillage des notes';
+
+  @override
+  String get biometricShareReason => 'Déverrouillez pour partager ou exporter cette note';
+
+  @override
+  String get biometricAuthFailedMessage => 'Impossible de vérifier votre identité.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Configurez d’abord un verrouillage d’écran ou une empreinte dans les réglages de l’appareil.';
+
+  @override
   String get exportTitle => 'Exporter';
 
   @override

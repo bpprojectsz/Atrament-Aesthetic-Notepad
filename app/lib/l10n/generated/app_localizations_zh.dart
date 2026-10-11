@@ -155,6 +155,24 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unlockButton => '解锁';
 
   @override
+  String get noteLockTurnedOffMessage => '由于此设备未设置屏幕锁定或生物识别，笔记锁定已关闭。';
+
+  @override
+  String get biometricEnableReason => '请验证身份以开启笔记锁定';
+
+  @override
+  String get biometricDisableReason => '请验证身份以关闭笔记锁定';
+
+  @override
+  String get biometricShareReason => '解锁后即可分享或导出此笔记';
+
+  @override
+  String get biometricAuthFailedMessage => '无法验证您的身份。';
+
+  @override
+  String get biometricSetupNeededMessage => '请先在设备设置中设置屏幕锁定或指纹。';
+
+  @override
   String get exportTitle => '导出';
 
   @override

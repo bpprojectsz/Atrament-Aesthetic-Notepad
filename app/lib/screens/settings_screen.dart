@@ -11,6 +11,7 @@ import '../core/providers/locale_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/verse_provider.dart';
+import '../core/services/app_lock.dart';
 import '../core/services/engagement_service.dart';
 import '../core/services/iap_service.dart';
 import '../core/utils/constants.dart';
@@ -60,6 +61,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final supported = await _biometricService.isSupported();
+      await AppLock.instance.init();
 
       if (!mounted) return;
       setState(() {
@@ -74,8 +76,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           hour: prefs.getInt(AppConstants.prefReminderHour) ?? 8,
           minute: prefs.getInt(AppConstants.prefReminderMinute) ?? 0,
         );
-        _biometricLockEnabled =
-            prefs.getBool(AppConstants.prefBiometricLockEnabled) ?? false;
+        _biometricLockEnabled = AppLock.instance.enabled;
         _biometricSupported = supported;
         _loadingPrefs = false;
       });
@@ -157,10 +158,30 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  /// Turning the lock on or off requires authenticating, so a phone that
+  /// is merely left unlocked can't have its note lock removed.
   Future<void> _setBiometricLockEnabled(bool enabled) async {
-    setState(() => _biometricLockEnabled = enabled);
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(AppConstants.prefBiometricLockEnabled, enabled);
+    final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
+
+    final outcome = await AppLock.instance.changeEnabled(
+      enabled,
+      reason: enabled ? l10n.biometricEnableReason : l10n.biometricDisableReason,
+    );
+    if (!mounted) return;
+
+    switch (outcome) {
+      case LockChangeOutcome.changed:
+        setState(() => _biometricLockEnabled = AppLock.instance.enabled);
+      case LockChangeOutcome.notSupported:
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.biometricSetupNeededMessage)),
+        );
+      case LockChangeOutcome.denied:
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.biometricAuthFailedMessage)),
+        );
+    }
   }
 
   Future<void> _openUrl(String url) async {
@@ -352,7 +373,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.privacySectionTitle),
-          if (_biometricSupported)
+          // Stay visible while the lock is on, even if the device stopped
+          // supporting it, so the user can always turn it off.
+          if (_biometricSupported || _biometricLockEnabled)
             SwitchListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(l10n.biometricLockToggle),

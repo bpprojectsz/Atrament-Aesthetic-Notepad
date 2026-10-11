@@ -158,6 +158,24 @@ class AppLocalizationsPt extends AppLocalizations {
   String get unlockButton => 'Desbloquear';
 
   @override
+  String get noteLockTurnedOffMessage => 'O bloqueio de notas foi desativado porque este dispositivo não tem bloqueio de tela nem biometria configurados.';
+
+  @override
+  String get biometricEnableReason => 'Confirme que é você para ativar o bloqueio de notas';
+
+  @override
+  String get biometricDisableReason => 'Confirme que é você para desativar o bloqueio de notas';
+
+  @override
+  String get biometricShareReason => 'Desbloqueie para compartilhar ou exportar esta nota';
+
+  @override
+  String get biometricAuthFailedMessage => 'Não foi possível verificar sua identidade.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Primeiro configure um bloqueio de tela ou uma impressão digital nas configurações do dispositivo.';
+
+  @override
   String get exportTitle => 'Exportar';
 
   @override

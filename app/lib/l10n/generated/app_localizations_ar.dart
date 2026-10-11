@@ -157,6 +157,24 @@ class AppLocalizationsAr extends AppLocalizations {
   String get unlockButton => 'فتح القفل';
 
   @override
+  String get noteLockTurnedOffMessage => 'تم إيقاف قفل الملاحظات لأن هذا الجهاز لا يحتوي على قفل شاشة أو مصادقة حيوية مُعدّة.';
+
+  @override
+  String get biometricEnableReason => 'أكّد هويتك لتشغيل قفل الملاحظات';
+
+  @override
+  String get biometricDisableReason => 'أكّد هويتك لإيقاف قفل الملاحظات';
+
+  @override
+  String get biometricShareReason => 'افتح القفل لمشاركة هذه الملاحظة أو تصديرها';
+
+  @override
+  String get biometricAuthFailedMessage => 'تعذّر التحقق من هويتك.';
+
+  @override
+  String get biometricSetupNeededMessage => 'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
+
+  @override
   String get exportTitle => 'تصدير';
 
   @override

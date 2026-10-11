@@ -155,6 +155,24 @@ class AppLocalizationsKo extends AppLocalizations {
   String get unlockButton => '잠금 해제';
 
   @override
+  String get noteLockTurnedOffMessage => '이 기기에 화면 잠금이나 생체 인식이 설정되어 있지 않아 노트 잠금을 껐습니다.';
+
+  @override
+  String get biometricEnableReason => '노트 잠금을 켜려면 본인 확인을 해 주세요';
+
+  @override
+  String get biometricDisableReason => '노트 잠금을 끄려면 본인 확인을 해 주세요';
+
+  @override
+  String get biometricShareReason => '이 노트를 공유하거나 내보내려면 잠금을 해제하세요';
+
+  @override
+  String get biometricAuthFailedMessage => '본인 확인에 실패했습니다.';
+
+  @override
+  String get biometricSetupNeededMessage => '먼저 기기 설정에서 화면 잠금 또는 지문을 설정해 주세요.';
+
+  @override
   String get exportTitle => '내보내기';
 
   @override

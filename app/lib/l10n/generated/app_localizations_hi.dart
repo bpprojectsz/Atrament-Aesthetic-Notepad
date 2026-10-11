@@ -158,6 +158,24 @@ class AppLocalizationsHi extends AppLocalizations {
   String get unlockButton => 'अनलॉक करें';
 
   @override
+  String get noteLockTurnedOffMessage => 'इस डिवाइस पर स्क्रीन लॉक या बायोमेट्रिक सेट न होने के कारण नोट लॉक बंद कर दिया गया है।';
+
+  @override
+  String get biometricEnableReason => 'नोट लॉक चालू करने के लिए अपनी पहचान की पुष्टि करें';
+
+  @override
+  String get biometricDisableReason => 'नोट लॉक बंद करने के लिए अपनी पहचान की पुष्टि करें';
+
+  @override
+  String get biometricShareReason => 'इस नोट को शेयर या एक्सपोर्ट करने के लिए अनलॉक करें';
+
+  @override
+  String get biometricAuthFailedMessage => 'आपकी पहचान सत्यापित नहीं हो सकी।';
+
+  @override
+  String get biometricSetupNeededMessage => 'पहले डिवाइस सेटिंग में स्क्रीन लॉक या फ़िंगरप्रिंट सेट करें।';
+
+  @override
   String get exportTitle => 'निर्यात करें';
 
   @override

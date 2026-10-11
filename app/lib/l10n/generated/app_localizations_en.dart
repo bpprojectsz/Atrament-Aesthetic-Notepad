@@ -158,6 +158,24 @@ class AppLocalizationsEn extends AppLocalizations {
   String get unlockButton => 'Unlock';
 
   @override
+  String get noteLockTurnedOffMessage => 'Note lock was turned off because this device has no screen lock or biometrics set up.';
+
+  @override
+  String get biometricEnableReason => 'Confirm it is you to turn on note lock';
+
+  @override
+  String get biometricDisableReason => 'Confirm it is you to turn off note lock';
+
+  @override
+  String get biometricShareReason => 'Unlock to share or export this note';
+
+  @override
+  String get biometricAuthFailedMessage => 'Unable to verify your identity.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Set up a screen lock or fingerprint in your device settings first.';
+
+  @override
   String get exportTitle => 'Export';
 
   @override

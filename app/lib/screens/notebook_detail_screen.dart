@@ -4,6 +4,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../core/services/app_lock.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
@@ -18,6 +19,7 @@ import '../core/utils/id_generator.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
+import '../widgets/lock_gate.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
@@ -190,6 +192,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
           widget.noteProvider.notes,
           widget.noteProvider.isLoading,
           widget.noteProvider.persistenceWarning,
+          AppLock.instance.contentHidden,
         ]),
         builder: (context, _) {
           final warning = widget.noteProvider.persistenceWarning.value;
@@ -388,6 +391,8 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
 
   Future<void> _handleExport(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final format = await showModalBottomSheet<ExportFormat>(
       context: context,
       showDragHandle: true,
@@ -443,6 +448,8 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
 
   Future<void> _handleShare(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final exportable = _buildExportable(note, l10n);
     const shareService = ShareService();
     final body = exportable.plainTextContent.isEmpty
@@ -481,6 +488,9 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   /// already used as the title dropped, joined and clipped at 200 chars.
   /// Handwriting notes have no text body and preview as empty.
   String _previewFor(NoteModel note) {
+    // While the note lock is on and the app is locked, list screens show
+    // titles only — the first lines of a note are its private content.
+    if (AppLock.instance.contentHidden.value) return '';
     final plain = plainTextFromContent(note.content);
     if (plain.isEmpty) return '';
     final lines = plain

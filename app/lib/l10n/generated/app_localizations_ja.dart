@@ -155,6 +155,24 @@ class AppLocalizationsJa extends AppLocalizations {
   String get unlockButton => 'ロック解除';
 
   @override
+  String get noteLockTurnedOffMessage => 'このデバイスには画面ロックや生体認証が設定されていないため、ノートロックをオフにしました。';
+
+  @override
+  String get biometricEnableReason => 'ノートロックをオンにするには本人確認をしてください';
+
+  @override
+  String get biometricDisableReason => 'ノートロックをオフにするには本人確認をしてください';
+
+  @override
+  String get biometricShareReason => 'このノートを共有またはエクスポートするにはロックを解除してください';
+
+  @override
+  String get biometricAuthFailedMessage => '本人確認ができませんでした。';
+
+  @override
+  String get biometricSetupNeededMessage => '先にデバイスの設定で画面ロックまたは指紋認証を設定してください。';
+
+  @override
   String get exportTitle => 'エクスポート';
 
   @override

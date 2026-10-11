@@ -404,6 +404,42 @@ abstract class AppLocalizations {
   /// **'Unlock'**
   String get unlockButton;
 
+  /// No description provided for @noteLockTurnedOffMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Note lock was turned off because this device has no screen lock or biometrics set up.'**
+  String get noteLockTurnedOffMessage;
+
+  /// No description provided for @biometricEnableReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm it is you to turn on note lock'**
+  String get biometricEnableReason;
+
+  /// No description provided for @biometricDisableReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm it is you to turn off note lock'**
+  String get biometricDisableReason;
+
+  /// No description provided for @biometricShareReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock to share or export this note'**
+  String get biometricShareReason;
+
+  /// No description provided for @biometricAuthFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to verify your identity.'**
+  String get biometricAuthFailedMessage;
+
+  /// No description provided for @biometricSetupNeededMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up a screen lock or fingerprint in your device settings first.'**
+  String get biometricSetupNeededMessage;
+
   /// No description provided for @exportTitle.
   ///
   /// In en, this message translates to:

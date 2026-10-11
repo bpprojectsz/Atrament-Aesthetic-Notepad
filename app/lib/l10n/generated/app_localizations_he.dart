@@ -156,6 +156,24 @@ class AppLocalizationsHe extends AppLocalizations {
   String get unlockButton => 'בטל נעילה';
 
   @override
+  String get noteLockTurnedOffMessage => 'נעילת הפתקיות כובתה כי במכשיר זה לא הוגדרו נעילת מסך או זיהוי ביומטרי.';
+
+  @override
+  String get biometricEnableReason => 'אמת את זהותך כדי להפעיל את נעילת הפתקיות';
+
+  @override
+  String get biometricDisableReason => 'אמת את זהותך כדי לכבות את נעילת הפתקיות';
+
+  @override
+  String get biometricShareReason => 'בטל נעילה כדי לשתף או לייצא פתקית זו';
+
+  @override
+  String get biometricAuthFailedMessage => 'לא ניתן היה לאמת את זהותך.';
+
+  @override
+  String get biometricSetupNeededMessage => 'הגדר תחילה נעילת מסך או טביעת אצבע בהגדרות המכשיר.';
+
+  @override
   String get exportTitle => 'ייצוא';
 
   @override

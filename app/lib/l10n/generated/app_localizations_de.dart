@@ -160,6 +160,24 @@ class AppLocalizationsDe extends AppLocalizations {
   String get unlockButton => 'Entsperren';
 
   @override
+  String get noteLockTurnedOffMessage => 'Die Notizsperre wurde ausgeschaltet, weil auf diesem Gerät keine Bildschirmsperre oder Biometrie eingerichtet ist.';
+
+  @override
+  String get biometricEnableReason => 'Identität bestätigen, um die Notizsperre einzuschalten';
+
+  @override
+  String get biometricDisableReason => 'Identität bestätigen, um die Notizsperre auszuschalten';
+
+  @override
+  String get biometricShareReason => 'Entsperren, um diese Notiz zu teilen oder zu exportieren';
+
+  @override
+  String get biometricAuthFailedMessage => 'Die Identität konnte nicht bestätigt werden.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Zuerst in den Geräteeinstellungen eine Bildschirmsperre oder einen Fingerabdruck einrichten.';
+
+  @override
   String get exportTitle => 'Exportieren';
 
   @override
