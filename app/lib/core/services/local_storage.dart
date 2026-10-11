@@ -18,6 +18,25 @@ class StorageResult<T> {
   final bool failed;
 }
 
+/// Normalises text for the search index and for search queries: folds the
+/// German sharp s so "Straße" and "strasse" find each other. (FTS5's
+/// tokenizer already folds case and accents, but not ß.)
+String foldForSearch(String input) =>
+    input.replaceAll('ß', 'ss').replaceAll('ẞ', 'ss');
+
+/// Chinese/Japanese text has no spaces, so the word-based FTS index can only
+/// match from the start of a run of characters. Queries containing these
+/// characters use a substring search instead. (Hangul is space-separated
+/// and works with the normal index.)
+final RegExp _cjkPattern = RegExp(
+  r'[\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]',
+);
+
+String _escapeLike(String input) => input
+    .replaceAll(r'\', r'\\')
+    .replaceAll('%', r'\%')
+    .replaceAll('_', r'\_');
+
 /// SQLite-backed persistence for notes and notebooks, including an FTS5
 /// virtual table for indexed note search (Section 11: "never linear scan").
 ///
@@ -185,6 +204,16 @@ class LocalStorage {
         'CREATE INDEX idx_notes_notebookId ON '
         '${AppConstants.tableNotes}(notebookId)',
       );
+    }
+
+    if (oldVersion < 4) {
+      // v4: fold ß/ẞ to "ss" in the existing search index so German notes
+      // saved before this version match the folded queries.
+      await db.execute('''
+        UPDATE ${AppConstants.tableNotesFts}
+        SET title = replace(replace(title, 'ß', 'ss'), 'ẞ', 'ss'),
+            plainText = replace(replace(plainText, 'ß', 'ss'), 'ẞ', 'ss')
+      ''');
     }
   }
 
@@ -354,8 +383,8 @@ class LocalStorage {
           );
           await txn.insert(AppConstants.tableNotesFts, {
             'id': note.id,
-            'title': note.title,
-            'plainText': plainTextContent,
+            'title': foldForSearch(note.title),
+            'plainText': foldForSearch(plainTextContent),
           });
         });
         return true;
@@ -399,11 +428,43 @@ class LocalStorage {
     final rows = await _guarded<List<Map<String, Object?>>?>(
       () async {
         final db = await _database;
-        // FTS5 prefix match on each token for responsive as-you-type search.
-        final ftsQuery = trimmed
+        final tokens = trimmed
             .split(RegExp(r'\s+'))
             .where((t) => t.isNotEmpty)
-            .map((t) => '$t*')
+            .toList();
+
+        if (tokens.any(_cjkPattern.hasMatch)) {
+          // Substring match on every token (all must be present), over the
+          // same index table so deleted/renamed notes stay consistent.
+          final clauses = <String>[];
+          final args = <Object?>[];
+          for (final token in tokens) {
+            final pattern = '%${_escapeLike(token)}%';
+            clauses.add(
+              "(fts.title LIKE ? ESCAPE '\\' OR fts.plainText LIKE ? ESCAPE '\\')",
+            );
+            args
+              ..add(pattern)
+              ..add(pattern);
+          }
+          return db.rawQuery(
+            '''
+            SELECT notes.* FROM ${AppConstants.tableNotes} AS notes
+            INNER JOIN ${AppConstants.tableNotesFts} AS fts
+              ON notes.id = fts.id
+            WHERE ${clauses.join(' AND ')}
+            ORDER BY notes.modifiedAt DESC
+            ''',
+            args,
+          );
+        }
+
+        // FTS5 prefix match on each token for responsive as-you-type
+        // search. Every token is quoted (inner quotes doubled) so
+        // punctuation like - ' + ( ? and words like NOT can never be parsed
+        // as FTS5 syntax.
+        final ftsQuery = tokens
+            .map((t) => '"${foldForSearch(t).replaceAll('"', '""')}"*')
             .join(' ');
 
         return db.rawQuery(

@@ -32,9 +32,25 @@ class NoteProvider {
 
   String? _activeNotebookId;
 
+  /// Waits for a pause in typing before querying, so fast typing runs one
+  /// search instead of one per keystroke.
+  static const Duration searchDebounceDelay = Duration(milliseconds: 250);
+  Timer? _searchDebounce;
+
+  /// Bumped by every search and every load. A search result is applied only
+  /// if no newer search or load started after it, so late answers to old
+  /// queries can never overwrite newer results.
+  int _searchGeneration = 0;
+
+  int _invalidateSearch() {
+    _searchDebounce?.cancel();
+    return ++_searchGeneration;
+  }
+
   /// Loads notes for [notebookId] and makes it the active scope for
   /// subsequent saves. Clears any active search.
   Future<void> loadNotebook(String notebookId) async {
+    _invalidateSearch();
     _activeNotebookId = notebookId;
     searchQuery.value = '';
     isLoading.value = true;
@@ -51,6 +67,7 @@ class NoteProvider {
   /// Loads every note regardless of notebook. Used by the home "All"
   /// and "Recent" chip scopes.
   Future<void> loadAllNotes() async {
+    _invalidateSearch();
     _activeNotebookId = null;
     searchQuery.value = '';
     isLoading.value = true;
@@ -65,20 +82,40 @@ class NoteProvider {
   }
 
   /// Runs an indexed full-text search across all notebooks. Passing an
-  /// empty string clears search and falls back to the active notebook.
-  Future<void> search(String query) async {
+  /// empty string clears the search and restores the full list for the
+  /// current scope (the active notebook, or all notes on Home).
+  ///
+  /// Typed queries are debounced; pass `debounce: false` to search at once
+  /// (e.g. to re-run the current query after returning to a screen).
+  Future<void> search(String query, {bool debounce = true}) async {
     searchQuery.value = query;
+    final generation = _invalidateSearch();
 
     if (query.trim().isEmpty) {
       final notebookId = _activeNotebookId;
       if (notebookId != null) {
         await loadNotebook(notebookId);
+      } else {
+        await loadAllNotes();
       }
       return;
     }
 
+    if (debounce) {
+      _searchDebounce = Timer(searchDebounceDelay, () {
+        unawaited(_runSearch(query, generation));
+      });
+      return;
+    }
+    await _runSearch(query, generation);
+  }
+
+  Future<void> _runSearch(String query, int generation) async {
     isLoading.value = true;
     final result = await _storage.searchNotes(query);
+    // A newer search or load has started; it owns the list and the
+    // loading flag now.
+    if (generation != _searchGeneration) return;
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
         ? 'Search results may be incomplete right now.'
@@ -196,6 +233,7 @@ class NoteProvider {
   }
 
   void dispose() {
+    _searchDebounce?.cancel();
     notes.dispose();
     searchQuery.dispose();
     sortOrder.dispose();

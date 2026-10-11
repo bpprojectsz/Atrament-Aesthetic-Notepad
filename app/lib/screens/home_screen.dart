@@ -86,7 +86,14 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   /// until the next cold start.
   @override
   void didPopNext() {
-    widget.noteProvider.loadAllNotes();
+    // If a search is still typed in the box, keep it and re-run it so the
+    // list and the box agree; otherwise show all notes.
+    final typed = _searchController.text;
+    if (typed.trim().isNotEmpty) {
+      widget.noteProvider.search(typed, debounce: false);
+    } else {
+      widget.noteProvider.loadAllNotes();
+    }
   }
 
   @override
