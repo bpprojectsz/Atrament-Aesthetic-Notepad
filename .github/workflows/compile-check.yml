@@ -79,6 +79,22 @@ jobs:
           exit $code
         working-directory: app/android
 
+      # Links the Android resources (styles, themes, manifest) without
+      # assembling anything, so a bad theme parent or missing resource fails
+      # here instead of in a real build. Produces no APK.
+      - name: Link Android resources (no APK)
+        run: |
+          set +e
+          ./gradlew :app:processDebugResources --no-daemon --stacktrace > "$RUNNER_TEMP/res.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/res.log"
+          if [ "$code" -ne 0 ]; then
+            key=$(grep -nE "What went wrong|error:|AAPT|resource .* not found|Execution failed" -A6 "$RUNNER_TEMP/res.log" | head -n 60 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Resource link failure::$key"
+          fi
+          exit $code
+        working-directory: app/android
+
       - name: Android lint (informational, non-blocking)
         continue-on-error: true
         run: |
