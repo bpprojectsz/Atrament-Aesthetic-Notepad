@@ -230,14 +230,27 @@ void main() {
     await _openEditor(tester, _note(), provider);
 
     await tester.enterText(find.byType(TextField).first, 'Typed, then switched apps');
-    tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
+    // Flutter only allows moving through the intermediate states.
+    for (final state in [
+      AppLifecycleState.inactive,
+      AppLifecycleState.hidden,
+      AppLifecycleState.paused,
+    ]) {
+      tester.binding.handleAppLifecycleStateChanged(state);
+    }
     await _pumpFor(tester, const Duration(milliseconds: 300));
 
     expect(provider.saved, hasLength(1));
     expect(provider.countedAsUserSave.single, isFalse,
         reason: 'a background save must not advance the ad counter');
 
-    tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+    for (final state in [
+      AppLifecycleState.hidden,
+      AppLifecycleState.inactive,
+      AppLifecycleState.resumed,
+    ]) {
+      tester.binding.handleAppLifecycleStateChanged(state);
+    }
     await _closeAll(tester);
   });
 
