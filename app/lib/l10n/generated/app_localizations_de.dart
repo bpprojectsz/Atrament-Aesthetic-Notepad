@@ -178,6 +178,21 @@ class AppLocalizationsDe extends AppLocalizations {
   String get biometricSetupNeededMessage => 'Zuerst in den Geräteeinstellungen eine Bildschirmsperre oder einen Fingerabdruck einrichten.';
 
   @override
+  String get privacyChoicesTitle => 'Datenschutzoptionen';
+
+  @override
+  String get purchaseFailedMessage => 'Der Kauf konnte nicht abgeschlossen werden. Bitte erneut versuchen.';
+
+  @override
+  String get restoreSuccessMessage => 'Dein Kauf wurde wiederhergestellt.';
+
+  @override
+  String get restoreNothingFoundMessage => 'Für dieses Konto wurde kein früherer Kauf gefunden.';
+
+  @override
+  String get restoreFailedMessage => 'Käufe konnten nicht wiederhergestellt werden. Verbindung prüfen und erneut versuchen.';
+
+  @override
   String get exportTitle => 'Exportieren';
 
   @override

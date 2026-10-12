@@ -176,6 +176,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get biometricSetupNeededMessage => 'Primeiro configure um bloqueio de tela ou uma impressão digital nas configurações do dispositivo.';
 
   @override
+  String get privacyChoicesTitle => 'Opções de privacidade';
+
+  @override
+  String get purchaseFailedMessage => 'Não foi possível concluir a compra. Tente novamente.';
+
+  @override
+  String get restoreSuccessMessage => 'Sua compra foi restaurada.';
+
+  @override
+  String get restoreNothingFoundMessage => 'Nenhuma compra anterior foi encontrada para esta conta.';
+
+  @override
+  String get restoreFailedMessage => 'Não foi possível restaurar as compras. Verifique sua conexão e tente novamente.';
+
+  @override
   String get exportTitle => 'Exportar';
 
   @override

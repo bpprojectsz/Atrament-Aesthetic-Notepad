@@ -175,6 +175,21 @@ class AppLocalizationsAr extends AppLocalizations {
   String get biometricSetupNeededMessage => 'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
 
   @override
+  String get privacyChoicesTitle => 'خيارات الخصوصية';
+
+  @override
+  String get purchaseFailedMessage => 'تعذّر إتمام عملية الشراء. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get restoreSuccessMessage => 'تمت استعادة مشترياتك.';
+
+  @override
+  String get restoreNothingFoundMessage => 'لم يتم العثور على عملية شراء سابقة لهذا الحساب.';
+
+  @override
+  String get restoreFailedMessage => 'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
+
+  @override
   String get exportTitle => 'تصدير';
 
   @override

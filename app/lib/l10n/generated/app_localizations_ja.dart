@@ -173,6 +173,21 @@ class AppLocalizationsJa extends AppLocalizations {
   String get biometricSetupNeededMessage => '先にデバイスの設定で画面ロックまたは指紋認証を設定してください。';
 
   @override
+  String get privacyChoicesTitle => 'プライバシー設定';
+
+  @override
+  String get purchaseFailedMessage => '購入を完了できませんでした。もう一度お試しください。';
+
+  @override
+  String get restoreSuccessMessage => '購入を復元しました。';
+
+  @override
+  String get restoreNothingFoundMessage => 'このアカウントで以前の購入は見つかりませんでした。';
+
+  @override
+  String get restoreFailedMessage => '購入を復元できませんでした。接続を確認してもう一度お試しください。';
+
+  @override
   String get exportTitle => 'エクスポート';
 
   @override

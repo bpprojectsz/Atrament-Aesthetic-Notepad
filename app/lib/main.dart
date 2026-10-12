@@ -54,12 +54,18 @@ Future<void> main() async {
   // Fire-and-forget platform SDK initialization. Both services degrade
   // gracefully on failure (Sections 7 and 14), so the app proceeds to
   // runApp regardless of outcome.
-  unawaited(AdMobService.instance.initialize());
   unawaited(NotificationService.instance.initialize());
   unawaited(EngagementService.instance.ensureInstallDate());
   unawaited(AppLock.instance.init());
 
   runApp(const AtramentApp());
+
+  // Ads start after the first frame: the consent form (EEA/UK) needs a
+  // visible screen to appear on, and no ad may be requested before the
+  // consent flow has run. Failure degrades to "no ads", never a crash.
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    unawaited(AdMobService.instance.initialize());
+  });
 }
 
 /// Fallback UI for any framework error, installed via [ErrorWidget.builder]

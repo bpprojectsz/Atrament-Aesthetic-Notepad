@@ -17,6 +17,17 @@ class PremiumScreen extends StatelessWidget {
 
   final SubscriptionProvider subscriptionProvider;
 
+  Future<void> _restore(BuildContext context, AppLocalizations l10n) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final outcome = await subscriptionProvider.restore();
+    final message = switch (outcome) {
+      RestoreOutcome.restored => l10n.restoreSuccessMessage,
+      RestoreOutcome.nothingFound => l10n.restoreNothingFoundMessage,
+      RestoreOutcome.failed => l10n.restoreFailedMessage,
+    };
+    messenger.showSnackBar(SnackBar(content: Text(message)));
+  }
+
   /// Returns the store's actual localized price for the ad-removal
   /// product if the catalog has loaded, falling back to a static
   /// approximate price (e.g. while offline) only when the live price
@@ -47,6 +58,7 @@ class PremiumScreen extends StatelessWidget {
           subscriptionProvider.status,
           subscriptionProvider.isProcessingPurchase,
           subscriptionProvider.lastErrorMessage,
+          subscriptionProvider.purchaseFailed,
         ]),
         builder: (context, _) {
           final isPro =
@@ -107,9 +119,9 @@ class PremiumScreen extends StatelessWidget {
                   const SizedBox(height: AppSpacing.md),
                   if (isProcessing)
                     const Center(child: LoadingIndicator())
-                  else if (error != null)
+                  else if (error != null || subscriptionProvider.purchaseFailed.value)
                     Text(
-                      error,
+                      error ?? l10n.purchaseFailedMessage,
                       style: TextStyle(
                         color: AppColors.error.resolve(mode),
                         fontSize: AppTypography.footnote.size,
@@ -120,7 +132,7 @@ class PremiumScreen extends StatelessWidget {
                     child: TextButton(
                       onPressed: isProcessing
                           ? null
-                          : subscriptionProvider.restore,
+                          : () => _restore(context, l10n),
                       child: Text(l10n.premiumRestoreButton),
                     ),
                   ),

@@ -174,6 +174,21 @@ class AppLocalizationsHe extends AppLocalizations {
   String get biometricSetupNeededMessage => 'הגדר תחילה נעילת מסך או טביעת אצבע בהגדרות המכשיר.';
 
   @override
+  String get privacyChoicesTitle => 'אפשרויות פרטיות';
+
+  @override
+  String get purchaseFailedMessage => 'לא ניתן היה להשלים את הרכישה. נסה שוב.';
+
+  @override
+  String get restoreSuccessMessage => 'הרכישה שלך שוחזרה.';
+
+  @override
+  String get restoreNothingFoundMessage => 'לא נמצאה רכישה קודמת עבור חשבון זה.';
+
+  @override
+  String get restoreFailedMessage => 'לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.';
+
+  @override
   String get exportTitle => 'ייצוא';
 
   @override

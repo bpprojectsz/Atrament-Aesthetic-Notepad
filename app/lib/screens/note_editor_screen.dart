@@ -440,8 +440,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       // Fire-and-forget: save when the app backgrounds so typed content
       // is not lost if the OS kills the process. Silently no-op when the
       // note is untouched (the _isUntouchedNewNote guard in _save handles
-      // that case).
-      unawaited(_save());
+      // that case). Not an explicit exit, so it never counts toward ads.
+      unawaited(_save(userInitiated: false));
     }
   }
 

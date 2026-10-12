@@ -173,6 +173,21 @@ class AppLocalizationsKo extends AppLocalizations {
   String get biometricSetupNeededMessage => '먼저 기기 설정에서 화면 잠금 또는 지문을 설정해 주세요.';
 
   @override
+  String get privacyChoicesTitle => '개인정보 선택';
+
+  @override
+  String get purchaseFailedMessage => '구매를 완료하지 못했습니다. 다시 시도해 주세요.';
+
+  @override
+  String get restoreSuccessMessage => '구매가 복원되었습니다.';
+
+  @override
+  String get restoreNothingFoundMessage => '이 계정에서 이전 구매 내역을 찾을 수 없습니다.';
+
+  @override
+  String get restoreFailedMessage => '구매를 복원하지 못했습니다. 연결을 확인하고 다시 시도해 주세요.';
+
+  @override
   String get exportTitle => '내보내기';
 
   @override

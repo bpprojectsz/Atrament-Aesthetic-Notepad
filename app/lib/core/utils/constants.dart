@@ -295,6 +295,10 @@ class AppConstants {
   // Register this ID in Play Console and App Store Connect before submission.
   static const String iapAdFreeProductId = 'com.zdmgold.atrament.adfree';
 
+  /// Last confirmed ad-free state, so paying users never see ads while the
+  /// store is still being asked at startup.
+  static const String prefAdFreeCached = 'pref_ad_free_cached';
+
   // Store listings (used by the Share Atrament flow)
   static const String playStoreUrl =
       'https://play.google.com/store/apps/details?id=com.zdmgold.atrament';

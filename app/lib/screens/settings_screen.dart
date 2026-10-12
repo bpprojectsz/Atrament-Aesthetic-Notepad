@@ -16,7 +16,9 @@ import '../core/services/engagement_service.dart';
 import '../core/services/iap_service.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
+import '../platform/admob_service.dart';
 import '../platform/biometric_service.dart';
+import '../platform/consent_service.dart';
 import '../platform/debug_log_service.dart';
 import '../platform/notification_service.dart';
 import '../platform/share_service.dart';
@@ -156,6 +158,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
         verseBody: l10n.dailyReminderBody,
       );
     }
+  }
+
+  Future<void> _rateApp() async {
+    final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
+    final opened = await EngagementService.instance.openStoreListingForReview();
+    if (!opened) {
+      messenger.showSnackBar(SnackBar(content: Text(l10n.openLinkFailedMessage)));
+    }
+  }
+
+  Future<void> _restorePurchases(SubscriptionProvider provider) async {
+    final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
+    final outcome = await provider.restore();
+    final message = switch (outcome) {
+      RestoreOutcome.restored => l10n.restoreSuccessMessage,
+      RestoreOutcome.nothingFound => l10n.restoreNothingFoundMessage,
+      RestoreOutcome.failed => l10n.restoreFailedMessage,
+    };
+    messenger.showSnackBar(SnackBar(content: Text(message)));
+  }
+
+  Future<void> _openPrivacyChoices() async {
+    await ConsentService.instance.showPrivacyOptions();
+    await AdMobService.instance.onConsentChanged();
   }
 
   /// Turning the lock on or off requires authenticating, so a phone that
@@ -414,7 +442,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       },
                     ),
                   TextButton(
-                    onPressed: subscriptionProvider.restore,
+                    onPressed: () => _restorePurchases(subscriptionProvider),
                     child: Text(l10n.restorePurchasesButton),
                   ),
                 ],
@@ -424,12 +452,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const SizedBox(height: AppSpacing.lg),
 
           _SectionHeader(l10n.engagementSectionTitle),
+          ValueListenableBuilder<bool>(
+            valueListenable: ConsentService.instance.privacyOptionsRequired,
+            builder: (context, required, _) {
+              if (!required) return const SizedBox.shrink();
+              return ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.privacy_tip_outlined),
+                title: Text(l10n.privacyChoicesTitle),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: _openPrivacyChoices,
+              );
+            },
+          ),
           ListTile(
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.star_outline),
             title: Text(l10n.rateAppTitle),
             subtitle: Text(l10n.rateAppSubtitle),
-            onTap: EngagementService.instance.openStoreListingForReview,
+            onTap: _rateApp,
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,

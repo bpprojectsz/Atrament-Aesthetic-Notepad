@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/services/iap_service.dart';
@@ -38,11 +40,33 @@ class InterstitialService {
     return DateTime.now().difference(last) >= _minCooldown;
   }
 
+  /// Interstitials may only appear while the user is actually in the app.
+  /// Never from a background save or while the app is switching away.
+  bool _appIsForeground() {
+    try {
+      final state = WidgetsBinding.instance.lifecycleState;
+      return state == null || state == AppLifecycleState.resumed;
+    } catch (_) {
+      return true;
+    }
+  }
+
+  @visibleForTesting
+  int get pendingSaveCount => _saveCount;
+
+  @visibleForTesting
+  void resetCountersForTesting() {
+    _saveCount = 0;
+    _createCount = 0;
+    _lastShownAt = null;
+  }
+
   bool _isAdFree() =>
       IapService.instance.lastKnownStatus == SubscriptionStatus.pro;
 
-  /// Called after a note is successfully persisted. Fires an interstitial
-  /// once every [_saveThreshold] successful saves.
+  /// Called when the user leaves the editor after a successful save (not
+  /// for autosave, background saves, renames or moves). Fires an
+  /// interstitial once every [_saveThreshold] such saves.
   Future<void> recordNoteSave() async {
     _saveCount++;
     if (_saveCount < _saveThreshold) return;
@@ -74,10 +98,17 @@ class InterstitialService {
     if (_isAdFree()) return;
     if (!_cooldownElapsed()) return;
     if (!AdMobService.instance.isAvailable) return;
+    if (!_appIsForeground()) return;
 
     try {
       final ad = await AdMobService.instance.loadInterstitial();
       if (ad == null) return;
+      // The load takes a moment; if the user left the app meanwhile, do not
+      // pop an ad over whatever they switched to.
+      if (!_appIsForeground()) {
+        await ad.dispose();
+        return;
+      }
       _lastShownAt = DateTime.now();
       ad.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (ad) => ad.dispose(),

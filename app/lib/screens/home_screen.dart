@@ -477,6 +477,8 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainTextFromContent(note.content),
+      // Renaming/moving is not writing: it must not count toward ads.
+      countsAsUserSave: false,
     );
   }
 
@@ -504,6 +506,8 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainTextFromContent(note.content),
+      // Renaming/moving is not writing: it must not count toward ads.
+      countsAsUserSave: false,
     );
   }
 

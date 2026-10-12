@@ -177,6 +177,21 @@ class AppLocalizationsEs extends AppLocalizations {
   String get biometricSetupNeededMessage => 'Primero configura un bloqueo de pantalla o una huella en los ajustes del dispositivo.';
 
   @override
+  String get privacyChoicesTitle => 'Opciones de privacidad';
+
+  @override
+  String get purchaseFailedMessage => 'No se pudo completar la compra. Inténtalo de nuevo.';
+
+  @override
+  String get restoreSuccessMessage => 'Tu compra se ha restaurado.';
+
+  @override
+  String get restoreNothingFoundMessage => 'No se encontró ninguna compra anterior para esta cuenta.';
+
+  @override
+  String get restoreFailedMessage => 'No se pudieron restaurar las compras. Comprueba tu conexión e inténtalo de nuevo.';
+
+  @override
   String get exportTitle => 'Exportar';
 
   @override

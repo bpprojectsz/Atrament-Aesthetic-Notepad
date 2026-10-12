@@ -176,6 +176,21 @@ class AppLocalizationsHi extends AppLocalizations {
   String get biometricSetupNeededMessage => 'पहले डिवाइस सेटिंग में स्क्रीन लॉक या फ़िंगरप्रिंट सेट करें।';
 
   @override
+  String get privacyChoicesTitle => 'गोपनीयता विकल्प';
+
+  @override
+  String get purchaseFailedMessage => 'खरीदारी पूरी नहीं हो सकी। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get restoreSuccessMessage => 'आपकी खरीदारी बहाल कर दी गई है।';
+
+  @override
+  String get restoreNothingFoundMessage => 'इस खाते के लिए कोई पिछली खरीदारी नहीं मिली।';
+
+  @override
+  String get restoreFailedMessage => 'खरीदारी बहाल नहीं हो सकी। अपना कनेक्शन जाँचें और फिर कोशिश करें।';
+
+  @override
   String get exportTitle => 'निर्यात करें';
 
   @override

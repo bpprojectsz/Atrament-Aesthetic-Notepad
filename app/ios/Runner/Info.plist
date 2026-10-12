@@ -57,6 +57,18 @@
 	  AdMob is active). Shown once on first launch before any
 	  ad-tracking-relevant request is made.
 	-->
+		<!-- Google sample AdMob app ID (matches the sample ad units used for now).
+		     REPLACE with the real iOS AdMob app ID before an App Store release.
+		     The Google Mobile Ads SDK refuses to start without this key. -->
+		<key>GADApplicationIdentifier</key>
+		<string>ca-app-pub-3940256099942544~1458002511</string>
+		<key>SKAdNetworkItems</key>
+		<array>
+			<dict>
+				<key>SKAdNetworkIdentifier</key>
+				<string>cstr6suwn9.skadnetwork</string>
+			</dict>
+		</array>
 		<key>NSUserTrackingUsageDescription</key>
 		<string>To show relevant ads and support free note-taking</string>
 		<!-- Local notification permission context (daily verse reminder) -->

@@ -223,6 +223,24 @@ void main() {
     await _closeAll(tester);
   });
 
+  testWidgets('saving because the app went to the background is not a user save', (
+    tester,
+  ) async {
+    final provider = _FakeNoteProvider();
+    await _openEditor(tester, _note(), provider);
+
+    await tester.enterText(find.byType(TextField).first, 'Typed, then switched apps');
+    tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
+    await _pumpFor(tester, const Duration(milliseconds: 300));
+
+    expect(provider.saved, hasLength(1));
+    expect(provider.countedAsUserSave.single, isFalse,
+        reason: 'a background save must not advance the ad counter');
+
+    tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+    await _closeAll(tester);
+  });
+
   testWidgets('a failed save keeps the editor open once, then lets the user leave', (
     tester,
   ) async {

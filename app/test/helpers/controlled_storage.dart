@@ -24,6 +24,12 @@ class ControlledStorage implements LocalStorage {
   }
 
   @override
+  Future<bool> saveNote(
+    NoteModel note, {
+    required String plainTextContent,
+  }) async => true;
+
+  @override
   Future<StorageResult<List<NoteModel>>> getAllNotes() async =>
       StorageResult.success(List.of(allNotes));
 

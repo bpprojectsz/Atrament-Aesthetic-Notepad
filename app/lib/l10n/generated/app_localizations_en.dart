@@ -176,6 +176,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get biometricSetupNeededMessage => 'Set up a screen lock or fingerprint in your device settings first.';
 
   @override
+  String get privacyChoicesTitle => 'Privacy choices';
+
+  @override
+  String get purchaseFailedMessage => 'The purchase could not be completed. Please try again.';
+
+  @override
+  String get restoreSuccessMessage => 'Your purchase was restored.';
+
+  @override
+  String get restoreNothingFoundMessage => 'No previous purchase was found for this account.';
+
+  @override
+  String get restoreFailedMessage => 'Could not restore purchases. Check your connection and try again.';
+
+  @override
   String get exportTitle => 'Export';
 
   @override

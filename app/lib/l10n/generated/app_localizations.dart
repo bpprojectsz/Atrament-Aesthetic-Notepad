@@ -440,6 +440,36 @@ abstract class AppLocalizations {
   /// **'Set up a screen lock or fingerprint in your device settings first.'**
   String get biometricSetupNeededMessage;
 
+  /// No description provided for @privacyChoicesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy choices'**
+  String get privacyChoicesTitle;
+
+  /// No description provided for @purchaseFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The purchase could not be completed. Please try again.'**
+  String get purchaseFailedMessage;
+
+  /// No description provided for @restoreSuccessMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your purchase was restored.'**
+  String get restoreSuccessMessage;
+
+  /// No description provided for @restoreNothingFoundMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'No previous purchase was found for this account.'**
+  String get restoreNothingFoundMessage;
+
+  /// No description provided for @restoreFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not restore purchases. Check your connection and try again.'**
+  String get restoreFailedMessage;
+
   /// No description provided for @exportTitle.
   ///
   /// In en, this message translates to:

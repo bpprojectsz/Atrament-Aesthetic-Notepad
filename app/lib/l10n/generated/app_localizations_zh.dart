@@ -173,6 +173,21 @@ class AppLocalizationsZh extends AppLocalizations {
   String get biometricSetupNeededMessage => '请先在设备设置中设置屏幕锁定或指纹。';
 
   @override
+  String get privacyChoicesTitle => '隐私选择';
+
+  @override
+  String get purchaseFailedMessage => '无法完成购买，请重试。';
+
+  @override
+  String get restoreSuccessMessage => '已恢复您的购买。';
+
+  @override
+  String get restoreNothingFoundMessage => '未找到此账户的历史购买记录。';
+
+  @override
+  String get restoreFailedMessage => '无法恢复购买。请检查网络连接后重试。';
+
+  @override
   String get exportTitle => '导出';
 
   @override

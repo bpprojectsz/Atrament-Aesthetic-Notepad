@@ -178,6 +178,21 @@ class AppLocalizationsFr extends AppLocalizations {
   String get biometricSetupNeededMessage => 'Configurez d’abord un verrouillage d’écran ou une empreinte dans les réglages de l’appareil.';
 
   @override
+  String get privacyChoicesTitle => 'Choix de confidentialité';
+
+  @override
+  String get purchaseFailedMessage => 'L’achat n’a pas pu être finalisé. Veuillez réessayer.';
+
+  @override
+  String get restoreSuccessMessage => 'Votre achat a été restauré.';
+
+  @override
+  String get restoreNothingFoundMessage => 'Aucun achat précédent n’a été trouvé pour ce compte.';
+
+  @override
+  String get restoreFailedMessage => 'Impossible de restaurer les achats. Vérifiez votre connexion et réessayez.';
+
+  @override
   String get exportTitle => 'Exporter';
 
   @override
