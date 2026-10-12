@@ -223,7 +223,7 @@ void main() {
     await _closeAll(tester);
   });
 
-  testWidgets('saving because the app went to the background is not a user save', (
+  testWidgets('saving because the app went to the background still counts, as before', (
     tester,
   ) async {
     final provider = _FakeNoteProvider();
@@ -241,8 +241,8 @@ void main() {
     await _pumpFor(tester, const Duration(milliseconds: 300));
 
     expect(provider.saved, hasLength(1));
-    expect(provider.countedAsUserSave.single, isFalse,
-        reason: 'a background save must not advance the ad counter');
+    expect(provider.countedAsUserSave.single, isTrue,
+        reason: 'only silent autosave is excluded from the ad counter');
 
     for (final state in [
       AppLifecycleState.hidden,

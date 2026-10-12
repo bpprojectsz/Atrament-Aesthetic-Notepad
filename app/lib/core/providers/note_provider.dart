@@ -156,8 +156,11 @@ class NoteProvider {
   /// If the content has no text either (e.g. handwriting), the title stays
   /// empty and the display layer falls back to `l10n.untitledNote`.
   ///
-  /// [countsAsUserSave] is false for silent background/autosave writes so
-  /// they never advance the interstitial-ad counter.
+  /// [countsAsUserSave] is false only for the editor's silent autosave
+  /// (every 2 seconds of typing), which would otherwise advance the
+  /// interstitial-ad counter far faster than real saves. Every other save —
+  /// leaving the editor, backgrounding the app, rename, move — counts, as
+  /// it always did.
   Future<bool> saveNote(
     NoteModel note, {
     required String plainTextContent,

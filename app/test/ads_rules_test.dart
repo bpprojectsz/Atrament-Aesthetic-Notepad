@@ -56,13 +56,14 @@ void main() {
 
     tearDown(() => provider.dispose());
 
-    test('a normal save counts', () async {
+    test('a normal save counts (exit, background, rename and move all use it)',
+        () async {
       await provider.saveNote(note, plainTextContent: 'x');
 
       expect(InterstitialService.instance.pendingSaveCount, 1);
     });
 
-    test('autosave, background saves, renames and moves do not count', () async {
+    test('only the editor\'s silent autosave is excluded', () async {
       await provider.saveNote(
         note,
         plainTextContent: 'x',
@@ -72,7 +73,8 @@ void main() {
       expect(InterstitialService.instance.pendingSaveCount, 0);
     });
 
-    test('only counted saves advance the counter', () async {
+    test('excluded autosaves do not advance the counter between real saves',
+        () async {
       await provider.saveNote(note, plainTextContent: 'x');
       await provider.saveNote(note, plainTextContent: 'x', countsAsUserSave: false);
       await provider.saveNote(note, plainTextContent: 'x');

@@ -28,9 +28,6 @@ class AdMobService {
   bool _sdkStarted = false;
   bool _initializationFailed = false;
 
-  /// A load that has not answered by now is abandoned so callers never
-  /// wait forever on a request that is not coming back.
-  static const Duration loadTimeout = Duration(seconds: 8);
 
   /// Flipped to true once the SDK finishes initializing successfully.
   /// Banner call sites listen for the false-to-true transition to retry
@@ -63,18 +60,12 @@ class AdMobService {
     if (!isAvailable) return null;
 
     final completer = Completer<InterstitialAd?>();
-    var abandoned = false;
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
-          // Answered after we gave up (or twice): nobody will show it.
-          if (abandoned || completer.isCompleted) {
-            ad.dispose();
-            return;
-          }
-          completer.complete(ad);
+          if (!completer.isCompleted) completer.complete(ad);
         },
         onAdFailedToLoad: (error) {
           ErrorHandler.report(
@@ -88,13 +79,7 @@ class AdMobService {
         },
       ),
     );
-    return completer.future.timeout(
-      loadTimeout,
-      onTimeout: () {
-        abandoned = true;
-        return null;
-      },
-    );
+    return completer.future;
   }
 
   /// Runs the consent flow, then initializes the Mobile Ads SDK if (and
@@ -176,14 +161,6 @@ class AdMobService {
     );
 
     await banner.load();
-    return completer.future.timeout(
-      loadTimeout,
-      onTimeout: () {
-        // Give up on a request that never answers; free it if it lands later.
-        banner?.dispose();
-        onFailed();
-        return null;
-      },
-    );
+    return completer.future;
   }
 }

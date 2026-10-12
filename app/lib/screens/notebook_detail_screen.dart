@@ -311,8 +311,6 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainTextFromContent(note.content),
-      // Renaming/moving is not writing: it must not count toward ads.
-      countsAsUserSave: false,
     );
   }
 
@@ -340,8 +338,6 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     final saved = await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainTextFromContent(note.content),
-      // Renaming/moving is not writing: it must not count toward ads.
-      countsAsUserSave: false,
     );
     // The moved note may have left this notebook — reload so it disappears
     // from the list if the target differs from the current one.
