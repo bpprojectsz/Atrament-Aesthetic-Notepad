@@ -1,4 +1,3 @@
-import 'package:atrament/core/models/note_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/services/engagement_service.dart';
 import 'package:atrament/platform/interstitial_service.dart';

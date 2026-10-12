@@ -52,6 +52,8 @@ class _FakeStore implements InAppPurchase {
     completed.add(purchase);
   }
 
+  void dispose() => purchases.close();
+
   @override
   dynamic noSuchMethod(Invocation invocation) =>
       super.noSuchMethod(invocation);
@@ -96,6 +98,8 @@ void main() {
     store = _FakeStore();
     seedCache(null);
   });
+
+  tearDown(() => store.dispose());
 
   group('remembered ad-free state', () {
     test('is applied before the store answers', () async {
