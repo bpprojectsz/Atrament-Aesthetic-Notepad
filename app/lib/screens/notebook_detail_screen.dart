@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
-import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
@@ -16,6 +15,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
@@ -26,6 +26,7 @@ import '../widgets/empty_state.dart';
 import '../widgets/loading_indicator.dart';
 import '../widgets/lock_gate.dart';
 import '../widgets/move_to_notebook_sheet.dart';
+import '../widgets/new_notebook_dialog.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_list_item.dart';
 import '../widgets/rename_note_dialog.dart';
@@ -96,8 +97,9 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   Future<void> _createNote() async {
     final notebookId = widget._notebookId;
     final now = DateTime.now();
-    final defaultPaperStyle =
-        widget.notebook?.paperStyleDefault ?? 'cream';
+    // Follow the default paper chosen in Settings. (A notebook's own stored
+    // paper is only the blank page every notebook was created with before.)
+    final defaultPaperStyle = await loadDefaultPaperStyleId();
 
     final note = NoteModel(
       id: IdGenerator.generate(),
@@ -347,31 +349,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   }
 
   Future<String?> _promptNewNotebookName() async {
-    final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-    nameController.dispose();
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return null;
 
     final now = DateTime.now();
@@ -379,7 +357,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,6 +20,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../core/utils/route_observer.dart';
 import '../platform/interstitial_service.dart';
@@ -33,6 +35,7 @@ import '../widgets/language_picker.dart';
 import '../widgets/loading_indicator.dart';
 import '../widgets/lock_gate.dart';
 import '../widgets/move_to_notebook_sheet.dart';
+import '../widgets/new_notebook_dialog.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
@@ -47,6 +50,16 @@ import 'settings_screen.dart';
 /// switches the body between the notebook grid and full-text note search
 /// results; an FAB creates a new notebook; a banner ad renders at the
 /// bottom for free-tier users.
+/// How far back the "Recent" chip looks.
+const Duration recentNotesWindow = Duration(days: 7);
+
+/// Notes edited within [recentNotesWindow] of [now].
+@visibleForTesting
+List<NoteModel> filterRecentNotes(List<NoteModel> notes, DateTime now) {
+  final cutoff = now.subtract(recentNotesWindow);
+  return notes.where((n) => n.modifiedAt.isAfter(cutoff)).toList();
+}
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
@@ -116,33 +129,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
 
   Future<void> _createNotebook() async {
     final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-
-    nameController.dispose();
-
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return;
 
     final now = DateTime.now();
@@ -150,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,
@@ -201,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           ),
         ),
         IconButton(
-          icon: const Icon(Icons.note_add),
+          icon: const Icon(Icons.create_new_folder_outlined),
           tooltip: l10n.newNotebookTitle,
           onPressed: _createNotebook,
         ),
@@ -508,31 +495,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   }
 
   Future<String?> _promptNewNotebookName() async {
-    final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-    nameController.dispose();
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return null;
 
     final now = DateTime.now();
@@ -540,7 +503,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,
@@ -724,7 +687,10 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         if (widget.noteProvider.isLoading.value) {
           return const Center(child: LoadingIndicator());
         }
-        final notes = widget.noteProvider.notes.value;
+        final notes = filterRecentNotes(
+          widget.noteProvider.notes.value,
+          DateTime.now(),
+        );
         if (notes.isEmpty) {
           return EmptyState(
             icon: Icons.history,

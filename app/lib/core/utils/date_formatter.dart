@@ -34,10 +34,13 @@ class DateFormatter {
   /// Classifies [date] relative to today. The widget layer maps this to a
   /// localized string via `AppLocalizations` — this function never returns
   /// hardcoded English text, keeping `core/` free of user-facing strings.
-  static RelativeDateBucket relativeBucket(DateTime date) {
-    final now = DateTime.now();
-    final today = DateTime(now.year, now.month, now.day);
-    final target = DateTime(date.year, date.month, date.day);
+  static RelativeDateBucket relativeBucket(DateTime date, {DateTime? now}) {
+    final current = now ?? DateTime.now();
+    // Compare calendar dates in UTC. Local midnights are only 23 or 25 hours
+    // apart across a daylight-saving change, which made a note from
+    // "yesterday" count as "today" (or the reverse) for a day.
+    final today = DateTime.utc(current.year, current.month, current.day);
+    final target = DateTime.utc(date.year, date.month, date.day);
     final diffDays = today.difference(target).inDays;
 
     if (diffDays == 0) return RelativeDateBucket.today;
