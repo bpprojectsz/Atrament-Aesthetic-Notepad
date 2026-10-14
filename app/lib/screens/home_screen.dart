@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
@@ -16,6 +15,7 @@ import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/services/app_lock.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';

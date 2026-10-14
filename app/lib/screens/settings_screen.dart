@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/providers/locale_provider.dart';
 import '../core/providers/subscription_provider.dart';
@@ -15,6 +14,7 @@ import '../core/providers/verse_provider.dart';
 import '../core/services/app_lock.dart';
 import '../core/services/engagement_service.dart';
 import '../core/services/iap_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../platform/admob_service.dart';

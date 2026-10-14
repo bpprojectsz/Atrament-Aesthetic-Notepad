@@ -1,8 +1,8 @@
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/notebook_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Sentinel returned by [showMoveToNotebookSheet] when the user chooses

@@ -2,9 +2,9 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart' show ProductDetails;
 
-import '../core/utils/app_theme.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/services/iap_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/loading_indicator.dart';

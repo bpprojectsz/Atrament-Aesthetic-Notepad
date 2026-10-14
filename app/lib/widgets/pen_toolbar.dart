@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/pen_style_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import 'handwriting_canvas.dart';
 

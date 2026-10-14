@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/paper_style_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Bottom sheet grid for choosing a paper texture. Labels are passed in

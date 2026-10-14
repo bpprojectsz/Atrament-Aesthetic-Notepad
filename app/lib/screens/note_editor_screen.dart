@@ -7,7 +7,6 @@ import 'package:flutter_quill/flutter_quill.dart' as quill;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
@@ -15,6 +14,7 @@ import '../core/providers/verse_provider.dart';
 import '../core/services/app_lock.dart';
 import '../core/services/engagement_service.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';

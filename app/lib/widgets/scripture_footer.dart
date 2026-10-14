@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/verse_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import 'verse_display.dart';
 

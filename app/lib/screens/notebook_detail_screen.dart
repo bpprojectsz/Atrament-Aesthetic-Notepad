@@ -4,7 +4,6 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/providers/note_provider.dart';
@@ -12,6 +11,7 @@ import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/services/app_lock.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
