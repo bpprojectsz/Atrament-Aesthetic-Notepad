@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Small gold accent badge indicating premium feature context. Used
@@ -12,9 +13,7 @@ class ProBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final accent = AppColors.accent.resolve(mode);
 
     return Semantics(

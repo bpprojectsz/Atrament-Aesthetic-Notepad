@@ -4,6 +4,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/providers/note_provider.dart';
@@ -144,9 +145,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             .where((n) => n.id == widget._notebookId)
             .map((n) => n.name)
             .firstWhere((_) => true, orElse: () => '');
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final subscriptionProvider = context.read<SubscriptionProvider>();
 
     return AppScaffold(

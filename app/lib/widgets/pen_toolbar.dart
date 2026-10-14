@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/pen_style_model.dart';
 import '../core/utils/constants.dart';
 import 'handwriting_canvas.dart';
@@ -43,9 +44,7 @@ class PenToolbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final bgColor = AppColors.bgSecondary.resolve(mode);
     final borderColor = AppColors.borderSubtle.resolve(mode);
     final accent = AppColors.accent.resolve(mode);

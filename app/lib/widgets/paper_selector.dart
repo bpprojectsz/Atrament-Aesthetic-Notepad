@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/utils/constants.dart';
 
@@ -46,9 +47,7 @@ class PaperSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return SafeArea(
       child: Padding(
@@ -107,9 +106,7 @@ class _PaperTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final accent = AppColors.accent.resolve(mode);
     final borderColor = AppColors.borderSubtle.resolve(mode);
 

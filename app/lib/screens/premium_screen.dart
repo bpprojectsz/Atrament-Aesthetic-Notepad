@@ -2,6 +2,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart' show ProductDetails;
 
+import '../core/utils/app_theme.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/services/iap_service.dart';
 import '../core/utils/constants.dart';
@@ -47,9 +48,7 @@ class PremiumScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return AppScaffold(
       title: l10n.premiumScreenTitle,
@@ -161,9 +160,7 @@ class _PlanOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final accent = AppColors.accent.resolve(mode);
     final borderColor = highlighted ? accent : AppColors.borderSubtle.resolve(mode);
 

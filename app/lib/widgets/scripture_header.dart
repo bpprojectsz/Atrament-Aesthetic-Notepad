@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/verse_model.dart';
 import '../core/utils/constants.dart';
 import 'verse_display.dart';
@@ -19,9 +20,7 @@ class ScriptureHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final borderColor = AppColors.borderSubtle.resolve(
-      Theme.of(context).brightness == Brightness.dark
-          ? AppThemeMode.dark
-          : AppThemeMode.light,
+      context.appMode,
     );
 
     return Container(

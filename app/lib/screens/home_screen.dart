@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
 import '../core/models/paper_style_model.dart';
@@ -166,9 +167,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return AppScaffold(
       title: l10n.appName,
@@ -512,29 +511,18 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     return notebook.id;
   }
 
+  /// Opens the note straight in the editor, whether or not it belongs to a
+  /// notebook, so Back returns to Home instead of landing on the notebook
+  /// screen first.
   void _openNoteForEdit(NoteModel note) {
-    final notebookId = note.notebookId;
-    if (notebookId == null) {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => NoteEditorScreen(
-            note: note,
-            noteProvider: widget.noteProvider,
-          ),
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => NoteEditorScreen(
+          note: note,
+          noteProvider: widget.noteProvider,
         ),
-      );
-    } else {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => NotebookDetailScreen.editingNote(
-            noteId: note.id,
-            notebookId: notebookId,
-            notebookProvider: widget.notebookProvider,
-            noteProvider: widget.noteProvider,
-          ),
-        ),
-      );
-    }
+      ),
+    );
   }
 
   Future<void> _handleExport(NoteModel note) async {
@@ -716,28 +704,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
             localeCode: Localizations.localeOf(context).languageCode,
           ),
           onTap: () {
-            final notebookId = note.notebookId;
-            if (notebookId == null) {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => NoteEditorScreen(
-                    note: note,
-                    noteProvider: widget.noteProvider,
-                  ),
-                ),
-              );
-            } else {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => NotebookDetailScreen.editingNote(
-                    noteId: note.id,
-                    notebookId: notebookId,
-                    notebookProvider: widget.notebookProvider,
-                    noteProvider: widget.noteProvider,
-                  ),
-                ),
-              );
-            }
+            _openNoteForEdit(note);
           },
           onMore: () => _handleNoteAction(note),
         );
@@ -777,28 +744,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
                 localeCode: Localizations.localeOf(context).languageCode,
               ),
               onTap: () {
-                final notebookId = note.notebookId;
-                if (notebookId == null) {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NoteEditorScreen(
-                        note: note,
-                        noteProvider: widget.noteProvider,
-                      ),
-                    ),
-                  );
-                } else {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NotebookDetailScreen.editingNote(
-                        noteId: note.id,
-                        notebookId: notebookId,
-                        notebookProvider: widget.notebookProvider,
-                        noteProvider: widget.noteProvider,
-                      ),
-                    ),
-                  );
-                }
+                _openNoteForEdit(note);
               },
               onMore: () => _handleNoteAction(note),
             );

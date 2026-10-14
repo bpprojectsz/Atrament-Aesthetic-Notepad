@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/verse_model.dart';
 import '../core/utils/constants.dart';
 import 'verse_display.dart';
@@ -20,9 +21,7 @@ class ScriptureFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textColor = AppColors.textTertiary.resolve(
-      Theme.of(context).brightness == Brightness.dark
-          ? AppThemeMode.dark
-          : AppThemeMode.light,
+      context.appMode,
     );
 
     return Padding(

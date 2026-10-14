@@ -7,6 +7,7 @@ import 'package:flutter_quill/flutter_quill.dart' as quill;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/models/note_model.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
@@ -77,7 +78,7 @@ class NoteEditorScreen extends StatefulWidget {
   /// (NotebookDetailScreen, etc.) never had a verseProvider parameter to
   /// thread it through, which meant this was always null in production
   /// and the scripture overlay never rendered at all. Resolving it from
-  /// the ambient Provider tree instead (see `_buildVerseOverlay`) removes
+  /// the ambient Provider tree instead (see `_buildVerse`) removes
   /// the need for every screen in the chain to know about it.
   final VerseProvider? verseProvider;
   final bool isNewNote;
@@ -540,9 +541,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         body: Stack(
           children: [
             PaperBackground(style: paperStyle),
-            _buildVerseOverlay(context),
+            _buildVerse(context, VerseDisplayMode.watermark),
             Column(
               children: [
+                _buildVerse(context, VerseDisplayMode.header),
                 Expanded(
                   child: _isHandwritingMode
                       ? HandwritingCanvas(
@@ -567,6 +569,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                           ),
                         ),
                 ),
+                _buildVerse(context, VerseDisplayMode.footer),
                 SafeArea(
                   top: false,
                   child: _isHandwritingMode
@@ -613,7 +616,11 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     );
   }
 
-  Widget _buildVerseOverlay(BuildContext context) {
+  /// The verse for [placement], or nothing if the user chose a different
+  /// display mode. The watermark sits behind the page; the header and footer
+  /// are real rows of the layout above and below the writing area, so they
+  /// can never overlap the text or the toolbar.
+  Widget _buildVerse(BuildContext context, VerseDisplayMode placement) {
     // Falls back to the ambient Provider tree when no explicit override
     // was passed — see the doc comment on widget.verseProvider for why
     // this fallback is the actual production path, not an edge case.
@@ -627,22 +634,18 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       ]),
       builder: (context, _) {
         final verse = verseProvider.todaysVerse.value;
-        if (verse == null) return const SizedBox.shrink();
+        if (verse == null || verseProvider.displayMode.value != placement) {
+          return const SizedBox.shrink();
+        }
         final scale = verseProvider.scriptureFontScale.value;
 
-        switch (verseProvider.displayMode.value) {
+        switch (placement) {
           case VerseDisplayMode.watermark:
             return ScriptureWatermark(verse: verse, fontScale: scale);
           case VerseDisplayMode.header:
-            return Align(
-              alignment: Alignment.topCenter,
-              child: ScriptureHeader(verse: verse, fontScale: scale),
-            );
+            return ScriptureHeader(verse: verse, fontScale: scale);
           case VerseDisplayMode.footer:
-            return Align(
-              alignment: Alignment.bottomCenter,
-              child: ScriptureFooter(verse: verse, fontScale: scale),
-            );
+            return ScriptureFooter(verse: verse, fontScale: scale);
           case VerseDisplayMode.off:
             return const SizedBox.shrink();
         }
@@ -651,9 +654,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   }
 
   Widget _buildLockScreen(BuildContext context, AppLocalizations l10n) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return Scaffold(
       body: Center(

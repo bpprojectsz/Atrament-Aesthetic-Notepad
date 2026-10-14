@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 enum NoteFontChoice { system, serif, inter, lora }
@@ -56,9 +57,7 @@ class FontSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return SegmentedButton<NoteFontChoice>(
       segments: [

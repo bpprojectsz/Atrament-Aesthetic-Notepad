@@ -1,6 +1,7 @@
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/notebook_cover_palette.dart';
 
@@ -17,9 +18,7 @@ Future<void> showCoverColorPicker(
   required ValueChanged<int> onChanged,
 }) async {
   final l10n = AppLocalizations.of(context)!;
-  final mode = Theme.of(context).brightness == Brightness.dark
-      ? AppThemeMode.dark
-      : AppThemeMode.light;
+  final mode = context.appMode;
 
   await showModalBottomSheet<void>(
     context: context,

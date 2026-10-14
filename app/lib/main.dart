@@ -12,6 +12,8 @@ import 'core/providers/theme_provider.dart';
 import 'core/providers/verse_provider.dart';
 import 'core/services/app_lock.dart';
 import 'core/services/engagement_service.dart';
+import 'core/utils/app_localization_setup.dart';
+import 'core/utils/app_theme.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
 import 'core/utils/route_observer.dart';
@@ -157,23 +159,6 @@ class _AtramentAppState extends State<AtramentApp>
     );
   }
 
-  ThemeData _buildTheme(AppThemeMode mode) {
-    final brightness = mode == AppThemeMode.dark
-        ? Brightness.dark
-        : Brightness.light;
-
-    return ThemeData(
-      brightness: brightness,
-      useMaterial3: true,
-      scaffoldBackgroundColor: AppColors.bgPrimary.resolve(mode),
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: AppColors.accent.resolve(mode),
-        brightness: brightness,
-      ),
-      fontFamily: 'Roboto',
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -196,8 +181,8 @@ class _AtramentAppState extends State<AtramentApp>
             debugShowCheckedModeBanner: false,
             navigatorObservers: [appRouteObserver],
             locale: _localeProvider.preference.value,
-            theme: _buildTheme(_themeProvider.mode.value),
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            theme: buildAppTheme(_themeProvider.mode.value),
+            localizationsDelegates: appLocalizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             builder: (context, child) {
               final locale = Localizations.localeOf(context);
