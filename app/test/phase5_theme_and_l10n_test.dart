@@ -14,6 +14,8 @@ Future<Color?> _scaffoldColor(WidgetTester tester, AppThemeMode mode) async {
       home: const AppScaffold(body: SizedBox.shrink()),
     ),
   );
+  // Theme changes animate; wait for the new theme to be fully applied.
+  await tester.pumpAndSettle();
   return tester.widget<Scaffold>(find.byType(Scaffold)).backgroundColor;
 }
 

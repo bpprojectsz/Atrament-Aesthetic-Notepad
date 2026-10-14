@@ -4,6 +4,7 @@ import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';
 import 'package:atrament/core/providers/subscription_provider.dart';
 import 'package:atrament/core/providers/verse_provider.dart';
+import 'package:atrament/core/services/app_lock.dart';
 import 'package:atrament/core/utils/route_observer.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:atrament/screens/home_screen.dart';
@@ -25,7 +26,10 @@ Future<void> _pumpFor(WidgetTester tester, Duration total) async {
 }
 
 void main() {
-  setUp(() => SharedPreferences.setMockInitialValues({}));
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+    AppLock.instance = AppLock();
+  });
 
   testWidgets(
     'tapping a note that belongs to a notebook opens the editor directly, '

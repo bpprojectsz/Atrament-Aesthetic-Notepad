@@ -2,6 +2,7 @@ import 'package:atrament/core/models/note_model.dart';
 import 'package:atrament/core/models/verse_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/verse_provider.dart';
+import 'package:atrament/core/services/app_lock.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:atrament/screens/note_editor_screen.dart';
 import 'package:atrament/widgets/note_toolbar.dart';
@@ -60,7 +61,11 @@ VerseProvider _verseProvider(VerseDisplayMode mode) {
 }
 
 void main() {
-  setUp(() => SharedPreferences.setMockInitialValues({}));
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+    // A fresh, lock-off AppLock per test so no state leaks between tests.
+    AppLock.instance = AppLock();
+  });
 
   testWidgets('header mode puts the verse above the writing area', (tester) async {
     await _openEditor(tester, _verseProvider(VerseDisplayMode.header));
