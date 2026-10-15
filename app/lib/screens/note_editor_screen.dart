@@ -272,8 +272,20 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     return jsonEncode(_quillController.document.toDelta().toJson());
   }
 
+  /// What counts as "the content" for deciding whether the note changed.
+  /// For ink this is the strokes only: the canvas width recorded alongside
+  /// them is bookkeeping that is filled in when the canvas first lays out,
+  /// and must not make an untouched note look edited (which would, for
+  /// example, overwrite unreadable stored ink with a blank page).
+  String _contentFingerprint() {
+    if (_persistAsHandwriting) {
+      return 'ink:${_handwritingController.toJsonString()}';
+    }
+    return jsonEncode(_quillController.document.toDelta().toJson());
+  }
+
   String _signature() =>
-      '${_titleController.text.trim()}\u0000${_currentContentJson()}\u0000$_paperStyleId';
+      '${_titleController.text.trim()}\u0000${_contentFingerprint()}\u0000$_paperStyleId';
 
   /// True when this is a never-before-saved note that the user hasn't
   /// actually put anything into — no title, no text, no strokes. Used to
