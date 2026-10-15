@@ -45,15 +45,6 @@ bool _isHandwritingContent(String raw) {
   }
 }
 
-String _wrapHandwritingContent(String strokesJson) {
-  return jsonEncode({'type': 'handwriting', 'strokes': jsonDecode(strokesJson)});
-}
-
-String _unwrapHandwritingStrokes(String raw) {
-  final decoded = jsonDecode(raw) as Map<String, dynamic>;
-  return jsonEncode(decoded['strokes']);
-}
-
 enum ExportFormat { txt, pdf }
 
 /// Primary writing canvas. Supports rich text (via `flutter_quill`) and
@@ -175,9 +166,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   /// original content stays on disk untouched until the user edits.
   HandwritingCanvasController _buildHandwritingController(String content) {
     try {
-      return HandwritingCanvasController.fromJsonString(
-        _unwrapHandwritingStrokes(content),
-      );
+      return HandwritingCanvasController.fromWrappedContent(content);
     } catch (error, stackTrace) {
       _contentUnreadable = true;
       ErrorHandler.report(
@@ -278,7 +267,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   String _currentContentJson() {
     if (_persistAsHandwriting) {
-      return _wrapHandwritingContent(_handwritingController.toJsonString());
+      return _handwritingController.toWrappedContent();
     }
     return jsonEncode(_quillController.document.toDelta().toJson());
   }
