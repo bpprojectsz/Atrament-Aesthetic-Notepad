@@ -370,6 +370,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     final l10n = AppLocalizations.of(context)!;
     if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
     if (!mounted) return;
+    final exportable = _buildExportable(note, l10n);
     final format = await showModalBottomSheet<ExportFormat>(
       context: context,
       showDragHandle: true,
@@ -377,11 +378,13 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            ListTile(
-              leading: const Icon(Icons.description_outlined),
-              title: Text(l10n.exportAsTxt),
-              onTap: () => Navigator.pop(context, ExportFormat.txt),
-            ),
+            // A drawing has no text to put in a .txt file.
+            if (!exportable.hasInk)
+              ListTile(
+                leading: const Icon(Icons.description_outlined),
+                title: Text(l10n.exportAsTxt),
+                onTap: () => Navigator.pop(context, ExportFormat.txt),
+              ),
             ListTile(
               leading: const Icon(Icons.picture_as_pdf_outlined),
               title: Text(l10n.exportAsPdf),
@@ -393,7 +396,6 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     );
     if (format == null || !mounted) return;
 
-    final exportable = _buildExportable(note, l10n);
     const exportService = ExportService();
     final result = format == ExportFormat.txt
         ? await exportService.exportAsTxt(exportable)
@@ -450,6 +452,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         localeCode: Localizations.localeOf(context).languageCode,
       ),
       verseReferenceLabel: note.verseReference,
+      ink: ExportInk.fromNoteContent(note.content),
     );
   }
 

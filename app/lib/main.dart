@@ -12,6 +12,8 @@ import 'core/providers/theme_provider.dart';
 import 'core/providers/verse_provider.dart';
 import 'core/services/app_lock.dart';
 import 'core/services/engagement_service.dart';
+import 'core/services/engagement_service.dart';
+import 'core/services/export_service.dart';
 import 'core/utils/app_localization_setup.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/constants.dart';
@@ -57,6 +59,8 @@ Future<void> main() async {
   // gracefully on failure (Sections 7 and 14), so the app proceeds to
   // runApp regardless of outcome.
   unawaited(NotificationService.instance.initialize());
+  // Old exported files (which contain note text) are cleared at startup.
+  unawaited(const ExportService().pruneOldExports());
   unawaited(EngagementService.instance.ensureInstallDate());
   unawaited(AppLock.instance.init());
 

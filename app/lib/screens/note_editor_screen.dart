@@ -16,6 +16,7 @@ import '../core/services/engagement_service.dart';
 import '../core/services/export_service.dart';
 import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
+import '../core/utils/date_formatter.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';
 import '../platform/interstitial_service.dart';
@@ -391,15 +392,31 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   }
 
   ExportableNote _buildExportableNote(AppLocalizations l10n) {
+    // Export what would be saved: the drawing for an ink note, the text
+    // otherwise (so a drawn note no longer exports as an empty document).
+    final asInk = _persistAsHandwriting;
     return ExportableNote(
       title: _titleController.text.trim().isEmpty
           ? l10n.untitledNote
           : _titleController.text.trim(),
-      plainTextContent: _isHandwritingMode
-          ? ''
-          : _quillController.document.toPlainText(),
-      createdAtLabel: widget.note.createdAt.toIso8601String(),
+      plainTextContent: asInk ? '' : _quillController.document.toPlainText(),
+      createdAtLabel: DateFormatter.short(
+        widget.note.createdAt,
+        localeCode: Localizations.localeOf(context).languageCode,
+      ),
       verseReferenceLabel: widget.note.verseReference,
+      ink: asInk
+          ? _handwritingController.strokes
+                .map(
+                  (s) => ExportInkStroke(
+                    points: s.points,
+                    color: s.color,
+                    strokeWidth: s.strokeWidth,
+                    isHighlighter: s.isHighlighter,
+                  ),
+                )
+                .toList()
+          : null,
     );
   }
 
@@ -527,10 +544,12 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
               tooltip: l10n.exportTitle,
               onSelected: _exportAs,
               itemBuilder: (context) => [
-                PopupMenuItem(
-                  value: ExportFormat.txt,
-                  child: Text(l10n.exportAsTxt),
-                ),
+                // A drawing has no text to put in a .txt file.
+                if (!_persistAsHandwriting)
+                  PopupMenuItem(
+                    value: ExportFormat.txt,
+                    child: Text(l10n.exportAsTxt),
+                  ),
                 PopupMenuItem(
                   value: ExportFormat.pdf,
                   child: Text(l10n.exportAsPdf),
