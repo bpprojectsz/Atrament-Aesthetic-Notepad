@@ -264,19 +264,19 @@ void main() {
       expect(_nonWhite(withVerse.single), greaterThan(_nonWhite(without.single)));
     });
 
-    testWidgets('a verse reference with no room moves to its own page', (
+    testWidgets('a verse reference is never lost when the text fills the pages', (
       tester,
     ) async {
-      // Enough lines to fill the first page almost exactly is fragile, so
-      // fill many pages and check the reference is never lost or cut off.
       final body = List.generate(120, (i) => 'Line number $i').join('\n');
       final plain = await render(tester, _note(body: body));
       final withVerse = await render(tester, _note(body: body, verse: 'Psalm 23:1'));
 
+      // Either it fits under the text, or it gets one extra page of its own.
       expect(withVerse.length, anyOf(plain.length, plain.length + 1));
-      final last = withVerse.last;
-      final lastPlain = plain.last;
-      expect(_nonWhite(last), greaterThan(_nonWhite(lastPlain) - 1));
+      final inkWith = withVerse.fold<int>(0, (n, page) => n + _nonWhite(page));
+      final inkWithout = plain.fold<int>(0, (n, page) => n + _nonWhite(page));
+      expect(inkWith, greaterThan(inkWithout));
+      expect(_nonWhite(withVerse.last), greaterThan(0), reason: 'no blank last page');
     });
 
     testWidgets('a drawing is drawn, scaled into the page, and clipped to it', (

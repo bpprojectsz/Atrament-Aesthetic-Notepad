@@ -205,11 +205,13 @@ class ExportPageRenderer {
       recorder,
       ui.Rect.fromLTWH(0, 0, width.toDouble(), height.toDouble()),
     );
-    canvas.scale(scale);
+    // Fill whole pixels. (Filling in point units leaves the last row and
+    // column of pixels only partly covered: a faint line along the edges.)
     canvas.drawRect(
-      const ui.Rect.fromLTWH(0, 0, pageWidthPt, pageHeightPt),
+      ui.Rect.fromLTWH(0, 0, width.toDouble(), height.toDouble()),
       Paint()..color = const Color(0xFFFFFFFF),
     );
+    canvas.scale(scale);
     canvas.translate(
       ExportLayout.pdfPageMarginPt,
       ExportLayout.pdfPageMarginPt,
