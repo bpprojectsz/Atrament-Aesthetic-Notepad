@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-import 'dart:ui' show Offset;
 
 import 'package:atrament/core/services/export_page_renderer.dart';
 import 'package:atrament/core/services/export_service.dart';
