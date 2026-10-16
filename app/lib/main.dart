@@ -12,7 +12,6 @@ import 'core/providers/theme_provider.dart';
 import 'core/providers/verse_provider.dart';
 import 'core/services/app_lock.dart';
 import 'core/services/engagement_service.dart';
-import 'core/services/engagement_service.dart';
 import 'core/services/export_service.dart';
 import 'core/utils/app_localization_setup.dart';
 import 'core/utils/app_theme.dart';
