@@ -53,7 +53,7 @@ void main() {
       for (final n in [3, 7, 50]) {
         // Cycles are aligned to whole day numbers; walk three of them.
         final seen = <int, int>{};
-        var day = DateTime(2027, 3, 1);
+        final day = DateTime(2027, 3, 1);
         // Advance to a cycle start by trying every offset until we've seen
         // n distinct verses within n consecutive days.
         var found = false;

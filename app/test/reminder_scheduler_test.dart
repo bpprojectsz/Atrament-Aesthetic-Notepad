@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:atrament/core/models/verse_model.dart';
 import 'package:atrament/core/services/reminder_scheduler.dart';
 import 'package:atrament/core/services/verse_service.dart';
