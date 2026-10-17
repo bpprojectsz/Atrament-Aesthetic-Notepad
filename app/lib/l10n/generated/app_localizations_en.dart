@@ -191,6 +191,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get restoreFailedMessage => 'Could not restore purchases. Check your connection and try again.';
 
   @override
+  String get reminderScheduleFailedMessage => 'The reminder could not be scheduled. Please try again.';
+
+  @override
   String get exportTitle => 'Export';
 
   @override

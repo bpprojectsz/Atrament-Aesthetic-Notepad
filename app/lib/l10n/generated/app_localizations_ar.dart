@@ -190,6 +190,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get restoreFailedMessage => 'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
 
   @override
+  String get reminderScheduleFailedMessage => 'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
+
+  @override
   String get exportTitle => 'تصدير';
 
   @override

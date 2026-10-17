@@ -193,6 +193,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get restoreFailedMessage => 'Käufe konnten nicht wiederhergestellt werden. Verbindung prüfen und erneut versuchen.';
 
   @override
+  String get reminderScheduleFailedMessage => 'Die Erinnerung konnte nicht eingerichtet werden. Bitte erneut versuchen.';
+
+  @override
   String get exportTitle => 'Exportieren';
 
   @override

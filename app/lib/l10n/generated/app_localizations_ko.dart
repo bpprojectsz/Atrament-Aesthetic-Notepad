@@ -188,6 +188,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get restoreFailedMessage => '구매를 복원하지 못했습니다. 연결을 확인하고 다시 시도해 주세요.';
 
   @override
+  String get reminderScheduleFailedMessage => '알림을 예약하지 못했습니다. 다시 시도해 주세요.';
+
+  @override
   String get exportTitle => '내보내기';
 
   @override

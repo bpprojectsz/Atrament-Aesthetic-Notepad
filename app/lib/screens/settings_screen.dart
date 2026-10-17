@@ -11,6 +11,7 @@ import '../core/providers/locale_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/verse_provider.dart';
+import '../core/services/reminder_scheduler.dart';
 import '../core/services/app_lock.dart';
 import '../core/services/engagement_service.dart';
 import '../core/services/iap_service.dart';
@@ -112,52 +113,66 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Future<void> _setNotificationsEnabled(bool enabled) async {
     final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
 
     if (enabled) {
       final granted = await NotificationService.instance.requestPermission();
       if (!granted) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(l10n.notificationPermissionDenied)),
-          );
-        }
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.notificationPermissionDenied)),
+        );
         return;
       }
-      await NotificationService.instance.scheduleDailyReminder(
+      final scheduled = await ReminderScheduler.instance.schedule(
         hour: _reminderTime.hour,
         minute: _reminderTime.minute,
-        verseTitle: l10n.appName,
-        verseBody: l10n.dailyReminderBody,
+        fallbackTitle: l10n.appName,
+        fallbackBody: l10n.dailyReminderBody,
       );
+      if (!scheduled) {
+        // Don't show the toggle as ON when nothing is actually scheduled.
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.reminderScheduleFailedMessage)),
+        );
+        return;
+      }
     } else {
-      await NotificationService.instance.cancelDailyReminder();
+      await ReminderScheduler.instance.cancel();
     }
 
-    setState(() => _notificationsEnabled = enabled);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(AppConstants.prefNotificationsEnabled, enabled);
+    if (!mounted) return;
+    setState(() => _notificationsEnabled = enabled);
   }
 
   Future<void> _pickReminderTime() async {
     final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
     final picked = await showTimePicker(
       context: context,
       initialTime: _reminderTime,
     );
     if (picked == null) return;
 
-    setState(() => _reminderTime = picked);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(AppConstants.prefReminderHour, picked.hour);
     await prefs.setInt(AppConstants.prefReminderMinute, picked.minute);
+    if (!mounted) return;
+    setState(() => _reminderTime = picked);
 
     if (_notificationsEnabled) {
-      await NotificationService.instance.scheduleDailyReminder(
+      final scheduled = await ReminderScheduler.instance.schedule(
         hour: picked.hour,
         minute: picked.minute,
-        verseTitle: l10n.appName,
-        verseBody: l10n.dailyReminderBody,
+        fallbackTitle: l10n.appName,
+        fallbackBody: l10n.dailyReminderBody,
       );
+      if (!scheduled) {
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.reminderScheduleFailedMessage)),
+        );
+      }
     }
   }
 

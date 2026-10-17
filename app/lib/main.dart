@@ -13,6 +13,7 @@ import 'core/providers/verse_provider.dart';
 import 'core/services/app_lock.dart';
 import 'core/services/engagement_service.dart';
 import 'core/services/export_service.dart';
+import 'core/services/reminder_scheduler.dart';
 import 'core/utils/app_localization_setup.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/constants.dart';
@@ -58,6 +59,9 @@ Future<void> main() async {
   // gracefully on failure (Sections 7 and 14), so the app proceeds to
   // runApp regardless of outcome.
   unawaited(NotificationService.instance.initialize());
+  ReminderScheduler.instance = ReminderScheduler(
+    gateway: NotificationService.instance,
+  );
   // Old exported files (which contain note text) are cleared at startup.
   unawaited(const ExportService().pruneOldExports());
   unawaited(EngagementService.instance.ensureInstallDate());
@@ -140,11 +144,58 @@ class _AtramentAppState extends State<AtramentApp>
     _noteProvider = NoteProvider();
     _notebookProvider = NotebookProvider();
     _verseProvider = VerseProvider()..init();
+
+    // Keep the daily verse reminder topped up: now, whenever the language
+    // changes, and whenever the app returns to the foreground.
+    _localeProvider.preference.addListener(_onLocaleChanged);
+    unawaited(_startReminders());
+  }
+
+  Future<void> _startReminders() async {
+    await NotificationService.instance.initialize();
+    await _refreshReminders();
+  }
+
+  void _onLocaleChanged() => unawaited(_refreshReminders());
+
+  Future<void> _refreshReminders({bool force = true}) async {
+    try {
+      final wanted =
+          _localeProvider.preference.value ??
+          WidgetsBinding.instance.platformDispatcher.locale;
+      final supported = AppLocalizations.supportedLocales.any(
+        (l) => l.languageCode == wanted.languageCode,
+      );
+      final l10n = lookupAppLocalizations(
+        supported ? Locale(wanted.languageCode) : const Locale('en'),
+      );
+      await ReminderScheduler.instance.refresh(
+        fallbackTitle: l10n.appName,
+        fallbackBody: l10n.dailyReminderBody,
+        force: force,
+      );
+    } catch (error, stackTrace) {
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Could not refresh the daily reminder',
+        context: 'main.refreshReminders',
+        severity: ErrorSeverity.warning,
+      );
+    }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      unawaited(_refreshReminders(force: false));
+    }
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _localeProvider.preference.removeListener(_onLocaleChanged);
     _localeProvider.dispose();
     _themeProvider.dispose();
     _subscriptionProvider.dispose();

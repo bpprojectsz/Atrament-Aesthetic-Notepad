@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "Your purchase was restored.",
   "restoreNothingFoundMessage": "No previous purchase was found for this account.",
   "restoreFailedMessage": "Could not restore purchases. Check your connection and try again.",
+  "reminderScheduleFailedMessage": "The reminder could not be scheduled. Please try again.",
   "exportTitle": "Export",
   "exportAsTxt": "Export as Text",
   "exportAsPdf": "Export as PDF",

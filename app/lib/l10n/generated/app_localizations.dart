@@ -470,6 +470,12 @@ abstract class AppLocalizations {
   /// **'Could not restore purchases. Check your connection and try again.'**
   String get restoreFailedMessage;
 
+  /// No description provided for @reminderScheduleFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The reminder could not be scheduled. Please try again.'**
+  String get reminderScheduleFailedMessage;
+
   /// No description provided for @exportTitle.
   ///
   /// In en, this message translates to:

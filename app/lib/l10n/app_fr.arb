@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "Votre achat a été restauré.",
   "restoreNothingFoundMessage": "Aucun achat précédent n’a été trouvé pour ce compte.",
   "restoreFailedMessage": "Impossible de restaurer les achats. Vérifiez votre connexion et réessayez.",
+  "reminderScheduleFailedMessage": "Le rappel n’a pas pu être programmé. Veuillez réessayer.",
   "exportTitle": "Exporter",
   "exportAsTxt": "Exporter en texte",
   "exportAsPdf": "Exporter en PDF",

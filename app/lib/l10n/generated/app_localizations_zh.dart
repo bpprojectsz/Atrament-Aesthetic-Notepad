@@ -188,6 +188,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get restoreFailedMessage => '无法恢复购买。请检查网络连接后重试。';
 
   @override
+  String get reminderScheduleFailedMessage => '无法设置提醒，请重试。';
+
+  @override
   String get exportTitle => '导出';
 
   @override

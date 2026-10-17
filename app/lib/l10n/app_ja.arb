@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "購入を復元しました。",
   "restoreNothingFoundMessage": "このアカウントで以前の購入は見つかりませんでした。",
   "restoreFailedMessage": "購入を復元できませんでした。接続を確認してもう一度お試しください。",
+  "reminderScheduleFailedMessage": "リマインダーを設定できませんでした。もう一度お試しください。",
   "exportTitle": "エクスポート",
   "exportAsTxt": "テキストとしてエクスポート",
   "exportAsPdf": "PDFとしてエクスポート",

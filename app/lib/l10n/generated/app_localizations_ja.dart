@@ -188,6 +188,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get restoreFailedMessage => '購入を復元できませんでした。接続を確認してもう一度お試しください。';
 
   @override
+  String get reminderScheduleFailedMessage => 'リマインダーを設定できませんでした。もう一度お試しください。';
+
+  @override
   String get exportTitle => 'エクスポート';
 
   @override

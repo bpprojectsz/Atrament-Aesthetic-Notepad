@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "आपकी खरीदारी बहाल कर दी गई है।",
   "restoreNothingFoundMessage": "इस खाते के लिए कोई पिछली खरीदारी नहीं मिली।",
   "restoreFailedMessage": "खरीदारी बहाल नहीं हो सकी। अपना कनेक्शन जाँचें और फिर कोशिश करें।",
+  "reminderScheduleFailedMessage": "रिमाइंडर शेड्यूल नहीं हो सका। कृपया फिर से कोशिश करें।",
   "exportTitle": "निर्यात करें",
   "exportAsTxt": "टेक्स्ट के रूप में निर्यात करें",
   "exportAsPdf": "PDF के रूप में निर्यात करें",

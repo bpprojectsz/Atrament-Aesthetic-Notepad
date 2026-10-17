@@ -76,21 +76,100 @@ class VerseService {
     }
   }
 
-  /// Returns the verse assigned to [date]'s calendar day.
-  ///
-  /// The daily_verses pool isn't guaranteed to be exactly 365/366 entries
-  /// (curated pools grow over time), so rather than indexing by day-of-year
-  /// directly, this hashes a stable per-day key across the pool size. The
-  /// same calendar date always yields the same verse for a given pool
-  /// (deterministic), and the mapping spreads evenly as the pool grows or
-  /// shrinks between app versions.
-  Future<VerseModel?> verseForDate(DateTime date) async {
-    final verses = await _loadDailyVerses();
-    if (verses.isEmpty) return null;
+  // ---------------------------------------------------------------------
+  // Which verse belongs to which day
+  //
+  // The pool is walked in a shuffled order that is reshuffled every `n` days
+  // (n = pool size): every verse appears exactly once per cycle, a verse is
+  // never shown two days running (even across a cycle boundary), and the
+  // same date always gives the same verse for a given pool. Everything is
+  // plain 32-bit integer arithmetic, so the result does not depend on the
+  // Dart version or platform (the earlier `String.hashCode` was not
+  // guaranteed to be stable, and repeated verses unevenly).
+  // ---------------------------------------------------------------------
 
-    final dayKey = '${date.year}-${date.month}-${date.day}';
-    final index = dayKey.hashCode.abs() % verses.length;
-    return verses[index];
+  /// Days since 1970-01-01 for [date]'s calendar day. Computed in UTC so a
+  /// daylight-saving change can never skip or repeat a day.
+  static int _dayNumber(DateTime date) => DateTime.utc(
+    date.year,
+    date.month,
+    date.day,
+  ).difference(DateTime.utc(1970)).inDays;
+
+  /// 32-bit FNV-1a hash of [input]'s UTF-8 bytes.
+  static int _fnv1a(String input) {
+    var hash = 0x811C9DC5;
+    for (final byte in utf8.encode(input)) {
+      hash ^= byte;
+      hash = (hash * 0x01000193) & 0xFFFFFFFF;
+    }
+    return hash;
+  }
+
+  /// A deterministic shuffle of 0..n-1 for [cycle] (Fisher–Yates driven by a
+  /// 32-bit xorshift generator seeded from the cycle number).
+  static List<int> _shuffledOrder(int cycle, int n) {
+    var state = _fnv1a('atrament-verse-cycle:$cycle');
+    if (state == 0) state = 0x9E3779B9;
+    int next() {
+      state ^= (state << 13) & 0xFFFFFFFF;
+      state ^= state >> 17;
+      state ^= (state << 5) & 0xFFFFFFFF;
+      return state;
+    }
+
+    final order = List<int>.generate(n, (i) => i);
+    for (var i = n - 1; i > 0; i--) {
+      final j = next() % (i + 1);
+      final tmp = order[i];
+      order[i] = order[j];
+      order[j] = tmp;
+    }
+    return order;
+  }
+
+  /// The order for [cycle], adjusted so its first verse differs from the
+  /// last verse of the previous cycle. (For n >= 3 the adjustment touches
+  /// only the first two entries, so the "last" entry used for the previous
+  /// cycle is unaffected.)
+  static List<int> _cycleOrder(int cycle, int n) {
+    final order = _shuffledOrder(cycle, n);
+    final previousLast = _shuffledOrder(cycle - 1, n).last;
+    if (order.first == previousLast) {
+      final tmp = order[0];
+      order[0] = order[1];
+      order[1] = tmp;
+    }
+    return order;
+  }
+
+  /// Index into a pool of [poolSize] verses for [date]'s calendar day.
+  static int indexForDate(DateTime date, int poolSize) {
+    if (poolSize <= 0) {
+      throw ArgumentError.value(poolSize, 'poolSize', 'must be positive');
+    }
+    if (poolSize == 1) return 0;
+    final day = _dayNumber(date);
+    if (poolSize == 2) return day % 2; // just alternate
+    final position = day % poolSize; // Dart's % is never negative
+    final cycle = (day - position) ~/ poolSize;
+    return _cycleOrder(cycle, poolSize)[position];
+  }
+
+  /// The verse for [date] from an already-loaded [verses] pool, or null if
+  /// the pool is empty. Synchronous, so callers that need many days (the
+  /// reminder planner) don't have to await per day.
+  static VerseModel? verseForDateIn(List<VerseModel> verses, DateTime date) {
+    if (verses.isEmpty) return null;
+    return verses[indexForDate(date, verses.length)];
+  }
+
+  /// The loaded daily-verse pool (empty if the asset could not be read).
+  Future<List<VerseModel>> dailyVerses() => _loadDailyVerses();
+
+  /// Returns the verse assigned to [date]'s calendar day.
+  Future<VerseModel?> verseForDate(DateTime date) async {
+    return verseForDateIn(await _loadDailyVerses(), date);
   }
 
   /// Convenience for "today's verse" — the primary call site from

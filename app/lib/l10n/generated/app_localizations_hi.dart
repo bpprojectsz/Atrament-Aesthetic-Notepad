@@ -191,6 +191,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get restoreFailedMessage => 'खरीदारी बहाल नहीं हो सकी। अपना कनेक्शन जाँचें और फिर कोशिश करें।';
 
   @override
+  String get reminderScheduleFailedMessage => 'रिमाइंडर शेड्यूल नहीं हो सका। कृपया फिर से कोशिश करें।';
+
+  @override
   String get exportTitle => 'निर्यात करें';
 
   @override

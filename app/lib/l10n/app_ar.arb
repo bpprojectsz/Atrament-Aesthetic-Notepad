@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "تمت استعادة مشترياتك.",
   "restoreNothingFoundMessage": "لم يتم العثور على عملية شراء سابقة لهذا الحساب.",
   "restoreFailedMessage": "تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.",
+  "reminderScheduleFailedMessage": "تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.",
   "exportTitle": "تصدير",
   "exportAsTxt": "تصدير كنص",
   "exportAsPdf": "تصدير كملف PDF",

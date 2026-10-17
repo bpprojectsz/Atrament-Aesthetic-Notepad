@@ -193,6 +193,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get restoreFailedMessage => 'Impossible de restaurer les achats. Vérifiez votre connexion et réessayez.';
 
   @override
+  String get reminderScheduleFailedMessage => 'Le rappel n’a pas pu être programmé. Veuillez réessayer.';
+
+  @override
   String get exportTitle => 'Exporter';
 
   @override

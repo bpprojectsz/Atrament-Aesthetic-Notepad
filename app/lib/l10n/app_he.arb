@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "הרכישה שלך שוחזרה.",
   "restoreNothingFoundMessage": "לא נמצאה רכישה קודמת עבור חשבון זה.",
   "restoreFailedMessage": "לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.",
+  "reminderScheduleFailedMessage": "לא ניתן היה לתזמן את התזכורת. נסה שוב.",
   "exportTitle": "ייצוא",
   "exportAsTxt": "ייצוא כטקסט",
   "exportAsPdf": "ייצוא כ-PDF",

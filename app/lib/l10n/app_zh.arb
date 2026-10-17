@@ -66,6 +66,7 @@
   "restoreSuccessMessage": "已恢复您的购买。",
   "restoreNothingFoundMessage": "未找到此账户的历史购买记录。",
   "restoreFailedMessage": "无法恢复购买。请检查网络连接后重试。",
+  "reminderScheduleFailedMessage": "无法设置提醒，请重试。",
   "exportTitle": "导出",
   "exportAsTxt": "导出为文本",
   "exportAsPdf": "导出为 PDF",

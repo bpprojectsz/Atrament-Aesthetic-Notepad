@@ -189,6 +189,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get restoreFailedMessage => 'לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.';
 
   @override
+  String get reminderScheduleFailedMessage => 'לא ניתן היה לתזמן את התזכורת. נסה שוב.';
+
+  @override
   String get exportTitle => 'ייצוא';
 
   @override
