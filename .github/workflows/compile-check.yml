@@ -95,6 +95,16 @@ jobs:
           exit $code
         working-directory: app/android
 
+      # Google Play requires native libraries to support 16 KB memory pages.
+      # Merges the libraries (no APK is built) and reports each one's
+      # alignment as an annotation. Informational: it never fails the run.
+      - name: Check native libraries for 16 KB pages (informational)
+        continue-on-error: true
+        run: |
+          ./gradlew :app:mergeDebugNativeLibs --no-daemon
+          python3 "$GITHUB_WORKSPACE/tools/check_native_alignment.py" "$GITHUB_WORKSPACE/app/build"
+        working-directory: app/android
+
       - name: Android lint (informational, non-blocking)
         continue-on-error: true
         run: |
