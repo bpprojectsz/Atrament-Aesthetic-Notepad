@@ -191,6 +191,36 @@ class AppLocalizationsKo extends AppLocalizations {
   String get reminderScheduleFailedMessage => '알림을 예약하지 못했습니다. 다시 시도해 주세요.';
 
   @override
+  String get storageIssueNotebooksLoad => '일부 노트북을 불러오지 못했습니다. 불러온 항목만 표시합니다.';
+
+  @override
+  String get storageIssueNotebookSave => '이 노트북이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
+
+  @override
+  String get storageIssueNotebookChange => '이 변경 사항이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
+
+  @override
+  String get storageIssueNotebookDelete => '노트북을 삭제하지 못했습니다. 다시 시도해 주세요.';
+
+  @override
+  String get storageIssueNotebookOrder => '새 순서가 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
+
+  @override
+  String get storageIssueNotesLoad => '일부 노트를 불러오지 못했습니다. 불러온 항목만 표시합니다.';
+
+  @override
+  String get storageIssueSearch => '검색 결과가 불완전할 수 있습니다.';
+
+  @override
+  String get storageIssueNoteSave => '이 노트가 저장되지 않았을 수 있습니다. 기기 저장 공간을 확인해 주세요.';
+
+  @override
+  String get storageIssueNoteDelete => '노트를 삭제하지 못했습니다. 다시 시도해 주세요.';
+
+  @override
+  String get purchaseUnavailableMessage => '지금은 이 구매를 이용할 수 없습니다. 나중에 다시 시도해 주세요.';
+
+  @override
   String get exportTitle => '내보내기';
 
   @override

@@ -191,6 +191,36 @@ class AppLocalizationsZh extends AppLocalizations {
   String get reminderScheduleFailedMessage => '无法设置提醒，请重试。';
 
   @override
+  String get storageIssueNotebooksLoad => '部分笔记本无法加载，正在显示可用内容。';
+
+  @override
+  String get storageIssueNotebookSave => '此笔记本可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotebookChange => '此更改可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotebookDelete => '无法删除此笔记本，请重试。';
+
+  @override
+  String get storageIssueNotebookOrder => '新的排序可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotesLoad => '部分笔记无法加载，正在显示可用内容。';
+
+  @override
+  String get storageIssueSearch => '搜索结果目前可能不完整。';
+
+  @override
+  String get storageIssueNoteSave => '此笔记可能未保存，请检查设备存储空间。';
+
+  @override
+  String get storageIssueNoteDelete => '无法删除此笔记，请重试。';
+
+  @override
+  String get purchaseUnavailableMessage => '此购买目前不可用，请稍后再试。';
+
+  @override
   String get exportTitle => '导出';
 
   @override

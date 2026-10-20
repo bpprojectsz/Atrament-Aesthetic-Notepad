@@ -6,6 +6,7 @@ import '../../platform/interstitial_service.dart';
 import '../models/note_model.dart';
 import '../services/local_storage.dart';
 import '../utils/quill_content_helper.dart';
+import '../utils/user_issues.dart';
 
 enum NoteSortOrder { modifiedDesc, createdDesc, titleAsc }
 
@@ -28,7 +29,7 @@ class NoteProvider {
   /// Set (non-null) when the most recent storage read/write silently fell
   /// back to in-memory data — the UI shows a warning banner while this is
   /// non-null (Section 15).
-  final ValueNotifier<String?> persistenceWarning = ValueNotifier(null);
+  final ValueNotifier<StorageIssue?> persistenceWarning = ValueNotifier(null);
 
   String? _activeNotebookId;
 
@@ -58,7 +59,7 @@ class NoteProvider {
     final result = await _storage.getNotesForNotebook(notebookId);
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Could not load all notes. Showing what\'s available.'
+        ? StorageIssue.notesLoadIncomplete
         : null;
 
     isLoading.value = false;
@@ -75,7 +76,7 @@ class NoteProvider {
     final result = await _storage.getAllNotes();
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Could not load all notes. Showing what\'s available.'
+        ? StorageIssue.notesLoadIncomplete
         : null;
 
     isLoading.value = false;
@@ -118,7 +119,7 @@ class NoteProvider {
     if (generation != _searchGeneration) return;
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Search results may be incomplete right now.'
+        ? StorageIssue.searchIncomplete
         : null;
     isLoading.value = false;
   }
@@ -180,7 +181,7 @@ class NoteProvider {
 
     if (!succeeded) {
       persistenceWarning.value =
-          'This note may not have saved. Please check your storage.';
+          StorageIssue.noteSaveFailed;
       // Graceful in-memory fallback: reflect the edit in the current list
       // even though it didn't persist, so the user doesn't lose visible
       // work mid-session.
@@ -226,7 +227,7 @@ class NoteProvider {
       persistenceWarning.value = null;
     } else {
       persistenceWarning.value =
-          'Could not delete this note. Please try again.';
+          StorageIssue.noteDeleteFailed;
     }
     return succeeded;
   }

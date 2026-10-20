@@ -194,6 +194,36 @@ class AppLocalizationsHi extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'रिमाइंडर शेड्यूल नहीं हो सका। कृपया फिर से कोशिश करें।';
 
   @override
+  String get storageIssueNotebooksLoad => 'कुछ नोटबुक लोड नहीं हो सकीं। जो उपलब्ध है वही दिखाया जा रहा है।';
+
+  @override
+  String get storageIssueNotebookSave => 'हो सकता है यह नोटबुक सहेजी न गई हो। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get storageIssueNotebookChange => 'हो सकता है यह बदलाव सहेजा न गया हो। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get storageIssueNotebookDelete => 'नोटबुक हटाई नहीं जा सकी। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get storageIssueNotebookOrder => 'हो सकता है नया क्रम सहेजा न गया हो। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get storageIssueNotesLoad => 'कुछ नोट लोड नहीं हो सके। जो उपलब्ध है वही दिखाया जा रहा है।';
+
+  @override
+  String get storageIssueSearch => 'खोज के परिणाम अभी अधूरे हो सकते हैं।';
+
+  @override
+  String get storageIssueNoteSave => 'हो सकता है यह नोट सहेजा न गया हो। कृपया डिवाइस का स्टोरेज जाँचें।';
+
+  @override
+  String get storageIssueNoteDelete => 'नोट हटाया नहीं जा सका। कृपया फिर से कोशिश करें।';
+
+  @override
+  String get purchaseUnavailableMessage => 'यह खरीदारी अभी उपलब्ध नहीं है। कृपया बाद में फिर से कोशिश करें।';
+
+  @override
   String get exportTitle => 'निर्यात करें';
 
   @override

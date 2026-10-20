@@ -476,6 +476,66 @@ abstract class AppLocalizations {
   /// **'The reminder could not be scheduled. Please try again.'**
   String get reminderScheduleFailedMessage;
 
+  /// No description provided for @storageIssueNotebooksLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Some notebooks could not be loaded. Showing what is available.'**
+  String get storageIssueNotebooksLoad;
+
+  /// No description provided for @storageIssueNotebookSave.
+  ///
+  /// In en, this message translates to:
+  /// **'This notebook may not have been saved. Please try again.'**
+  String get storageIssueNotebookSave;
+
+  /// No description provided for @storageIssueNotebookChange.
+  ///
+  /// In en, this message translates to:
+  /// **'This change may not have been saved. Please try again.'**
+  String get storageIssueNotebookChange;
+
+  /// No description provided for @storageIssueNotebookDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'The notebook could not be deleted. Please try again.'**
+  String get storageIssueNotebookDelete;
+
+  /// No description provided for @storageIssueNotebookOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'The new order may not have been saved. Please try again.'**
+  String get storageIssueNotebookOrder;
+
+  /// No description provided for @storageIssueNotesLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Some notes could not be loaded. Showing what is available.'**
+  String get storageIssueNotesLoad;
+
+  /// No description provided for @storageIssueSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Search results may be incomplete right now.'**
+  String get storageIssueSearch;
+
+  /// No description provided for @storageIssueNoteSave.
+  ///
+  /// In en, this message translates to:
+  /// **'This note may not have been saved. Please check your device storage.'**
+  String get storageIssueNoteSave;
+
+  /// No description provided for @storageIssueNoteDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'The note could not be deleted. Please try again.'**
+  String get storageIssueNoteDelete;
+
+  /// No description provided for @purchaseUnavailableMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This purchase is not available right now. Please try again later.'**
+  String get purchaseUnavailableMessage;
+
   /// No description provided for @exportTitle.
   ///
   /// In en, this message translates to:

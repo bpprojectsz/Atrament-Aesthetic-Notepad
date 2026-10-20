@@ -5,6 +5,7 @@ import 'package:in_app_purchase/in_app_purchase.dart' show ProductDetails;
 
 import '../services/iap_service.dart';
 import '../utils/constants.dart';
+import '../utils/user_issues.dart';
 
 /// Owns ad-removal subscription state for the whole app. Wraps
 /// [IapService] so screens never import `in_app_purchase` directly.
@@ -20,7 +21,7 @@ class SubscriptionProvider {
 
   final ValueNotifier<bool> isProcessingPurchase = ValueNotifier(false);
 
-  final ValueNotifier<String?> lastErrorMessage = ValueNotifier(null);
+  final ValueNotifier<PurchaseFailure?> lastFailure = ValueNotifier(null);
 
   /// True after the store reported that a purchase failed; the UI shows a
   /// localized message.
@@ -65,12 +66,12 @@ class SubscriptionProvider {
 
   Future<void> _purchase(String productId) async {
     isProcessingPurchase.value = true;
-    lastErrorMessage.value = null;
+    lastFailure.value = null;
     purchaseFailed.value = false;
     try {
       final result = await _iap.purchase(productId);
-      if (!result.succeeded && result.errorMessage != null) {
-        lastErrorMessage.value = result.errorMessage;
+      if (!result.succeeded && result.failure != null) {
+        lastFailure.value = result.failure;
       }
     } finally {
       isProcessingPurchase.value = false;
@@ -80,7 +81,7 @@ class SubscriptionProvider {
   /// Restores purchases on the user's request and reports what happened.
   Future<RestoreOutcome> restore() async {
     isProcessingPurchase.value = true;
-    lastErrorMessage.value = null;
+    lastFailure.value = null;
     purchaseFailed.value = false;
     try {
       return await _iap.restorePurchases(userInitiated: true);
@@ -90,7 +91,7 @@ class SubscriptionProvider {
   }
 
   void clearError() {
-    lastErrorMessage.value = null;
+    lastFailure.value = null;
   }
 
   void dispose() {
@@ -99,6 +100,6 @@ class SubscriptionProvider {
     purchaseFailed.dispose();
     status.dispose();
     isProcessingPurchase.dispose();
-    lastErrorMessage.dispose();
+    lastFailure.dispose();
   }
 }

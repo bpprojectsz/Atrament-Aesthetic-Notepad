@@ -194,6 +194,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'The reminder could not be scheduled. Please try again.';
 
   @override
+  String get storageIssueNotebooksLoad => 'Some notebooks could not be loaded. Showing what is available.';
+
+  @override
+  String get storageIssueNotebookSave => 'This notebook may not have been saved. Please try again.';
+
+  @override
+  String get storageIssueNotebookChange => 'This change may not have been saved. Please try again.';
+
+  @override
+  String get storageIssueNotebookDelete => 'The notebook could not be deleted. Please try again.';
+
+  @override
+  String get storageIssueNotebookOrder => 'The new order may not have been saved. Please try again.';
+
+  @override
+  String get storageIssueNotesLoad => 'Some notes could not be loaded. Showing what is available.';
+
+  @override
+  String get storageIssueSearch => 'Search results may be incomplete right now.';
+
+  @override
+  String get storageIssueNoteSave => 'This note may not have been saved. Please check your device storage.';
+
+  @override
+  String get storageIssueNoteDelete => 'The note could not be deleted. Please try again.';
+
+  @override
+  String get purchaseUnavailableMessage => 'This purchase is not available right now. Please try again later.';
+
+  @override
   String get exportTitle => 'Export';
 
   @override

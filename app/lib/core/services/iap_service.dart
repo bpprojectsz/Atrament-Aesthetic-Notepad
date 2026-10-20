@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/constants.dart';
 import '../utils/error_handler.dart';
+import '../utils/user_issues.dart';
 
 /// Current subscription state, emitted to `subscription_provider.dart`.
 enum SubscriptionStatus {
@@ -40,18 +41,16 @@ enum RestoreOutcome {
 
 /// Result of a purchase attempt, for explicit UI feedback (Section 15).
 class PurchaseAttemptResult {
-  const PurchaseAttemptResult.success()
-    : errorMessage = null,
-      cancelled = false;
-  const PurchaseAttemptResult.failure(this.errorMessage) : cancelled = false;
-  const PurchaseAttemptResult.cancelled()
-    : errorMessage = null,
-      cancelled = true;
+  const PurchaseAttemptResult.success() : failure = null, cancelled = false;
+  const PurchaseAttemptResult.failure(PurchaseFailure this.failure)
+    : cancelled = false;
+  const PurchaseAttemptResult.cancelled() : failure = null, cancelled = true;
 
-  final String? errorMessage;
+  /// Why it failed; the screen turns this into text in the user's language.
+  final PurchaseFailure? failure;
   final bool cancelled;
 
-  bool get succeeded => errorMessage == null && !cancelled;
+  bool get succeeded => failure == null && !cancelled;
 }
 
 /// Wraps `in_app_purchase` (StoreKit on iOS, Play Billing on Android) for
@@ -240,7 +239,7 @@ class IapService {
     final product = _products.where((p) => p.id == productId).firstOrNull;
     if (product == null) {
       return const PurchaseAttemptResult.failure(
-        'This product is not available right now. Please try again later.',
+        PurchaseFailure.productUnavailable,
       );
     }
 
@@ -249,7 +248,7 @@ class IapService {
       final started = await _iap.buyNonConsumable(purchaseParam: param);
       if (!started) {
         return const PurchaseAttemptResult.failure(
-          'Could not start the purchase. Please try again.',
+          PurchaseFailure.couldNotStart,
         );
       }
       // Actual success/failure arrives asynchronously via purchaseStream
@@ -264,9 +263,7 @@ class IapService {
         context: 'iap_service.purchase',
         severity: ErrorSeverity.warning,
       );
-      return const PurchaseAttemptResult.failure(
-        'Something went wrong starting the purchase.',
-      );
+      return const PurchaseAttemptResult.failure(PurchaseFailure.unexpected);
     }
   }
 

@@ -196,6 +196,36 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'Die Erinnerung konnte nicht eingerichtet werden. Bitte erneut versuchen.';
 
   @override
+  String get storageIssueNotebooksLoad => 'Einige Notizbücher konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+
+  @override
+  String get storageIssueNotebookSave => 'Dieses Notizbuch wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookChange => 'Diese Änderung wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookDelete => 'Das Notizbuch konnte nicht gelöscht werden. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookOrder => 'Die neue Reihenfolge wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotesLoad => 'Einige Notizen konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+
+  @override
+  String get storageIssueSearch => 'Die Suchergebnisse sind derzeit möglicherweise unvollständig.';
+
+  @override
+  String get storageIssueNoteSave => 'Diese Notiz wurde möglicherweise nicht gespeichert. Bitte den Gerätespeicher prüfen.';
+
+  @override
+  String get storageIssueNoteDelete => 'Die Notiz konnte nicht gelöscht werden. Bitte erneut versuchen.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Dieser Kauf ist derzeit nicht verfügbar. Bitte später erneut versuchen.';
+
+  @override
   String get exportTitle => 'Exportieren';
 
   @override

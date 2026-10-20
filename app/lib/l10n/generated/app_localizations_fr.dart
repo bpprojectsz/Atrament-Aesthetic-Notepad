@@ -196,6 +196,36 @@ class AppLocalizationsFr extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'Le rappel n’a pas pu être programmé. Veuillez réessayer.';
 
   @override
+  String get storageIssueNotebooksLoad => 'Certains carnets n’ont pas pu être chargés. Affichage de ce qui est disponible.';
+
+  @override
+  String get storageIssueNotebookSave => 'Ce carnet n’a peut-être pas été enregistré. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookChange => 'Cette modification n’a peut-être pas été enregistrée. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookDelete => 'Le carnet n’a pas pu être supprimé. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookOrder => 'Le nouvel ordre n’a peut-être pas été enregistré. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotesLoad => 'Certaines notes n’ont pas pu être chargées. Affichage de ce qui est disponible.';
+
+  @override
+  String get storageIssueSearch => 'Les résultats de recherche peuvent être incomplets pour le moment.';
+
+  @override
+  String get storageIssueNoteSave => 'Cette note n’a peut-être pas été enregistrée. Vérifiez le stockage de l’appareil.';
+
+  @override
+  String get storageIssueNoteDelete => 'La note n’a pas pu être supprimée. Veuillez réessayer.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Cet achat n’est pas disponible pour le moment. Veuillez réessayer plus tard.';
+
+  @override
   String get exportTitle => 'Exporter';
 
   @override

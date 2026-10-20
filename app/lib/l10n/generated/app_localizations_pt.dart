@@ -194,6 +194,36 @@ class AppLocalizationsPt extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'Não foi possível programar o lembrete. Tente novamente.';
 
   @override
+  String get storageIssueNotebooksLoad => 'Alguns cadernos não puderam ser carregados. Mostrando o que está disponível.';
+
+  @override
+  String get storageIssueNotebookSave => 'Este caderno pode não ter sido salvo. Tente novamente.';
+
+  @override
+  String get storageIssueNotebookChange => 'Esta alteração pode não ter sido salva. Tente novamente.';
+
+  @override
+  String get storageIssueNotebookDelete => 'Não foi possível excluir o caderno. Tente novamente.';
+
+  @override
+  String get storageIssueNotebookOrder => 'A nova ordem pode não ter sido salva. Tente novamente.';
+
+  @override
+  String get storageIssueNotesLoad => 'Algumas notas não puderam ser carregadas. Mostrando o que está disponível.';
+
+  @override
+  String get storageIssueSearch => 'Os resultados da pesquisa podem estar incompletos no momento.';
+
+  @override
+  String get storageIssueNoteSave => 'Esta nota pode não ter sido salva. Verifique o armazenamento do dispositivo.';
+
+  @override
+  String get storageIssueNoteDelete => 'Não foi possível excluir a nota. Tente novamente.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Esta compra não está disponível no momento. Tente novamente mais tarde.';
+
+  @override
   String get exportTitle => 'Exportar';
 
   @override

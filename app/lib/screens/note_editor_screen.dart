@@ -432,7 +432,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(result.errorMessage ?? l10n.exportFailedMessage)),
+        SnackBar(content: Text(l10n.exportFailedMessage)),
       );
       return;
     }

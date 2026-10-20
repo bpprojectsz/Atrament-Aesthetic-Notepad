@@ -31,6 +31,7 @@ import '../widgets/new_notebook_dialog.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_list_item.dart';
 import '../widgets/rename_note_dialog.dart';
+import '../widgets/user_issue_text.dart';
 import 'note_editor_screen.dart';
 
 /// Lists the notes within a single notebook, with sort options, an empty
@@ -196,10 +197,10 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
           AppLock.instance.contentHidden,
         ]),
         builder: (context, _) {
-          final warning = widget.noteProvider.persistenceWarning.value;
+          final issue = widget.noteProvider.persistenceWarning.value;
           return Column(
             children: [
-              if (warning != null)
+              if (issue != null)
                 Container(
                   width: double.infinity,
                   color: AppColors.warning.resolve(mode).withValues(alpha: 0.15),
@@ -208,7 +209,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
                     vertical: AppSpacing.sm,
                   ),
                   child: Text(
-                    warning,
+                    storageIssueText(l10n, issue),
                     style: TextStyle(
                       color: AppColors.warning.resolve(mode),
                       fontSize: AppTypography.footnote.size,
@@ -405,7 +406,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(result.errorMessage ?? l10n.exportFailedMessage),
+          content: Text(l10n.exportFailedMessage),
         ),
       );
       return;

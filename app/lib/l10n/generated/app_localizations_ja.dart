@@ -191,6 +191,36 @@ class AppLocalizationsJa extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'リマインダーを設定できませんでした。もう一度お試しください。';
 
   @override
+  String get storageIssueNotebooksLoad => '一部のノートブックを読み込めませんでした。読み込めたものを表示しています。';
+
+  @override
+  String get storageIssueNotebookSave => 'このノートブックは保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookChange => 'この変更は保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookDelete => 'ノートブックを削除できませんでした。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookOrder => '新しい順序は保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotesLoad => '一部のノートを読み込めませんでした。読み込めたものを表示しています。';
+
+  @override
+  String get storageIssueSearch => '検索結果が不完全な可能性があります。';
+
+  @override
+  String get storageIssueNoteSave => 'このノートは保存されていない可能性があります。端末のストレージを確認してください。';
+
+  @override
+  String get storageIssueNoteDelete => 'ノートを削除できませんでした。もう一度お試しください。';
+
+  @override
+  String get purchaseUnavailableMessage => 'この購入は現在ご利用いただけません。しばらくしてからもう一度お試しください。';
+
+  @override
   String get exportTitle => 'エクスポート';
 
   @override

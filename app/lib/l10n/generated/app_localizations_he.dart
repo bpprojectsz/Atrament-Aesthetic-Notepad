@@ -192,6 +192,36 @@ class AppLocalizationsHe extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'לא ניתן היה לתזמן את התזכורת. נסה שוב.';
 
   @override
+  String get storageIssueNotebooksLoad => 'לא ניתן היה לטעון חלק מהמחברות. מוצג מה שזמין.';
+
+  @override
+  String get storageIssueNotebookSave => 'ייתכן שמחברת זו לא נשמרה. נסה שוב.';
+
+  @override
+  String get storageIssueNotebookChange => 'ייתכן ששינוי זה לא נשמר. נסה שוב.';
+
+  @override
+  String get storageIssueNotebookDelete => 'לא ניתן היה למחוק את המחברת. נסה שוב.';
+
+  @override
+  String get storageIssueNotebookOrder => 'ייתכן שהסדר החדש לא נשמר. נסה שוב.';
+
+  @override
+  String get storageIssueNotesLoad => 'לא ניתן היה לטעון חלק מהפתקיות. מוצג מה שזמין.';
+
+  @override
+  String get storageIssueSearch => 'ייתכן שתוצאות החיפוש אינן שלמות כרגע.';
+
+  @override
+  String get storageIssueNoteSave => 'ייתכן שפתקית זו לא נשמרה. בדוק את האחסון במכשיר.';
+
+  @override
+  String get storageIssueNoteDelete => 'לא ניתן היה למחוק את הפתקית. נסה שוב.';
+
+  @override
+  String get purchaseUnavailableMessage => 'רכישה זו אינה זמינה כרגע. נסה שוב מאוחר יותר.';
+
+  @override
   String get exportTitle => 'ייצוא';
 
   @override

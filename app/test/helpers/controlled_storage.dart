@@ -23,24 +23,43 @@ class ControlledStorage implements LocalStorage {
     return completer.future;
   }
 
+  /// Make the matching kind of operation fail, as a full disk or a broken
+  /// database would.
+  bool failLoads = false;
+  bool failSaves = false;
+  bool failDeletes = false;
+
   @override
   Future<bool> saveNote(
     NoteModel note, {
     required String plainTextContent,
-  }) async => true;
+  }) async => !failSaves;
 
   @override
-  Future<StorageResult<List<NoteModel>>> getAllNotes() async =>
-      StorageResult.success(List.of(allNotes));
+  Future<bool> deleteNote(String id) async => !failDeletes;
+
+  @override
+  Future<bool> saveNotebook(NotebookModel notebook) async => !failSaves;
+
+  @override
+  Future<bool> deleteNotebook(String id) async => !failDeletes;
+
+  @override
+  Future<StorageResult<List<NoteModel>>> getAllNotes() async => failLoads
+      ? const StorageResult.failure([])
+      : StorageResult.success(List.of(allNotes));
 
   @override
   Future<StorageResult<List<NoteModel>>> getNotesForNotebook(
     String notebookId,
-  ) async => StorageResult.success(List.of(notebookNotes[notebookId] ?? []));
+  ) async => failLoads
+      ? const StorageResult.failure([])
+      : StorageResult.success(List.of(notebookNotes[notebookId] ?? []));
 
   @override
-  Future<StorageResult<List<NotebookModel>>> getNotebooks() async =>
-      const StorageResult.success([]);
+  Future<StorageResult<List<NotebookModel>>> getNotebooks() async => failLoads
+      ? const StorageResult.failure([])
+      : const StorageResult.success([]);
 
   @override
   dynamic noSuchMethod(Invocation invocation) =>

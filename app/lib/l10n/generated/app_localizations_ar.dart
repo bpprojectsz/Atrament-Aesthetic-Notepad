@@ -193,6 +193,36 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
 
   @override
+  String get storageIssueNotebooksLoad => 'تعذّر تحميل بعض الدفاتر. يتم عرض المتاح فقط.';
+
+  @override
+  String get storageIssueNotebookSave => 'قد لا يكون هذا الدفتر قد حُفظ. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get storageIssueNotebookChange => 'قد لا يكون هذا التغيير قد حُفظ. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get storageIssueNotebookDelete => 'تعذّر حذف الدفتر. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get storageIssueNotebookOrder => 'قد لا يكون الترتيب الجديد قد حُفظ. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get storageIssueNotesLoad => 'تعذّر تحميل بعض الملاحظات. يتم عرض المتاح فقط.';
+
+  @override
+  String get storageIssueSearch => 'قد تكون نتائج البحث غير مكتملة حاليًا.';
+
+  @override
+  String get storageIssueNoteSave => 'قد لا تكون هذه الملاحظة قد حُفظت. يُرجى التحقق من مساحة تخزين الجهاز.';
+
+  @override
+  String get storageIssueNoteDelete => 'تعذّر حذف الملاحظة. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get purchaseUnavailableMessage => 'هذه العملية الشرائية غير متاحة حاليًا. يُرجى المحاولة لاحقًا.';
+
+  @override
   String get exportTitle => 'تصدير';
 
   @override

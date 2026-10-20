@@ -42,6 +42,7 @@ import '../widgets/note_list_item.dart';
 import '../widgets/notebook_actions_menu.dart';
 import '../widgets/rename_note_dialog.dart';
 import '../widgets/rename_notebook_dialog.dart';
+import '../widgets/user_issue_text.dart';
 import 'note_editor_screen.dart';
 import 'notebook_detail_screen.dart';
 import 'settings_screen.dart';
@@ -269,9 +270,10 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         widget.notebookProvider.persistenceWarning,
       ]),
       builder: (context, _) {
-        final warning = widget.noteProvider.persistenceWarning.value ??
+        final issue = widget.noteProvider.persistenceWarning.value ??
             widget.notebookProvider.persistenceWarning.value;
-        if (warning == null) return const SizedBox.shrink();
+        if (issue == null) return const SizedBox.shrink();
+        final warning = storageIssueText(AppLocalizations.of(context)!, issue);
         final color = AppColors.warning.resolve(mode);
         return Padding(
           padding: const EdgeInsets.only(bottom: AppSpacing.sm),
@@ -564,7 +566,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(result.errorMessage ?? l10n.exportFailedMessage),
+          content: Text(l10n.exportFailedMessage),
         ),
       );
       return;

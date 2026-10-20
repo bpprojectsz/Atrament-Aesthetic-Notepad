@@ -15,10 +15,9 @@ import 'export_page_renderer.dart';
 /// explicit success/error feedback").
 class ExportResult {
   const ExportResult.success(this.filePath) : errorMessage = null;
-  const ExportResult.failure(this.errorMessage) : filePath = null;
+  const ExportResult.failure() : filePath = null;
 
   final String? filePath;
-  final String? errorMessage;
 
   bool get succeeded => filePath != null;
 }
@@ -79,9 +78,7 @@ class ExportService {
         context: 'export_service.writeBytes.$extension',
         severity: ErrorSeverity.warning,
       );
-      return const ExportResult.failure(
-        'Could not create the export file. Please try again.',
-      );
+      return const ExportResult.failure();
     }
   }
 
@@ -137,9 +134,7 @@ class ExportService {
         context: 'export_service.exportAsPdf',
         severity: ErrorSeverity.warning,
       );
-      return const ExportResult.failure(
-        'Could not generate the PDF. Please try again.',
-      );
+      return const ExportResult.failure();
     }
   }
 

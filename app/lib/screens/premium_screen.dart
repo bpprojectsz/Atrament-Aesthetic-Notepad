@@ -8,6 +8,7 @@ import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/user_issue_text.dart';
 
 /// Paywall for the ad-removal subscription. Never a blocking modal —
 /// always reached from an optional "Remove Ads" row in Settings
@@ -56,14 +57,14 @@ class PremiumScreen extends StatelessWidget {
         listenable: Listenable.merge([
           subscriptionProvider.status,
           subscriptionProvider.isProcessingPurchase,
-          subscriptionProvider.lastErrorMessage,
+          subscriptionProvider.lastFailure,
           subscriptionProvider.purchaseFailed,
         ]),
         builder: (context, _) {
           final isPro =
               subscriptionProvider.status.value == SubscriptionStatus.pro;
           final isProcessing = subscriptionProvider.isProcessingPurchase.value;
-          final error = subscriptionProvider.lastErrorMessage.value;
+          final failure = subscriptionProvider.lastFailure.value;
 
           return Padding(
             padding: const EdgeInsets.all(AppSpacing.lg),
@@ -118,9 +119,11 @@ class PremiumScreen extends StatelessWidget {
                   const SizedBox(height: AppSpacing.md),
                   if (isProcessing)
                     const Center(child: LoadingIndicator())
-                  else if (error != null || subscriptionProvider.purchaseFailed.value)
+                  else if (failure != null || subscriptionProvider.purchaseFailed.value)
                     Text(
-                      error ?? l10n.purchaseFailedMessage,
+                      failure != null
+                          ? purchaseFailureText(l10n, failure)
+                          : l10n.purchaseFailedMessage,
                       style: TextStyle(
                         color: AppColors.error.resolve(mode),
                         fontSize: AppTypography.footnote.size,
