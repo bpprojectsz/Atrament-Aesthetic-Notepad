@@ -14,7 +14,7 @@ import 'export_page_renderer.dart';
 /// success/error message (Section 15: "every save/delete/share shows
 /// explicit success/error feedback").
 class ExportResult {
-  const ExportResult.success(this.filePath) : errorMessage = null;
+  const ExportResult.success(this.filePath);
   const ExportResult.failure() : filePath = null;
 
   final String? filePath;

@@ -1,3 +1,5 @@
+import 'dart:ui' show Locale;
+
 import 'package:atrament/core/models/notebook_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';

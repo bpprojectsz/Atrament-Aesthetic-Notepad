@@ -1,7 +1,7 @@
-/// Problems the app reports to the user, as typed values instead of ready-made
-/// English sentences. The screen turns each one into text in the user's
-/// language (see `widgets/user_issue_text.dart`), so providers and services
-/// never carry display text.
+// Problems the app reports to the user, as typed values instead of ready-made
+// English sentences. The screen turns each one into text in the user's
+// language (see `widgets/user_issue_text.dart`), so providers and services
+// never carry display text.
 
 /// A problem reading from or writing to the device's storage.
 enum StorageIssue {
