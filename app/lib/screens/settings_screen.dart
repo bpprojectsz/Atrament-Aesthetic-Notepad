@@ -19,7 +19,6 @@ import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
 import '../platform/admob_service.dart';
-import '../platform/biometric_service.dart';
 import '../platform/consent_service.dart';
 import '../platform/debug_log_service.dart';
 import '../platform/notification_service.dart';
@@ -44,7 +43,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  final BiometricService _biometricService = BiometricService();
   final ShareService _shareService = const ShareService();
 
   String _defaultPaperStyleId = 'cream';
@@ -64,7 +62,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _loadPrefs() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final supported = await _biometricService.isSupported();
+      final supported = await AppLock.instance.isSupported();
       await AppLock.instance.init();
 
       if (!mounted) return;

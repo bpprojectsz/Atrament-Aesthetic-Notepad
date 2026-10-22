@@ -1,5 +1,6 @@
 import 'dart:io' show Platform;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tz_data;
@@ -15,7 +16,11 @@ import '../core/utils/error_handler.dart';
 class NotificationService implements ReminderGateway {
   NotificationService._internal();
 
-  static final NotificationService instance = NotificationService._internal();
+  /// Replaceable so tests can substitute a fake.
+  static NotificationService instance = NotificationService._internal();
+
+  @visibleForTesting
+  NotificationService.forTesting();
 
   final FlutterLocalNotificationsPlugin _plugin =
       FlutterLocalNotificationsPlugin();

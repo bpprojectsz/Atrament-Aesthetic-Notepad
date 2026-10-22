@@ -29,11 +29,18 @@ class ControlledStorage implements LocalStorage {
   bool failSaves = false;
   bool failDeletes = false;
 
+  /// Every note that was saved successfully, in order.
+  final List<NoteModel> savedNotes = [];
+
   @override
   Future<bool> saveNote(
     NoteModel note, {
     required String plainTextContent,
-  }) async => !failSaves;
+  }) async {
+    if (failSaves) return false;
+    savedNotes.add(note);
+    return true;
+  }
 
   @override
   Future<bool> deleteNote(String id) async => !failDeletes;

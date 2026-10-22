@@ -7,77 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// A store that does what the test tells it to.
-class _FakeStore implements InAppPurchase {
-  final StreamController<List<PurchaseDetails>> purchases =
-      StreamController<List<PurchaseDetails>>.broadcast();
-  bool available = true;
-  Completer<bool>? availabilityGate;
-  int restoreCalls = 0;
-  bool restoreThrows = false;
-  bool completeThrows = false;
-  final List<PurchaseDetails> completed = [];
-
-  /// Runs when the app asks to restore (lets a test push purchases back).
-  void Function()? onRestore;
-
-  @override
-  Stream<List<PurchaseDetails>> get purchaseStream => purchases.stream;
-
-  @override
-  Future<bool> isAvailable() async {
-    final gate = availabilityGate;
-    if (gate != null) return gate.future;
-    return available;
-  }
-
-  @override
-  Future<ProductDetailsResponse> queryProductDetails(
-    Set<String> identifiers,
-  ) async => ProductDetailsResponse(
-    productDetails: const [],
-    notFoundIDs: identifiers.toList(),
-  );
-
-  @override
-  Future<void> restorePurchases({String? applicationUserName}) async {
-    restoreCalls++;
-    if (restoreThrows) throw StateError('store unreachable');
-    onRestore?.call();
-  }
-
-  @override
-  Future<void> completePurchase(PurchaseDetails purchase) async {
-    if (completeThrows) throw StateError('could not acknowledge');
-    completed.add(purchase);
-  }
-
-  void dispose() => purchases.close();
-
-  @override
-  dynamic noSuchMethod(Invocation invocation) =>
-      super.noSuchMethod(invocation);
-}
-
-PurchaseDetails _details(
-  PurchaseStatus status, {
-  String productId = AppConstants.iapAdFreeProductId,
-  bool pendingComplete = false,
-}) {
-  final details = PurchaseDetails(
-    purchaseID: 'p1',
-    productID: productId,
-    verificationData: PurchaseVerificationData(
-      localVerificationData: '',
-      serverVerificationData: '',
-      source: 'test',
-    ),
-    transactionDate: '0',
-    status: status,
-  );
-  details.pendingCompletePurchase = pendingComplete;
-  return details;
-}
+import 'helpers/fake_store.dart';
 
 Future<void> _settle() => Future<void>.delayed(const Duration(milliseconds: 40));
 
@@ -85,7 +15,7 @@ Future<bool?> _cachedFlag() async =>
     (await SharedPreferences.getInstance()).getBool(AppConstants.prefAdFreeCached);
 
 void main() {
-  late _FakeStore store;
+  late FakeStore store;
 
   void seedCache(bool? value) => SharedPreferences.setMockInitialValues({
     if (value != null) AppConstants.prefAdFreeCached: value,
@@ -95,7 +25,7 @@ void main() {
       IapService.forTesting(iap: store, isAndroid: android);
 
   setUp(() {
-    store = _FakeStore();
+    store = FakeStore();
     seedCache(null);
   });
 
@@ -135,7 +65,7 @@ void main() {
       final service = makeService(android: true);
       await service.initialize();
 
-      store.purchases.add([_details(PurchaseStatus.purchased)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.purchased)]);
       await _settle();
 
       expect(service.lastKnownStatus, SubscriptionStatus.pro);
@@ -160,7 +90,7 @@ void main() {
       final service = makeService(android: true);
       await service.loadCachedStatus();
       store.onRestore = () =>
-          store.purchases.add([_details(PurchaseStatus.restored)]);
+          store.purchases.add([purchaseDetails(PurchaseStatus.restored)]);
       await service.initialize();
 
       await Future<void>.delayed(const Duration(milliseconds: 400));
@@ -189,7 +119,7 @@ void main() {
       final events = <PurchaseEvent>[];
       service.eventStream.listen(events.add);
 
-      store.purchases.add([_details(PurchaseStatus.error)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.error)]);
       await _settle();
 
       expect(events, [PurchaseEvent.failed]);
@@ -201,7 +131,7 @@ void main() {
       await service.initialize();
 
       store.purchases.add([
-        _details(PurchaseStatus.purchased, pendingComplete: true),
+        purchaseDetails(PurchaseStatus.purchased, pendingComplete: true),
       ]);
       await _settle();
 
@@ -211,13 +141,13 @@ void main() {
     test('a pending or cancelled update never demotes a known pro user', () async {
       final service = makeService(android: true);
       await service.initialize();
-      store.purchases.add([_details(PurchaseStatus.purchased)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.purchased)]);
       await _settle();
       expect(service.lastKnownStatus, SubscriptionStatus.pro);
 
-      store.purchases.add([_details(PurchaseStatus.pending)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.pending)]);
       await _settle();
-      store.purchases.add([_details(PurchaseStatus.canceled)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.canceled)]);
       await _settle();
 
       expect(service.lastKnownStatus, SubscriptionStatus.pro);
@@ -227,7 +157,7 @@ void main() {
       final service = makeService(android: false);
       await service.initialize();
 
-      store.purchases.add([_details(PurchaseStatus.canceled)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.canceled)]);
       await _settle();
 
       expect(service.lastKnownStatus, SubscriptionStatus.free);
@@ -238,7 +168,7 @@ void main() {
       await service.initialize();
 
       store.purchases.add([
-        _details(PurchaseStatus.restored, productId: 'something.else'),
+        purchaseDetails(PurchaseStatus.restored, productId: 'something.else'),
       ]);
       await _settle();
 
@@ -251,7 +181,7 @@ void main() {
       final service = makeService(android: false);
       await service.initialize();
       store.onRestore = () =>
-          store.purchases.add([_details(PurchaseStatus.restored)]);
+          store.purchases.add([purchaseDetails(PurchaseStatus.restored)]);
 
       final outcome = await service.restorePurchases(userInitiated: true);
 
@@ -312,7 +242,7 @@ void main() {
       await provider.init();
       expect(provider.purchaseFailed.value, isFalse);
 
-      store.purchases.add([_details(PurchaseStatus.error)]);
+      store.purchases.add([purchaseDetails(PurchaseStatus.error)]);
       await _settle();
 
       expect(provider.purchaseFailed.value, isTrue);
@@ -325,7 +255,7 @@ void main() {
       );
       await provider.init();
       store.onRestore = () =>
-          store.purchases.add([_details(PurchaseStatus.restored)]);
+          store.purchases.add([purchaseDetails(PurchaseStatus.restored)]);
 
       expect(await provider.restore(), RestoreOutcome.restored);
       expect(provider.isProcessingPurchase.value, isFalse);
