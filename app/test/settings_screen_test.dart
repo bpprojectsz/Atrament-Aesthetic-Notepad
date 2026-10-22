@@ -122,10 +122,10 @@ Future<_Env> _pumpSettings(
         Provider<VerseProvider>.value(value: VerseProvider()),
         Provider<SubscriptionProvider>.value(value: subscription),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: const SettingsScreen(),
+        home: SettingsScreen(),
       ),
     ),
   );

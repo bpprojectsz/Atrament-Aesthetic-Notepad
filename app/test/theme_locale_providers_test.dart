@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:atrament/core/providers/locale_provider.dart';
 import 'package:atrament/core/providers/theme_provider.dart';
 import 'package:atrament/core/utils/constants.dart';
-import 'package:flutter/widgets.dart' show Brightness;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
