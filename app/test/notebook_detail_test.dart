@@ -1,6 +1,7 @@
 import 'package:atrament/core/models/notebook_model.dart';
 import 'package:atrament/core/providers/note_provider.dart';
 import 'package:atrament/core/providers/notebook_provider.dart';
+import 'package:atrament/core/providers/subscription_provider.dart';
 import 'package:atrament/core/providers/verse_provider.dart';
 import 'package:atrament/core/services/app_lock.dart';
 import 'package:atrament/core/utils/constants.dart';
@@ -54,8 +55,11 @@ Future<ControlledStorage> _open(
   addTearDown(tester.view.reset);
 
   await tester.pumpWidget(
-    Provider<VerseProvider>.value(
-      value: VerseProvider(),
+    MultiProvider(
+      providers: [
+        Provider<VerseProvider>.value(value: VerseProvider()),
+        Provider<SubscriptionProvider>.value(value: SubscriptionProvider()),
+      ],
       child: MaterialApp(
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
