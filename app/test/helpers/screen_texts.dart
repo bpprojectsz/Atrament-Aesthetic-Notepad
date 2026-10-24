@@ -11,9 +11,11 @@ void expectOnScreen(WidgetTester tester, String message) {
       .whereType<String>()
       .toList();
   final snackBars = find.byType(SnackBar).evaluate().length;
-  fail(
+  final lines = <String>[
     'Error: expected exactly one "$message" but found '
-    '${find.text(message).evaluate().length}. SnackBars on screen: $snackBars. '
-    'Texts on screen: $texts',
-  );
+        '${find.text(message).evaluate().length}; '
+        'SnackBars on screen: $snackBars',
+    for (var i = 0; i < texts.length && i < 40; i++) 'Error: on screen [$i]: ${texts[i]}',
+  ];
+  fail(lines.join('\n'));
 }
