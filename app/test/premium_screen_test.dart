@@ -9,6 +9,7 @@ import 'package:in_app_purchase/in_app_purchase.dart' show PurchaseStatus;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'helpers/fake_store.dart';
+import 'helpers/screen_texts.dart';
 
 final _l10n = lookupAppLocalizations(const Locale('en'));
 
@@ -79,7 +80,7 @@ void main() {
     await tester.tap(find.text(_l10n.premiumRestoreButton));
     await _pump(tester);
 
-    expect(find.text(_l10n.restoreSuccessMessage), findsOneWidget);
+    expectOnScreen(tester, _l10n.restoreSuccessMessage);
   });
 
   testWidgets('Restore reports when there is nothing to restore', (tester) async {
@@ -88,7 +89,7 @@ void main() {
     await tester.tap(find.text(_l10n.premiumRestoreButton));
     await _pump(tester, 800);
 
-    expect(find.text(_l10n.restoreNothingFoundMessage), findsOneWidget);
+    expectOnScreen(tester, _l10n.restoreNothingFoundMessage);
   });
 
   testWidgets('Restore reports when the store cannot be reached', (tester) async {
@@ -98,7 +99,7 @@ void main() {
     await tester.tap(find.text(_l10n.premiumRestoreButton));
     await _pump(tester);
 
-    expect(find.text(_l10n.restoreFailedMessage), findsOneWidget);
+    expectOnScreen(tester, _l10n.restoreFailedMessage);
   });
 
   testWidgets('someone who already bought ad removal is told so', (tester) async {

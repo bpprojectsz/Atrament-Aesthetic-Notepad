@@ -69,8 +69,11 @@ Future<_Home> _open(
   addTearDown(tester.view.reset);
 
   await tester.pumpWidget(
-    Provider<VerseProvider>.value(
-      value: VerseProvider(),
+    MultiProvider(
+      providers: [
+        Provider<VerseProvider>.value(value: VerseProvider()),
+        Provider<SubscriptionProvider>.value(value: subscription),
+      ],
       child: MaterialApp(
         navigatorObservers: [appRouteObserver],
         localizationsDelegates: AppLocalizations.localizationsDelegates,

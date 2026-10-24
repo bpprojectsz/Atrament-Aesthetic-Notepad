@@ -19,6 +19,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'helpers/fake_biometrics.dart';
 import 'helpers/fake_store.dart';
+import 'helpers/screen_texts.dart';
 
 class _FakeNotifications extends NotificationService {
   _FakeNotifications() : super.forTesting();
@@ -329,7 +330,7 @@ void main() {
       await tester.tap(find.text(_l10n.restorePurchasesButton));
       await _pump(tester);
 
-      expect(find.text(_l10n.restoreSuccessMessage), findsOneWidget);
+      expectOnScreen(tester, _l10n.restoreSuccessMessage);
     });
 
     testWidgets('Restore says when there was nothing to restore', (tester) async {
@@ -338,7 +339,7 @@ void main() {
       await tester.tap(find.text(_l10n.restorePurchasesButton));
       await _pump(tester, 800);
 
-      expect(find.text(_l10n.restoreNothingFoundMessage), findsOneWidget);
+      expectOnScreen(tester, _l10n.restoreNothingFoundMessage);
     });
 
     testWidgets('Restore says when the store could not be reached', (tester) async {
@@ -348,7 +349,7 @@ void main() {
       await tester.tap(find.text(_l10n.restorePurchasesButton));
       await _pump(tester);
 
-      expect(find.text(_l10n.restoreFailedMessage), findsOneWidget);
+      expectOnScreen(tester, _l10n.restoreFailedMessage);
     });
   });
 
