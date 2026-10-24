@@ -73,14 +73,15 @@ void main() {
   });
 
   testWidgets('Restore reports a restored purchase', (tester) async {
-    final (store, _) = await _open(tester);
+    final (store, provider) = await _open(tester);
     store.onRestore = () =>
         store.purchases.add([purchaseDetails(PurchaseStatus.restored)]);
 
     await tester.tap(find.text(_l10n.premiumRestoreButton));
     await _pump(tester);
 
-    expectOnScreen(tester, _l10n.restoreSuccessMessage);
+    expectOnScreen(tester, _l10n.restoreSuccessMessage,
+        extra: 'restoreCalls=${store.restoreCalls} processing=${provider.isProcessingPurchase.value} status=${provider.status.value}');
   });
 
   testWidgets('Restore reports when there is nothing to restore', (tester) async {
@@ -93,13 +94,14 @@ void main() {
   });
 
   testWidgets('Restore reports when the store cannot be reached', (tester) async {
-    final (store, _) = await _open(tester);
+    final (store, provider) = await _open(tester);
     store.restoreThrows = true;
 
     await tester.tap(find.text(_l10n.premiumRestoreButton));
     await _pump(tester);
 
-    expectOnScreen(tester, _l10n.restoreFailedMessage);
+    expectOnScreen(tester, _l10n.restoreFailedMessage,
+        extra: 'restoreCalls=${store.restoreCalls} processing=${provider.isProcessingPurchase.value} status=${provider.status.value}');
   });
 
   testWidgets('someone who already bought ad removal is told so', (tester) async {
