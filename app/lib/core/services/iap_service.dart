@@ -309,7 +309,9 @@ class IapService {
       );
       return RestoreOutcome.failed;
     } finally {
-      await listener?.cancel();
+      // Not awaited: there is nothing to wait for, and waiting on a stream
+      // subscription's cancel never completes under the widget-test clock.
+      unawaited(listener?.cancel());
     }
   }
 
