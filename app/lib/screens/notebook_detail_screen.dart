@@ -76,8 +76,15 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   @override
   void initState() {
     super.initState();
-    widget.noteProvider.loadNotebook(widget._notebookId).then((_) {
-      _maybeOpenInitialNote();
+    // Loading changes provider state that the screens underneath (Home) are
+    // listening to. Changing it while this screen is still being built is
+    // not allowed (Flutter reports "setState() called during build"), so the
+    // load starts once the first frame is done.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      widget.noteProvider.loadNotebook(widget._notebookId).then((_) {
+        if (mounted) _maybeOpenInitialNote();
+      });
     });
   }
 

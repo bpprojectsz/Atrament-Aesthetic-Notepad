@@ -23,7 +23,11 @@ import '../utils/error_handler.dart';
 class EngagementService {
   EngagementService._internal();
 
-  static final EngagementService instance = EngagementService._internal();
+  /// Replaceable so tests can substitute a fake.
+  static EngagementService instance = EngagementService._internal();
+
+  @visibleForTesting
+  EngagementService.forTesting();
 
   static const int _reviewMinSaves = 20;
   static const int _shareMinExports = 10;

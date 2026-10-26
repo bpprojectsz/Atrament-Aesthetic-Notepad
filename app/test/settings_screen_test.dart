@@ -4,6 +4,7 @@ import 'package:atrament/core/providers/subscription_provider.dart';
 import 'package:atrament/core/providers/theme_provider.dart';
 import 'package:atrament/core/providers/verse_provider.dart';
 import 'package:atrament/core/services/app_lock.dart';
+import 'package:atrament/core/services/engagement_service.dart';
 import 'package:atrament/core/services/iap_service.dart';
 import 'package:atrament/core/services/reminder_scheduler.dart';
 import 'package:atrament/core/utils/constants.dart';
@@ -27,6 +28,18 @@ class _FakeNotifications extends NotificationService {
 
   @override
   Future<bool> requestPermission() async => granted;
+}
+
+class _FakeEngagement extends EngagementService {
+  _FakeEngagement() : super.forTesting();
+  bool opens = true;
+  int openCalls = 0;
+
+  @override
+  Future<bool> openStoreListingForReview() async {
+    openCalls++;
+    return opens;
+  }
 }
 
 class _FakeGateway implements ReminderGateway {
@@ -149,6 +162,7 @@ bool _isOn(WidgetTester tester, String label) =>
 void main() {
   tearDown(() {
     AppLock.instance = AppLock();
+    EngagementService.instance = EngagementService.forTesting();
   });
 
   group('note lock toggle', () {
@@ -356,11 +370,24 @@ void main() {
   group('rate row', () {
     testWidgets('says so when the store page cannot be opened', (tester) async {
       await _pumpSettings(tester);
+      EngagementService.instance = _FakeEngagement()..opens = false;
 
       await tester.tap(find.text(_l10n.rateAppTitle));
       await _pump(tester);
 
       expect(find.text(_l10n.openLinkFailedMessage), findsOneWidget);
+    });
+
+    testWidgets('shows nothing extra when the store page opens', (tester) async {
+      await _pumpSettings(tester);
+      final fake = _FakeEngagement()..opens = true;
+      EngagementService.instance = fake;
+
+      await tester.tap(find.text(_l10n.rateAppTitle));
+      await _pump(tester);
+
+      expect(fake.openCalls, 1);
+      expect(find.text(_l10n.openLinkFailedMessage), findsNothing);
     });
   });
 }
