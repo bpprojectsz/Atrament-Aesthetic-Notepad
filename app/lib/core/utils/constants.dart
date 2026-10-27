@@ -282,7 +282,7 @@ class AppConstants {
 
   // SQLite
   static const String dbName = 'atrament.db';
-  static const int dbVersion = 3; // v3: notes.notebookId becomes nullable
+  static const int dbVersion = 4; // v4: search index folds ß to ss; v3: notes.notebookId nullable
   static const String tableNotes = 'notes';
   static const String tableNotebooks = 'notebooks';
   static const String tableNotesFts = 'notes_fts';
@@ -294,6 +294,10 @@ class AppConstants {
   // In-app purchase product ID — one-time ad removal unlock.
   // Register this ID in Play Console and App Store Connect before submission.
   static const String iapAdFreeProductId = 'com.zdmgold.atrament.adfree';
+
+  /// Last confirmed ad-free state, so paying users never see ads while the
+  /// store is still being asked at startup.
+  static const String prefAdFreeCached = 'pref_ad_free_cached';
 
   // Store listings (used by the Share Atrament flow)
   static const String playStoreUrl =

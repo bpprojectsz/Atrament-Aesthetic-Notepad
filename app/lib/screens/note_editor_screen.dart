@@ -11,12 +11,14 @@ import '../core/models/note_model.dart';
 import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/verse_provider.dart';
+import '../core/services/app_lock.dart';
 import '../core/services/engagement_service.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
+import '../core/utils/date_formatter.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';
-import '../platform/biometric_service.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/font_selector.dart';
@@ -44,15 +46,6 @@ bool _isHandwritingContent(String raw) {
   }
 }
 
-String _wrapHandwritingContent(String strokesJson) {
-  return jsonEncode({'type': 'handwriting', 'strokes': jsonDecode(strokesJson)});
-}
-
-String _unwrapHandwritingStrokes(String raw) {
-  final decoded = jsonDecode(raw) as Map<String, dynamic>;
-  return jsonEncode(decoded['strokes']);
-}
-
 enum ExportFormat { txt, pdf }
 
 /// Primary writing canvas. Supports rich text (via `flutter_quill`) and
@@ -77,7 +70,7 @@ class NoteEditorScreen extends StatefulWidget {
   /// (NotebookDetailScreen, etc.) never had a verseProvider parameter to
   /// thread it through, which meant this was always null in production
   /// and the scripture overlay never rendered at all. Resolving it from
-  /// the ambient Provider tree instead (see `_buildVerseOverlay`) removes
+  /// the ambient Provider tree instead (see `_buildVerse`) removes
   /// the need for every screen in the chain to know about it.
   final VerseProvider? verseProvider;
   final bool isNewNote;
@@ -111,11 +104,32 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   final ExportService _exportService = const ExportService();
   final ShareService _shareService = const ShareService();
-  final BiometricService _biometricService = BiometricService();
 
   bool _locked = false;
   bool _checkingLock = true;
-  bool _isSaving = false;
+
+  /// The save currently running, if any. Saves are serialized through this
+  /// so an overlapping save (e.g. app backgrounding while the user taps
+  /// back) always writes a fresh snapshot instead of being skipped.
+  Future<bool>? _inFlightSave;
+
+  /// Fingerprint (title + content + paper) of what is on disk. Null for a
+  /// new note that has never been written. Used so autosave never rewrites
+  /// an unchanged note, and so unreadable stored content is never replaced
+  /// by a blank page.
+  String? _lastSavedSignature;
+
+  /// True when the stored content could not be parsed on open. While the
+  /// user has not edited, saving is skipped so the original data on disk is
+  /// kept instead of being overwritten with an empty note.
+  bool _contentUnreadable = false;
+
+  Timer? _autosaveTimer;
+  static const Duration _autosaveDelay = Duration(seconds: 2);
+
+  /// Back presses that ended in a failed save; the second one lets the
+  /// user leave anyway so they are never trapped on this screen.
+  int _failedExitAttempts = 0;
 
   @override
   void initState() {
@@ -127,9 +141,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     _loadFontChoice();
 
     if (_isHandwritingMode) {
-      _handwritingController = HandwritingCanvasController.fromJsonString(
-        _unwrapHandwritingStrokes(widget.note.content),
-      );
+      _handwritingController = _buildHandwritingController(widget.note.content);
       _quillController = quill.QuillController.basic(
         config: _quillConfig,
       );
@@ -138,10 +150,41 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       _quillController = _buildQuillController(widget.note.content);
     }
 
+    // Existing notes start with their on-disk state as the baseline; a new
+    // note has none until its first successful save.
+    if (!widget.isNewNote) {
+      _lastSavedSignature = _signature();
+    }
+
+    _titleController.addListener(_scheduleAutosave);
+    _quillController.addListener(_scheduleAutosave);
+    _handwritingController.addListener(_scheduleAutosave);
+
     _checkBiometricLock();
   }
 
+  /// A corrupted stroke payload must not crash the editor on open. The
+  /// original content stays on disk untouched until the user edits.
+  HandwritingCanvasController _buildHandwritingController(String content) {
+    try {
+      return HandwritingCanvasController.fromWrappedContent(content);
+    } catch (error, stackTrace) {
+      _contentUnreadable = true;
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Failed to parse handwriting content, starting blank',
+        context: 'note_editor_screen.buildHandwritingController',
+        severity: ErrorSeverity.warning,
+      );
+      return HandwritingCanvasController();
+    }
+  }
+
   quill.QuillController _buildQuillController(String content) {
+    if (content.trim().isEmpty) {
+      return quill.QuillController.basic(config: _quillConfig);
+    }
     try {
       final delta = jsonDecode(content) as List<dynamic>;
       return quill.QuillController(
@@ -150,6 +193,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         config: _quillConfig,
       );
     } catch (error, stackTrace) {
+      _contentUnreadable = true;
       ErrorHandler.report(
         error,
         stackTrace,
@@ -176,24 +220,27 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
   Future<void> _checkBiometricLock() async {
     try {
-      final prefs = await SharedPreferences.getInstance();
-      final enabled =
-          prefs.getBool(AppConstants.prefBiometricLockEnabled) ?? false;
-      if (!enabled) {
-        if (mounted) setState(() => _checkingLock = false);
-        return;
-      }
-      if (mounted) setState(() => _locked = true);
+      // Also gives the first frame time to finish before we touch inherited
+      // widgets (this is called from initState).
+      await AppLock.instance.init();
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
-      final result = await _biometricService.authenticate(
-        reason: l10n.biometricLockReason,
-      );
+      final messenger = ScaffoldMessenger.of(context);
+      final lock = AppLock.instance;
+      if (lock.enabled && !lock.isUnlocked) {
+        setState(() => _locked = true);
+      }
+      final outcome = await lock.ensureUnlocked(reason: l10n.biometricLockReason);
       if (!mounted) return;
       setState(() {
-        _locked = result != BiometricAuthResult.success;
+        _locked = outcome == LockOutcome.denied;
         _checkingLock = false;
       });
+      if (outcome == LockOutcome.grantedLockDisabled) {
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.noteLockTurnedOffMessage)),
+        );
+      }
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,
@@ -206,12 +253,40 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     }
   }
 
+  /// Whether the note is persisted as handwriting. Only one kind of content
+  /// is stored per note, so the visible mode normally wins; but if the
+  /// visible mode is empty while the other holds content (e.g. the user
+  /// tapped the toggle by accident), the content that exists is kept
+  /// rather than being replaced by an empty page.
+  bool get _persistAsHandwriting {
+    final inkHasContent = _handwritingController.strokes.isNotEmpty;
+    final textHasContent =
+        _quillController.document.toPlainText().trim().isNotEmpty;
+    if (_isHandwritingMode) return inkHasContent || !textHasContent;
+    return !textHasContent && inkHasContent;
+  }
+
   String _currentContentJson() {
-    if (_isHandwritingMode) {
-      return _wrapHandwritingContent(_handwritingController.toJsonString());
+    if (_persistAsHandwriting) {
+      return _handwritingController.toWrappedContent();
     }
     return jsonEncode(_quillController.document.toDelta().toJson());
   }
+
+  /// What counts as "the content" for deciding whether the note changed.
+  /// For ink this is the strokes only: the canvas width recorded alongside
+  /// them is bookkeeping that is filled in when the canvas first lays out,
+  /// and must not make an untouched note look edited (which would, for
+  /// example, overwrite unreadable stored ink with a blank page).
+  String _contentFingerprint() {
+    if (_persistAsHandwriting) {
+      return 'ink:${_handwritingController.toJsonString()}';
+    }
+    return jsonEncode(_quillController.document.toDelta().toJson());
+  }
+
+  String _signature() =>
+      '${_titleController.text.trim()}\u0000${_contentFingerprint()}\u0000$_paperStyleId';
 
   /// True when this is a never-before-saved note that the user hasn't
   /// actually put anything into — no title, no text, no strokes. Used to
@@ -219,6 +294,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   /// someone taps + and backs out without writing anything.
   bool get _isUntouchedNewNote {
     if (!widget.isNewNote) return false;
+    // Already written once (e.g. by autosave): from here on every state,
+    // including an emptied note, must be saved.
+    if (_lastSavedSignature != null) return false;
     if (_titleController.text.trim().isNotEmpty) return false;
     if (_isHandwritingMode) {
       return _handwritingController.strokes.isEmpty;
@@ -226,50 +304,119 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     return _quillController.document.toPlainText().trim().isEmpty;
   }
 
-  Future<bool> _save() async {
-    if (_isSaving) return true;
-    if (_isUntouchedNewNote) return true;
-    _isSaving = true;
+  void _scheduleAutosave() {
+    if (_locked || _checkingLock) return;
+    _autosaveTimer?.cancel();
+    _autosaveTimer = Timer(_autosaveDelay, () {
+      if (!mounted) return;
+      unawaited(_save(userInitiated: false, skipIfUnchanged: true));
+    });
+  }
 
+  /// Saves the note. Concurrent calls queue behind the running save and
+  /// then write a fresh snapshot. Returns true when the note is safely on
+  /// disk (or there was nothing to write).
+  ///
+  /// Exit and background saves always write (so opening a note refreshes its
+  /// modified time, as before). [skipIfUnchanged] is used by autosave so
+  /// merely moving the cursor never rewrites the note.
+  Future<bool> _save({
+    bool userInitiated = true,
+    bool skipIfUnchanged = false,
+  }) async {
+    while (_inFlightSave != null) {
+      try {
+        await _inFlightSave;
+      } catch (_) {
+        // The failed save already reported itself; fall through and retry.
+      }
+    }
+    if (_isUntouchedNewNote) return true;
+    final signature = _signature();
+    final unchanged = signature == _lastSavedSignature;
+    if (unchanged && (skipIfUnchanged || _contentUnreadable)) return true;
+
+    final future = _persist(signature, userInitiated: userInitiated);
+    _inFlightSave = future;
+    try {
+      return await future;
+    } finally {
+      if (identical(_inFlightSave, future)) _inFlightSave = null;
+    }
+  }
+
+  Future<bool> _persist(String signature, {required bool userInitiated}) async {
+    final asHandwriting = _persistAsHandwriting;
     final updated = widget.note.copyWith(
       title: _titleController.text.trim(),
       content: _currentContentJson(),
       paperStyle: _paperStyleId,
       modifiedAt: DateTime.now(),
     );
-
-    final plainText = _isHandwritingMode
-        ? ''
-        : _quillController.document.toPlainText();
+    final plainText =
+        asHandwriting ? '' : _quillController.document.toPlainText();
 
     final succeeded = await widget.noteProvider.saveNote(
       updated,
       plainTextContent: plainText,
+      countsAsUserSave: userInitiated,
     );
 
     if (succeeded) {
-      unawaited(EngagementService.instance.recordNoteSave());
+      _lastSavedSignature = signature;
+      _contentUnreadable = false;
+      if (userInitiated) {
+        unawaited(EngagementService.instance.recordNoteSave());
+      }
     }
-
-    _isSaving = false;
     return succeeded;
   }
 
   Future<void> _handlePop() async {
-    await _save();
-    if (mounted) Navigator.of(context).pop();
+    _autosaveTimer?.cancel();
+    final saved = await _save();
+    if (!mounted) return;
+    final messenger = ScaffoldMessenger.of(context);
+    final failureText = AppLocalizations.of(context)!.saveFailedMessage;
+    if (!saved && _failedExitAttempts == 0) {
+      // First failure: stay, so the user can retry instead of silently
+      // losing the note. A second back press leaves regardless.
+      _failedExitAttempts = 1;
+      messenger.showSnackBar(SnackBar(content: Text(failureText)));
+      return;
+    }
+    Navigator.of(context).pop();
+    if (!saved) {
+      messenger.showSnackBar(SnackBar(content: Text(failureText)));
+    }
   }
 
   ExportableNote _buildExportableNote(AppLocalizations l10n) {
+    // Export what would be saved: the drawing for an ink note, the text
+    // otherwise (so a drawn note no longer exports as an empty document).
+    final asInk = _persistAsHandwriting;
     return ExportableNote(
       title: _titleController.text.trim().isEmpty
           ? l10n.untitledNote
           : _titleController.text.trim(),
-      plainTextContent: _isHandwritingMode
-          ? ''
-          : _quillController.document.toPlainText(),
-      createdAtLabel: widget.note.createdAt.toIso8601String(),
+      plainTextContent: asInk ? '' : _quillController.document.toPlainText(),
+      createdAtLabel: DateFormatter.short(
+        widget.note.createdAt,
+        localeCode: Localizations.localeOf(context).languageCode,
+      ),
       verseReferenceLabel: widget.note.verseReference,
+      ink: asInk
+          ? _handwritingController.strokes
+                .map(
+                  (s) => ExportInkStroke(
+                    points: s.points,
+                    color: s.color,
+                    strokeWidth: s.strokeWidth,
+                    isHighlighter: s.isHighlighter,
+                  ),
+                )
+                .toList()
+          : null,
     );
   }
 
@@ -285,7 +432,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
 
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(result.errorMessage ?? l10n.exportFailedMessage)),
+        SnackBar(content: Text(l10n.exportFailedMessage)),
       );
       return;
     }
@@ -308,6 +455,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
     if (state == AppLifecycleState.paused) {
+      _autosaveTimer?.cancel();
       // Fire-and-forget: save when the app backgrounds so typed content
       // is not lost if the OS kills the process. Silently no-op when the
       // note is untouched (the _isUntouchedNewNote guard in _save handles
@@ -319,8 +467,13 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _autosaveTimer?.cancel();
+    _titleController.removeListener(_scheduleAutosave);
+    _quillController.removeListener(_scheduleAutosave);
+    _handwritingController.removeListener(_scheduleAutosave);
     _titleController.dispose();
     _quillController.dispose();
+    _handwritingController.dispose();
     super.dispose();
   }
 
@@ -391,10 +544,12 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
               tooltip: l10n.exportTitle,
               onSelected: _exportAs,
               itemBuilder: (context) => [
-                PopupMenuItem(
-                  value: ExportFormat.txt,
-                  child: Text(l10n.exportAsTxt),
-                ),
+                // A drawing has no text to put in a .txt file.
+                if (!_persistAsHandwriting)
+                  PopupMenuItem(
+                    value: ExportFormat.txt,
+                    child: Text(l10n.exportAsTxt),
+                  ),
                 PopupMenuItem(
                   value: ExportFormat.pdf,
                   child: Text(l10n.exportAsPdf),
@@ -406,9 +561,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
         body: Stack(
           children: [
             PaperBackground(style: paperStyle),
-            _buildVerseOverlay(context),
+            _buildVerse(context, VerseDisplayMode.watermark),
             Column(
               children: [
+                _buildVerse(context, VerseDisplayMode.header),
                 Expanded(
                   child: _isHandwritingMode
                       ? HandwritingCanvas(
@@ -433,6 +589,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                           ),
                         ),
                 ),
+                _buildVerse(context, VerseDisplayMode.footer),
                 SafeArea(
                   top: false,
                   child: _isHandwritingMode
@@ -479,7 +636,11 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
     );
   }
 
-  Widget _buildVerseOverlay(BuildContext context) {
+  /// The verse for [placement], or nothing if the user chose a different
+  /// display mode. The watermark sits behind the page; the header and footer
+  /// are real rows of the layout above and below the writing area, so they
+  /// can never overlap the text or the toolbar.
+  Widget _buildVerse(BuildContext context, VerseDisplayMode placement) {
     // Falls back to the ambient Provider tree when no explicit override
     // was passed — see the doc comment on widget.verseProvider for why
     // this fallback is the actual production path, not an edge case.
@@ -493,22 +654,18 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       ]),
       builder: (context, _) {
         final verse = verseProvider.todaysVerse.value;
-        if (verse == null) return const SizedBox.shrink();
+        if (verse == null || verseProvider.displayMode.value != placement) {
+          return const SizedBox.shrink();
+        }
         final scale = verseProvider.scriptureFontScale.value;
 
-        switch (verseProvider.displayMode.value) {
+        switch (placement) {
           case VerseDisplayMode.watermark:
             return ScriptureWatermark(verse: verse, fontScale: scale);
           case VerseDisplayMode.header:
-            return Align(
-              alignment: Alignment.topCenter,
-              child: ScriptureHeader(verse: verse, fontScale: scale),
-            );
+            return ScriptureHeader(verse: verse, fontScale: scale);
           case VerseDisplayMode.footer:
-            return Align(
-              alignment: Alignment.bottomCenter,
-              child: ScriptureFooter(verse: verse, fontScale: scale),
-            );
+            return ScriptureFooter(verse: verse, fontScale: scale);
           case VerseDisplayMode.off:
             return const SizedBox.shrink();
         }
@@ -517,9 +674,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
   }
 
   Widget _buildLockScreen(BuildContext context, AppLocalizations l10n) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return Scaffold(
       body: Center(

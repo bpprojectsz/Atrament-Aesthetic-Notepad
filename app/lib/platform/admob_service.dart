@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/utils/error_handler.dart';
+import 'consent_service.dart';
 
 /// Wraps `google_mobile_ads` initialization and banner loading. Every call
 /// site treats failure as a normal, expected outcome — the banner slot
@@ -19,15 +20,21 @@ class AdMobService {
 
   static final AdMobService instance = AdMobService._internal();
 
+  /// Initialization has been attempted (guards against running twice).
   bool _initialized = false;
+
+  /// The Mobile Ads SDK has actually been started. It is only started once
+  /// the consent flow says ads may be requested.
+  bool _sdkStarted = false;
   bool _initializationFailed = false;
+
 
   /// Flipped to true once the SDK finishes initializing successfully.
   /// Banner call sites listen for the false-to-true transition to retry
   /// a load that was requested before the SDK was ready.
   final ValueNotifier<bool> availability = ValueNotifier(false);
 
-  bool get isAvailable => _initialized && !_initializationFailed;
+  bool get isAvailable => _sdkStarted && !_initializationFailed;
 
   String get bannerAdUnitId {
     if (Platform.isIOS) {
@@ -75,19 +82,33 @@ class AdMobService {
     return completer.future;
   }
 
-  /// Initializes the Mobile Ads SDK. Safe to call once at app startup;
+  /// Runs the consent flow, then initializes the Mobile Ads SDK if (and
+  /// only if) ads may be requested. Safe to call once at app startup;
   /// never throws — failures are caught and recorded so [isAvailable]
   /// reports false and callers can skip ad requests entirely.
   Future<void> initialize() async {
     if (_initialized) return;
+    _initialized = true;
 
+    final canRequestAds = await ConsentService.instance.gatherConsent();
+    await _startSdkIfAllowed(canRequestAds);
+  }
+
+  /// Call after the user changes their privacy choices: starts the SDK if
+  /// ads are now allowed and it was not started yet.
+  Future<void> onConsentChanged() async {
+    final canRequestAds = await ConsentService.instance.refreshState();
+    await _startSdkIfAllowed(canRequestAds);
+  }
+
+  Future<void> _startSdkIfAllowed(bool canRequestAds) async {
+    if (!canRequestAds || _sdkStarted) return;
     try {
       await MobileAds.instance.initialize();
-      _initialized = true;
+      _sdkStarted = true;
       availability.value = true;
     } catch (error, stackTrace) {
       _initializationFailed = true;
-      _initialized = true;
       availability.value = false;
       ErrorHandler.report(
         error,

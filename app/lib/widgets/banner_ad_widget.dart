@@ -1,9 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/providers/subscription_provider.dart';
 import '../core/services/iap_service.dart';
 import '../platform/admob_service.dart';
+
+/// Delay before retry number [attempt] (0-based) of a failed banner load,
+/// or null once retries are used up. Backs off so a no-fill or offline
+/// start recovers without hammering the ad server.
+Duration? bannerRetryDelay(int attempt) {
+  const delays = [
+    Duration(seconds: 30),
+    Duration(seconds: 60),
+    Duration(seconds: 120),
+  ];
+  return attempt >= 0 && attempt < delays.length ? delays[attempt] : null;
+}
 
 /// Banner ad container for the home screen. Collapses to zero height if
 /// the ad fails to load, the SDK failed to initialize, or the user has an
@@ -22,6 +36,8 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   BannerAd? _banner;
   bool _failed = false;
   bool _hasRequestedLoad = false;
+  int _retryAttempt = 0;
+  Timer? _retryTimer;
 
   @override
   void initState() {
@@ -88,6 +104,29 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       _banner = banner;
       _failed = banner == null;
     });
+
+    if (banner != null) {
+      _retryAttempt = 0;
+    } else {
+      _scheduleRetry();
+    }
+  }
+
+  /// A failed load is retried a few times with backoff instead of leaving
+  /// the slot empty for the rest of the session.
+  void _scheduleRetry() {
+    _retryTimer?.cancel();
+    final delay = bannerRetryDelay(_retryAttempt);
+    if (delay == null) return;
+    _retryAttempt++;
+    _retryTimer = Timer(delay, () {
+      if (!mounted) return;
+      if (widget.subscriptionProvider.status.value == SubscriptionStatus.pro) {
+        return;
+      }
+      setState(() => _failed = false);
+      _maybeLoadBanner();
+    });
   }
 
   void _disposeBanner() {
@@ -97,6 +136,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   void dispose() {
+    _retryTimer?.cancel();
     AdMobService.instance.availability.removeListener(_onAvailabilityChanged);
     widget.subscriptionProvider.status.removeListener(_onSubscriptionChanged);
     _disposeBanner();

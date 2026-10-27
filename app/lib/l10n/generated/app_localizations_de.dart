@@ -160,6 +160,72 @@ class AppLocalizationsDe extends AppLocalizations {
   String get unlockButton => 'Entsperren';
 
   @override
+  String get noteLockTurnedOffMessage => 'Die Notizsperre wurde ausgeschaltet, weil auf diesem Gerät keine Bildschirmsperre oder Biometrie eingerichtet ist.';
+
+  @override
+  String get biometricEnableReason => 'Identität bestätigen, um die Notizsperre einzuschalten';
+
+  @override
+  String get biometricDisableReason => 'Identität bestätigen, um die Notizsperre auszuschalten';
+
+  @override
+  String get biometricShareReason => 'Entsperren, um diese Notiz zu teilen oder zu exportieren';
+
+  @override
+  String get biometricAuthFailedMessage => 'Die Identität konnte nicht bestätigt werden.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Zuerst in den Geräteeinstellungen eine Bildschirmsperre oder einen Fingerabdruck einrichten.';
+
+  @override
+  String get privacyChoicesTitle => 'Datenschutzoptionen';
+
+  @override
+  String get purchaseFailedMessage => 'Der Kauf konnte nicht abgeschlossen werden. Bitte erneut versuchen.';
+
+  @override
+  String get restoreSuccessMessage => 'Dein Kauf wurde wiederhergestellt.';
+
+  @override
+  String get restoreNothingFoundMessage => 'Für dieses Konto wurde kein früherer Kauf gefunden.';
+
+  @override
+  String get restoreFailedMessage => 'Käufe konnten nicht wiederhergestellt werden. Verbindung prüfen und erneut versuchen.';
+
+  @override
+  String get reminderScheduleFailedMessage => 'Die Erinnerung konnte nicht eingerichtet werden. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebooksLoad => 'Einige Notizbücher konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+
+  @override
+  String get storageIssueNotebookSave => 'Dieses Notizbuch wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookChange => 'Diese Änderung wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookDelete => 'Das Notizbuch konnte nicht gelöscht werden. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotebookOrder => 'Die neue Reihenfolge wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+
+  @override
+  String get storageIssueNotesLoad => 'Einige Notizen konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+
+  @override
+  String get storageIssueSearch => 'Die Suchergebnisse sind derzeit möglicherweise unvollständig.';
+
+  @override
+  String get storageIssueNoteSave => 'Diese Notiz wurde möglicherweise nicht gespeichert. Bitte den Gerätespeicher prüfen.';
+
+  @override
+  String get storageIssueNoteDelete => 'Die Notiz konnte nicht gelöscht werden. Bitte erneut versuchen.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Dieser Kauf ist derzeit nicht verfügbar. Bitte später erneut versuchen.';
+
+  @override
   String get exportTitle => 'Exportieren';
 
   @override

@@ -6,15 +6,17 @@ import 'package:provider/provider.dart';
 
 import '../core/models/note_model.dart';
 import '../core/models/notebook_model.dart';
-import '../core/models/paper_style_model.dart';
 import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
+import '../core/services/app_lock.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
@@ -23,10 +25,13 @@ import '../widgets/banner_ad_widget.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/lock_gate.dart';
 import '../widgets/move_to_notebook_sheet.dart';
+import '../widgets/new_notebook_dialog.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_list_item.dart';
 import '../widgets/rename_note_dialog.dart';
+import '../widgets/user_issue_text.dart';
 import 'note_editor_screen.dart';
 
 /// Lists the notes within a single notebook, with sort options, an empty
@@ -71,8 +76,15 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   @override
   void initState() {
     super.initState();
-    widget.noteProvider.loadNotebook(widget._notebookId).then((_) {
-      _maybeOpenInitialNote();
+    // Loading changes provider state that the screens underneath (Home) are
+    // listening to. Changing it while this screen is still being built is
+    // not allowed (Flutter reports "setState() called during build"), so the
+    // load starts once the first frame is done.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      widget.noteProvider.loadNotebook(widget._notebookId).then((_) {
+        if (mounted) _maybeOpenInitialNote();
+      });
     });
   }
 
@@ -94,8 +106,9 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   Future<void> _createNote() async {
     final notebookId = widget._notebookId;
     final now = DateTime.now();
-    final defaultPaperStyle =
-        widget.notebook?.paperStyleDefault ?? 'cream';
+    // Follow the default paper chosen in Settings. (A notebook's own stored
+    // paper is only the blank page every notebook was created with before.)
+    final defaultPaperStyle = await loadDefaultPaperStyleId();
 
     final note = NoteModel(
       id: IdGenerator.generate(),
@@ -140,9 +153,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             .where((n) => n.id == widget._notebookId)
             .map((n) => n.name)
             .firstWhere((_) => true, orElse: () => '');
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final subscriptionProvider = context.read<SubscriptionProvider>();
 
     return AppScaffold(
@@ -190,12 +201,13 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
           widget.noteProvider.notes,
           widget.noteProvider.isLoading,
           widget.noteProvider.persistenceWarning,
+          AppLock.instance.contentHidden,
         ]),
         builder: (context, _) {
-          final warning = widget.noteProvider.persistenceWarning.value;
+          final issue = widget.noteProvider.persistenceWarning.value;
           return Column(
             children: [
-              if (warning != null)
+              if (issue != null)
                 Container(
                   width: double.infinity,
                   color: AppColors.warning.resolve(mode).withValues(alpha: 0.15),
@@ -204,7 +216,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
                     vertical: AppSpacing.sm,
                   ),
                   child: Text(
-                    warning,
+                    storageIssueText(l10n, issue),
                     style: TextStyle(
                       color: AppColors.warning.resolve(mode),
                       fontSize: AppTypography.footnote.size,
@@ -250,8 +262,16 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
             child: const Icon(Icons.delete_outline, color: Colors.white),
           ),
-          confirmDismiss: (_) => _confirmDeleteNote(context, l10n),
-          onDismissed: (_) => widget.noteProvider.deleteNote(note.id),
+          // Delete inside confirmDismiss and always report "not dismissed":
+          // on success the provider removes the row from the list itself, on
+          // failure the row snaps back — so a failed delete can never leave
+          // a dismissed-but-still-present ghost row behind.
+          confirmDismiss: (_) async {
+            final confirmed = await _confirmDeleteNote(context, l10n);
+            if (confirmed != true) return false;
+            await widget.noteProvider.deleteNote(note.id);
+            return false;
+          },
           child: NoteListItem(
             title: note.title.trim().isEmpty ? l10n.untitledNote : note.title,
             previewText: _previewFor(note),
@@ -336,31 +356,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   }
 
   Future<String?> _promptNewNotebookName() async {
-    final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-    nameController.dispose();
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return null;
 
     final now = DateTime.now();
@@ -368,7 +364,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,
@@ -380,6 +376,9 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
 
   Future<void> _handleExport(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
+    final exportable = _buildExportable(note, l10n);
     final format = await showModalBottomSheet<ExportFormat>(
       context: context,
       showDragHandle: true,
@@ -387,11 +386,13 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            ListTile(
-              leading: const Icon(Icons.description_outlined),
-              title: Text(l10n.exportAsTxt),
-              onTap: () => Navigator.pop(context, ExportFormat.txt),
-            ),
+            // A drawing has no text to put in a .txt file.
+            if (!exportable.hasInk)
+              ListTile(
+                leading: const Icon(Icons.description_outlined),
+                title: Text(l10n.exportAsTxt),
+                onTap: () => Navigator.pop(context, ExportFormat.txt),
+              ),
             ListTile(
               leading: const Icon(Icons.picture_as_pdf_outlined),
               title: Text(l10n.exportAsPdf),
@@ -403,7 +404,6 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     );
     if (format == null || !mounted) return;
 
-    final exportable = _buildExportable(note, l10n);
     const exportService = ExportService();
     final result = format == ExportFormat.txt
         ? await exportService.exportAsTxt(exportable)
@@ -413,7 +413,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(result.errorMessage ?? l10n.exportFailedMessage),
+          content: Text(l10n.exportFailedMessage),
         ),
       );
       return;
@@ -435,6 +435,8 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
 
   Future<void> _handleShare(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final exportable = _buildExportable(note, l10n);
     const shareService = ShareService();
     final body = exportable.plainTextContent.isEmpty
@@ -458,6 +460,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         localeCode: Localizations.localeOf(context).languageCode,
       ),
       verseReferenceLabel: note.verseReference,
+      ink: ExportInk.fromNoteContent(note.content),
     );
   }
 
@@ -473,6 +476,9 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
   /// already used as the title dropped, joined and clipped at 200 chars.
   /// Handwriting notes have no text body and preview as empty.
   String _previewFor(NoteModel note) {
+    // While the note lock is on and the app is locked, list screens show
+    // titles only — the first lines of a note are its private content.
+    if (AppLock.instance.contentHidden.value) return '';
     final plain = plainTextFromContent(note.content);
     if (plain.isEmpty) return '';
     final lines = plain

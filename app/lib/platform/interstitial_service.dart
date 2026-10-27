@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/services/iap_service.dart';
@@ -38,11 +39,21 @@ class InterstitialService {
     return DateTime.now().difference(last) >= _minCooldown;
   }
 
+  @visibleForTesting
+  int get pendingSaveCount => _saveCount;
+
+  @visibleForTesting
+  void resetCountersForTesting() {
+    _saveCount = 0;
+    _createCount = 0;
+    _lastShownAt = null;
+  }
+
   bool _isAdFree() =>
       IapService.instance.lastKnownStatus == SubscriptionStatus.pro;
 
-  /// Called after a note is successfully persisted. Fires an interstitial
-  /// once every [_saveThreshold] successful saves.
+  /// Called after a note is successfully persisted (except silent autosave).
+  /// Fires an interstitial once every [_saveThreshold] such saves.
   Future<void> recordNoteSave() async {
     _saveCount++;
     if (_saveCount < _saveThreshold) return;

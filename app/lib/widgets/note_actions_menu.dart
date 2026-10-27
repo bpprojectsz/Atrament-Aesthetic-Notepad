@@ -2,6 +2,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// The six actions available on any note row from the 3-dot button.
@@ -15,9 +16,7 @@ enum NoteAction { rename, moveToNotebook, edit, export, share, delete }
 /// same menu can be used from any screen without coupling.
 Future<NoteAction?> showNoteActionsMenu(BuildContext context) async {
   final l10n = AppLocalizations.of(context)!;
-  final mode = Theme.of(context).brightness == Brightness.dark
-      ? AppThemeMode.dark
-      : AppThemeMode.light;
+  final mode = context.appMode;
 
   return showModalBottomSheet<NoteAction>(
     context: context,

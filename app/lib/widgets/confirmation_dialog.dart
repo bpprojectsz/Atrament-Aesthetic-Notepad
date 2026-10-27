@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Reusable destructive-action confirmation (delete note, delete
@@ -40,9 +41,7 @@ class ConfirmationDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return AlertDialog(
       backgroundColor: AppColors.bgSecondary.resolve(mode),

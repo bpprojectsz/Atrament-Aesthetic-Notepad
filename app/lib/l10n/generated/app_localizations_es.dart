@@ -159,6 +159,72 @@ class AppLocalizationsEs extends AppLocalizations {
   String get unlockButton => 'Desbloquear';
 
   @override
+  String get noteLockTurnedOffMessage => 'El bloqueo de notas se desactivó porque este dispositivo no tiene bloqueo de pantalla ni biometría configurados.';
+
+  @override
+  String get biometricEnableReason => 'Confirma que eres tú para activar el bloqueo de notas';
+
+  @override
+  String get biometricDisableReason => 'Confirma que eres tú para desactivar el bloqueo de notas';
+
+  @override
+  String get biometricShareReason => 'Desbloquea para compartir o exportar esta nota';
+
+  @override
+  String get biometricAuthFailedMessage => 'No se pudo verificar tu identidad.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Primero configura un bloqueo de pantalla o una huella en los ajustes del dispositivo.';
+
+  @override
+  String get privacyChoicesTitle => 'Opciones de privacidad';
+
+  @override
+  String get purchaseFailedMessage => 'No se pudo completar la compra. Inténtalo de nuevo.';
+
+  @override
+  String get restoreSuccessMessage => 'Tu compra se ha restaurado.';
+
+  @override
+  String get restoreNothingFoundMessage => 'No se encontró ninguna compra anterior para esta cuenta.';
+
+  @override
+  String get restoreFailedMessage => 'No se pudieron restaurar las compras. Comprueba tu conexión e inténtalo de nuevo.';
+
+  @override
+  String get reminderScheduleFailedMessage => 'No se pudo programar el recordatorio. Inténtalo de nuevo.';
+
+  @override
+  String get storageIssueNotebooksLoad => 'No se pudieron cargar algunos cuadernos. Se muestra lo disponible.';
+
+  @override
+  String get storageIssueNotebookSave => 'Es posible que este cuaderno no se haya guardado. Inténtalo de nuevo.';
+
+  @override
+  String get storageIssueNotebookChange => 'Es posible que este cambio no se haya guardado. Inténtalo de nuevo.';
+
+  @override
+  String get storageIssueNotebookDelete => 'No se pudo eliminar el cuaderno. Inténtalo de nuevo.';
+
+  @override
+  String get storageIssueNotebookOrder => 'Es posible que el nuevo orden no se haya guardado. Inténtalo de nuevo.';
+
+  @override
+  String get storageIssueNotesLoad => 'No se pudieron cargar algunas notas. Se muestra lo disponible.';
+
+  @override
+  String get storageIssueSearch => 'Los resultados de búsqueda pueden estar incompletos ahora mismo.';
+
+  @override
+  String get storageIssueNoteSave => 'Es posible que esta nota no se haya guardado. Revisa el almacenamiento del dispositivo.';
+
+  @override
+  String get storageIssueNoteDelete => 'No se pudo eliminar la nota. Inténtalo de nuevo.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Esta compra no está disponible ahora mismo. Inténtalo más tarde.';
+
+  @override
   String get exportTitle => 'Exportar';
 
   @override

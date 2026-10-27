@@ -160,6 +160,72 @@ class AppLocalizationsFr extends AppLocalizations {
   String get unlockButton => 'Déverrouiller';
 
   @override
+  String get noteLockTurnedOffMessage => 'Le verrouillage des notes a été désactivé, car aucun verrouillage d’écran ni biométrie n’est configuré sur cet appareil.';
+
+  @override
+  String get biometricEnableReason => 'Confirmez votre identité pour activer le verrouillage des notes';
+
+  @override
+  String get biometricDisableReason => 'Confirmez votre identité pour désactiver le verrouillage des notes';
+
+  @override
+  String get biometricShareReason => 'Déverrouillez pour partager ou exporter cette note';
+
+  @override
+  String get biometricAuthFailedMessage => 'Impossible de vérifier votre identité.';
+
+  @override
+  String get biometricSetupNeededMessage => 'Configurez d’abord un verrouillage d’écran ou une empreinte dans les réglages de l’appareil.';
+
+  @override
+  String get privacyChoicesTitle => 'Choix de confidentialité';
+
+  @override
+  String get purchaseFailedMessage => 'L’achat n’a pas pu être finalisé. Veuillez réessayer.';
+
+  @override
+  String get restoreSuccessMessage => 'Votre achat a été restauré.';
+
+  @override
+  String get restoreNothingFoundMessage => 'Aucun achat précédent n’a été trouvé pour ce compte.';
+
+  @override
+  String get restoreFailedMessage => 'Impossible de restaurer les achats. Vérifiez votre connexion et réessayez.';
+
+  @override
+  String get reminderScheduleFailedMessage => 'Le rappel n’a pas pu être programmé. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebooksLoad => 'Certains carnets n’ont pas pu être chargés. Affichage de ce qui est disponible.';
+
+  @override
+  String get storageIssueNotebookSave => 'Ce carnet n’a peut-être pas été enregistré. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookChange => 'Cette modification n’a peut-être pas été enregistrée. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookDelete => 'Le carnet n’a pas pu être supprimé. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotebookOrder => 'Le nouvel ordre n’a peut-être pas été enregistré. Veuillez réessayer.';
+
+  @override
+  String get storageIssueNotesLoad => 'Certaines notes n’ont pas pu être chargées. Affichage de ce qui est disponible.';
+
+  @override
+  String get storageIssueSearch => 'Les résultats de recherche peuvent être incomplets pour le moment.';
+
+  @override
+  String get storageIssueNoteSave => 'Cette note n’a peut-être pas été enregistrée. Vérifiez le stockage de l’appareil.';
+
+  @override
+  String get storageIssueNoteDelete => 'La note n’a pas pu être supprimée. Veuillez réessayer.';
+
+  @override
+  String get purchaseUnavailableMessage => 'Cet achat n’est pas disponible pour le moment. Veuillez réessayer plus tard.';
+
+  @override
   String get exportTitle => 'Exporter';
 
   @override

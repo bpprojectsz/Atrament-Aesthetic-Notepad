@@ -404,6 +404,138 @@ abstract class AppLocalizations {
   /// **'Unlock'**
   String get unlockButton;
 
+  /// No description provided for @noteLockTurnedOffMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Note lock was turned off because this device has no screen lock or biometrics set up.'**
+  String get noteLockTurnedOffMessage;
+
+  /// No description provided for @biometricEnableReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm it is you to turn on note lock'**
+  String get biometricEnableReason;
+
+  /// No description provided for @biometricDisableReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm it is you to turn off note lock'**
+  String get biometricDisableReason;
+
+  /// No description provided for @biometricShareReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock to share or export this note'**
+  String get biometricShareReason;
+
+  /// No description provided for @biometricAuthFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to verify your identity.'**
+  String get biometricAuthFailedMessage;
+
+  /// No description provided for @biometricSetupNeededMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up a screen lock or fingerprint in your device settings first.'**
+  String get biometricSetupNeededMessage;
+
+  /// No description provided for @privacyChoicesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy choices'**
+  String get privacyChoicesTitle;
+
+  /// No description provided for @purchaseFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The purchase could not be completed. Please try again.'**
+  String get purchaseFailedMessage;
+
+  /// No description provided for @restoreSuccessMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your purchase was restored.'**
+  String get restoreSuccessMessage;
+
+  /// No description provided for @restoreNothingFoundMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'No previous purchase was found for this account.'**
+  String get restoreNothingFoundMessage;
+
+  /// No description provided for @restoreFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not restore purchases. Check your connection and try again.'**
+  String get restoreFailedMessage;
+
+  /// No description provided for @reminderScheduleFailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The reminder could not be scheduled. Please try again.'**
+  String get reminderScheduleFailedMessage;
+
+  /// No description provided for @storageIssueNotebooksLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Some notebooks could not be loaded. Showing what is available.'**
+  String get storageIssueNotebooksLoad;
+
+  /// No description provided for @storageIssueNotebookSave.
+  ///
+  /// In en, this message translates to:
+  /// **'This notebook may not have been saved. Please try again.'**
+  String get storageIssueNotebookSave;
+
+  /// No description provided for @storageIssueNotebookChange.
+  ///
+  /// In en, this message translates to:
+  /// **'This change may not have been saved. Please try again.'**
+  String get storageIssueNotebookChange;
+
+  /// No description provided for @storageIssueNotebookDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'The notebook could not be deleted. Please try again.'**
+  String get storageIssueNotebookDelete;
+
+  /// No description provided for @storageIssueNotebookOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'The new order may not have been saved. Please try again.'**
+  String get storageIssueNotebookOrder;
+
+  /// No description provided for @storageIssueNotesLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Some notes could not be loaded. Showing what is available.'**
+  String get storageIssueNotesLoad;
+
+  /// No description provided for @storageIssueSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Search results may be incomplete right now.'**
+  String get storageIssueSearch;
+
+  /// No description provided for @storageIssueNoteSave.
+  ///
+  /// In en, this message translates to:
+  /// **'This note may not have been saved. Please check your device storage.'**
+  String get storageIssueNoteSave;
+
+  /// No description provided for @storageIssueNoteDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'The note could not be deleted. Please try again.'**
+  String get storageIssueNoteDelete;
+
+  /// No description provided for @purchaseUnavailableMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This purchase is not available right now. Please try again later.'**
+  String get purchaseUnavailableMessage;
+
   /// No description provided for @exportTitle.
   ///
   /// In en, this message translates to:

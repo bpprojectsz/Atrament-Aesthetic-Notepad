@@ -86,6 +86,35 @@ void main() {
     );
   }
 
+
+  Future<String> dbPath() async {
+    final docsPath =
+        await PathProviderPlatform.instance.getApplicationDocumentsPath();
+    return p.join(docsPath!, AppConstants.dbName);
+  }
+
+  /// Runs [action] against the database file directly while LocalStorage is
+  /// closed, so tests can inspect (or tamper with) what is really on disk.
+  Future<T> withRawDb<T>(Future<T> Function(Database db) action) async {
+    await storage.close();
+    final db = await databaseFactory.openDatabase(await dbPath());
+    try {
+      return await action(db);
+    } finally {
+      await db.close();
+    }
+  }
+
+  Future<int> ftsRowCount(Database db, {String? id}) async {
+    final rows = id == null
+        ? await db.rawQuery('SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts}')
+        : await db.rawQuery(
+            'SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts} WHERE id = ?',
+            [id],
+          );
+    return rows.first['c'] as int;
+  }
+
   group('Notebook CRUD', () {
     test('saveNotebook then getNotebooks returns it', () async {
       final notebook = buildNotebook('nb_1');
@@ -337,6 +366,256 @@ void main() {
       final result = await storage.searchNotes('nonexistentxyz123');
       expect(result.failed, isFalse);
       expect(result.data, isEmpty);
+    });
+  });
+
+  group('Notebook deletion and search-index hygiene', () {
+    test('deleteNotebook also removes the deleted notes from the search index', () async {
+      await storage.saveNotebook(buildNotebook('nb_gone'));
+      await storage.saveNotebook(buildNotebook('nb_stay'));
+      await storage.saveNote(
+        buildNote('gone_1', 'nb_gone'),
+        plainTextContent: 'confidential zebrafish memo',
+      );
+      await storage.saveNote(
+        buildNote('stay_1', 'nb_stay'),
+        plainTextContent: 'harmless otter note',
+      );
+
+      expect(await storage.deleteNotebook('nb_gone'), isTrue);
+
+      final counts = await withRawDb((db) async {
+        final matchGone = await db.rawQuery(
+          'SELECT COUNT(*) AS c FROM ${AppConstants.tableNotesFts} '
+          'WHERE ${AppConstants.tableNotesFts} MATCH ?',
+          ['zebrafish'],
+        );
+        return (
+          total: await ftsRowCount(db),
+          stay: await ftsRowCount(db, id: 'stay_1'),
+          gone: await ftsRowCount(db, id: 'gone_1'),
+          matches: matchGone.first['c'] as int,
+        );
+      });
+
+      expect(counts.gone, 0, reason: 'deleted note must leave the index');
+      expect(counts.matches, 0, reason: 'its text must not remain searchable on disk');
+      expect(counts.stay, 1, reason: 'other notebooks are untouched');
+      expect(counts.total, 1);
+    });
+
+    test('deleteNotebook is atomic: a failure rolls everything back', () async {
+      await storage.saveNotebook(buildNotebook('nb_atomic'));
+      await storage.saveNote(
+        buildNote('atomic_1', 'nb_atomic'),
+        plainTextContent: 'must survive a failed delete',
+      );
+
+      // Make the final step (deleting the notebook row) fail.
+      await withRawDb((db) async {
+        await db.execute(
+          'CREATE TRIGGER block_nb_delete BEFORE DELETE ON '
+          '${AppConstants.tableNotebooks} BEGIN '
+          "SELECT RAISE(ABORT, 'blocked'); END",
+        );
+      });
+
+      expect(await storage.deleteNotebook('nb_atomic'), isFalse);
+
+      final notes = await storage.getNotesForNotebook('nb_atomic');
+      expect(notes.data.map((n) => n.id), ['atomic_1']);
+      final indexed = await withRawDb((db) => ftsRowCount(db, id: 'atomic_1'));
+      expect(indexed, 1, reason: 'search row must be rolled back with the note');
+    });
+
+    test('opening the database purges search rows whose note no longer exists', () async {
+      await storage.saveNotebook(buildNotebook('nb_orphan'));
+      await storage.saveNote(
+        buildNote('real_1', 'nb_orphan'),
+        plainTextContent: 'a real note',
+      );
+
+      // Simulate rows left behind by the old delete behaviour.
+      await withRawDb((db) async {
+        await db.insert(AppConstants.tableNotesFts, {
+          'id': 'ghost_1',
+          'title': 'ghost',
+          'plainText': 'text of a note that was deleted long ago',
+        });
+        expect(await ftsRowCount(db, id: 'ghost_1'), 1);
+      });
+
+      // Any call reopens the database, which triggers the purge.
+      await storage.getNotebooks();
+
+      final after = await withRawDb((db) async => (
+            ghost: await ftsRowCount(db, id: 'ghost_1'),
+            real: await ftsRowCount(db, id: 'real_1'),
+          ));
+      expect(after.ghost, 0);
+      expect(after.real, 1);
+    });
+  });
+
+  group('Search robustness', () {
+    Future<void> seedNote(String id, String title, String body) async {
+      final saved = await storage.saveNote(
+        NoteModel(
+          id: id,
+          title: title,
+          content: '[{"insert":"\\n"}]',
+          notebookId: null,
+          paperStyle: 'cream',
+          createdAt: DateTime(2026, 1, 1),
+          modifiedAt: DateTime(2026, 1, 1),
+        ),
+        plainTextContent: body,
+      );
+      expect(saved, isTrue);
+    }
+
+    Future<List<String>> idsFor(String query) async {
+      final result = await storage.searchNotes(query);
+      expect(result.failed, isFalse, reason: 'query "$query" must not error');
+      return result.data.map((n) => n.id).toList()..sort();
+    }
+
+    test('punctuation and operator words never make a query fail', () async {
+      await seedNote('p1', 'Trip', 'the co-op and C++ book');
+      for (final query in [
+        'co-op',
+        "don't",
+        'C++',
+        'what?',
+        '(a',
+        'NOT',
+        'a AND',
+        '"quoted"',
+        '50%',
+        'under_score',
+        '*',
+        '"',
+        'title:x',
+      ]) {
+        final result = await storage.searchNotes(query);
+        expect(result.failed, isFalse, reason: 'query "$query" must not error');
+      }
+    });
+
+    test('queries with punctuation still find the matching note', () async {
+      await seedNote('p1', 'Trip', 'the co-op and C++ book');
+      expect(await idsFor('co-op'), ['p1']);
+      expect(await idsFor('C++'), ['p1']);
+      expect(await idsFor('trip co-op'), ['p1']);
+    });
+
+    test('German sharp s matches in both directions', () async {
+      await seedNote('de1', 'Größe', 'Die Straße ist groß');
+      expect(await idsFor('grosse'), ['de1']);
+      expect(await idsFor('strasse'), ['de1']);
+      expect(await idsFor('Straße'), ['de1']);
+      expect(await idsFor('Größe'), ['de1']);
+    });
+
+    test('Chinese and Japanese match inside a run of characters', () async {
+      await seedNote('zh1', '日记', '今天天气很好我们去公园散步');
+      await seedNote('ja1', 'メモ', '今日はとても良い天気ですね公園に行きました');
+
+      expect(await idsFor('天气'), ['zh1']);
+      expect(await idsFor('公园'), ['zh1']);
+      expect(await idsFor('天気'), ['ja1']);
+      expect(await idsFor('公園'), ['ja1']);
+      expect(await idsFor('今天 公园'), ['zh1'], reason: 'all words must match');
+      expect(await idsFor('今天 公園'), isEmpty);
+    });
+
+    test('substring search treats % and _ literally', () async {
+      await seedNote('zh2', '进度', '本月进度100%完成');
+
+      expect(await idsFor('度100%'), ['zh2']);
+      expect(await idsFor('度100_'), isEmpty,
+          reason: '_ is not a wildcard');
+      expect(await idsFor('度%完成'), isEmpty,
+          reason: '% is not a wildcard');
+    });
+
+    test('Korean (space-separated) still matches by word start', () async {
+      await seedNote('ko1', '한국어', '오늘은 날씨가 정말 좋아서');
+      expect(await idsFor('날씨'), ['ko1']);
+    });
+  });
+
+  group('Schema migration v3 to v4', () {
+    test('folds ß in the existing search index when upgrading', () async {
+      final docsPath = await PathProviderPlatform.instance
+          .getApplicationDocumentsPath();
+      final fullPath = p.join(docsPath!, AppConstants.dbName);
+
+      final v3 = await databaseFactory.openDatabase(
+        fullPath,
+        options: OpenDatabaseOptions(
+          version: 3,
+          onCreate: (db, version) async {
+            await db.execute('''
+              CREATE TABLE notebooks (
+                id TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                coverColor INTEGER NOT NULL,
+                paperStyleDefault TEXT NOT NULL,
+                sortOrder INTEGER NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL
+              )
+            ''');
+            await db.execute('''
+              CREATE TABLE notes (
+                id TEXT PRIMARY KEY,
+                title TEXT NOT NULL,
+                content TEXT NOT NULL,
+                notebookId TEXT,
+                paperStyle TEXT NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL,
+                verseReference TEXT,
+                FOREIGN KEY (notebookId) REFERENCES notebooks(id)
+                  ON DELETE CASCADE
+              )
+            ''');
+            await db.execute("""
+              CREATE VIRTUAL TABLE notes_fts USING fts5(
+                id UNINDEXED, title, plainText,
+                tokenize='porter unicode61'
+              )
+            """);
+            await db.execute(
+              'CREATE INDEX idx_notes_notebookId ON notes(notebookId)',
+            );
+          },
+        ),
+      );
+      await v3.insert('notes', {
+        'id': 'old_de',
+        'title': 'Größe',
+        'content': '[{"insert":"\\n"}]',
+        'notebookId': null,
+        'paperStyle': 'cream',
+        'createdAt': DateTime(2026, 1, 1).toIso8601String(),
+        'modifiedAt': DateTime(2026, 1, 1).toIso8601String(),
+        'verseReference': null,
+      });
+      await v3.insert('notes_fts', {
+        'id': 'old_de',
+        'title': 'Größe',
+        'plainText': 'Die Straße',
+      });
+      await v3.close();
+
+      final byAscii = await storage.searchNotes('strasse');
+      expect(byAscii.failed, isFalse);
+      expect(byAscii.data.map((n) => n.id), ['old_de']);
+
+      final byOriginal = await storage.searchNotes('Straße');
+      expect(byOriginal.data.map((n) => n.id), ['old_de']);
     });
   });
 }

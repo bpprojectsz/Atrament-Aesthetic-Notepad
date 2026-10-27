@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 enum NoteFontChoice { system, serif, inter, lora }
@@ -18,9 +18,9 @@ NoteFontChoice noteFontChoiceFromString(String? stored) {
 }
 
 /// A [TextStyle] carrying only the family for [choice], or null for the
-/// system default. Callers merge this into their own TextStyle. Merriweather
-/// is bundled; Inter and Lora are loaded lazily by `google_fonts` on first
-/// use and cached in app storage afterward.
+/// system default. Callers merge this into their own TextStyle. All three
+/// families (Merriweather, Inter, Lora) are bundled with the app, so they
+/// work offline and nothing is downloaded at runtime.
 TextStyle? noteFontFamilyStyle(NoteFontChoice choice) {
   switch (choice) {
     case NoteFontChoice.system:
@@ -28,9 +28,9 @@ TextStyle? noteFontFamilyStyle(NoteFontChoice choice) {
     case NoteFontChoice.serif:
       return const TextStyle(fontFamily: 'Merriweather');
     case NoteFontChoice.inter:
-      return GoogleFonts.inter();
+      return const TextStyle(fontFamily: 'Inter');
     case NoteFontChoice.lora:
-      return GoogleFonts.lora();
+      return const TextStyle(fontFamily: 'Lora');
   }
 }
 
@@ -57,9 +57,7 @@ class FontSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return SegmentedButton<NoteFontChoice>(
       segments: [
@@ -90,7 +88,7 @@ class FontSelector extends StatelessWidget {
               interLabel,
               maxLines: 1,
               softWrap: false,
-              style: GoogleFonts.inter(),
+              style: const TextStyle(fontFamily: 'Inter'),
             ),
           ),
         ),
@@ -102,7 +100,7 @@ class FontSelector extends StatelessWidget {
               loraLabel,
               maxLines: 1,
               softWrap: false,
-              style: GoogleFonts.lora(),
+              style: const TextStyle(fontFamily: 'Lora'),
             ),
           ),
         ),

@@ -13,11 +13,14 @@ import '../core/providers/note_provider.dart';
 import '../core/providers/notebook_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/providers/theme_provider.dart';
+import '../core/services/app_lock.dart';
 import '../core/services/export_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../core/utils/route_observer.dart';
 import '../platform/interstitial_service.dart';
@@ -30,13 +33,16 @@ import '../widgets/cover_color_picker.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/language_picker.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/lock_gate.dart';
 import '../widgets/move_to_notebook_sheet.dart';
+import '../widgets/new_notebook_dialog.dart';
 import '../widgets/note_actions_menu.dart';
 import '../widgets/note_card.dart';
 import '../widgets/note_list_item.dart';
 import '../widgets/notebook_actions_menu.dart';
 import '../widgets/rename_note_dialog.dart';
 import '../widgets/rename_notebook_dialog.dart';
+import '../widgets/user_issue_text.dart';
 import 'note_editor_screen.dart';
 import 'notebook_detail_screen.dart';
 import 'settings_screen.dart';
@@ -45,6 +51,16 @@ import 'settings_screen.dart';
 /// switches the body between the notebook grid and full-text note search
 /// results; an FAB creates a new notebook; a banner ad renders at the
 /// bottom for free-tier users.
+/// How far back the "Recent" chip looks.
+const Duration recentNotesWindow = Duration(days: 7);
+
+/// Notes edited within [recentNotesWindow] of [now].
+@visibleForTesting
+List<NoteModel> filterRecentNotes(List<NoteModel> notes, DateTime now) {
+  final cutoff = now.subtract(recentNotesWindow);
+  return notes.where((n) => n.modifiedAt.isAfter(cutoff)).toList();
+}
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
@@ -86,7 +102,14 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   /// until the next cold start.
   @override
   void didPopNext() {
-    widget.noteProvider.loadAllNotes();
+    // If a search is still typed in the box, keep it and re-run it so the
+    // list and the box agree; otherwise show all notes.
+    final typed = _searchController.text;
+    if (typed.trim().isNotEmpty) {
+      widget.noteProvider.search(typed, debounce: false);
+    } else {
+      widget.noteProvider.loadAllNotes();
+    }
   }
 
   @override
@@ -107,33 +130,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
 
   Future<void> _createNotebook() async {
     final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-
-    nameController.dispose();
-
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return;
 
     final now = DateTime.now();
@@ -141,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,
@@ -171,9 +168,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return AppScaffold(
       title: l10n.appName,
@@ -192,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           ),
         ),
         IconButton(
-          icon: const Icon(Icons.note_add),
+          icon: const Icon(Icons.create_new_folder_outlined),
           tooltip: l10n.newNotebookTitle,
           onPressed: _createNotebook,
         ),
@@ -226,6 +221,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: AppSpacing.sm),
+            _buildStorageWarning(mode),
             TextField(
               controller: _searchController,
               onChanged: widget.noteProvider.search,
@@ -262,6 +258,54 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           ],
         ),
       ),
+    );
+  }
+
+  /// Shows storage problems (failed load/save/delete) that were previously
+  /// only visible inside a notebook. Tap to dismiss.
+  Widget _buildStorageWarning(AppThemeMode mode) {
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        widget.noteProvider.persistenceWarning,
+        widget.notebookProvider.persistenceWarning,
+      ]),
+      builder: (context, _) {
+        final issue = widget.noteProvider.persistenceWarning.value ??
+            widget.notebookProvider.persistenceWarning.value;
+        if (issue == null) return const SizedBox.shrink();
+        final warning = storageIssueText(AppLocalizations.of(context)!, issue);
+        final color = AppColors.warning.resolve(mode);
+        return Padding(
+          padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+          child: Material(
+            color: color.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(AppRadius.textInput),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(AppRadius.textInput),
+              onTap: () {
+                widget.noteProvider.clearWarning();
+                widget.notebookProvider.clearWarning();
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.md,
+                  vertical: AppSpacing.sm,
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                    warning,
+                    style: TextStyle(
+                      color: color,
+                      fontSize: AppTypography.footnote.size,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 
@@ -369,6 +413,9 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   /// already used as the title dropped, joined and clipped at 200 chars.
   /// Handwriting notes have no text body and preview as empty.
   String _previewFor(NoteModel note) {
+    // While the note lock is on and the app is locked, list screens show
+    // titles only — the first lines of a note are its private content.
+    if (AppLock.instance.contentHidden.value) return '';
     final plain = plainTextFromContent(note.content);
     if (plain.isEmpty) return '';
     final lines = plain
@@ -448,31 +495,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
   }
 
   Future<String?> _promptNewNotebookName() async {
-    final l10n = AppLocalizations.of(context)!;
-    final nameController = TextEditingController();
-    final name = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.newNotebookTitle),
-        content: TextField(
-          controller: nameController,
-          autofocus: true,
-          decoration: InputDecoration(hintText: l10n.notebookNameHint),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(nameController.text),
-            child: Text(l10n.save),
-          ),
-        ],
-      ),
-    );
-    nameController.dispose();
-    final trimmed = name?.trim();
+    final trimmed = await showNewNotebookDialog(context);
     if (trimmed == null || trimmed.isEmpty || !mounted) return null;
 
     final now = DateTime.now();
@@ -480,7 +503,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       id: IdGenerator.generate(),
       name: trimmed,
       coverColor: AppColors.accent.light.toARGB32(),
-      paperStyleDefault: PaperStyleCatalog.all.first.id,
+      paperStyleDefault: await loadDefaultPaperStyleId(),
       sortOrder: widget.notebookProvider.notebooks.value.length,
       createdAt: now,
       modifiedAt: now,
@@ -490,33 +513,25 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     return notebook.id;
   }
 
+  /// Opens the note straight in the editor, whether or not it belongs to a
+  /// notebook, so Back returns to Home instead of landing on the notebook
+  /// screen first.
   void _openNoteForEdit(NoteModel note) {
-    final notebookId = note.notebookId;
-    if (notebookId == null) {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => NoteEditorScreen(
-            note: note,
-            noteProvider: widget.noteProvider,
-          ),
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => NoteEditorScreen(
+          note: note,
+          noteProvider: widget.noteProvider,
         ),
-      );
-    } else {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => NotebookDetailScreen.editingNote(
-            noteId: note.id,
-            notebookId: notebookId,
-            notebookProvider: widget.notebookProvider,
-            noteProvider: widget.noteProvider,
-          ),
-        ),
-      );
-    }
+      ),
+    );
   }
 
   Future<void> _handleExport(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
+    final exportable = _buildExportable(note, l10n);
     final format = await showModalBottomSheet<ExportFormat>(
       context: context,
       showDragHandle: true,
@@ -524,11 +539,13 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            ListTile(
-              leading: const Icon(Icons.description_outlined),
-              title: Text(l10n.exportAsTxt),
-              onTap: () => Navigator.pop(context, ExportFormat.txt),
-            ),
+            // A drawing has no text to put in a .txt file.
+            if (!exportable.hasInk)
+              ListTile(
+                leading: const Icon(Icons.description_outlined),
+                title: Text(l10n.exportAsTxt),
+                onTap: () => Navigator.pop(context, ExportFormat.txt),
+              ),
             ListTile(
               leading: const Icon(Icons.picture_as_pdf_outlined),
               title: Text(l10n.exportAsPdf),
@@ -540,7 +557,6 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     );
     if (format == null || !mounted) return;
 
-    final exportable = _buildExportable(note, l10n);
     const exportService = ExportService();
     final result = format == ExportFormat.txt
         ? await exportService.exportAsTxt(exportable)
@@ -550,7 +566,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     if (!result.succeeded) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(result.errorMessage ?? l10n.exportFailedMessage),
+          content: Text(l10n.exportFailedMessage),
         ),
       );
       return;
@@ -572,6 +588,8 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
 
   Future<void> _handleShare(NoteModel note) async {
     final l10n = AppLocalizations.of(context)!;
+    if (!await requireUnlock(context, reason: l10n.biometricShareReason)) return;
+    if (!mounted) return;
     final exportable = _buildExportable(note, l10n);
     const shareService = ShareService();
     final body = exportable.plainTextContent.isEmpty
@@ -595,6 +613,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         localeCode: Localizations.localeOf(context).languageCode,
       ),
       verseReferenceLabel: note.verseReference,
+      ink: ExportInk.fromNoteContent(note.content),
     );
   }
 
@@ -629,6 +648,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {
@@ -653,12 +673,16 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {
           return const Center(child: LoadingIndicator());
         }
-        final notes = widget.noteProvider.notes.value;
+        final notes = filterRecentNotes(
+          widget.noteProvider.notes.value,
+          DateTime.now(),
+        );
         if (notes.isEmpty) {
           return EmptyState(
             icon: Icons.history,
@@ -685,28 +709,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
             localeCode: Localizations.localeOf(context).languageCode,
           ),
           onTap: () {
-            final notebookId = note.notebookId;
-            if (notebookId == null) {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => NoteEditorScreen(
-                    note: note,
-                    noteProvider: widget.noteProvider,
-                  ),
-                ),
-              );
-            } else {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => NotebookDetailScreen.editingNote(
-                    noteId: note.id,
-                    notebookId: notebookId,
-                    notebookProvider: widget.notebookProvider,
-                    noteProvider: widget.noteProvider,
-                  ),
-                ),
-              );
-            }
+            _openNoteForEdit(note);
           },
           onMore: () => _handleNoteAction(note),
         );
@@ -720,6 +723,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       listenable: Listenable.merge([
         widget.noteProvider.notes,
         widget.noteProvider.isLoading,
+        AppLock.instance.contentHidden,
       ]),
       builder: (context, _) {
         if (widget.noteProvider.isLoading.value) {
@@ -745,28 +749,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
                 localeCode: Localizations.localeOf(context).languageCode,
               ),
               onTap: () {
-                final notebookId = note.notebookId;
-                if (notebookId == null) {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NoteEditorScreen(
-                        note: note,
-                        noteProvider: widget.noteProvider,
-                      ),
-                    ),
-                  );
-                } else {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NotebookDetailScreen.editingNote(
-                        noteId: note.id,
-                        notebookId: notebookId,
-                        notebookProvider: widget.notebookProvider,
-                        noteProvider: widget.noteProvider,
-                      ),
-                    ),
-                  );
-                }
+                _openNoteForEdit(note);
               },
               onMore: () => _handleNoteAction(note),
             );

@@ -2,6 +2,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../core/models/notebook_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Sentinel returned by [showMoveToNotebookSheet] when the user chooses
@@ -25,9 +26,7 @@ Future<String?> showMoveToNotebookSheet(
   required String? currentNotebookId,
 }) async {
   final l10n = AppLocalizations.of(context)!;
-  final mode = Theme.of(context).brightness == Brightness.dark
-      ? AppThemeMode.dark
-      : AppThemeMode.light;
+  final mode = context.appMode;
   final targets = notebooks
       .where((n) => n.id != currentNotebookId)
       .toList(growable: false);

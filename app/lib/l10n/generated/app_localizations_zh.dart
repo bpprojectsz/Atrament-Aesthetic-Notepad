@@ -155,6 +155,72 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unlockButton => '解锁';
 
   @override
+  String get noteLockTurnedOffMessage => '由于此设备未设置屏幕锁定或生物识别，笔记锁定已关闭。';
+
+  @override
+  String get biometricEnableReason => '请验证身份以开启笔记锁定';
+
+  @override
+  String get biometricDisableReason => '请验证身份以关闭笔记锁定';
+
+  @override
+  String get biometricShareReason => '解锁后即可分享或导出此笔记';
+
+  @override
+  String get biometricAuthFailedMessage => '无法验证您的身份。';
+
+  @override
+  String get biometricSetupNeededMessage => '请先在设备设置中设置屏幕锁定或指纹。';
+
+  @override
+  String get privacyChoicesTitle => '隐私选择';
+
+  @override
+  String get purchaseFailedMessage => '无法完成购买，请重试。';
+
+  @override
+  String get restoreSuccessMessage => '已恢复您的购买。';
+
+  @override
+  String get restoreNothingFoundMessage => '未找到此账户的历史购买记录。';
+
+  @override
+  String get restoreFailedMessage => '无法恢复购买。请检查网络连接后重试。';
+
+  @override
+  String get reminderScheduleFailedMessage => '无法设置提醒，请重试。';
+
+  @override
+  String get storageIssueNotebooksLoad => '部分笔记本无法加载，正在显示可用内容。';
+
+  @override
+  String get storageIssueNotebookSave => '此笔记本可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotebookChange => '此更改可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotebookDelete => '无法删除此笔记本，请重试。';
+
+  @override
+  String get storageIssueNotebookOrder => '新的排序可能未保存，请重试。';
+
+  @override
+  String get storageIssueNotesLoad => '部分笔记无法加载，正在显示可用内容。';
+
+  @override
+  String get storageIssueSearch => '搜索结果目前可能不完整。';
+
+  @override
+  String get storageIssueNoteSave => '此笔记可能未保存，请检查设备存储空间。';
+
+  @override
+  String get storageIssueNoteDelete => '无法删除此笔记，请重试。';
+
+  @override
+  String get purchaseUnavailableMessage => '此购买目前不可用，请稍后再试。';
+
+  @override
   String get exportTitle => '导出';
 
   @override

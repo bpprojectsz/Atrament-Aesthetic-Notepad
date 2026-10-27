@@ -6,6 +6,7 @@ import '../../platform/interstitial_service.dart';
 import '../models/note_model.dart';
 import '../services/local_storage.dart';
 import '../utils/quill_content_helper.dart';
+import '../utils/user_issues.dart';
 
 enum NoteSortOrder { modifiedDesc, createdDesc, titleAsc }
 
@@ -28,13 +29,29 @@ class NoteProvider {
   /// Set (non-null) when the most recent storage read/write silently fell
   /// back to in-memory data — the UI shows a warning banner while this is
   /// non-null (Section 15).
-  final ValueNotifier<String?> persistenceWarning = ValueNotifier(null);
+  final ValueNotifier<StorageIssue?> persistenceWarning = ValueNotifier(null);
 
   String? _activeNotebookId;
+
+  /// Waits for a pause in typing before querying, so fast typing runs one
+  /// search instead of one per keystroke.
+  static const Duration searchDebounceDelay = Duration(milliseconds: 250);
+  Timer? _searchDebounce;
+
+  /// Bumped by every search and every load. A search result is applied only
+  /// if no newer search or load started after it, so late answers to old
+  /// queries can never overwrite newer results.
+  int _searchGeneration = 0;
+
+  int _invalidateSearch() {
+    _searchDebounce?.cancel();
+    return ++_searchGeneration;
+  }
 
   /// Loads notes for [notebookId] and makes it the active scope for
   /// subsequent saves. Clears any active search.
   Future<void> loadNotebook(String notebookId) async {
+    _invalidateSearch();
     _activeNotebookId = notebookId;
     searchQuery.value = '';
     isLoading.value = true;
@@ -42,7 +59,7 @@ class NoteProvider {
     final result = await _storage.getNotesForNotebook(notebookId);
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Could not load all notes. Showing what\'s available.'
+        ? StorageIssue.notesLoadIncomplete
         : null;
 
     isLoading.value = false;
@@ -51,6 +68,7 @@ class NoteProvider {
   /// Loads every note regardless of notebook. Used by the home "All"
   /// and "Recent" chip scopes.
   Future<void> loadAllNotes() async {
+    _invalidateSearch();
     _activeNotebookId = null;
     searchQuery.value = '';
     isLoading.value = true;
@@ -58,30 +76,50 @@ class NoteProvider {
     final result = await _storage.getAllNotes();
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Could not load all notes. Showing what\'s available.'
+        ? StorageIssue.notesLoadIncomplete
         : null;
 
     isLoading.value = false;
   }
 
   /// Runs an indexed full-text search across all notebooks. Passing an
-  /// empty string clears search and falls back to the active notebook.
-  Future<void> search(String query) async {
+  /// empty string clears the search and restores the full list for the
+  /// current scope (the active notebook, or all notes on Home).
+  ///
+  /// Typed queries are debounced; pass `debounce: false` to search at once
+  /// (e.g. to re-run the current query after returning to a screen).
+  Future<void> search(String query, {bool debounce = true}) async {
     searchQuery.value = query;
+    final generation = _invalidateSearch();
 
     if (query.trim().isEmpty) {
       final notebookId = _activeNotebookId;
       if (notebookId != null) {
         await loadNotebook(notebookId);
+      } else {
+        await loadAllNotes();
       }
       return;
     }
 
+    if (debounce) {
+      _searchDebounce = Timer(searchDebounceDelay, () {
+        unawaited(_runSearch(query, generation));
+      });
+      return;
+    }
+    await _runSearch(query, generation);
+  }
+
+  Future<void> _runSearch(String query, int generation) async {
     isLoading.value = true;
     final result = await _storage.searchNotes(query);
+    // A newer search or load has started; it owns the list and the
+    // loading flag now.
+    if (generation != _searchGeneration) return;
     notes.value = _sorted(result.data);
     persistenceWarning.value = result.failed
-        ? 'Search results may be incomplete right now.'
+        ? StorageIssue.searchIncomplete
         : null;
     isLoading.value = false;
   }
@@ -118,7 +156,17 @@ class NoteProvider {
   /// title. Fires on every save, regardless of caller (decision F2 = B).
   /// If the content has no text either (e.g. handwriting), the title stays
   /// empty and the display layer falls back to `l10n.untitledNote`.
-  Future<bool> saveNote(NoteModel note, {required String plainTextContent}) async {
+  ///
+  /// [countsAsUserSave] is false only for the editor's silent autosave
+  /// (every 2 seconds of typing), which would otherwise advance the
+  /// interstitial-ad counter far faster than real saves. Every other save —
+  /// leaving the editor, backgrounding the app, rename, move — counts, as
+  /// it always did.
+  Future<bool> saveNote(
+    NoteModel note, {
+    required String plainTextContent,
+    bool countsAsUserSave = true,
+  }) async {
     final derived = note.title.trim().isEmpty
         ? firstNonEmptyLine(plainTextContent)
         : '';
@@ -133,7 +181,7 @@ class NoteProvider {
 
     if (!succeeded) {
       persistenceWarning.value =
-          'This note may not have saved. Please check your storage.';
+          StorageIssue.noteSaveFailed;
       // Graceful in-memory fallback: reflect the edit in the current list
       // even though it didn't persist, so the user doesn't lose visible
       // work mid-session.
@@ -142,7 +190,11 @@ class NoteProvider {
     }
 
     _upsertInMemory(effectiveNote);
-    unawaited(InterstitialService.instance.recordNoteSave());
+    // A successful write means any earlier storage warning is stale.
+    persistenceWarning.value = null;
+    if (countsAsUserSave) {
+      unawaited(InterstitialService.instance.recordNoteSave());
+    }
     return true;
   }
 
@@ -172,9 +224,10 @@ class NoteProvider {
     final succeeded = await _storage.deleteNote(id);
     if (succeeded) {
       notes.value = notes.value.where((n) => n.id != id).toList();
+      persistenceWarning.value = null;
     } else {
       persistenceWarning.value =
-          'Could not delete this note. Please try again.';
+          StorageIssue.noteDeleteFailed;
     }
     return succeeded;
   }
@@ -184,6 +237,7 @@ class NoteProvider {
   }
 
   void dispose() {
+    _searchDebounce?.cancel();
     notes.dispose();
     searchQuery.dispose();
     sortOrder.dispose();

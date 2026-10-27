@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Reusable scaffold used by every screen. Wraps [Scaffold] with themed
@@ -30,9 +31,7 @@ class AppScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final bgColor = AppColors.bgPrimary.resolve(mode);
     final titleColor = AppColors.textPrimary.resolve(mode);
 

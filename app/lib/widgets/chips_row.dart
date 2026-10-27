@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Which chip is selected on the home screen. Determines which body
@@ -33,9 +34,7 @@ class ChipsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final containerFill = AppColors.bgTertiary.resolve(mode);
     final segmentFill = AppColors.bgPrimary.resolve(mode);
     final selectedText = AppColors.textPrimary.resolve(mode);

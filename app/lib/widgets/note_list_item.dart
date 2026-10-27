@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Note row used on the home screen and in `notebook_detail_screen.dart`.
@@ -33,9 +34,7 @@ class NoteListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final titleColor = AppColors.textPrimary.resolve(mode);
     final previewColor = AppColors.textSecondary.resolve(mode);
     final dateColor = AppColors.textTertiary.resolve(mode);

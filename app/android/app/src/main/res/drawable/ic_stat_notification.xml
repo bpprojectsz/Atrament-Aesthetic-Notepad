@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Monochrome status-bar icon for the daily verse reminder: a page with
+     folded corner and three text lines cut out. Android renders notification
+     icons as a flat silhouette, so only the shape (alpha) matters. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M6,2h8l6,6v12a2,2 0 0,1 -2,2H6a2,2 0 0,1 -2,-2V4a2,2 0 0,1 2,-2zM13,3.5V9h5.5L13,3.5zM7,12h10v1.5H7V12zM7,15h10v1.5H7V15zM7,18h6v1.5H7V18z" />
+</vector>

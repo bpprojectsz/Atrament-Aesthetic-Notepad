@@ -2,6 +2,7 @@ import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// The three actions available on any notebook card from the 3-dot button.
@@ -15,9 +16,7 @@ enum NotebookAction { rename, changeCover, delete }
 /// rename's dialog prefills and hints differ from the note equivalent.
 Future<NotebookAction?> showNotebookActionsMenu(BuildContext context) async {
   final l10n = AppLocalizations.of(context)!;
-  final mode = Theme.of(context).brightness == Brightness.dark
-      ? AppThemeMode.dark
-      : AppThemeMode.light;
+  final mode = context.appMode;
 
   return showModalBottomSheet<NotebookAction>(
     context: context,

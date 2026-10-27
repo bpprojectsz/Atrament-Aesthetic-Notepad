@@ -155,6 +155,72 @@ class AppLocalizationsJa extends AppLocalizations {
   String get unlockButton => 'ロック解除';
 
   @override
+  String get noteLockTurnedOffMessage => 'このデバイスには画面ロックや生体認証が設定されていないため、ノートロックをオフにしました。';
+
+  @override
+  String get biometricEnableReason => 'ノートロックをオンにするには本人確認をしてください';
+
+  @override
+  String get biometricDisableReason => 'ノートロックをオフにするには本人確認をしてください';
+
+  @override
+  String get biometricShareReason => 'このノートを共有またはエクスポートするにはロックを解除してください';
+
+  @override
+  String get biometricAuthFailedMessage => '本人確認ができませんでした。';
+
+  @override
+  String get biometricSetupNeededMessage => '先にデバイスの設定で画面ロックまたは指紋認証を設定してください。';
+
+  @override
+  String get privacyChoicesTitle => 'プライバシー設定';
+
+  @override
+  String get purchaseFailedMessage => '購入を完了できませんでした。もう一度お試しください。';
+
+  @override
+  String get restoreSuccessMessage => '購入を復元しました。';
+
+  @override
+  String get restoreNothingFoundMessage => 'このアカウントで以前の購入は見つかりませんでした。';
+
+  @override
+  String get restoreFailedMessage => '購入を復元できませんでした。接続を確認してもう一度お試しください。';
+
+  @override
+  String get reminderScheduleFailedMessage => 'リマインダーを設定できませんでした。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebooksLoad => '一部のノートブックを読み込めませんでした。読み込めたものを表示しています。';
+
+  @override
+  String get storageIssueNotebookSave => 'このノートブックは保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookChange => 'この変更は保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookDelete => 'ノートブックを削除できませんでした。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotebookOrder => '新しい順序は保存されていない可能性があります。もう一度お試しください。';
+
+  @override
+  String get storageIssueNotesLoad => '一部のノートを読み込めませんでした。読み込めたものを表示しています。';
+
+  @override
+  String get storageIssueSearch => '検索結果が不完全な可能性があります。';
+
+  @override
+  String get storageIssueNoteSave => 'このノートは保存されていない可能性があります。端末のストレージを確認してください。';
+
+  @override
+  String get storageIssueNoteDelete => 'ノートを削除できませんでした。もう一度お試しください。';
+
+  @override
+  String get purchaseUnavailableMessage => 'この購入は現在ご利用いただけません。しばらくしてからもう一度お試しください。';
+
+  @override
   String get exportTitle => 'エクスポート';
 
   @override

@@ -4,9 +4,11 @@ import 'package:in_app_purchase/in_app_purchase.dart' show ProductDetails;
 
 import '../core/providers/subscription_provider.dart';
 import '../core/services/iap_service.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../widgets/app_scaffold.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/user_issue_text.dart';
 
 /// Paywall for the ad-removal subscription. Never a blocking modal —
 /// always reached from an optional "Remove Ads" row in Settings
@@ -16,6 +18,17 @@ class PremiumScreen extends StatelessWidget {
   const PremiumScreen({super.key, required this.subscriptionProvider});
 
   final SubscriptionProvider subscriptionProvider;
+
+  Future<void> _restore(BuildContext context, AppLocalizations l10n) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final outcome = await subscriptionProvider.restore();
+    final message = switch (outcome) {
+      RestoreOutcome.restored => l10n.restoreSuccessMessage,
+      RestoreOutcome.nothingFound => l10n.restoreNothingFoundMessage,
+      RestoreOutcome.failed => l10n.restoreFailedMessage,
+    };
+    messenger.showSnackBar(SnackBar(content: Text(message)));
+  }
 
   /// Returns the store's actual localized price for the ad-removal
   /// product if the catalog has loaded, falling back to a static
@@ -36,9 +49,7 @@ class PremiumScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
 
     return AppScaffold(
       title: l10n.premiumScreenTitle,
@@ -46,13 +57,14 @@ class PremiumScreen extends StatelessWidget {
         listenable: Listenable.merge([
           subscriptionProvider.status,
           subscriptionProvider.isProcessingPurchase,
-          subscriptionProvider.lastErrorMessage,
+          subscriptionProvider.lastFailure,
+          subscriptionProvider.purchaseFailed,
         ]),
         builder: (context, _) {
           final isPro =
               subscriptionProvider.status.value == SubscriptionStatus.pro;
           final isProcessing = subscriptionProvider.isProcessingPurchase.value;
-          final error = subscriptionProvider.lastErrorMessage.value;
+          final failure = subscriptionProvider.lastFailure.value;
 
           return Padding(
             padding: const EdgeInsets.all(AppSpacing.lg),
@@ -107,9 +119,11 @@ class PremiumScreen extends StatelessWidget {
                   const SizedBox(height: AppSpacing.md),
                   if (isProcessing)
                     const Center(child: LoadingIndicator())
-                  else if (error != null)
+                  else if (failure != null || subscriptionProvider.purchaseFailed.value)
                     Text(
-                      error,
+                      failure != null
+                          ? purchaseFailureText(l10n, failure)
+                          : l10n.purchaseFailedMessage,
                       style: TextStyle(
                         color: AppColors.error.resolve(mode),
                         fontSize: AppTypography.footnote.size,
@@ -120,7 +134,7 @@ class PremiumScreen extends StatelessWidget {
                     child: TextButton(
                       onPressed: isProcessing
                           ? null
-                          : subscriptionProvider.restore,
+                          : () => _restore(context, l10n),
                       child: Text(l10n.premiumRestoreButton),
                     ),
                   ),
@@ -149,9 +163,7 @@ class _PlanOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final accent = AppColors.accent.resolve(mode);
     final borderColor = highlighted ? accent : AppColors.borderSubtle.resolve(mode);
 

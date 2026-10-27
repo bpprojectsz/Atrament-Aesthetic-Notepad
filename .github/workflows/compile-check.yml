@@ -28,11 +28,32 @@ jobs:
         working-directory: app
 
       - name: Lint and compile Dart (flutter analyze)
-        run: flutter analyze
+        run: |
+          set +e
+          flutter analyze > "$RUNNER_TEMP/analyze.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/analyze.log"
+          if [ "$code" -ne 0 ]; then
+            msg=$(grep -E "(error|warning|info) •" "$RUNNER_TEMP/analyze.log" | head -n 40 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Analyzer findings::$msg"
+          fi
+          exit $code
         working-directory: app
 
       - name: Unit and widget tests
-        run: flutter test
+        run: |
+          set +e
+          flutter test --reporter expanded > "$RUNNER_TEMP/test.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/test.log"
+          if [ "$code" -ne 0 ]; then
+            # Surface failures as annotations so they are readable without log access.
+            key=$(grep -nE "\[E\]|Expected:|Actual:|Which:|══╡|Exception|Error:|Some tests failed" -A3 "$RUNNER_TEMP/test.log" | head -n 90 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            tail_=$(grep -vE '^[[:space:]]*$' "$RUNNER_TEMP/test.log" | tail -n 45 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Test failures::$key"
+            echo "::error title=Test log tail::$tail_"
+          fi
+          exit $code
         working-directory: app
 
       # gradlew is not committed (gitignored). `--config-only` runs Flutter's own
@@ -56,6 +77,32 @@ jobs:
             echo "::error title=Kotlin log tail::$tail_"
           fi
           exit $code
+        working-directory: app/android
+
+      # Links the Android resources (styles, themes, manifest) without
+      # assembling anything, so a bad theme parent or missing resource fails
+      # here instead of in a real build. Produces no APK.
+      - name: Link Android resources (no APK)
+        run: |
+          set +e
+          ./gradlew :app:processDebugResources --no-daemon --stacktrace > "$RUNNER_TEMP/res.log" 2>&1
+          code=$?
+          cat "$RUNNER_TEMP/res.log"
+          if [ "$code" -ne 0 ]; then
+            key=$(grep -nE "What went wrong|error:|AAPT|resource .* not found|Execution failed" -A6 "$RUNNER_TEMP/res.log" | head -n 60 | cut -c1-300 | sed 's/%/%25/g' | awk '{printf "%s%%0A",$0}')
+            echo "::error title=Resource link failure::$key"
+          fi
+          exit $code
+        working-directory: app/android
+
+      # Google Play requires native libraries to support 16 KB memory pages.
+      # Merges the libraries (no APK is built) and reports each one's
+      # alignment as an annotation. Informational: it never fails the run.
+      - name: Check native libraries for 16 KB pages (informational)
+        continue-on-error: true
+        run: |
+          ./gradlew :app:mergeDebugNativeLibs --no-daemon
+          python3 "$GITHUB_WORKSPACE/tools/check_native_alignment.py" "$GITHUB_WORKSPACE/app/build"
         working-directory: app/android
 
       - name: Android lint (informational, non-blocking)

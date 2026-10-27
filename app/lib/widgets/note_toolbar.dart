@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart' show QuillController, Attribute;
 
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Rich text formatting bar: bold, italic, underline, heading, bullet
@@ -69,9 +70,7 @@ class NoteToolbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final bgColor = AppColors.bgSecondary.resolve(mode);
     final borderColor = AppColors.borderSubtle.resolve(mode);
 
@@ -177,9 +176,7 @@ class _ToolbarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final accent = AppColors.accent.resolve(mode);
 
     return SizedBox(

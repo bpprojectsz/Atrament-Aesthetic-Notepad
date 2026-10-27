@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
+import 'package:flutter/foundation.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -22,7 +23,11 @@ import '../utils/error_handler.dart';
 class EngagementService {
   EngagementService._internal();
 
-  static final EngagementService instance = EngagementService._internal();
+  /// Replaceable so tests can substitute a fake.
+  static EngagementService instance = EngagementService._internal();
+
+  @visibleForTesting
+  EngagementService.forTesting();
 
   static const int _reviewMinSaves = 20;
   static const int _shareMinExports = 10;
@@ -125,14 +130,12 @@ class EngagementService {
       if (sinceLast < _reviewCooldown) return;
     }
 
-    // Open the store listing rather than requestReview(): the native
-    // in-app review API enforces its own invisible quota and can
-    // silently no-op. openStoreListing() always lands somewhere the
-    // user can act. This matches pub.dev guidance.
+    // Use the native in-app review sheet. It keeps the user inside the app
+    // (Apple does not allow custom prompts that send people to the store),
+    // and the OS applies its own quota, so it may legitimately show
+    // nothing. We still record the attempt so we don't ask again soon.
     if (await _review.isAvailable()) {
-      await _review.openStoreListing(
-        appStoreId: null,
-      );
+      await _review.requestReview();
     }
     await prefs.setInt(
       AppConstants.prefLastReviewPrompt,
@@ -195,9 +198,36 @@ class EngagementService {
   // -----------------------------------------------------------------
 
   /// Called by the "Rate Atrament" row in Settings. Bypasses thresholds.
-  Future<void> openStoreListingForReview() async {
-    if (await _review.isAvailable()) {
-      await _review.openStoreListing(appStoreId: null);
+  /// The numeric App Store ID inside [AppConstants.appStoreUrl], or null
+  /// while it is still the all-zero placeholder. Filling in the real ID in
+  /// that one constant makes both the Share link and the Rate row work on
+  /// iOS.
+  @visibleForTesting
+  static String? appStoreIdFromUrl(String url) {
+    final match = RegExp(r'/id(\d+)').firstMatch(url);
+    final id = match?.group(1);
+    if (id == null || RegExp(r'^0+$').hasMatch(id)) return null;
+    return id;
+  }
+
+  /// Opens the store page for rating. Returns false (never throws) when it
+  /// could not be opened, so the caller can tell the user.
+  Future<bool> openStoreListingForReview() async {
+    try {
+      if (!await _review.isAvailable()) return false;
+      await _review.openStoreListing(
+        appStoreId: appStoreIdFromUrl(AppConstants.appStoreUrl),
+      );
+      return true;
+    } catch (error, stackTrace) {
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Could not open the store listing',
+        context: 'engagement_service.openStoreListingForReview',
+        severity: ErrorSeverity.warning,
+      );
+      return false;
     }
   }
 }

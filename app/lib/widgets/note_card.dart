@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/models/paper_style_model.dart';
+import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 
 /// Preview card for grid views (home screen notebook grid, note grid)
@@ -36,9 +37,7 @@ class NoteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mode = Theme.of(context).brightness == Brightness.dark
-        ? AppThemeMode.dark
-        : AppThemeMode.light;
+    final mode = context.appMode;
     final borderColor = AppColors.borderSubtle.resolve(mode);
     final bgColor = AppColors.bgSecondary.resolve(mode);
     final titleColor = AppColors.textPrimary.resolve(mode);
