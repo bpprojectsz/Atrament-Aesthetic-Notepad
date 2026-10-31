@@ -19,6 +19,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/error_handler.dart';
 import '../core/utils/export_helper.dart';
+import '../core/utils/locale_utils.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/font_selector.dart';
@@ -402,7 +403,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
       plainTextContent: asInk ? '' : _quillController.document.toPlainText(),
       createdAtLabel: DateFormatter.short(
         widget.note.createdAt,
-        localeCode: Localizations.localeOf(context).languageCode,
+        localeCode: dateLocaleName(Localizations.localeOf(context)),
       ),
       verseReferenceLabel: widget.note.verseReference,
       ink: asInk

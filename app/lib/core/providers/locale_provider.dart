@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/constants.dart';
 import '../utils/error_handler.dart';
+import '../utils/locale_utils.dart';
 
 /// Owns the user's manual language selection. A null [preference] means
 /// "follow the device locale" — Flutter's default behaviour when
@@ -25,7 +26,9 @@ class LocaleProvider {
       final prefs = await SharedPreferences.getInstance();
       final code = prefs.getString(AppConstants.prefLocale);
       if (code != null && code.isNotEmpty) {
-        preference.value = Locale(code);
+        preference.value = migrateLegacyLocale(
+          localeFromTag(code) ?? const Locale('en'),
+        );
       }
       // else: leave null; Flutter resolves from the device locale.
     } catch (error, stackTrace) {
@@ -46,7 +49,7 @@ class LocaleProvider {
       if (locale == null) {
         await prefs.remove(AppConstants.prefLocale);
       } else {
-        await prefs.setString(AppConstants.prefLocale, locale.languageCode);
+        await prefs.setString(AppConstants.prefLocale, localeTag(locale));
       }
     } catch (error, stackTrace) {
       ErrorHandler.report(

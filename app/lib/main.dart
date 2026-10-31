@@ -18,19 +18,13 @@ import 'core/utils/app_localization_setup.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/constants.dart';
 import 'core/utils/error_handler.dart';
+import 'core/utils/locale_utils.dart';
 import 'core/utils/route_observer.dart';
 import 'platform/admob_service.dart';
 import 'platform/debug_log_service.dart';
 import 'platform/notification_service.dart';
 import 'screens/home_screen.dart';
 
-/// Locale codes in [AppLocalizations.supportedLocales] that read
-/// right-to-left. Flutter's `MaterialApp` already resolves text direction
-/// automatically from the active locale via its internal `Localizations`
-/// wrapper, but Section 16 calls for an explicit `Directionality` wrapper
-/// as a deliverable — this makes the RTL decision visible and overridable
-/// in one place rather than relying entirely on framework defaults.
-const Set<String> _rtlLanguageCodes = {'ar', 'he'};
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -163,11 +157,8 @@ class _AtramentAppState extends State<AtramentApp>
       final wanted =
           _localeProvider.preference.value ??
           WidgetsBinding.instance.platformDispatcher.locale;
-      final supported = AppLocalizations.supportedLocales.any(
-        (l) => l.languageCode == wanted.languageCode,
-      );
       final l10n = lookupAppLocalizations(
-        supported ? Locale(wanted.languageCode) : const Locale('en'),
+        resolveAppLocale([wanted], AppLocalizations.supportedLocales),
       );
       await ReminderScheduler.instance.refresh(
         fallbackTitle: l10n.appName,
@@ -238,9 +229,10 @@ class _AtramentAppState extends State<AtramentApp>
             theme: buildAppTheme(_themeProvider.mode.value),
             localizationsDelegates: appLocalizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
+            localeListResolutionCallback: resolveAppLocale,
             builder: (context, child) {
               final locale = Localizations.localeOf(context);
-              final isRtl = _rtlLanguageCodes.contains(locale.languageCode);
+              final isRtl = rtlLanguageCodes.contains(locale.languageCode);
               return Directionality(
                 textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
                 child: child ?? const SizedBox.shrink(),

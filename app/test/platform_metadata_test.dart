@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:atrament/core/utils/locale_utils.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -7,8 +8,8 @@ import 'package:flutter_test/flutter_test.dart';
 /// the languages the stores list, the iOS launch setup, and the Android
 /// resources the code refers to by name.
 void main() {
-  final supported = AppLocalizations.supportedLocales
-      .map((l) => l.languageCode)
+  final supported = pickerLocales(AppLocalizations.supportedLocales)
+      .map((l) => l.toLanguageTag())
       .toSet();
 
   String read(String path) => File(path).readAsStringSync();

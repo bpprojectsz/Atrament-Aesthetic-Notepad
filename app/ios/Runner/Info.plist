@@ -109,8 +109,10 @@
 			<string>hi</string>
 			<string>ja</string>
 			<string>ko</string>
-			<string>pt</string>
-			<string>zh</string>
+			<string>pt-BR</string>
+			<string>pt-PT</string>
+			<string>zh-Hans</string>
+			<string>zh-Hant</string>
 		</array>
 		<!-- Export compliance: the app only uses the encryption built into the
 		     operating system (HTTPS), which is exempt. Answers the question App

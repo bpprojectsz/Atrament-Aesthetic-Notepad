@@ -66,7 +66,7 @@
   "restoreSuccessMessage": "Sua compra foi restaurada.",
   "restoreNothingFoundMessage": "Nenhuma compra anterior foi encontrada para esta conta.",
   "restoreFailedMessage": "Não foi possível restaurar as compras. Verifique sua conexão e tente novamente.",
-  "reminderScheduleFailedMessage": "Não foi possível programar o lembrete. Tente novamente.",
+  "reminderScheduleFailedMessage": "Não foi possível agendar o lembrete. Tente novamente.",
   "storageIssueNotebooksLoad": "Alguns cadernos não puderam ser carregados. Mostrando o que está disponível.",
   "storageIssueNotebookSave": "Este caderno pode não ter sido salvo. Tente novamente.",
   "storageIssueNotebookChange": "Esta alteração pode não ter sido salva. Tente novamente.",

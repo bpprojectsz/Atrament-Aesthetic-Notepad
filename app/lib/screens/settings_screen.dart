@@ -18,6 +18,7 @@ import '../core/services/reminder_scheduler.dart';
 import '../core/utils/app_theme.dart';
 import '../core/utils/constants.dart';
 import '../core/utils/error_handler.dart';
+import '../core/utils/locale_utils.dart';
 import '../platform/admob_service.dart';
 import '../platform/consent_service.dart';
 import '../platform/debug_log_service.dart';
@@ -502,8 +503,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
               final current = localeProvider.preference.value;
               final title = current == null
                   ? l10n.languageSystem
-                  : nativeNameFor(current.languageCode) ??
-                        current.languageCode;
+                  : nativeNameFor(localeTag(current)) ??
+                        localeTag(current);
               final subtitle = current == null
                   ? l10n.languageFollowsSystem
                   : null;

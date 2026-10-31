@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../core/providers/locale_provider.dart';
 import '../core/utils/constants.dart';
+import '../core/utils/locale_utils.dart';
 
 /// Shows the language picker bottom sheet. Selecting "System default"
 /// clears the override; selecting a language stores it.
@@ -44,15 +45,16 @@ Future<void> showLanguagePicker(
                 onTap: () => Navigator.pop(context, ''),
               ),
               const Divider(height: 1),
-              for (final locale in AppLocalizations.supportedLocales)
+              for (final locale in pickerLocales(
+                AppLocalizations.supportedLocales,
+              ))
                 ListTile(
-                  title: Text(
-                    nativeNameFor(locale.languageCode) ?? locale.languageCode,
-                  ),
-                  trailing: current?.languageCode == locale.languageCode
+                  title: Text(nativeNameFor(localeTag(locale)) ?? localeTag(locale)),
+                  trailing:
+                      current != null && localeTag(current) == localeTag(locale)
                       ? const Icon(Icons.check)
                       : null,
-                  onTap: () => Navigator.pop(context, locale.languageCode),
+                  onTap: () => Navigator.pop(context, localeTag(locale)),
                 ),
             ],
           ),
@@ -65,7 +67,7 @@ Future<void> showLanguagePicker(
   if (picked.isEmpty) {
     await localeProvider.setLocale(null);
   } else {
-    await localeProvider.setLocale(Locale(picked));
+    await localeProvider.setLocale(localeFromTag(picked));
   }
 }
 
@@ -73,8 +75,18 @@ Future<void> showLanguagePicker(
 /// language in its own script, which is the conventional UX for language
 /// selectors — a translated label would be unreadable to users who do not
 /// yet speak the currently active language.
-String? nativeNameFor(String code) {
-  switch (code) {
+String? nativeNameFor(String tag) {
+  switch (tag) {
+    case 'pt_BR':
+      return 'Português (Brasil)';
+    case 'pt_PT':
+      return 'Português (Portugal)';
+    case 'zh_Hans':
+      return '简体中文';
+    case 'zh_Hant':
+      return '繁體中文';
+  }
+  switch (tag.split('_').first) {
     case 'ar':
       return 'العربية';
     case 'de':

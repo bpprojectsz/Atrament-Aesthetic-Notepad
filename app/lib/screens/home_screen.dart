@@ -20,6 +20,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/locale_utils.dart';
 import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../core/utils/route_observer.dart';
@@ -610,7 +611,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       plainTextContent: plainTextFromContent(note.content),
       createdAtLabel: DateFormatter.short(
         note.createdAt,
-        localeCode: Localizations.localeOf(context).languageCode,
+        localeCode: dateLocaleName(Localizations.localeOf(context)),
       ),
       verseReferenceLabel: note.verseReference,
       ink: ExportInk.fromNoteContent(note.content),
@@ -706,7 +707,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           previewText: _previewFor(note),
           dateLabel: DateFormatter.short(
             note.modifiedAt,
-            localeCode: Localizations.localeOf(context).languageCode,
+            localeCode: dateLocaleName(Localizations.localeOf(context)),
           ),
           onTap: () {
             _openNoteForEdit(note);
@@ -746,7 +747,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
               previewText: _previewFor(note),
               dateLabel: DateFormatter.short(
                 note.modifiedAt,
-                localeCode: Localizations.localeOf(context).languageCode,
+                localeCode: dateLocaleName(Localizations.localeOf(context)),
               ),
               onTap: () {
                 _openNoteForEdit(note);
@@ -796,7 +797,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
               title: notebook.name,
               dateLabel: DateFormatter.short(
                 notebook.modifiedAt,
-                localeCode: Localizations.localeOf(context).languageCode,
+                localeCode: dateLocaleName(Localizations.localeOf(context)),
               ),
               paperStyle: PaperStyleCatalog.byId(notebook.paperStyleDefault),
               coverColor: notebook.coverColor,
