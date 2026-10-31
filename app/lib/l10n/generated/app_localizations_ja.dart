@@ -155,7 +155,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get unlockButton => 'ロック解除';
 
   @override
-  String get noteLockTurnedOffMessage => 'このデバイスには画面ロックや生体認証が設定されていないため、ノートロックをオフにしました。';
+  String get noteLockTurnedOffMessage =>
+      'このデバイスには画面ロックや生体認証が設定されていないため、ノートロックをオフにしました。';
 
   @override
   String get biometricEnableReason => 'ノートロックをオンにするには本人確認をしてください';
@@ -191,10 +192,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get reminderScheduleFailedMessage => 'リマインダーを設定できませんでした。もう一度お試しください。';
 
   @override
-  String get storageIssueNotebooksLoad => '一部のノートブックを読み込めませんでした。読み込めたものを表示しています。';
+  String get storageIssueNotebooksLoad =>
+      '一部のノートブックを読み込めませんでした。読み込めたものを表示しています。';
 
   @override
-  String get storageIssueNotebookSave => 'このノートブックは保存されていない可能性があります。もう一度お試しください。';
+  String get storageIssueNotebookSave =>
+      'このノートブックは保存されていない可能性があります。もう一度お試しください。';
 
   @override
   String get storageIssueNotebookChange => 'この変更は保存されていない可能性があります。もう一度お試しください。';
@@ -212,13 +215,15 @@ class AppLocalizationsJa extends AppLocalizations {
   String get storageIssueSearch => '検索結果が不完全な可能性があります。';
 
   @override
-  String get storageIssueNoteSave => 'このノートは保存されていない可能性があります。端末のストレージを確認してください。';
+  String get storageIssueNoteSave =>
+      'このノートは保存されていない可能性があります。端末のストレージを確認してください。';
 
   @override
   String get storageIssueNoteDelete => 'ノートを削除できませんでした。もう一度お試しください。';
 
   @override
-  String get purchaseUnavailableMessage => 'この購入は現在ご利用いただけません。しばらくしてからもう一度お試しください。';
+  String get purchaseUnavailableMessage =>
+      'この購入は現在ご利用いただけません。しばらくしてからもう一度お試しください。';
 
   @override
   String get exportTitle => 'エクスポート';

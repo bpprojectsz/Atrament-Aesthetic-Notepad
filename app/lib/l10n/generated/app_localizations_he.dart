@@ -156,13 +156,16 @@ class AppLocalizationsHe extends AppLocalizations {
   String get unlockButton => 'בטל נעילה';
 
   @override
-  String get noteLockTurnedOffMessage => 'נעילת הפתקיות כובתה כי במכשיר זה לא הוגדרו נעילת מסך או זיהוי ביומטרי.';
+  String get noteLockTurnedOffMessage =>
+      'נעילת הפתקיות כובתה כי במכשיר זה לא הוגדרו נעילת מסך או זיהוי ביומטרי.';
 
   @override
-  String get biometricEnableReason => 'אמת את זהותך כדי להפעיל את נעילת הפתקיות';
+  String get biometricEnableReason =>
+      'אמת את זהותך כדי להפעיל את נעילת הפתקיות';
 
   @override
-  String get biometricDisableReason => 'אמת את זהותך כדי לכבות את נעילת הפתקיות';
+  String get biometricDisableReason =>
+      'אמת את זהותך כדי לכבות את נעילת הפתקיות';
 
   @override
   String get biometricShareReason => 'בטל נעילה כדי לשתף או לייצא פתקית זו';
@@ -171,7 +174,8 @@ class AppLocalizationsHe extends AppLocalizations {
   String get biometricAuthFailedMessage => 'לא ניתן היה לאמת את זהותך.';
 
   @override
-  String get biometricSetupNeededMessage => 'הגדר תחילה נעילת מסך או טביעת אצבע בהגדרות המכשיר.';
+  String get biometricSetupNeededMessage =>
+      'הגדר תחילה נעילת מסך או טביעת אצבע בהגדרות המכשיר.';
 
   @override
   String get privacyChoicesTitle => 'אפשרויות פרטיות';
@@ -183,16 +187,20 @@ class AppLocalizationsHe extends AppLocalizations {
   String get restoreSuccessMessage => 'הרכישה שלך שוחזרה.';
 
   @override
-  String get restoreNothingFoundMessage => 'לא נמצאה רכישה קודמת עבור חשבון זה.';
+  String get restoreNothingFoundMessage =>
+      'לא נמצאה רכישה קודמת עבור חשבון זה.';
 
   @override
-  String get restoreFailedMessage => 'לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.';
+  String get restoreFailedMessage =>
+      'לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.';
 
   @override
-  String get reminderScheduleFailedMessage => 'לא ניתן היה לתזמן את התזכורת. נסה שוב.';
+  String get reminderScheduleFailedMessage =>
+      'לא ניתן היה לתזמן את התזכורת. נסה שוב.';
 
   @override
-  String get storageIssueNotebooksLoad => 'לא ניתן היה לטעון חלק מהמחברות. מוצג מה שזמין.';
+  String get storageIssueNotebooksLoad =>
+      'לא ניתן היה לטעון חלק מהמחברות. מוצג מה שזמין.';
 
   @override
   String get storageIssueNotebookSave => 'ייתכן שמחברת זו לא נשמרה. נסה שוב.';
@@ -201,25 +209,29 @@ class AppLocalizationsHe extends AppLocalizations {
   String get storageIssueNotebookChange => 'ייתכן ששינוי זה לא נשמר. נסה שוב.';
 
   @override
-  String get storageIssueNotebookDelete => 'לא ניתן היה למחוק את המחברת. נסה שוב.';
+  String get storageIssueNotebookDelete =>
+      'לא ניתן היה למחוק את המחברת. נסה שוב.';
 
   @override
   String get storageIssueNotebookOrder => 'ייתכן שהסדר החדש לא נשמר. נסה שוב.';
 
   @override
-  String get storageIssueNotesLoad => 'לא ניתן היה לטעון חלק מהפתקיות. מוצג מה שזמין.';
+  String get storageIssueNotesLoad =>
+      'לא ניתן היה לטעון חלק מהפתקיות. מוצג מה שזמין.';
 
   @override
   String get storageIssueSearch => 'ייתכן שתוצאות החיפוש אינן שלמות כרגע.';
 
   @override
-  String get storageIssueNoteSave => 'ייתכן שפתקית זו לא נשמרה. בדוק את האחסון במכשיר.';
+  String get storageIssueNoteSave =>
+      'ייתכן שפתקית זו לא נשמרה. בדוק את האחסון במכשיר.';
 
   @override
   String get storageIssueNoteDelete => 'לא ניתן היה למחוק את הפתקית. נסה שוב.';
 
   @override
-  String get purchaseUnavailableMessage => 'רכישה זו אינה זמינה כרגע. נסה שוב מאוחר יותר.';
+  String get purchaseUnavailableMessage =>
+      'רכישה זו אינה זמינה כרגע. נסה שוב מאוחר יותר.';
 
   @override
   String get exportTitle => 'ייצוא';

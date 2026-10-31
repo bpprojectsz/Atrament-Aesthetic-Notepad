@@ -157,7 +157,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get unlockButton => 'فتح القفل';
 
   @override
-  String get noteLockTurnedOffMessage => 'تم إيقاف قفل الملاحظات لأن هذا الجهاز لا يحتوي على قفل شاشة أو مصادقة حيوية مُعدّة.';
+  String get noteLockTurnedOffMessage =>
+      'تم إيقاف قفل الملاحظات لأن هذا الجهاز لا يحتوي على قفل شاشة أو مصادقة حيوية مُعدّة.';
 
   @override
   String get biometricEnableReason => 'أكّد هويتك لتشغيل قفل الملاحظات';
@@ -166,61 +167,76 @@ class AppLocalizationsAr extends AppLocalizations {
   String get biometricDisableReason => 'أكّد هويتك لإيقاف قفل الملاحظات';
 
   @override
-  String get biometricShareReason => 'افتح القفل لمشاركة هذه الملاحظة أو تصديرها';
+  String get biometricShareReason =>
+      'افتح القفل لمشاركة هذه الملاحظة أو تصديرها';
 
   @override
   String get biometricAuthFailedMessage => 'تعذّر التحقق من هويتك.';
 
   @override
-  String get biometricSetupNeededMessage => 'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
+  String get biometricSetupNeededMessage =>
+      'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
 
   @override
   String get privacyChoicesTitle => 'خيارات الخصوصية';
 
   @override
-  String get purchaseFailedMessage => 'تعذّر إتمام عملية الشراء. يُرجى المحاولة مرة أخرى.';
+  String get purchaseFailedMessage =>
+      'تعذّر إتمام عملية الشراء. يُرجى المحاولة مرة أخرى.';
 
   @override
   String get restoreSuccessMessage => 'تمت استعادة مشترياتك.';
 
   @override
-  String get restoreNothingFoundMessage => 'لم يتم العثور على عملية شراء سابقة لهذا الحساب.';
+  String get restoreNothingFoundMessage =>
+      'لم يتم العثور على عملية شراء سابقة لهذا الحساب.';
 
   @override
-  String get restoreFailedMessage => 'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
+  String get restoreFailedMessage =>
+      'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
 
   @override
-  String get reminderScheduleFailedMessage => 'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
+  String get reminderScheduleFailedMessage =>
+      'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebooksLoad => 'تعذّر تحميل بعض الدفاتر. يتم عرض المتاح فقط.';
+  String get storageIssueNotebooksLoad =>
+      'تعذّر تحميل بعض الدفاتر. يتم عرض المتاح فقط.';
 
   @override
-  String get storageIssueNotebookSave => 'قد لا يكون هذا الدفتر قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookSave =>
+      'قد لا يكون هذا الدفتر قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookChange => 'قد لا يكون هذا التغيير قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookChange =>
+      'قد لا يكون هذا التغيير قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookDelete => 'تعذّر حذف الدفتر. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookDelete =>
+      'تعذّر حذف الدفتر. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookOrder => 'قد لا يكون الترتيب الجديد قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookOrder =>
+      'قد لا يكون الترتيب الجديد قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotesLoad => 'تعذّر تحميل بعض الملاحظات. يتم عرض المتاح فقط.';
+  String get storageIssueNotesLoad =>
+      'تعذّر تحميل بعض الملاحظات. يتم عرض المتاح فقط.';
 
   @override
   String get storageIssueSearch => 'قد تكون نتائج البحث غير مكتملة حاليًا.';
 
   @override
-  String get storageIssueNoteSave => 'قد لا تكون هذه الملاحظة قد حُفظت. يُرجى التحقق من مساحة تخزين الجهاز.';
+  String get storageIssueNoteSave =>
+      'قد لا تكون هذه الملاحظة قد حُفظت. يُرجى التحقق من مساحة تخزين الجهاز.';
 
   @override
-  String get storageIssueNoteDelete => 'تعذّر حذف الملاحظة. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNoteDelete =>
+      'تعذّر حذف الملاحظة. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get purchaseUnavailableMessage => 'هذه العملية الشرائية غير متاحة حاليًا. يُرجى المحاولة لاحقًا.';
+  String get purchaseUnavailableMessage =>
+      'هذه العملية الشرائية غير متاحة حاليًا. يُرجى المحاولة لاحقًا.';
 
   @override
   String get exportTitle => 'تصدير';
