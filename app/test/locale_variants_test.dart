@@ -8,7 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  final supported = AppLocalizations.supportedLocales;
+  const supported = AppLocalizations.supportedLocales;
 
   Locale resolve(String tag) =>
       resolveAppLocale([localeFromTag(tag)!], supported);
