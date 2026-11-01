@@ -1,6 +1,7 @@
 import 'package:atrament/core/utils/app_localization_setup.dart';
 import 'package:atrament/core/utils/app_theme.dart';
 import 'package:atrament/core/utils/constants.dart';
+import 'package:atrament/core/utils/quill_extra_localizations.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:atrament/widgets/app_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +106,39 @@ void main() {
         const Locale('zh'),
       );
       // A language flutter_quill has no translations for falls back to English.
-      expect(quillLocaleFor(const Locale('ta')), const Locale('en'));
+      expect(quillLocaleFor(const Locale('xx')), const Locale('en'));
+    });
+
+    test('the app supplies editor labels for languages Quill lacks', () async {
+      for (final code in ['ta', 'te', 'mr', 'fil']) {
+        expect(
+          FlutterQuillLocalizations.delegate.isSupported(Locale(code)),
+          isFalse,
+          reason: '$code is now in flutter_quill: drop our copy',
+        );
+        final l10n = await const QuillLocalizationsFallbackDelegate().load(
+          Locale(code),
+        );
+        expect(l10n, isA<AppQuillLocalizations>());
+        expect(l10n.bold, isNotEmpty);
+        expect(l10n.bold, isNot('Bold'), reason: code);
+        expect(
+          l10n.theImageHasBeenSavedAt('/a/b.png'),
+          contains('/a/b.png'),
+          reason: code,
+        );
+        expect(l10n.theImageHasBeenSavedAt('/a/b.png'), isNot(contains('{')));
+      }
+    });
+
+    test('every set has the same labels', () {
+      final sizes = appQuillTranslations.values.map((m) => m.length).toSet();
+      expect(sizes, {106});
+      final first = appQuillTranslations.values.first.keys.toSet();
+      for (final m in appQuillTranslations.values) {
+        expect(m.keys.toSet(), first);
+        expect(m.values.where((v) => v.trim().isEmpty), isEmpty);
+      }
     });
 
     testWidgets('Quill can find its translations in every app language', (

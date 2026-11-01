@@ -1,12 +1,15 @@
+import 'package:atrament/core/utils/quill_extra_localizations.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
+import 'package:flutter/foundation.dart' show SynchronousFuture, visibleForTesting;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_quill/flutter_quill.dart' show FlutterQuillLocalizations;
 
 /// The language flutter_quill should use for [locale].
 ///
 /// flutter_quill ships its own translations and does not cover every language
-/// the app has. It knows Norwegian as `no` (the app uses `nb`), and has none
-/// for a few languages, which fall back to English. Without this, the editor
+/// the app has. It knows Norwegian as `no` (the app uses `nb`). Languages it
+/// lacks entirely either have translations of the app's own
+/// ([appQuillTranslations]) or fall back to English. Without this, the editor
 /// cannot find its labels in those languages.
 @visibleForTesting
 Locale quillLocaleFor(Locale locale) {
@@ -28,8 +31,15 @@ class QuillLocalizationsFallbackDelegate
   bool isSupported(Locale locale) => true;
 
   @override
-  Future<FlutterQuillLocalizations> load(Locale locale) =>
-      FlutterQuillLocalizations.delegate.load(quillLocaleFor(locale));
+  Future<FlutterQuillLocalizations> load(Locale locale) {
+    final own = appQuillTranslations[locale.languageCode];
+    if (own != null) {
+      return SynchronousFuture<FlutterQuillLocalizations>(
+        AppQuillLocalizations(locale.languageCode, own),
+      );
+    }
+    return FlutterQuillLocalizations.delegate.load(quillLocaleFor(locale));
+  }
 
   @override
   bool shouldReload(QuillLocalizationsFallbackDelegate old) => false;
