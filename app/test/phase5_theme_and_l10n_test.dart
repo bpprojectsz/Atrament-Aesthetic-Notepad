@@ -85,10 +85,27 @@ void main() {
 
   group('localization delegates', () {
     test('include flutter_quill\'s', () {
-      expect(appLocalizationsDelegates, contains(FlutterQuillLocalizations.delegate));
+      expect(
+        appLocalizationsDelegates.any((d) => d.type == FlutterQuillLocalizations),
+        isTrue,
+      );
       for (final delegate in AppLocalizations.localizationsDelegates) {
         expect(appLocalizationsDelegates, contains(delegate));
       }
+    });
+
+    test('Quill gets a language it supports for every app language', () {
+      expect(quillLocaleFor(const Locale('nb')), const Locale('no'));
+      expect(quillLocaleFor(const Locale('de')), const Locale('de'));
+      expect(quillLocaleFor(const Locale('pt', 'PT')), const Locale('pt'));
+      expect(
+        quillLocaleFor(
+          const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
+        ),
+        const Locale('zh'),
+      );
+      // A language flutter_quill has no translations for falls back to English.
+      expect(quillLocaleFor(const Locale('ta')), const Locale('en'));
     });
 
     testWidgets('Quill can find its translations in every app language', (
