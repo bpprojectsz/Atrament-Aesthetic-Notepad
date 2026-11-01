@@ -143,6 +143,16 @@ String? nativeNameFor(String tag) {
       return 'Türkçe';
     case 'vi':
       return 'Tiếng Việt';
+    case 'bn':
+      return 'বাংলা';
+    case 'gu':
+      return 'ગુજરાતી';
+    case 'mr':
+      return 'मराठी';
+    case 'ta':
+      return 'தமிழ்';
+    case 'te':
+      return 'తెలుగు';
     case 'he':
       return 'עברית';
     case 'hi':

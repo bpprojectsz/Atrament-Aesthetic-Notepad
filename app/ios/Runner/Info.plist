@@ -136,6 +136,11 @@
 			<string>th</string>
 			<string>tr</string>
 			<string>vi</string>
+			<string>bn</string>
+			<string>gu</string>
+			<string>mr</string>
+			<string>ta</string>
+			<string>te</string>
 		</array>
 		<!-- Export compliance: the app only uses the encryption built into the
 		     operating system (HTTPS), which is exempt. Answers the question App
