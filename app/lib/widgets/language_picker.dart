@@ -129,6 +129,20 @@ String? nativeNameFor(String tag) {
       return 'Nederlands';
     case 'sv':
       return 'Svenska';
+    case 'fil':
+      return 'Filipino';
+    case 'id':
+      return 'Bahasa Indonesia';
+    case 'ms':
+      return 'Bahasa Melayu';
+    case 'sw':
+      return 'Kiswahili';
+    case 'th':
+      return 'ไทย';
+    case 'tr':
+      return 'Türkçe';
+    case 'vi':
+      return 'Tiếng Việt';
     case 'he':
       return 'עברית';
     case 'hi':

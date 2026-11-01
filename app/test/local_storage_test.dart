@@ -529,6 +529,15 @@ void main() {
       expect(await idsFor('今天 公園'), isEmpty);
     });
 
+    test('Thai matches inside a run of characters', () async {
+      await seedNote('th1', 'บันทึก', 'วันนี้อากาศดีมากเราไปเดินเล่นที่สวนสาธารณะ');
+
+      expect(await idsFor('อากาศ'), ['th1']);
+      expect(await idsFor('สวนสาธารณะ'), ['th1']);
+      expect(await idsFor('อากาศ เดินเล่น'), ['th1']);
+      expect(await idsFor('อากาศ ภูเขา'), isEmpty);
+    });
+
     test('substring search treats % and _ literally', () async {
       await seedNote('zh2', '进度', '本月进度100%完成');
 

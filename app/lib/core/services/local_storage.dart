@@ -24,12 +24,12 @@ class StorageResult<T> {
 String foldForSearch(String input) =>
     input.replaceAll('ß', 'ss').replaceAll('ẞ', 'ss');
 
-/// Chinese/Japanese text has no spaces, so the word-based FTS index can only
-/// match from the start of a run of characters. Queries containing these
-/// characters use a substring search instead. (Hangul is space-separated
+/// Chinese, Japanese and Thai text has no spaces between words, so the
+/// word-based FTS index can only match from the start of a run of characters.
+/// Queries containing these characters use a substring search instead. (Hangul is space-separated
 /// and works with the normal index.)
 final RegExp _cjkPattern = RegExp(
-  r'[\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]',
+  r'[\u0E00-\u0E7F\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]',
 );
 
 String _escapeLike(String input) => input

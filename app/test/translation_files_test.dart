@@ -48,6 +48,26 @@ void main() {
     'chipRecent',
   };
 
+  // Loanwords that are the normal word in one language, not a missed
+  // translation.
+  const sameAsEnglishIn = <String, Set<String>>{
+    'id': {'verseModeHeader', 'verseModeFooter', 'noteActionEdit'},
+    'ms': {'paperStyleVellum'},
+    'fil': {
+      'formatBold',
+      'formatItalic',
+      'formatUnderline',
+      'formatHeading',
+      'formatBulletList',
+      'formatCodeBlock',
+      'penHighlighter',
+      'paperStyleVellum',
+      'verseModeWatermark',
+      'verseModeHeader',
+      'verseModeFooter',
+    },
+  };
+
   test('there is a translation file for each language', () {
     expect(files.length, greaterThanOrEqualTo(11));
   });
@@ -80,8 +100,15 @@ void main() {
       });
 
       test('most strings are translated', () {
+        final code = name.substring(4, name.length - 4);
+        final extra = sameAsEnglishIn[code] ?? const <String>{};
         final same = keys
-            .where((k) => data[k] == english[k] && !sameAsEnglish.contains(k))
+            .where(
+              (k) =>
+                  data[k] == english[k] &&
+                  !sameAsEnglish.contains(k) &&
+                  !extra.contains(k),
+            )
             .toList();
         expect(same, isEmpty, reason: 'still English: $same');
       });
