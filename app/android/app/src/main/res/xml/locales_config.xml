@@ -23,4 +23,12 @@
     <locale android:name="ru" />
     <locale android:name="sk" />
     <locale android:name="uk" />
+    <locale android:name="ca" />
+    <locale android:name="da" />
+    <locale android:name="fi" />
+    <locale android:name="hu" />
+    <locale android:name="it" />
+    <locale android:name="nb" />
+    <locale android:name="nl" />
+    <locale android:name="sv" />
 </locale-config>

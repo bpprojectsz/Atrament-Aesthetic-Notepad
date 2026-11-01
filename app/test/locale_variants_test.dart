@@ -75,6 +75,10 @@ void main() {
       expect(localeTag(resolve('de_AT')), 'de');
       expect(localeTag(resolve('fr_CA')), 'fr');
       expect(localeTag(resolve('iw')), 'he');
+      expect(localeTag(resolve('no')), 'nb');
+      expect(localeTag(resolve('nn')), 'nb');
+      expect(localeTag(resolve('nb_NO')), 'nb');
+      expect(localeTag(resolve('ca_ES')), 'ca');
       expect(localeTag(resolve('xx')), 'en');
     });
 
