@@ -7,6 +7,7 @@ import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_ar.dart';
 import 'app_localizations_bg.dart';
+import 'app_localizations_bn.dart';
 import 'app_localizations_ca.dart';
 import 'app_localizations_cs.dart';
 import 'app_localizations_da.dart';
@@ -17,6 +18,7 @@ import 'app_localizations_es.dart';
 import 'app_localizations_fi.dart';
 import 'app_localizations_fil.dart';
 import 'app_localizations_fr.dart';
+import 'app_localizations_gu.dart';
 import 'app_localizations_he.dart';
 import 'app_localizations_hi.dart';
 import 'app_localizations_hu.dart';
@@ -24,6 +26,7 @@ import 'app_localizations_id.dart';
 import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_ko.dart';
+import 'app_localizations_mr.dart';
 import 'app_localizations_ms.dart';
 import 'app_localizations_nb.dart';
 import 'app_localizations_nl.dart';
@@ -34,6 +37,8 @@ import 'app_localizations_ru.dart';
 import 'app_localizations_sk.dart';
 import 'app_localizations_sv.dart';
 import 'app_localizations_sw.dart';
+import 'app_localizations_ta.dart';
+import 'app_localizations_te.dart';
 import 'app_localizations_th.dart';
 import 'app_localizations_tr.dart';
 import 'app_localizations_uk.dart';
@@ -128,6 +133,7 @@ abstract class AppLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
     Locale('bg'),
+    Locale('bn'),
     Locale('ca'),
     Locale('cs'),
     Locale('da'),
@@ -138,6 +144,7 @@ abstract class AppLocalizations {
     Locale('fi'),
     Locale('fil'),
     Locale('fr'),
+    Locale('gu'),
     Locale('he'),
     Locale('hi'),
     Locale('hu'),
@@ -145,6 +152,7 @@ abstract class AppLocalizations {
     Locale('it'),
     Locale('ja'),
     Locale('ko'),
+    Locale('mr'),
     Locale('ms'),
     Locale('nb'),
     Locale('nl'),
@@ -157,6 +165,8 @@ abstract class AppLocalizations {
     Locale('sk'),
     Locale('sv'),
     Locale('sw'),
+    Locale('ta'),
+    Locale('te'),
     Locale('th'),
     Locale('tr'),
     Locale('uk'),
@@ -1128,6 +1138,7 @@ class _AppLocalizationsDelegate
   bool isSupported(Locale locale) => <String>[
         'ar',
         'bg',
+        'bn',
         'ca',
         'cs',
         'da',
@@ -1138,6 +1149,7 @@ class _AppLocalizationsDelegate
         'fi',
         'fil',
         'fr',
+        'gu',
         'he',
         'hi',
         'hu',
@@ -1145,6 +1157,7 @@ class _AppLocalizationsDelegate
         'it',
         'ja',
         'ko',
+        'mr',
         'ms',
         'nb',
         'nl',
@@ -1155,6 +1168,8 @@ class _AppLocalizationsDelegate
         'sk',
         'sv',
         'sw',
+        'ta',
+        'te',
         'th',
         'tr',
         'uk',
@@ -1201,6 +1216,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsAr();
     case 'bg':
       return AppLocalizationsBg();
+    case 'bn':
+      return AppLocalizationsBn();
     case 'ca':
       return AppLocalizationsCa();
     case 'cs':
@@ -1221,6 +1238,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsFil();
     case 'fr':
       return AppLocalizationsFr();
+    case 'gu':
+      return AppLocalizationsGu();
     case 'he':
       return AppLocalizationsHe();
     case 'hi':
@@ -1235,6 +1254,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsJa();
     case 'ko':
       return AppLocalizationsKo();
+    case 'mr':
+      return AppLocalizationsMr();
     case 'ms':
       return AppLocalizationsMs();
     case 'nb':
@@ -1255,6 +1276,10 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsSv();
     case 'sw':
       return AppLocalizationsSw();
+    case 'ta':
+      return AppLocalizationsTa();
+    case 'te':
+      return AppLocalizationsTe();
     case 'th':
       return AppLocalizationsTh();
     case 'tr':
