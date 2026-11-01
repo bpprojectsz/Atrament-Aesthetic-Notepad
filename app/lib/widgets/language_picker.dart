@@ -97,6 +97,22 @@ String? nativeNameFor(String tag) {
       return 'Español';
     case 'fr':
       return 'Français';
+    case 'bg':
+      return 'Български';
+    case 'cs':
+      return 'Čeština';
+    case 'el':
+      return 'Ελληνικά';
+    case 'pl':
+      return 'Polski';
+    case 'ro':
+      return 'Română';
+    case 'ru':
+      return 'Русский';
+    case 'sk':
+      return 'Slovenčina';
+    case 'uk':
+      return 'Українська';
     case 'he':
       return 'עברית';
     case 'hi':
