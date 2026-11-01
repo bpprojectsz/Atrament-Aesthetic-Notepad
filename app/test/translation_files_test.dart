@@ -43,6 +43,9 @@ void main() {
     'themeSystem',
     'fontSystem',
     'fontSerif',
+    'privacySectionTitle',
+    'formatChecklist',
+    'chipRecent',
   };
 
   test('there is a translation file for each language', () {
