@@ -42,6 +42,7 @@ void main() {
     'supportRow',
     'themeSystem',
     'fontSystem',
+    'fontSerif',
   };
 
   test('there is a translation file for each language', () {
