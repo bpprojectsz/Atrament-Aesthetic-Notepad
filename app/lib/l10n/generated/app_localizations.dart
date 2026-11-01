@@ -7,21 +7,29 @@ import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_ar.dart';
 import 'app_localizations_bg.dart';
+import 'app_localizations_ca.dart';
 import 'app_localizations_cs.dart';
+import 'app_localizations_da.dart';
 import 'app_localizations_de.dart';
 import 'app_localizations_el.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_fi.dart';
 import 'app_localizations_fr.dart';
 import 'app_localizations_he.dart';
 import 'app_localizations_hi.dart';
+import 'app_localizations_hu.dart';
+import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_ko.dart';
+import 'app_localizations_nb.dart';
+import 'app_localizations_nl.dart';
 import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
 import 'app_localizations_ro.dart';
 import 'app_localizations_ru.dart';
 import 'app_localizations_sk.dart';
+import 'app_localizations_sv.dart';
 import 'app_localizations_uk.dart';
 import 'app_localizations_zh.dart';
 
@@ -113,16 +121,23 @@ abstract class AppLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
     Locale('bg'),
+    Locale('ca'),
     Locale('cs'),
+    Locale('da'),
     Locale('de'),
     Locale('el'),
     Locale('en'),
     Locale('es'),
+    Locale('fi'),
     Locale('fr'),
     Locale('he'),
     Locale('hi'),
+    Locale('hu'),
+    Locale('it'),
     Locale('ja'),
     Locale('ko'),
+    Locale('nb'),
+    Locale('nl'),
     Locale('pl'),
     Locale('pt'),
     Locale('pt', 'BR'),
@@ -130,6 +145,7 @@ abstract class AppLocalizations {
     Locale('ro'),
     Locale('ru'),
     Locale('sk'),
+    Locale('sv'),
     Locale('uk'),
     Locale('zh'),
     Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
@@ -1098,21 +1114,29 @@ class _AppLocalizationsDelegate
   bool isSupported(Locale locale) => <String>[
         'ar',
         'bg',
+        'ca',
         'cs',
+        'da',
         'de',
         'el',
         'en',
         'es',
+        'fi',
         'fr',
         'he',
         'hi',
+        'hu',
+        'it',
         'ja',
         'ko',
+        'nb',
+        'nl',
         'pl',
         'pt',
         'ro',
         'ru',
         'sk',
+        'sv',
         'uk',
         'zh'
       ].contains(locale.languageCode);
@@ -1156,8 +1180,12 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsAr();
     case 'bg':
       return AppLocalizationsBg();
+    case 'ca':
+      return AppLocalizationsCa();
     case 'cs':
       return AppLocalizationsCs();
+    case 'da':
+      return AppLocalizationsDa();
     case 'de':
       return AppLocalizationsDe();
     case 'el':
@@ -1166,16 +1194,26 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEn();
     case 'es':
       return AppLocalizationsEs();
+    case 'fi':
+      return AppLocalizationsFi();
     case 'fr':
       return AppLocalizationsFr();
     case 'he':
       return AppLocalizationsHe();
     case 'hi':
       return AppLocalizationsHi();
+    case 'hu':
+      return AppLocalizationsHu();
+    case 'it':
+      return AppLocalizationsIt();
     case 'ja':
       return AppLocalizationsJa();
     case 'ko':
       return AppLocalizationsKo();
+    case 'nb':
+      return AppLocalizationsNb();
+    case 'nl':
+      return AppLocalizationsNl();
     case 'pl':
       return AppLocalizationsPl();
     case 'pt':
@@ -1186,6 +1224,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsRu();
     case 'sk':
       return AppLocalizationsSk();
+    case 'sv':
+      return AppLocalizationsSv();
     case 'uk':
       return AppLocalizationsUk();
     case 'zh':
