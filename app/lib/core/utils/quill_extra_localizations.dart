@@ -440,7 +440,7 @@ const Map<String, Map<String, String>> appQuillTranslations = <String, Map<Strin
 
 /// flutter_quill labels read from [appQuillTranslations].
 class AppQuillLocalizations extends FlutterQuillLocalizations {
-  AppQuillLocalizations(String locale, this._labels) : super(locale);
+  AppQuillLocalizations(super.locale, this._labels);
 
   final Map<String, String> _labels;
 
