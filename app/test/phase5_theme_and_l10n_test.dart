@@ -120,8 +120,8 @@ void main() {
           Locale(code),
         );
         expect(l10n, isA<AppQuillLocalizations>());
-        expect(l10n.bold, isNotEmpty);
-        expect(l10n.bold, isNot('Bold'), reason: code);
+        expect(l10n.undo, isNotEmpty);
+        expect(l10n.undo, isNot('Undo'), reason: code);
         expect(
           l10n.theImageHasBeenSavedAt('/a/b.png'),
           contains('/a/b.png'),
