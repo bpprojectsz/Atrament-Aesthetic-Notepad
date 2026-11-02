@@ -7,7 +7,8 @@ import 'package:atrament/core/utils/locale_utils.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:intl/intl.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart' show DateFormat;
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Exercises every language the app offers: that Flutter's own delegates
@@ -153,7 +154,7 @@ void main() {
           home: Builder(
             builder: (context) {
               shown = Localizations.localeOf(context);
-              return Text(AppLocalizations.of(context).settingsTitle);
+              return Text(AppLocalizations.of(context)!.settingsTitle);
             },
           ),
         ),
