@@ -1,13 +1,11 @@
-import 'dart:ui';
-
 import 'package:atrament/core/providers/locale_provider.dart';
 import 'package:atrament/core/utils/app_localization_setup.dart';
 import 'package:atrament/core/utils/constants.dart';
 import 'package:atrament/core/utils/locale_utils.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart' show DateFormat;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -237,10 +235,9 @@ void main() {
 
   group('text direction', () {
     for (final locale in languages) {
-      test('${tag(locale)} direction matches the app list', () {
-        final flutterSaysRtl =
-            GlobalWidgetsLocalizations(locale).textDirection ==
-            TextDirection.rtl;
+      test('${tag(locale)} direction matches the app list', () async {
+        final widgets = await GlobalWidgetsLocalizations.delegate.load(locale);
+        final flutterSaysRtl = widgets.textDirection == TextDirection.rtl;
         expect(
           rtlLanguageCodes.contains(locale.languageCode),
           flutterSaysRtl,
