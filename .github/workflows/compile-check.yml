@@ -4,9 +4,15 @@ name: Compile Check
 # and needs no signing secrets. The "Build and Deploy" workflow is separate.
 on:
   workflow_dispatch:
+    inputs:
+      task:
+        description: 'check (default) or back-translate (translation screen, no build)'
+        required: false
+        default: 'check'
 
 jobs:
   compile-check:
+    if: ${{ inputs.task != 'back-translate' }}
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -131,3 +137,60 @@ jobs:
           fi
           exit $code
         working-directory: app/android
+
+  # Back-translation screen: translates each non-English string back to English
+  # with a free offline model and writes reports/back_translation.md. No build.
+  bt-shard:
+    if: ${{ inputs.task == 'back-translate' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: g1, locales: "ar bg bn ca"}
+          - {id: g2, locales: "cs da de el"}
+          - {id: g3, locales: "es fa fi fil"}
+          - {id: g4, locales: "fr he hi hu"}
+          - {id: g5, locales: "id it ja ko"}
+          - {id: g6, locales: "ms nb nl pl"}
+          - {id: g7, locales: "pt pt_PT ro ru sk"}
+          - {id: g8, locales: "sv sw th tr"}
+          - {id: g9, locales: "uk ur vi zh zh_Hant"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install argostranslate
+      - run: python tools/back_translate.py shard ${{ matrix.locales }} --out shard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bt-${{ matrix.id }}
+          path: shard
+
+  bt-report:
+    if: ${{ always() && inputs.task == 'back-translate' }}
+    needs: bt-shard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bt-*
+          merge-multiple: true
+          path: shards
+      - run: python tools/back_translate.py report shards --out reports/back_translation.md
+      - name: Commit the report to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/back_translation.md
+          git commit -m "chore: back-translation report" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
