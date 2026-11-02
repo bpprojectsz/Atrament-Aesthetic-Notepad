@@ -18,11 +18,53 @@ class StorageResult<T> {
   final bool failed;
 }
 
-/// Normalises text for the search index and for search queries: folds the
-/// German sharp s so "Straße" and "strasse" find each other. (FTS5's
-/// tokenizer already folds case and accents, but not ß.)
-String foldForSearch(String input) =>
-    input.replaceAll('ß', 'ss').replaceAll('ẞ', 'ss');
+/// Letters that spell the same sound or number but are different characters,
+/// mapped to the one form the search index stores.
+///
+/// - German sharp s: "Straße" and "strasse" find each other.
+/// - Arabic-script spellings: Arabic keyboards type yeh (ي ى) and kaf (ك),
+///   while Persian and Urdu text uses ی and ک, so the two never matched.
+/// - Arabic vowel marks and the tatweel stretch are optional in writing, so
+///   they are dropped.
+/// - Arabic-Indic and Persian digits become ASCII digits.
+///
+/// (FTS5's tokenizer already folds case and Latin accents, but not these.)
+final Map<int, String> _searchFold = <int, String>{
+  0x00DF: 'ss', // ß
+  0x1E9E: 'ss', // ẞ
+  0x064A: '\u06CC', // ي Arabic yeh -> ی Farsi yeh
+  0x0649: '\u06CC', // ى alef maksura -> ی
+  0x0643: '\u06A9', // ك Arabic kaf -> ک Keheh
+  0x0640: '', // tatweel
+  for (var c = 0x064B; c <= 0x065F; c++) c: '', // harakat and other marks
+  0x0670: '', // superscript alef
+  for (var i = 0; i < 10; i++) 0x0660 + i: '$i', // Arabic-Indic digits
+  for (var i = 0; i < 10; i++) 0x06F0 + i: '$i', // Persian digits
+};
+
+/// Normalises text for the search index and for search queries.
+String foldForSearch(String input) {
+  final out = StringBuffer();
+  for (final rune in input.runes) {
+    final replacement = _searchFold[rune];
+    if (replacement == null) {
+      out.writeCharCode(rune);
+    } else {
+      out.write(replacement);
+    }
+  }
+  return out.toString();
+}
+
+/// The same folding as an SQL expression, for upgrading the existing index.
+String _foldSql(String column) {
+  var expression = column;
+  _searchFold.forEach((rune, to) {
+    expression =
+        "replace($expression, '${String.fromCharCode(rune)}', '$to')";
+  });
+  return expression;
+}
 
 /// Chinese, Japanese and Thai text has no spaces between words, so the
 /// word-based FTS index can only match from the start of a run of characters.
@@ -213,6 +255,16 @@ class LocalStorage {
         UPDATE ${AppConstants.tableNotesFts}
         SET title = replace(replace(title, 'ß', 'ss'), 'ẞ', 'ss'),
             plainText = replace(replace(plainText, 'ß', 'ss'), 'ẞ', 'ss')
+      ''');
+    }
+
+    if (oldVersion < 5) {
+      // v5: the index also folds Arabic-script spellings, vowel marks and
+      // digits (see [_searchFold]), so older notes match the folded queries.
+      await db.execute('''
+        UPDATE ${AppConstants.tableNotesFts}
+        SET title = ${_foldSql('title')},
+            plainText = ${_foldSql('plainText')}
       ''');
     }
   }

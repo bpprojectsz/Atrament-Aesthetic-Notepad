@@ -153,6 +153,10 @@ String? nativeNameFor(String tag) {
       return 'தமிழ்';
     case 'te':
       return 'తెలుగు';
+    case 'fa':
+      return 'فارسی';
+    case 'ur':
+      return 'اردو';
     case 'he':
       return 'עברית';
     case 'hi':

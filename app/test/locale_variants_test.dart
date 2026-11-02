@@ -96,6 +96,25 @@ void main() {
     });
   });
 
+  group('right-to-left languages', () {
+    test('every right-to-left app language is listed', () {
+      expect(rtlLanguageCodes, {'ar', 'fa', 'he', 'ur'});
+      for (final code in rtlLanguageCodes) {
+        expect(
+          supported.any((l) => l.languageCode == code),
+          isTrue,
+          reason: '$code is listed as right-to-left but is not an app language',
+        );
+      }
+    });
+
+    test('Persian and Urdu resolve from system locales', () {
+      expect(localeTag(resolve('fa_IR')), 'fa');
+      expect(localeTag(resolve('ur_PK')), 'ur');
+      expect(localeTag(resolve('ur_IN')), 'ur');
+    });
+  });
+
   group('date locale names have Flutter date data', () {
     test('mapping', () {
       expect(dateLocaleName(const Locale('en')), 'en');

@@ -529,6 +529,29 @@ void main() {
       expect(await idsFor('今天 公園'), isEmpty);
     });
 
+    test('Arabic-script spellings find each other', () async {
+      // Stored the way a Persian keyboard writes it (ی ک)...
+      await seedNote('fa1', 'کتاب', 'دانشگاه یادداشت');
+      // ...found by what an Arabic keyboard types (ي ك).
+      expect(await idsFor('كتاب'), ['fa1']);
+      expect(await idsFor('يادداشت'), ['fa1']);
+      expect(await idsFor('کتاب'), ['fa1']);
+    });
+
+    test('Arabic vowel marks and tatweel are ignored', () async {
+      await seedNote('ar1', 'المَدْرَسَة', 'كَتَبَ الطالبُ درســـه');
+      expect(await idsFor('المدرسة'), ['ar1']);
+      expect(await idsFor('درسه'), ['ar1']);
+      expect(await idsFor('كتب'), ['ar1']);
+    });
+
+    test('Persian and Arabic-Indic digits match ASCII digits', () async {
+      await seedNote('d1', 'قیمت', 'شماره ۱۲۳ و ٤٥٦');
+      expect(await idsFor('123'), ['d1']);
+      expect(await idsFor('۴۵۶'), ['d1']);
+      expect(await idsFor('456'), ['d1']);
+    });
+
     test('Thai matches inside a run of characters', () async {
       await seedNote('th1', 'บันทึก', 'วันนี้อากาศดีมากเราไปเดินเล่นที่สวนสาธารณะ');
 
@@ -625,6 +648,83 @@ void main() {
 
       final byOriginal = await storage.searchNotes('Straße');
       expect(byOriginal.data.map((n) => n.id), ['old_de']);
+    });
+  });
+
+  group('Schema migration v4 to v5', () {
+    test('folds Arabic-script spellings in the existing index', () async {
+      final docsPath = await PathProviderPlatform.instance
+          .getApplicationDocumentsPath();
+      final fullPath = p.join(docsPath!, AppConstants.dbName);
+
+      final v4 = await databaseFactory.openDatabase(
+        fullPath,
+        options: OpenDatabaseOptions(
+          version: 4,
+          onCreate: (db, version) async {
+            await db.execute('''
+              CREATE TABLE notebooks (
+                id TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                coverColor INTEGER NOT NULL,
+                paperStyleDefault TEXT NOT NULL,
+                sortOrder INTEGER NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL
+              )
+            ''');
+            await db.execute('''
+              CREATE TABLE notes (
+                id TEXT PRIMARY KEY,
+                title TEXT NOT NULL,
+                content TEXT NOT NULL,
+                notebookId TEXT,
+                paperStyle TEXT NOT NULL,
+                createdAt TEXT NOT NULL,
+                modifiedAt TEXT NOT NULL,
+                verseReference TEXT,
+                FOREIGN KEY (notebookId) REFERENCES notebooks(id)
+                  ON DELETE CASCADE
+              )
+            ''');
+            await db.execute("""
+              CREATE VIRTUAL TABLE notes_fts USING fts5(
+                id UNINDEXED, title, plainText,
+                tokenize='porter unicode61'
+              )
+            """);
+            await db.execute(
+              'CREATE INDEX idx_notes_notebookId ON notes(notebookId)',
+            );
+          },
+        ),
+      );
+      await v4.insert('notes', {
+        'id': 'old_ar',
+        'title': 'كتاب',
+        'content': '[{"insert":"\\n"}]',
+        'notebookId': null,
+        'paperStyle': 'cream',
+        'createdAt': DateTime(2026, 1, 1).toIso8601String(),
+        'modifiedAt': DateTime(2026, 1, 1).toIso8601String(),
+        'verseReference': null,
+      });
+      await v4.insert('notes_fts', {
+        'id': 'old_ar',
+        'title': 'كتاب',
+        'plainText': 'المَدْرَسَة ١٢٣',
+      });
+      await v4.close();
+
+      final byPersian = await storage.searchNotes('کتاب');
+      expect(byPersian.failed, isFalse);
+      expect(byPersian.data.map((n) => n.id), ['old_ar']);
+
+      final byBare = await storage.searchNotes('المدرسة');
+      expect(byBare.data.map((n) => n.id), ['old_ar']);
+
+      final byDigits = await storage.searchNotes('123');
+      expect(byDigits.data.map((n) => n.id), ['old_ar']);
     });
   });
 }

@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 /// Languages that read right-to-left. Keep in sync with lib/l10n.
-const Set<String> rtlLanguageCodes = {'ar', 'he'};
+const Set<String> rtlLanguageCodes = {'ar', 'fa', 'he', 'ur'};
 
 /// Stable text form of a locale, used for the saved language choice:
 /// `en`, `pt_PT`, `zh_Hant`.
