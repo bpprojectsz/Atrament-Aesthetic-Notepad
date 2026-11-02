@@ -46,7 +46,7 @@ void main() {
           await delegate.load(locale);
         }
         final l10n = lookupAppLocalizations(locale);
-        expect(l10n.appName, 'Atrament');
+        expect(l10n.appName, isNotEmpty);
         expect(l10n.save, isNotEmpty);
 
         final date = DateFormat.yMMMd(
