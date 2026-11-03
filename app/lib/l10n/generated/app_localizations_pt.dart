@@ -310,7 +310,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get verseSectionTitle => 'Exibição do versículo diário';
 
   @override
-  String get verseModeWatermark => 'Marca d\'água';
+  String get verseModeWatermark => 'Marca d’água';
 
   @override
   String get verseModeHeader => 'Cabeçalho';
@@ -403,7 +403,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Você já tem Remover anúncios. Obrigado!';
+      'Você já tem “Remover anúncios”. Obrigado!';
 
   @override
   String get supportSectionTitle => 'Suporte';
@@ -502,7 +502,7 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'Jurídico e suporte';
+  String get legalAndSupportSectionTitle => 'Informações legais e suporte';
 
   @override
   String get privacyPolicyRow => 'Política de Privacidade';
@@ -925,7 +925,7 @@ class AppLocalizationsPtPt extends AppLocalizationsPt {
   String get premiumRestoreButton => 'Restaurar compras';
 
   @override
-  String get premiumAlreadyProMessage => 'Já tem Remover anúncios. Obrigado!';
+  String get premiumAlreadyProMessage => 'Já tem “Remover anúncios”. Obrigado!';
 
   @override
   String get supportSectionTitle => 'Suporte';

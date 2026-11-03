@@ -99,7 +99,7 @@
   "themeParchment": "Pergaminho",
   "themeSystem": "Sistema",
   "verseSectionTitle": "Exibição do versículo diário",
-  "verseModeWatermark": "Marca d'água",
+  "verseModeWatermark": "Marca d’água",
   "verseModeHeader": "Cabeçalho",
   "verseModeFooter": "Rodapé",
   "verseModeOff": "Desativado",
@@ -128,7 +128,7 @@
   "premiumHeadline": "Escreva sem distrações",
   "premiumBody": "O Atrament é gratuito com um pequeno banner de anúncio. Removê-lo é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.",
   "premiumRestoreButton": "Restaurar compras",
-  "premiumAlreadyProMessage": "Você já tem Remover anúncios. Obrigado!",
+  "premiumAlreadyProMessage": "Você já tem “Remover anúncios”. Obrigado!",
   "supportSectionTitle": "Suporte",
   "shareDebugLogButton": "Compartilhar registro de depuração",
   "shareDebugLogSubtitle": "Envie um relatório técnico se algo não estiver funcionando",
@@ -166,7 +166,7 @@
       }
     }
   },
-  "legalAndSupportSectionTitle": "Jurídico e suporte",
+  "legalAndSupportSectionTitle": "Informações legais e suporte",
   "privacyPolicyRow": "Política de Privacidade",
   "termsOfServiceRow": "Termos de Serviço",
   "supportRow": "Suporte",

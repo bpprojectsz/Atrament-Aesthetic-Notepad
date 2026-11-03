@@ -401,7 +401,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get premiumRestoreButton => 'Ripristina acquisti';
 
   @override
-  String get premiumAlreadyProMessage => 'Hai già Rimuovi pubblicità. Grazie!';
+  String get premiumAlreadyProMessage => 'Hai già “Rimuovi pubblicità”. Grazie!';
 
   @override
   String get supportSectionTitle => 'Assistenza';
@@ -430,7 +430,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get debugLogClearedMessage => 'Registro di debug cancellato.';
 
   @override
-  String get premiumUnlockLabel => 'Rimuovi la pubblicità per sempre';
+  String get premiumUnlockLabel => 'Rimuovi pubblicità per sempre';
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
