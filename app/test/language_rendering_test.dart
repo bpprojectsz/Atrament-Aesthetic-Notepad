@@ -78,7 +78,14 @@ Future<List<String>> _collectErrors(Future<void> Function() body) async {
   final errors = <String>[];
   final previous = FlutterError.onError;
   FlutterError.onError = (details) {
-    errors.add(details.exceptionAsString().split('\n').first);
+    final text = details.toString();
+    final where = RegExp(
+      r'(Row|Column|Flex)[^\n]*?(lib/[A-Za-z0-9_/]+\.dart:\d+)',
+    ).firstMatch(text)?.group(2);
+    errors.add(
+      '${details.exceptionAsString().split('\n').first}'
+      '${where == null ? '' : ' [$where]'}',
+    );
   };
   try {
     await body();
