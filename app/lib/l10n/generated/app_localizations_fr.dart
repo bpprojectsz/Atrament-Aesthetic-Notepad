@@ -48,15 +48,15 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get saveFailedMessage =>
-      'Impossible d\'enregistrer. Veuillez réessayer.';
+      'Impossible d’enregistrer. Veuillez réessayer.';
 
   @override
   String get exportFailedMessage =>
-      'Impossible d\'exporter cette note. Veuillez réessayer.';
+      'Impossible d’exporter cette note. Veuillez réessayer.';
 
   @override
   String get shareFailedMessage =>
-      'Impossible d\'ouvrir le menu de partage. Veuillez réessayer.';
+      'Impossible d’ouvrir le menu de partage. Veuillez réessayer.';
 
   @override
   String get settingsTitle => 'Réglages';
@@ -65,7 +65,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get searchHint => 'Rechercher des notes';
 
   @override
-  String get emptyNotebooksTitle => 'Aucun carnet pour l\'instant';
+  String get emptyNotebooksTitle => 'Aucun carnet pour l’instant';
 
   @override
   String get emptyNotebooksBody =>
@@ -78,7 +78,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get emptySearchBody => 'Essayez un autre terme de recherche.';
 
   @override
-  String get emptyNotebookTitle => 'Aucune note pour l\'instant';
+  String get emptyNotebookTitle => 'Aucune note pour l’instant';
 
   @override
   String get emptyNotebookBody =>
@@ -365,7 +365,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get rateAppTitle => 'Noter Atrament';
 
   @override
-  String get rateAppSubtitle => 'L\'app vous plaît ? Laissez un avis';
+  String get rateAppSubtitle => 'L’app vous plaît ? Laissez un avis';
 
   @override
   String get shareAppTitle => 'Partager Atrament';
@@ -375,7 +375,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get shareAppMessage =>
-      'Essayez Atrament — un bloc-notes sans distraction avec textures papier.';
+      'Essayez Atrament — un bloc-notes sans distraction avec des textures de papier.';
 
   @override
   String get languageSectionTitle => 'Langue';
@@ -398,14 +398,14 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d\'autre — toutes les fonctionnalités sont déjà à vous.';
+      'Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d’autre — toutes les fonctionnalités sont déjà à vous.';
 
   @override
   String get premiumRestoreButton => 'Restaurer les achats';
 
   @override
   String get premiumAlreadyProMessage =>
-      'Vous avez déjà Supprimer les publicités. Merci !';
+      'Vous avez déjà « Supprimer les publicités ». Merci !';
 
   @override
   String get supportSectionTitle => 'Assistance';
@@ -418,7 +418,7 @@ class AppLocalizationsFr extends AppLocalizations {
       'Envoyez un rapport technique si quelque chose ne fonctionne pas';
 
   @override
-  String get noDebugLogMessage => 'Aucun problème à signaler pour l\'instant.';
+  String get noDebugLogMessage => 'Aucun problème à signaler pour l’instant.';
 
   @override
   String get clearDebugLogButton => 'Effacer le journal de débogage';
@@ -434,7 +434,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get debugLogClearedMessage => 'Journal de débogage effacé.';
 
   @override
-  String get premiumUnlockLabel => 'Supprimer les pubs définitivement';
+  String get premiumUnlockLabel => 'Supprimer les publicités définitivement';
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
@@ -449,7 +449,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get chipRecent => 'Récents';
 
   @override
-  String get emptyAllNotesTitle => 'Aucune note pour l\'instant';
+  String get emptyAllNotesTitle => 'Aucune note pour l’instant';
 
   @override
   String get emptyAllNotesBody =>
@@ -482,7 +482,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get moveToNotebookEmptyBody =>
-      'Aucun autre carnet pour l\'instant. Créez-en un pour organiser cette note.';
+      'Aucun autre carnet pour l’instant. Créez-en un pour organiser cette note.';
 
   @override
   String get moveToNotebookCreateRow => 'Créer un nouveau carnet';
@@ -511,14 +511,14 @@ class AppLocalizationsFr extends AppLocalizations {
   String get privacyPolicyRow => 'Politique de confidentialité';
 
   @override
-  String get termsOfServiceRow => 'Conditions d\'utilisation';
+  String get termsOfServiceRow => 'Conditions d’utilisation';
 
   @override
   String get supportRow => 'Assistance';
 
   @override
   String get openLinkFailedMessage =>
-      'Impossible d\'ouvrir le lien. Veuillez réessayer.';
+      'Impossible d’ouvrir le lien. Veuillez réessayer.';
 
   @override
   String get openSourceLicensesRow => 'Licences open source';

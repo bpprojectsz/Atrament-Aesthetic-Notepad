@@ -279,7 +279,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get paperStyleVellum => 'Velin';
 
   @override
-  String get fontSectionTitle => 'Notizschrift';
+  String get fontSectionTitle => 'Schriftart der Notizen';
 
   @override
   String get fontSystem => 'System';
@@ -376,7 +376,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get shareAppMessage =>
-      'Probier Atrament — ein ablenkungsfreier Notizblock mit Papiermustern.';
+      'Probier Atrament — ein ablenkungsfreier Notizblock mit Papiertexturen.';
 
   @override
   String get languageSectionTitle => 'Sprache';
@@ -399,14 +399,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ist kostenlos mit einem kleinen Banner-Werbeplatz. Die Entfernung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
+      'Atrament ist kostenlos und zeigt einen kleinen Werbebanner. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
 
   @override
   String get premiumRestoreButton => 'Käufe wiederherstellen';
 
   @override
   String get premiumAlreadyProMessage =>
-      'Du hast bereits Werbung entfernen. Danke!';
+      'Du hast „Werbung entfernen“ bereits. Danke!';
 
   @override
   String get supportSectionTitle => 'Support';
@@ -457,7 +457,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Tippe auf +, um deine erste Notiz zu schreiben.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nichts Neues';
+  String get emptyRecentNotesTitle => 'Nichts Aktuelles';
 
   @override
   String get emptyRecentNotesBody =>

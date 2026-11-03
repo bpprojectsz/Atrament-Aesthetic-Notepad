@@ -402,7 +402,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get premiumRestoreButton => 'Restaurar compras';
 
   @override
-  String get premiumAlreadyProMessage => 'Ya tienes Quitar anuncios. ¡Gracias!';
+  String get premiumAlreadyProMessage => 'Ya tienes “Quitar anuncios”. ¡Gracias!';
 
   @override
   String get supportSectionTitle => 'Soporte';
@@ -431,7 +431,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get debugLogClearedMessage => 'Registro de depuración borrado.';
 
   @override
-  String get premiumUnlockLabel => 'Eliminar anuncios para siempre';
+  String get premiumUnlockLabel => 'Quitar anuncios para siempre';
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
