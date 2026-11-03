@@ -17,6 +17,7 @@ import 'package:atrament/screens/home_screen.dart';
 import 'package:atrament/screens/premium_screen.dart';
 import 'package:atrament/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -49,6 +50,35 @@ class _FakeGateway implements ReminderGateway {
 const double _phoneWidth = 360;
 const double _textScale = 1.3;
 
+/// The test font draws every character as a full square, about twice as wide
+/// as real text. Latin, Cyrillic and Greek use the real bundled Inter font so
+/// their widths are right. Scripts the app has no font for fall back to the
+/// square font, so their size is scaled by [_fallbackWidthFactor] to
+/// approximate real glyph widths (Chinese, Japanese and Korean really are
+/// about that wide).
+double _fallbackWidthFactor(Locale locale) {
+  switch (locale.languageCode) {
+    case 'ja':
+    case 'zh':
+    case 'ko':
+      return 1.0;
+    case 'ar':
+    case 'fa':
+    case 'ur':
+    case 'he':
+    case 'hi':
+    case 'mr':
+    case 'bn':
+    case 'ta':
+    case 'te':
+    case 'gu':
+    case 'th':
+      return 0.6;
+    default:
+      return 1.0;
+  }
+}
+
 Future<void> _pump(WidgetTester tester, [int ms = 600]) async {
   var elapsed = 0;
   while (elapsed < ms) {
@@ -59,6 +89,7 @@ Future<void> _pump(WidgetTester tester, [int ms = 600]) async {
 
 Widget _app(Locale locale, Widget home) {
   return MaterialApp(
+    theme: ThemeData(fontFamily: 'Inter'),
     locale: locale,
     navigatorObservers: [appRouteObserver],
     localizationsDelegates: appLocalizationsDelegates,
@@ -66,7 +97,9 @@ Widget _app(Locale locale, Widget home) {
     builder: (context, child) => MediaQuery(
       data: MediaQuery.of(
         context,
-      ).copyWith(textScaler: const TextScaler.linear(_textScale)),
+      ).copyWith(
+        textScaler: TextScaler.linear(_textScale * _fallbackWidthFactor(locale)),
+      ),
       child: child!,
     ),
     home: home,
@@ -103,6 +136,13 @@ void _phone(WidgetTester tester, {double height = 740}) {
 
 void main() {
   final languages = pickerLocales(AppLocalizations.supportedLocales);
+
+  setUpAll(() async {
+    final loader = FontLoader('Inter')
+      ..addFont(rootBundle.load('assets/fonts/Inter-Regular.ttf'))
+      ..addFont(rootBundle.load('assets/fonts/Inter-Bold.ttf'));
+    await loader.load();
+  });
 
   tearDown(() => AppLock.instance = AppLock());
 
