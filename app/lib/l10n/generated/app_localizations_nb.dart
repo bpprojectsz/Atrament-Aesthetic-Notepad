@@ -136,7 +136,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get penPencil => 'Blyant';
 
   @override
-  String get penHighlighter => 'Merkepenn';
+  String get penHighlighter => 'Tekstmarker';
 
   @override
   String get penEraser => 'Viskelær';
