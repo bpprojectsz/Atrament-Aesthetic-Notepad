@@ -1,0 +1,1111 @@
+{
+ "locale": "fa",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "The Atrament.",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "تلاش دوباره",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "مشکلی پیش آمد",
+   "back": "There's been a problem.",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "لغو",
+   "back": "Cancelled.",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "ذخیره",
+   "back": "Storage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "حذف",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "واگرد",
+   "back": "Get out of here.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "انجام دوباره",
+   "back": "Do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "بدون عنوان",
+   "back": "No title.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "این عمل قابل بازگشت نیست.",
+   "back": "This is irreversible.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "این یادداشت حذف شود؟",
+   "back": "Can this note be deleted?",
+   "score": 0.4
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "«{name}» حذف شود؟",
+   "back": "XNAME is deleted?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "ذخیره نشد. لطفاً دوباره تلاش کنید.",
+   "back": "It's not stored. Please try again.",
+   "score": 0.4
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "خروجی گرفتن از این یادداشت انجام نشد. لطفاً دوباره تلاش کنید.",
+   "back": "There's no way out of this note. Please try again.",
+   "score": 0.429
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "منوی اشتراک‌گذاری باز نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The sharing menu didn't open. Please try again.",
+   "score": 0.571
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "تنظیمات",
+   "back": "The settings.",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "جستجوی یادداشت‌ها",
+   "back": "Searching for notes.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "هنوز دفترچه‌ای وجود ندارد",
+   "back": "There's no notebook yet.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "برای شروع نوشتن، اولین دفترچه‌تان را بسازید.",
+   "back": "To start writing, create your first notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "نتیجه‌ای یافت نشد",
+   "back": "There was no result.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "عبارت دیگری را جستجو کنید.",
+   "back": "Look for another phrase.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "هنوز یادداشتی وجود ندارد",
+   "back": "There's still no note.",
+   "score": 0.25
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "برای نوشتن اولین یادداشت، روی + بزنید.",
+   "back": "To write the first note, press +.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "دفترچه جدید",
+   "back": "The new notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "نام دفترچه",
+   "back": "The name of the ledger.",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "یادداشت جدید",
+   "back": "New note.",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "مرتب‌سازی",
+   "back": "It's sorted out.",
+   "score": 0.5
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "آخرین ویرایش",
+   "back": "This is the last edition.",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "تاریخ ایجاد",
+   "back": "The history of creation",
+   "score": 0.0
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "عنوان",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "پررنگ",
+   "back": "It's bright.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "مورب",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "زیرخط‌دار",
+   "back": "Under the line.",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "سرتیتر",
+   "back": "It's a lot harder.",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "فهرست گلوله‌ای",
+   "back": "A list of bullets.",
+   "score": 1.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "فهرست کارها",
+   "back": "The to-do list.",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "نقل‌قول",
+   "back": "The quote.",
+   "score": 1.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "بلوک کد",
+   "back": "Block code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "خودنویس",
+   "back": "Self-published.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "خودکار ژله‌ای",
+   "back": "A jelly pen.",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "مداد",
+   "back": "The pencil.",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "ماژیک هایلایت",
+   "back": "Magical highlight.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "پاک‌کن",
+   "back": "Clean it up.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "ضخامت خط",
+   "back": "The thickness of the line.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "جابه‌جایی بین تایپ و نقاشی",
+   "back": "Switching between type and painting.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "برای دیدن یادداشت، قفل را باز کنید",
+   "back": "Open the lock to see the note.",
+   "score": 0.286
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "این یادداشت قفل است",
+   "back": "This is a lock note.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "باز کردن قفل",
+   "back": "Open the lock.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "قفل یادداشت خاموش شد، چون در این دستگاه قفل صفحه یا بیومتریک تنظیم نشده است.",
+   "back": "The note lock was turned off because the device does not have a screen lock or a biometric setting.",
+   "score": 0.692
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "برای روشن کردن قفل یادداشت، هویت خود را تأیید کنید",
+   "back": "Confirm your identity to unlock the note.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "برای خاموش کردن قفل یادداشت، هویت خود را تأیید کنید",
+   "back": "Confirm your identity to unlock the note.",
+   "score": 0.444
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "برای اشتراک‌گذاری یا خروجی گرفتن از این یادداشت، قفل را باز کنید",
+   "back": "To share or exit this note, open the lock.",
+   "score": 0.444
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "هویت شما تأیید نشد.",
+   "back": "Your identity has not been confirmed.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "ابتدا در تنظیمات دستگاه، قفل صفحه یا اثر انگشت را تنظیم کنید.",
+   "back": "First, set the screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "گزینه‌های حریم خصوصی",
+   "back": "Privacy options",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "خرید کامل نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The purchase is not complete. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "خرید شما بازیابی شد.",
+   "back": "Your purchase was recovered.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "خرید قبلی برای این حساب پیدا نشد.",
+   "back": "There was no previous purchase for this account.",
+   "score": 0.833
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "خریدها بازیابی نشدند. اتصال خود را بررسی کنید و دوباره تلاش کنید.",
+   "back": "The purchases were not recovered. Check your connection and try again.",
+   "score": 0.75
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "یادآور زمان‌بندی نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The reminder is not timed. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "برخی دفترچه‌ها بارگذاری نشدند. موارد موجود نمایش داده می‌شوند.",
+   "back": "Some brochures are not loaded. Existing items are displayed.",
+   "score": 0.4
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "ممکن است این دفترچه ذخیره نشده باشد. لطفاً دوباره تلاش کنید.",
+   "back": "This notebook may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "ممکن است این تغییر ذخیره نشده باشد. لطفاً دوباره تلاش کنید.",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "دفترچه حذف نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The notebook has not been deleted. Please try again.",
+   "score": 0.769
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "ممکن است ترتیب جدید ذخیره نشده باشد. لطفاً دوباره تلاش کنید.",
+   "back": "The new order may not be saved. Please try again.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "برخی یادداشت‌ها بارگذاری نشدند. موارد موجود نمایش داده می‌شوند.",
+   "back": "Some notes have not been uploaded. Existing items are displayed.",
+   "score": 0.267
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "در حال حاضر ممکن است نتایج جستجو ناقص باشند.",
+   "back": "Right now, search results may be inadequate.",
+   "score": 0.833
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "ممکن است این یادداشت ذخیره نشده باشد. حافظه دستگاه را بررسی کنید.",
+   "back": "This note may not have been saved. Check the device's memory.",
+   "score": 0.842
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "یادداشت حذف نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The note was not deleted. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "این خرید در حال حاضر در دسترس نیست. لطفاً بعداً دوباره تلاش کنید.",
+   "back": "This purchase is not currently available. Please try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "خروجی گرفتن",
+   "back": "They got out.",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "خروجی به‌صورت متن",
+   "back": "It's a text release.",
+   "score": 0.4
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "خروجی به‌صورت PDF",
+   "back": "It's a PDF release.",
+   "score": 0.4
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "سبک کاغذ",
+   "back": "Style of paper.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "خط‌دار",
+   "back": "Line up.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "نقطه‌چین",
+   "back": "The point of China.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "شطرنجی",
+   "back": "Chess.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "سفید",
+   "back": "It's white.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "کرم",
+   "back": "The worm.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "پارشمن",
+   "back": "It's a piece of cake.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "کاغذ پوستی",
+   "back": "Leather paper.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "قلم یادداشت‌ها",
+   "back": "The notebook.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "سیستم",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "سریف‌دار",
+   "back": "Have a good time.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter.",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora, what's going on?",
+   "score": 0.4
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "ظاهر",
+   "back": "The appearance.",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "روشن",
+   "back": "It's clear.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "تیره",
+   "back": "It is dark.",
+   "score": 1.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "پارشمن",
+   "back": "It's a piece of cake.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "سیستم",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "نمایش آیه روز",
+   "back": "Showcase of the verse of the day",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "نقش‌آب",
+   "back": "The role of water",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "سرصفحه",
+   "back": "At the top of the page.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "پاصفحه",
+   "back": "It's a whirlwind.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "خاموش",
+   "back": "It's off.",
+   "score": 0.667
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "اعلان‌ها",
+   "back": "The announcements.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "یادآور روزانه آیه",
+   "back": "A daily reminder of the verse",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "زمان یادآور",
+   "back": "It's time to remember.",
+   "score": 0.4
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "اعلان‌ها در تنظیمات سیستم خاموش هستند.",
+   "back": "The notifications in the system settings are off.",
+   "score": 0.889
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "آیه امروز شما آماده است.",
+   "back": "Today's verse is ready for you.",
+   "score": 0.571
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "حریم خصوصی",
+   "back": "It's private.",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "قفل یادداشت‌ها با Face ID / اثر انگشت",
+   "back": "Note locks with face ID/fingerprint.",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "پریمیوم",
+   "back": "The premium.",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "حذف تبلیغات",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "بازیابی خریدها",
+   "back": "Recovering the purchases.",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "پرو",
+   "back": "Peru",
+   "score": 0.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "بیشتر",
+   "back": "More than that.",
+   "score": 0.667
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "امتیاز دادن به Atrament",
+   "back": "Scoring the Atrament.",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "از برنامه خوشتان آمد؟ نظر بدهید",
+   "back": "Did you like the show?",
+   "score": 0.0
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "اشتراک‌گذاری Atrament",
+   "back": "Share the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "به یک دوست بگویید",
+   "back": "Tell a friend.",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament را امتحان کنید — دفترچه‌ای بدون حواس‌پرتی با بافت کاغذ.",
+   "back": "Try Atrament  a distraction-free notebook with paper texture.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "زبان",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "از تنظیم زبان دستگاه پیروی می‌کند",
+   "back": "It follows the language settings of the device.",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "پیش‌فرض سیستم",
+   "back": "The default system.",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "انتخاب زبان",
+   "back": "Language selection",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "حذف تبلیغات",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "بدون حواس‌پرتی بنویسید",
+   "back": "Write without distraction.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament رایگان است و فقط یک بنر تبلیغاتی کوچک نشان می‌دهد. حذف تبلیغات یک خرید یک‌باره است که چیز دیگری را باز نمی‌کند — همه قابلیت‌ها از قبل مال شماست.",
+   "back": "Atrament is free and only shows a small banner ad. Removing ads is a one-time purchase that won't open anything else.",
+   "score": 0.686
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "بازیابی خریدها",
+   "back": "Recovering the purchases.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "«حذف تبلیغات» را از قبل دارید. سپاسگزاریم!",
+   "back": "You've already deleted the ads. Thank you!",
+   "score": 0.6
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "پشتیبانی",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "اشتراک‌گذاری گزارش اشکال‌زدایی",
+   "back": "Sharing the fault report",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "اگر چیزی کار نمی‌کند، گزارش فنی بفرستید",
+   "back": "If something doesn't work, send a technical report.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "هنوز چیزی برای گزارش نیست.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "پاک کردن گزارش اشکال‌زدایی",
+   "back": "Deleting the fault report.",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "گزارش اشکال‌زدایی پاک شود؟",
+   "back": "Can the fault report be cleared?",
+   "score": 0.286
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "گزارش فنی ذخیره‌شده از دستگاه شما حذف می‌شود.",
+   "back": "The stored technical report will be deleted from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "گزارش اشکال‌زدایی پاک شد.",
+   "back": "The error report is cleared.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "حذف دائمی تبلیغات",
+   "back": "Permanent removal of advertising",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "همه",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "دفترچه‌ها",
+   "back": "The brochures.",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "اخیر",
+   "back": "The last one.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "هنوز یادداشتی وجود ندارد",
+   "back": "There's still no note.",
+   "score": 0.25
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "برای نوشتن اولین یادداشت، روی + بزنید.",
+   "back": "To write the first note, press +.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "مورد اخیری نیست",
+   "back": "It's not the last thing.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "یادداشت‌هایی که ویرایش می‌کنید اینجا نمایش داده می‌شوند.",
+   "back": "The notes you edit are displayed here.",
+   "score": 0.6
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "تغییر نام",
+   "back": "Change of name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "انتقال به دفترچه",
+   "back": "Transfer to the ledger.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "ویرایش",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "خروجی گرفتن",
+   "back": "They got out.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "اشتراک‌گذاری",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "انتقال به دفترچه",
+   "back": "Transfer to the ledger.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "هنوز دفترچه دیگری وجود ندارد. برای سازمان‌دهی این یادداشت، یکی بسازید.",
+   "back": "There's no other notebook yet. Make one to organize this note.",
+   "score": 0.667
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "ساخت دفترچه جدید",
+   "back": "Creating a new ledger.",
+   "score": 0.333
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "تغییر نام",
+   "back": "Change of name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "تغییر جلد",
+   "back": "Changes in skin",
+   "score": 0.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "تغییر نام دفترچه",
+   "back": "Change the name of the ledger.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "انتخاب رنگ جلد",
+   "back": "Choice of skin color",
+   "score": 0.333
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "دفترچه با همه یادداشت‌هایش حذف می‌شود (مجموعاً: {count}). این عمل قابل بازگشت نیست.",
+   "back": "The notebook is deleted with all of its notes (in total: XCOUNT).",
+   "score": 0.4
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "اطلاعات حقوقی و پشتیبانی",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "سیاست حریم خصوصی",
+   "back": "Privacy policy.",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "شرایط خدمات",
+   "back": "Terms of service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "پشتیبانی",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "پیوند باز نشد. لطفاً دوباره تلاش کنید.",
+   "back": "The link didn't open. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "مجوزهای متن‌باز",
+   "back": "Open text licenses",
+   "score": 0.667
+  }
+ ]
+}

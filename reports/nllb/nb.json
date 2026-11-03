@@ -1,0 +1,1111 @@
+{
+ "locale": "nb",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Prøv igjen",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Noe gikk galt",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Avbryt",
+   "back": "Interrupted",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Lagre",
+   "back": "Storage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Slett",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Angre",
+   "back": "Anger",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Gjør om",
+   "back": "Do it again",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Uten tittel",
+   "back": "No title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Denne handlingen kan ikke angres.",
+   "back": "This action cannot be regretted.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Vil du slette dette notatet?",
+   "back": "Will you erase this note?",
+   "score": 0.4
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Vil du slette «{name}»?",
+   "back": "Do you want to delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Kunne ikke lagre. Prøv igjen.",
+   "back": "Couldn't save. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Kunne ikke eksportere notatet. Prøv igjen.",
+   "back": "Couldn't export the note. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Kunne ikke åpne delingsmenyen. Prøv igjen.",
+   "back": "Couldn't open the sharing menu. Try again.",
+   "score": 0.714
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Innstillinger",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Søk i notater",
+   "back": "Search for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Ingen notatbøker ennå",
+   "back": "No notebooks yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Opprett din første notatbok for å begynne å skrive.",
+   "back": "Make your first notebook to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Ingen resultater",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Prøv et annet søkeord.",
+   "back": "Try another keyword.",
+   "score": 0.286
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Ingen notater ennå",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Trykk på + for å skrive ditt første notat.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Ny notatbok",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Navn på notatbok",
+   "back": "Name of notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Nytt notat",
+   "back": "Newly noted",
+   "score": 0.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sorter",
+   "back": "Varieties",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Sist redigert",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Opprettet",
+   "back": "Set up",
+   "score": 0.0
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Tittel",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Fet",
+   "back": "Fat",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Kursiv",
+   "back": "Cursive",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Understreket",
+   "back": "Highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Overskrift",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Punktliste",
+   "back": "List of points",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Sjekkliste",
+   "back": "Checklist",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Sitat",
+   "back": "Quotes",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Kodeblokk",
+   "back": "Code blocks",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Fyllepenn",
+   "back": "Filling pens",
+   "score": 0.5
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Gelpenn",
+   "back": "Yellow pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Blyant",
+   "back": "Blythes",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Tekstmarker",
+   "back": "Text fields",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Viskelær",
+   "back": "Viskellar",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Linjetykkelse",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Bytt mellom skriving og tegning",
+   "back": "Switch between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Lås opp for å se notatet",
+   "back": "Unlock to see the note",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Dette notatet er låst",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Lås opp",
+   "back": "Unlocked",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Notatlåsen er slått av fordi denne enheten ikke har skjermlås eller biometri satt opp.",
+   "back": "The note lock is turned off because this unit has no screen lock or biometric set up.",
+   "score": 0.88
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Bekreft identiteten din for å slå på notatlåsen",
+   "back": "Confirm your identity to turn on the key",
+   "score": 0.5
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Bekreft identiteten din for å slå av notatlåsen",
+   "back": "Confirm your identity to turn off the note lock",
+   "score": 0.909
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Lås opp for å dele eller eksportere notatet",
+   "back": "Locked up to share or export the note",
+   "score": 0.667
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Identiteten din kunne ikke bekreftes.",
+   "back": "Your identity could not be confirmed.",
+   "score": 0.286
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Sett først opp skjermlås eller fingeravtrykk i enhetsinnstillingene.",
+   "back": "First, set up screen locks or fingerprints in the device settings.",
+   "score": 1.0
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Personvernvalg",
+   "back": "Personal data selection",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Kjøpet kunne ikke fullføres. Prøv igjen.",
+   "back": "The purchase could not be completed. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Kjøpet ditt er gjenopprettet.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Fant ingen tidligere kjøp for denne kontoen.",
+   "back": "Found no previous purchases for this account.",
+   "score": 0.727
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Kjøpene kunne ikke gjenopprettes. Sjekk tilkoblingen og prøv igjen.",
+   "back": "The purchases could not be restored. Check the connection and try again.",
+   "score": 0.875
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Påminnelsen kunne ikke planlegges. Prøv igjen.",
+   "back": "The reminder could not be planned. Try again.",
+   "score": 0.833
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Noen notatbøker kunne ikke lastes inn. Viser det som er tilgjengelig.",
+   "back": "Some notebooks could not be loaded. Shows what is available.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Denne notatboken er kanskje ikke lagret. Prøv igjen.",
+   "back": "This notebook may not be stored. Try again.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Denne endringen er kanskje ikke lagret. Prøv igjen.",
+   "back": "This change may not be stored. Try again.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Notatboken kunne ikke slettes. Prøv igjen.",
+   "back": "The notebook couldn't be deleted. Try again.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Den nye rekkefølgen er kanskje ikke lagret. Prøv igjen.",
+   "back": "The new order may not be stored. Try again.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Noen notater kunne ikke lastes inn. Viser det som er tilgjengelig.",
+   "back": "Some notes couldn't be loaded. Shows what's available.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Søkeresultatene kan være ufullstendige akkurat nå.",
+   "back": "The search results may be incomplete right now.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Dette notatet er kanskje ikke lagret. Sjekk lagringsplassen på enheten.",
+   "back": "This note may not be stored. Check the storage space on the device.",
+   "score": 0.706
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Notatet kunne ikke slettes. Prøv igjen.",
+   "back": "The note could not be deleted. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Dette kjøpet er ikke tilgjengelig akkurat nå. Prøv igjen senere.",
+   "back": "This purchase is not available right now. Try again later.",
+   "score": 1.0
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Eksporter",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Eksporter som tekst",
+   "back": "Exports as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Eksporter som PDF",
+   "back": "Exports as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Papirstil",
+   "back": "Paper style",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Linjert",
+   "back": "Linear",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Prikket",
+   "back": "Stitched",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Rutet",
+   "back": "The Root",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Blankt",
+   "back": "White",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Kremfarget",
+   "back": "The cream color",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergament",
+   "back": "Pergament",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velin",
+   "back": "Velin",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Skrifttype for notater",
+   "back": "Type of writing for notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "System",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serif",
+   "back": "Serif",
+   "score": 1.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Utseende",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Lys",
+   "back": "Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Mørk",
+   "back": "Darkness",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergament",
+   "back": "Pergament",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "System",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Visning av dagens vers",
+   "back": "Display of today's verses",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Vannmerke",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Topptekst",
+   "back": "Top of the list",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Bunntekst",
+   "back": "Subtitles",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Av",
+   "back": "From",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Varsler",
+   "back": "Warnings",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Daglig versvarsel",
+   "back": "Diary of a Wimpy Kid",
+   "score": 0.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Tidspunkt for påminnelse",
+   "back": "Time of reminder",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Varsler er slått av i systeminnstillingene.",
+   "back": "Warnings are turned off in the system settings.",
+   "score": 0.8
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Dagens vers er klart.",
+   "back": "Today's verse is finished.",
+   "score": 0.286
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Personvern",
+   "back": "Protection of personal data",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Lås notater med Face ID / fingeravtrykk",
+   "back": "Lock notes with Face ID/fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Fjern annonser",
+   "back": "Remove ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Gjenopprett kjøp",
+   "back": "Recovery purchase",
+   "score": 0.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Mer",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Vurder Atrament",
+   "back": "Assessment of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Liker du appen? Skriv en anmeldelse",
+   "back": "Do you like the app? Write a review",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Del Atrament",
+   "back": "Part of the Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Fortell en venn",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Prøv Atrament – en distraksjonsfri notatblokk med papirtekstur.",
+   "back": "Try Atrament  a distraction-free note block with paper texture.",
+   "score": 0.667
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Språk",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Følger språkinnstillingen på enheten",
+   "back": "Follow the language setting on the unit",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Systemstandard",
+   "back": "Standard of the system",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Velg språk",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Fjern annonser",
+   "back": "Remove ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Skriv uten distraksjoner",
+   "back": "Write without distractions",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament er gratis og viser ett lite annonsebanner. Å fjerne annonsene er et engangskjøp som ikke låser opp noe annet – alle funksjoner er allerede dine.",
+   "back": "Atrament is free and shows one little banner ad. Removing the ads is a one-time purchase that doesn't unlock anything else  all the features are already yours.",
+   "score": 0.789
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Gjenopprett kjøp",
+   "back": "Recovery purchase",
+   "score": 0.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Du har allerede Fjern annonser. Takk!",
+   "back": "You already have Remove ads.",
+   "score": 0.889
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Brukerstøtte",
+   "back": "Support for users",
+   "score": 0.667
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Del feilsøkingslogg",
+   "back": "Share the error log",
+   "score": 0.667
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Send en teknisk rapport hvis noe ikke fungerer",
+   "back": "Send a technical report if something doesn't work",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Ingenting å rapportere ennå.",
+   "back": "Nothing to report yet.",
+   "score": 0.571
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Tøm feilsøkingsloggen",
+   "back": "Empty the error log",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Vil du tømme feilsøkingsloggen?",
+   "back": "Do you want to empty the bug log?",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Den lagrede tekniske rapporten fjernes fra enheten din.",
+   "back": "The stored technical report is removed from your device.",
+   "score": 0.833
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Feilsøkingsloggen er tømt.",
+   "back": "The error log is empty.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Fjern annonser for alltid",
+   "back": "Remove ads forever",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "$14.99",
+   "score": 1.0
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Alle",
+   "back": "All of them",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Notatbøker",
+   "back": "Notebooks",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Nylige",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Ingen notater ennå",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Trykk på + for å skrive ditt første notat.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Ingenting nylig",
+   "back": "Nothing recently",
+   "score": 0.5
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Notater du redigerer, vises her.",
+   "back": "The notes you edit appear here.",
+   "score": 0.6
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Gi nytt navn",
+   "back": "Give a new name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Flytt til notatbok",
+   "back": "Moved to notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Rediger",
+   "back": "Editors",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Eksporter",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Del",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Flytt til notatbok",
+   "back": "Moved to notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Det finnes ingen andre notatbøker ennå. Opprett en for å organisere dette notatet.",
+   "back": "There are no other notebooks yet. Create one to organize this notebook.",
+   "score": 0.75
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Opprett ny notatbok",
+   "back": "Set up a new notebook",
+   "score": 0.571
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Gi nytt navn",
+   "back": "Give a new name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Bytt omslag",
+   "back": "Change the cover",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Gi notatboken nytt navn",
+   "back": "Give the notebook a new name",
+   "score": 0.333
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Velg omslagsfarge",
+   "back": "Choose the cover color",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Notatboken slettes sammen med alle notatene i den (totalt: {count}). Dette kan ikke angres.",
+   "back": "The notebook is deleted with all the notes in it (total: XCOUNT).",
+   "score": 0.286
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Juridisk og brukerstøtte",
+   "back": "Legal and user support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Personvernerklæring",
+   "back": "Personal data protection declaration",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Brukervilkår",
+   "back": "Conditions of use",
+   "score": 0.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Brukerstøtte",
+   "back": "Support for users",
+   "score": 0.667
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Kunne ikke åpne lenken. Prøv igjen.",
+   "back": "Couldn't open the link. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Åpen kildekode-lisenser",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

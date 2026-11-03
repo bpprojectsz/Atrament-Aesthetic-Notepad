@@ -1,0 +1,1111 @@
+{
+ "locale": "sw",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Jaribu tena",
+   "back": "Try again",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Hitilafu imetokea",
+   "back": "An error has occurred",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Ghairi",
+   "back": "The needy",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Hifadhi",
+   "back": "Protecting",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Futa",
+   "back": "Remove",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Tendua",
+   "back": "Let It Go",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Rudia",
+   "back": "Repeat",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Bila kichwa",
+   "back": "Without a head",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Kitendo hiki hakiwezi kutenduliwa.",
+   "back": "This action is unmistakable.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Futa dokezo hili?",
+   "back": "Remove this suggestion?",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Futa “{name}”?",
+   "back": "Delete the XNAME?",
+   "score": 0.667
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Imeshindwa kuhifadhi. Tafadhali jaribu tena.",
+   "back": "It failed to save. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Imeshindwa kusafirisha dokezo hili. Tafadhali jaribu tena.",
+   "back": "It failed to transmit this tip. Please try again.",
+   "score": 0.364
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Imeshindwa kufungua menyu ya kushiriki. Tafadhali jaribu tena.",
+   "back": "It failed to open the share menu. Please try again.",
+   "score": 0.615
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Mipangilio",
+   "back": "Arrangements",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Tafuta madokezo",
+   "back": "Look for suggestions",
+   "score": 0.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Bado hakuna daftari",
+   "back": "There's still no record",
+   "score": 0.25
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Tengeneza daftari lako la kwanza ili uanze kuandika.",
+   "back": "Make your first notebook and start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Hakuna matokeo",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Jaribu neno lingine la kutafuta.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Bado hakuna madokezo",
+   "back": "No suggestions yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Gusa + ili uandike dokezo lako la kwanza.",
+   "back": "Push + to write down your first suggestion.",
+   "score": 0.4
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Daftari jipya",
+   "back": "A new book",
+   "score": 0.5
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Jina la daftari",
+   "back": "Name of the registry",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Dokezo jipya",
+   "back": "A New Point",
+   "score": 0.5
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Panga",
+   "back": "The Sword",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Ilihaririwa mwisho",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Tarehe ya kuundwa",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Kichwa",
+   "back": "The Head",
+   "score": 0.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Herufi nzito",
+   "back": "Heavy letters",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Mlalo",
+   "back": "The future",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Mstari chini",
+   "back": "The bottom line",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Kichwa cha habari",
+   "back": "Headline",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Orodha ya vitone",
+   "back": "List of drops",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Orodha ya kukagua",
+   "back": "A list to be reviewed",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Nukuu",
+   "back": "A quote",
+   "score": 1.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Kizuizi cha msimbo",
+   "back": "The code barrier",
+   "score": 0.5
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Kalamu ya wino",
+   "back": "A pen of ink",
+   "score": 0.5
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Kalamu ya jeli",
+   "back": "A gel pen",
+   "score": 1.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Penseli",
+   "back": "A pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Kialamisho cha kung’arisha",
+   "back": "A petition for a writ of certiorari",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Kifutio",
+   "back": "The Rapture",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Unene wa mstari",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Badilisha kati ya kuandika na kuchora",
+   "back": "Switch between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Fungua ili uone dokezo",
+   "back": "Open the door and look for a hint",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Dokezo hili limefungwa",
+   "back": "This note is enclosed",
+   "score": 0.5
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Fungua",
+   "back": "Open up",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Kufunga madokezo kumezimwa kwa sababu kifaa hiki hakina kufunga skrini wala bayometriki.",
+   "back": "Notepads are disabled because the device does not have a screen or biometrics.",
+   "score": 0.364
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Thibitisha utambulisho wako ili uwashe kufunga madokezo",
+   "back": "Verify your identity to prompt the closing of comments",
+   "score": 0.0
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Thibitisha utambulisho wako ili uzime kufunga madokezo",
+   "back": "Verify your identity to turn off the tip",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Fungua ili ushiriki au usafirishe dokezo hili",
+   "back": "Open to share or send this link",
+   "score": 0.25
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Utambulisho wako haukuweza kuthibitishwa.",
+   "back": "Your identity could not be verified.",
+   "score": 0.286
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Weka kufunga skrini au alama ya kidole kwenye mipangilio ya kifaa kwanza.",
+   "back": "Put a screen or fingerprint on the device's settings first.",
+   "score": 0.667
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Chaguo za faragha",
+   "back": "Choices for privacy",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Ununuzi haukuweza kukamilika. Tafadhali jaribu tena.",
+   "back": "The purchase could not be completed. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Ununuzi wako umerejeshwa.",
+   "back": "Your purchase has been refunded.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Hakuna ununuzi wa awali uliopatikana kwa akaunti hii.",
+   "back": "No previous purchases were made for this account.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Ununuzi haukuweza kurejeshwa. Angalia muunganisho wako kisha ujaribu tena.",
+   "back": "The purchase could not be refunded. Check your connection and try again.",
+   "score": 0.75
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Kikumbusho hakikuweza kupangwa. Tafadhali jaribu tena.",
+   "back": "The memorial could not be arranged. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Baadhi ya madaftari hayakuweza kupakiwa. Inaonyesha yaliyopo.",
+   "back": "Some documents could not be downloaded.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Daftari hili huenda halikuhifadhiwa. Tafadhali jaribu tena.",
+   "back": "This booklet may not have been saved, so please try again.",
+   "score": 0.824
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Badiliko hili huenda halikuhifadhiwa. Tafadhali jaribu tena.",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Daftari halikuweza kufutwa. Tafadhali jaribu tena.",
+   "back": "The log could not be deleted. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Mpangilio mpya huenda haukuhifadhiwa. Tafadhali jaribu tena.",
+   "back": "The new layout may not have been saved, so please try again.",
+   "score": 0.842
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Baadhi ya madokezo hayakuweza kupakiwa. Inaonyesha yaliyopo.",
+   "back": "Some suggestions could not be downloaded.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Matokeo ya utafutaji yanaweza kuwa pungufu kwa sasa.",
+   "back": "Search results may be limited at this time.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Dokezo hili huenda halikuhifadhiwa. Angalia hifadhi ya kifaa chako.",
+   "back": "This tip may not have been stored.",
+   "score": 0.533
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Dokezo halikuweza kufutwa. Tafadhali jaribu tena.",
+   "back": "The note could not be deleted. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Ununuzi huu haupatikani kwa sasa. Tafadhali jaribu tena baadaye.",
+   "back": "This purchase is not available at this time. Please try again later.",
+   "score": 0.75
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Safirisha",
+   "back": "Shipping",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Safirisha kama maandishi",
+   "back": "Shipping as text",
+   "score": 0.5
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Safirisha kama PDF",
+   "back": "Download as a PDF",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Mtindo wa karatasi",
+   "back": "Style of paper",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Yenye mistari",
+   "back": "It contains verses",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Yenye nukta",
+   "back": "With a point",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Yenye miraba",
+   "back": "Flowers",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Tupu",
+   "back": "Empty",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krimu",
+   "back": "The Crimean",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Ngozi ya karatasi",
+   "back": "Paper leather",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velamu",
+   "back": "The Good",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Fonti ya madokezo",
+   "back": "Fonts for suggestions",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Mfumo",
+   "back": "The System",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serif",
+   "back": "Serif",
+   "score": 1.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Mwonekano",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Mwanga",
+   "back": "The Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Giza",
+   "back": "The Darkness",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Ngozi ya karatasi",
+   "back": "Paper leather",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Mfumo",
+   "back": "The System",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Onyesho la aya ya siku",
+   "back": "Presentation of the day's verse",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Alama ya maji",
+   "back": "The sign of water",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Kichwa",
+   "back": "The Head",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Kijachini",
+   "back": "Underground",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Imezimwa",
+   "back": "Deactivated",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Arifa",
+   "back": "Warning",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Kikumbusho cha kila siku cha aya",
+   "back": "A daily reminder of the verses",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Muda wa kikumbusho",
+   "back": "The time of remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Arifa zimezimwa kwenye mipangilio ya mfumo.",
+   "back": "Alerts are disabled in the system settings.",
+   "score": 0.444
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Aya yako ya siku iko tayari.",
+   "back": "Your sign of the day is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Faragha",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Funga madokezo kwa Face ID / alama ya kidole",
+   "back": "Lock the pointers with Face ID/fingerprint",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Ondoa matangazo",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Rejesha ununuzi",
+   "back": "Return the purchase",
+   "score": 0.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "The Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Zaidi",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Kadiria Atrament",
+   "back": "The number of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Unaipenda programu? Acha maoni",
+   "back": "Do you like the program? Leave a comment",
+   "score": 0.222
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Shiriki Atrament",
+   "back": "Share the Attraction",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Mwambie rafiki",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Jaribu Atrament, daftari lisilo na usumbufu lenye mwonekano wa karatasi.",
+   "back": "Try Atrament, an uninterrupted notebook with the appearance of a piece of paper.",
+   "score": 0.429
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Lugha",
+   "back": "The language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Hufuata mipangilio ya lugha ya kifaa chako",
+   "back": "Adheres to the language settings of your device",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Chaguomsingi la mfumo",
+   "back": "Fundamentals of the system",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Chagua lugha",
+   "back": "Choose the language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Ondoa matangazo",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Andika bila usumbufu",
+   "back": "Write without interruption",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament ni bure na huonyesha tangazo moja dogo. Kuondoa matangazo ni ununuzi wa mara moja usiofungua kitu kingine: vipengele vyote tayari ni vyako.",
+   "back": "Atrament is free and displays one small ad. Removing ads is a one-time purchase that doesn't open up anything else: all features are already yours.",
+   "score": 0.737
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Rejesha ununuzi",
+   "back": "Return the purchase",
+   "score": 0.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Tayari una Ondoa matangazo. Asante!",
+   "back": "You already have Remove ads. Thank you!",
+   "score": 1.0
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Msaada",
+   "back": "Assistance",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Shiriki kumbukumbu za utatuzi",
+   "back": "Share memories of the solution",
+   "score": 0.333
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Tuma ripoti ya kiufundi ikiwa kuna kitu hakifanyi kazi",
+   "back": "Send a technical report if something doesn't work",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Bado hakuna cha kuripoti.",
+   "back": "There is still nothing to report.",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Futa kumbukumbu za utatuzi",
+   "back": "Delete the memory of the resolution",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Futa kumbukumbu za utatuzi?",
+   "back": "Delete the settlement memories?",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Ripoti ya kiufundi iliyohifadhiwa itaondolewa kwenye kifaa chako.",
+   "back": "The saved technical report will be deleted from your device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Kumbukumbu za utatuzi zimefutwa.",
+   "back": "Memories of the settlement have been deleted.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Ondoa matangazo milele",
+   "back": "Remove ads forever",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "$14.99",
+   "score": 1.0
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Yote",
+   "back": "All of them",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Madaftari",
+   "back": "The booklets",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Za hivi karibuni",
+   "back": "Recent news",
+   "score": 0.667
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Bado hakuna madokezo",
+   "back": "No suggestions yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Gusa + ili uandike dokezo lako la kwanza.",
+   "back": "Push + to write down your first suggestion.",
+   "score": 0.4
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Hakuna cha hivi karibuni",
+   "back": "Nothing recent",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Madokezo unayohariri yataonekana hapa.",
+   "back": "The suggestions you're editing will appear here.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Badilisha jina",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Hamishia kwenye daftari",
+   "back": "You don't end up in a diary",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Hariri",
+   "back": "The Silk",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Safirisha",
+   "back": "Shipping",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Shiriki",
+   "back": "Participate",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Hamishia kwenye daftari",
+   "back": "You don't end up in a diary",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Bado hakuna madaftari mengine. Tengeneza moja ili upange dokezo hili.",
+   "back": "There are no other manuals yet.",
+   "score": 0.462
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Tengeneza daftari jipya",
+   "back": "Create a new booklet",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Badilisha jina",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Badilisha jalada",
+   "back": "Change the cover",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Badilisha jina la daftari",
+   "back": "Change the name of the registry",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Chagua rangi ya jalada",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Daftari litafutwa pamoja na madokezo yake yote (jumla: {count}). Kitendo hiki hakiwezi kutenduliwa.",
+   "back": "The notebook shall be deleted with all its references (general: XCOUNT).",
+   "score": 0.25
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Sheria na msaada",
+   "back": "Law and support",
+   "score": 0.5
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Sera ya Faragha",
+   "back": "Privacy Policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Masharti ya Huduma",
+   "back": "Conditions of Service",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Msaada",
+   "back": "Assistance",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Kiungo hakikuweza kufunguliwa. Tafadhali jaribu tena.",
+   "back": "The link could not be opened. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Leseni za chanzo huria",
+   "back": "Licenses from free source",
+   "score": 0.571
+  }
+ ]
+}

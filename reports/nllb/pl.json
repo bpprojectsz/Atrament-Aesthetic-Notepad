@@ -1,0 +1,1111 @@
+{
+ "locale": "pl",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Other articles of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Spróbuj ponownie",
+   "back": "Try it again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Coś poszło nie tak",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Anuluj",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Zapisz",
+   "back": "Write it down.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Usuń",
+   "back": "Take it off.",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Cofnij",
+   "back": "Take it back.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Ponów",
+   "back": "Oh, again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Bez tytułu",
+   "back": "No title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Tej czynności nie można cofnąć.",
+   "back": "This action cannot be reversed.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Usunąć tę notatkę?",
+   "back": "Can I delete that note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Usunąć „{name}”?",
+   "back": "Remove the XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Nie udało się zapisać. Spróbuj ponownie.",
+   "back": "It didn't work, so try again.",
+   "score": 0.545
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Nie udało się wyeksportować notatki. Spróbuj ponownie.",
+   "back": "The notes failed to be exported, so try again.",
+   "score": 0.5
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Nie udało się otworzyć menu udostępniania. Spróbuj ponownie.",
+   "back": "I couldn't open the sharing menu, so try again.",
+   "score": 0.625
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Ustawienia",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Szukaj w notatkach",
+   "back": "Look in the notes.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Brak notatników",
+   "back": "Lack of notebooks",
+   "score": 0.4
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Utwórz pierwszy notatnik, aby zacząć pisać.",
+   "back": "Make the first notebook so you can start writing.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Brak wyników",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Spróbuj innej frazy.",
+   "back": "Try a different phrase.",
+   "score": 0.571
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Brak notatek",
+   "back": "No notes",
+   "score": 0.8
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Naciśnij +, aby napisać pierwszą notatkę.",
+   "back": "Press + to write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Nowy notatnik",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Nazwa notatnika",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Nowa notatka",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sortowanie",
+   "back": "Sorting",
+   "score": 1.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Ostatnio edytowane",
+   "back": "Recently edited",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Data utworzenia",
+   "back": "Date of establishment",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Tytuł",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Pogrubienie",
+   "back": "Coarse-grained",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Kursywa",
+   "back": "Courses",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Podkreślenie",
+   "back": "Highlighting",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Nagłówek",
+   "back": "Headings",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Lista punktowana",
+   "back": "Pointed list",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Lista zadań",
+   "back": "List of tasks",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Cytat",
+   "back": "It 's a quote .",
+   "score": 0.667
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Blok kodu",
+   "back": "Code block",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Pióro wieczne",
+   "back": "Forever feather",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Długopis żelowy",
+   "back": "Jelly pen",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Ołówek",
+   "back": "Pencils and pencils",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Zakreślacz",
+   "back": "This item is intended to record:",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Gumka",
+   "back": "Rubber and rubber",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Grubość linii",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Przełącz między pisaniem a rysowaniem",
+   "back": "Switch between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Odblokuj, aby wyświetlić notatkę",
+   "back": "Unlock to view the note",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Ta notatka jest zablokowana",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Odblokuj",
+   "back": "Unlock it .",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Blokada notatek została wyłączona, ponieważ to urządzenie nie ma skonfigurowanej blokady ekranu ani biometrii.",
+   "back": "The note block has been turned off because this device has no screen lock or biometrics configured.",
+   "score": 0.769
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Potwierdź tożsamość, aby włączyć blokadę notatek",
+   "back": "Confirm your identity to enable the note lock.",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Potwierdź tożsamość, aby wyłączyć blokadę notatek",
+   "back": "Confirm your identity to disable the note lock.",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Odblokuj, aby udostępnić lub wyeksportować notatkę",
+   "back": "Unlock to share or export the note",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Nie udało się potwierdzić Twojej tożsamości.",
+   "back": "We haven't been able to confirm your identity.",
+   "score": 0.2
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Najpierw skonfiguruj blokadę ekranu lub odcisk palca w ustawieniach urządzenia.",
+   "back": "First, configure a screen lock or a fingerprint in the device settings.",
+   "score": 0.8
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Ustawienia prywatności",
+   "back": "Confidentiality settings",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Nie udało się dokończyć zakupu. Spróbuj ponownie.",
+   "back": "You didn't finish the purchase.",
+   "score": 0.2
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Zakup został przywrócony.",
+   "back": "The purchase has been refunded.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Nie znaleziono wcześniejszych zakupów dla tego konta.",
+   "back": "No previous purchases were found for this account.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Nie udało się przywrócić zakupów. Sprawdź połączenie i spróbuj ponownie.",
+   "back": "We couldn't recover the purchases, so check the connection and try again.",
+   "score": 0.556
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Nie udało się ustawić przypomnienia. Spróbuj ponownie.",
+   "back": "There's no way to set up the reminder.",
+   "score": 0.154
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Nie udało się wczytać części notatników. Wyświetlane są dostępne dane.",
+   "back": "I couldn't read the parts of the notebooks.",
+   "score": 0.143
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Ten notatnik mógł nie zostać zapisany. Spróbuj ponownie.",
+   "back": "This notebook may not have been recorded.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Ta zmiana mogła nie zostać zapisana. Spróbuj ponownie.",
+   "back": "That change may not have been recorded.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Nie udało się usunąć notatnika. Spróbuj ponownie.",
+   "back": "I couldn't remove the notebook, so try again.",
+   "score": 0.429
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Nowa kolejność mogła nie zostać zapisana. Spróbuj ponownie.",
+   "back": "The new order may not have been recorded.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Nie udało się wczytać części notatek. Wyświetlane są dostępne dane.",
+   "back": "I couldn't read the parts of the notes.",
+   "score": 0.154
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Wyniki wyszukiwania mogą być teraz niekompletne.",
+   "back": "The search results may be incomplete at this time.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Ta notatka mogła nie zostać zapisana. Sprawdź miejsce na urządzeniu.",
+   "back": "This note may not have been recorded.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Nie udało się usunąć notatki. Spróbuj ponownie.",
+   "back": "The notes failed to be deleted, so try again.",
+   "score": 0.667
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Ten zakup jest teraz niedostępny. Spróbuj ponownie później.",
+   "back": "This purchase is not available right now, so try again later.",
+   "score": 0.941
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Eksport",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Eksportuj jako tekst",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Eksportuj jako PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Styl papieru",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "W linie",
+   "back": "On the line",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "W kropki",
+   "back": "In dots",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "W kratkę",
+   "back": "In jail .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Czysty",
+   "back": "Clean",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Kremowy",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergamin",
+   "back": "Of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Welin",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Czcionka notatek",
+   "back": "Letters of note",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Systemowa",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Szeryfowa",
+   "back": "Sheriff's office",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora .",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Wygląd",
+   "back": "The view",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Jasny",
+   "back": "That 's right .",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Ciemny",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergamin",
+   "back": "Of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Systemowy",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Wyświetlanie wersetu dnia",
+   "back": "Displaying the day's text",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Znak wodny",
+   "back": "Water mark",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Nagłówek",
+   "back": "Headings",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Stopka",
+   "back": "Stocks and bonds",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Wyłączone",
+   "back": "Excluded",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Powiadomienia",
+   "back": "Notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Codzienne przypomnienie o wersecie",
+   "back": "A daily reminder of the verse",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Godzina przypomnienia",
+   "back": "The hour of remembrance",
+   "score": 0.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Powiadomienia są wyłączone w ustawieniach systemu.",
+   "back": "The notifications are deactivated in the system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Twój werset dnia jest gotowy.",
+   "back": "Your text of the day is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Prywatność",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Blokuj notatki za pomocą Face ID / odcisku palca",
+   "back": "Block notes with a Face ID / fingerprint",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Usuń reklamy",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Przywróć zakupy",
+   "back": "Return your purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Więcej",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Oceń Atrament",
+   "back": "Value of the Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Podoba Ci się aplikacja? Zostaw opinię",
+   "back": "Do you like the app? Leave a comment.",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Udostępnij Atrament",
+   "back": "Share the Attraction",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Powiedz znajomemu",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Wypróbuj Atrament — notatnik bez rozpraszaczy z fakturami papieru.",
+   "back": "Try a notebook without distractors with paper invoices.",
+   "score": 0.308
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Język",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Zgodny z językiem urządzenia",
+   "back": "In accordance with the language of the device",
+   "score": 0.571
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Domyślny systemowy",
+   "back": "Default system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Wybierz język",
+   "back": "Choose your language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Usuń reklamy",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Pisz bez rozproszeń",
+   "back": "Write without distraction.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament jest bezpłatny i pokazuje jeden mały baner reklamowy. Usunięcie reklam to jednorazowy zakup, który niczego innego nie odblokowuje — wszystkie funkcje są już Twoje.",
+   "back": "The trailer is free, and it shows one little banner ad. Removing the ad is a one-time purchase that doesn't unlock anything else.",
+   "score": 0.727
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Przywróć zakupy",
+   "back": "Return your purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Masz już opcję Usuń reklamy. Dziękujemy!",
+   "back": "You already have the option to remove the ads.",
+   "score": 0.8
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Pomoc",
+   "back": "Help",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Udostępnij dziennik debugowania",
+   "back": "Share the debugging log",
+   "score": 0.667
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Wyślij raport techniczny, jeśli coś nie działa",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Nie ma jeszcze nic do zgłoszenia.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Wyczyść dziennik debugowania",
+   "back": "Clear the debugging log",
+   "score": 0.667
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Wyczyścić dziennik debugowania?",
+   "back": "Clean up the debugging log?",
+   "score": 0.286
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Zapisany raport techniczny zostanie usunięty z urządzenia.",
+   "back": "The recorded technical report shall be deleted from the device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Dziennik debugowania został wyczyszczony.",
+   "back": "The debugging log has been cleared.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Usuń reklamy na zawsze",
+   "back": "Get rid of the ads forever.",
+   "score": 0.571
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Wszystkie",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Notatniki",
+   "back": "Notes and drawings",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Ostatnie",
+   "back": "The last",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Brak notatek",
+   "back": "No notes",
+   "score": 0.8
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Naciśnij +, aby napisać pierwszą notatkę.",
+   "back": "Press + to write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Nic ostatniego",
+   "back": "Nothing of the latest.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Tutaj pojawią się edytowane przez Ciebie notatki.",
+   "back": "Here are the notes you've edited.",
+   "score": 0.6
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Zmień nazwę",
+   "back": "Change the name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Przenieś do notatnika",
+   "back": "Move it to the notebook .",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Edytuj",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Eksportuj",
+   "back": "Export",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Udostępnij",
+   "back": "Make it available",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Przenieś do notatnika",
+   "back": "Move it to the notebook .",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Nie ma jeszcze innych notatników. Utwórz notatnik, aby uporządkować tę notatkę.",
+   "back": "There are no other notebooks yet, so make a notebook to arrange the notebook.",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Utwórz nowy notatnik",
+   "back": "Make a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Zmień nazwę",
+   "back": "Change the name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Zmień okładkę",
+   "back": "Change the cover .",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Zmień nazwę notatnika",
+   "back": "Change the name of the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Wybierz kolor okładki",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Notatnik zostanie usunięty razem ze wszystkimi notatkami (łącznie: {count}). Tej czynności nie można cofnąć.",
+   "back": "The notebook will be deleted along with all notes (including: XCOUNT).",
+   "score": 0.375
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Informacje prawne i pomoc",
+   "back": "Legal information and assistance",
+   "score": 0.4
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Polityka prywatności",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Warunki korzystania z usługi",
+   "back": "Conditions of use of the service",
+   "score": 0.4
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Pomoc",
+   "back": "Help",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Nie udało się otworzyć łącza. Spróbuj ponownie.",
+   "back": "There's been no connection, so try again.",
+   "score": 0.286
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Licencje open source",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

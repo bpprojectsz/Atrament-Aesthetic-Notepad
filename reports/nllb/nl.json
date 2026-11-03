@@ -1,0 +1,1111 @@
+{
+ "locale": "nl",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Parts and accessories of machinery and apparatus",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Opnieuw proberen",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Er is iets misgegaan",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Annuleren",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Opslaan",
+   "back": "Storage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Verwijderen",
+   "back": "Removing",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Ongedaan maken",
+   "back": "Undoing",
+   "score": 1.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Opnieuw",
+   "back": "It 's all over again .",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Zonder titel",
+   "back": "Without title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Dit kan niet ongedaan worden gemaakt.",
+   "back": "This can't be reversed.",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Deze notitie verwijderen?",
+   "back": "Remove this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "‘{name}’ verwijderen?",
+   "back": "Do you want to delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Opslaan mislukt. Probeer het opnieuw.",
+   "back": "Save failed, try again.",
+   "score": 0.667
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Exporteren van de notitie mislukt. Probeer het opnieuw.",
+   "back": "Export of the note failed.",
+   "score": 0.444
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Het deelmenu kan niet worden geopend. Probeer het opnieuw.",
+   "back": "The submenu can't be opened. Try again.",
+   "score": 0.615
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Instellingen",
+   "back": "Institutions",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Notities zoeken",
+   "back": "Looking for notes",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Nog geen notitieboeken",
+   "back": "No notebooks yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Maak je eerste notitieboek om te beginnen met schrijven.",
+   "back": "Make your first notebook to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Geen resultaten",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Probeer een andere zoekterm.",
+   "back": "Try a different search term.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Nog geen notities",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Tik op + om je eerste notitie te schrijven.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Nieuw notitieboek",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Naam van notitieboek",
+   "back": "Name of notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Nieuwe notitie",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sorteren",
+   "back": "Sorting",
+   "score": 1.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Laatst bewerkt",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Aanmaakdatum",
+   "back": "Date of manufacture",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Titel",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Vet",
+   "back": "Fat",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Cursief",
+   "back": "Courses",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Onderstreept",
+   "back": "Highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Kop",
+   "back": "Head",
+   "score": 1.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Lijst met opsommingstekens",
+   "back": "List of summary characters",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Checklist",
+   "back": "Checklists",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Citaat",
+   "back": "Cited by:",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Codeblok",
+   "back": "Code block",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Vulpen",
+   "back": "Filling",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Gelpen",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Potlood",
+   "back": "Pencil and pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Markeerstift",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Gum",
+   "back": "Manufacture from rubber",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Lijndikte",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Wisselen tussen typen en tekenen",
+   "back": "Switching between types and characters",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Ontgrendel om de notitie te bekijken",
+   "back": "Unlock to view the note",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Deze notitie is vergrendeld",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Ontgrendelen",
+   "back": "Unlocking",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Notitievergrendeling is uitgezet omdat op dit apparaat geen schermvergrendeling of biometrie is ingesteld.",
+   "back": "Note locking is disabled because no screen locking or biometrics are set on this device.",
+   "score": 0.727
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Bevestig je identiteit om notitievergrendeling aan te zetten",
+   "back": "Confirm your identity to activate note locking",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Bevestig je identiteit om notitievergrendeling uit te zetten",
+   "back": "Confirm your identity to disable note locking",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Ontgrendel om deze notitie te delen of te exporteren",
+   "back": "Unlocking to share or export this note",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Je identiteit kon niet worden bevestigd.",
+   "back": "Your identity could not be confirmed.",
+   "score": 0.286
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Stel eerst een schermvergrendeling of vingerafdruk in via de apparaatinstellingen.",
+   "back": "First, set up a screen lock or fingerprint through the device settings.",
+   "score": 0.941
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Privacykeuzes",
+   "back": "Privacy choices",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "De aankoop kon niet worden voltooid. Probeer het opnieuw.",
+   "back": "The purchase couldn't be completed, so try again.",
+   "score": 0.615
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Je aankoop is hersteld.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Geen eerdere aankoop gevonden voor dit account.",
+   "back": "No prior purchase found for this account.",
+   "score": 0.727
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Aankopen konden niet worden hersteld. Controleer je verbinding en probeer het opnieuw.",
+   "back": "Purchases couldn't be recovered, so check your connection and try again.",
+   "score": 0.588
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "De herinnering kon niet worden ingepland. Probeer het opnieuw.",
+   "back": "The memory couldn't be mapped, so try again.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Sommige notitieboeken konden niet worden geladen. Beschikbare items worden getoond.",
+   "back": "Some notebooks could not be loaded. Available items are shown.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Dit notitieboek is mogelijk niet opgeslagen. Probeer het opnieuw.",
+   "back": "This notebook may not be stored.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Deze wijziging is mogelijk niet opgeslagen. Probeer het opnieuw.",
+   "back": "This change may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Het notitieboek kon niet worden verwijderd. Probeer het opnieuw.",
+   "back": "The notebook couldn't be removed.",
+   "score": 0.2
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "De nieuwe volgorde is mogelijk niet opgeslagen. Probeer het opnieuw.",
+   "back": "The new order may not have been saved.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Sommige notities konden niet worden geladen. Beschikbare items worden getoond.",
+   "back": "Some notes could not be loaded. Available items are shown.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Zoekresultaten kunnen op dit moment onvolledig zijn.",
+   "back": "Search results may be incomplete at this time.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Deze notitie is mogelijk niet opgeslagen. Controleer de opslagruimte van je apparaat.",
+   "back": "This note may not have been stored.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "De notitie kon niet worden verwijderd. Probeer het opnieuw.",
+   "back": "The note couldn't be deleted.",
+   "score": 0.4
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Deze aankoop is momenteel niet beschikbaar. Probeer het later opnieuw.",
+   "back": "This purchase is not currently available. Try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Exporteren",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Exporteren als tekst",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Exporteren als pdf",
+   "back": "Export as pdf",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Papierstijl",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Gelinieerd",
+   "back": "Linear",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Stippenraster",
+   "back": "Other, not further worked than cold-rolled (cold-reduced) or cold-rolled (cold-reduced) or cold-rolled (cold-reduced) or cold-rolled (cold-reduced) or cold-rolled (cold-reduced) or cold-rolled (cold-reduced) or cold-rolled (cold-reduced",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Ruitjes",
+   "back": "Furniture and articles of clothing, knitted or crocheted (excluding knitted or crocheted, knitted or crocheted)",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Blanco",
+   "back": "Blanco",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Crème",
+   "back": "Fresh or chilled",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Perkament",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velijn",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Lettertype voor notities",
+   "back": "Letter type for notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Systeem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Met schreef",
+   "back": "With writing",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Commission shall adopt delegated acts in accordance with Article 21 of this Regulation.",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Weergave",
+   "back": "Rendering",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Licht",
+   "back": "Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Donker",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Perkament",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Systeem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Weergave van het vers van de dag",
+   "back": "Presentation of the verse of the day",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Watermerk",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Koptekst",
+   "back": "Headings",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Voettekst",
+   "back": "Footnotes",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Uit",
+   "back": "Out of the way",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Meldingen",
+   "back": "Reports",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Dagelijkse versherinnering",
+   "back": "Daily reminder",
+   "score": 0.8
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Tijdstip van herinnering",
+   "back": "Time of remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Meldingen zijn uitgezet in de systeeminstellingen.",
+   "back": "Messages have been deleted in the system settings.",
+   "score": 0.364
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Je vers van de dag staat klaar.",
+   "back": "Your fresh of the day is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Privacy",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Notities vergrendelen met Face ID / vingerafdruk",
+   "back": "Locking notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Advertenties verwijderen",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Aankopen herstellen",
+   "back": "Recovering purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Meer",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Beoordeel Atrament",
+   "back": "Assessment of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Bevalt de app? Laat een beoordeling achter",
+   "back": "Do you like the app? Leave a review",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Deel Atrament",
+   "back": "Parts and accessories",
+   "score": 0.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Vertel het een vriend",
+   "back": "Tell it to a friend.",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Probeer Atrament, een notitieblok zonder afleiding met papiertexturen.",
+   "back": "Try Atrament, a notebook without distractions with paper textures.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Taal",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Volgt de taalinstelling van je apparaat",
+   "back": "Follow the language settings of your device",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Systeemstandaard",
+   "back": "Standard of the system",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Kies een taal",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Advertenties verwijderen",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Schrijf zonder afleiding",
+   "back": "Write without distraction",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament is gratis en toont één kleine advertentiebanner. Advertenties verwijderen is een eenmalige aankoop die verder niets ontgrendelt: alle functies zijn al van jou.",
+   "back": "Atrament is free, and it shows one small ad banner. Removing ads is a one-time purchase that doesn't unlock anything else: all the features are already yours.",
+   "score": 0.842
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Aankopen herstellen",
+   "back": "Recovering purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Je hebt Advertenties verwijderen al. Bedankt!",
+   "back": "You've already removed ads.",
+   "score": 0.444
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Ondersteuning",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Foutopsporingslogboek delen",
+   "back": "Share the error detection log",
+   "score": 0.571
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Stuur een technisch rapport als iets niet werkt",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Er is nog niets om te melden.",
+   "back": "There's still nothing to report.",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Foutopsporingslogboek wissen",
+   "back": "Delete the error detection log",
+   "score": 0.286
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Foutopsporingslogboek wissen?",
+   "back": "Erase the tracking log?",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Hiermee wordt het opgeslagen technische rapport van je apparaat verwijderd.",
+   "back": "This will remove the stored technical report from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Foutopsporingslogboek gewist.",
+   "back": "The error tracking log has been deleted.",
+   "score": 0.222
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Advertenties voorgoed verwijderen",
+   "back": "Remove ads for good",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Alles",
+   "back": "It 's all right .",
+   "score": 0.5
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Notitieboeken",
+   "back": "Notebooks",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Recent",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Nog geen notities",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Tik op + om je eerste notitie te schrijven.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Niets recents",
+   "back": "Nothing recent",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Notities die je bewerkt, verschijnen hier.",
+   "back": "Notes you edit appear here.",
+   "score": 0.6
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Naam wijzigen",
+   "back": "Change of name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Verplaatsen naar notitieboek",
+   "back": "Transfers to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Bewerken",
+   "back": "Manufacture",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Exporteren",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Delen",
+   "back": "Parts and accessories",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Verplaatsen naar notitieboek",
+   "back": "Transfers to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Er zijn nog geen andere notitieboeken. Maak er een om deze notitie te ordenen.",
+   "back": "There are no other notebooks yet.",
+   "score": 0.615
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Nieuw notitieboek maken",
+   "back": "Creating a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Naam wijzigen",
+   "back": "Change of name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Omslag wijzigen",
+   "back": "Changing the cover",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Notitieboek hernoemen",
+   "back": "Renaming the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Kies een omslagkleur",
+   "back": "Choose a cover color",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Het notitieboek wordt verwijderd samen met al zijn notities (totaal: {count}). Dit kan niet ongedaan worden gemaakt.",
+   "back": "The notebook shall be deleted together with all its notes (total: XCOUNT).",
+   "score": 0.353
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Juridisch en ondersteuning",
+   "back": "Legal and support",
+   "score": 1.0
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Privacybeleid",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Servicevoorwaarden",
+   "back": "Conditions of service",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Ondersteuning",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "De link kan niet worden geopend. Probeer het opnieuw.",
+   "back": "The link can't be opened.",
+   "score": 0.6
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Opensourcelicenties",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

@@ -1,0 +1,1111 @@
+{
+ "locale": "ko",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "The Atrament.",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "다시 시도",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "문제가 발생했습니다",
+   "back": "There's been a problem.",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "취소",
+   "back": "Cancel it.",
+   "score": 1.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "저장",
+   "back": "Save it.",
+   "score": 1.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "삭제",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "실행 취소",
+   "back": "Cancel the run.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "다시 실행",
+   "back": "Run it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "제목 없음",
+   "back": "No title.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "이 작업은 취소할 수 없습니다.",
+   "back": "This work cannot be cancelled.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "이 노트를 삭제하시겠습니까?",
+   "back": "Would you please delete this note?",
+   "score": 0.8
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "\"{name}\"을(를) 삭제하시겠습니까?",
+   "back": "Do you want to delete \"XNAME\"?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "저장하지 못했습니다. 다시 시도해 주세요.",
+   "back": "I can't save it. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "이 노트를 내보내지 못했습니다. 다시 시도해 주세요.",
+   "back": "I couldn't get this note out. Please try again.",
+   "score": 0.714
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "공유 시트를 열지 못했습니다. 다시 시도해 주세요.",
+   "back": "I couldn't open the shared sheet. Please try again.",
+   "score": 0.8
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "설정",
+   "back": "Set it up",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "노트 검색",
+   "back": "Looking for notes",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "아직 노트북이 없습니다",
+   "back": "I don't have a laptop yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "첫 번째 노트북을 만들어 글쓰기를 시작하세요.",
+   "back": "Make your first laptop and start writing.",
+   "score": 0.6
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "결과 없음",
+   "back": "There are no results.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "다른 검색어를 시도해 보세요.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "아직 노트가 없습니다",
+   "back": "I don't have a note yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "+ 버튼을 눌러 첫 번째 노트를 작성하세요.",
+   "back": "Press the + button and write the first note.",
+   "score": 0.8
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "새 노트북",
+   "back": "It's a new laptop.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "노트북 이름",
+   "back": "The name of the laptop.",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "새 노트",
+   "back": "New note.",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "정렬",
+   "back": "It's sorted.",
+   "score": 0.667
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "최근 수정",
+   "back": "Recently amended",
+   "score": 0.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "생성일",
+   "back": "It was created.",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "제목",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "굵게",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "기울임꼴",
+   "back": "The slope.",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "밑줄",
+   "back": "The bottom line.",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "제목",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "글머리 기호 목록",
+   "back": "List of hairy symbols",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "체크리스트",
+   "back": "The checklist.",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "인용구",
+   "back": "Quotes",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "코드 블록",
+   "back": "Block of code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "만년필",
+   "back": "It's a thousand years old.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "젤펜",
+   "back": "It's a gel.",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "연필",
+   "back": "The pencil.",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "형광펜",
+   "back": "The fluorescent pen.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "지우개",
+   "back": "It's a whirlwind.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "선 굵기",
+   "back": "I'm on my way.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "입력과 손글씨 전환",
+   "back": "Input and handwriting conversion",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "이 노트를 보려면 잠금을 해제하세요",
+   "back": "If you want to see this note, unlock it.",
+   "score": 0.5
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "이 노트는 잠겨 있습니다",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "잠금 해제",
+   "back": "The lockdown is off.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "이 기기에 화면 잠금이나 생체 인식이 설정되어 있지 않아 노트 잠금을 껐습니다.",
+   "back": "This device doesn't have a screen lock or bio-recognition setup, so it locks the notes.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "노트 잠금을 켜려면 본인 확인을 해 주세요",
+   "back": "If you want to turn on the note lock, check in person.",
+   "score": 0.545
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "노트 잠금을 끄려면 본인 확인을 해 주세요",
+   "back": "If you want to unlock the note, check in person.",
+   "score": 0.182
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "이 노트를 공유하거나 내보내려면 잠금을 해제하세요",
+   "back": "If you want to share this note or send it out, unlock it.",
+   "score": 0.545
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "본인 확인에 실패했습니다.",
+   "back": "He failed to identify himself.",
+   "score": 0.0
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "먼저 기기 설정에서 화면 잠금 또는 지문을 설정해 주세요.",
+   "back": "First, set a screen lock or an index in the device settings.",
+   "score": 0.8
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "개인정보 선택",
+   "back": "Personal Selection",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "구매를 완료하지 못했습니다. 다시 시도해 주세요.",
+   "back": "I didn't complete the purchase. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "구매가 복원되었습니다.",
+   "back": "The purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "이 계정에서 이전 구매 내역을 찾을 수 없습니다.",
+   "back": "You can't find any previous purchases in this account.",
+   "score": 0.308
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "구매를 복원하지 못했습니다. 연결을 확인하고 다시 시도해 주세요.",
+   "back": "I couldn't recover the purchase. Please check the connection and try again.",
+   "score": 0.471
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "알림을 예약하지 못했습니다. 다시 시도해 주세요.",
+   "back": "I haven't booked an alert. Please try again.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "일부 노트북을 불러오지 못했습니다. 불러온 항목만 표시합니다.",
+   "back": "Some of the laptops didn't come back. It only shows the items that came back.",
+   "score": 0.222
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "이 노트북이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.",
+   "back": "This laptop may not have been saved. Please try again.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "이 변경 사항이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.",
+   "back": "These changes may not have been saved. Please try again.",
+   "score": 0.824
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "노트북을 삭제하지 못했습니다. 다시 시도해 주세요.",
+   "back": "I couldn't delete the laptop. Please try again.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "새 순서가 저장되지 않았을 수 있습니다. 다시 시도해 주세요.",
+   "back": "The new order may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "일부 노트를 불러오지 못했습니다. 불러온 항목만 표시합니다.",
+   "back": "I didn't recall some of the notes. I'm just showing the items that were recalled.",
+   "score": 0.333
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "검색 결과가 불완전할 수 있습니다.",
+   "back": "Search results can be incomplete.",
+   "score": 0.6
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "이 노트가 저장되지 않았을 수 있습니다. 기기 저장 공간을 확인해 주세요.",
+   "back": "This note may not have been saved. Please check the storage space on the device.",
+   "score": 0.947
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "노트를 삭제하지 못했습니다. 다시 시도해 주세요.",
+   "back": "I didn't delete the note. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "지금은 이 구매를 이용할 수 없습니다. 나중에 다시 시도해 주세요.",
+   "back": "You can't buy this right now, so try again later.",
+   "score": 0.588
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "내보내기",
+   "back": "Let me out.",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "텍스트로 내보내기",
+   "back": "Send it to the text.",
+   "score": 0.5
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "PDF로 내보내기",
+   "back": "I'm going to send it to PDF.",
+   "score": 0.286
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "용지 스타일",
+   "back": "Courageous style.",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "줄무늬",
+   "back": "The stripes.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "점 격자",
+   "back": "It's a point scale.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "모눈",
+   "back": "I've got eyes.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "백지",
+   "back": "It's a white paper.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "크림",
+   "back": "The cream.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "양피지",
+   "back": "You know, breadcrumbs.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "벨럼",
+   "back": "Bellamy.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "노트 글꼴",
+   "back": "It's the typeface.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "시스템",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "세리프",
+   "back": "Sheriff.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter.",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "This is Lora.",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "모양",
+   "back": "It looks like it.",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "라이트",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "다크",
+   "back": "It's dark.",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "양피지",
+   "back": "You know, breadcrumbs.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "시스템",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "오늘의 말씀 표시",
+   "back": "Today's sign of the word",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "워터마크",
+   "back": "The watermark.",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "머리글",
+   "back": "The hair.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "바닥글",
+   "back": "The bottom.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "끄기",
+   "back": "Turn it off.",
+   "score": 0.667
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "알림",
+   "back": "I'm going to warn you.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "매일 말씀 알림",
+   "back": "I'll tell you every day.",
+   "score": 0.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "알림 시간",
+   "back": "Warning time.",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "시스템 설정에서 알림이 꺼져 있습니다.",
+   "back": "It's off the system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "오늘의 말씀이 준비되었습니다.",
+   "back": "Today's words are ready.",
+   "score": 0.286
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "개인정보 보호",
+   "back": "Protection of personal data",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Face ID / 지문으로 노트 잠그기",
+   "back": "Lock the note with Face ID/ID.",
+   "score": 0.667
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "프리미엄",
+   "back": "It's a premium.",
+   "score": 0.667
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "광고 제거",
+   "back": "Remove the ad.",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "구매 복원",
+   "back": "Purchase restoration",
+   "score": 0.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "It's pro.",
+   "score": 0.667
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "더보기",
+   "back": "More of this.",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament 평가",
+   "back": "Atrament rating",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "앱이 마음에 드시나요? 리뷰를 남겨주세요",
+   "back": "Do you like the app? Please leave a review.",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament 공유",
+   "back": "Atrament share",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "친구에게 알리기",
+   "back": "Let your friend know.",
+   "score": 0.4
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament를 사용해보세요 — 종이 질감의 집중 가능한 노트패드.",
+   "back": "Let's use Atrament, a concentrated notepad with a thick paper texture.",
+   "score": 0.375
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "언어",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "기기의 언어 설정을 따릅니다",
+   "back": "It follows the language settings of the machine.",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "시스템 기본값",
+   "back": "The default value of the system.",
+   "score": 0.8
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "언어 선택",
+   "back": "Language selection",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "광고 제거",
+   "back": "Remove the ad.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "방해받지 않고 글쓰기",
+   "back": "Writing without interruption.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament은 작은 배너 광고와 함께 무료입니다. 광고 제거는 일회성 구매이며 다른 것은 잠금 해제되지 않습니다 — 모든 기능은 이미 당신의 것입니다.",
+   "back": "Atrament is free with a small banner ad. Ad removal is a one-time purchase and the other one is not unlocked.",
+   "score": 0.6
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "구매 복원",
+   "back": "Purchase restoration",
+   "score": 0.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "이미 광고 제거를 이용 중입니다. 감사합니다!",
+   "back": "I'm already using ad removal. Thank you!",
+   "score": 0.333
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "지원",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "디버그 로그 공유",
+   "back": "Share the debugging log",
+   "score": 0.667
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "문제가 있으면 기술 보고서를 보내주세요",
+   "back": "If you have a problem, please send me a technical report.",
+   "score": 0.533
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "아직 보고할 문제가 없습니다.",
+   "back": "There's no problem with reporting yet.",
+   "score": 0.6
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "디버그 로그 지우기",
+   "back": "Delete the debugging log.",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "디버그 로그를 지우시겠습니까?",
+   "back": "Would you mind deleting the debugging log?",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "기기에 저장된 기술 보고서가 제거됩니다.",
+   "back": "The technical reports stored on the device are deleted.",
+   "score": 0.545
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "디버그 로그가 지워졌습니다.",
+   "back": "The debug log has been deleted.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "광고 영구 제거",
+   "back": "Advertising permanently removed",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "That's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "전체",
+   "back": "The whole thing.",
+   "score": 0.0
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "노트북",
+   "back": "The laptop.",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "최근",
+   "back": "Recently.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "아직 노트가 없습니다",
+   "back": "I don't have a note yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "+ 버튼을 눌러 첫 노트를 작성하세요.",
+   "back": "Write the first note by pressing the + button.",
+   "score": 0.727
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "최근 항목 없음",
+   "back": "There are no recent entries.",
+   "score": 0.333
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "편집한 노트가 여기에 표시됩니다.",
+   "back": "The edited note is shown here.",
+   "score": 0.4
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "이름 바꾸기",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "노트북으로 이동",
+   "back": "Go to the laptop.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "편집",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "내보내기",
+   "back": "Let me out.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "공유",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "노트북으로 이동",
+   "back": "Go to the laptop.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "다른 노트북이 없습니다. 새로 만들어 이 노트를 정리하세요.",
+   "back": "There's no other notebook. Make a new notebook and clean it up.",
+   "score": 0.353
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "새 노트북 만들기",
+   "back": "I'm going to make a new laptop.",
+   "score": 0.222
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "이름 바꾸기",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "표지 변경",
+   "back": "Change the sign",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "노트북 이름 바꾸기",
+   "back": "Change the name of the laptop.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "표지 색상 선택",
+   "back": "Color selection",
+   "score": 0.4
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "이 노트북과 {count}개의 노트를 삭제합니다. 되돌릴 수 없습니다.",
+   "back": "I'm deleting this laptop and XCOUNT notes, and I can't get them back.",
+   "score": 0.316
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "법적 고지 및 지원",
+   "back": "Legal advice and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "개인정보 처리방침",
+   "back": "How to handle personal data",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "서비스 약관",
+   "back": "Terms of Service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "지원",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "링크를 열 수 없습니다. 다시 시도해 주세요.",
+   "back": "I can't open the link. Please try again.",
+   "score": 0.769
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "오픈 소스 라이선스",
+   "back": "It's an open source license.",
+   "score": 0.571
+  }
+ ]
+}

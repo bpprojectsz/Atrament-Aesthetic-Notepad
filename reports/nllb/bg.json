@@ -1,0 +1,1111 @@
+{
+ "locale": "bg",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Flat-rolled products of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Опитайте отново",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Нещо се обърка",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Отказ",
+   "back": "Rejection",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Запази",
+   "back": "Reserves",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Изтрий",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Отмяна",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Повторение",
+   "back": "Repeat",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Без заглавие",
+   "back": "Untitled",
+   "score": 1.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Това действие не може да бъде отменено.",
+   "back": "This action shall not be reversed.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Да се изтрие ли тази бележка?",
+   "back": "Can I erase this note?",
+   "score": 0.333
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Да се изтрие ли „{name}“?",
+   "back": "Do you want to delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Запазването не бе успешно. Опитайте отново.",
+   "back": "The backup was unsuccessful.",
+   "score": 0.0
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Експортирането на бележката не бе успешно. Опитайте отново.",
+   "back": "Exporting the note was unsuccessful.",
+   "score": 0.4
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Менюто за споделяне не можа да се отвори. Опитайте отново.",
+   "back": "The sharing menu couldn't be opened.",
+   "score": 0.5
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Настройки",
+   "back": "Setting up",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Търсене в бележките",
+   "back": "Search for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Още няма тетрадки",
+   "back": "There are no notebooks yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Създайте първата си тетрадка, за да започнете да пишете.",
+   "back": "Make your first notebook so you can start writing.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Няма резултати",
+   "back": "There are no results.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Опитайте с друга дума за търсене.",
+   "back": "Try a different search word.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Още няма бележки",
+   "back": "No notes yet.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Докоснете +, за да напишете първата си бележка.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Нова тетрадка",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Име на тетрадката",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Нова бележка",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Сортиране",
+   "back": "Sorting",
+   "score": 1.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Последно редактирани",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Дата на създаване",
+   "back": "Date of establishment",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Заглавие",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Получер",
+   "back": "Midnight",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Курсив",
+   "back": "Cursive",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Подчертан",
+   "back": "Highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Заглавие",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Списък с водещи символи",
+   "back": "List of leading symbols",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Списък със задачи",
+   "back": "List of tasks",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Цитат",
+   "back": "Cited",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Блок с код",
+   "back": "Block with code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Писалка",
+   "back": "A pen",
+   "score": 0.667
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Гел писалка",
+   "back": "Hot pen",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Молив",
+   "back": "Other, not elsewhere specified or included",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Маркер",
+   "back": "Markers and markers",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Гумичка",
+   "back": "Tire",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Дебелина на линията",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Превключване между писане и рисуване",
+   "back": "Switching between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Отключете, за да видите бележката",
+   "back": "Turn it on to see the note.",
+   "score": 0.333
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Тази бележка е заключена",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Отключване",
+   "back": "Locking and unlocking",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Заключването на бележките е изключено, защото това устройство няма настроено заключване на екрана или биометрия.",
+   "back": "Note locking is disabled because this device does not have screen locking or biometrics configured.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Потвърдете самоличността си, за да включите заключването на бележките",
+   "back": "Confirm your identity to include the note locking",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Потвърдете самоличността си, за да изключите заключването на бележките",
+   "back": "Confirm your identity to exclude the locking of the notes.",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Отключете, за да споделите или експортирате бележката",
+   "back": "Unlock to share or export the note",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Самоличността ви не можа да бъде потвърдена.",
+   "back": "Your identity has not been confirmed.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Първо настройте заключване на екрана или пръстов отпечатък от настройките на устройството.",
+   "back": "First, set a lock on the screen or a fingerprint from the device's settings.",
+   "score": 0.824
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Опции за поверителност",
+   "back": "Confidentiality options",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Покупката не можа да бъде завършена. Опитайте отново.",
+   "back": "The purchase could not be completed.",
+   "score": 0.8
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Покупката ви беше възстановена.",
+   "back": "Your purchase was refunded.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Не е намерена предишна покупка за този акаунт.",
+   "back": "No previous purchase was found for this account.",
+   "score": 1.0
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Покупките не можаха да бъдат възстановени. Проверете връзката си и опитайте отново.",
+   "back": "The purchases could not be recovered, so check your connection and try again.",
+   "score": 0.824
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Напомнянето не можа да бъде насрочено. Опитайте отново.",
+   "back": "The reminder couldn't be timed.",
+   "score": 0.2
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Някои тетрадки не можаха да бъдат заредени. Показва се наличното.",
+   "back": "Some notebooks couldn't be loaded.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Тази тетрадка може да не е запазена. Опитайте отново.",
+   "back": "This notebook may not be preserved.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Тази промяна може да не е запазена. Опитайте отново.",
+   "back": "This change may not be preserved.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Тетрадката не можа да бъде изтрита. Опитайте отново.",
+   "back": "The tetrad could not be erased.",
+   "score": 0.4
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Новата подредба може да не е запазена. Опитайте отново.",
+   "back": "The new order may not be preserved.",
+   "score": 0.571
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Някои бележки не можаха да бъдат заредени. Показва се наличното.",
+   "back": "Some of the notes couldn't be loaded.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "В момента резултатите от търсенето може да са непълни.",
+   "back": "At this time, the search results may be incomplete.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Тази бележка може да не е запазена. Проверете паметта на устройството.",
+   "back": "This note may not have been saved.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Бележката не можа да бъде изтрита. Опитайте отново.",
+   "back": "The note couldn't be erased.",
+   "score": 0.2
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Тази покупка в момента не е налична. Опитайте по-късно.",
+   "back": "This purchase is not available at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Експорт",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Експорт като текст",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Експорт като PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Стил на хартията",
+   "back": "Style of paper",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "На редове",
+   "back": "In rows",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "С точки",
+   "back": "With points",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "На квадратчета",
+   "back": "Of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Празна",
+   "back": "It's empty.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Кремава",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Пергамент",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Велен",
+   "back": "Velen",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Шрифт на бележките",
+   "back": "Lettering of notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Системен",
+   "back": "Systemic",
+   "score": 0.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Със серифи",
+   "back": "With sheriffs",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Облик",
+   "back": "Furniture and articles of clothing, of knitted or crocheted textiles",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Светъл",
+   "back": "Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Тъмен",
+   "back": "The darkness",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Пергамент",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Системен",
+   "back": "Systemic",
+   "score": 0.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Показване на стиха за деня",
+   "back": "Showing the verse for the day",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Воден знак",
+   "back": "Water mark",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Горен колонтитул",
+   "back": "Upper column",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Долен колонтитул",
+   "back": "Other, of a kind used for the preparation of foodstuffs for human consumption",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Изключено",
+   "back": "Excluded",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Известия",
+   "back": "Notice of release",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Ежедневно напомняне за стих",
+   "back": "A daily reminder of a verse",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Час на напомнянето",
+   "back": "Reminder time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Известията са изключени в настройките на системата.",
+   "back": "The notifications are turned off in the system settings.",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Стихът ви за деня е готов.",
+   "back": "Your verse for the day is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Поверителност",
+   "back": "Confidentiality",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Заключване на бележките с Face ID / пръстов отпечатък",
+   "back": "Closing of notes with Face ID/Fingerprint",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Премахване на рекламите",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Възстановяване на покупките",
+   "back": "Reimbursement of purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Още",
+   "back": "I'm still here.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Оценете Atrament",
+   "back": "Evaluation of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Харесва ли ви приложението? Оставете отзив",
+   "back": "Do you like the app? Leave a comment",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Споделете Atrament",
+   "back": "Share the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Кажете на приятел",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Опитайте Atrament — бележник без разсейване с текстури на хартия.",
+   "back": "Try the Atrament  notebook without distraction with textures on paper.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Език",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Следва езика на устройството",
+   "back": "Following is the language of the device",
+   "score": 0.857
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "По подразбиране на системата",
+   "back": "By default of the system",
+   "score": 0.8
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Избор на език",
+   "back": "Selection of language",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Премахване на рекламите",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Пишете без разсейване",
+   "back": "Write without distraction",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament е безплатно и показва един малък рекламен банер. Премахването на рекламите е еднократна покупка, която не отключва нищо друго — всички функции вече са ваши.",
+   "back": "Atrament is free and shows a small ad banner. Removing the ads is a one-time purchase that doesn't unlock anything else  all the features are already yours.",
+   "score": 0.842
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Възстановяване на покупките",
+   "back": "Reimbursement of purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Вече имате „Премахване на рекламите“. Благодарим ви!",
+   "back": "You've already got the \"Stop the ads\". Thank you.",
+   "score": 0.545
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Поддръжка",
+   "back": "Maintenance",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Споделяне на дневника за отстраняване на грешки",
+   "back": "Share the error-correcting log",
+   "score": 0.571
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Изпратете технически доклад, ако нещо не работи",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Още няма нищо за докладване.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Изчистване на дневника за отстраняване на грешки",
+   "back": "Cleaning the log to correct errors",
+   "score": 0.286
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Да се изчисти ли дневникът за отстраняване на грешки?",
+   "back": "Do you want to clean up the error-correcting diary?",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Това ще премахне запазения технически доклад от устройството ви.",
+   "back": "This will remove the saved technical report from your device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Дневникът за отстраняване на грешки е изчистен.",
+   "back": "The troubleshooting log is clean.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Премахване на рекламите завинаги",
+   "back": "Removing the ads forever",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Всички",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Тетрадки",
+   "back": "Other, not further worked than hot-rolled, impregnated, coated, covered or laminated with plastics",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Скорошни",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Още няма бележки",
+   "back": "No notes yet.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Докоснете +, за да напишете първата си бележка.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Няма скорошни",
+   "back": "No recent ones.",
+   "score": 0.4
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Тук ще се показват бележките, които редактирате.",
+   "back": "This is where the notes you're editing will appear.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Преименуване",
+   "back": "Re-naming",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Преместване в тетрадка",
+   "back": "Moving to a notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Редактиране",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Експорт",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Споделяне",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Преместване в тетрадка",
+   "back": "Moving to a notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Още няма други тетрадки. Създайте една, за да подредите тази бележка.",
+   "back": "I don't have any other notebooks yet.",
+   "score": 0.375
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Създаване на нова тетрадка",
+   "back": "Creating a new ledger",
+   "score": 0.333
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Преименуване",
+   "back": "Re-naming",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Смяна на корицата",
+   "back": "Replacement of the cover",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Преименуване на тетрадката",
+   "back": "Renaming the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Изберете цвят на корицата",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Тетрадката ще бъде изтрита заедно с всички бележки в нея (общо: {count}). Това действие не може да бъде отменено.",
+   "back": "The tetrad shall be deleted together with all notes in it (general: XCOUNT).",
+   "score": 0.125
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Правна информация и поддръжка",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Политика за поверителност",
+   "back": "Confidentiality policy",
+   "score": 0.5
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Условия за ползване",
+   "back": "Conditions of use",
+   "score": 0.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Поддръжка",
+   "back": "Maintenance",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Връзката не можа да се отвори. Опитайте отново.",
+   "back": "The link couldn't be opened.",
+   "score": 0.8
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Лицензи за отворен код",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

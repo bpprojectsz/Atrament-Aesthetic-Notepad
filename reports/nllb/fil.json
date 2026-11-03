@@ -1,0 +1,1111 @@
+{
+ "locale": "fil",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Instruments and equipment",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Subukan ulit",
+   "back": "Try again",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "May nangyaring mali",
+   "back": "Something went wrong",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Kanselahin",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "I-save",
+   "back": "Save the money",
+   "score": 0.667
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Burahin",
+   "back": "Disappointed",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "I-undo",
+   "back": "Deposited",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "I-redo",
+   "back": "Reduced",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Walang pamagat",
+   "back": "No title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Hindi na ito maaaring ibalik.",
+   "back": "It can no longer be returned.",
+   "score": 0.286
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Burahin ang note na ito?",
+   "back": "Shake this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Burahin ang “{name}”?",
+   "back": "Shut down the XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Hindi ma-save. Pakisubukan ulit.",
+   "back": "Can't save, try again.",
+   "score": 0.8
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Hindi ma-export ang note na ito. Pakisubukan ulit.",
+   "back": "This note cannot be exported. Try again.",
+   "score": 0.727
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Hindi mabuksan ang menu ng pagbabahagi. Pakisubukan ulit.",
+   "back": "The sharing menu won't open. Try again.",
+   "score": 0.571
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Mga Setting",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Maghanap sa mga note",
+   "back": "Search for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Wala pang notebook",
+   "back": "No notebook yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Gawin ang una mong notebook para magsimulang magsulat.",
+   "back": "Make your first notebook to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Walang resulta",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Subukan ang ibang salita sa paghahanap.",
+   "back": "Try another word in the search.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Wala pang note",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "I-tap ang + para isulat ang una mong note.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Bagong notebook",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Pangalan ng notebook",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Bagong note",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Pagsunud-sunurin",
+   "back": "Follow-up",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Huling na-edit",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Petsa ng paggawa",
+   "back": "Hours of work",
+   "score": 0.0
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Pamagat",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Bold",
+   "back": "Bold",
+   "score": 1.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Italic",
+   "back": "Italic",
+   "score": 1.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Underline",
+   "back": "Underline",
+   "score": 1.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Heading",
+   "back": "Heading",
+   "score": 1.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Bullet list",
+   "back": "Bullet list",
+   "score": 1.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Checklist",
+   "back": "Checklist",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Sipi",
+   "back": "Sheep",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Code block",
+   "back": "Code block",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Fountain pen",
+   "back": "Fountain pen",
+   "score": 1.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Gel pen",
+   "back": "Gel pen",
+   "score": 1.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Lapis",
+   "back": "Flat",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Highlighter",
+   "back": "Highlighter",
+   "score": 1.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Pambura",
+   "back": "Unemployment",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Kapal ng guhit",
+   "back": "Drawing ship",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Magpalit sa pagitan ng pag-type at pagguhit",
+   "back": "Buying between typing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "I-unlock para makita ang note",
+   "back": "Unlock to see the note",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Naka-lock ang note na ito",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "I-unlock",
+   "back": "Unlock",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Naka-off ang lock ng note dahil walang naka-set up na screen lock o biometrics ang device na ito.",
+   "back": "The note lock is off because no screen lock or biometrics have been set up on this device.",
+   "score": 0.8
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Kumpirmahin ang pagkakakilanlan mo para i-on ang lock ng note",
+   "back": "Confirm your identity to unlock the note",
+   "score": 0.5
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Kumpirmahin ang pagkakakilanlan mo para i-off ang lock ng note",
+   "back": "Confirm your identity to unlock the note",
+   "score": 0.444
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "I-unlock para ibahagi o i-export ang note na ito",
+   "back": "Unlock to share or export this note",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Hindi makumpirma ang pagkakakilanlan mo.",
+   "back": "Your identity cannot be confirmed.",
+   "score": 0.333
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Mag-set up muna ng screen lock o fingerprint sa mga setting ng device.",
+   "back": "First set up a screen lock or fingerprint in the device settings.",
+   "score": 1.0
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Mga pagpipilian sa privacy",
+   "back": "Privacy options",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Hindi makumpleto ang pagbili. Pakisubukan ulit.",
+   "back": "Can't complete the purchase. Try again.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Naibalik na ang binili mo.",
+   "back": "What you bought has been returned.",
+   "score": 0.0
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Walang nakitang nakaraang pagbili para sa account na ito.",
+   "back": "No previous purchases have been seen for this account.",
+   "score": 0.462
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Hindi maibalik ang mga pagbili. Tingnan ang koneksyon mo at subukan ulit.",
+   "back": "The purchases are non-refundable. Check your connection and try again.",
+   "score": 0.667
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Hindi ma-schedule ang paalala. Pakisubukan ulit.",
+   "back": "The reminder can't be scheduled. Try again.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Hindi ma-load ang ilang notebook. Ipinapakita ang mga available.",
+   "back": "Some notebooks cannot be loaded. Available ones are displayed.",
+   "score": 0.533
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Posibleng hindi na-save ang notebook na ito. Pakisubukan ulit.",
+   "back": "This notebook may not have been saved. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Posibleng hindi na-save ang pagbabagong ito. Pakisubukan ulit.",
+   "back": "This change may not have been saved. Try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Hindi mabura ang notebook. Pakisubukan ulit.",
+   "back": "The notebook is not red. Try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Posibleng hindi na-save ang bagong pagkakasunod-sunod. Pakisubukan ulit.",
+   "back": "The new sequence may not have been saved.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Hindi ma-load ang ilang note. Ipinapakita ang mga available.",
+   "back": "Some notes cannot be loaded. Available notes are displayed.",
+   "score": 0.615
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Maaaring hindi kumpleto ang mga resulta ng paghahanap ngayon.",
+   "back": "Search results may not be complete today.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Posibleng hindi na-save ang note na ito. Tingnan ang storage ng device mo.",
+   "back": "This note may not have been saved. Check the storage of your device.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Hindi mabura ang note. Pakisubukan ulit.",
+   "back": "The note is not red. Try again.",
+   "score": 0.727
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Hindi available ang pagbiling ito ngayon. Pakisubukan ulit mamaya.",
+   "back": "This search is not available now. Try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "I-export",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "I-export bilang teksto",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "I-export bilang PDF",
+   "back": "Exported as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Istilo ng papel",
+   "back": "Stylus of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "May guhit",
+   "back": "There's a drawing",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "May tuldok",
+   "back": "There is a point",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "May kuwadrado",
+   "back": "There's a square",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Blangko",
+   "back": "Blank",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krema",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergamino",
+   "back": "Pergamon",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Vellum",
+   "back": "Vellum",
+   "score": 1.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Font ng mga note",
+   "back": "Font of notes",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "System",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serif",
+   "back": "Sheriff",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Hitsura",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Maliwanag",
+   "back": "Clearly",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Madilim",
+   "back": "It is dark",
+   "score": 1.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergamino",
+   "back": "Pergamon",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "System",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Pagpapakita ng talata ng araw",
+   "back": "Showing the sun's rays",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Watermark",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Header",
+   "back": "Header",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Footer",
+   "back": "Footer",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Naka-off",
+   "back": "Off",
+   "score": 1.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Mga notification",
+   "back": "Notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Pang-araw-araw na paalala ng talata",
+   "back": "Daily reminders of the word",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Oras ng paalala",
+   "back": "A time of remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Naka-off ang mga notification sa mga setting ng system.",
+   "back": "The notifications are off in the system settings.",
+   "score": 0.889
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Handa na ang talata mo sa araw na ito.",
+   "back": "Your message for today is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Privacy",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "I-lock ang mga note gamit ang Face ID / fingerprint",
+   "back": "Lock notes with Face ID/fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Alisin ang mga ad",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Ibalik ang mga pagbili",
+   "back": "Return the purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Higit pa",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "I-rate ang Atrament",
+   "back": "Rate the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Gusto mo ba ang app? Mag-iwan ng review",
+   "back": "Do you like the app? Leave a review",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Ibahagi ang Atrament",
+   "back": "Share the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Sabihin sa kaibigan",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Subukan ang Atrament, isang notepad na walang distraksyon na may texture ng papel.",
+   "back": "Try Atrament, a distraction-free notepad with a paper texture.",
+   "score": 0.857
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Wika",
+   "back": "Speech",
+   "score": 0.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Sumusunod sa wika ng device",
+   "back": "Follow the language of the device",
+   "score": 0.857
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Default ng system",
+   "back": "Default of the system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Pumili ng wika",
+   "back": "Choose the language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Alisin ang mga ad",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Magsulat nang walang distraksyon",
+   "back": "Write without distraction",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Libre ang Atrament at nagpapakita lang ng isang maliit na ad banner. Ang pag-alis ng mga ad ay isang beses na pagbili na walang ibang bubuksan: sa iyo na ang lahat ng feature.",
+   "back": "Atrament is free and only displays a small ad banner. Removing ads is a one-time purchase with no other opening: you have all the features.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Ibalik ang mga pagbili",
+   "back": "Return the purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Mayroon ka na ng Alisin ang mga ad. Salamat!",
+   "back": "You already have Remove the ads. Thank you!",
+   "score": 1.0
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Suporta",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Ibahagi ang debug log",
+   "back": "Share the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Magpadala ng teknikal na ulat kung may hindi gumagana",
+   "back": "Send a technical report if something is not working",
+   "score": 0.8
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Wala pang ire-report.",
+   "back": "No reports yet.",
+   "score": 0.857
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "I-clear ang debug log",
+   "back": "Clear the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "I-clear ang debug log?",
+   "back": "Clear the debug log?",
+   "score": 1.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Aalisin sa device mo ang naka-save na teknikal na ulat.",
+   "back": "Remove saved technical reports from your device.",
+   "score": 0.833
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Na-clear na ang debug log.",
+   "back": "The debug log is cleared.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Alisin ang mga ad magpakailanman",
+   "back": "Remove the ads forever",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "$14.99",
+   "score": 1.0
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Lahat",
+   "back": "All of them",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Mga notebook",
+   "back": "Notebooks",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Kamakailan",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Wala pang note",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "I-tap ang + para isulat ang una mong note.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Walang kamakailan",
+   "back": "Nothing recent",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Lalabas dito ang mga note na ine-edit mo.",
+   "back": "The notes you edit come out of this.",
+   "score": 0.4
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Palitan ang pangalan",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Ilipat sa notebook",
+   "back": "Move to the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "I-edit",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "I-export",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Ibahagi",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Ilipat sa notebook",
+   "back": "Move to the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Wala pang ibang notebook. Gumawa ng isa para ayusin ang note na ito.",
+   "back": "No other notebook. Make one to fix this notebook.",
+   "score": 0.571
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Gumawa ng bagong notebook",
+   "back": "Make a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Palitan ang pangalan",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Palitan ang pabalat",
+   "back": "Replace the burden",
+   "score": 0.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Palitan ang pangalan ng notebook",
+   "back": "Replace the name of the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Pumili ng kulay ng pabalat",
+   "back": "Choose the color of the beard",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Buburahin ang notebook kasama ang lahat ng note nito (kabuuan: {count}). Hindi na ito maaaring ibalik.",
+   "back": "Turn off the notebook with all its notes (total: XCOUNT). It cannot be returned.",
+   "score": 0.333
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Legal at suporta",
+   "back": "Legal and support",
+   "score": 1.0
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Patakaran sa Privacy",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Mga Tuntunin ng Serbisyo",
+   "back": "Rules of Service",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Suporta",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Hindi mabuksan ang link. Pakisubukan ulit.",
+   "back": "The link won't open. Try again.",
+   "score": 0.833
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Mga lisensya ng open source",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

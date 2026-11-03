@@ -1,0 +1,1111 @@
+{
+ "locale": "zh",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "重试",
+   "back": "Re-testing",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "出现问题",
+   "back": "Problems with appearances",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "取消",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "保存",
+   "back": "Saved by the Bell",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "删除",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "撤销",
+   "back": "Repealed",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "重做",
+   "back": "Do it again",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "无标题",
+   "back": "Untitled",
+   "score": 1.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "此操作无法撤销。",
+   "back": "This operation cannot be revoked.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "要删除这条笔记吗？",
+   "back": "Do you want to delete this note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "要删除“{name}”吗？",
+   "back": "Do you want to remove the XNAME file?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "保存失败，请重试。",
+   "back": "Save Failure, please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "导出此笔记失败，请重试。",
+   "back": "Please try again if this note failed to be exported.",
+   "score": 0.667
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "无法打开分享面板，请重试。",
+   "back": "Can't open the sharing panel, please try again.",
+   "score": 0.571
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "设置",
+   "back": "Set up",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "搜索笔记",
+   "back": "Searching for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "还没有笔记本",
+   "back": "No notebook yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "创建你的第一个笔记本，开始写作。",
+   "back": "Create your first notebook and start writing.",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "没有结果",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "请尝试其他搜索词。",
+   "back": "Please try other search terms.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "还没有笔记",
+   "back": "Not a note yet.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "点击 + 按钮写下第一条笔记。",
+   "back": "Click on the + button to write the first note.",
+   "score": 0.8
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "新建笔记本",
+   "back": "Newly created notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "笔记本名称",
+   "back": "Name of notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "新建笔记",
+   "back": "New notes",
+   "score": 0.5
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "排序",
+   "back": "Sequencing",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "最近编辑",
+   "back": "Recently edited",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "创建日期",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "标题",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "加粗",
+   "back": "Roughing",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "斜体",
+   "back": "The slope",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "下划线",
+   "back": "The bottom line",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "标题",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "项目符号列表",
+   "back": "List of project symbols",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "清单",
+   "back": "The list",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "引用",
+   "back": "References",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "代码块",
+   "back": "Code blocks",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "钢笔",
+   "back": "Pencils",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "中性笔",
+   "back": "Neutral pen",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "铅笔",
+   "back": "Pencils",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "荧光笔",
+   "back": "Flowers and pencils",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "橡皮擦",
+   "back": "Skin scratching",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "笔画粗细",
+   "back": "The pencil is rough.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "在打字和手写之间切换",
+   "back": "Switching between typing and handwriting",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "解锁以查看此笔记",
+   "back": "Unlock to see this note",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "此笔记已锁定",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "解锁",
+   "back": "Unlocking",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "由于此设备未设置屏幕锁定或生物识别，笔记锁定已关闭。",
+   "back": "Notepad locks are closed because the device does not have a screen lock or biometric identification.",
+   "score": 0.417
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "请验证身份以开启笔记锁定",
+   "back": "Please verify your identity to open the note lock",
+   "score": 0.444
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "请验证身份以关闭笔记锁定",
+   "back": "Please verify your identity to close the note lock",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "解锁后即可分享或导出此笔记",
+   "back": "This note can be shared or exported after unlocking",
+   "score": 0.6
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "无法验证你的身份。",
+   "back": "I can't verify your identity.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "请先在设备设置中设置屏幕锁定或指纹。",
+   "back": "Please set screen locks or fingerprints in the device settings.",
+   "score": 0.857
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "隐私选择",
+   "back": "Privacy Options",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "无法完成购买，请重试。",
+   "back": "Can't complete the purchase, please try again.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "已恢复你的购买。",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "未找到此账户的历史购买记录。",
+   "back": "A historical purchase record of this account has not been found.",
+   "score": 0.429
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "无法恢复购买。请检查网络连接后重试。",
+   "back": "Can't recover the purchase. Please check the network connection and try again.",
+   "score": 0.471
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "无法设置提醒，请重试。",
+   "back": "Can't set a reminder, please try again.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "部分笔记本无法加载，正在显示可用内容。",
+   "back": "Some of the laptops cannot be loaded and are showing available content.",
+   "score": 0.533
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "此笔记本可能未保存，请重试。",
+   "back": "This notebook may not have been saved, please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "此更改可能未保存，请重试。",
+   "back": "This change may not have been saved, please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "无法删除此笔记本，请重试。",
+   "back": "This notebook cannot be deleted, please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "新的排序可能未保存，请重试。",
+   "back": "The new order may not be saved, please try again.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "部分笔记无法加载，正在显示可用内容。",
+   "back": "Some of the notes cannot be loaded and are showing available content.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "搜索结果目前可能不完整。",
+   "back": "The search results may not be complete at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "此笔记可能未保存，请检查设备存储空间。",
+   "back": "This note may not have been saved, please check the storage space of the device.",
+   "score": 0.947
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "无法删除此笔记，请重试。",
+   "back": "This note cannot be deleted, please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "此购买目前不可用，请稍后再试。",
+   "back": "This purchase is not currently available, please try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "导出",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "导出为文本",
+   "back": "Exported as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "导出为 PDF",
+   "back": "Exported to PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "纸张样式",
+   "back": "Paper style",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "横线",
+   "back": "Cross-line",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "点阵网格",
+   "back": "Pointing Grids",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "方格",
+   "back": "The square",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "空白",
+   "back": "It's empty.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "米色",
+   "back": "Rice",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "羊皮纸",
+   "back": "Sheepskin paper",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "犊皮纸",
+   "back": "Calf leather paper",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "笔记字体",
+   "back": "Types of notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "系统字体",
+   "back": "System type",
+   "score": 0.667
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "衬线字体",
+   "back": "Types of lines",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "It's called Inter.",
+   "score": 0.5
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "外观",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "浅色",
+   "back": "It's light in color.",
+   "score": 0.5
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "深色",
+   "back": "It's deep.",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "羊皮纸",
+   "back": "Sheepskin paper",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "系统",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "每日经文显示",
+   "back": "The daily scriptures show",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "水印",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "页眉",
+   "back": "The eyebrows",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "页脚",
+   "back": "Pages and footnotes",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "关闭",
+   "back": "Closed",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "通知",
+   "back": "Notice",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "每日经文提醒",
+   "back": "A daily scripture that reminds us",
+   "score": 0.286
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "提醒时间",
+   "back": "A Reminder of the Time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "系统设置中通知已关闭。",
+   "back": "The notification is turned off in the system settings.",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "你的每日经文已准备好。",
+   "back": "Your daily text is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "隐私",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "使用面容 ID / 指纹锁定笔记",
+   "back": "Use facial ID/fingerprint to lock a note",
+   "score": 0.545
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "高级版",
+   "back": "High-level edition",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "移除广告",
+   "back": "Removing ads",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "恢复购买",
+   "back": "Restored purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "专业版",
+   "back": "Professional edition",
+   "score": 0.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "更多",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "评价 Atrament",
+   "back": "I'm not sure what I'm going to do.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "喜欢这个应用？留下评价",
+   "back": "Do you like this app? Leave a comment",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "分享 Atrament",
+   "back": "Share Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "告诉朋友",
+   "back": "Tell your friends",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "试试 Atrament —— 一款带有纸张纹理的无干扰记事本。",
+   "back": "Try Atrament, a paper-textured, non-interference journalism book.",
+   "score": 0.533
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "语言",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "跟随设备语言设置",
+   "back": "Follow the device language settings",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "系统默认",
+   "back": "System by default",
+   "score": 0.8
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "选择语言",
+   "back": "Choosing a language",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "移除广告",
+   "back": "Removing ads",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "专注写作，无干扰",
+   "back": "Focus on writing, no distractions",
+   "score": 0.286
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament 免费使用，附带一个小型横幅广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。",
+   "back": "Atrament is free to use and comes with a small banner ad. Removing ads is a one-time purchase and will not unlock any other content.",
+   "score": 0.556
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "恢复购买",
+   "back": "Restored purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "你已拥有移除广告功能，谢谢！",
+   "back": "You already have the ad removal feature, thank you!",
+   "score": 0.545
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "支持",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "分享调试日志",
+   "back": "Sharing the logs of debriefing",
+   "score": 0.333
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "如果出现问题，请发送技术报告",
+   "back": "If there is a problem, please send a technical report",
+   "score": 0.571
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "暂无需要报告的问题。",
+   "back": "There is no need to report any issues.",
+   "score": 0.6
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "清除调试日志",
+   "back": "Removing the diary",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "要清除调试日志吗？",
+   "back": "Do you want to get rid of the debugging log?",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "这将删除设备上保存的技术报告。",
+   "back": "This will delete the technical reports stored on the device.",
+   "score": 0.5
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "调试日志已清除。",
+   "back": "Deployment logs have been deleted.",
+   "score": 0.25
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "永久移除广告",
+   "back": "Permanent Removal of Advertising",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "全部",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "笔记本",
+   "back": "A notebook",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "最近",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "尚无笔记",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "点击 + 按钮写下你的第一条笔记。",
+   "back": "Click on the + button to write your first note.",
+   "score": 0.8
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "暂无最近记录",
+   "back": "There are no recent records.",
+   "score": 0.333
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "你编辑的笔记会显示在这里。",
+   "back": "Your editorial notes will be displayed here.",
+   "score": 0.545
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "重命名",
+   "back": "Renamed",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "移动到笔记本",
+   "back": "Moving to a notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "编辑",
+   "back": "Editor's note",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "导出",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "分享",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "移动到笔记本",
+   "back": "Moving to a notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "还没有其他笔记本。创建一个来整理这条笔记。",
+   "back": "There is no other notebook. Create one to organize this notebook.",
+   "score": 0.667
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "创建新笔记本",
+   "back": "Creating a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "重命名",
+   "back": "Renamed",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "更换封面",
+   "back": "Changing the cover",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "重命名笔记本",
+   "back": "Renamed notebooks",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "选择封面颜色",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "这将删除该笔记本及其 {count} 条笔记。此操作无法撤销。",
+   "back": "This will delete the notebook and its XCOUNT article notes. This operation cannot be revoked.",
+   "score": 0.556
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "法律与支持",
+   "back": "Law and Support",
+   "score": 0.5
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "隐私政策",
+   "back": "Privacy Policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "服务条款",
+   "back": "Terms of service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "支持",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "无法打开链接。请重试。",
+   "back": "Can't open the link. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "开源许可",
+   "back": "Open source license",
+   "score": 0.667
+  }
+ ]
+}

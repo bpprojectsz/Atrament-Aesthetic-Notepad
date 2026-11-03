@@ -1,0 +1,1111 @@
+{
+ "locale": "ro",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Reîncearcă",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Ceva nu a mers bine",
+   "back": "Something didn't go right.",
+   "score": 0.25
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Anulează",
+   "back": "Canceling",
+   "score": 1.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Salvează",
+   "back": "Save your life.",
+   "score": 0.667
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Șterge",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Desfă",
+   "back": "Open it up .",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Refă",
+   "back": "The raft",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Fără titlu",
+   "back": "No title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Această acțiune nu poate fi anulată.",
+   "back": "This action shall not be reversed.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Ștergi această notă?",
+   "back": "Are you deleting this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Ștergi „{name}”?",
+   "back": "Are you deleting XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Nu s-a putut salva. Încearcă din nou.",
+   "back": "He couldn't be saved.",
+   "score": 0.444
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Nu s-a putut exporta nota. Încearcă din nou.",
+   "back": "The note couldn't be exported.",
+   "score": 0.8
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Nu s-a putut deschide meniul de distribuire. Încearcă din nou.",
+   "back": "The distribution menu couldn't be opened.",
+   "score": 0.5
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Setări",
+   "back": "Setting up",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Caută în note",
+   "back": "Look in the notes.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Încă nu există caiete",
+   "back": "There's still no notebooks.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Creează primul caiet ca să începi să scrii.",
+   "back": "Create your first notebook so you can start writing.",
+   "score": 0.833
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Niciun rezultat",
+   "back": "No result",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Încearcă alt termen de căutare.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Încă nu există note",
+   "back": "There are no notes yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Atinge + ca să scrii prima notă.",
+   "back": "Tap + to write the first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Caiet nou",
+   "back": "New tire",
+   "score": 0.5
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Numele caietului",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Notă nouă",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sortare",
+   "back": "Sorting",
+   "score": 1.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Ultima modificare",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Data creării",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Titlu",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Aldin",
+   "back": "Aldin",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Cursiv",
+   "back": "Cursive",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Subliniat",
+   "back": "Highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Titlu",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Listă cu buline",
+   "back": "List of bulbs",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Listă de sarcini",
+   "back": "List of tasks",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Citat",
+   "back": "Cited",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Bloc de cod",
+   "back": "Code block",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Stilou",
+   "back": "Styrofoam",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Pix cu gel",
+   "back": "Pig with gel",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Creion",
+   "back": "Crayon",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Textmarker",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Radieră",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Grosimea liniei",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Comută între scriere și desenare",
+   "back": "Switching between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Deblochează pentru a vedea nota",
+   "back": "Unlock to see the note",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Această notă este blocată",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Deblochează",
+   "back": "Unlocking",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Blocarea notelor a fost dezactivată deoarece acest dispozitiv nu are blocare a ecranului sau biometrie configurate.",
+   "back": "Note locking has been disabled because this device does not have screen locking or biometrics configured.",
+   "score": 0.538
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Confirmă-ți identitatea pentru a activa blocarea notelor",
+   "back": "Confirm your identity to activate the note lock",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Confirmă-ți identitatea pentru a dezactiva blocarea notelor",
+   "back": "Confirm your identity to disable the note block",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Deblochează pentru a distribui sau exporta nota",
+   "back": "Unlock to distribute or export the note",
+   "score": 0.75
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Identitatea ta nu a putut fi verificată.",
+   "back": "Your identity could not be verified.",
+   "score": 0.286
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Mai întâi configurează blocarea ecranului sau amprenta în setările dispozitivului.",
+   "back": "First set the screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Opțiuni de confidențialitate",
+   "back": "Confidentiality options",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Achiziția nu a putut fi finalizată. Încearcă din nou.",
+   "back": "The purchase couldn't be finalized.",
+   "score": 0.2
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Achiziția ta a fost restaurată.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Nu a fost găsită nicio achiziție anterioară pentru acest cont.",
+   "back": "No previous acquisitions were found for this account.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Achizițiile nu au putut fi restaurate. Verifică conexiunea și încearcă din nou.",
+   "back": "The purchases couldn't be restored.",
+   "score": 0.167
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Memento-ul nu a putut fi programat. Încearcă din nou.",
+   "back": "The memo couldn't be scheduled.",
+   "score": 0.2
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Unele caiete nu au putut fi încărcate. Se afișează ce este disponibil.",
+   "back": "Some notebooks couldn't be loaded. They show what's available.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Este posibil ca acest caiet să nu fi fost salvat. Încearcă din nou.",
+   "back": "This notebook may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Este posibil ca această modificare să nu fi fost salvată. Încearcă din nou.",
+   "back": "It's possible that this modification hasn't been saved.",
+   "score": 0.267
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Caietul nu a putut fi șters. Încearcă din nou.",
+   "back": "The drawer couldn't be erased.",
+   "score": 0.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Este posibil ca noua ordine să nu fi fost salvată. Încearcă din nou.",
+   "back": "It's possible the new order hasn't been saved.",
+   "score": 0.471
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Unele note nu au putut fi încărcate. Se afișează ce este disponibil.",
+   "back": "Some notes couldn't be loaded. It shows what's available.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Rezultatele căutării pot fi incomplete acum.",
+   "back": "The search results may be incomplete now.",
+   "score": 0.909
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Este posibil ca această notă să nu fi fost salvată. Verifică spațiul de stocare al dispozitivului.",
+   "back": "This note may not have been saved.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Nota nu a putut fi ștearsă. Încearcă din nou.",
+   "back": "The note couldn't be erased.",
+   "score": 0.2
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Această achiziție nu este disponibilă acum. Încearcă din nou mai târziu.",
+   "back": "This purchase is not available now. Try again later.",
+   "score": 0.933
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Export",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Exportă ca text",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Exportă ca PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Stil de hârtie",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Liniată",
+   "back": "Linear",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Cu puncte",
+   "back": "With points",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Cu pătrățele",
+   "back": "With squares",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Goală",
+   "back": "It 's empty .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Crem",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergament",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velin",
+   "back": "Velin",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Fontul notelor",
+   "back": "The font of the notes",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Cu serife",
+   "back": "With sheriffs",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora .",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Aspect",
+   "back": "Looking at you",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Luminos",
+   "back": "Bright",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Întunecat",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergament",
+   "back": "Manufacture from materials of any heading, except that of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Afișarea versetului zilei",
+   "back": "Displaying the day's text",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Filigran",
+   "back": "Fragrances",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Antet",
+   "back": "I 've been waiting for you .",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Subsol",
+   "back": "Subsoil",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Dezactivat",
+   "back": "Deactivated",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Notificări",
+   "back": "Notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Memento zilnic cu verset",
+   "back": "Daily memento with verse",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Ora memento-ului",
+   "back": "The hour of remembrance",
+   "score": 0.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Notificările sunt dezactivate în setările sistemului.",
+   "back": "The notifications are deactivated in the system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Versetul tău zilnic este gata.",
+   "back": "Your daily text is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Confidențialitate",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Blochează notele cu Face ID / amprentă",
+   "back": "Block the notes with Face ID / fingerprint",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Elimină reclamele",
+   "back": "Remove the advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Restaurează achizițiile",
+   "back": "Restore the acquisitions",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Mai multe",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Evaluează Atrament",
+   "back": "Evaluate the Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Îți place aplicația? Lasă o recenzie",
+   "back": "Do you like the app? Leave a review",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Distribuie Atrament",
+   "back": "Distribute Attraction",
+   "score": 0.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Spune-i unui prieten",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Încearcă Atrament — un carnet de notițe fără distrageri, cu texturi de hârtie.",
+   "back": "Try Atrament  a distraction-free notebook with paper texts.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Limbă",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Urmează limba dispozitivului",
+   "back": "Following the language of the device",
+   "score": 0.857
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Implicit din sistem",
+   "back": "Implicit in the system",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Alege limba",
+   "back": "Choose your language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Elimină reclamele",
+   "back": "Remove the advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Scrie fără distrageri",
+   "back": "He writes without distraction",
+   "score": 0.571
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament este gratuit și afișează un singur banner publicitar mic. Eliminarea reclamelor este o achiziție unică ce nu deblochează nimic altceva — toate funcțiile sunt deja ale tale.",
+   "back": "Attraction is free and displays a single small advertising banner. Ad removal is a unique purchase that doesn't unlock anything else  all the features are already yours.",
+   "score": 0.632
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Restaurează achizițiile",
+   "back": "Restore the acquisitions",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Ai deja „Elimină reclamele”. Mulțumim!",
+   "back": "You've already deleted the ads.",
+   "score": 0.444
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Asistență",
+   "back": "Assistance",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Distribuie jurnalul de depanare",
+   "back": "He distributes the detention log",
+   "score": 0.286
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Trimite un raport tehnic dacă ceva nu funcționează",
+   "back": "Send a technical report if something doesn't work",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Încă nu este nimic de raportat.",
+   "back": "There's still nothing to report.",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Șterge jurnalul de depanare",
+   "back": "Delete the detention log",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Ștergi jurnalul de depanare?",
+   "back": "Are you deleting the detention log?",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Raportul tehnic salvat va fi eliminat de pe dispozitiv.",
+   "back": "The saved technical report will be deleted from the device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Jurnalul de depanare a fost șters.",
+   "back": "The detention log has been deleted.",
+   "score": 0.25
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Elimină reclamele pentru totdeauna",
+   "back": "Get rid of the ads forever.",
+   "score": 0.571
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Toate",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Caiete",
+   "back": "Rugs",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Recente",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Încă nu există note",
+   "back": "There are no notes yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Atinge + ca să scrii prima notă.",
+   "back": "Tap + to write the first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Nimic recent",
+   "back": "Nothing recent .",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Notele pe care le editezi vor apărea aici.",
+   "back": "The notes you're editing will appear here.",
+   "score": 0.667
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Redenumește",
+   "back": "It shall be renamed",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Mută în caiet",
+   "back": "Move in the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Editează",
+   "back": "It's editing.",
+   "score": 0.667
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Exportă",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Distribuie",
+   "back": "Distribution",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Mută în caiet",
+   "back": "Move in the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Nu există încă alte caiete. Creează unul pentru a organiza această notă.",
+   "back": "There are no other notebooks yet. Create one to organize this note.",
+   "score": 0.824
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Creează un caiet nou",
+   "back": "Create a new notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Redenumește",
+   "back": "It shall be renamed",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Schimbă coperta",
+   "back": "Change the blanket",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Redenumește caietul",
+   "back": "Rename the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Alege culoarea copertei",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Caietul va fi șters împreună cu toate notele din el (în total: {count}). Această acțiune nu poate fi anulată.",
+   "back": "The box will be deleted along with all the notes in it (total: XCOUNT).",
+   "score": 0.25
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Informații legale și asistență",
+   "back": "Legal information and assistance",
+   "score": 0.4
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Politica de confidențialitate",
+   "back": "Confidentiality policy",
+   "score": 0.5
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Termeni și condiții",
+   "back": "Terms and conditions",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Asistență",
+   "back": "Assistance",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Linkul nu a putut fi deschis. Încearcă din nou.",
+   "back": "The link couldn't be opened.",
+   "score": 0.8
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Licențe open source",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

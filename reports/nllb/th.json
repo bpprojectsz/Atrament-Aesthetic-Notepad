@@ -1,0 +1,1111 @@
+{
+ "locale": "th",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "The Atrament.",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "ลองอีกครั้ง",
+   "back": "Try it again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "เกิดข้อผิดพลาดบางอย่าง",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "ยกเลิก",
+   "back": "Cancel it.",
+   "score": 1.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "บันทึก",
+   "back": "The record.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "ลบ",
+   "back": "This is negative.",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "เลิกทำ",
+   "back": "Don't do that.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "ทำซ้ำ",
+   "back": "Do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "ไม่มีชื่อเรื่อง",
+   "back": "There's no name.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "ไม่สามารถย้อนกลับการดำเนินการนี้ได้",
+   "back": "There's no turning back on this operation.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "ลบบันทึกนี้ไหม",
+   "back": "Did you find this record?",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "ลบ “{name}” ไหม",
+   "back": "Minus XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "บันทึกไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Failed record, try again.",
+   "score": 0.444
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "ส่งออกบันทึกนี้ไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Exporting this file failed. Try again.",
+   "score": 0.545
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "เปิดเมนูแชร์ไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Open the menu unsuccessfully. Try again.",
+   "score": 0.5
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "การตั้งค่า",
+   "back": "The settings.",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "ค้นหาบันทึก",
+   "back": "Find the records.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "ยังไม่มีสมุดบันทึก",
+   "back": "There's no record yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "สร้างสมุดบันทึกเล่มแรกเพื่อเริ่มเขียน",
+   "back": "Creating the first logbook to start writing.",
+   "score": 0.6
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "ไม่พบผลลัพธ์",
+   "back": "I didn't see any results.",
+   "score": 0.25
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "ลองใช้คำค้นหาอื่น",
+   "back": "Let's use another search term.",
+   "score": 0.4
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "ยังไม่มีบันทึก",
+   "back": "There's no record yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "แตะ + เพื่อเขียนบันทึกแรกของคุณ",
+   "back": "Touch + to write your first record.",
+   "score": 0.444
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "สมุดบันทึกใหม่",
+   "back": "A new record book.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "ชื่อสมุดบันทึก",
+   "back": "The name of the record book.",
+   "score": 0.4
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "บันทึกใหม่",
+   "back": "New record.",
+   "score": 0.5
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "เรียงลำดับ",
+   "back": "In order.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "แก้ไขล่าสุด",
+   "back": "The last amendment.",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "วันที่สร้าง",
+   "back": "The day it was built.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "ชื่อเรื่อง",
+   "back": "The name of the story.",
+   "score": 0.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "ตัวหนา",
+   "back": "The thick one.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "ตัวเอียง",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "ขีดเส้นใต้",
+   "back": "Pull the south line.",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "หัวเรื่อง",
+   "back": "The headline.",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "รายการแบบหัวข้อย่อย",
+   "back": "It's a low-key show.",
+   "score": 0.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "รายการตรวจสอบ",
+   "back": "The checklist.",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "คำพูดอ้างอิง",
+   "back": "Reference words.",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "บล็อกโค้ด",
+   "back": "Block code.",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "ปากกาหมึกซึม",
+   "back": "It's a deep-seated cockroach.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "ปากกาเจล",
+   "back": "It's the mouth of a jellyfish.",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "ดินสอ",
+   "back": "It's Dino.",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "ปากกาไฮไลต์",
+   "back": "The highlights.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "ยางลบ",
+   "back": "Take it off.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "ความหนาของเส้น",
+   "back": "The thickness of the line.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "สลับระหว่างการพิมพ์และการวาด",
+   "back": "Switch between printing and drawing.",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "ปลดล็อกเพื่อดูบันทึก",
+   "back": "Unlock it to see the records.",
+   "score": 0.333
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "บันทึกนี้ถูกล็อก",
+   "back": "This record is locked.",
+   "score": 0.5
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "ปลดล็อก",
+   "back": "Unlock the lock.",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "ปิดการล็อกบันทึกแล้ว เนื่องจากอุปกรณ์นี้ไม่ได้ตั้งค่าการล็อกหน้าจอหรือชีวมิติ",
+   "back": "The record lock is disabled because the device doesn't configure screen or biometric locking.",
+   "score": 0.435
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "ยืนยันตัวตนเพื่อเปิดการล็อกบันทึก",
+   "back": "Confirm your identity to open the log.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "ยืนยันตัวตนเพื่อปิดการล็อกบันทึก",
+   "back": "Confirm your identity to seal the record.",
+   "score": 0.222
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "ปลดล็อกเพื่อแชร์หรือส่งออกบันทึกนี้",
+   "back": "Unlock to share or export this record.",
+   "score": 0.75
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "ไม่สามารถยืนยันตัวตนของคุณได้",
+   "back": "I can't confirm your identity.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "โปรดตั้งค่าการล็อกหน้าจอหรือลายนิ้วมือในการตั้งค่าอุปกรณ์ก่อน",
+   "back": "Please set the screen lock or fingerprint to set the device first.",
+   "score": 0.857
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "ตัวเลือกความเป็นส่วนตัว",
+   "back": "It's a matter of privacy.",
+   "score": 0.4
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "ซื้อไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Failed purchase. Try again.",
+   "score": 0.6
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "กู้คืนการซื้อของคุณแล้ว",
+   "back": "I've recovered your purchase.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "ไม่พบการซื้อก่อนหน้าสำหรับบัญชีนี้",
+   "back": "No prior purchases for this account.",
+   "score": 0.4
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "กู้คืนการซื้อไม่สำเร็จ โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้ง",
+   "back": "Recovering a failed purchase, please check the connection and try again.",
+   "score": 0.533
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "ตั้งเวลาการแจ้งเตือนไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Set a failed alarm time. Try again.",
+   "score": 0.333
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "โหลดสมุดบันทึกบางเล่มไม่สำเร็จ กำลังแสดงเท่าที่มี",
+   "back": "Some of the files are missing. They're showing up.",
+   "score": 0.267
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "สมุดบันทึกนี้อาจยังไม่ถูกบันทึก โปรดลองอีกครั้ง",
+   "back": "This log may not have been logged.",
+   "score": 0.571
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "การเปลี่ยนแปลงนี้อาจยังไม่ถูกบันทึก โปรดลองอีกครั้ง",
+   "back": "This change may not have been recorded.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "ลบสมุดบันทึกไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Removing the log failed. Try again.",
+   "score": 0.364
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "ลำดับใหม่อาจยังไม่ถูกบันทึก โปรดลองอีกครั้ง",
+   "back": "The new order may not have been recorded.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "โหลดบันทึกบางรายการไม่สำเร็จ กำลังแสดงเท่าที่มี",
+   "back": "Some failed recordings are showing as many as there are.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "ผลการค้นหาอาจไม่ครบถ้วนในขณะนี้",
+   "back": "The search results may not be complete at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "บันทึกนี้อาจยังไม่ถูกบันทึก โปรดตรวจสอบพื้นที่เก็บข้อมูลของอุปกรณ์",
+   "back": "This record may not have been recorded. Please check the storage area of the device.",
+   "score": 0.778
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "ลบบันทึกไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Failed recording, try again.",
+   "score": 0.4
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "ไม่สามารถซื้อรายการนี้ได้ในขณะนี้ โปรดลองอีกครั้งภายหลัง",
+   "back": "Can't buy this show right now, try again later.",
+   "score": 0.588
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "ส่งออก",
+   "back": "Get out of here.",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "ส่งออกเป็นข้อความ",
+   "back": "Send it as a message.",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "ส่งออกเป็น PDF",
+   "back": "It's in the form of a PDF.",
+   "score": 0.4
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "รูปแบบกระดาษ",
+   "back": "The paper form.",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "มีเส้นบรรทัด",
+   "back": "There's a line.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "จุดไข่ปลา",
+   "back": "Fish eggs.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "ตาราง",
+   "back": "The table.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "ว่างเปล่า",
+   "back": "She's not swimming.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "สีครีม",
+   "back": "The cream.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "กระดาษหนังแกะ",
+   "back": "Sheepskin paper.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "กระดาษหนังลูกวัว",
+   "back": "Cowskin paper.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "แบบอักษรของบันทึก",
+   "back": "It's a type of record.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "ระบบ",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "มีเชิง",
+   "back": "There really is.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter.",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora, what are you doing?",
+   "score": 0.5
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "รูปลักษณ์",
+   "back": "It's an icon.",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "สว่าง",
+   "back": "It's light.",
+   "score": 0.667
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "มืด",
+   "back": "It's dark.",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "กระดาษหนังแกะ",
+   "back": "Sheepskin paper.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "ระบบ",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "การแสดงพระคัมภีร์ประจำวัน",
+   "back": "A daily Bible show.",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "ลายน้ำ",
+   "back": "Get the water out.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "ส่วนหัว",
+   "back": "Part of the head.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "ส่วนท้าย",
+   "back": "The last one.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "ปิด",
+   "back": "Shut it down.",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "การแจ้งเตือน",
+   "back": "A warning.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "การแจ้งเตือนพระคัมภีร์ประจำวัน",
+   "back": "The Daily Bible Warning",
+   "score": 0.333
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "เวลาแจ้งเตือน",
+   "back": "It's time to warn.",
+   "score": 0.4
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "การแจ้งเตือนถูกปิดอยู่ในการตั้งค่าระบบ",
+   "back": "The alert is turned off in system settings.",
+   "score": 0.8
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "พระคัมภีร์ประจำวันของคุณพร้อมแล้ว",
+   "back": "Your daily Bible is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "ความเป็นส่วนตัว",
+   "back": "It's all about privacy.",
+   "score": 0.4
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "ล็อกบันทึกด้วย Face ID / ลายนิ้วมือ",
+   "back": "Log in with face ID/fingerprint.",
+   "score": 0.667
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "It's a premium.",
+   "score": 0.667
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "นำโฆษณาออก",
+   "back": "Get the ad out.",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "กู้คืนการซื้อ",
+   "back": "Pay back the purchase.",
+   "score": 0.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "The pro.",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "เพิ่มเติม",
+   "back": "Add to that.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "ให้คะแนน Atrament",
+   "back": "Give me the Atrament score.",
+   "score": 0.333
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "ชอบแอปนี้ไหม เขียนรีวิวให้เราหน่อย",
+   "back": "Do you like this app? Write us a review.",
+   "score": 0.4
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "แชร์ Atrament",
+   "back": "The charm of Atrament.",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "บอกเพื่อน",
+   "back": "Tell your friend.",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "ลองใช้ Atrament สมุดบันทึกไร้สิ่งรบกวนพร้อมพื้นผิวกระดาษ",
+   "back": "Let's use Atrament, a seamless ledger with a paper surface.",
+   "score": 0.267
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "ภาษา",
+   "back": "The language.",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "ตามการตั้งค่าภาษาของอุปกรณ์",
+   "back": "According to the language settings of the device.",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "ค่าเริ่มต้นของระบบ",
+   "back": "The starting value of the system.",
+   "score": 0.4
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "เลือกภาษา",
+   "back": "Choose your language.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "นำโฆษณาออก",
+   "back": "Get the ad out.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "เขียนโดยไม่มีสิ่งรบกวน",
+   "back": "Written without interruption.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament ใช้ฟรีและแสดงแบนเนอร์โฆษณาเล็ก ๆ เพียงอันเดียว การนำโฆษณาออกเป็นการซื้อครั้งเดียวที่ไม่ปลดล็อกสิ่งอื่น ฟีเจอร์ทั้งหมดเป็นของคุณอยู่แล้ว",
+   "back": "Atrament use free and show small banner ads only one take out the ad is a one-time purchase that doesn't unlock anything else",
+   "score": 0.703
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "กู้คืนการซื้อ",
+   "back": "Pay back the purchase.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "คุณมี นำโฆษณาออก แล้ว ขอบคุณ",
+   "back": "You have to take the ad out and thank you.",
+   "score": 0.4
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "การสนับสนุน",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "แชร์บันทึกการแก้ไขข้อบกพร่อง",
+   "back": "Char records the correction of defects.",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "ส่งรายงานทางเทคนิคหากมีบางอย่างไม่ทำงาน",
+   "back": "Send a technical report if something goes wrong.",
+   "score": 0.667
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "ยังไม่มีอะไรให้รายงาน",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "ล้างบันทึกการแก้ไขข้อบกพร่อง",
+   "back": "Clean up the fault-correcting records.",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "ล้างบันทึกการแก้ไขข้อบกพร่องไหม",
+   "back": "Did you clean up the fault-correcting records?",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "รายงานทางเทคนิคที่บันทึกไว้จะถูกลบออกจากอุปกรณ์ของคุณ",
+   "back": "The technical reports recorded will be deleted from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "ล้างบันทึกการแก้ไขข้อบกพร่องแล้ว",
+   "back": "I've cleaned up the corruption records.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "นำโฆษณาออกตลอดไป",
+   "back": "You always run ads.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "ทั้งหมด",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "สมุดบันทึก",
+   "back": "The logbook.",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "ล่าสุด",
+   "back": "The last one.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "ยังไม่มีบันทึก",
+   "back": "There's no record yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "แตะ + เพื่อเขียนบันทึกแรกของคุณ",
+   "back": "Touch + to write your first record.",
+   "score": 0.444
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "ไม่มีรายการล่าสุด",
+   "back": "There are no updates.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "บันทึกที่คุณแก้ไขจะแสดงที่นี่",
+   "back": "The records you edited will be displayed here.",
+   "score": 0.545
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "เปลี่ยนชื่อ",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "ย้ายไปยังสมุดบันทึก",
+   "back": "Move to the logbook.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "แก้ไข",
+   "back": "It's fixed.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "ส่งออก",
+   "back": "Get out of here.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "แชร์",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "ย้ายไปยังสมุดบันทึก",
+   "back": "Move to the logbook.",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "ยังไม่มีสมุดบันทึกอื่น สร้างสักเล่มเพื่อจัดระเบียบบันทึกนี้",
+   "back": "There's no other record that's ever been created to explode this record.",
+   "score": 0.235
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "สร้างสมุดบันทึกใหม่",
+   "back": "Creating a new record.",
+   "score": 0.333
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "เปลี่ยนชื่อ",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "เปลี่ยนปก",
+   "back": "Change the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "เปลี่ยนชื่อสมุดบันทึก",
+   "back": "Change the name of the registry.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "เลือกสีปก",
+   "back": "Choose the cover.",
+   "score": 0.8
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "สมุดบันทึกจะถูกลบพร้อมบันทึกทั้งหมดในเล่ม (รวม: {count}) ไม่สามารถย้อนกลับการดำเนินการนี้ได้",
+   "back": "The log will be deleted with all the records in the book (including: XCOUNT) cannot be reversed.",
+   "score": 0.111
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "กฎหมายและการสนับสนุน",
+   "back": "Law and support.",
+   "score": 0.5
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "นโยบายความเป็นส่วนตัว",
+   "back": "Privacy policy.",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "ข้อกำหนดการให้บริการ",
+   "back": "The terms of service.",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "การสนับสนุน",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "เปิดลิงก์ไม่สำเร็จ โปรดลองอีกครั้ง",
+   "back": "Link failed. Try again.",
+   "score": 0.6
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "ใบอนุญาตโอเพนซอร์ส",
+   "back": "License is open source.",
+   "score": 0.667
+  }
+ ]
+}

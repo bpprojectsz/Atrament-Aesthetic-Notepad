@@ -1,0 +1,1111 @@
+{
+ "locale": "sk",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Machinery and apparatus for the manufacture of foodstuffs",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Skúsiť znova",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Niečo sa pokazilo",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Zrušiť",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Uložiť",
+   "back": "Storage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Odstrániť",
+   "back": "Removing",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Späť",
+   "back": "It 's back .",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Znova",
+   "back": "It's over again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Bez názvu",
+   "back": "No name",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Túto akciu nie je možné vrátiť späť.",
+   "back": "This action is irreversible.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Odstrániť túto poznámku?",
+   "back": "Remove this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Odstrániť „{name}“?",
+   "back": "Remove XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Uloženie zlyhalo. Skúste to znova.",
+   "back": "Storage failed, try again.",
+   "score": 0.444
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Export poznámky zlyhal. Skúste to znova.",
+   "back": "Export notes failed. Try it again.",
+   "score": 0.545
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Ponuku zdieľania sa nepodarilo otvoriť. Skúste to znova.",
+   "back": "Sharing offer failed to open. Try again.",
+   "score": 0.462
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Nastavenia",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Hľadať v poznámkach",
+   "back": "Searching in Notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Zatiaľ žiadne zápisníky",
+   "back": "No notebooks yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Vytvorte prvý zápisník a začnite písať.",
+   "back": "Make your first notebook and start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Nenašli sa žiadne výsledky",
+   "back": "No results were found.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Skúste iný hľadaný výraz.",
+   "back": "Try a different search term.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Zatiaľ žiadne poznámky",
+   "back": "No comments yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Klepnutím na + napíšete prvú poznámku.",
+   "back": "Click + to write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Nový zápisník",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Názov zápisníka",
+   "back": "Name of the Registrar",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Nová poznámka",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Zoradenie",
+   "back": "Arrangements",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Naposledy upravené",
+   "back": "Last modified",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Dátum vytvorenia",
+   "back": "Date of establishment",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Názov",
+   "back": "Name and address",
+   "score": 0.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Tučné",
+   "back": "Fats and oils, whether or not containing added sugar or other sweetening matter",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Kurzíva",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Podčiarknuté",
+   "back": "Highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Nadpis",
+   "back": "Subtitle",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Odrážkový zoznam",
+   "back": "List of reflections",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Zoznam úloh",
+   "back": "List of tasks",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Citát",
+   "back": "This item is not intended to be exhaustive.",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Blok kódu",
+   "back": "Code block",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Plniace pero",
+   "back": "Filling pens",
+   "score": 0.5
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Gélové pero",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Ceruzka",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Zvýrazňovač",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Guma",
+   "back": "Manufacture from materials of any heading",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Hrúbka čiary",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Prepnúť medzi písaním a kreslením",
+   "back": "Switching between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Odomknite a zobrazte poznámku",
+   "back": "Identify and display the note",
+   "score": 0.333
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Táto poznámka je zamknutá",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Odomknúť",
+   "back": "Do you know what I'm talking about?",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Zámok poznámok bol vypnutý, pretože toto zariadenie nemá nastavený zámok obrazovky ani biometriu.",
+   "back": "The note lock has been turned off because this device does not have a screen lock or biometrics set.",
+   "score": 0.741
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Potvrďte svoju totožnosť a zapnite zámok poznámok",
+   "back": "Confirm your identity and turn on the note lock",
+   "score": 0.889
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Potvrďte svoju totožnosť a vypnite zámok poznámok",
+   "back": "Confirm your identity and turn off the note lock",
+   "score": 0.909
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Odomknite a poznámku zdieľajte alebo exportujte",
+   "back": "Identify and share a note or export a note",
+   "score": 0.75
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Vašu totožnosť sa nepodarilo overiť.",
+   "back": "Your identity has not been verified.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Najprv v nastaveniach zariadenia nastavte zámok obrazovky alebo odtlačok prsta.",
+   "back": "First, set the screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Možnosti ochrany osobných údajov",
+   "back": "Options for the protection of personal data",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Nákup sa nepodarilo dokončiť. Skúste to znova.",
+   "back": "The purchase failed, try again.",
+   "score": 0.6
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Váš nákup bol obnovený.",
+   "back": "Your purchase has been renewed.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Pre tento účet sa nenašiel žiadny predchádzajúci nákup.",
+   "back": "No previous purchases were made for this account.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Nákupy sa nepodarilo obnoviť. Skontrolujte pripojenie a skúste to znova.",
+   "back": "Shopping failed to recover, check the connection and try again.",
+   "score": 0.533
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Pripomenutie sa nepodarilo naplánovať. Skúste to znova.",
+   "back": "The reminder failed to schedule.",
+   "score": 0.222
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Niektoré zápisníky sa nepodarilo načítať. Zobrazuje sa, čo je k dispozícii.",
+   "back": "Some notebooks failed to load. What's available is displayed.",
+   "score": 0.625
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Tento zápisník možno nebol uložený. Skúste to znova.",
+   "back": "This notebook may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Táto zmena možno nebola uložená. Skúste to znova.",
+   "back": "This change may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Zápisník sa nepodarilo odstrániť. Skúste to znova.",
+   "back": "The recorder failed to be removed.",
+   "score": 0.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Nové poradie možno nebolo uložené. Skúste to znova.",
+   "back": "The new order may not have been saved.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Niektoré poznámky sa nepodarilo načítať. Zobrazuje sa, čo je k dispozícii.",
+   "back": "Some of the notes failed to load. It shows what's available.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Výsledky hľadania môžu byť teraz neúplné.",
+   "back": "The search results may be incomplete at this time.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Táto poznámka možno nebola uložená. Skontrolujte úložisko zariadenia.",
+   "back": "This note may not have been saved.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Poznámku sa nepodarilo odstrániť. Skúste to znova.",
+   "back": "The note failed to be deleted. Try again.",
+   "score": 0.727
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Tento nákup teraz nie je dostupný. Skúste to neskôr.",
+   "back": "This purchase is not available right now.",
+   "score": 0.769
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Export",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Exportovať ako text",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Exportovať ako PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Štýl papiera",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Linajkovaný",
+   "back": "Of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Bodkovaný",
+   "back": "Scored",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Štvorčekovaný",
+   "back": "Of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Prázdny",
+   "back": "Empty",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krémový",
+   "back": "Of a fat content, by weight, not exceeding 30%",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergamen",
+   "back": "Pergamines and their derivatives",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velín",
+   "back": "Other, not elsewhere specified or included",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Písmo poznámok",
+   "back": "Written notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Systémové",
+   "back": "Systemic",
+   "score": 0.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Pätkové",
+   "back": "Fingers",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Vzhľad",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Svetlý",
+   "back": "Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Tmavý",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergamen",
+   "back": "Pergamines and their derivatives",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Systémový",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Zobrazenie verša dňa",
+   "back": "Display of the day's verses",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Vodoznak",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Hlavička",
+   "back": "Head",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Pätička",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Vypnuté",
+   "back": "Other, not further worked than hot-rolled or cold-rolled",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Upozornenia",
+   "back": "Warnings",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Denné pripomenutie verša",
+   "back": "Daily recitation of the poem",
+   "score": 0.333
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Čas pripomenutia",
+   "back": "Time of Remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Upozornenia sú vypnuté v nastaveniach systému.",
+   "back": "The warnings are turned off in the system settings.",
+   "score": 0.8
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Váš verš dňa je pripravený.",
+   "back": "Your verse of the day is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Súkromie",
+   "back": "Separate",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Zamykať poznámky pomocou Face ID / odtlačku prsta",
+   "back": "Lock notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Odstrániť reklamy",
+   "back": "Remove the advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Obnoviť nákupy",
+   "back": "Renew purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Viac",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Ohodnotiť Atrament",
+   "back": "Assessment of the Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Páči sa vám aplikácia? Zanechajte hodnotenie",
+   "back": "Do you like the app?",
+   "score": 0.286
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Zdieľať Atrament",
+   "back": "Sharing the Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Povedzte to kamarátovi",
+   "back": "Tell that to your friend.",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Vyskúšajte Atrament — zápisník bez rušivých prvkov s textúrami papiera.",
+   "back": "Try the Atrament  notebook with paper textures.",
+   "score": 0.667
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Jazyk",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Riadi sa jazykom zariadenia",
+   "back": "Control the language of the device",
+   "score": 0.571
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Predvolený systémový",
+   "back": "The default system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Vyberte jazyk",
+   "back": "Choose your language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Odstrániť reklamy",
+   "back": "Remove the advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Píšte bez vyrušovania",
+   "back": "Write without interruption",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament je zadarmo a zobrazuje jeden malý reklamný banner. Odstránenie reklám je jednorazový nákup, ktorý nič ďalšie neodomyká — všetky funkcie už máte.",
+   "back": "Atrament is free, and it displays one small banner ad. Removing ads is a one-time purchase that nothing else will unlock all the features you already have.",
+   "score": 0.649
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Obnoviť nákupy",
+   "back": "Renew purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Odstránenie reklám už máte. Ďakujeme!",
+   "back": "You've already deleted the ads.",
+   "score": 0.444
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Podpora",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Zdieľať ladiaci protokol",
+   "back": "Sharing the reporting protocol",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Ak niečo nefunguje, pošlite technickú správu",
+   "back": "If something doesn't work, send a technical report.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Zatiaľ nie je čo hlásiť.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Vymazať ladiaci protokol",
+   "back": "Delete the lading protocol",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Vymazať ladiaci protokol?",
+   "back": "Delete the recording protocol?",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Tým sa uložená technická správa odstráni z vášho zariadenia.",
+   "back": "This will remove the stored technical message from your device.",
+   "score": 0.462
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Ladiaci protokol bol vymazaný.",
+   "back": "The loading protocol has been deleted.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Odstrániť reklamy navždy",
+   "back": "Remove the ads forever",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Všetky",
+   "back": "All of them",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Zápisníky",
+   "back": "Notes",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Nedávne",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Zatiaľ žiadne poznámky",
+   "back": "No comments yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Klepnutím na + napíšete prvú poznámku.",
+   "back": "Click + to write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Nič nedávne",
+   "back": "Nothing recently.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Tu sa zobrazia poznámky, ktoré upravíte.",
+   "back": "Here are the notes you're going to edit.",
+   "score": 0.545
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Premenovať",
+   "back": "Replacing",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Presunúť do zápisníka",
+   "back": "Transfer to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Upraviť",
+   "back": "Adjustment",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Exportovať",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Zdieľať",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Presunúť do zápisníka",
+   "back": "Transfer to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Zatiaľ nie sú žiadne ďalšie zápisníky. Vytvorte jeden a poznámku si usporiadajte.",
+   "back": "There are no other notebooks yet.",
+   "score": 0.615
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Vytvoriť nový zápisník",
+   "back": "Creating a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Premenovať",
+   "back": "Replacing",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Zmeniť obálku",
+   "back": "Change the envelope",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Premenovať zápisník",
+   "back": "Changing the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Vyberte farbu obálky",
+   "back": "Choose the colour of the envelope",
+   "score": 0.333
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Zápisník bude odstránený vrátane všetkých poznámok (spolu: {count}). Túto akciu nie je možné vrátiť späť.",
+   "back": "The log will be deleted, including all notes (together: XCOUNT).",
+   "score": 0.25
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Právne informácie a podpora",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Zásady ochrany osobných údajov",
+   "back": "The Commission shall adopt delegated acts in accordance with Article 21 of Regulation (EU) No 182/2011 and shall adopt them in accordance with the opinion of the Standing Committee on Plants, Animals, Food and Feed.",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Zmluvné podmienky",
+   "back": "Contractual terms and conditions",
+   "score": 0.4
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Podpora",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Odkaz sa nepodarilo otvoriť. Skúste to znova.",
+   "back": "The link failed to open, try again.",
+   "score": 0.727
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Licencie open source",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

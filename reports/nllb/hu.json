@@ -1,0 +1,1111 @@
+{
+ "locale": "hu",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Újrapróbálás",
+   "back": "Re-testing",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Valami hiba történt",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Mégse",
+   "back": "Not at all.",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Mentés",
+   "back": "Salvage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Törlés",
+   "back": "Deletion",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Visszavonás",
+   "back": "Withdrawal",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Ismétlés",
+   "back": "Repeat",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Cím nélkül",
+   "back": "Without wires",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Ez a művelet nem vonható vissza.",
+   "back": "This operation cannot be withdrawn.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Törlöd ezt a jegyzetet?",
+   "back": "Are you deleting this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Törlöd a(z) „{name}” jegyzetfüzetet?",
+   "back": "Are you deleting the XNAME notebook?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "A mentés nem sikerült. Próbáld újra.",
+   "back": "The rescue didn't work, so try again.",
+   "score": 0.5
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "A jegyzet exportálása nem sikerült. Próbáld újra.",
+   "back": "The note failed to be exported.",
+   "score": 0.444
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "A megosztás menü nem nyitható meg. Próbáld újra.",
+   "back": "The sharing menu can't be opened.",
+   "score": 0.333
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Beállítások",
+   "back": "Setting",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Keresés a jegyzetekben",
+   "back": "Searching the Notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Még nincsenek jegyzetfüzetek",
+   "back": "No notebooks yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Hozd létre az első jegyzetfüzeted, és kezdj el írni.",
+   "back": "Get your first notebook and start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Nincs találat",
+   "back": "No hit",
+   "score": 0.5
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Próbálj meg másik keresőszót.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Még nincsenek jegyzetek",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Koppints a + gombra az első jegyzeted megírásához.",
+   "back": "Tap the + button to write your first note.",
+   "score": 1.0
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Új jegyzetfüzet",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Jegyzetfüzet neve",
+   "back": "Name of notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Új jegyzet",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Rendezés",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Utoljára szerkesztve",
+   "back": "It was last edited.",
+   "score": 0.8
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Létrehozás dátuma",
+   "back": "Date of establishment",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Cím",
+   "back": "Manufacture from materials of any heading, except that of iron or steel",
+   "score": 0.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Félkövér",
+   "back": "Half-fat",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Dőlt",
+   "back": "He fell.",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Aláhúzott",
+   "back": "Subtracted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Címsor",
+   "back": "Codes of conduct",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Felsorolás",
+   "back": "Classification",
+   "score": 0.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Ellenőrzőlista",
+   "back": "Checklists",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Idézet",
+   "back": "Cities and towns",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Kódblokk",
+   "back": "Code blocks",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Töltőtoll",
+   "back": "Recharging tower",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Zselés toll",
+   "back": "Gelling pen",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Ceruza",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Szövegkiemelő",
+   "back": "Manufacture from materials of any heading",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Radír",
+   "back": "For the purposes of this Annex, the following entries are inserted:",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Vonalvastagság",
+   "back": "Density of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Váltás a gépelés és a rajzolás között",
+   "back": "Change between typing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Oldd fel a jegyzet megtekintéséhez",
+   "back": "Open it to view the note.",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Ez a jegyzet zárolva van",
+   "back": "This note is sealed.",
+   "score": 0.5
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Feloldás",
+   "back": "Solution",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "A jegyzetzár ki lett kapcsolva, mert ezen az eszközön nincs beállítva képernyőzár vagy biometrikus azonosítás.",
+   "back": "The notebook has been turned off because this device does not have a screen lock or biometric identification.",
+   "score": 0.593
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Igazold magad a jegyzetzár bekapcsolásához",
+   "back": "Identify yourself to turn on the notebook",
+   "score": 0.25
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Igazold magad a jegyzetzár kikapcsolásához",
+   "back": "Identify yourself to turn off the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Oldd fel a jegyzet megosztásához vagy exportálásához",
+   "back": "Resolve to share or export the note",
+   "score": 0.75
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Nem sikerült igazolni a személyazonosságodat.",
+   "back": "I haven't been able to verify your identity.",
+   "score": 0.4
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Először állíts be képernyőzárat vagy ujjlenyomatot az eszköz beállításaiban.",
+   "back": "First, set a screen shutter or fingerprint in the device settings.",
+   "score": 0.8
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Adatvédelmi beállítások",
+   "back": "Data protection settings",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "A vásárlást nem sikerült befejezni. Próbáld újra.",
+   "back": "You couldn't finish the purchase.",
+   "score": 0.2
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "A vásárlásod vissza lett állítva.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Ehhez a fiókhoz nem található korábbi vásárlás.",
+   "back": "There are no previous purchases on this account.",
+   "score": 0.545
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "A vásárlásokat nem sikerült visszaállítani. Ellenőrizd a kapcsolatot, és próbáld újra.",
+   "back": "The purchases failed to be restored, so check the contact and try again.",
+   "score": 0.5
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Az emlékeztetőt nem sikerült beütemezni. Próbáld újra.",
+   "back": "The reminder failed, so try again.",
+   "score": 0.545
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Néhány jegyzetfüzetet nem sikerült betölteni. Az elérhető tartalom látható.",
+   "back": "Some notebooks failed to fill out. The available contents are displayed.",
+   "score": 0.375
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Lehet, hogy ez a jegyzetfüzet nem lett mentve. Próbáld újra.",
+   "back": "This notebook may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Lehet, hogy ez a módosítás nem lett mentve. Próbáld újra.",
+   "back": "This amendment may not have been saved.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "A jegyzetfüzetet nem sikerült törölni. Próbáld újra.",
+   "back": "I couldn't erase the notebook.",
+   "score": 0.182
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Lehet, hogy az új sorrend nem lett mentve. Próbáld újra.",
+   "back": "Maybe the new order hasn't been saved.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Néhány jegyzetet nem sikerült betölteni. Az elérhető tartalom látható.",
+   "back": "Some notes failed to fill out. The available content is displayed.",
+   "score": 0.4
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "A keresési eredmények jelenleg hiányosak lehetnek.",
+   "back": "Search results may be lacking at this time.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Lehet, hogy ez a jegyzet nem lett mentve. Ellenőrizd az eszköz tárhelyét.",
+   "back": "This note may not have been saved.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "A jegyzetet nem sikerült törölni. Próbáld újra.",
+   "back": "The note failed to be deleted.",
+   "score": 0.444
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Ez a vásárlás jelenleg nem érhető el. Próbáld újra később.",
+   "back": "This purchase is not available at this time. Try again later.",
+   "score": 0.75
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Exportálás",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Exportálás szövegként",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Exportálás PDF-ként",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Papírstílus",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Vonalas",
+   "back": "Flat-rolled products of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Pontozott",
+   "back": "He's got a point.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Négyzethálós",
+   "back": "Flat-rolled products of iron or non-alloy steel",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Üres",
+   "back": "It's empty.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krémszínű",
+   "back": "Cream coloured",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergamen",
+   "back": "In Pergamon",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velin",
+   "back": "I'm with you.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Jegyzetek betűtípusa",
+   "back": "Type of notes",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Rendszer",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Talpas",
+   "back": "Flowers",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Commission shall adopt delegated acts in accordance with Article 21 of this Regulation.",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Megjelenés",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Világos",
+   "back": "It's clear.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Sötét",
+   "back": "It's dark",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergamen",
+   "back": "In Pergamon",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Rendszer",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "A nap igéjének megjelenítése",
+   "back": "Displaying the word of the day",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Vízjel",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Fejléc",
+   "back": "Headings",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Lábléc",
+   "back": "Other, not further worked than hot-rolled, impregnated, coated, covered or laminated with plastics",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Ki",
+   "back": "Who?",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Értesítések",
+   "back": "Notice to be given",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Napi igeemlékeztető",
+   "back": "A daily verb reminder",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Emlékeztető időpontja",
+   "back": "Date of reminder",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Az értesítések ki vannak kapcsolva a rendszerbeállításokban.",
+   "back": "The notifications are turned off in the system settings.",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "A nap igéje elkészült.",
+   "back": "The word of the day is fulfilled.",
+   "score": 0.0
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Adatvédelem",
+   "back": "Protection of data",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Jegyzetek zárolása Face ID-val / ujjlenyomattal",
+   "back": "Locking notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Prémium",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Hirdetések eltávolítása",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Vásárlások visszaállítása",
+   "back": "Restoring purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Továbbiak",
+   "back": "Other",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament értékelése",
+   "back": "Assessment of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Tetszik az alkalmazás? Írj értékelést",
+   "back": "Do you like the app?",
+   "score": 0.286
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament megosztása",
+   "back": "Distribution of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Mondd el egy barátodnak",
+   "back": "Tell a friend of yours",
+   "score": 0.8
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Próbáld ki az Atramentet – zavartalan jegyzetfüzet papírtextúrákkal.",
+   "back": "Try the Atramentet  uninterrupted notebook with paper textures.",
+   "score": 0.462
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Nyelv",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Követi az eszköz nyelvi beállítását",
+   "back": "Follow the language settings of the instrument",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Rendszer alapértelmezése",
+   "back": "Defaulting the system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Nyelv kiválasztása",
+   "back": "Language selection",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Hirdetések eltávolítása",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Írj zavartalanul",
+   "back": "Write without interruption",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Az Atrament ingyenes, és egyetlen kis hirdetési sávot jelenít meg. A hirdetések eltávolítása egyszeri vásárlás, amely semmi mást nem old fel – minden funkció már a tiéd.",
+   "back": "Atrament is free, and it shows only a small ad bar. Removing ads is a one-time purchase, which doesn't solve anything else  all the features are already yours.",
+   "score": 0.7
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Vásárlások visszaállítása",
+   "back": "Restoring purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "A Hirdetések eltávolítása már megvan. Köszönjük!",
+   "back": "I've already got the ads removed.",
+   "score": 0.364
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Támogatás",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Hibakeresési napló megosztása",
+   "back": "Sharing the error log",
+   "score": 0.333
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Küldj műszaki jelentést, ha valami nem működik",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Még nincs mit jelenteni.",
+   "back": "There's nothing to say yet.",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Hibakeresési napló törlése",
+   "back": "Deletion of the error log",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Törlöd a hibakeresési naplót?",
+   "back": "Are you deleting the error log?",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "A mentett műszaki jelentés el lesz távolítva az eszközről.",
+   "back": "The saved technical report shall be removed from the device.",
+   "score": 0.923
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "A hibakeresési napló törölve.",
+   "back": "The error log has been deleted.",
+   "score": 0.25
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Hirdetések végleges eltávolítása",
+   "back": "Final removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Mind",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Jegyzetfüzetek",
+   "back": "Notebooks",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Legutóbbiak",
+   "back": "The latest",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Még nincsenek jegyzetek",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Koppints a + gombra az első jegyzeted megírásához.",
+   "back": "Tap the + button to write your first note.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Nincs friss elem",
+   "back": "No fresh lead",
+   "score": 0.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Itt jelennek meg a szerkesztett jegyzeteid.",
+   "back": "Here are the notes you've edited.",
+   "score": 0.6
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Átnevezés",
+   "back": "Name change",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Áthelyezés jegyzetfüzetbe",
+   "back": "Transfer to notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Szerkesztés",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Exportálás",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Megosztás",
+   "back": "Distribution",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Áthelyezés jegyzetfüzetbe",
+   "back": "Transfer to notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Még nincs másik jegyzetfüzet. Hozz létre egyet a jegyzet rendszerezéséhez.",
+   "back": "I don't have another notebook yet.",
+   "score": 0.267
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Új jegyzetfüzet létrehozása",
+   "back": "Creating a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Átnevezés",
+   "back": "Name change",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Borító cseréje",
+   "back": "Replacement of covers",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Jegyzetfüzet átnevezése",
+   "back": "Renaming the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Válassz borítószínt",
+   "back": "Choose the colour of the cover",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "A jegyzetfüzet az összes jegyzetével együtt törlődik (összesen: {count}). Ez a művelet nem vonható vissza.",
+   "back": "The notebook shall be deleted together with all notes (total: XCOUNT).",
+   "score": 0.25
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Jogi információk és támogatás",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Adatvédelmi irányelvek",
+   "back": "This appropriation is intended to cover:",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Felhasználási feltételek",
+   "back": "Conditions of use",
+   "score": 0.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Támogatás",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "A hivatkozás nem nyitható meg. Próbáld újra.",
+   "back": "The link can't be opened.",
+   "score": 0.6
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Nyílt forráskódú licencek",
+   "back": "Open source licences",
+   "score": 0.667
+  }
+ ]
+}

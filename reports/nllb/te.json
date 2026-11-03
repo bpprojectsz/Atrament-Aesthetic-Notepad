@@ -1,0 +1,1111 @@
+{
+ "locale": "te",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "The Attrament",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "మళ్లీ ప్రయత్నించండి",
+   "back": "Try again",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "ఏదో తప్పు జరిగింది",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "రద్దు చేయండి",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "సేవ్ చేయండి",
+   "back": "How to Save",
+   "score": 0.667
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "తొలగించండి",
+   "back": "Remove",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "అన్‌డూ",
+   "back": "How can I help you?",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "రీడూ",
+   "back": "Read more",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "పేరు లేనిది",
+   "back": "Unnamed",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "ఈ చర్యను వెనక్కి తీసుకోలేరు.",
+   "back": "This action cannot be withdrawn.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "ఈ నోట్‌ను తొలగించాలా?",
+   "back": "Should I remove this note?",
+   "score": 0.333
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "“{name}” ను తొలగించాలా?",
+   "back": "Should I delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "సేవ్ చేయడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Could not save. Please try again.",
+   "score": 0.6
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "ఈ నోట్‌ను ఎగుమతి చేయడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "This note could not be exported. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "షేర్ మెనూను తెరవడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Share menu cannot be opened. Please try again.",
+   "score": 0.615
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "సెట్టింగ్‌లు",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "నోట్స్‌లో వెతకండి",
+   "back": "Look in the notes",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "ఇంకా నోట్‌బుక్‌లు లేవు",
+   "back": "There are no notebooks yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "రాయడం ప్రారంభించడానికి మీ మొదటి నోట్‌బుక్‌ను సృష్టించండి.",
+   "back": "Create your first notebook to start writing.",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "ఫలితాలు లేవు",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "మరో శోధన పదాన్ని ప్రయత్నించండి.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "ఇంకా నోట్స్ లేవు",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "మీ మొదటి నోట్ రాయడానికి + నొక్కండి.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "కొత్త నోట్‌బుక్",
+   "back": "A new notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "నోట్‌బుక్ పేరు",
+   "back": "Notebook name",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "కొత్త నోట్",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "క్రమబద్ధీకరించు",
+   "back": "Ordinate",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "చివరిగా సవరించినది",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "సృష్టించిన తేదీ",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "శీర్షిక",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "బోల్డ్",
+   "back": "Bold",
+   "score": 1.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "ఇటాలిక్",
+   "back": "Italian",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "అండర్‌లైన్",
+   "back": "Underline",
+   "score": 1.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "హెడ్డింగ్",
+   "back": "Heading",
+   "score": 1.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "బుల్లెట్ జాబితా",
+   "back": "Bullet list",
+   "score": 1.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "చెక్‌లిస్ట్",
+   "back": "Checklist",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "కొటేషన్",
+   "back": "The quotation",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "కోడ్ బ్లాక్",
+   "back": "Block the code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "ఫౌంటెన్ పెన్",
+   "back": "Fountain Pen",
+   "score": 1.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "జెల్ పెన్",
+   "back": "A gel pen",
+   "score": 1.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "పెన్సిల్",
+   "back": "A pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "హైలైటర్",
+   "back": "Highlighting",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "ఎరేజర్",
+   "back": "Erase",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "గీత మందం",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "టైపింగ్ మరియు గీయడం మధ్య మారండి",
+   "back": "Switch between typing and drawing",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "నోట్‌ను చూడటానికి అన్‌లాక్ చేయండి",
+   "back": "Unlock to view the note",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "ఈ నోట్ లాక్ చేయబడింది",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "అన్‌లాక్",
+   "back": "Unlocked",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "ఈ పరికరంలో స్క్రీన్ లాక్ లేదా బయోమెట్రిక్స్ సెటప్ చేయనందున నోట్ లాక్ ఆఫ్ చేయబడింది.",
+   "back": "Note locked off because the screen lock or biometrics are not set up on this device.",
+   "score": 0.783
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "నోట్ లాక్‌ను ఆన్ చేయడానికి మీ గుర్తింపును నిర్ధారించండి",
+   "back": "Confirm your identity to turn on the note lock",
+   "score": 0.889
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "నోట్ లాక్‌ను ఆఫ్ చేయడానికి మీ గుర్తింపును నిర్ధారించండి",
+   "back": "Confirm your identity to turn off the note lock",
+   "score": 0.909
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "ఈ నోట్‌ను షేర్ చేయడానికి లేదా ఎగుమతి చేయడానికి అన్‌లాక్ చేయండి",
+   "back": "Unlock this note to share or export",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "మీ గుర్తింపును ధృవీకరించడం సాధ్యం కాలేదు.",
+   "back": "It is not possible to verify your identity.",
+   "score": 0.571
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "ముందుగా పరికర సెట్టింగ్‌లలో స్క్రీన్ లాక్ లేదా వేలిముద్రను సెటప్ చేయండి.",
+   "back": "First set the screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "గోప్యతా ఎంపికలు",
+   "back": "Privacy options",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "కొనుగోలును పూర్తి చేయడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "The purchase was not completed. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "మీ కొనుగోలు పునరుద్ధరించబడింది.",
+   "back": "Your purchase has been renewed.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "ఈ ఖాతాకు గతంలో చేసిన కొనుగోళ్లు ఏవీ కనుగొనబడలేదు.",
+   "back": "No previous purchases have been found for this account.",
+   "score": 0.615
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "కొనుగోళ్లను పునరుద్ధరించడం సాధ్యం కాలేదు. మీ కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Purchases could not be restored. Check your connection and try again.",
+   "score": 0.875
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "రిమైండర్‌ను షెడ్యూల్ చేయడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Reminder cannot be scheduled. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "కొన్ని నోట్‌బుక్‌లను లోడ్ చేయడం సాధ్యం కాలేదు. అందుబాటులో ఉన్నవి చూపబడుతున్నాయి.",
+   "back": "Some notebooks could not be loaded. Available ones are shown.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "ఈ నోట్‌బుక్ సేవ్ కాకపోయి ఉండవచ్చు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "This notebook may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "ఈ మార్పు సేవ్ కాకపోయి ఉండవచ్చు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "నోట్‌బుక్‌ను తొలగించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Notebook cannot be deleted. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "కొత్త క్రమం సేవ్ కాకపోయి ఉండవచ్చు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "The new order may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "కొన్ని నోట్స్‌ను లోడ్ చేయడం సాధ్యం కాలేదు. అందుబాటులో ఉన్నవి చూపబడుతున్నాయి.",
+   "back": "Some notes could not be loaded. Available notes are shown.",
+   "score": 0.769
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "ప్రస్తుతం శోధన ఫలితాలు అసంపూర్ణంగా ఉండవచ్చు.",
+   "back": "Currently, search results may be incomplete.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "ఈ నోట్ సేవ్ కాకపోయి ఉండవచ్చు. మీ పరికర నిల్వను తనిఖీ చేయండి.",
+   "back": "This note may not have been saved. Check your device's storage.",
+   "score": 0.947
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "నోట్‌ను తొలగించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Note cannot be deleted. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "ఈ కొనుగోలు ప్రస్తుతం అందుబాటులో లేదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
+   "back": "This purchase is not currently available. Please try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "ఎగుమతి",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "టెక్స్ట్‌గా ఎగుమతి చేయండి",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "PDFగా ఎగుమతి చేయండి",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "కాగితం శైలి",
+   "back": "Paper style",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "గీతల",
+   "back": "The rows",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "చుక్కల",
+   "back": "Drops",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "గడుల",
+   "back": "Houses",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "ఖాళీ",
+   "back": "Free of charge",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "క్రీమ్",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "పార్చ్‌మెంట్",
+   "back": "Purchasing",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "వెల్లం",
+   "back": "The Light",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "నోట్ ఫాంట్",
+   "back": "Note font",
+   "score": 1.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "సిస్టమ్",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "సెరిఫ్",
+   "back": "The sheriff",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "by Lora",
+   "score": 0.667
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "రూపం",
+   "back": "The form",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "లైట్",
+   "back": "The Light",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "డార్క్",
+   "back": "The dark",
+   "score": 1.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "పార్చ్‌మెంట్",
+   "back": "Purchasing",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "సిస్టమ్",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "నేటి వచన ప్రదర్శన",
+   "back": "Today's presentation of the text",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "వాటర్‌మార్క్",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "హెడర్",
+   "back": "Header",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "ఫుటర్",
+   "back": "footnote",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "ఆఫ్",
+   "back": "off.",
+   "score": 1.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "నోటిఫికేషన్‌లు",
+   "back": "Notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "రోజువారీ వచన రిమైండర్",
+   "back": "A daily text reminder",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "రిమైండర్ సమయం",
+   "back": "Reminder time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "సిస్టమ్ సెట్టింగ్‌లలో నోటిఫికేషన్‌లు ఆఫ్ చేయబడ్డాయి.",
+   "back": "Notifications have been turned off in the system settings.",
+   "score": 0.833
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "మీ నేటి వచనం సిద్ధంగా ఉంది.",
+   "back": "Your today's text is ready.",
+   "score": 0.286
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "గోప్యత",
+   "back": "Confidentiality",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Face ID / వేలిముద్రతో నోట్స్‌ను లాక్ చేయండి",
+   "back": "Lock notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "ప్రీమియం",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "ప్రకటనలను తీసివేయండి",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "కొనుగోళ్లను పునరుద్ధరించండి",
+   "back": "Repeat purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "ప్రో",
+   "back": "Pros and cons",
+   "score": 0.667
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "మరిన్ని",
+   "back": "More on the subject",
+   "score": 0.667
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament కు రేటింగ్ ఇవ్వండి",
+   "back": "Give Atrament a rating",
+   "score": 0.4
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "యాప్ నచ్చిందా? ఒక సమీక్ష రాయండి",
+   "back": "Do you like the app? Write a review",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament ను షేర్ చేయండి",
+   "back": "Share Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "స్నేహితుడికి చెప్పండి",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament ను ప్రయత్నించండి — కాగితపు ఆకృతులతో అంతరాయం లేని నోట్‌ప్యాడ్.",
+   "back": "Try Atrament  An uninterrupted notepad with paper shapes.",
+   "score": 0.615
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "భాష",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "పరికరం భాష సెట్టింగ్‌ను అనుసరిస్తుంది",
+   "back": "The device follows the language setting",
+   "score": 1.0
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "సిస్టమ్ డిఫాల్ట్",
+   "back": "System Default",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "భాషను ఎంచుకోండి",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "ప్రకటనలను తీసివేయండి",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "అంతరాయం లేకుండా రాయండి",
+   "back": "Write without being interrupted",
+   "score": 0.571
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament ఉచితం, ఒక చిన్న ప్రకటన బ్యానర్‌ను మాత్రమే చూపుతుంది. ప్రకటనలను తీసివేయడం ఒక్కసారి చేసే కొనుగోలు, ఇది మరేదీ అన్‌లాక్ చేయదు — అన్ని ఫీచర్లు ఇప్పటికే మీవే.",
+   "back": "Atrament is free, only shows a small ad banner. Removing ads is a one-time purchase that will not unlock anything else. All features are already yours.",
+   "score": 0.718
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "కొనుగోళ్లను పునరుద్ధరించండి",
+   "back": "Repeat purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "మీ దగ్గర ఇప్పటికే “ప్రకటనలను తీసివేయండి” ఉంది. ధన్యవాదాలు!",
+   "back": "You already have to remove ads. Thank you!",
+   "score": 1.0
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "మద్దతు",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "డీబగ్ లాగ్‌ను షేర్ చేయండి",
+   "back": "Share the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "ఏదైనా పని చేయకపోతే సాంకేతిక నివేదికను పంపండి",
+   "back": "If nothing works, send a technical report",
+   "score": 0.714
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "ఇంకా నివేదించడానికి ఏమీ లేదు.",
+   "back": "Nothing to report yet.",
+   "score": 0.571
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "డీబగ్ లాగ్‌ను క్లియర్ చేయండి",
+   "back": "Clear the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "డీబగ్ లాగ్‌ను క్లియర్ చేయాలా?",
+   "back": "Should I clear the debug log?",
+   "score": 0.75
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "సేవ్ చేసిన సాంకేతిక నివేదిక మీ పరికరం నుండి తీసివేయబడుతుంది.",
+   "back": "The saved technical report will be removed from your device.",
+   "score": 0.923
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "డీబగ్ లాగ్ క్లియర్ చేయబడింది.",
+   "back": "Debug log has been cleared.",
+   "score": 0.75
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "ప్రకటనలను శాశ్వతంగా తీసివేయండి",
+   "back": "Remove ads permanently",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It costs $14.99",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "అన్నీ",
+   "back": "It's all",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "నోట్‌బుక్‌లు",
+   "back": "Notebooks",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "ఇటీవలివి",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "ఇంకా నోట్స్ లేవు",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "మీ మొదటి నోట్ రాయడానికి + నొక్కండి.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "ఇటీవలివి ఏవీ లేవు",
+   "back": "There are no recent ones.",
+   "score": 0.333
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "మీరు సవరించే నోట్స్ ఇక్కడ కనిపిస్తాయి.",
+   "back": "The notes you edit can be found here.",
+   "score": 0.545
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "పేరు మార్చండి",
+   "back": "Change your name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "నోట్‌బుక్‌కు తరలించండి",
+   "back": "Move to the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "సవరించండి",
+   "back": "What is the meaning of life?",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "ఎగుమతి చేయండి",
+   "back": "Exporting",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "షేర్ చేయండి",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "నోట్‌బుక్‌కు తరలించండి",
+   "back": "Move to the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "ఇంకా ఇతర నోట్‌బుక్‌లు లేవు. ఈ నోట్‌ను క్రమబద్ధీకరించడానికి ఒకటి సృష్టించండి.",
+   "back": "No other notebooks yet. Create one to sort this note.",
+   "score": 0.875
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "కొత్త నోట్‌బుక్‌ను సృష్టించండి",
+   "back": "Create a new notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "పేరు మార్చండి",
+   "back": "Change your name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "కవర్ మార్చండి",
+   "back": "Change the cover",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "నోట్‌బుక్ పేరు మార్చండి",
+   "back": "Change the name of the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "కవర్ రంగును ఎంచుకోండి",
+   "back": "Select the color of the cover",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "నోట్‌బుక్ దానిలోని అన్ని నోట్స్‌తో పాటు తొలగించబడుతుంది (మొత్తం: {count}). ఈ చర్యను వెనక్కి తీసుకోలేరు.",
+   "back": "Notebook will be deleted along with all notes in it (total: XCOUNT). This action cannot be withdrawn.",
+   "score": 0.316
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "చట్టపరమైన సమాచారం మరియు మద్దతు",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "గోప్యతా విధానం",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "సేవా నిబంధనలు",
+   "back": "Terms of Service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "మద్దతు",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "లింక్‌ను తెరవడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+   "back": "Link cannot be opened. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "ఓపెన్ సోర్స్ లైసెన్స్‌లు",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

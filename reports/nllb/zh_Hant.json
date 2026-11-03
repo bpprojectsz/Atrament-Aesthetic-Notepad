@@ -1,0 +1,1111 @@
+{
+ "locale": "zh_Hant",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Atrament is a small town.",
+   "score": 0.5
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "重試",
+   "back": "Re-testing",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "發生錯誤",
+   "back": "What is wrong with you?",
+   "score": 0.4
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "取消",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "儲存",
+   "back": "How to save money",
+   "score": 0.5
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "刪除",
+   "back": "Removing it",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "復原",
+   "back": "How to recover",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "重做",
+   "back": "It's been a while.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "無標題",
+   "back": "Untitled",
+   "score": 1.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "此操作無法復原。",
+   "back": "This operation can't be restored.",
+   "score": 0.571
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "要刪除這則筆記嗎？",
+   "back": "Do you want to delete this note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "要刪除「{name}」嗎？",
+   "back": "Do you want to delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "儲存失敗，請再試一次。",
+   "back": "It's the first time I've ever seen a video.",
+   "score": 0.0
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "無法匯出這則筆記，請再試一次。",
+   "back": "I can't get this note out, please try again.",
+   "score": 0.571
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "無法開啟分享選單，請再試一次。",
+   "back": "I can't open the share list, please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "設定",
+   "back": "Set it up",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "搜尋筆記",
+   "back": "Searching for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "還沒有筆記本",
+   "back": "I don't have a notebook yet",
+   "score": 0.444
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "建立你的第一本筆記本，開始書寫。",
+   "back": "It's time to build your first notebook and start writing.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "沒有結果",
+   "back": "There are no results.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "試試其他搜尋字詞。",
+   "back": "Try other search terms.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "還沒有筆記",
+   "back": "No note yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "點一下 + 按鈕，寫下第一則筆記。",
+   "back": "Click on the + button and write the first note.",
+   "score": 0.8
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "新增筆記本",
+   "back": "Adding a new notebook",
+   "score": 0.8
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "筆記本名稱",
+   "back": "The name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "新增筆記",
+   "back": "Added notes",
+   "score": 0.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "排序",
+   "back": "The ranking",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "最近編輯",
+   "back": "Recently edited",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "建立日期",
+   "back": "Establish a date",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "標題",
+   "back": "Subtitles",
+   "score": 0.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "粗體",
+   "back": "It's rough.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "斜體",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "底線",
+   "back": "The bottom line",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "標題",
+   "back": "Subtitles",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "項目符號清單",
+   "back": "List of project symbols",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "待辦清單",
+   "back": "I'm waiting for a list",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "引言",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "程式碼區塊",
+   "back": "Code blocks",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "鋼筆",
+   "back": "A pencil is a pencil.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "中性筆",
+   "back": "What do you think?",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "鉛筆",
+   "back": "A pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "螢光筆",
+   "back": "A pencil is a pencil.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "橡皮擦",
+   "back": "The skin is rubbed.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "筆畫粗細",
+   "back": "The painting is rough.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "在打字與手寫之間切換",
+   "back": "Changing between typography and handwriting",
+   "score": 0.25
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "解鎖以檢視這則筆記",
+   "back": "Unlocked to view this note",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "這則筆記已鎖定",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "解鎖",
+   "back": "Unlocked",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "由於此裝置尚未設定螢幕鎖定或生物辨識，筆記鎖定已關閉。",
+   "back": "Since the device has not yet set up screen lock or bio-recognition, the notebook lock has been closed.",
+   "score": 0.444
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "請驗證身分以開啟筆記鎖定",
+   "back": "Please verify your identity to open and lock your notebook",
+   "score": 0.222
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "請驗證身分以關閉筆記鎖定",
+   "back": "Please verify your identity to lock your notebook",
+   "score": 0.222
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "解鎖後即可分享或匯出這則筆記",
+   "back": "After unlocking, the note can be shared or extracted.",
+   "score": 0.4
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "無法驗證你的身分。",
+   "back": "You can't verify your identity.",
+   "score": 0.571
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "請先在裝置設定中設定螢幕鎖定或指紋。",
+   "back": "Please set a screen lock or fingerprint in your device settings.",
+   "score": 0.857
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "隱私權選項",
+   "back": "Options for privacy rights",
+   "score": 0.4
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "無法完成購買，請再試一次。",
+   "back": "I can't finish the purchase, please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "已還原你的購買項目。",
+   "back": "I've already refunded your purchase.",
+   "score": 0.25
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "找不到此帳號先前的購買紀錄。",
+   "back": "I don't see any previous purchases on this account.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "無法還原購買項目。請檢查網路連線後再試一次。",
+   "back": "I can't pay back the purchase. Please check the internet connection and try again.",
+   "score": 0.421
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "無法設定提醒，請再試一次。",
+   "back": "I can't set up a reminder, please try again.",
+   "score": 0.429
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "部分筆記本無法載入，目前顯示可用的內容。",
+   "back": "Some of the scripts cannot be uploaded, and the content is currently available.",
+   "score": 0.267
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "這本筆記本可能尚未儲存，請再試一次。",
+   "back": "This notebook may not have been saved yet, please try again.",
+   "score": 0.941
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "這項變更可能尚未儲存，請再試一次。",
+   "back": "This change may not be stored yet, so please try again.",
+   "score": 0.625
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "無法刪除這本筆記本，請再試一次。",
+   "back": "I can't get rid of this notebook, please try again.",
+   "score": 0.429
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "新的排序可能尚未儲存，請再試一次。",
+   "back": "The new order may not yet be stored, so please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "部分筆記無法載入，目前顯示可用的內容。",
+   "back": "Some of the notes can't be uploaded, and the content is currently available.",
+   "score": 0.4
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "搜尋結果目前可能不完整。",
+   "back": "The search results may not be complete at the moment.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "這則筆記可能尚未儲存，請檢查裝置的儲存空間。",
+   "back": "This note may not have been stored yet, so please check the storage space on the device.",
+   "score": 0.762
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "無法刪除這則筆記，請再試一次。",
+   "back": "I can't get rid of this note, please try again.",
+   "score": 0.429
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "目前無法購買此項目，請稍後再試。",
+   "back": "It's not currently available for purchase, so please try again later.",
+   "score": 0.706
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "匯出",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "匯出為文字檔",
+   "back": "It is a text file.",
+   "score": 0.5
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "匯出為 PDF",
+   "back": "It is available as a PDF.",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "紙張樣式",
+   "back": "The paper format",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "橫線",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "點陣格線",
+   "back": "What is the line of succession?",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "方格",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "空白",
+   "back": "It is empty.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "米色",
+   "back": "It's rice.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "羊皮紙",
+   "back": "Sheepskin paper",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "犢皮紙",
+   "back": "What is the meaning of this article?",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "筆記字型",
+   "back": "Writing style",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "系統字型",
+   "back": "System type of words",
+   "score": 0.5
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "襯線字型",
+   "back": "What is the meaning of this word?",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "What is the meaning of this article?",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora is here.",
+   "score": 0.667
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "外觀",
+   "back": "External view of the city",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "淺色",
+   "back": "It is orange.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "深色",
+   "back": "It's very dark.",
+   "score": 0.5
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "羊皮紙",
+   "back": "Sheepskin paper",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "系統",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "每日經文顯示方式",
+   "back": "How to show the daily scriptures",
+   "score": 0.286
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "浮水印",
+   "back": "Floating footprints",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "頁首",
+   "back": "The first page",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "頁尾",
+   "back": "This is the end of the page.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "關閉",
+   "back": "Closed",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "通知",
+   "back": "I'm going to tell you.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "每日經文提醒",
+   "back": "A daily scripture reminds me",
+   "score": 0.286
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "提醒時間",
+   "back": "It's time for a reminder.",
+   "score": 0.8
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "系統設定中的通知已關閉。",
+   "back": "The system settings notification has been closed.",
+   "score": 0.545
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "你的每日經文已備妥。",
+   "back": "Your daily scripture is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "隱私權",
+   "back": "Right to privacy",
+   "score": 0.667
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "使用 Face ID／指紋鎖定筆記",
+   "back": "Use Face ID/Fingerprints to lock a note",
+   "score": 0.727
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "進階版",
+   "back": "Upgraded edition",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "移除廣告",
+   "back": "Removing ads",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "還原購買項目",
+   "back": "Refunds for purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "專業版",
+   "back": "Professional edition",
+   "score": 0.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "更多",
+   "back": "More on this:",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "為 Atrament 評分",
+   "back": "Rating for Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "喜歡這個 App 嗎？歡迎留下評價",
+   "back": "If you like this app, please leave a comment.",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "分享 Atrament",
+   "back": "Share with Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "告訴朋友",
+   "back": "Tell your friends",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "試試 Atrament——一款帶有紙張質感的無干擾記事本。",
+   "back": "I've tried Atrament, a non-interference article with paper texture.",
+   "score": 0.25
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "語言",
+   "back": "Languages",
+   "score": 0.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "跟隨裝置的語言設定",
+   "back": "Follow the language settings of the device",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "系統預設",
+   "back": "The system is configured",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "選擇語言",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "移除廣告",
+   "back": "Removing ads",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "專心書寫，不受打擾",
+   "back": "Writing focused, uninterrupted",
+   "score": 0.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament 可免費使用，僅顯示一個小型橫幅廣告。移除廣告為一次性購買，不會解鎖其他內容——所有功能本來就已屬於你。",
+   "back": "Atrament is free to use and only displays a small, widespread ad. Removing the ad is a one-time purchase without unlocking the rest of the content.",
+   "score": 0.529
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "還原購買項目",
+   "back": "Refunds for purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "你已擁有「移除廣告」功能，謝謝！",
+   "back": "You already have the \"remove ads\" feature, thank you!",
+   "score": 0.909
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "支援",
+   "back": "We are supporting",
+   "score": 0.667
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "分享偵錯記錄",
+   "back": "Sharing misrepresentations of detectives",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "若有功能無法正常運作，可傳送技術報告",
+   "back": "If a function doesn't work properly, technical reports can be sent.",
+   "score": 0.556
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "目前沒有需要回報的問題。",
+   "back": "There are currently no questions about retaliation.",
+   "score": 0.2
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "清除偵錯記錄",
+   "back": "Removing false detection records",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "要清除偵錯記錄嗎？",
+   "back": "Do you want to get rid of false detection records?",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "這會從你的裝置移除已儲存的技術報告。",
+   "back": "This will remove the stored technical reports from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "已清除偵錯記錄。",
+   "back": "It's been a long time since I've been able to find out what's going on.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "永久移除廣告",
+   "back": "Permanent Removal of Advertising",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It is $14.99.",
+   "score": 1.0
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "全部",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "筆記本",
+   "back": "This is a book.",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "最近",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "還沒有筆記",
+   "back": "No note yet",
+   "score": 0.667
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "點一下 + 按鈕，寫下你的第一則筆記。",
+   "back": "Click on the + button and write down your first note.",
+   "score": 0.727
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "沒有最近的內容",
+   "back": "I don't have any recent content.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "你編輯過的筆記會顯示在這裡。",
+   "back": "You can see the notes you've edited here.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "重新命名",
+   "back": "Re-named",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "移至筆記本",
+   "back": "Moving to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "編輯",
+   "back": "This article is about the author.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "匯出",
+   "back": "What is it?",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "分享",
+   "back": "Share it with others",
+   "score": 0.667
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "移至筆記本",
+   "back": "Moving to the notebook",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "還沒有其他筆記本。建立一本來整理這則筆記。",
+   "back": "There is no other notebook. Create a notebook to organize this notebook.",
+   "score": 0.571
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "建立新筆記本",
+   "back": "Creating a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "重新命名",
+   "back": "Re-named",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "更換封面",
+   "back": "Changed the cover",
+   "score": 0.5
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "重新命名筆記本",
+   "back": "Re-naming the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "選擇封面顏色",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "這會刪除此筆記本及其中的 {count} 則筆記，且無法復原。",
+   "back": "This will remove this notebook and the XCOUNT notebook in it, and it will not be recoverable.",
+   "score": 0.429
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "法律與支援",
+   "back": "Law and Support",
+   "score": 0.5
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "隱私權政策",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "服務條款",
+   "back": "Terms of Service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "支援",
+   "back": "We are supporting",
+   "score": 0.667
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "無法開啟連結，請再試一次。",
+   "back": "I can't open the link, please try again.",
+   "score": 0.769
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "開放原始碼授權",
+   "back": "Open source license",
+   "score": 0.667
+  }
+ ]
+}

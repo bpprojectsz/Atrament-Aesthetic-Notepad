@@ -1,0 +1,1111 @@
+{
+ "locale": "he",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "אטרמנט",
+   "back": "It's the end.",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "נסה שוב",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "משהו השתבש",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "ביטול",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "שמירה",
+   "back": "Keep it up.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "מחיקה",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "בטל",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "בצע שוב",
+   "back": "Do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "ללא כותרת",
+   "back": "Without a title.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "לא ניתן לבטל פעולה זו.",
+   "back": "This operation cannot be canceled.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "למחוק פתקית זו?",
+   "back": "Erase this notebook?",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "למחוק את \"{name}\"?",
+   "back": "Erase the XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "השמירה נכשלה. נסה שוב.",
+   "back": "The guard failed, try again.",
+   "score": 0.444
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "ייצוא הפתקית נכשל. נסה שוב.",
+   "back": "Export of the note failed. Try again.",
+   "score": 0.727
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "פתיחת תפריט השיתוף נכשלה. נסה שוב.",
+   "back": "Opening the sharing menu failed.",
+   "score": 0.182
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "הגדרות",
+   "back": "The settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "חיפוש בפתקיות",
+   "back": "Search for notebooks",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "אין עדיין מחברות",
+   "back": "There's no company yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "צור את המחברת הראשונה שלך כדי להתחיל לכתוב.",
+   "back": "Write your first book to start writing.",
+   "score": 0.6
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "אין תוצאות",
+   "back": "There are no results.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "נסה מונח חיפוש אחר.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "אין עדיין פתקיות",
+   "back": "There are no notes yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "הקש על + כדי לכתוב את הפתקית הראשונה שלך.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "מחברת חדשה",
+   "back": "From a new book.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "שם המחברת",
+   "back": "The name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "פתקית חדשה",
+   "back": "New notebook",
+   "score": 0.5
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "מיון",
+   "back": "Emergency",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "עריכה אחרונה",
+   "back": "This is the last edition.",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "תאריך יצירה",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "כותרת",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "מודגש",
+   "back": "Emphasized",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "נטוי",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "קו תחתי",
+   "back": "The bottom line.",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "כותרת",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "רשימת תבליטים",
+   "back": "A list of preferences",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "רשימת משימות",
+   "back": "A list of assignments",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "ציטוט",
+   "back": "A quote",
+   "score": 1.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "בלוק קוד",
+   "back": "Block code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "עט נובע",
+   "back": "A pen comes from",
+   "score": 0.4
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "עט ג'ל",
+   "back": "A gel pen.",
+   "score": 1.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "עיפרון",
+   "back": "A pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "מדגיש",
+   "back": "It emphasizes",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "מחק",
+   "back": "Get rid of it.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "עובי קו",
+   "back": "Fold the line.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "החלפה בין הקלדה לציור",
+   "back": "The switch between the key and the drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "בטל נעילה כדי לצפות בפתקית זו",
+   "back": "Unlocked to watch this notebook",
+   "score": 0.333
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "פתקית זו נעולה",
+   "back": "This notebook is locked.",
+   "score": 0.5
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "בטל נעילה",
+   "back": "Unlocked",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "נעילת הפתקיות כובתה כי במכשיר זה לא הוגדרו נעילת מסך או זיהוי ביומטרי.",
+   "back": "The notebook lock is disabled because this device doesn't have a screen lock or biometric identification.",
+   "score": 0.417
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "אמת את זהותך כדי להפעיל את נעילת הפתקיות",
+   "back": "Make sure you're authenticating yourself to activate the notebook lock.",
+   "score": 0.167
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "אמת את זהותך כדי לכבות את נעילת הפתקיות",
+   "back": "Believe your identity to turn off the notebook lock.",
+   "score": 0.545
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "בטל נעילה כדי לשתף או לייצא פתקית זו",
+   "back": "Cancel locked to share or export this note",
+   "score": 0.667
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "לא ניתן היה לאמת את זהותך.",
+   "back": "There was no way to verify your identity.",
+   "score": 0.444
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "הגדר תחילה נעילת מסך או טביעת אצבע בהגדרות המכשיר.",
+   "back": "The first fence is a screen lock or a fingerprint in the device settings.",
+   "score": 0.8
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "אפשרויות פרטיות",
+   "back": "Private options",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "לא ניתן היה להשלים את הרכישה. נסה שוב.",
+   "back": "There was no way to complete the purchase.",
+   "score": 0.167
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "הרכישה שלך שוחזרה.",
+   "back": "Your purchase has been returned.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "לא נמצאה רכישה קודמת עבור חשבון זה.",
+   "back": "No prior purchase was made for this account.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "לא ניתן היה לשחזר רכישות. בדוק את החיבור ונסה שוב.",
+   "back": "You couldn't reimburse purchases, so check the connection and try again.",
+   "score": 0.588
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "לא ניתן היה לתזמן את התזכורת. נסה שוב.",
+   "back": "The memory couldn't be timed.",
+   "score": 0.0
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "לא ניתן היה לטעון חלק מהמחברות. מוצג מה שזמין.",
+   "back": "You couldn't charge some of the books.",
+   "score": 0.154
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "ייתכן שמחברת זו לא נשמרה. נסה שוב.",
+   "back": "This connection may not have been preserved.",
+   "score": 0.571
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "ייתכן ששינוי זה לא נשמר. נסה שוב.",
+   "back": "This change may not be preserved.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "לא ניתן היה למחוק את המחברת. נסה שוב.",
+   "back": "You couldn't erase the notebook.",
+   "score": 0.2
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "ייתכן שהסדר החדש לא נשמר. נסה שוב.",
+   "back": "The new order may not be maintained.",
+   "score": 0.571
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "לא ניתן היה לטעון חלק מהפתקיות. מוצג מה שזמין.",
+   "back": "Some of the notebooks couldn't be loaded.",
+   "score": 0.333
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "ייתכן שתוצאות החיפוש אינן שלמות כרגע.",
+   "back": "The search results may not be complete at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "ייתכן שפתקית זו לא נשמרה. בדוק את האחסון במכשיר.",
+   "back": "Check the storage on the device.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "לא ניתן היה למחוק את הפתקית. נסה שוב.",
+   "back": "You couldn't have deleted the notebook.",
+   "score": 0.182
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "רכישה זו אינה זמינה כרגע. נסה שוב מאוחר יותר.",
+   "back": "This purchase is not available at the moment. Try again later.",
+   "score": 0.75
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "ייצוא",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "ייצוא כטקסט",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "ייצוא כ-PDF",
+   "back": "Exported as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "סגנון נייר",
+   "back": "Paper style",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "מסורגל",
+   "back": "It's a routine.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "רשת נקודות",
+   "back": "Network of points",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "משובץ",
+   "back": "Refined",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "ריק",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "קרם",
+   "back": "The cream.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "קלף",
+   "back": "A card.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "קלף עדין",
+   "back": "It's a soft card.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "גופן הפתקית",
+   "back": "The body of the notebook",
+   "score": 0.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "מערכת",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "סריף",
+   "back": "Sheriff.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora, what are you doing?",
+   "score": 0.5
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "מראה",
+   "back": "The mirror.",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "בהיר",
+   "back": "It's clear.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "כהה",
+   "back": "It's dark.",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "קלף",
+   "back": "A card.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "מערכת",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "תצוגת פסוק יומי",
+   "back": "Show me the daily verse",
+   "score": 0.571
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "סימן מים",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "כותרת עליונה",
+   "back": "Top of the headline",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "כותרת תחתונה",
+   "back": "Subtitle",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "כבוי",
+   "back": "It's off.",
+   "score": 0.667
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "התראות",
+   "back": "I'll see you later.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "תזכורת פסוק יומית",
+   "back": "Recalling a daily verse",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "שעת התזכורת",
+   "back": "It's time for remembrance.",
+   "score": 0.4
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "ההתראות כבויות בהגדרות המערכת.",
+   "back": "The alarms are off in the system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "הפסוק היומי שלך מוכן.",
+   "back": "Your daily text is ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "פרטיות",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "נעילת פתקיות עם Face ID / טביעת אצבע",
+   "back": "Lock notes with face ID/fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "פרימיום",
+   "back": "This is a premium.",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "הסרת פרסומות",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "שחזור רכישות",
+   "back": "The return purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "פרו",
+   "back": "Peru",
+   "score": 0.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "עוד",
+   "back": "Another one.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "דרג את Atrament",
+   "back": "Rated Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "נהנה מהאפליקציה? השאר ביקורת",
+   "back": "Are you enjoying the app?",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "שתף את Atrament",
+   "back": "I'm going to take care of Atrament.",
+   "score": 0.25
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "ספר לחבר",
+   "back": "A book for a friend.",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "נסה את Atrament — פנקס רשימות ללא הסחות דעת עם טקסטורות נייר.",
+   "back": "Try the Atrament  notebook without distractions with paper textures.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "שפה",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "בהתאם לשפת המכשיר שלך",
+   "back": "Depending on the language of your device",
+   "score": 0.571
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "ברירת מחדל של המערכת",
+   "back": "Selection of the problem of the system",
+   "score": 0.4
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "בחר שפה",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "הסרת פרסומות",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "כתוב ללא הסחות דעת",
+   "back": "Written without distraction",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament חינמית עם באנר פרסום קטן אחד. הסרתו היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.",
+   "back": "Atrament is free with one small ad banner. Its removal is a one-time purchase that doesn't develop anything else  all features are already yours.",
+   "score": 0.757
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "שחזור רכישות",
+   "back": "The return purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "כבר יש לך הסרת פרסומות. תודה!",
+   "back": "You've already got the ads removed.",
+   "score": 0.4
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "תמיכה",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "שתף יומן ניפוי באגים",
+   "back": "# Keep a diary # # Healing the Bugs #",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "שלח דוח טכני אם משהו לא עובד",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "אין עדיין בעיות לדווח עליהן.",
+   "back": "There's still no problems to report.",
+   "score": 0.4
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "נקה יומן ניפוי באגים",
+   "back": "Clean a diary, heal bugs.",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "לנקות את יומן ניפוי הבאגים?",
+   "back": "Cleaning up the bug-clearing journal?",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "פעולה זו מסירה את הדוח הטכני השמור מהמכשיר שלך.",
+   "back": "This action removes the saved technical report from your device.",
+   "score": 0.923
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "יומן ניפוי הבאגים נוקה.",
+   "back": "The bug healing diary is clean.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "הסרת פרסומות לתמיד",
+   "back": "Remove the ads forever.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "הכל",
+   "back": "It's all right.",
+   "score": 0.5
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "מחברות",
+   "back": "Companies",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "אחרונים",
+   "back": "The last ones.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "אין פתקים עדיין",
+   "back": "No notes yet.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "הקש על + כדי לכתוב את הפתק הראשון שלך.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "אין חדש",
+   "back": "There's nothing new.",
+   "score": 0.333
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "פתקים שתערוך יופיעו כאן.",
+   "back": "Notes you'll be posting will appear here.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "שנה שם",
+   "back": "A year there.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "העבר למחברת",
+   "back": "Switch to the computer.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "ערוך",
+   "back": "It's ready.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "ייצא",
+   "back": "It'll come out.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "שתף",
+   "back": "Shut up.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "העבר למחברת",
+   "back": "Switch to the computer.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתק הזה.",
+   "back": "There are no other companies yet.",
+   "score": 0.462
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "צור מחברת חדשה",
+   "back": "Make a new record.",
+   "score": 0.333
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "שנה שם",
+   "back": "A year there.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "שנה כריכה",
+   "back": "A year of sandwiches",
+   "score": 0.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "שנה שם מחברת",
+   "back": "A year there from a company.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "בחר צבע כריכה",
+   "back": "Choose a color for a sandwich",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "פעולה זו תמחק את המחברת ואת {count} הפתקים שבה. לא ניתן לבטל פעולה זו.",
+   "back": "This action will erase the notebook and the XCOUNT notes in it.",
+   "score": 0.429
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "משפטי ותמיכה",
+   "back": "Legal and support",
+   "score": 1.0
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "מדיניות פרטיות",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "תנאי שירות",
+   "back": "Conditions of service",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "תמיכה",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "לא ניתן לפתוח את הקישור. נסה שוב.",
+   "back": "We can't open the link.",
+   "score": 0.545
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "רישיונות קוד פתוח",
+   "back": "Open-source licenses",
+   "score": 1.0
+  }
+ ]
+}

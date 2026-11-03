@@ -1,0 +1,1111 @@
+{
+ "locale": "gu",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "ફરી પ્રયાસ કરો",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "કંઈક ખોટું થયું",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "રદ કરો",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "સાચવો",
+   "back": "How to Save",
+   "score": 0.667
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "કાઢી નાખો",
+   "back": "Delete",
+   "score": 1.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "પૂર્વવત્ કરો",
+   "back": "What is the meaning of the first verse of the Bible?",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "ફરી કરો",
+   "back": "Do it again",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "શીર્ષક વગરનું",
+   "back": "Untitled",
+   "score": 1.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "આ ક્રિયા પૂર્વવત્ કરી શકાશે નહીં.",
+   "back": "This action cannot be reversed.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "આ નોંધ કાઢી નાખવી છે?",
+   "back": "Is this deleting a note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "“{name}” કાઢી નાખવું છે?",
+   "back": "Do you want to delete XNAME?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "સાચવી શકાયું નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "Could not be saved. Please try again.",
+   "score": 0.4
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "આ નોંધ નિકાસ કરી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "This note could not be exported. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "શેર મેનૂ ખોલી શકાયું નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "Share menu could not be opened. Please try again.",
+   "score": 0.571
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "સેટિંગ્સ",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "નોંધોમાં શોધો",
+   "back": "Searching in Notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "હજી કોઈ નોટબુક નથી",
+   "back": "There is no notebook yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "લખવાનું શરૂ કરવા માટે તમારી પ્રથમ નોટબુક બનાવો.",
+   "back": "Create your first notebook to start writing.",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "કોઈ પરિણામ નથી",
+   "back": "There are no consequences.",
+   "score": 0.4
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "બીજો શોધ શબ્દ અજમાવો.",
+   "back": "Try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "હજી કોઈ નોંધ નથી",
+   "back": "There is no record yet.",
+   "score": 0.571
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "તમારી પ્રથમ નોંધ લખવા માટે + પર ટૅપ કરો.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "નવી નોટબુક",
+   "back": "A new notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "નોટબુકનું નામ",
+   "back": "The name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "નવી નોંધ",
+   "back": "A new note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "ક્રમમાં ગોઠવો",
+   "back": "Organize in order",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "છેલ્લે સંપાદિત",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "બનાવ્યાની તારીખ",
+   "back": "The date of manufacture",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "શીર્ષક",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "ઘાટા",
+   "back": "The dark",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "ત્રાંસા",
+   "back": "Trance",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "રેખાંકિત",
+   "back": "highlighted",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "મથાળું",
+   "back": "The headline",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "બુલેટ સૂચિ",
+   "back": "Bullet list",
+   "score": 1.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "ચેકલિસ્ટ",
+   "back": "Checklists",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "અવતરણ",
+   "back": "quotes",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "કોડ બ્લૉક",
+   "back": "Block the code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "ફાઉન્ટન પેન",
+   "back": "Fountain Pen",
+   "score": 1.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "જેલ પેન",
+   "back": "A Jail Pen",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "પેન્સિલ",
+   "back": "Pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "હાઇલાઇટર",
+   "back": "Highlighter",
+   "score": 1.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "રબર",
+   "back": "rubber",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "રેખાની જાડાઈ",
+   "back": "thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "ટાઇપિંગ અને ચિત્રકામ વચ્ચે બદલો",
+   "back": "Switch between typing and drawing",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "નોંધ જોવા માટે અનલૉક કરો",
+   "back": "Unlock to view a note",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "આ નોંધ લૉક કરેલી છે",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "અનલૉક કરો",
+   "back": "Unlock",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "આ ઉપકરણ પર સ્ક્રીન લૉક અથવા બાયોમેટ્રિક સેટ કરેલું ન હોવાથી નોંધ લૉક બંધ કર્યું છે.",
+   "back": "Note lock is closed because the screen lock or biometric is not set on this device.",
+   "score": 0.636
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "નોંધ લૉક ચાલુ કરવા માટે તમારી ઓળખની પુષ્ટિ કરો",
+   "back": "Confirm your identity to turn on the note lock",
+   "score": 0.889
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "નોંધ લૉક બંધ કરવા માટે તમારી ઓળખની પુષ્ટિ કરો",
+   "back": "Confirm your identity to close the note lock",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "આ નોંધ શેર અથવા નિકાસ કરવા માટે અનલૉક કરો",
+   "back": "Unlock this note to share or export",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "તમારી ઓળખ ચકાસી શકાઈ નહીં.",
+   "back": "Your identity could not be verified.",
+   "score": 0.286
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "પહેલાં ઉપકરણ સેટિંગ્સમાં સ્ક્રીન લૉક અથવા ફિંગરપ્રિન્ટ સેટ કરો.",
+   "back": "First, set a screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "ગોપનીયતા વિકલ્પો",
+   "back": "Privacy Options",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "ખરીદી પૂર્ણ કરી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "The purchase could not be completed. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "તમારી ખરીદી પુનઃસ્થાપિત કરવામાં આવી છે.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "આ એકાઉન્ટ માટે અગાઉની કોઈ ખરીદી મળી નથી.",
+   "back": "No previous purchases have been made for this account.",
+   "score": 0.462
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "ખરીદીઓ પુનઃસ્થાપિત કરી શકાઈ નહીં. તમારું કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.",
+   "back": "Purchases could not be restored. Check your connection and try again.",
+   "score": 0.875
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "રિમાઇન્ડર શેડ્યૂલ કરી શકાયું નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "The reminder could not be scheduled. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "કેટલીક નોટબુક લોડ થઈ શકી નહીં. ઉપલબ્ધ હોય તે બતાવવામાં આવી રહ્યું છે.",
+   "back": "Some notebooks could not load. They are being shown if available.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "આ નોટબુક કદાચ સાચવાઈ નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "This notebook may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "આ ફેરફાર કદાચ સાચવાયો નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "નોટબુક કાઢી નાખી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "The notebook could not be deleted. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "નવો ક્રમ કદાચ સાચવાયો નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "The new order may not be saved. Please try again.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "કેટલીક નોંધો લોડ થઈ શકી નહીં. ઉપલબ્ધ હોય તે બતાવવામાં આવી રહ્યું છે.",
+   "back": "Some notes could not be loaded. They are being shown if available.",
+   "score": 0.625
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "હાલમાં શોધ પરિણામો અધૂરાં હોઈ શકે છે.",
+   "back": "Currently, search results may be incomplete.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "આ નોંધ કદાચ સાચવાઈ નથી. તમારા ઉપકરણનો સ્ટોરેજ તપાસો.",
+   "back": "This note may not have been saved. Check the storage of your device.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "નોંધ કાઢી નાખી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "Note could not be deleted. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "આ ખરીદી હાલમાં ઉપલબ્ધ નથી. કૃપા કરીને પછીથી ફરી પ્રયાસ કરો.",
+   "back": "This purchase is not currently available. Please try again later.",
+   "score": 0.8
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "નિકાસ કરો",
+   "back": "Exporting",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "ટેક્સ્ટ તરીકે નિકાસ કરો",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "PDF તરીકે નિકાસ કરો",
+   "back": "Export as a PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "કાગળની શૈલી",
+   "back": "The style of paper",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "લીટીવાળું",
+   "back": "linear",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "ટપકાંવાળું",
+   "back": "The spotted one.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "ચોકડીવાળું",
+   "back": "It's a little bit like that.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "કોરું",
+   "back": "Corn",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "ક્રીમ",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "પાર્ચમેન્ટ",
+   "back": "Parchment",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "વેલમ",
+   "back": "What is the meaning of this verse?",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "નોંધનો ફૉન્ટ",
+   "back": "The font of the note",
+   "score": 1.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "સિસ્ટમ",
+   "back": "system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "સેરિફ",
+   "back": "Sheriff",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "દેખાવ",
+   "back": "appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "આછો",
+   "back": "It's easy.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "ઘેરો",
+   "back": "Surrounded by darkness",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "પાર્ચમેન્ટ",
+   "back": "Parchment",
+   "score": 1.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "સિસ્ટમ",
+   "back": "system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "આજના વચનનું પ્રદર્શન",
+   "back": "A demonstration of today's promise",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "વૉટરમાર્ક",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "હેડર",
+   "back": "Header",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "ફૂટર",
+   "back": "Footer",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "બંધ",
+   "back": "Closed",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "સૂચનાઓ",
+   "back": "Instructions",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "દૈનિક વચન રિમાઇન્ડર",
+   "back": "A daily promising reminder",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "રિમાઇન્ડરનો સમય",
+   "back": "A reminder time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "સિસ્ટમ સેટિંગ્સમાં સૂચનાઓ બંધ છે.",
+   "back": "Instructions are off in system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "તમારું આજનું વચન તૈયાર છે.",
+   "back": "Your promise for today is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "ગોપનીયતા",
+   "back": "Confidentiality",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Face ID / ફિંગરપ્રિન્ટથી નોંધો લૉક કરો",
+   "back": "Lock notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "પ્રીમિયમ",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "જાહેરાતો દૂર કરો",
+   "back": "Remove advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "ખરીદીઓ પુનઃસ્થાપિત કરો",
+   "back": "Restore purchases",
+   "score": 1.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "પ્રો",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "વધુ",
+   "back": "more",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament ને રેટિંગ આપો",
+   "back": "Give Atrament a rating",
+   "score": 0.4
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "ઍપ ગમી? એક સમીક્ષા લખો",
+   "back": "How do you feel about the app? Write a review.",
+   "score": 0.364
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament શેર કરો",
+   "back": "Share Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "મિત્રને કહો",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament અજમાવો — કાગળની રચના સાથેનું વિક્ષેપ-રહિત નોટપેડ.",
+   "back": "Try Atrament  Disruption-free notepad with paper structure.",
+   "score": 0.714
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "ભાષા",
+   "back": "language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "ઉપકરણની ભાષા સેટિંગને અનુસરે છે",
+   "back": "Following the device's language settings",
+   "score": 0.667
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "સિસ્ટમ ડિફૉલ્ટ",
+   "back": "System Default",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "ભાષા પસંદ કરો",
+   "back": "Choose a language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "જાહેરાતો દૂર કરો",
+   "back": "Remove advertisements",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "વિક્ષેપ વિના લખો",
+   "back": "Write without interruption",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament મફત છે અને માત્ર એક નાનું જાહેરાત બેનર બતાવે છે. જાહેરાતો દૂર કરવી એ એક વારની ખરીદી છે જે બીજું કંઈ અનલૉક કરતી નથી — બધી સુવિધાઓ પહેલેથી જ તમારી છે.",
+   "back": "Atrament is free and only shows a small ad banner. Removing ads is a one-time purchase that unlocks nothing else. All features are already yours.",
+   "score": 0.703
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "ખરીદીઓ પુનઃસ્થાપિત કરો",
+   "back": "Restore purchases",
+   "score": 1.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "તમારી પાસે પહેલેથી જ “જાહેરાતો દૂર કરો” છે. આભાર!",
+   "back": "You have already removed ads. Thank you!",
+   "score": 0.8
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "સહાય",
+   "back": "What can help us?",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "ડિબગ લૉગ શેર કરો",
+   "back": "Share the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "કંઈ કામ ન કરે તો તકનીકી અહેવાલ મોકલો",
+   "back": "Send a technical report if nothing works",
+   "score": 0.714
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "હજી જાણ કરવા જેવું કંઈ નથી.",
+   "back": "There is nothing to report yet.",
+   "score": 0.5
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "ડિબગ લૉગ સાફ કરો",
+   "back": "Clear the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "ડિબગ લૉગ સાફ કરવો છે?",
+   "back": "Do you want to clear the debug log?",
+   "score": 0.75
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "સાચવેલો તકનીકી અહેવાલ તમારા ઉપકરણમાંથી દૂર કરવામાં આવશે.",
+   "back": "The saved technical report will be removed from your device.",
+   "score": 0.923
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "ડિબગ લૉગ સાફ કર્યો.",
+   "back": "Debug log cleared.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "જાહેરાતો કાયમ માટે દૂર કરો",
+   "back": "Remove ads permanently",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "$14.99",
+   "score": 1.0
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "બધા",
+   "back": "all of them",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "નોટબુક",
+   "back": "Notebook",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "તાજેતરના",
+   "back": "Recent",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "હજી કોઈ નોંધ નથી",
+   "back": "There is no record yet.",
+   "score": 0.571
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "તમારી પ્રથમ નોંધ લખવા માટે + પર ટૅપ કરો.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "તાજેતરનું કંઈ નથી",
+   "back": "There is nothing recent.",
+   "score": 0.8
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "તમે સંપાદિત કરેલી નોંધો અહીં દેખાશે.",
+   "back": "The notes you edit will appear here.",
+   "score": 0.727
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "નામ બદલો",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "નોટબુકમાં ખસેડો",
+   "back": "Move to a notebook",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "સંપાદિત કરો",
+   "back": "How can I help you?",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "નિકાસ કરો",
+   "back": "Exporting",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "શેર કરો",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "નોટબુકમાં ખસેડો",
+   "back": "Move to a notebook",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "હજી બીજી કોઈ નોટબુક નથી. આ નોંધ ગોઠવવા માટે એક બનાવો.",
+   "back": "There is no other notebook yet. Make one to arrange this note.",
+   "score": 0.706
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "નવી નોટબુક બનાવો",
+   "back": "Create a new notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "નામ બદલો",
+   "back": "Change the name",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "કવર બદલો",
+   "back": "Change the cover",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "નોટબુકનું નામ બદલો",
+   "back": "Change the name of the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "કવરનો રંગ પસંદ કરો",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "નોટબુક તેની બધી નોંધો સાથે કાઢી નાખવામાં આવશે (કુલ: {count}). આ ક્રિયા પૂર્વવત્ કરી શકાશે નહીં.",
+   "back": "The notebook will be deleted with all its notes (total: XCOUNT). This action cannot be revoked.",
+   "score": 0.421
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "કાનૂની અને સહાય",
+   "back": "Legal aid and assistance",
+   "score": 0.4
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "ગોપનીયતા નીતિ",
+   "back": "Privacy Policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "સેવાની શરતો",
+   "back": "Terms of Service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "સહાય",
+   "back": "What can help us?",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "લિંક ખોલી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
+   "back": "The link could not be opened. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "ઓપન સોર્સ લાઇસન્સ",
+   "back": "Open source license",
+   "score": 0.667
+  }
+ ]
+}

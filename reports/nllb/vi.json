@@ -1,0 +1,1111 @@
+{
+ "locale": "vi",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Atraments",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Thử lại",
+   "back": "Try it again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Đã xảy ra sự cố",
+   "back": "There's been an accident.",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Hủy",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Lưu",
+   "back": "Take it easy.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Xóa",
+   "back": "Get rid of it.",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Hoàn tác",
+   "back": "Activities",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Làm lại",
+   "back": "Do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Không có tiêu đề",
+   "back": "There's no headline.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Không thể hoàn tác thao tác này.",
+   "back": "It's impossible to complete this operation.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Xóa ghi chú này?",
+   "back": "Delete this note?",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Xóa “{name}”?",
+   "back": "Remove the XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Không thể lưu. Vui lòng thử lại.",
+   "back": "Can't save, please try again.",
+   "score": 0.8
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Không thể xuất ghi chú này. Vui lòng thử lại.",
+   "back": "I can't get this note out.",
+   "score": 0.333
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Không thể mở menu chia sẻ. Vui lòng thử lại.",
+   "back": "Can't open the share menu. Please try again.",
+   "score": 0.714
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Cài đặt",
+   "back": "Installed",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Tìm ghi chú",
+   "back": "Find the notes.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Chưa có sổ tay nào",
+   "back": "There's no notebook yet.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Tạo sổ tay đầu tiên để bắt đầu viết.",
+   "back": "Make your first notebook to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Không có kết quả",
+   "back": "There was no result.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Hãy thử từ khóa khác.",
+   "back": "Try another keyword.",
+   "score": 0.286
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Chưa có ghi chú nào",
+   "back": "No notes yet.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Chạm vào + để viết ghi chú đầu tiên.",
+   "back": "Tap + to write the first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Sổ tay mới",
+   "back": "The new book.",
+   "score": 0.5
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Tên sổ tay",
+   "back": "The name of the notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Ghi chú mới",
+   "back": "A new note.",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sắp xếp",
+   "back": "Set it up.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Chỉnh sửa gần nhất",
+   "back": "The most recent revision",
+   "score": 0.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Ngày tạo",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Tiêu đề",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "In đậm",
+   "back": "Print it down.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "In nghiêng",
+   "back": "Inclined printing",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Gạch chân",
+   "back": "Brick feet",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Đề mục",
+   "back": "On the subject.",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Danh sách dấu đầu dòng",
+   "back": "List of headlines",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Danh sách việc cần làm",
+   "back": "A list of things to do",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Trích dẫn",
+   "back": "References",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Khối mã",
+   "back": "The codes",
+   "score": 0.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Bút máy",
+   "back": "The motorcycle.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Bút gel",
+   "back": "The gel.",
+   "score": 0.667
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Bút chì",
+   "back": "Lead",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Bút nhớ dòng",
+   "back": "I remember the line.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Tẩy",
+   "back": "Clean it up.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Độ dày nét",
+   "back": "Thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Chuyển giữa gõ chữ và vẽ",
+   "back": "Switch between typing and drawing",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Mở khóa để xem ghi chú",
+   "back": "Open it up to see the notes.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Ghi chú này đã bị khóa",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Mở khóa",
+   "back": "Open the lock.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Khóa ghi chú đã được tắt vì thiết bị này chưa thiết lập khóa màn hình hoặc sinh trắc học.",
+   "back": "The notepad has been turned off because the device has not yet set a screen lock or biometrics.",
+   "score": 0.692
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Xác minh danh tính của bạn để bật khóa ghi chú",
+   "back": "Verify your identity to turn on the notepad",
+   "score": 0.25
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Xác minh danh tính của bạn để tắt khóa ghi chú",
+   "back": "Verify your identity to turn off the lock.",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Mở khóa để chia sẻ hoặc xuất ghi chú này",
+   "back": "Unlock to share or export this note",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Không thể xác minh danh tính của bạn.",
+   "back": "It's impossible to verify your identity.",
+   "score": 0.571
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Hãy thiết lập khóa màn hình hoặc vân tay trong cài đặt thiết bị trước.",
+   "back": "Set the screen lock or fingerprint in the device settings.",
+   "score": 0.857
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Tùy chọn quyền riêng tư",
+   "back": "Options for privacy",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Không thể hoàn tất giao dịch mua. Vui lòng thử lại.",
+   "back": "Couldn't complete the purchase, please try again.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Giao dịch mua của bạn đã được khôi phục.",
+   "back": "Your purchase transaction has been restored.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Không tìm thấy giao dịch mua trước đó cho tài khoản này.",
+   "back": "Didn't find any previous purchase transactions for this account.",
+   "score": 0.429
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Không thể khôi phục giao dịch mua. Hãy kiểm tra kết nối và thử lại.",
+   "back": "We can't recover the transaction.",
+   "score": 0.0
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Không thể lên lịch nhắc nhở. Vui lòng thử lại.",
+   "back": "I can't schedule a reminder, please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Không thể tải một số sổ tay. Đang hiển thị những gì có sẵn.",
+   "back": "I can't download some notebooks. I'm showing what's available.",
+   "score": 0.526
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Sổ tay này có thể chưa được lưu. Vui lòng thử lại.",
+   "back": "This handbook may not have been saved.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Thay đổi này có thể chưa được lưu. Vui lòng thử lại.",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Không thể xóa sổ tay. Vui lòng thử lại.",
+   "back": "I can't erase the hand.",
+   "score": 0.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Thứ tự mới có thể chưa được lưu. Vui lòng thử lại.",
+   "back": "The new order may not have been saved.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Không thể tải một số ghi chú. Đang hiển thị những gì có sẵn.",
+   "back": "I can't download some notes. I'm showing what's available.",
+   "score": 0.556
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Kết quả tìm kiếm hiện có thể chưa đầy đủ.",
+   "back": "The search results may not be complete at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Ghi chú này có thể chưa được lưu. Hãy kiểm tra bộ nhớ thiết bị.",
+   "back": "This note may not have been saved.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Không thể xóa ghi chú. Vui lòng thử lại.",
+   "back": "I can't erase the note.",
+   "score": 0.182
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Hiện không thể thực hiện giao dịch mua này. Vui lòng thử lại sau.",
+   "back": "I can't make this transaction at the moment.",
+   "score": 0.0
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Xuất",
+   "back": "Get out of here.",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Xuất dưới dạng văn bản",
+   "back": "Published in written form",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Xuất dưới dạng PDF",
+   "back": "Published as PDF",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Kiểu giấy",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Có dòng kẻ",
+   "back": "There's a line.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Chấm bi",
+   "back": "Banned beer.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Ô vuông",
+   "back": "Oh, square one.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Trắng",
+   "back": "It's white.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Kem",
+   "back": "The ice cream.",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Giấy da",
+   "back": "It's leather.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Giấy da bê",
+   "back": "The leather paper.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Phông chữ ghi chú",
+   "back": "The font of the note",
+   "score": 1.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Hệ thống",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Có chân",
+   "back": "With legs.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter.",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora, what's going on?",
+   "score": 0.4
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Giao diện",
+   "back": "Get to know me.",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Sáng",
+   "back": "It's early in the morning.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Tối",
+   "back": "In the middle of the night.",
+   "score": 0.0
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Giấy da",
+   "back": "It's leather.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Hệ thống",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Hiển thị câu Kinh Thánh trong ngày",
+   "back": "Showing the Bible text of the day",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Hình mờ",
+   "back": "The image is blurred.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Đầu trang",
+   "back": "The front page",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Chân trang",
+   "back": "His feet.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Tắt",
+   "back": "Turn it off.",
+   "score": 0.667
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Thông báo",
+   "back": "The announcement",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Nhắc nhở câu Kinh Thánh hằng ngày",
+   "back": "Reflecting on the Bible Day by Day",
+   "score": 0.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Giờ nhắc nhở",
+   "back": "Now remind me.",
+   "score": 0.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Thông báo đã bị tắt trong cài đặt hệ thống.",
+   "back": "The notification was turned off in the system settings.",
+   "score": 0.909
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Câu Kinh Thánh trong ngày của bạn đã sẵn sàng.",
+   "back": "Your day's Bible text is ready.",
+   "score": 0.25
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Quyền riêng tư",
+   "back": "The right to privacy",
+   "score": 0.667
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Khóa ghi chú bằng Face ID / vân tay",
+   "back": "Face ID with your finger.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "It's a premium.",
+   "score": 0.667
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Xóa quảng cáo",
+   "back": "Remove the ad",
+   "score": 0.5
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Khôi phục giao dịch mua",
+   "back": "Restore the purchase transaction",
+   "score": 0.4
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "The pros.",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Thêm",
+   "back": "More of it.",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Đánh giá Atrament",
+   "back": "Rating of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Thích ứng dụng này? Hãy để lại đánh giá",
+   "back": "Do you like this app?",
+   "score": 0.286
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Chia sẻ Atrament",
+   "back": "Share the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Kể cho một người bạn",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Hãy thử Atrament, một cuốn sổ ghi chú không xao nhãng với kết cấu giấy.",
+   "back": "Try Atrament, a notebook that doesn't blend in with the texture of the paper.",
+   "score": 0.4
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Ngôn ngữ",
+   "back": "The language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Theo cài đặt ngôn ngữ của thiết bị",
+   "back": "According to the language settings of the device",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Mặc định của hệ thống",
+   "back": "Default of the system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Chọn ngôn ngữ",
+   "back": "Choose the language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Xóa quảng cáo",
+   "back": "Remove the ad",
+   "score": 0.5
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Viết không bị xao nhãng",
+   "back": "Writing is not distorted",
+   "score": 0.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament miễn phí và chỉ hiển thị một biểu ngữ quảng cáo nhỏ. Xóa quảng cáo là giao dịch mua một lần và không mở khóa thêm gì khác: mọi tính năng đều đã thuộc về bạn.",
+   "back": "Atrament is free and only displays a small advertising banner. Removing an ad is a one-time purchase transaction and nothing else is unlocked: all the features are already yours.",
+   "score": 0.684
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Khôi phục giao dịch mua",
+   "back": "Restore the purchase transaction",
+   "score": 0.4
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Bạn đã có Xóa quảng cáo. Cảm ơn bạn!",
+   "back": "You've already deleted the ad. Thank you!",
+   "score": 0.4
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Hỗ trợ",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Chia sẻ nhật ký gỡ lỗi",
+   "back": "Share your troubleshooting diary",
+   "score": 0.333
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Gửi báo cáo kỹ thuật nếu có gì đó không hoạt động",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Chưa có gì để báo cáo.",
+   "back": "There's nothing to report.",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Xóa nhật ký gỡ lỗi",
+   "back": "Deleted logs",
+   "score": 0.4
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Xóa nhật ký gỡ lỗi?",
+   "back": "Deleted the logs?",
+   "score": 0.4
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Báo cáo kỹ thuật đã lưu sẽ bị xóa khỏi thiết bị của bạn.",
+   "back": "Saved technical reports will be deleted from your device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Đã xóa nhật ký gỡ lỗi.",
+   "back": "Deleted the troubleshooting log.",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Xóa quảng cáo vĩnh viễn",
+   "back": "Remove ads permanently",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Tất cả",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Sổ tay",
+   "back": "His handwriting.",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Gần đây",
+   "back": "Recently.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Chưa có ghi chú nào",
+   "back": "No notes yet.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Chạm vào + để viết ghi chú đầu tiên.",
+   "back": "Tap + to write the first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Không có gì gần đây",
+   "back": "Nothing recently.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Các ghi chú bạn chỉnh sửa sẽ xuất hiện ở đây.",
+   "back": "The notes you edit will appear here.",
+   "score": 0.727
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Đổi tên",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Chuyển vào sổ tay",
+   "back": "Put it in the notebook.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Chỉnh sửa",
+   "back": "Repaired",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Xuất",
+   "back": "Get out of here.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Chia sẻ",
+   "back": "Sharing",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Chuyển vào sổ tay",
+   "back": "Put it in the notebook.",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Chưa có sổ tay nào khác. Hãy tạo một sổ tay để sắp xếp ghi chú này.",
+   "back": "I don't have any other notebooks.",
+   "score": 0.267
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Tạo sổ tay mới",
+   "back": "Create a new ledger",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Đổi tên",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Đổi bìa",
+   "back": "Change the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Đổi tên sổ tay",
+   "back": "Change the name of the notebook.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Chọn màu bìa",
+   "back": "Choose the color of the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Sổ tay sẽ bị xóa cùng tất cả ghi chú trong đó (tổng cộng: {count}). Không thể hoàn tác thao tác này.",
+   "back": "The manual will be deleted along with all the notes in it (total: XCOUNT).",
+   "score": 0.25
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Pháp lý và hỗ trợ",
+   "back": "Legal and support",
+   "score": 1.0
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Chính sách quyền riêng tư",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Điều khoản dịch vụ",
+   "back": "Conditions of service",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Hỗ trợ",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Không thể mở liên kết. Vui lòng thử lại.",
+   "back": "Can't open the link. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Giấy phép nguồn mở",
+   "back": "Open source license",
+   "score": 0.667
+  }
+ ]
+}

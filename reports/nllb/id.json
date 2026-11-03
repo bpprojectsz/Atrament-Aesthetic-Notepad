@@ -1,0 +1,1111 @@
+{
+ "locale": "id",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "The Atraments",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Coba lagi",
+   "back": "Try it again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Terjadi kesalahan",
+   "back": "There's been a mistake.",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Batal",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Simpan",
+   "back": "Keep it.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Hapus",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Urungkan",
+   "back": "Take care of it.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Ulangi",
+   "back": "Repeat that.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Tanpa judul",
+   "back": "Without a title",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Tindakan ini tidak dapat dibatalkan.",
+   "back": "This action cannot be overturned.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Hapus catatan ini?",
+   "back": "Erase this note?",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Hapus “{name}”?",
+   "back": "Delete the XNAME?",
+   "score": 0.667
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Gagal menyimpan. Silakan coba lagi.",
+   "back": "Failure to save, please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Gagal mengekspor catatan ini. Silakan coba lagi.",
+   "back": "I failed to export these notes.",
+   "score": 0.182
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Gagal membuka menu bagikan. Silakan coba lagi.",
+   "back": "Failed to open the share menu, please try again.",
+   "score": 0.615
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Pengaturan",
+   "back": "Adjustment",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Cari catatan",
+   "back": "Look for the notes.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Belum ada buku catatan",
+   "back": "There's no notebook yet.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Buat buku catatan pertama Anda untuk mulai menulis.",
+   "back": "Make your first notebook to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Tidak ada hasil",
+   "back": "There was no result.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Coba kata pencarian lain.",
+   "back": "Try another search word.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Belum ada catatan",
+   "back": "There's no record yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Ketuk + untuk menulis catatan pertama Anda.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Buku catatan baru",
+   "back": "New notebook",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Nama buku catatan",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Catatan baru",
+   "back": "New record",
+   "score": 0.5
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Urutkan",
+   "back": "Put it in order.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Terakhir diedit",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Tanggal dibuat",
+   "back": "Date made",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Judul",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Tebal",
+   "back": "It's thick.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Miring",
+   "back": "Let's go",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Garis bawah",
+   "back": "The bottom line",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Judul",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Daftar berpoin",
+   "back": "List of points",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Daftar periksa",
+   "back": "Checklist",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Kutipan",
+   "back": "Quotes",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Blok kode",
+   "back": "Block code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Pulpen tinta",
+   "back": "The ink pulp",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Pulpen gel",
+   "back": "The gel pulp",
+   "score": 0.5
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Pensil",
+   "back": "The pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Stabilo",
+   "back": "Stabilo",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Penghapus",
+   "back": "The remover",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Ketebalan garis",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Beralih antara mengetik dan menggambar",
+   "back": "Switching between typing and drawing",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Buka kunci untuk melihat catatan",
+   "back": "Open the key to see the notes.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Catatan ini terkunci",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Buka kunci",
+   "back": "Open the lock.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Kunci catatan dinonaktifkan karena perangkat ini belum memiliki kunci layar atau biometrik.",
+   "back": "The record key is disabled because this device does not have a screen or biometric key.",
+   "score": 0.348
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Verifikasi identitas Anda untuk mengaktifkan kunci catatan",
+   "back": "Verify your identity to activate the record key",
+   "score": 0.0
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Verifikasi identitas Anda untuk menonaktifkan kunci catatan",
+   "back": "Verify your identity to disable the record key",
+   "score": 0.0
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Buka kunci untuk membagikan atau mengekspor catatan ini",
+   "back": "Unlock to share or export these records",
+   "score": 0.667
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Identitas Anda tidak dapat diverifikasi.",
+   "back": "Your identity cannot be verified.",
+   "score": 0.333
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Atur kunci layar atau sidik jari terlebih dahulu di pengaturan perangkat.",
+   "back": "Set the screen lock or fingerprint first in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Pilihan privasi",
+   "back": "Choices of privacy",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Pembelian tidak dapat diselesaikan. Silakan coba lagi.",
+   "back": "The purchase cannot be completed, please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Pembelian Anda telah dipulihkan.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Tidak ditemukan pembelian sebelumnya untuk akun ini.",
+   "back": "No previous purchases have been found for this account.",
+   "score": 0.615
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Pembelian tidak dapat dipulihkan. Periksa koneksi Anda dan coba lagi.",
+   "back": "The purchase is non-refundable, check your connection and try again.",
+   "score": 0.533
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Pengingat tidak dapat dijadwalkan. Silakan coba lagi.",
+   "back": "Reminder can't be scheduled, please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Beberapa buku catatan tidak dapat dimuat. Menampilkan yang tersedia.",
+   "back": "Some notebooks can't be loaded.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Buku catatan ini mungkin belum tersimpan. Silakan coba lagi.",
+   "back": "This notebook may not be stored.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Perubahan ini mungkin belum tersimpan. Silakan coba lagi.",
+   "back": "These changes may not have been saved, so please try again.",
+   "score": 0.778
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Buku catatan tidak dapat dihapus. Silakan coba lagi.",
+   "back": "The notebook cannot be deleted. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Urutan baru mungkin belum tersimpan. Silakan coba lagi.",
+   "back": "The new order may not have been saved.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Beberapa catatan tidak dapat dimuat. Menampilkan yang tersedia.",
+   "back": "Some records can't be loaded.",
+   "score": 0.333
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Hasil pencarian mungkin belum lengkap saat ini.",
+   "back": "The search results may not be complete at this time.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Catatan ini mungkin belum tersimpan. Periksa penyimpanan perangkat Anda.",
+   "back": "These records may not be stored.",
+   "score": 0.286
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Catatan tidak dapat dihapus. Silakan coba lagi.",
+   "back": "The record cannot be erased.",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Pembelian ini sedang tidak tersedia. Silakan coba lagi nanti.",
+   "back": "This purchase is not available, please try again later.",
+   "score": 0.857
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Ekspor",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Ekspor sebagai teks",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Ekspor sebagai PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Gaya kertas",
+   "back": "Style of paper",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Bergaris",
+   "back": "Line up",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Titik-titik",
+   "back": "The Dots",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Kotak-kotak",
+   "back": "Boxes",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Kosong",
+   "back": "It's empty.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krem",
+   "back": "The cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Perkamen",
+   "back": "It's a piece of paper.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Velum",
+   "back": "The Velum",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Font catatan",
+   "back": "Notes font",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serif",
+   "back": "Sheriff",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Tampilan",
+   "back": "Display",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Terang",
+   "back": "It's clear.",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Gelap",
+   "back": "It's dark",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Perkamen",
+   "back": "It's a piece of paper.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Tampilan ayat harian",
+   "back": "View of the daily verses",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Tanda air",
+   "back": "Watermark",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Header",
+   "back": "Header",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Footer",
+   "back": "Footer",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Mati",
+   "back": "It's dead.",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Notifikasi",
+   "back": "Notice of appeal",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Pengingat ayat harian",
+   "back": "Daily verse reminders",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Waktu pengingat",
+   "back": "A time of remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Notifikasi dinonaktifkan di pengaturan sistem.",
+   "back": "Notifications are disabled in the system settings.",
+   "score": 0.667
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Ayat harian Anda sudah siap.",
+   "back": "Your daily verses are ready.",
+   "score": 0.667
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Privasi",
+   "back": "Privacy",
+   "score": 1.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Kunci catatan dengan Face ID / sidik jari",
+   "back": "Lock the notebook with Face ID/fingerprint",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Hapus iklan",
+   "back": "Delete the ad",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Pulihkan pembelian",
+   "back": "Return the purchase",
+   "score": 0.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "The Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Lainnya",
+   "back": "The other one.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Beri nilai Atrament",
+   "back": "Give me the Atrament score.",
+   "score": 0.333
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Suka aplikasinya? Tinggalkan ulasan",
+   "back": "Do you like the app?",
+   "score": 0.286
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Bagikan Atrament",
+   "back": "Share the Atraments",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Ceritakan kepada teman",
+   "back": "Tell your friends",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Cobalah Atrament, buku catatan tanpa gangguan dengan tekstur kertas.",
+   "back": "Try Atrament, an uninterrupted notebook with paper texture.",
+   "score": 0.462
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Bahasa",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Mengikuti pengaturan bahasa perangkat",
+   "back": "Follow the device's language settings",
+   "score": 0.667
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Default sistem",
+   "back": "Default system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Pilih bahasa",
+   "back": "Choose the language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Hapus iklan",
+   "back": "Delete the ad",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Menulis tanpa gangguan",
+   "back": "Writing without interruption",
+   "score": 0.333
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament gratis dan hanya menampilkan satu banner iklan kecil. Menghapus iklan adalah pembelian sekali bayar yang tidak membuka hal lain: semua fitur sudah menjadi milik Anda.",
+   "back": "It's free, and it's only a small ad banner. Removing ads is a one-time purchase that doesn't open up anything else: all the features are already yours.",
+   "score": 0.718
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Pulihkan pembelian",
+   "back": "Return the purchase",
+   "score": 0.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Anda sudah memiliki Hapus iklan. Terima kasih!",
+   "back": "You already have deleted ads.",
+   "score": 0.667
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Dukungan",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Bagikan log debug",
+   "back": "Share the debug log",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Kirim laporan teknis jika ada yang tidak berfungsi",
+   "back": "Send a technical report if something doesn't work.",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Belum ada yang perlu dilaporkan.",
+   "back": "There's still nothing to report.",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Hapus log debug",
+   "back": "Delete the debug log",
+   "score": 0.667
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Hapus log debug?",
+   "back": "Delete the debug log?",
+   "score": 0.667
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Laporan teknis yang tersimpan akan dihapus dari perangkat Anda.",
+   "back": "The stored technical reports will be deleted from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Log debug dihapus.",
+   "back": "The debug log has been deleted.",
+   "score": 0.5
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Hapus iklan selamanya",
+   "back": "Get rid of the ads forever.",
+   "score": 0.571
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Semua",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Buku catatan",
+   "back": "The notebook",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Terbaru",
+   "back": "The latest.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Belum ada catatan",
+   "back": "There's no record yet.",
+   "score": 0.5
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Ketuk + untuk menulis catatan pertama Anda.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Tidak ada yang terbaru",
+   "back": "There's nothing new.",
+   "score": 0.333
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Catatan yang Anda edit akan muncul di sini.",
+   "back": "The notes you edit will appear here.",
+   "score": 0.727
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Ubah nama",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Pindahkan ke buku catatan",
+   "back": "Move it to the notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Edit",
+   "back": "Edit this",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Ekspor",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Bagikan",
+   "back": "Share it.",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Pindahkan ke buku catatan",
+   "back": "Move it to the notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Belum ada buku catatan lain. Buat satu untuk mengatur catatan ini.",
+   "back": "There's no other notebook yet.",
+   "score": 0.571
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Buat buku catatan baru",
+   "back": "Make a new notebook",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Ubah nama",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Ganti sampul",
+   "back": "Change the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Ubah nama buku catatan",
+   "back": "Change the name of the notebook",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Pilih warna sampul",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Buku catatan akan dihapus beserta semua catatan di dalamnya (total: {count}). Tindakan ini tidak dapat dibatalkan.",
+   "back": "The notebook will be deleted with all the notes in it (total: XCOUNT).",
+   "score": 0.4
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Hukum dan dukungan",
+   "back": "Law and support",
+   "score": 0.5
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Kebijakan Privasi",
+   "back": "Privacy Policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Ketentuan Layanan",
+   "back": "Terms of Service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Dukungan",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Tautan tidak dapat dibuka. Silakan coba lagi.",
+   "back": "The link can't be opened, please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Lisensi sumber terbuka",
+   "back": "Open source license",
+   "score": 0.667
+  }
+ ]
+}

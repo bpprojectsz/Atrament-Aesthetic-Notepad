@@ -1,0 +1,1111 @@
+{
+ "locale": "fi",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Other articles of iron or steel, not elsewhere specified or included",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Yritä uudelleen",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Jokin meni pieleen",
+   "back": "Something went wrong .",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Peruuta",
+   "back": "Withdrawal",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Tallenna",
+   "back": "Please record",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Poista",
+   "back": "Take it off.",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Kumoa",
+   "back": "I'm going to kill you.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Tee uudelleen",
+   "back": "Do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Nimetön",
+   "back": "Unnamed",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Tätä toimintoa ei voi kumota.",
+   "back": "This operation cannot be revoked.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Poistetaanko tämä muistiinpano?",
+   "back": "Do you want to delete this note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Poistetaanko ”{name}”?",
+   "back": "Do you want to remove XNAME?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Tallennus epäonnistui. Yritä uudelleen.",
+   "back": "The recording failed, so try again.",
+   "score": 0.4
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Muistiinpanon vienti epäonnistui. Yritä uudelleen.",
+   "back": "Export of the notebook failed, try again.",
+   "score": 0.545
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Jakovalikkoa ei voitu avata. Yritä uudelleen.",
+   "back": "They couldn't open the splitter.",
+   "score": 0.5
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Asetukset",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Hae muistiinpanoista",
+   "back": "Get the notes .",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Ei vielä muistikirjoja",
+   "back": "No notebooks yet .",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Luo ensimmäinen muistikirjasi aloittaaksesi kirjoittamisen.",
+   "back": "Make your first notebook so you can start writing.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Ei tuloksia",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Kokeile toista hakusanaa.",
+   "back": "Try a different search term.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Ei vielä muistiinpanoja",
+   "back": "No notes yet .",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Napauta +, niin voit kirjoittaa ensimmäisen muistiinpanosi.",
+   "back": "Tap + and you can write your first note.",
+   "score": 0.8
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Uusi muistikirja",
+   "back": "New notebook .",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Muistikirjan nimi",
+   "back": "Name of the notebook",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Uusi muistiinpano",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Lajittelu",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Viimeksi muokattu",
+   "back": "Last modified",
+   "score": 0.5
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Luontipäivä",
+   "back": "The Day of Nature",
+   "score": 0.0
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Otsikko",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Lihavointi",
+   "back": "Weight loss",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Kursivointi",
+   "back": "Courses",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Alleviivaus",
+   "back": "Subtraction",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Otsikko",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Luettelo",
+   "back": "List",
+   "score": 0.667
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Tarkistuslista",
+   "back": "Checklists",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Lainaus",
+   "back": "Loans",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Koodilohko",
+   "back": "Codes and codes",
+   "score": 0.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Täytekynä",
+   "back": "Full-color pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Geelikynä",
+   "back": "Folded pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Lyijykynä",
+   "back": "With a pencil",
+   "score": 1.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Korostuskynä",
+   "back": "Highlighting pen",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Pyyhekumi",
+   "back": "Washing room",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Viivan paksuus",
+   "back": "The thickness of the line",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Vaihda kirjoittamisen ja piirtämisen välillä",
+   "back": "Switch between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Avaa lukitus nähdäksesi muistiinpanon",
+   "back": "Open the lock to see the notebook .",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Tämä muistiinpano on lukittu",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Avaa lukitus",
+   "back": "Open the lock.",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Muistiinpanojen lukitus on poistettu käytöstä, koska tälle laitteelle ei ole määritetty näytön lukitusta tai biometriikkaa.",
+   "back": "Note locking has been removed as this device is not equipped with screen locking or biometrics.",
+   "score": 0.522
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Vahvista henkilöllisyytesi ottaaksesi muistiinpanojen lukituksen käyttöön",
+   "back": "Confirm your identity to use note locking",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Vahvista henkilöllisyytesi poistaaksesi muistiinpanojen lukituksen käytöstä",
+   "back": "Confirm your identity to remove note locking",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Avaa lukitus jakaaksesi tai viedäksesi muistiinpanon",
+   "back": "Open the lock to share or take a note",
+   "score": 0.444
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Henkilöllisyyttäsi ei voitu vahvistaa.",
+   "back": "There's been no confirmation of your identity.",
+   "score": 0.222
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Määritä ensin näytön lukitus tai sormenjälki laitteen asetuksissa.",
+   "back": "First, set the screen lock or fingerprint in the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Tietosuojavalinnat",
+   "back": "Data protection choices",
+   "score": 0.4
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Ostoa ei voitu viimeistellä. Yritä uudelleen.",
+   "back": "They couldn't finish the purchase, so try again.",
+   "score": 0.429
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Ostoksesi palautettiin.",
+   "back": "Your purchase was returned.",
+   "score": 0.667
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Tälle tilille ei löytynyt aiempia ostoksia.",
+   "back": "There were no previous purchases on this account.",
+   "score": 0.5
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Ostoksia ei voitu palauttaa. Tarkista yhteytesi ja yritä uudelleen.",
+   "back": "We couldn't return the purchases, so check your connection and try again.",
+   "score": 0.556
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Muistutusta ei voitu ajoittaa. Yritä uudelleen.",
+   "back": "The reminder couldn't be timed, so try again.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Joitakin muistikirjoja ei voitu ladata. Näytetään saatavilla olevat.",
+   "back": "Some of the notebooks couldn't be downloaded.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Tätä muistikirjaa ei ehkä tallennettu. Yritä uudelleen.",
+   "back": "This notebook may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Tätä muutosta ei ehkä tallennettu. Yritä uudelleen.",
+   "back": "This change may not have been recorded.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Muistikirjaa ei voitu poistaa. Yritä uudelleen.",
+   "back": "The notebook couldn't be deleted, so try again.",
+   "score": 0.615
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Uutta järjestystä ei ehkä tallennettu. Yritä uudelleen.",
+   "back": "The new order may not have been recorded.",
+   "score": 0.75
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Joitakin muistiinpanoja ei voitu ladata. Näytetään saatavilla olevat.",
+   "back": "Some of the notes were unable to be downloaded, so we'll show you what's available.",
+   "score": 0.526
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Hakutulokset voivat olla tällä hetkellä puutteellisia.",
+   "back": "Search results may be inadequate at this time.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Tätä muistiinpanoa ei ehkä tallennettu. Tarkista laitteen tallennustila.",
+   "back": "This notebook may not have been saved, so check the storage status of the device.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Muistiinpanoa ei voitu poistaa. Yritä uudelleen.",
+   "back": "The notebook couldn't be deleted, so try again.",
+   "score": 0.462
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Tämä osto ei ole tällä hetkellä käytettävissä. Yritä myöhemmin uudelleen.",
+   "back": "This purchase is not available at this time, so try again later.",
+   "score": 0.706
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Vie",
+   "back": "Take it .",
+   "score": 0.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Vie tekstinä",
+   "back": "Take it as a text",
+   "score": 0.5
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Vie PDF-tiedostona",
+   "back": "Take it as a PDF file",
+   "score": 0.4
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Paperityyli",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Viivoitettu",
+   "back": "Extended",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Pisteruudukko",
+   "back": "Are you going to make it ?",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Ruudukko",
+   "back": "Do you want to get rid of it?",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Tyhjä",
+   "back": "It 's empty .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Kermanvärinen",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Pergamentti",
+   "back": "The parchment",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Veliini",
+   "back": "My brother .",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Muistiinpanojen fontti",
+   "back": "The font of the notes",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Järjestelmä",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serif",
+   "back": "Sheriff .",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Ulkoasu",
+   "back": "External wear",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Vaalea",
+   "back": "Voting",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Tumma",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Pergamentti",
+   "back": "The parchment",
+   "score": 1.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Järjestelmä",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Päivän jakeen näyttö",
+   "back": "Proof of the text of the day",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Vesileima",
+   "back": "Water liqueur",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Ylätunniste",
+   "back": "This certificate shall be valid for a period of five years from the date of issue of the certificate.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Alatunniste",
+   "back": "Sub-headings",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Pois",
+   "back": "Get out of here !",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Ilmoitukset",
+   "back": "Notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Päivittäinen jaemuistutus",
+   "back": "Daily retail reminder",
+   "score": 0.667
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Muistutuksen aika",
+   "back": "The Time of Remembrance",
+   "score": 0.5
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Ilmoitukset on poistettu käytöstä järjestelmän asetuksissa.",
+   "back": "The notifications have been deactivated in the system settings.",
+   "score": 0.545
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Päivän jakeesi on valmis.",
+   "back": "Your text for the day is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Tietosuoja",
+   "back": "Protection of data",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Lukitse muistiinpanot Face ID:llä / sormenjäljellä",
+   "back": "Lock your notes with Face ID / fingerprint .",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "This item is not intended to be exhaustive.",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Poista mainokset",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Palauta ostokset",
+   "back": "Return your purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Lisää",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Arvioi Atrament",
+   "back": "Assessment of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Pidätkö sovelluksesta? Jätä arvostelu",
+   "back": "Do you like the app?",
+   "score": 0.286
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Jaa Atrament",
+   "back": "Distribution of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Kerro ystävälle",
+   "back": "Tell your friend .",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Kokeile Atramentia – häiriötön muistilehtiö paperitekstuureilla.",
+   "back": "Try Atramenti  with a non-interruptible power supply.",
+   "score": 0.154
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Kieli",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Noudattaa laitteen kieliasetusta",
+   "back": "Adhere to the language settings of the device",
+   "score": 0.5
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Järjestelmän oletus",
+   "back": "Default of the system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Valitse kieli",
+   "back": "Choose your language",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Poista mainokset",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Kirjoita ilman häiriöitä",
+   "back": "Write without interruption .",
+   "score": 0.667
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament on ilmainen ja näyttää yhden pienen mainosbannerin. Mainosten poisto on kertaostos, joka ei avaa mitään muuta – kaikki ominaisuudet ovat jo sinun.",
+   "back": "Atrament is free, and it shows one small banner, and removing the ads is a one-time purchase that doesn't open anything else.",
+   "score": 0.727
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Palauta ostokset",
+   "back": "Return your purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Sinulla on jo Poista mainokset. Kiitos!",
+   "back": "You already have the Take Off ads.",
+   "score": 0.6
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Tuki",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Jaa virheenkorjausloki",
+   "back": "Distribute the error-correcting block",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Lähetä tekninen raportti, jos jokin ei toimi",
+   "back": "Send a technical report if something doesn't work",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Ei vielä mitään ilmoitettavaa.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Tyhjennä virheenkorjausloki",
+   "back": "Clear the error-correcting block",
+   "score": 0.286
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Tyhjennetäänkö virheenkorjausloki?",
+   "back": "Can we clear the error-correcting lock?",
+   "score": 0.222
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Tallennettu tekninen raportti poistetaan laitteeltasi.",
+   "back": "The recorded technical report will be deleted from your device.",
+   "score": 0.615
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Virheenkorjausloki tyhjennettiin.",
+   "back": "The error-correcting lock has been emptied.",
+   "score": 0.0
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Poista mainokset pysyvästi",
+   "back": "Remove ads permanently",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Kaikki",
+   "back": "All of them.",
+   "score": 0.667
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Muistikirjat",
+   "back": "Memorials",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Viimeisimmät",
+   "back": "The latest",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Ei vielä muistiinpanoja",
+   "back": "No notes yet .",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Napauta +, niin voit kirjoittaa ensimmäisen muistiinpanosi.",
+   "back": "Tap + and you can write your first note.",
+   "score": 0.8
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Ei viimeaikaisia",
+   "back": "Not recent",
+   "score": 0.5
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Muokkaamasi muistiinpanot näkyvät tässä.",
+   "back": "The notes you've edited can be seen here.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Nimeä uudelleen",
+   "back": "Name it again.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Siirrä muistikirjaan",
+   "back": "Move it to the notebook .",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Muokkaa",
+   "back": "Please edit",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Vie",
+   "back": "Take it .",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Jaa",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Siirrä muistikirjaan",
+   "back": "Move it to the notebook .",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Muita muistikirjoja ei vielä ole. Luo muistikirja järjestääksesi tämän muistiinpanon.",
+   "back": "We don't have any other notebooks yet, so create a notebook to organize this entry.",
+   "score": 0.4
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Luo uusi muistikirja",
+   "back": "Make a new notebook .",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Nimeä uudelleen",
+   "back": "Name it again.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Vaihda kansi",
+   "back": "Change the cover .",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Nimeä muistikirja uudelleen",
+   "back": "Name the notebook again.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Valitse kannen väri",
+   "back": "Choose the color of the cover",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Muistikirja poistetaan kaikkine muistiinpanoineen (yhteensä: {count}). Tätä toimintoa ei voi kumota.",
+   "back": "The notebook shall be deleted with all notes (total: XCOUNT).",
+   "score": 0.267
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Oikeudelliset tiedot ja tuki",
+   "back": "Legal information and aid",
+   "score": 0.4
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Tietosuojakäytäntö",
+   "back": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Käyttöehdot",
+   "back": "Conditions of use",
+   "score": 0.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Tuki",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Linkkiä ei voitu avata. Yritä uudelleen.",
+   "back": "They couldn't open the link, so try again.",
+   "score": 0.857
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Avoimen lähdekoodin lisenssit",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

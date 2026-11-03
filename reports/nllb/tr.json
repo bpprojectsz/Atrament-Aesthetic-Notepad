@@ -1,0 +1,1111 @@
+{
+ "locale": "tr",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Atraments",
+   "score": 1.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Tekrar dene",
+   "back": "Try again .",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Bir şeyler ters gitti",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "İptal",
+   "back": "Cancelled",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Kaydet",
+   "back": "Saving",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Sil",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Geri al",
+   "back": "Take it back",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Yinele",
+   "back": "I 'm going to eat .",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Başlıksız",
+   "back": "Headless",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Bu işlem geri alınamaz.",
+   "back": "This is irreversible.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Bu not silinsin mi?",
+   "back": "Should this note be deleted?",
+   "score": 0.4
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "“{name}” silinsin mi?",
+   "back": "Should the XNAME be deleted?",
+   "score": 0.0
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Kaydedilemedi. Lütfen tekrar deneyin.",
+   "back": "No recording, please try again.",
+   "score": 0.444
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Not dışa aktarılamadı. Lütfen tekrar deneyin.",
+   "back": "Note cannot be exported. Please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Paylaşım menüsü açılamadı. Lütfen tekrar deneyin.",
+   "back": "The sharing menu could not be opened. Please try again.",
+   "score": 0.429
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Ayarlar",
+   "back": "Settings",
+   "score": 1.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Notlarda ara",
+   "back": "Look in the notes",
+   "score": 0.5
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Henüz defter yok",
+   "back": "There 's no notebook yet .",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Yazmaya başlamak için ilk defterinizi oluşturun.",
+   "back": "Create your first book to start writing.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Sonuç yok",
+   "back": "No results",
+   "score": 1.0
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Başka bir arama terimi deneyin.",
+   "back": "Try a different search term.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Henüz not yok",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "İlk notunuzu yazmak için + simgesine dokunun.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Yeni defter",
+   "back": "New ledger",
+   "score": 0.5
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Defter adı",
+   "back": "Name of the ledger",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Yeni not",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Sırala",
+   "back": "Sorting",
+   "score": 1.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Son düzenleme",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Oluşturma tarihi",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Başlık",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Kalın",
+   "back": "It 's thick .",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "İtalik",
+   "back": "Italian",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Altı çizili",
+   "back": "Six drawn",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Başlık",
+   "back": "Title",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Madde işaretli liste",
+   "back": "List of items marked",
+   "score": 0.4
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Yapılacaklar listesi",
+   "back": "List of things to do",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Alıntı",
+   "back": "Excerpted from",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Kod bloğu",
+   "back": "Block of code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Dolma kalem",
+   "back": "Filling pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Jel kalem",
+   "back": "Jell-out pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Kurşun kalem",
+   "back": "Lead pencil",
+   "score": 0.667
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Fosforlu kalem",
+   "back": "Phosphorus pencil",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Silgi",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Çizgi kalınlığı",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Yazma ve çizim arasında geçiş yap",
+   "back": "Switching between writing and drawing",
+   "score": 0.75
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Notu görüntülemek için kilidi açın",
+   "back": "Open the lock to view the note",
+   "score": 0.571
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Bu not kilitli",
+   "back": "This note is locked",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Kilidi aç",
+   "back": "Open the lock",
+   "score": 0.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Bu cihazda ekran kilidi veya biyometri ayarlanmadığı için not kilidi kapatıldı.",
+   "back": "This device has no screen lock or biometric settings, so the note lock is turned off.",
+   "score": 0.75
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Not kilidini etkinleştirmek için kimliğinizi doğrulayın",
+   "back": "Verify your identity to enable the note lock",
+   "score": 0.444
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Not kilidini devre dışı bırakmak için kimliğinizi doğrulayın",
+   "back": "Verify your identity to disable the note lock",
+   "score": 0.4
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Notu paylaşmak veya dışa aktarmak için kilidi açın",
+   "back": "Open the lock to share or export a note",
+   "score": 0.667
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Kimliğiniz doğrulanamadı.",
+   "back": "Your identity hasn't been verified.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Önce cihaz ayarlarından bir ekran kilidi veya parmak izi ayarlayın.",
+   "back": "First, set a screen lock or fingerprint from the device settings.",
+   "score": 0.875
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Gizlilik seçenekleri",
+   "back": "Confidentiality options",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Satın alma tamamlanamadı. Lütfen tekrar deneyin.",
+   "back": "The purchase was not completed. Please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Satın alımınız geri yüklendi.",
+   "back": "Your purchase has been returned.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Bu hesap için önceki bir satın alma bulunamadı.",
+   "back": "There was no previous purchase for this account.",
+   "score": 0.833
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Satın alımlar geri yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+   "back": "Purchases failed to return, check your connection and try again.",
+   "score": 0.667
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Hatırlatıcı planlanamadı. Lütfen tekrar deneyin.",
+   "back": "The reminder was not scheduled, please try again.",
+   "score": 0.833
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Bazı defterler yüklenemedi. Mevcut olanlar gösteriliyor.",
+   "back": "Some books failed to load.",
+   "score": 0.333
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Bu defter kaydedilmemiş olabilir. Lütfen tekrar deneyin.",
+   "back": "This notebook may not be registered. Please try again.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Bu değişiklik kaydedilmemiş olabilir. Lütfen tekrar deneyin.",
+   "back": "This change may not have been recorded. Please try again.",
+   "score": 0.875
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Defter silinemedi. Lütfen tekrar deneyin.",
+   "back": "The notebook could not be deleted. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Yeni sıralama kaydedilmemiş olabilir. Lütfen tekrar deneyin.",
+   "back": "There may not be a new ranking, please try again.",
+   "score": 0.625
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Bazı notlar yüklenemedi. Mevcut olanlar gösteriliyor.",
+   "back": "Some of the notes were not loaded.",
+   "score": 0.545
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Arama sonuçları şu anda eksik olabilir.",
+   "back": "The search results may be missing at this time.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Bu not kaydedilmemiş olabilir. Cihazınızın depolama alanını kontrol edin.",
+   "back": "This note may not have been recorded, so check the storage area of your device.",
+   "score": 0.8
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Not silinemedi. Lütfen tekrar deneyin.",
+   "back": "The note could not be deleted. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Bu satın alma şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+   "back": "This purchase is not available at this time. Please try again later.",
+   "score": 0.75
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Dışa aktar",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Metin olarak dışa aktar",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "PDF olarak dışa aktar",
+   "back": "Exported as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Kâğıt stili",
+   "back": "Style of paper",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Çizgili",
+   "back": "It 's linear .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Noktalı",
+   "back": "It 's pointed .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Kareli",
+   "back": "Carlyle",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Boş",
+   "back": "It 's empty .",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Krem",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Parşömen",
+   "back": "The parchment",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Aydınger",
+   "back": "Iynnger",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Not yazı tipi",
+   "back": "Type of note",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Serifli",
+   "back": "Serious .",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "Inter",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Görünüm",
+   "back": "What it looks like",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Açık",
+   "back": "It 's open .",
+   "score": 0.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Koyu",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Parşömen",
+   "back": "The parchment",
+   "score": 1.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Sistem",
+   "back": "The system",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Günün ayeti görünümü",
+   "back": "View of the day's text",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Filigran",
+   "back": "Filigree",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Üst bilgi",
+   "back": "Up to date information",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Alt bilgi",
+   "back": "Subtitles",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Kapalı",
+   "back": "It 's closed .",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Bildirimler",
+   "back": "The notifications",
+   "score": 1.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Günlük ayet hatırlatıcısı",
+   "back": "A daily verse reminder",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Hatırlatma saati",
+   "back": "Reminder time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Bildirimler sistem ayarlarında kapalı.",
+   "back": "The notifications are off in the system settings.",
+   "score": 0.889
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Günün ayeti hazır.",
+   "back": "The day's text is ready.",
+   "score": 0.286
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Gizlilik",
+   "back": "Confidentiality",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Notları Face ID / parmak iziyle kilitle",
+   "back": "Lock notes with Face ID / fingerprint",
+   "score": 1.0
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Premium",
+   "score": 1.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Reklamları kaldır",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Satın alımları geri yükle",
+   "back": "Restore purchases",
+   "score": 1.0
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "The Pro",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Daha fazla",
+   "back": "It 's more .",
+   "score": 0.667
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament’i değerlendir",
+   "back": "Assess the attributes",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Uygulamayı beğendiniz mi? Bir yorum bırakın",
+   "back": "Did you like the app? Leave a comment",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament’i paylaş",
+   "back": "Share the attributes",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Bir arkadaşınıza anlatın",
+   "back": "Tell a friend",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament’i deneyin: kâğıt dokulu, dikkat dağıtmayan bir not defteri.",
+   "back": "Try Atrament: a sheet of paper, a notebook that doesn't distract.",
+   "score": 0.4
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Dil",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Cihazın dil ayarını izler",
+   "back": "Looks at the language settings of the device",
+   "score": 0.444
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Sistem varsayılanı",
+   "back": "Default of the system",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Dil seçin",
+   "back": "Select the language",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Reklamları kaldır",
+   "back": "Remove the ads",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Dikkatiniz dağılmadan yazın",
+   "back": "Write without distraction",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament ücretsizdir ve tek bir küçük reklam bannerı gösterir. Reklamları kaldırmak, başka hiçbir şeyin kilidini açmayan tek seferlik bir satın alımdır: tüm özellikler zaten sizin.",
+   "back": "Atrament is free, and it shows a single small banner ad. Removing the ads is a one-time purchase that doesn't unlock anything else: all the features are already yours.",
+   "score": 0.821
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Satın alımları geri yükle",
+   "back": "Restore purchases",
+   "score": 1.0
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Reklamları kaldır zaten sizde. Teşekkürler!",
+   "back": "You already have the ads.",
+   "score": 0.75
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Destek",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Hata ayıklama günlüğünü paylaş",
+   "back": "Share a log for troubleshooting errors",
+   "score": 0.571
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Bir şey çalışmıyorsa teknik rapor gönderin",
+   "back": "If something doesn 't work , send a technical report .",
+   "score": 0.875
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Henüz bildirilecek bir şey yok.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Hata ayıklama günlüğünü temizle",
+   "back": "Clean up the error-correcting log",
+   "score": 0.25
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Hata ayıklama günlüğü temizlensin mi?",
+   "back": "Do you want the error log cleared?",
+   "score": 0.5
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Kaydedilmiş teknik rapor cihazınızdan kaldırılacak.",
+   "back": "The recorded technical report will be removed from your device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Hata ayıklama günlüğü temizlendi.",
+   "back": "The error-correcting log has been cleared.",
+   "score": 0.444
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Reklamları sonsuza dek kaldır",
+   "back": "Remove the ads forever",
+   "score": 1.0
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Tümü",
+   "back": "All of it .",
+   "score": 1.0
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Defterler",
+   "back": "The books",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Son kullanılanlar",
+   "back": "Last ones used",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Henüz not yok",
+   "back": "No notes yet",
+   "score": 1.0
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "İlk notunuzu yazmak için + simgesine dokunun.",
+   "back": "Tap + to write your first note.",
+   "score": 0.889
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Yakın zamanda bir şey yok",
+   "back": "There's nothing in the near future.",
+   "score": 0.286
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Düzenlediğiniz notlar burada görünür.",
+   "back": "The notes you've edited appear here.",
+   "score": 0.545
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Yeniden adlandır",
+   "back": "Rename it",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Deftere taşı",
+   "back": "Move it to the ledger",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Düzenle",
+   "back": "How to edit",
+   "score": 0.667
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Dışa aktar",
+   "back": "Exported",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Paylaş",
+   "back": "Share",
+   "score": 1.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Deftere taşı",
+   "back": "Move it to the ledger",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Henüz başka defter yok. Bu notu düzenlemek için bir defter oluşturun.",
+   "back": "No other notebook yet. Create a notebook to edit this notebook.",
+   "score": 0.714
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Yeni defter oluştur",
+   "back": "Create a new ledger",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Yeniden adlandır",
+   "back": "Rename it",
+   "score": 1.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Kapağı değiştir",
+   "back": "Change the cover",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Defteri yeniden adlandır",
+   "back": "Rename the book",
+   "score": 0.5
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Kapak rengi seçin",
+   "back": "Select the cover color",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Defter, içindeki tüm notlarla birlikte silinecek (toplam: {count}). Bu işlem geri alınamaz.",
+   "back": "The notebook will be deleted along with all the notes in it (total: XCOUNT).",
+   "score": 0.375
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Yasal bilgiler ve destek",
+   "back": "Legal information and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Gizlilik Politikası",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Hizmet Şartları",
+   "back": "Terms of service",
+   "score": 1.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Destek",
+   "back": "Support",
+   "score": 1.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Bağlantı açılamadı. Lütfen tekrar deneyin.",
+   "back": "Couldn't connect, please try again.",
+   "score": 0.727
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Açık kaynak lisansları",
+   "back": "Open source licenses",
+   "score": 1.0
+  }
+ ]
+}

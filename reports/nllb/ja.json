@@ -1,0 +1,1111 @@
+{
+ "locale": "ja",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "It's the Atrament.",
+   "score": 0.667
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "再試行",
+   "back": "Try it again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "問題が発生しました",
+   "back": "There was a problem.",
+   "score": 0.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "キャンセル",
+   "back": "Cancelled.",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "保存",
+   "back": "Keep it safe.",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "削除",
+   "back": "It's deleted.",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "元に戻す",
+   "back": "I'll get it back to you.",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "やり直す",
+   "back": "Let's do it again.",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "無題",
+   "back": "There's no question about it.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "この操作は取り消せません。",
+   "back": "I can't undo this operation.",
+   "score": 0.5
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "このノートを削除しますか？",
+   "back": "Do you want to delete this note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "「{name}」を削除しますか？",
+   "back": "Do you want to delete \"XNAME\"?",
+   "score": 0.4
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "保存できませんでした。もう一度お試しください。",
+   "back": "I couldn't save it. Please try again.",
+   "score": 0.909
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "このノートをエクスポートできませんでした。もう一度お試しください。",
+   "back": "I couldn't export this note. Please try again.",
+   "score": 0.923
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "共有シートを開けませんでした。もう一度お試しください。",
+   "back": "I didn't open the shared sheets. Please try again.",
+   "score": 0.667
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "設定",
+   "back": "Set it up.",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "ノートを検索",
+   "back": "Looking for a note.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "ノートブックはまだありません",
+   "back": "We don't have a notebook yet.",
+   "score": 0.444
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "最初のノートブックを作成して書き始めましょう。",
+   "back": "Let's start by creating our first notebook.",
+   "score": 0.462
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "結果がありません",
+   "back": "There are no results.",
+   "score": 0.8
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "別の検索語を試してください。",
+   "back": "Please try another search term.",
+   "score": 0.75
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "ノートはまだありません",
+   "back": "I don't have a note yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "+ボタンをタップして最初のノートを書きましょう。",
+   "back": "Let's hit the + button and write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "新規ノートブック",
+   "back": "The new notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "ノートブック名",
+   "back": "Name of the notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "新規ノート",
+   "back": "A new note.",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "並べ替え",
+   "back": "They're aligned.",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "最終編集日",
+   "back": "Last day of editing.",
+   "score": 0.8
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "作成日",
+   "back": "Date of creation",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "タイトル",
+   "back": "The title.",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "太字",
+   "back": "It's in alphabetical order.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "斜体",
+   "back": "The slope.",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "下線",
+   "back": "Down the line.",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "見出し",
+   "back": "The headline.",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "箇条書き",
+   "back": "Write the paragraphs.",
+   "score": 0.0
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "チェックリスト",
+   "back": "The checklist.",
+   "score": 1.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "引用",
+   "back": "It's a quote.",
+   "score": 0.667
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "コードブロック",
+   "back": "Block the code.",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "万年筆",
+   "back": "Thousands of years.",
+   "score": 0.0
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "ジェルペン",
+   "back": "It's a jell-o.",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "鉛筆",
+   "back": "It's a pencil.",
+   "score": 0.667
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "ハイライター",
+   "back": "The elevator.",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "消しゴム",
+   "back": "I'm going to take out the rubber.",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "線の太さ",
+   "back": "The thickness of the line.",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "入力と手書きを切り替える",
+   "back": "I can switch between input and handwriting.",
+   "score": 0.4
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "このノートを表示するにはロックを解除してください",
+   "back": "If you want to see this note, please unlock it.",
+   "score": 0.5
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "このノートはロックされています",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "ロック解除",
+   "back": "Unlocked.",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "このデバイスには画面ロックや生体認証が設定されていないため、ノートロックをオフにしました。",
+   "back": "This device doesn't have a screen lock or bio-authentication setup, so I turned off the note lock.",
+   "score": 0.444
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "ノートロックをオンにするには本人確認をしてください",
+   "back": "Please make sure you turn on the notebook.",
+   "score": 0.25
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "ノートロックをオフにするには本人確認をしてください",
+   "back": "If you want to turn off the notebook, make sure you turn it off yourself.",
+   "score": 0.308
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "このノートを共有またはエクスポートするにはロックを解除してください",
+   "back": "Please unlock to share or export this note.",
+   "score": 1.0
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "本人確認ができませんでした。",
+   "back": "I haven't been able to confirm myself.",
+   "score": 0.0
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "先にデバイスの設定で画面ロックまたは指紋認証を設定してください。",
+   "back": "First, set the screen lock or fingerprint authentication by setting the device.",
+   "score": 0.706
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "プライバシー設定",
+   "back": "Privacy settings",
+   "score": 0.5
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "購入を完了できませんでした。もう一度お試しください。",
+   "back": "I couldn't complete the purchase. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "購入を復元しました。",
+   "back": "I've recovered the purchase.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "このアカウントで以前の購入は見つかりませんでした。",
+   "back": "I didn't find any previous purchases on this account.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "購入を復元できませんでした。接続を確認してもう一度お試しください。",
+   "back": "I couldn't recover the purchase. Please check the connection and try again.",
+   "score": 0.471
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "リマインダーを設定できませんでした。もう一度お試しください。",
+   "back": "I couldn't set the reminder. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "一部のノートブックを読み込めませんでした。読み込めたものを表示しています。",
+   "back": "I couldn't read some of the notebooks.",
+   "score": 0.286
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "このノートブックは保存されていない可能性があります。もう一度お試しください。",
+   "back": "This notebook may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "この変更は保存されていない可能性があります。もう一度お試しください。",
+   "back": "This change may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "ノートブックを削除できませんでした。もう一度お試しください。",
+   "back": "I couldn't delete the notebook. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "新しい順序は保存されていない可能性があります。もう一度お試しください。",
+   "back": "The new order may not have been saved. Please try again.",
+   "score": 1.0
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "一部のノートを読み込めませんでした。読み込めたものを表示しています。",
+   "back": "I couldn't read some of the notes.",
+   "score": 0.308
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "検索結果が不完全な可能性があります。",
+   "back": "It's possible that the search results are incomplete.",
+   "score": 0.545
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "このノートは保存されていない可能性があります。端末のストレージを確認してください。",
+   "back": "It's possible that this note hasn't been saved.",
+   "score": 0.375
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "ノートを削除できませんでした。もう一度お試しください。",
+   "back": "I couldn't delete the note. Please try again.",
+   "score": 0.462
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "この購入は現在ご利用いただけません。しばらくしてからもう一度お試しください。",
+   "back": "This purchase is not currently available. Please try again after a while.",
+   "score": 0.625
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "エクスポート",
+   "back": "Exporting",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "テキストとしてエクスポート",
+   "back": "Exported as text.",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "PDFとしてエクスポート",
+   "back": "Exported as a PDF.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "用紙スタイル",
+   "back": "Paper style.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "罫線",
+   "back": "It's a wire.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "ドット方眼",
+   "back": "The dot-eye.",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "方眼",
+   "back": "It's all right.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "無地",
+   "back": "It's groundless.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "クリーム",
+   "back": "The cream.",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "羊皮紙",
+   "back": "Sheepskin paper.",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "ベラム紙",
+   "back": "Bellamy paper.",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "ノートのフォント",
+   "back": "The font of the note.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "システム",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "セリフ体",
+   "back": "The sheriff's body.",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Inter.",
+   "score": 1.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "This is Lora.",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "外観",
+   "back": "The look.",
+   "score": 0.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "ライト",
+   "back": "The lights.",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "ダーク",
+   "back": "It's dark.",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "パーチメント",
+   "back": "It's a fragment.",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "システム",
+   "back": "The system.",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "デイリーバース表示",
+   "back": "The Daily Bears are showing.",
+   "score": 0.333
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "透かし",
+   "back": "I'm going through it.",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "ヘッダー",
+   "back": "The header.",
+   "score": 1.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "フッター",
+   "back": "What's the matter?",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "オフ",
+   "back": "It's off.",
+   "score": 0.667
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "通知",
+   "back": "Notice to you.",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "デイリーバースのリマインダー",
+   "back": "It's a reminder of the Daily Bears.",
+   "score": 0.571
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "リマインダー時刻",
+   "back": "Reminder time.",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "システム設定で通知がオフになっています。",
+   "back": "The system settings have turned off the notification.",
+   "score": 0.909
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "本日の聖句の準備ができました。",
+   "back": "I'm ready for today's verse.",
+   "score": 0.444
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "プライバシー",
+   "back": "It's about privacy.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Face ID / 指紋でノートをロック",
+   "back": "Face ID. Lock the note with your fingerprints.",
+   "score": 0.8
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "プレミアム",
+   "back": "It's a premium.",
+   "score": 0.667
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "広告を削除",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "購入を復元",
+   "back": "I'm going to restore the purchase.",
+   "score": 0.286
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Pro.",
+   "score": 1.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "その他",
+   "back": "And the others.",
+   "score": 0.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Atrament を評価",
+   "back": "Rating of Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "アプリは気に入りましたか？レビューを残す",
+   "back": "Did you like the app? Leave a review.",
+   "score": 0.667
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Atrament を共有",
+   "back": "Share the Atrament",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "友達に伝える",
+   "back": "I'll tell my friends.",
+   "score": 0.571
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Atrament を試す — 紙の質感を備えた集中できるノートパッド。",
+   "back": "It's a centralized notepad with the texture of paper to test Atrament.",
+   "score": 0.429
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "言語",
+   "back": "The language.",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "デバイスの言語設定に従います",
+   "back": "It follows the language settings of the device.",
+   "score": 0.75
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "システムのデフォルト",
+   "back": "Default of the system.",
+   "score": 1.0
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "言語を選択",
+   "back": "Choose your language.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "広告を削除",
+   "back": "Remove the ads.",
+   "score": 1.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "気を散らさずに書く",
+   "back": "I write without distraction.",
+   "score": 0.857
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Atrament は小さなバナー広告付きで無料です。広告の削除は一度きりの購入で、他の機能は何もロックされていません — すべての機能はすでにあなたのものです。",
+   "back": "Atrament is free with a small banner ad. Removing ads is a one-time purchase, and nothing else is locked.",
+   "score": 0.645
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "購入を復元",
+   "back": "I'm going to restore the purchase.",
+   "score": 0.286
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "すでに広告削除をご利用中です。ありがとうございます！",
+   "back": "I'm already in the process of removing ads. Thank you!",
+   "score": 0.5
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "サポート",
+   "back": "We got support.",
+   "score": 0.5
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "デバッグログを共有",
+   "back": "Share the debug log.",
+   "score": 1.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "不具合がある場合は技術レポートを送信してください",
+   "back": "If there is a malfunction, please send us a technical report.",
+   "score": 0.533
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "報告する問題はまだありません。",
+   "back": "I don't have any problem reporting it yet.",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "デバッグログを消去",
+   "back": "Delete the debug log.",
+   "score": 0.667
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "デバッグログを消去しますか？",
+   "back": "Do you want to delete the debug log?",
+   "score": 0.5
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "デバイスに保存されている技術レポートが削除されます。",
+   "back": "The technical reports stored on the device will be deleted.",
+   "score": 0.5
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "デバッグログを消去しました。",
+   "back": "I deleted the debug log.",
+   "score": 0.571
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "広告を完全に削除",
+   "back": "Remove the ads completely.",
+   "score": 0.667
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "That's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "すべて",
+   "back": "All of it.",
+   "score": 1.0
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "ノートブック",
+   "back": "The notebook.",
+   "score": 1.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "最近",
+   "back": "Recently.",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "まだノートがありません",
+   "back": "I don't have a note yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "+ をタップして最初のノートを書きましょう。",
+   "back": "Let's just tap + and write the first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "最近の項目はありません",
+   "back": "I don't have any recent items.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "編集したノートがここに表示されます。",
+   "back": "The notes you've edited will be displayed here.",
+   "score": 0.667
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "名前を変更",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "ノートブックに移動",
+   "back": "Go to the notebook.",
+   "score": 0.5
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "編集",
+   "back": "Editing",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "エクスポート",
+   "back": "Exporting",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "共有",
+   "back": "Shared.",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "ノートブックに移動",
+   "back": "Go to the notebook.",
+   "score": 0.5
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "他のノートブックがまだありません。作成してこのノートを整理しましょう。",
+   "back": "I don't have any other notebooks yet.",
+   "score": 0.375
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "新しいノートブックを作成",
+   "back": "I'm going to create a new notebook.",
+   "score": 0.667
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "名前を変更",
+   "back": "Change your name.",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "表紙を変更",
+   "back": "Change the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "ノートブックの名前を変更",
+   "back": "Change the name of the notebook.",
+   "score": 0.4
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "表紙の色を選択",
+   "back": "Choose the color of the cover.",
+   "score": 1.0
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "このノートブックと {count} 件のノートを削除します。この操作は取り消せません。",
+   "back": "I'm going to delete this notebook and XCOUNT notes.",
+   "score": 0.4
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "法的事項とサポート",
+   "back": "Legal matters and support",
+   "score": 0.8
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "プライバシーポリシー",
+   "back": "Privacy policy",
+   "score": 1.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "利用規約",
+   "back": "Terms of use.",
+   "score": 0.5
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "サポート",
+   "back": "We got support.",
+   "score": 0.5
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "リンクを開けませんでした。もう一度お試しください。",
+   "back": "I didn't open the link. Please try again.",
+   "score": 0.769
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "オープンソースライセンス",
+   "back": "It's an open source license.",
+   "score": 0.571
+  }
+ ]
+}

@@ -1,0 +1,1111 @@
+{
+ "locale": "el",
+ "rows": [
+  {
+   "key": "appName",
+   "english": "Atrament",
+   "translated": "Atrament",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "retry",
+   "english": "Retry",
+   "translated": "Δοκιμάστε ξανά",
+   "back": "Try again.",
+   "score": 0.0
+  },
+  {
+   "key": "errorGeneric",
+   "english": "Something went wrong",
+   "translated": "Κάτι πήγε στραβά",
+   "back": "Something went wrong.",
+   "score": 1.0
+  },
+  {
+   "key": "cancel",
+   "english": "Cancel",
+   "translated": "Ακύρωση",
+   "back": "Cancellation",
+   "score": 0.0
+  },
+  {
+   "key": "save",
+   "english": "Save",
+   "translated": "Αποθήκευση",
+   "back": "Storage",
+   "score": 0.0
+  },
+  {
+   "key": "delete",
+   "english": "Delete",
+   "translated": "Διαγραφή",
+   "back": "Deleted",
+   "score": 0.0
+  },
+  {
+   "key": "undo",
+   "english": "Undo",
+   "translated": "Αναίρεση",
+   "back": "Repeal",
+   "score": 0.0
+  },
+  {
+   "key": "redo",
+   "english": "Redo",
+   "translated": "Επανάληψη",
+   "back": "Repeat",
+   "score": 0.0
+  },
+  {
+   "key": "untitledNote",
+   "english": "Untitled",
+   "translated": "Χωρίς τίτλο",
+   "back": "Untitled",
+   "score": 1.0
+  },
+  {
+   "key": "deleteConfirmBody",
+   "english": "This can't be undone.",
+   "translated": "Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.",
+   "back": "This action cannot be reversed.",
+   "score": 0.0
+  },
+  {
+   "key": "deleteNoteTitle",
+   "english": "Delete this note?",
+   "translated": "Να διαγραφεί αυτή η σημείωση;",
+   "back": "Should I delete this note?",
+   "score": 0.667
+  },
+  {
+   "key": "deleteNotebookTitle",
+   "english": "Delete \"{name}\"?",
+   "translated": "Να διαγραφεί το «{name}»;",
+   "back": "Delete the XNAME?",
+   "score": 0.667
+  },
+  {
+   "key": "saveFailedMessage",
+   "english": "Couldn't save. Please try again.",
+   "translated": "Δεν ήταν δυνατή η αποθήκευση. Δοκιμάστε ξανά.",
+   "back": "It wasn't able to be stored.",
+   "score": 0.222
+  },
+  {
+   "key": "exportFailedMessage",
+   "english": "Couldn't export this note. Please try again.",
+   "translated": "Δεν ήταν δυνατή η εξαγωγή της σημείωσης. Δοκιμάστε ξανά.",
+   "back": "It was not possible to extract the note.",
+   "score": 0.182
+  },
+  {
+   "key": "shareFailedMessage",
+   "english": "Couldn't open the share sheet. Please try again.",
+   "translated": "Δεν ήταν δυνατό το άνοιγμα του μενού κοινής χρήσης. Δοκιμάστε ξανά.",
+   "back": "It wasn't possible to open the common menu.",
+   "score": 0.308
+  },
+  {
+   "key": "settingsTitle",
+   "english": "Settings",
+   "translated": "Ρυθμίσεις",
+   "back": "Arrangements",
+   "score": 0.0
+  },
+  {
+   "key": "searchHint",
+   "english": "Search notes",
+   "translated": "Αναζήτηση σημειώσεων",
+   "back": "Searching for notes",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebooksTitle",
+   "english": "No notebooks yet",
+   "translated": "Δεν υπάρχουν ακόμη τετράδια",
+   "back": "There aren't any books yet.",
+   "score": 0.222
+  },
+  {
+   "key": "emptyNotebooksBody",
+   "english": "Create your first notebook to start writing.",
+   "translated": "Δημιουργήστε το πρώτο σας τετράδιο για να αρχίσετε να γράφετε.",
+   "back": "Create your first journal so you can start writing.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchTitle",
+   "english": "No results",
+   "translated": "Δεν βρέθηκαν αποτελέσματα",
+   "back": "No results were found.",
+   "score": 0.667
+  },
+  {
+   "key": "emptySearchBody",
+   "english": "Try a different search term.",
+   "translated": "Δοκιμάστε διαφορετικό όρο αναζήτησης.",
+   "back": "Try a different search term.",
+   "score": 1.0
+  },
+  {
+   "key": "emptyNotebookTitle",
+   "english": "No notes yet",
+   "translated": "Δεν υπάρχουν ακόμη σημειώσεις",
+   "back": "There are no notes yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyNotebookBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Πατήστε + για να γράψετε την πρώτη σας σημείωση.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "newNotebookTitle",
+   "english": "New Notebook",
+   "translated": "Νέο τετράδιο",
+   "back": "New workbook",
+   "score": 0.5
+  },
+  {
+   "key": "notebookNameHint",
+   "english": "Notebook name",
+   "translated": "Όνομα τετραδίου",
+   "back": "Name of quadruped",
+   "score": 0.5
+  },
+  {
+   "key": "newNoteTitle",
+   "english": "New Note",
+   "translated": "Νέα σημείωση",
+   "back": "New note",
+   "score": 1.0
+  },
+  {
+   "key": "sortOptionsTitle",
+   "english": "Sort",
+   "translated": "Ταξινόμηση",
+   "back": "Classification of products",
+   "score": 0.0
+  },
+  {
+   "key": "sortByModified",
+   "english": "Last edited",
+   "translated": "Τελευταία επεξεργασία",
+   "back": "Last edited",
+   "score": 1.0
+  },
+  {
+   "key": "sortByCreated",
+   "english": "Date created",
+   "translated": "Ημερομηνία δημιουργίας",
+   "back": "Date of establishment",
+   "score": 0.5
+  },
+  {
+   "key": "sortByTitle",
+   "english": "Title",
+   "translated": "Τίτλος",
+   "back": "Title",
+   "score": 1.0
+  },
+  {
+   "key": "formatBold",
+   "english": "Bold",
+   "translated": "Έντονα",
+   "back": "I'm not sure.",
+   "score": 0.0
+  },
+  {
+   "key": "formatItalic",
+   "english": "Italic",
+   "translated": "Πλάγια",
+   "back": "Playaes",
+   "score": 0.0
+  },
+  {
+   "key": "formatUnderline",
+   "english": "Underline",
+   "translated": "Υπογράμμιση",
+   "back": "Highlighting",
+   "score": 0.0
+  },
+  {
+   "key": "formatHeading",
+   "english": "Heading",
+   "translated": "Επικεφαλίδα",
+   "back": "Headgear",
+   "score": 0.0
+  },
+  {
+   "key": "formatBulletList",
+   "english": "Bullet list",
+   "translated": "Λίστα με κουκκίδες",
+   "back": "List of dots",
+   "score": 0.5
+  },
+  {
+   "key": "formatChecklist",
+   "english": "Checklist",
+   "translated": "Λίστα ελέγχου",
+   "back": "Control list",
+   "score": 0.0
+  },
+  {
+   "key": "formatQuote",
+   "english": "Quote",
+   "translated": "Παράθεση",
+   "back": "Reference of the Court of First Instance",
+   "score": 0.0
+  },
+  {
+   "key": "formatCodeBlock",
+   "english": "Code block",
+   "translated": "Μπλοκ κώδικα",
+   "back": "Block code",
+   "score": 1.0
+  },
+  {
+   "key": "penFountainPen",
+   "english": "Fountain Pen",
+   "translated": "Πένα",
+   "back": "A pen",
+   "score": 0.667
+  },
+  {
+   "key": "penGelPen",
+   "english": "Gel Pen",
+   "translated": "Στυλό γέλης",
+   "back": "Other, of a thickness of not more than 10 mm",
+   "score": 0.0
+  },
+  {
+   "key": "penPencil",
+   "english": "Pencil",
+   "translated": "Μολύβι",
+   "back": "Fresh fruit and vegetables",
+   "score": 0.0
+  },
+  {
+   "key": "penHighlighter",
+   "english": "Highlighter",
+   "translated": "Μαρκαδόρος υπογράμμισης",
+   "back": "Highlighting markers",
+   "score": 0.0
+  },
+  {
+   "key": "penEraser",
+   "english": "Eraser",
+   "translated": "Γόμα",
+   "back": "For the purposes of this Regulation, the following definitions shall apply:",
+   "score": 0.0
+  },
+  {
+   "key": "penStrokeWidth",
+   "english": "Stroke width",
+   "translated": "Πάχος γραμμής",
+   "back": "Line thickness",
+   "score": 0.0
+  },
+  {
+   "key": "toggleHandwritingMode",
+   "english": "Switch between typing and drawing",
+   "translated": "Εναλλαγή μεταξύ πληκτρολόγησης και σχεδίασης",
+   "back": "Interchange between typing and design",
+   "score": 0.5
+  },
+  {
+   "key": "biometricLockReason",
+   "english": "Unlock to view this note",
+   "translated": "Ξεκλειδώστε για να δείτε τη σημείωση",
+   "back": "Unlock to see the note.",
+   "score": 0.667
+  },
+  {
+   "key": "noteLockedMessage",
+   "english": "This note is locked",
+   "translated": "Αυτή η σημείωση είναι κλειδωμένη",
+   "back": "This note is locked.",
+   "score": 1.0
+  },
+  {
+   "key": "unlockButton",
+   "english": "Unlock",
+   "translated": "Ξεκλείδωμα",
+   "back": "Unlocked",
+   "score": 1.0
+  },
+  {
+   "key": "noteLockTurnedOffMessage",
+   "english": "Note lock was turned off because this device has no screen lock or biometrics set up.",
+   "translated": "Το κλείδωμα σημειώσεων απενεργοποιήθηκε επειδή αυτή η συσκευή δεν έχει ρυθμισμένο κλείδωμα οθόνης ή βιομετρικά.",
+   "back": "The note lock was disabled because this device doesn't have a screen lock or biometrics setup.",
+   "score": 0.56
+  },
+  {
+   "key": "biometricEnableReason",
+   "english": "Confirm it is you to turn on note lock",
+   "translated": "Επιβεβαιώστε την ταυτότητά σας για να ενεργοποιήσετε το κλείδωμα σημειώσεων",
+   "back": "Confirm your identity to activate the note lock.",
+   "score": 0.667
+  },
+  {
+   "key": "biometricDisableReason",
+   "english": "Confirm it is you to turn off note lock",
+   "translated": "Επιβεβαιώστε την ταυτότητά σας για να απενεργοποιήσετε το κλείδωμα σημειώσεων",
+   "back": "Confirm your identity to disable the note lock.",
+   "score": 0.6
+  },
+  {
+   "key": "biometricShareReason",
+   "english": "Unlock to share or export this note",
+   "translated": "Ξεκλειδώστε για να μοιραστείτε ή να εξαγάγετε τη σημείωση",
+   "back": "Unlock to share or extract the note",
+   "score": 0.75
+  },
+  {
+   "key": "biometricAuthFailedMessage",
+   "english": "Unable to verify your identity.",
+   "translated": "Δεν ήταν δυνατή η επαλήθευση της ταυτότητάς σας.",
+   "back": "It was not possible to verify your identity.",
+   "score": 0.5
+  },
+  {
+   "key": "biometricSetupNeededMessage",
+   "english": "Set up a screen lock or fingerprint in your device settings first.",
+   "translated": "Ρυθμίστε πρώτα ένα κλείδωμα οθόνης ή δακτυλικό αποτύπωμα στις ρυθμίσεις της συσκευής.",
+   "back": "First, set a screen lock or fingerprint to the device settings.",
+   "score": 0.933
+  },
+  {
+   "key": "privacyChoicesTitle",
+   "english": "Privacy choices",
+   "translated": "Επιλογές απορρήτου",
+   "back": "Confidentiality options",
+   "score": 0.0
+  },
+  {
+   "key": "purchaseFailedMessage",
+   "english": "The purchase could not be completed. Please try again.",
+   "translated": "Δεν ήταν δυνατή η ολοκλήρωση της αγοράς. Δοκιμάστε ξανά.",
+   "back": "It wasn't possible to complete the market.",
+   "score": 0.0
+  },
+  {
+   "key": "restoreSuccessMessage",
+   "english": "Your purchase was restored.",
+   "translated": "Η αγορά σας επαναφέρθηκε.",
+   "back": "Your market has been restored.",
+   "score": 0.286
+  },
+  {
+   "key": "restoreNothingFoundMessage",
+   "english": "No previous purchase was found for this account.",
+   "translated": "Δεν βρέθηκε προηγούμενη αγορά για αυτόν τον λογαριασμό.",
+   "back": "No previous purchase was found for this account.",
+   "score": 1.0
+  },
+  {
+   "key": "restoreFailedMessage",
+   "english": "Could not restore purchases. Check your connection and try again.",
+   "translated": "Δεν ήταν δυνατή η επαναφορά των αγορών. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.",
+   "back": "It wasn't possible to reset the purchases, so check your connection and try again.",
+   "score": 0.556
+  },
+  {
+   "key": "reminderScheduleFailedMessage",
+   "english": "The reminder could not be scheduled. Please try again.",
+   "translated": "Δεν ήταν δυνατός ο προγραμματισμός της υπενθύμισης. Δοκιμάστε ξανά.",
+   "back": "It was not possible to program the reminder.",
+   "score": 0.364
+  },
+  {
+   "key": "storageIssueNotebooksLoad",
+   "english": "Some notebooks could not be loaded. Showing what is available.",
+   "translated": "Ορισμένα τετράδια δεν φορτώθηκαν. Εμφανίζονται όσα είναι διαθέσιμα.",
+   "back": "Some of the logs have not been loaded.",
+   "score": 0.429
+  },
+  {
+   "key": "storageIssueNotebookSave",
+   "english": "This notebook may not have been saved. Please try again.",
+   "translated": "Αυτό το τετράδιο ίσως δεν αποθηκεύτηκε. Δοκιμάστε ξανά.",
+   "back": "This notebook may not have been stored.",
+   "score": 0.714
+  },
+  {
+   "key": "storageIssueNotebookChange",
+   "english": "This change may not have been saved. Please try again.",
+   "translated": "Αυτή η αλλαγή ίσως δεν αποθηκεύτηκε. Δοκιμάστε ξανά.",
+   "back": "This change may not have been saved.",
+   "score": 0.857
+  },
+  {
+   "key": "storageIssueNotebookDelete",
+   "english": "The notebook could not be deleted. Please try again.",
+   "translated": "Δεν ήταν δυνατή η διαγραφή του τετραδίου. Δοκιμάστε ξανά.",
+   "back": "It wasn't possible to erase the quadrant.",
+   "score": 0.0
+  },
+  {
+   "key": "storageIssueNotebookOrder",
+   "english": "The new order may not have been saved. Please try again.",
+   "translated": "Η νέα σειρά ίσως δεν αποθηκεύτηκε. Δοκιμάστε ξανά.",
+   "back": "The new series may not be stored.",
+   "score": 0.429
+  },
+  {
+   "key": "storageIssueNotesLoad",
+   "english": "Some notes could not be loaded. Showing what is available.",
+   "translated": "Ορισμένες σημειώσεις δεν φορτώθηκαν. Εμφανίζονται όσες είναι διαθέσιμες.",
+   "back": "Some notes have not been loaded.",
+   "score": 0.5
+  },
+  {
+   "key": "storageIssueSearch",
+   "english": "Search results may be incomplete right now.",
+   "translated": "Τα αποτελέσματα αναζήτησης ενδέχεται να είναι ελλιπή αυτή τη στιγμή.",
+   "back": "Search results may be incomplete at this time.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteSave",
+   "english": "This note may not have been saved. Please check your device storage.",
+   "translated": "Αυτή η σημείωση ίσως δεν αποθηκεύτηκε. Ελέγξτε τον αποθηκευτικό χώρο της συσκευής.",
+   "back": "This note may not have been stored.",
+   "score": 0.667
+  },
+  {
+   "key": "storageIssueNoteDelete",
+   "english": "The note could not be deleted. Please try again.",
+   "translated": "Δεν ήταν δυνατή η διαγραφή της σημείωσης. Δοκιμάστε ξανά.",
+   "back": "It was not possible to erase the note.",
+   "score": 0.364
+  },
+  {
+   "key": "purchaseUnavailableMessage",
+   "english": "This purchase is not available right now. Please try again later.",
+   "translated": "Αυτή η αγορά δεν είναι διαθέσιμη αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα.",
+   "back": "This market is not available at this time. Try again later.",
+   "score": 0.625
+  },
+  {
+   "key": "exportTitle",
+   "english": "Export",
+   "translated": "Εξαγωγή",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsTxt",
+   "english": "Export as Text",
+   "translated": "Εξαγωγή ως κείμενο",
+   "back": "Export as text",
+   "score": 1.0
+  },
+  {
+   "key": "exportAsPdf",
+   "english": "Export as PDF",
+   "translated": "Εξαγωγή ως PDF",
+   "back": "Export as PDF",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleSectionTitle",
+   "english": "Paper Style",
+   "translated": "Στυλ χαρτιού",
+   "back": "Type of paper",
+   "score": 0.5
+  },
+  {
+   "key": "paperStyleLined",
+   "english": "Lined",
+   "translated": "Με γραμμές",
+   "back": "With lines",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleDotGrid",
+   "english": "Dot Grid",
+   "translated": "Με τελείες",
+   "back": "With dots.",
+   "score": 0.667
+  },
+  {
+   "key": "paperStyleGrid",
+   "english": "Grid",
+   "translated": "Καρέ",
+   "back": "Carries",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleBlank",
+   "english": "Blank",
+   "translated": "Λευκό",
+   "back": "White",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleCream",
+   "english": "Cream",
+   "translated": "Κρεμ",
+   "back": "Cream",
+   "score": 1.0
+  },
+  {
+   "key": "paperStyleParchment",
+   "english": "Parchment",
+   "translated": "Περγαμηνή",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "paperStyleVellum",
+   "english": "Vellum",
+   "translated": "Μεμβράνη",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "fontSectionTitle",
+   "english": "Note Font",
+   "translated": "Γραμματοσειρά σημειώσεων",
+   "back": "Letters of note",
+   "score": 0.5
+  },
+  {
+   "key": "fontSystem",
+   "english": "System",
+   "translated": "Συστήματος",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "fontSerif",
+   "english": "Serif",
+   "translated": "Με πατούρες",
+   "back": "♪ With steaks ♪",
+   "score": 0.0
+  },
+  {
+   "key": "fontInter",
+   "english": "Inter",
+   "translated": "Inter",
+   "back": "The Commission shall adopt delegated acts in accordance with Article 21 of this Regulation.",
+   "score": 0.0
+  },
+  {
+   "key": "fontLora",
+   "english": "Lora",
+   "translated": "Lora",
+   "back": "Lora",
+   "score": 1.0
+  },
+  {
+   "key": "themeSectionTitle",
+   "english": "Appearance",
+   "translated": "Εμφάνιση",
+   "back": "Appearance",
+   "score": 1.0
+  },
+  {
+   "key": "themeLight",
+   "english": "Light",
+   "translated": "Φωτεινό",
+   "back": "Lighting",
+   "score": 1.0
+  },
+  {
+   "key": "themeDark",
+   "english": "Dark",
+   "translated": "Σκούρο",
+   "back": "It 's dark .",
+   "score": 0.667
+  },
+  {
+   "key": "themeParchment",
+   "english": "Parchment",
+   "translated": "Περγαμηνή",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "themeSystem",
+   "english": "System",
+   "translated": "Συστήματος",
+   "back": "System",
+   "score": 1.0
+  },
+  {
+   "key": "verseSectionTitle",
+   "english": "Daily Verse Display",
+   "translated": "Εμφάνιση στίχου της ημέρας",
+   "back": "Presentation of the text of the day",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeWatermark",
+   "english": "Watermark",
+   "translated": "Υδατογράφημα",
+   "back": "Subtitled",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeHeader",
+   "english": "Header",
+   "translated": "Κεφαλίδα",
+   "back": "Head and tail",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeFooter",
+   "english": "Footer",
+   "translated": "Υποσέλιδο",
+   "back": "Subtitle",
+   "score": 0.0
+  },
+  {
+   "key": "verseModeOff",
+   "english": "Off",
+   "translated": "Ανενεργό",
+   "back": "Inactivated",
+   "score": 0.0
+  },
+  {
+   "key": "notificationsSectionTitle",
+   "english": "Notifications",
+   "translated": "Ειδοποιήσεις",
+   "back": "Alerts",
+   "score": 0.0
+  },
+  {
+   "key": "dailyReminderToggle",
+   "english": "Daily verse reminder",
+   "translated": "Καθημερινή υπενθύμιση στίχου",
+   "back": "Daily reminder of the verse",
+   "score": 1.0
+  },
+  {
+   "key": "reminderTimeLabel",
+   "english": "Reminder time",
+   "translated": "Ώρα υπενθύμισης",
+   "back": "Reminder time",
+   "score": 1.0
+  },
+  {
+   "key": "notificationPermissionDenied",
+   "english": "Notifications are turned off in system settings.",
+   "translated": "Οι ειδοποιήσεις είναι απενεργοποιημένες στις ρυθμίσεις του συστήματος.",
+   "back": "The alerts are disabled in the system settings.",
+   "score": 0.444
+  },
+  {
+   "key": "dailyReminderBody",
+   "english": "Your daily verse is ready.",
+   "translated": "Ο στίχος της ημέρας είναι έτοιμος.",
+   "back": "The text of the day is ready.",
+   "score": 0.333
+  },
+  {
+   "key": "privacySectionTitle",
+   "english": "Privacy",
+   "translated": "Απόρρητο",
+   "back": "It 's confidential .",
+   "score": 0.0
+  },
+  {
+   "key": "biometricLockToggle",
+   "english": "Lock notes with Face ID / fingerprint",
+   "translated": "Κλείδωμα σημειώσεων με Face ID / δακτυλικό αποτύπωμα",
+   "back": "Note-keeping with Face ID / fingerprint",
+   "score": 0.6
+  },
+  {
+   "key": "premiumSectionTitle",
+   "english": "Premium",
+   "translated": "Premium",
+   "back": "Prices and expenses",
+   "score": 0.0
+  },
+  {
+   "key": "removeAdsTitle",
+   "english": "Remove Ads",
+   "translated": "Κατάργηση διαφημίσεων",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "restorePurchasesButton",
+   "english": "Restore Purchases",
+   "translated": "Επαναφορά αγορών",
+   "back": "Return of purchases",
+   "score": 0.5
+  },
+  {
+   "key": "proLabel",
+   "english": "Pro",
+   "translated": "Pro",
+   "back": "Proposal for a Council Regulation (EC)",
+   "score": 0.0
+  },
+  {
+   "key": "engagementSectionTitle",
+   "english": "More",
+   "translated": "Περισσότερα",
+   "back": "More",
+   "score": 1.0
+  },
+  {
+   "key": "rateAppTitle",
+   "english": "Rate Atrament",
+   "translated": "Αξιολογήστε το Atrament",
+   "back": "Evaluate the Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "rateAppSubtitle",
+   "english": "Enjoying the app? Leave a review",
+   "translated": "Σας αρέσει η εφαρμογή; Αφήστε μια κριτική",
+   "back": "Do you like the app? Leave a comment",
+   "score": 0.444
+  },
+  {
+   "key": "shareAppTitle",
+   "english": "Share Atrament",
+   "translated": "Κοινοποιήστε το Atrament",
+   "back": "Please notify Atrament",
+   "score": 0.5
+  },
+  {
+   "key": "shareAppSubtitle",
+   "english": "Tell a friend",
+   "translated": "Πείτε το σε έναν φίλο",
+   "back": "Tell that to a friend.",
+   "score": 1.0
+  },
+  {
+   "key": "shareAppMessage",
+   "english": "Try Atrament — a distraction-free notepad with paper textures.",
+   "translated": "Δοκιμάστε το Atrament — ένα σημειωματάριο χωρίς περισπασμούς με υφές χαρτιού.",
+   "back": "Try Atrament  a distraction-free notebook with paper textures.",
+   "score": 0.857
+  },
+  {
+   "key": "languageSectionTitle",
+   "english": "Language",
+   "translated": "Γλώσσα",
+   "back": "Language",
+   "score": 1.0
+  },
+  {
+   "key": "languageFollowsSystem",
+   "english": "Follows your device language setting",
+   "translated": "Ακολουθεί τη γλώσσα της συσκευής",
+   "back": "Follow the language of the device",
+   "score": 0.857
+  },
+  {
+   "key": "languageSystem",
+   "english": "System default",
+   "translated": "Προεπιλογή συστήματος",
+   "back": "Selection of system",
+   "score": 0.5
+  },
+  {
+   "key": "languagePickerTitle",
+   "english": "Choose language",
+   "translated": "Επιλογή γλώσσας",
+   "back": "Selection of language",
+   "score": 0.5
+  },
+  {
+   "key": "premiumScreenTitle",
+   "english": "Remove Ads",
+   "translated": "Κατάργηση διαφημίσεων",
+   "back": "Removal of advertisements",
+   "score": 0.0
+  },
+  {
+   "key": "premiumHeadline",
+   "english": "Write without distraction",
+   "translated": "Γράψτε χωρίς περισπασμούς",
+   "back": "Write without distraction",
+   "score": 1.0
+  },
+  {
+   "key": "premiumBody",
+   "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+   "translated": "Το Atrament είναι δωρεάν και εμφανίζει ένα μικρό διαφημιστικό μπάνερ. Η κατάργηση των διαφημίσεων είναι μια εφάπαξ αγορά που δεν ξεκλειδώνει τίποτα άλλο — όλες οι λειτουργίες είναι ήδη δικές σας.",
+   "back": "Atrament is free and displays a small banner ad. Removing ads is a one-time purchase that unlocks nothing else  all functions are already yours.",
+   "score": 0.722
+  },
+  {
+   "key": "premiumRestoreButton",
+   "english": "Restore Purchases",
+   "translated": "Επαναφορά αγορών",
+   "back": "Return of purchases",
+   "score": 0.5
+  },
+  {
+   "key": "premiumAlreadyProMessage",
+   "english": "You already have Remove Ads. Thank you!",
+   "translated": "Έχετε ήδη την Κατάργηση διαφημίσεων. Ευχαριστούμε!",
+   "back": "You already have the cancellation of ads.",
+   "score": 0.667
+  },
+  {
+   "key": "supportSectionTitle",
+   "english": "Support",
+   "translated": "Υποστήριξη",
+   "back": "The Commission shall adopt delegated acts in accordance with the procedure referred to in paragraph 1.",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogButton",
+   "english": "Share Debug Log",
+   "translated": "Κοινοποίηση αρχείου καταγραφής",
+   "back": "Notification of the recording file",
+   "score": 0.0
+  },
+  {
+   "key": "shareDebugLogSubtitle",
+   "english": "Send a technical report if something isn't working",
+   "translated": "Στείλτε μια τεχνική αναφορά αν κάτι δεν λειτουργεί",
+   "back": "Send a technical report if something 's not working .",
+   "score": 0.75
+  },
+  {
+   "key": "noDebugLogMessage",
+   "english": "No issues to report yet.",
+   "translated": "Δεν υπάρχει ακόμη τίποτα προς αναφορά.",
+   "back": "There's nothing to report yet.",
+   "score": 0.444
+  },
+  {
+   "key": "clearDebugLogButton",
+   "english": "Clear Debug Log",
+   "translated": "Εκκαθάριση αρχείου καταγραφής",
+   "back": "Clearance of the recording file",
+   "score": 0.0
+  },
+  {
+   "key": "clearDebugLogTitle",
+   "english": "Clear the debug log?",
+   "translated": "Να γίνει εκκαθάριση του αρχείου καταγραφής;",
+   "back": "Have the registry cleared?",
+   "score": 0.333
+  },
+  {
+   "key": "clearDebugLogBody",
+   "english": "This removes the saved technical report from your device.",
+   "translated": "Η αποθηκευμένη τεχνική αναφορά θα αφαιρεθεί από τη συσκευή σας.",
+   "back": "The stored technical report will be removed from your device.",
+   "score": 0.769
+  },
+  {
+   "key": "debugLogClearedMessage",
+   "english": "Debug log cleared.",
+   "translated": "Το αρχείο καταγραφής εκκαθαρίστηκε.",
+   "back": "The record has been cleared.",
+   "score": 0.286
+  },
+  {
+   "key": "premiumUnlockLabel",
+   "english": "Remove Ads Forever",
+   "translated": "Κατάργηση διαφημίσεων για πάντα",
+   "back": "Cancellation of advertisements forever",
+   "score": 0.333
+  },
+  {
+   "key": "premiumUnlockPriceFallback",
+   "english": "$14.99",
+   "translated": "$14.99",
+   "back": "It's $14.99.",
+   "score": 0.8
+  },
+  {
+   "key": "chipAll",
+   "english": "All",
+   "translated": "Όλα",
+   "back": "It 's all right .",
+   "score": 0.5
+  },
+  {
+   "key": "chipNotebooks",
+   "english": "Notebooks",
+   "translated": "Τετράδια",
+   "back": "Cockroaches",
+   "score": 0.0
+  },
+  {
+   "key": "chipRecent",
+   "english": "Recent",
+   "translated": "Πρόσφατα",
+   "back": "Recently",
+   "score": 0.0
+  },
+  {
+   "key": "emptyAllNotesTitle",
+   "english": "No notes yet",
+   "translated": "Δεν υπάρχουν ακόμη σημειώσεις",
+   "back": "There are no notes yet.",
+   "score": 0.857
+  },
+  {
+   "key": "emptyAllNotesBody",
+   "english": "Tap the + button to write your first note.",
+   "translated": "Πατήστε + για να γράψετε την πρώτη σας σημείωση.",
+   "back": "Press + to write your first note.",
+   "score": 0.667
+  },
+  {
+   "key": "emptyRecentNotesTitle",
+   "english": "Nothing recent",
+   "translated": "Τίποτα πρόσφατο",
+   "back": "Nothing recent .",
+   "score": 1.0
+  },
+  {
+   "key": "emptyRecentNotesBody",
+   "english": "Notes you edit will show up here.",
+   "translated": "Οι σημειώσεις που επεξεργάζεστε θα εμφανίζονται εδώ.",
+   "back": "The notes you're editing will appear here.",
+   "score": 0.667
+  },
+  {
+   "key": "noteActionRename",
+   "english": "Rename",
+   "translated": "Μετονομασία",
+   "back": "Name and address",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionMoveToNotebook",
+   "english": "Move to Notebook",
+   "translated": "Μετακίνηση σε τετράδιο",
+   "back": "Moving in rolls",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionEdit",
+   "english": "Edit",
+   "translated": "Επεξεργασία",
+   "back": "Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product",
+   "score": 0.0
+  },
+  {
+   "key": "noteActionExport",
+   "english": "Export",
+   "translated": "Εξαγωγή",
+   "back": "Exports",
+   "score": 1.0
+  },
+  {
+   "key": "noteActionShare",
+   "english": "Share",
+   "translated": "Κοινοποίηση",
+   "back": "Communication from the Commission",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookTitle",
+   "english": "Move to Notebook",
+   "translated": "Μετακίνηση σε τετράδιο",
+   "back": "Moving in rolls",
+   "score": 0.0
+  },
+  {
+   "key": "moveToNotebookEmptyBody",
+   "english": "No other notebooks yet. Create one to organise this note.",
+   "translated": "Δεν υπάρχουν ακόμη άλλα τετράδια. Δημιουργήστε ένα για να οργανώσετε αυτή τη σημείωση.",
+   "back": "There are no other notebooks yet. Create one to organize this note.",
+   "score": 0.824
+  },
+  {
+   "key": "moveToNotebookCreateRow",
+   "english": "Create new notebook",
+   "translated": "Δημιουργία νέου τετραδίου",
+   "back": "Creating a new quadrant",
+   "score": 0.333
+  },
+  {
+   "key": "notebookActionRename",
+   "english": "Rename",
+   "translated": "Μετονομασία",
+   "back": "Name and address",
+   "score": 0.0
+  },
+  {
+   "key": "notebookActionChangeCover",
+   "english": "Change cover",
+   "translated": "Αλλαγή εξωφύλλου",
+   "back": "Changes in the outer cover",
+   "score": 0.4
+  },
+  {
+   "key": "notebookRenameDialogTitle",
+   "english": "Rename Notebook",
+   "translated": "Μετονομασία τετραδίου",
+   "back": "Name of the quadrangle",
+   "score": 0.0
+  },
+  {
+   "key": "notebookCoverPickerTitle",
+   "english": "Choose a cover color",
+   "translated": "Επιλέξτε χρώμα εξωφύλλου",
+   "back": "Select the color of the outer cover",
+   "score": 0.571
+  },
+  {
+   "key": "deleteNotebookWithCountBody",
+   "english": "This will delete the notebook and its {count} notes. This can't be undone.",
+   "translated": "Το τετράδιο θα διαγραφεί μαζί με όλες τις σημειώσεις του (σύνολο: {count}). Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.",
+   "back": "The notebook shall be deleted together with all its notes (total: XCOUNT).",
+   "score": 0.353
+  },
+  {
+   "key": "legalAndSupportSectionTitle",
+   "english": "Legal & Support",
+   "translated": "Νομικά και υποστήριξη",
+   "back": "Legal and support",
+   "score": 1.0
+  },
+  {
+   "key": "privacyPolicyRow",
+   "english": "Privacy Policy",
+   "translated": "Πολιτική απορρήτου",
+   "back": "The Commission shall adopt delegated acts in accordance with the opinion of the European Parliament and of the Council.",
+   "score": 0.0
+  },
+  {
+   "key": "termsOfServiceRow",
+   "english": "Terms of Service",
+   "translated": "Όροι χρήσης",
+   "back": "Conditions of use",
+   "score": 0.0
+  },
+  {
+   "key": "supportRow",
+   "english": "Support",
+   "translated": "Υποστήριξη",
+   "back": "The Commission shall adopt delegated acts in accordance with the procedure referred to in paragraph 1.",
+   "score": 0.0
+  },
+  {
+   "key": "openLinkFailedMessage",
+   "english": "Couldn't open the link. Please try again.",
+   "translated": "Δεν ήταν δυνατό το άνοιγμα του συνδέσμου. Δοκιμάστε ξανά.",
+   "back": "It was not possible to open the link.",
+   "score": 0.364
+  },
+  {
+   "key": "openSourceLicensesRow",
+   "english": "Open-source licenses",
+   "translated": "Άδειες ανοιχτού κώδικα",
+   "back": "Open-source licences",
+   "score": 0.667
+  }
+ ]
+}
