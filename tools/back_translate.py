@@ -33,6 +33,22 @@ ARGOS = {
 }
 NO_MODEL = ["gu", "mr", "ta", "te"]
 
+# NLLB-200 (Meta) language codes. It covers every app language, including the
+# ones Argos Translate has no model for.
+NLLB = {
+    "ar": "arb_Arab", "bg": "bul_Cyrl", "bn": "ben_Beng", "ca": "cat_Latn",
+    "cs": "ces_Latn", "da": "dan_Latn", "de": "deu_Latn", "el": "ell_Grek",
+    "es": "spa_Latn", "fa": "pes_Arab", "fi": "fin_Latn", "fil": "tgl_Latn",
+    "fr": "fra_Latn", "gu": "guj_Gujr", "he": "heb_Hebr", "hi": "hin_Deva",
+    "hu": "hun_Latn", "id": "ind_Latn", "it": "ita_Latn", "ja": "jpn_Jpan",
+    "ko": "kor_Hang", "mr": "mar_Deva", "ms": "zsm_Latn", "nb": "nob_Latn",
+    "nl": "nld_Latn", "pl": "pol_Latn", "pt": "por_Latn", "pt_PT": "por_Latn",
+    "ro": "ron_Latn", "ru": "rus_Cyrl", "sk": "slk_Latn", "sv": "swe_Latn",
+    "sw": "swh_Latn", "ta": "tam_Taml", "te": "tel_Telu", "th": "tha_Thai",
+    "tr": "tur_Latn", "uk": "ukr_Cyrl", "ur": "urd_Arab", "vi": "vie_Latn",
+    "zh": "zho_Hans", "zh_Hant": "zho_Hant",
+}
+
 PLACEHOLDER = re.compile(r"\{(\w+)\}")
 WORD = re.compile(r"[a-z0-9]+")
 STOP = {"the", "a", "an", "of", "to", "is", "are", "be", "this", "that", "and",
@@ -115,6 +131,48 @@ def run_shard(locales, out_dir):
         print(f"{locale}: mean overlap {mean:.2f}")
 
 
+def run_shard_nllb(locales, out_dir):
+    import torch
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    name = "facebook/nllb-200-distilled-600M"
+    model = AutoModelForSeq2SeqLM.from_pretrained(name).eval()
+    english = load("en")
+    for locale in locales:
+        tok = AutoTokenizer.from_pretrained(name, src_lang=NLLB[locale])
+        values = load(locale)
+        keys = list(values)
+        sources = [PLACEHOLDER.sub(lambda m: "X" + m.group(1).upper(), values[k]) for k in keys]
+        backs = []
+        for i in range(0, len(sources), 16):
+            batch = tok(sources[i : i + 16], return_tensors="pt", padding=True)
+            with torch.no_grad():
+                out = model.generate(
+                    **batch,
+                    forced_bos_token_id=tok.convert_tokens_to_ids("eng_Latn"),
+                    num_beams=4,
+                    max_new_tokens=96,
+                )
+            backs += tok.batch_decode(out, skip_special_tokens=True)
+        rows = [
+            {
+                "key": k,
+                "english": english[k],
+                "translated": values[k],
+                "back": b,
+                "score": round(score(english[k], b), 3),
+            }
+            for k, b in zip(keys, backs)
+        ]
+        (out_dir / f"{locale}.json").write_text(
+            json.dumps({"locale": locale, "rows": rows}, ensure_ascii=False, indent=1),
+            "utf8",
+        )
+        mean = sum(r["score"] for r in rows) / len(rows)
+        print(f"{locale}: mean overlap {mean:.2f}")
+
+
 def build_report(in_dir, out_path, worst):
     results = []
     for path in sorted(in_dir.rglob("*.json")):
@@ -152,13 +210,14 @@ def main():
     s = sub.add_parser("shard")
     s.add_argument("locales", nargs="+")
     s.add_argument("--out", required=True)
+    s.add_argument("--engine", choices=["argos", "nllb"], default="argos")
     r = sub.add_parser("report")
     r.add_argument("indir")
     r.add_argument("--out", required=True)
     r.add_argument("--worst", type=int, default=12)
     a = ap.parse_args()
     if a.cmd == "shard":
-        run_shard(a.locales, Path(a.out))
+        (run_shard_nllb if a.engine == "nllb" else run_shard)(a.locales, Path(a.out))
     else:
         build_report(Path(a.indir), Path(a.out), a.worst)
 

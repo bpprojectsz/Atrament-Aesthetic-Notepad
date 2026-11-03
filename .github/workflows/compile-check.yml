@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'check (default) or back-translate (translation screen, no build)'
+        description: 'check (default), back-translate (Argos) or back-translate-nllb (no build)'
         required: false
         default: 'check'
 
@@ -192,5 +192,61 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add reports/back_translation.md
           git commit -m "chore: back-translation report" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  # NLLB-200 back-translation: covers every app language. No build.
+  nllb-shard:
+    if: ${{ inputs.task == 'back-translate-nllb' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: n1, locales: "ar bg bn ca cs da de el nb"}
+          - {id: n2, locales: "es fa fi fil fr gu he hi hu"}
+          - {id: n3, locales: "id it ja ko mr ms nl pl pt"}
+          - {id: n4, locales: "pt_PT ro ru sk sv sw ta te th"}
+          - {id: n5, locales: "tr uk ur vi zh zh_Hant"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers sentencepiece
+      - run: python tools/back_translate.py shard ${{ matrix.locales }} --engine nllb --out shard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nllb-${{ matrix.id }}
+          path: shard
+
+  nllb-report:
+    if: ${{ always() && inputs.task == 'back-translate-nllb' }}
+    needs: nllb-shard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: nllb-*
+          merge-multiple: true
+          path: shards
+      - run: |
+          python tools/back_translate.py report shards --out reports/back_translation_nllb.md --worst 20
+          mkdir -p reports/nllb && cp shards/*.json reports/nllb/
+      - name: Commit the report to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/back_translation_nllb.md reports/nllb
+          git commit -m "chore: NLLB back-translation report" || exit 0
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
