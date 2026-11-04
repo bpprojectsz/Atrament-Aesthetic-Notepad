@@ -113,7 +113,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get formatUnderline => 'Podkreślenie';
 
   @override
-  String get formatHeading => 'Nagłówek';
+  String get formatHeading => 'Nagłówek strony';
 
   @override
   String get formatBulletList => 'Lista punktowana';
@@ -313,7 +313,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get verseModeWatermark => 'Znak wodny';
 
   @override
-  String get verseModeHeader => 'Nagłówek';
+  String get verseModeHeader => 'Nagłówek strony';
 
   @override
   String get verseModeFooter => 'Stopka';
@@ -373,7 +373,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get shareAppMessage =>
-      'Wypróbuj Atrament — notatnik bez rozpraszaczy z fakturami papieru.';
+      'Wypróbuj Atrament — notatnik bez rozpraszaczy z teksturami papieru.';
 
   @override
   String get languageSectionTitle => 'Język';
@@ -402,7 +402,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Masz już opcję Usuń reklamy. Dziękujemy!';
+      'Masz już opcję „Usuń reklamy”. Dziękujemy!';
 
   @override
   String get supportSectionTitle => 'Pomoc';
@@ -453,7 +453,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get emptyAllNotesBody => 'Naciśnij +, aby napisać pierwszą notatkę.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nic ostatniego';
+  String get emptyRecentNotesTitle => 'Brak ostatnich notatek';
 
   @override
   String get emptyRecentNotesBody =>

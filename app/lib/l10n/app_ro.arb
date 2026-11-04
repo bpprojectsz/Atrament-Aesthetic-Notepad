@@ -55,7 +55,7 @@
   "biometricLockReason": "Deblochează pentru a vedea nota",
   "noteLockedMessage": "Această notă este blocată",
   "unlockButton": "Deblochează",
-  "noteLockTurnedOffMessage": "Blocarea notelor a fost dezactivată deoarece acest dispozitiv nu are blocare a ecranului sau biometrie configurate.",
+  "noteLockTurnedOffMessage": "Blocarea notelor a fost dezactivată deoarece pe acest dispozitiv nu este configurată blocarea ecranului sau biometria.",
   "biometricEnableReason": "Confirmă-ți identitatea pentru a activa blocarea notelor",
   "biometricDisableReason": "Confirmă-ți identitatea pentru a dezactiva blocarea notelor",
   "biometricShareReason": "Deblochează pentru a distribui sau exporta nota",

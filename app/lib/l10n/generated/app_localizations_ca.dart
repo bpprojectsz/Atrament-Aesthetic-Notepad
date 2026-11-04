@@ -113,10 +113,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get formatUnderline => 'Subratllat';
 
   @override
-  String get formatHeading => 'Capçalera';
+  String get formatHeading => 'Títol de secció';
 
   @override
-  String get formatBulletList => 'Llista amb pics';
+  String get formatBulletList => 'Llista amb vinyetes';
 
   @override
   String get formatChecklist => 'Llista de comprovació';
@@ -313,7 +313,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get verseModeWatermark => 'Marca d’aigua';
 
   @override
-  String get verseModeHeader => 'Capçalera';
+  String get verseModeHeader => 'Títol de secció';
 
   @override
   String get verseModeFooter => 'Peu de pàgina';
@@ -402,7 +402,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Ja tens Elimina els anuncis. Gràcies!';
+      'Ja tens «Elimina els anuncis». Gràcies!';
 
   @override
   String get supportSectionTitle => 'Assistència';

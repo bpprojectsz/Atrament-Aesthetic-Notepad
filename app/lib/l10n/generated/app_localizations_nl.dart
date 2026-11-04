@@ -402,7 +402,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Je hebt Advertenties verwijderen al. Bedankt!';
+      'Je hebt “Advertenties verwijderen” al. Bedankt!';
 
   @override
   String get supportSectionTitle => 'Ondersteuning';

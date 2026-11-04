@@ -324,7 +324,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get notificationsSectionTitle => 'Varsler';
 
   @override
-  String get dailyReminderToggle => 'Daglig versvarsel';
+  String get dailyReminderToggle => 'Daglig påminnelse om vers';
 
   @override
   String get reminderTimeLabel => 'Tidspunkt for påminnelse';
@@ -400,7 +400,7 @@ class AppLocalizationsNb extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Du har allerede Fjern annonser. Takk!';
+      'Du har allerede «Fjern annonser». Takk!';
 
   @override
   String get supportSectionTitle => 'Brukerstøtte';
@@ -450,7 +450,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get emptyAllNotesBody => 'Trykk på + for å skrive ditt første notat.';
 
   @override
-  String get emptyRecentNotesTitle => 'Ingenting nylig';
+  String get emptyRecentNotesTitle => 'Ingenting nylig redigert';
 
   @override
   String get emptyRecentNotesBody => 'Notater du redigerer, vises her.';

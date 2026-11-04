@@ -117,7 +117,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get formatHeading => 'Otsikko';
 
   @override
-  String get formatBulletList => 'Luettelo';
+  String get formatBulletList => 'Luettelomerkit';
 
   @override
   String get formatChecklist => 'Tarkistuslista';
@@ -404,7 +404,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Sinulla on jo Poista mainokset. Kiitos!';
+      'Sinulla on jo ”Poista mainokset”. Kiitos!';
 
   @override
   String get supportSectionTitle => 'Tuki';

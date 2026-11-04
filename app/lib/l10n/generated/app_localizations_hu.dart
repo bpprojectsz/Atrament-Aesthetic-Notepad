@@ -55,7 +55,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get shareFailedMessage =>
-      'A megosztás menü nem nyitható meg. Próbáld újra.';
+      'A megosztási menü nem nyitható meg. Próbáld újra.';
 
   @override
   String get settingsTitle => 'Beállítások';
@@ -403,7 +403,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'A Hirdetések eltávolítása már megvan. Köszönjük!';
+      'Már megvan a „Hirdetések eltávolítása”. Köszönjük!';
 
   @override
   String get supportSectionTitle => 'Támogatás';

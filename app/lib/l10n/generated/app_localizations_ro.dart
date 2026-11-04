@@ -159,7 +159,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get noteLockTurnedOffMessage =>
-      'Blocarea notelor a fost dezactivată deoarece acest dispozitiv nu are blocare a ecranului sau biometrie configurate.';
+      'Blocarea notelor a fost dezactivată deoarece pe acest dispozitiv nu este configurată blocarea ecranului sau biometria.';
 
   @override
   String get biometricEnableReason =>

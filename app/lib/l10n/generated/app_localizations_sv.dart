@@ -402,7 +402,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get premiumRestoreButton => 'Återställ köp';
 
   @override
-  String get premiumAlreadyProMessage => 'Du har redan Ta bort annonser. Tack!';
+  String get premiumAlreadyProMessage => 'Du har redan ”Ta bort annonser”. Tack!';
 
   @override
   String get supportSectionTitle => 'Support';
@@ -453,7 +453,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Tryck på + för att skriva din första anteckning.';
 
   @override
-  String get emptyRecentNotesTitle => 'Inget nyligen';
+  String get emptyRecentNotesTitle => 'Inget nyligen redigerat';
 
   @override
   String get emptyRecentNotesBody => 'Anteckningar du redigerar visas här.';
