@@ -293,7 +293,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get fontLora => 'Lora';
 
   @override
-  String get themeSectionTitle => 'Облик';
+  String get themeSectionTitle => 'Външен вид';
 
   @override
   String get themeLight => 'Светъл';

@@ -255,13 +255,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get paperStyleSectionTitle => 'Стиль паперу';
 
   @override
-  String get paperStyleLined => 'Лінійка';
+  String get paperStyleLined => 'У лінійку';
 
   @override
-  String get paperStyleDotGrid => 'Крапки';
+  String get paperStyleDotGrid => 'У крапку';
 
   @override
-  String get paperStyleGrid => 'Клітинка';
+  String get paperStyleGrid => 'У клітинку';
 
   @override
   String get paperStyleBlank => 'Чистий аркуш';
@@ -451,7 +451,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get emptyAllNotesBody => 'Натисніть «+», щоб написати першу нотатку.';
 
   @override
-  String get emptyRecentNotesTitle => 'Нічого нещодавнього';
+  String get emptyRecentNotesTitle => 'Немає нещодавніх нотаток';
 
   @override
   String get emptyRecentNotesBody =>

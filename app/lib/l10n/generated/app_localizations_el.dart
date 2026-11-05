@@ -405,7 +405,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Έχετε ήδη την Κατάργηση διαφημίσεων. Ευχαριστούμε!';
+      'Έχετε ήδη την επιλογή «Κατάργηση διαφημίσεων». Ευχαριστούμε!';
 
   @override
   String get supportSectionTitle => 'Υποστήριξη';

@@ -257,13 +257,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get paperStyleSectionTitle => 'Стиль бумаги';
 
   @override
-  String get paperStyleLined => 'Линейка';
+  String get paperStyleLined => 'В линейку';
 
   @override
-  String get paperStyleDotGrid => 'Точки';
+  String get paperStyleDotGrid => 'В точку';
 
   @override
-  String get paperStyleGrid => 'Клетка';
+  String get paperStyleGrid => 'В клетку';
 
   @override
   String get paperStyleBlank => 'Чистый лист';
@@ -453,7 +453,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get emptyAllNotesBody => 'Нажмите «+», чтобы написать первую заметку.';
 
   @override
-  String get emptyRecentNotesTitle => 'Ничего недавнего';
+  String get emptyRecentNotesTitle => 'Нет недавних заметок';
 
   @override
   String get emptyRecentNotesBody =>
