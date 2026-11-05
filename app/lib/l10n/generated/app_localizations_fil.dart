@@ -36,7 +36,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get untitledNote => 'Walang pamagat';
 
   @override
-  String get deleteConfirmBody => 'Hindi na ito maaaring ibalik.';
+  String get deleteConfirmBody => 'Hindi na ito mababawi.';
 
   @override
   String get deleteNoteTitle => 'Burahin ang note na ito?';
@@ -92,7 +92,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get newNoteTitle => 'Bagong note';
 
   @override
-  String get sortOptionsTitle => 'Pagsunud-sunurin';
+  String get sortOptionsTitle => 'I-sort';
 
   @override
   String get sortByModified => 'Huling na-edit';
@@ -190,7 +190,7 @@ class AppLocalizationsFil extends AppLocalizations {
       'Hindi makumpleto ang pagbili. Pakisubukan ulit.';
 
   @override
-  String get restoreSuccessMessage => 'Naibalik na ang binili mo.';
+  String get restoreSuccessMessage => 'Na-restore na ang binili mo.';
 
   @override
   String get restoreNothingFoundMessage =>
@@ -198,7 +198,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get restoreFailedMessage =>
-      'Hindi maibalik ang mga pagbili. Tingnan ang koneksyon mo at subukan ulit.';
+      'Hindi ma-restore ang mga pagbili. Tingnan ang koneksyon mo at subukan ulit.';
 
   @override
   String get reminderScheduleFailedMessage =>
@@ -308,7 +308,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get themeSystem => 'System';
 
   @override
-  String get verseSectionTitle => 'Pagpapakita ng talata ng araw';
+  String get verseSectionTitle => 'Pagpapakita ng pang-araw-araw na talata';
 
   @override
   String get verseModeWatermark => 'Watermark';
@@ -352,7 +352,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get removeAdsTitle => 'Alisin ang mga ad';
 
   @override
-  String get restorePurchasesButton => 'Ibalik ang mga pagbili';
+  String get restorePurchasesButton => 'I-restore ang mga pagbili';
 
   @override
   String get proLabel => 'Pro';
@@ -399,11 +399,11 @@ class AppLocalizationsFil extends AppLocalizations {
       'Libre ang Atrament at nagpapakita lang ng isang maliit na ad banner. Ang pag-alis ng mga ad ay isang beses na pagbili na walang ibang bubuksan: sa iyo na ang lahat ng feature.';
 
   @override
-  String get premiumRestoreButton => 'Ibalik ang mga pagbili';
+  String get premiumRestoreButton => 'I-restore ang mga pagbili';
 
   @override
   String get premiumAlreadyProMessage =>
-      'Mayroon ka na ng Alisin ang mga ad. Salamat!';
+      'Mayroon ka na ng “Alisin ang mga ad”. Salamat!';
 
   @override
   String get supportSectionTitle => 'Suporta';
@@ -498,7 +498,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Buburahin ang notebook kasama ang lahat ng note nito (kabuuan: $count). Hindi na ito maaaring ibalik.';
+    return 'Buburahin ang notebook kasama ang lahat ng note nito (kabuuan: $count). Hindi na ito mababawi.';
   }
 
   @override

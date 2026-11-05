@@ -248,7 +248,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get paperStyleLined => 'มีเส้นบรรทัด';
 
   @override
-  String get paperStyleDotGrid => 'จุดไข่ปลา';
+  String get paperStyleDotGrid => 'ตารางจุด';
 
   @override
   String get paperStyleGrid => 'ตาราง';
@@ -296,7 +296,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get themeSystem => 'ระบบ';
 
   @override
-  String get verseSectionTitle => 'การแสดงพระคัมภีร์ประจำวัน';
+  String get verseSectionTitle => 'การแสดงข้อพระคัมภีร์ประจำวัน';
 
   @override
   String get verseModeWatermark => 'ลายน้ำ';
@@ -314,7 +314,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get notificationsSectionTitle => 'การแจ้งเตือน';
 
   @override
-  String get dailyReminderToggle => 'การแจ้งเตือนพระคัมภีร์ประจำวัน';
+  String get dailyReminderToggle => 'การแจ้งเตือนข้อพระคัมภีร์ประจำวัน';
 
   @override
   String get reminderTimeLabel => 'เวลาแจ้งเตือน';
@@ -324,7 +324,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'การแจ้งเตือนถูกปิดอยู่ในการตั้งค่าระบบ';
 
   @override
-  String get dailyReminderBody => 'พระคัมภีร์ประจำวันของคุณพร้อมแล้ว';
+  String get dailyReminderBody => 'ข้อพระคัมภีร์ประจำวันของคุณพร้อมแล้ว';
 
   @override
   String get privacySectionTitle => 'ความเป็นส่วนตัว';
@@ -389,7 +389,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get premiumRestoreButton => 'กู้คืนการซื้อ';
 
   @override
-  String get premiumAlreadyProMessage => 'คุณมี นำโฆษณาออก แล้ว ขอบคุณ';
+  String get premiumAlreadyProMessage => 'คุณมี “นำโฆษณาออก” แล้ว ขอบคุณ';
 
   @override
   String get supportSectionTitle => 'การสนับสนุน';

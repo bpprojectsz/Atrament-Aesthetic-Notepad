@@ -128,7 +128,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get formatCodeBlock => 'Blok kode';
 
   @override
-  String get penFountainPen => 'Pulpen tinta';
+  String get penFountainPen => 'Pena tinta';
 
   @override
   String get penGelPen => 'Pulpen gel';
@@ -401,7 +401,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Anda sudah memiliki Hapus iklan. Terima kasih!';
+      'Anda sudah memiliki “Hapus iklan”. Terima kasih!';
 
   @override
   String get supportSectionTitle => 'Dukungan';

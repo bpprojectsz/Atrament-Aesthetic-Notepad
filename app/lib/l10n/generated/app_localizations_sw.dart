@@ -102,19 +102,19 @@ class AppLocalizationsSw extends AppLocalizations {
   String get sortByCreated => 'Tarehe ya kuundwa';
 
   @override
-  String get sortByTitle => 'Kichwa';
+  String get sortByTitle => 'Kichwa cha ukurasa';
 
   @override
   String get formatBold => 'Herufi nzito';
 
   @override
-  String get formatItalic => 'Mlalo';
+  String get formatItalic => 'Italiki';
 
   @override
   String get formatUnderline => 'Mstari chini';
 
   @override
-  String get formatHeading => 'Kichwa cha habari';
+  String get formatHeading => 'Kichwa cha sehemu';
 
   @override
   String get formatBulletList => 'Orodha ya vitone';
@@ -138,7 +138,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get penPencil => 'Penseli';
 
   @override
-  String get penHighlighter => 'Kialamisho cha kung’arisha';
+  String get penHighlighter => 'Kalamu ya kuangazia';
 
   @override
   String get penEraser => 'Kifutio';
@@ -272,7 +272,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get paperStyleCream => 'Krimu';
 
   @override
-  String get paperStyleParchment => 'Ngozi ya karatasi';
+  String get paperStyleParchment => 'Karatasi ya ngozi';
 
   @override
   String get paperStyleVellum => 'Velamu';
@@ -302,7 +302,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get themeDark => 'Giza';
 
   @override
-  String get themeParchment => 'Ngozi ya karatasi';
+  String get themeParchment => 'Karatasi ya ngozi';
 
   @override
   String get themeSystem => 'Mfumo';
@@ -314,7 +314,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get verseModeWatermark => 'Alama ya maji';
 
   @override
-  String get verseModeHeader => 'Kichwa';
+  String get verseModeHeader => 'Kichwa cha ukurasa';
 
   @override
   String get verseModeFooter => 'Kijachini';
@@ -403,7 +403,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get premiumRestoreButton => 'Rejesha ununuzi';
 
   @override
-  String get premiumAlreadyProMessage => 'Tayari una Ondoa matangazo. Asante!';
+  String get premiumAlreadyProMessage => 'Tayari una “Ondoa matangazo”. Asante!';
 
   @override
   String get supportSectionTitle => 'Msaada';

@@ -399,7 +399,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get premiumRestoreButton => 'Khôi phục giao dịch mua';
 
   @override
-  String get premiumAlreadyProMessage => 'Bạn đã có Xóa quảng cáo. Cảm ơn bạn!';
+  String get premiumAlreadyProMessage => 'Bạn đã có “Xóa quảng cáo”. Cảm ơn bạn!';
 
   @override
   String get supportSectionTitle => 'Hỗ trợ';

@@ -399,7 +399,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Reklamları kaldır zaten sizde. Teşekkürler!';
+      'Zaten “Reklamları kaldır” seçeneğine sahipsiniz. Teşekkürler!';
 
   @override
   String get supportSectionTitle => 'Destek';
@@ -450,7 +450,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'İlk notunuzu yazmak için + simgesine dokunun.';
 
   @override
-  String get emptyRecentNotesTitle => 'Yakın zamanda bir şey yok';
+  String get emptyRecentNotesTitle => 'Son düzenlenen not yok';
 
   @override
   String get emptyRecentNotesBody => 'Düzenlediğiniz notlar burada görünür.';

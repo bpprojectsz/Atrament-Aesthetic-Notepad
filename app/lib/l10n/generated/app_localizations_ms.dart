@@ -112,7 +112,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get formatUnderline => 'Garis bawah';
 
   @override
-  String get formatHeading => 'Pengepala';
+  String get formatHeading => 'Tajuk bahagian';
 
   @override
   String get formatBulletList => 'Senarai berpeluru';
@@ -312,7 +312,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get verseModeWatermark => 'Tera air';
 
   @override
-  String get verseModeHeader => 'Pengepala';
+  String get verseModeHeader => 'Tajuk bahagian';
 
   @override
   String get verseModeFooter => 'Pengaki';
@@ -400,7 +400,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'Anda sudah mempunyai Alih keluar iklan. Terima kasih!';
+      'Anda sudah mempunyai “Alih keluar iklan”. Terima kasih!';
 
   @override
   String get supportSectionTitle => 'Sokongan';
