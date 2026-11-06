@@ -389,7 +389,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get premiumRestoreButton => 'שחזור רכישות';
 
   @override
-  String get premiumAlreadyProMessage => 'כבר יש לך הסרת פרסומות. תודה!';
+  String get premiumAlreadyProMessage => 'כבר יש לך את “הסרת פרסומות”. תודה!';
 
   @override
   String get supportSectionTitle => 'תמיכה';
@@ -438,7 +438,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get emptyAllNotesBody => 'הקש על + כדי לכתוב את הפתק הראשון שלך.';
 
   @override
-  String get emptyRecentNotesTitle => 'אין חדש';
+  String get emptyRecentNotesTitle => 'אין פתקים אחרונים';
 
   @override
   String get emptyRecentNotesBody => 'פתקים שתערוך יופיעו כאן.';

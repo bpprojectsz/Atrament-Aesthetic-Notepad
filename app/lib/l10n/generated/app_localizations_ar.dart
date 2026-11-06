@@ -348,7 +348,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get restorePurchasesButton => 'استعادة المشتريات';
 
   @override
-  String get proLabel => 'مميز';
+  String get proLabel => 'احترافي';
 
   @override
   String get engagementSectionTitle => 'المزيد';
@@ -367,7 +367,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get shareAppMessage =>
-      'جرّب Atrament — مفكرة بلا تشتيت مع أوراق مميزة.';
+      'جرّب Atrament — مفكرة بلا تشتيت بملمس الورق.';
 
   @override
   String get languageSectionTitle => 'اللغة';
@@ -402,7 +402,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get supportSectionTitle => 'الدعم';
 
   @override
-  String get shareDebugLogButton => 'مشاركة سجل التصحيح';
+  String get shareDebugLogButton => 'مشاركة سجل تصحيح الأخطاء';
 
   @override
   String get shareDebugLogSubtitle => 'أرسل تقريرًا تقنيًا إذا كان هناك خلل ما';
@@ -411,17 +411,17 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noDebugLogMessage => 'لا توجد مشكلات للإبلاغ عنها بعد.';
 
   @override
-  String get clearDebugLogButton => 'مسح سجل التصحيح';
+  String get clearDebugLogButton => 'مسح سجل تصحيح الأخطاء';
 
   @override
-  String get clearDebugLogTitle => 'هل تريد مسح سجل التصحيح؟';
+  String get clearDebugLogTitle => 'هل تريد مسح سجل تصحيح الأخطاء؟';
 
   @override
   String get clearDebugLogBody =>
       'سيؤدي هذا إلى إزالة التقرير التقني المحفوظ من جهازك.';
 
   @override
-  String get debugLogClearedMessage => 'تم مسح سجل التصحيح.';
+  String get debugLogClearedMessage => 'تم مسح سجل تصحيح الأخطاء.';
 
   @override
   String get premiumUnlockLabel => 'إزالة الإعلانات نهائيًا';
@@ -445,7 +445,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emptyAllNotesBody => 'اضغط على + لكتابة ملاحظتك الأولى.';
 
   @override
-  String get emptyRecentNotesTitle => 'لا شيء حديث';
+  String get emptyRecentNotesTitle => 'لا توجد ملاحظات حديثة';
 
   @override
   String get emptyRecentNotesBody => 'ستظهر الملاحظات التي تحررها هنا.';
@@ -493,7 +493,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'الشؤون القانونية والدعم';
+  String get legalAndSupportSectionTitle => 'المعلومات القانونية والدعم';
 
   @override
   String get privacyPolicyRow => 'سياسة الخصوصية';
@@ -505,7 +505,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get supportRow => 'الدعم';
 
   @override
-  String get openLinkFailedMessage => 'تعذر فتح الرابط. حاول مرة أخرى.';
+  String get openLinkFailedMessage => 'تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.';
 
   @override
   String get openSourceLicensesRow => 'تراخيص المصادر المفتوحة';
