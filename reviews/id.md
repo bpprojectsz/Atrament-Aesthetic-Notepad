@@ -9,6 +9,7 @@ All 158 strings were read in full against the English text and the key name. Rev
 ## Corrections made
 - `premiumAlreadyProMessage`: “Anda sudah memiliki Hapus iklan.” → “Anda sudah memiliki “Hapus iklan”.” — feature name quoted
 - `penFountainPen`: “Pulpen tinta” → “Pena tinta” — “pulpen” means ballpoint in modern Indonesian; a fountain pen is “pena”
+- `verseSectionTitle, dailyReminderToggle, dailyReminderBody`: “ayat” → “ayat Alkitab” — “ayat” alone suggests a Quran verse (added in the final pass)
 
 ## Left as is, worth a native speaker
 - “Header/Footer” are borrowed words; “Kepala/Kaki halaman” also exist.

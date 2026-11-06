@@ -307,7 +307,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get themeSystem => 'Sistem';
 
   @override
-  String get verseSectionTitle => 'Tampilan ayat harian';
+  String get verseSectionTitle => 'Tampilan ayat Alkitab harian';
 
   @override
   String get verseModeWatermark => 'Tanda air';
@@ -325,7 +325,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get notificationsSectionTitle => 'Notifikasi';
 
   @override
-  String get dailyReminderToggle => 'Pengingat ayat harian';
+  String get dailyReminderToggle => 'Pengingat ayat Alkitab harian';
 
   @override
   String get reminderTimeLabel => 'Waktu pengingat';
@@ -335,7 +335,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Notifikasi dinonaktifkan di pengaturan sistem.';
 
   @override
-  String get dailyReminderBody => 'Ayat harian Anda sudah siap.';
+  String get dailyReminderBody => 'Ayat Alkitab harian Anda sudah siap.';
 
   @override
   String get privacySectionTitle => 'Privasi';

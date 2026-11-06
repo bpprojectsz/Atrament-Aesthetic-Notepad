@@ -308,7 +308,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get themeSystem => 'Mfumo';
 
   @override
-  String get verseSectionTitle => 'Onyesho la aya ya siku';
+  String get verseSectionTitle => 'Onyesho la aya ya Biblia ya siku';
 
   @override
   String get verseModeWatermark => 'Alama ya maji';
@@ -326,7 +326,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get notificationsSectionTitle => 'Arifa';
 
   @override
-  String get dailyReminderToggle => 'Kikumbusho cha kila siku cha aya';
+  String get dailyReminderToggle => 'Kikumbusho cha kila siku cha aya ya Biblia';
 
   @override
   String get reminderTimeLabel => 'Muda wa kikumbusho';
@@ -336,7 +336,7 @@ class AppLocalizationsSw extends AppLocalizations {
       'Arifa zimezimwa kwenye mipangilio ya mfumo.';
 
   @override
-  String get dailyReminderBody => 'Aya yako ya siku iko tayari.';
+  String get dailyReminderBody => 'Aya yako ya Biblia ya siku iko tayari.';
 
   @override
   String get privacySectionTitle => 'Faragha';

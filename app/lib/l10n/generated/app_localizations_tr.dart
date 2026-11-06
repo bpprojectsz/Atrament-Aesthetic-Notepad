@@ -305,7 +305,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get themeSystem => 'Sistem';
 
   @override
-  String get verseSectionTitle => 'Günün ayeti görünümü';
+  String get verseSectionTitle => 'Günün Kutsal Kitap ayeti görünümü';
 
   @override
   String get verseModeWatermark => 'Filigran';
@@ -323,7 +323,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get notificationsSectionTitle => 'Bildirimler';
 
   @override
-  String get dailyReminderToggle => 'Günlük ayet hatırlatıcısı';
+  String get dailyReminderToggle => 'Günlük Kutsal Kitap ayeti hatırlatıcısı';
 
   @override
   String get reminderTimeLabel => 'Hatırlatma saati';
@@ -333,7 +333,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Bildirimler sistem ayarlarında kapalı.';
 
   @override
-  String get dailyReminderBody => 'Günün ayeti hazır.';
+  String get dailyReminderBody => 'Günün Kutsal Kitap ayeti hazır.';
 
   @override
   String get privacySectionTitle => 'Gizlilik';

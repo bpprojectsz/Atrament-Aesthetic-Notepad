@@ -13,6 +13,7 @@ All 158 strings were read in full against the English text and the key name. Rev
 - `verseModeHeader`: “Kichwa” → “Kichwa cha ukurasa” — same word as Title (sortByTitle)
 - `formatHeading`: “Kichwa cha habari” → “Kichwa cha sehemu” — “kichwa cha habari” means a news headline
 - `premiumAlreadyProMessage`: “Tayari una Ondoa matangazo.” → “Tayari una “Ondoa matangazo”.” — feature name quoted
+- `verseSectionTitle, dailyReminderToggle, dailyReminderBody`: “aya” → “aya ya Biblia” — “aya” alone suggests a Quran verse (added in the final pass)
 
 ## Left as is, worth a native speaker
 - TOP RISK: “dokezo/madokezo” is used for “note”. The machine kept reading it as hint/suggestion/tip. Ask a native speaker whether “noti”, “maelezo” or “kumbukumbu” is what Swahili phone users expect for a note.

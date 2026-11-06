@@ -302,7 +302,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get themeSystem => 'النظام';
 
   @override
-  String get verseSectionTitle => 'عرض آية اليوم';
+  String get verseSectionTitle => 'عرض آية الكتاب المقدس اليومية';
 
   @override
   String get verseModeWatermark => 'علامة مائية';
@@ -320,7 +320,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get notificationsSectionTitle => 'الإشعارات';
 
   @override
-  String get dailyReminderToggle => 'تذكير يومي بالآية';
+  String get dailyReminderToggle => 'تذكير يومي بآية من الكتاب المقدس';
 
   @override
   String get reminderTimeLabel => 'وقت التذكير';
@@ -330,7 +330,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'الإشعارات معطّلة في إعدادات النظام.';
 
   @override
-  String get dailyReminderBody => 'آية اليوم جاهزة.';
+  String get dailyReminderBody => 'آية اليوم من الكتاب المقدس جاهزة.';
 
   @override
   String get privacySectionTitle => 'الخصوصية';

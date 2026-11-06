@@ -52,7 +52,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get exportFailedMessage =>
-      'یہ نوٹ برآمد نہیں کیا جا سکا۔ براہ کرم دوبارہ کوشش کریں۔';
+      'یہ نوٹ ایکسپورٹ نہیں کیا جا سکا۔ براہ کرم دوبارہ کوشش کریں۔';
 
   @override
   String get shareFailedMessage =>
@@ -62,7 +62,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get settingsTitle => 'ترتیبات';
 
   @override
-  String get searchHint => 'نوٹس تلاش کریں';
+  String get searchHint => 'نوٹ تلاش کریں';
 
   @override
   String get emptyNotebooksTitle => 'ابھی کوئی نوٹ بک نہیں ہے';
@@ -172,7 +172,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get biometricShareReason =>
-      'یہ نوٹ شیئر یا برآمد کرنے کے لیے ان لاک کریں';
+      'یہ نوٹ شیئر یا ایکسپورٹ کرنے کے لیے ان لاک کریں';
 
   @override
   String get biometricAuthFailedMessage => 'آپ کی شناخت کی تصدیق نہیں ہو سکی۔';
@@ -225,7 +225,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get storageIssueNotesLoad =>
-      'کچھ نوٹس لوڈ نہیں ہو سکے۔ جو دستیاب ہے وہ دکھایا جا رہا ہے۔';
+      'کچھ نوٹ لوڈ نہیں ہو سکے۔ جو دستیاب ہے وہ دکھایا جا رہا ہے۔';
 
   @override
   String get storageIssueSearch => 'اس وقت تلاش کے نتائج نامکمل ہو سکتے ہیں۔';
@@ -243,13 +243,13 @@ class AppLocalizationsUr extends AppLocalizations {
       'یہ خریداری اس وقت دستیاب نہیں ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔';
 
   @override
-  String get exportTitle => 'برآمد کریں';
+  String get exportTitle => 'ایکسپورٹ کریں';
 
   @override
-  String get exportAsTxt => 'متن کے طور پر برآمد کریں';
+  String get exportAsTxt => 'متن کے طور پر ایکسپورٹ کریں';
 
   @override
-  String get exportAsPdf => 'PDF کے طور پر برآمد کریں';
+  String get exportAsPdf => 'PDF کے طور پر ایکسپورٹ کریں';
 
   @override
   String get paperStyleSectionTitle => 'کاغذ کا انداز';
@@ -261,7 +261,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get paperStyleDotGrid => 'نقطہ دار';
 
   @override
-  String get paperStyleGrid => 'خانہ دار';
+  String get paperStyleGrid => 'گرڈ';
 
   @override
   String get paperStyleBlank => 'خالی';
@@ -306,7 +306,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get themeSystem => 'سسٹم';
 
   @override
-  String get verseSectionTitle => 'آج کی آیت کی نمائش';
+  String get verseSectionTitle => 'آج کی بائبل آیت کی نمائش';
 
   @override
   String get verseModeWatermark => 'واٹر مارک';
@@ -324,7 +324,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get notificationsSectionTitle => 'اطلاعات';
 
   @override
-  String get dailyReminderToggle => 'روزانہ آیت کی یاد دہانی';
+  String get dailyReminderToggle => 'روزانہ بائبل آیت کی یاد دہانی';
 
   @override
   String get reminderTimeLabel => 'یاد دہانی کا وقت';
@@ -334,13 +334,13 @@ class AppLocalizationsUr extends AppLocalizations {
       'سسٹم کی ترتیبات میں اطلاعات بند ہیں۔';
 
   @override
-  String get dailyReminderBody => 'آپ کی آج کی آیت تیار ہے۔';
+  String get dailyReminderBody => 'آپ کی آج کی بائبل آیت تیار ہے۔';
 
   @override
   String get privacySectionTitle => 'رازداری';
 
   @override
-  String get biometricLockToggle => 'Face ID / فنگر پرنٹ سے نوٹس لاک کریں';
+  String get biometricLockToggle => 'Face ID / فنگر پرنٹ سے نوٹ لاک کریں';
 
   @override
   String get premiumSectionTitle => 'پریمیم';
@@ -454,7 +454,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get emptyRecentNotesBody =>
-      'آپ جو نوٹس ایڈٹ کریں گے وہ یہاں نظر آئیں گے۔';
+      'آپ جو نوٹ ایڈٹ کریں گے وہ یہاں نظر آئیں گے۔';
 
   @override
   String get noteActionRename => 'نام تبدیل کریں';
@@ -466,7 +466,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get noteActionEdit => 'ترمیم کریں';
 
   @override
-  String get noteActionExport => 'برآمد کریں';
+  String get noteActionExport => 'ایکسپورٹ کریں';
 
   @override
   String get noteActionShare => 'شیئر کریں';
@@ -495,7 +495,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'نوٹ بک اپنے تمام نوٹس سمیت حذف ہو جائے گی (کل: $count)۔ اس عمل کو واپس نہیں کیا جا سکتا۔';
+    return 'نوٹ بک اپنے تمام نوٹ سمیت حذف ہو جائے گی (کل: $count)۔ اس عمل کو واپس نہیں کیا جا سکتا۔';
   }
 
   @override

@@ -13,6 +13,7 @@ All 158 strings were read in full against the English text and the key name. Rev
 - `emptyRecentNotesTitle`: “لا شيء حديث” → “لا توجد ملاحظات حديثة” — stilted
 - `legalAndSupportSectionTitle`: “الشؤون القانونية والدعم” → “المعلومات القانونية والدعم” — “legal affairs” is heavier than meant
 - `openLinkFailedMessage`: “تعذر فتح الرابط. حاول مرة أخرى.” → “تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.” — missing diacritic; politeness now matches the other messages
+- `verseSectionTitle, dailyReminderToggle, dailyReminderBody`: “آية اليوم / التذكير بالآية” → “… آية الكتاب المقدس” — “آية” alone suggests a Quran verse; the app shows Bible verses (added in the final pass)
 
 ## Left as is, worth a native speaker
 - The app name is written “أترامنت” in Arabic script while 38 other languages keep “Atrament”.

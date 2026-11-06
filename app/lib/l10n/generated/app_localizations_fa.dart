@@ -256,7 +256,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get paperStyleLined => 'خط‌دار';
 
   @override
-  String get paperStyleDotGrid => 'نقطه‌چین';
+  String get paperStyleDotGrid => 'نقطه‌ای';
 
   @override
   String get paperStyleGrid => 'شطرنجی';
@@ -274,7 +274,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get paperStyleVellum => 'کاغذ پوستی';
 
   @override
-  String get fontSectionTitle => 'قلم یادداشت‌ها';
+  String get fontSectionTitle => 'فونت یادداشت‌ها';
 
   @override
   String get fontSystem => 'سیستم';
@@ -304,7 +304,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get themeSystem => 'سیستم';
 
   @override
-  String get verseSectionTitle => 'نمایش آیه روز';
+  String get verseSectionTitle => 'نمایش آیه روزانه کتاب مقدس';
 
   @override
   String get verseModeWatermark => 'نقش‌آب';
@@ -322,7 +322,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get notificationsSectionTitle => 'اعلان‌ها';
 
   @override
-  String get dailyReminderToggle => 'یادآور روزانه آیه';
+  String get dailyReminderToggle => 'یادآور روزانه آیه کتاب مقدس';
 
   @override
   String get reminderTimeLabel => 'زمان یادآور';
@@ -332,7 +332,7 @@ class AppLocalizationsFa extends AppLocalizations {
       'اعلان‌ها در تنظیمات سیستم خاموش هستند.';
 
   @override
-  String get dailyReminderBody => 'آیه امروز شما آماده است.';
+  String get dailyReminderBody => 'آیه کتاب مقدس امروز شما آماده است.';
 
   @override
   String get privacySectionTitle => 'حریم خصوصی';
