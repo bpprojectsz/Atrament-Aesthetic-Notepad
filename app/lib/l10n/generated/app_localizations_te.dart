@@ -257,13 +257,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get paperStyleSectionTitle => 'కాగితం శైలి';
 
   @override
-  String get paperStyleLined => 'గీతల';
+  String get paperStyleLined => 'గీతలతో';
 
   @override
-  String get paperStyleDotGrid => 'చుక్కల';
+  String get paperStyleDotGrid => 'చుక్కలతో';
 
   @override
-  String get paperStyleGrid => 'గడుల';
+  String get paperStyleGrid => 'గడులతో';
 
   @override
   String get paperStyleBlank => 'ఖాళీ';
@@ -308,7 +308,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get themeSystem => 'సిస్టమ్';
 
   @override
-  String get verseSectionTitle => 'నేటి వచన ప్రదర్శన';
+  String get verseSectionTitle => 'నేటి బైబిల్ వచన ప్రదర్శన';
 
   @override
   String get verseModeWatermark => 'వాటర్‌మార్క్';
@@ -326,7 +326,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get notificationsSectionTitle => 'నోటిఫికేషన్‌లు';
 
   @override
-  String get dailyReminderToggle => 'రోజువారీ వచన రిమైండర్';
+  String get dailyReminderToggle => 'రోజువారీ బైబిల్ వచన రిమైండర్';
 
   @override
   String get reminderTimeLabel => 'రిమైండర్ సమయం';
@@ -336,7 +336,7 @@ class AppLocalizationsTe extends AppLocalizations {
       'సిస్టమ్ సెట్టింగ్‌లలో నోటిఫికేషన్‌లు ఆఫ్ చేయబడ్డాయి.';
 
   @override
-  String get dailyReminderBody => 'మీ నేటి వచనం సిద్ధంగా ఉంది.';
+  String get dailyReminderBody => 'మీ నేటి బైబిల్ వచనం సిద్ధంగా ఉంది.';
 
   @override
   String get privacySectionTitle => 'గోప్యత';

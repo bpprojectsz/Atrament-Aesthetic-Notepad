@@ -306,7 +306,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get themeSystem => 'सिस्टीम';
 
   @override
-  String get verseSectionTitle => 'आजच्या वचनाचे प्रदर्शन';
+  String get verseSectionTitle => 'आजच्या बायबल वचनाचे प्रदर्शन';
 
   @override
   String get verseModeWatermark => 'वॉटरमार्क';
@@ -324,7 +324,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get notificationsSectionTitle => 'सूचना';
 
   @override
-  String get dailyReminderToggle => 'दैनिक वचन स्मरणपत्र';
+  String get dailyReminderToggle => 'दैनिक बायबल वचन स्मरणपत्र';
 
   @override
   String get reminderTimeLabel => 'स्मरणपत्राची वेळ';
@@ -334,7 +334,7 @@ class AppLocalizationsMr extends AppLocalizations {
       'सिस्टीम सेटिंग्जमध्ये सूचना बंद आहेत.';
 
   @override
-  String get dailyReminderBody => 'तुमचे आजचे वचन तयार आहे.';
+  String get dailyReminderBody => 'तुमचे आजचे बायबल वचन तयार आहे.';
 
   @override
   String get privacySectionTitle => 'गोपनीयता';
@@ -361,7 +361,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get rateAppTitle => 'Atrament ला रेटिंग द्या';
 
   @override
-  String get rateAppSubtitle => 'अ‍ॅप आवडले का? एक परीक्षण लिहा';
+  String get rateAppSubtitle => 'अ‍ॅप आवडले का? एक पुनरावलोकन लिहा';
 
   @override
   String get shareAppTitle => 'Atrament शेअर करा';

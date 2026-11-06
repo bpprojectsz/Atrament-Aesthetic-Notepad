@@ -307,7 +307,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get themeSystem => 'சிஸ்டம்';
 
   @override
-  String get verseSectionTitle => 'இன்றைய வசன காட்சி';
+  String get verseSectionTitle => 'இன்றைய வசனக் காட்சி';
 
   @override
   String get verseModeWatermark => 'நீர்க்குறி';
@@ -316,10 +316,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get verseModeHeader => 'தலைப்புப் பகுதி';
 
   @override
-  String get verseModeFooter => 'அடிக்குறிப்பு';
+  String get verseModeFooter => 'அடிப்பகுதி';
 
   @override
-  String get verseModeOff => 'அணைவு';
+  String get verseModeOff => 'முடக்கம்';
 
   @override
   String get notificationsSectionTitle => 'அறிவிப்புகள்';

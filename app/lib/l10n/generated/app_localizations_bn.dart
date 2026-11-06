@@ -262,7 +262,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get paperStyleDotGrid => 'বিন্দুযুক্ত';
 
   @override
-  String get paperStyleGrid => 'চৌকো ঘর';
+  String get paperStyleGrid => 'গ্রিড';
 
   @override
   String get paperStyleBlank => 'ফাঁকা';
@@ -307,7 +307,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get themeSystem => 'সিস্টেম';
 
   @override
-  String get verseSectionTitle => 'আজকের পদ প্রদর্শন';
+  String get verseSectionTitle => 'আজকের বাইবেলের পদ প্রদর্শন';
 
   @override
   String get verseModeWatermark => 'ওয়াটারমার্ক';
@@ -325,7 +325,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get notificationsSectionTitle => 'বিজ্ঞপ্তি';
 
   @override
-  String get dailyReminderToggle => 'প্রতিদিনের পদের রিমাইন্ডার';
+  String get dailyReminderToggle => 'প্রতিদিনের বাইবেলের পদের রিমাইন্ডার';
 
   @override
   String get reminderTimeLabel => 'রিমাইন্ডারের সময়';
@@ -335,7 +335,7 @@ class AppLocalizationsBn extends AppLocalizations {
       'সিস্টেম সেটিংসে বিজ্ঞপ্তি বন্ধ করা আছে।';
 
   @override
-  String get dailyReminderBody => 'আপনার আজকের পদ প্রস্তুত।';
+  String get dailyReminderBody => 'আপনার আজকের বাইবেলের পদ প্রস্তুত।';
 
   @override
   String get privacySectionTitle => 'গোপনীয়তা';
@@ -462,7 +462,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get noteActionRename => 'নাম পরিবর্তন করুন';
 
   @override
-  String get noteActionMoveToNotebook => 'নোটবুকে সরান';
+  String get noteActionMoveToNotebook => 'নোটবুকে নিয়ে যান';
 
   @override
   String get noteActionEdit => 'সম্পাদনা করুন';
@@ -474,7 +474,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get noteActionShare => 'শেয়ার করুন';
 
   @override
-  String get moveToNotebookTitle => 'নোটবুকে সরান';
+  String get moveToNotebookTitle => 'নোটবুকে নিয়ে যান';
 
   @override
   String get moveToNotebookEmptyBody =>

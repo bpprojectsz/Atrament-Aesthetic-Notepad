@@ -47,15 +47,15 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get saveFailedMessage => 'सहेजा नहीं जा सका। कृपया पुनः प्रयास करें।';
+  String get saveFailedMessage => 'सहेजा नहीं जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get exportFailedMessage =>
-      'इस नोट को निर्यात नहीं किया जा सका। कृपया पुनः प्रयास करें।';
+      'इस नोट को निर्यात नहीं किया जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get shareFailedMessage =>
-      'शेयर मेनू नहीं खुल सका। कृपया पुनः प्रयास करें।';
+      'शेयर मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get settingsTitle => 'सेटिंग्स';
@@ -98,7 +98,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get sortByModified => 'अंतिम संपादन';
 
   @override
-  String get sortByCreated => 'निर्माण तिथि';
+  String get sortByCreated => 'बनाए जाने की तारीख';
 
   @override
   String get sortByTitle => 'शीर्षक';
@@ -366,11 +366,11 @@ class AppLocalizationsHi extends AppLocalizations {
   String get shareAppTitle => 'Atrament शेयर करें';
 
   @override
-  String get shareAppSubtitle => 'किसी दोस्त को बताएँ';
+  String get shareAppSubtitle => 'किसी दोस्त को बताएं';
 
   @override
   String get shareAppMessage =>
-      'Atrament आज़माएँ — कागज़ की बनावट वाला बिना ध्यान-भंग नोटपैड।';
+      'Atrament आज़माएं — कागज़ की बनावट वाला, ध्यान न भटकाने वाला नोटपैड।';
 
   @override
   String get languageSectionTitle => 'भाषा';
@@ -400,7 +400,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get premiumAlreadyProMessage =>
-      'आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!';
+      'आपके पास पहले से “विज्ञापन हटाएं” सुविधा है। धन्यवाद!';
 
   @override
   String get supportSectionTitle => 'सहायता';
@@ -429,7 +429,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get debugLogClearedMessage => 'डीबग लॉग साफ़ कर दिया गया।';
 
   @override
-  String get premiumUnlockLabel => 'विज्ञापन हमेशा के लिए हटाएँ';
+  String get premiumUnlockLabel => 'विज्ञापन हमेशा के लिए हटाएं';
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
@@ -447,7 +447,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get emptyAllNotesTitle => 'अभी कोई नोट नहीं';
 
   @override
-  String get emptyAllNotesBody => 'अपना पहला नोट लिखने के लिए + बटन दबाएँ।';
+  String get emptyAllNotesBody => 'अपना पहला नोट लिखने के लिए + बटन दबाएं।';
 
   @override
   String get emptyRecentNotesTitle => 'कुछ भी हाल का नहीं';
@@ -459,7 +459,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get noteActionRename => 'नाम बदलें';
 
   @override
-  String get noteActionMoveToNotebook => 'नोटबुक में ले जाएँ';
+  String get noteActionMoveToNotebook => 'नोटबुक में ले जाएं';
 
   @override
   String get noteActionEdit => 'संपादित करें';
@@ -471,14 +471,14 @@ class AppLocalizationsHi extends AppLocalizations {
   String get noteActionShare => 'साझा करें';
 
   @override
-  String get moveToNotebookTitle => 'नोटबुक में ले जाएँ';
+  String get moveToNotebookTitle => 'नोटबुक में ले जाएं';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएँ।';
+      'अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएं।';
 
   @override
-  String get moveToNotebookCreateRow => 'नई नोटबुक बनाएँ';
+  String get moveToNotebookCreateRow => 'नई नोटबुक बनाएं';
 
   @override
   String get notebookActionRename => 'नाम बदलें';
@@ -494,7 +494,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'इससे नोटबुक और उसके $count नोट हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।';
+    return 'इससे नोटबुक और उसके $count नोट हटा दिए जाएंगे। इसे पूर्ववत नहीं किया जा सकता।';
   }
 
   @override
@@ -511,7 +511,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get openLinkFailedMessage =>
-      'लिंक नहीं खोल सका। कृपया पुनः प्रयास करें।';
+      'लिंक नहीं खोला जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get openSourceLicensesRow => 'ओपन-सोर्स लाइसेंस';

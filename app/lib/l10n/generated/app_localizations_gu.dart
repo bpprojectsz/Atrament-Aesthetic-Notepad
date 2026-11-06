@@ -306,7 +306,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get themeSystem => 'સિસ્ટમ';
 
   @override
-  String get verseSectionTitle => 'આજના વચનનું પ્રદર્શન';
+  String get verseSectionTitle => 'આજના બાઇબલ વચનનું પ્રદર્શન';
 
   @override
   String get verseModeWatermark => 'વૉટરમાર્ક';
@@ -324,7 +324,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get notificationsSectionTitle => 'સૂચનાઓ';
 
   @override
-  String get dailyReminderToggle => 'દૈનિક વચન રિમાઇન્ડર';
+  String get dailyReminderToggle => 'દૈનિક બાઇબલ વચન રિમાઇન્ડર';
 
   @override
   String get reminderTimeLabel => 'રિમાઇન્ડરનો સમય';
@@ -334,7 +334,7 @@ class AppLocalizationsGu extends AppLocalizations {
       'સિસ્ટમ સેટિંગ્સમાં સૂચનાઓ બંધ છે.';
 
   @override
-  String get dailyReminderBody => 'તમારું આજનું વચન તૈયાર છે.';
+  String get dailyReminderBody => 'તમારું આજનું બાઇબલ વચન તૈયાર છે.';
 
   @override
   String get privacySectionTitle => 'ગોપનીયતા';
@@ -403,7 +403,7 @@ class AppLocalizationsGu extends AppLocalizations {
       'તમારી પાસે પહેલેથી જ “જાહેરાતો દૂર કરો” છે. આભાર!';
 
   @override
-  String get supportSectionTitle => 'સહાય';
+  String get supportSectionTitle => 'સપોર્ટ';
 
   @override
   String get shareDebugLogButton => 'ડિબગ લૉગ શેર કરો';
@@ -497,7 +497,7 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'કાનૂની અને સહાય';
+  String get legalAndSupportSectionTitle => 'કાનૂની માહિતી અને સપોર્ટ';
 
   @override
   String get privacyPolicyRow => 'ગોપનીયતા નીતિ';
@@ -506,7 +506,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get termsOfServiceRow => 'સેવાની શરતો';
 
   @override
-  String get supportRow => 'સહાય';
+  String get supportRow => 'સપોર્ટ';
 
   @override
   String get openLinkFailedMessage =>
