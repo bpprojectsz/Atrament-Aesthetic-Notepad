@@ -162,11 +162,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Note lock was turned off because this device has no screen lock or biometrics set up.';
 
   @override
-  String get biometricEnableReason => 'Confirm it is you to turn on note lock';
+  String get biometricEnableReason => 'Confirm your identity to turn on note lock';
 
   @override
   String get biometricDisableReason =>
-      'Confirm it is you to turn off note lock';
+      'Confirm your identity to turn off note lock';
 
   @override
   String get biometricShareReason => 'Unlock to share or export this note';
@@ -473,7 +473,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get moveToNotebookEmptyBody =>
-      'No other notebooks yet. Create one to organise this note.';
+      'No other notebooks yet. Create one to organize this note.';
 
   @override
   String get moveToNotebookCreateRow => 'Create new notebook';

@@ -192,7 +192,11 @@ def build_report(in_dir, out_path, worst):
         low = [x for x in rows if x["score"] < 0.25]
         lines.append(f"| {r['locale']} | {mean:.2f} | {len(low)} |")
         detail.append((r["locale"], sorted(rows, key=lambda x: x["score"])[:worst]))
-    lines += ["", "Not screened (no free model): " + ", ".join(NO_MODEL), ""]
+    missing = [r["locale"] for r in results if "rows" not in r]
+    if missing:
+        lines += ["", "Not screened by this engine: " + ", ".join(sorted(missing)), ""]
+    else:
+        lines += ["", f"All {len(results)} language files were screened by this engine.", ""]
     for locale, rows in detail:
         lines += [f"## {locale}", ""]
         for x in rows:

@@ -47,7 +47,7 @@ Each non-English string was machine-translated back to English and compared with
 | zh | 0.50 | 47 |
 | zh_Hant | 0.40 | 59 |
 
-Not screened (no free model): gu, mr, ta, te
+All 42 language files were screened by this engine.
 
 ## ar
 
