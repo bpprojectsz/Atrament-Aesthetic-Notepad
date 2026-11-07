@@ -14,3 +14,6 @@ All 158 strings were read in full against the English text and the key name. Rev
 ## Left as is, worth a native speaker
 - “குறிப்பு” for note also means reference/hint (the machine kept reading it as “reference”); it is the standard word for a note in Tamil apps.
 - Loanwords (நோட்புக், சிஸ்டம், பார்ச்மென்ட்) are normal in Tamil UI.
+
+## Editor toolbar labels (second set, read later)
+Editor labels (106) read in full against Quill’s English: `subscript` “கீழ்ஒட்டு” → “கீழெழுத்து” and `superscript` “மேல்ஒட்டு” → “மேலெழுத்து” (ஒட்டு means paste/stick), `strikeThrough` spacing, `checkedList` aligned with the app’s “சரிபார்ப்புப் பட்டியல்”. Open: Tamil has no letter case, so “Case sensitive” (`caseSensitive`) is meaningless for Tamil text.

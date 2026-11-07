@@ -16,3 +16,6 @@ All 158 strings were read in full against the English text and the key name. Rev
 ## Left as is, worth a native speaker
 - Many labels (Bold, Italic, Heading, Checklist, Header, Footer, Watermark) are kept in English, which matches how Filipino software UIs are written.
 - The separate editor-label set for Filipino was not part of this read.
+
+## Editor toolbar labels (second set, read later)
+Editor labels (106) read in full against Quill’s English: `image` “Imahe” → “Larawan” to match the messages. Consistent with the app’s Undo/Redo/Heading/Checklist wording. Many labels are deliberately English loanwords (Bold, Italic, Heading, Code block).
