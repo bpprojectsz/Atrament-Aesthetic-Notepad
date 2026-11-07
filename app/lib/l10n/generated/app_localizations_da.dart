@@ -398,7 +398,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get premiumRestoreButton => 'Gendan køb';
 
   @override
-  String get premiumAlreadyProMessage => 'Du har allerede “Fjern reklamer”. Tak!';
+  String get premiumAlreadyProMessage =>
+      'Du har allerede “Fjern reklamer”. Tak!';
 
   @override
   String get supportSectionTitle => 'Support';

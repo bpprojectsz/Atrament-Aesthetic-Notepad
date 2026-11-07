@@ -477,13 +477,13 @@ abstract class AppLocalizations {
   /// No description provided for @biometricEnableReason.
   ///
   /// In en, this message translates to:
-  /// **'Confirm it is you to turn on note lock'**
+  /// **'Confirm your identity to turn on note lock'**
   String get biometricEnableReason;
 
   /// No description provided for @biometricDisableReason.
   ///
   /// In en, this message translates to:
-  /// **'Confirm it is you to turn off note lock'**
+  /// **'Confirm your identity to turn off note lock'**
   String get biometricDisableReason;
 
   /// No description provided for @biometricShareReason.
@@ -1053,7 +1053,7 @@ abstract class AppLocalizations {
   /// No description provided for @moveToNotebookEmptyBody.
   ///
   /// In en, this message translates to:
-  /// **'No other notebooks yet. Create one to organise this note.'**
+  /// **'No other notebooks yet. Create one to organize this note.'**
   String get moveToNotebookEmptyBody;
 
   /// No description provided for @moveToNotebookCreateRow.

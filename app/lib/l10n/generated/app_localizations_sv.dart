@@ -402,7 +402,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get premiumRestoreButton => 'Återställ köp';
 
   @override
-  String get premiumAlreadyProMessage => 'Du har redan ”Ta bort annonser”. Tack!';
+  String get premiumAlreadyProMessage =>
+      'Du har redan ”Ta bort annonser”. Tack!';
 
   @override
   String get supportSectionTitle => 'Support';

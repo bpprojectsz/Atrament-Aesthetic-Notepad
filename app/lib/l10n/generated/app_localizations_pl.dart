@@ -113,7 +113,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get formatUnderline => 'Podkreślenie';
 
   @override
-  String get formatHeading => 'Nagłówek strony';
+  String get formatHeading => 'Nagłówek';
 
   @override
   String get formatBulletList => 'Lista punktowana';

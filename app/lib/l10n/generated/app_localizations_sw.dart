@@ -102,7 +102,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get sortByCreated => 'Tarehe ya kuundwa';
 
   @override
-  String get sortByTitle => 'Kichwa cha ukurasa';
+  String get sortByTitle => 'Kichwa';
 
   @override
   String get formatBold => 'Herufi nzito';
@@ -326,7 +326,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get notificationsSectionTitle => 'Arifa';
 
   @override
-  String get dailyReminderToggle => 'Kikumbusho cha kila siku cha aya ya Biblia';
+  String get dailyReminderToggle =>
+      'Kikumbusho cha kila siku cha aya ya Biblia';
 
   @override
   String get reminderTimeLabel => 'Muda wa kikumbusho';
@@ -403,7 +404,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get premiumRestoreButton => 'Rejesha ununuzi';
 
   @override
-  String get premiumAlreadyProMessage => 'Tayari una “Ondoa matangazo”. Asante!';
+  String get premiumAlreadyProMessage =>
+      'Tayari una “Ondoa matangazo”. Asante!';
 
   @override
   String get supportSectionTitle => 'Msaada';

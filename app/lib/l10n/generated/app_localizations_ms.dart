@@ -312,7 +312,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get verseModeWatermark => 'Tera air';
 
   @override
-  String get verseModeHeader => 'Tajuk bahagian';
+  String get verseModeHeader => 'Pengepala';
 
   @override
   String get verseModeFooter => 'Pengaki';

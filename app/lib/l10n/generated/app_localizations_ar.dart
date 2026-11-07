@@ -366,8 +366,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get shareAppSubtitle => 'أخبر صديقًا';
 
   @override
-  String get shareAppMessage =>
-      'جرّب Atrament — مفكرة بلا تشتيت بملمس الورق.';
+  String get shareAppMessage => 'جرّب Atrament — مفكرة بلا تشتيت بملمس الورق.';
 
   @override
   String get languageSectionTitle => 'اللغة';
@@ -505,7 +504,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get supportRow => 'الدعم';
 
   @override
-  String get openLinkFailedMessage => 'تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.';
+  String get openLinkFailedMessage =>
+      'تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.';
 
   @override
   String get openSourceLicensesRow => 'تراخيص المصادر المفتوحة';

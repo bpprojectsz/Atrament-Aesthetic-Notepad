@@ -401,7 +401,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get premiumRestoreButton => 'Ripristina acquisti';
 
   @override
-  String get premiumAlreadyProMessage => 'Hai già “Rimuovi pubblicità”. Grazie!';
+  String get premiumAlreadyProMessage =>
+      'Hai già “Rimuovi pubblicità”. Grazie!';
 
   @override
   String get supportSectionTitle => 'Assistenza';

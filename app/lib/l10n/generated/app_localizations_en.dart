@@ -162,7 +162,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'Note lock was turned off because this device has no screen lock or biometrics set up.';
 
   @override
-  String get biometricEnableReason => 'Confirm your identity to turn on note lock';
+  String get biometricEnableReason =>
+      'Confirm your identity to turn on note lock';
 
   @override
   String get biometricDisableReason =>

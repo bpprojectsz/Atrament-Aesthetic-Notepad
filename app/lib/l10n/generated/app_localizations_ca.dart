@@ -313,7 +313,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get verseModeWatermark => 'Marca d’aigua';
 
   @override
-  String get verseModeHeader => 'Títol de secció';
+  String get verseModeHeader => 'Capçalera';
 
   @override
   String get verseModeFooter => 'Peu de pàgina';

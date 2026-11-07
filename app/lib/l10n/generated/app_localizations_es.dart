@@ -402,7 +402,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get premiumRestoreButton => 'Restaurar compras';
 
   @override
-  String get premiumAlreadyProMessage => 'Ya tienes “Quitar anuncios”. ¡Gracias!';
+  String get premiumAlreadyProMessage =>
+      'Ya tienes “Quitar anuncios”. ¡Gracias!';
 
   @override
   String get supportSectionTitle => 'Soporte';
