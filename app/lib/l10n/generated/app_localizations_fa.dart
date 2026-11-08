@@ -512,4 +512,8 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'مجوزهای متن‌باز';
+
+  @override
+  String get notificationChannelDescription =>
+      'یادآور روزانه اختیاری شما برای آیه کتاب مقدس';
 }

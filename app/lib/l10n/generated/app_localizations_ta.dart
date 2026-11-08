@@ -518,4 +518,8 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'திறந்த மூல உரிமங்கள்';
+
+  @override
+  String get notificationChannelDescription =>
+      'உங்கள் விருப்பத்திற்குரிய தினசரி வசன நினைவூட்டல்';
 }

@@ -514,4 +514,8 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'ઓપન સોર્સ લાઇસન્સ';
+
+  @override
+  String get notificationChannelDescription =>
+      'તમારું વૈકલ્પિક દૈનિક બાઇબલ વચન રિમાઇન્ડર';
 }

@@ -515,4 +515,8 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'ओपन-सोर्स लाइसेंस';
+
+  @override
+  String get notificationChannelDescription =>
+      'आपका वैकल्पिक दैनिक बाइबल वचन स्मरण';
 }

@@ -502,4 +502,8 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'ใบอนุญาตโอเพนซอร์ส';
+
+  @override
+  String get notificationChannelDescription =>
+      'การแจ้งเตือนข้อพระคัมภีร์ประจำวันแบบเลือกได้ของคุณ';
 }

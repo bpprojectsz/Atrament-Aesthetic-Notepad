@@ -519,4 +519,8 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Mga lisensya ng open source';
+
+  @override
+  String get notificationChannelDescription =>
+      'Ang opsyonal mong pang-araw-araw na paalala ng talata sa Bibliya';
 }

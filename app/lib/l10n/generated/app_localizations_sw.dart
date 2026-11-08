@@ -520,4 +520,8 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Leseni za chanzo huria';
+
+  @override
+  String get notificationChannelDescription =>
+      'Kikumbusho chako cha hiari cha kila siku cha aya ya Biblia';
 }

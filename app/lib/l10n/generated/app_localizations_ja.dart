@@ -491,4 +491,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'オープンソースライセンス';
+
+  @override
+  String get notificationChannelDescription => '任意で設定できる毎日の聖句リマインダー';
 }

@@ -519,4 +519,8 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Licencje open source';
+
+  @override
+  String get notificationChannelDescription =>
+      'Twoje opcjonalne codzienne przypomnienie o wersecie biblijnym';
 }

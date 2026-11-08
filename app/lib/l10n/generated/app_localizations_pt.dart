@@ -519,6 +519,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Licenças de código aberto';
+
+  @override
+  String get notificationChannelDescription =>
+      'Seu lembrete diário opcional de um versículo bíblico';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -1041,4 +1045,8 @@ class AppLocalizationsPtPt extends AppLocalizationsPt {
 
   @override
   String get openSourceLicensesRow => 'Licenças de código aberto';
+
+  @override
+  String get notificationChannelDescription =>
+      'O seu lembrete diário opcional de um versículo bíblico';
 }

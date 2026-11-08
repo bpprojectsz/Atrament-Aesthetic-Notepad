@@ -520,4 +520,8 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Nyílt forráskódú licencek';
+
+  @override
+  String get notificationChannelDescription =>
+      'Az opcionális napi igeemlékeztetőd';
 }

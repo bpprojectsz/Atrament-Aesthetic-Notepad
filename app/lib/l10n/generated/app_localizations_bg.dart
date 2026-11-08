@@ -524,4 +524,8 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Лицензи за отворен код';
+
+  @override
+  String get notificationChannelDescription =>
+      'Вашето незадължително ежедневно напомняне за стих от Библията';
 }

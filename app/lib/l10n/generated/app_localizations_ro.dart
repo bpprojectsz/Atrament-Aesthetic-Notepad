@@ -517,4 +517,8 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Licențe open source';
+
+  @override
+  String get notificationChannelDescription =>
+      'Memento-ul tău zilnic opțional cu un verset biblic';
 }

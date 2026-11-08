@@ -490,4 +490,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => '오픈 소스 라이선스';
+
+  @override
+  String get notificationChannelDescription => '선택적으로 설정하는 매일 성경 구절 알림';
 }

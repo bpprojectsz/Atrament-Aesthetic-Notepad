@@ -516,4 +516,8 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Giấy phép nguồn mở';
+
+  @override
+  String get notificationChannelDescription =>
+      'Lời nhắc hằng ngày tùy chọn về câu Kinh Thánh của bạn';
 }

@@ -509,4 +509,8 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'تراخيص المصادر المفتوحة';
+
+  @override
+  String get notificationChannelDescription =>
+      'تذكيرك الاختياري اليومي بآية من الكتاب المقدس';
 }

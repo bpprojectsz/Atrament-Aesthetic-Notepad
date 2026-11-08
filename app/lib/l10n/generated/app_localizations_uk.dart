@@ -517,4 +517,8 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Ліцензії з відкритим кодом';
+
+  @override
+  String get notificationChannelDescription =>
+      'Ваше необов’язкове щоденне нагадування про вірш із Біблії';
 }

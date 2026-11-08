@@ -517,4 +517,8 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Lisensi sumber terbuka';
+
+  @override
+  String get notificationChannelDescription =>
+      'Pengingat harian ayat Alkitab opsional Anda';
 }

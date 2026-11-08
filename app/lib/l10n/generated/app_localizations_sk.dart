@@ -514,4 +514,8 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Licencie open source';
+
+  @override
+  String get notificationChannelDescription =>
+      'Vaše voliteľné denné pripomenutie biblického verša';
 }

@@ -523,4 +523,8 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Άδειες ανοιχτού κώδικα';
+
+  @override
+  String get notificationChannelDescription =>
+      'Η προαιρετική σας καθημερινή υπενθύμιση στίχου της Αγίας Γραφής';
 }

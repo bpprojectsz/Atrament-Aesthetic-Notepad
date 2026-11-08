@@ -518,4 +518,8 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'ఓపెన్ సోర్స్ లైసెన్స్‌లు';
+
+  @override
+  String get notificationChannelDescription =>
+      'మీ ఐచ్ఛిక రోజువారీ బైబిల్ వచన రిమైండర్';
 }

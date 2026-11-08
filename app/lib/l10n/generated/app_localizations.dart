@@ -1127,6 +1127,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Open-source licenses'**
   String get openSourceLicensesRow;
+
+  /// No description provided for @notificationChannelDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Your optional daily Bible verse reminder'**
+  String get notificationChannelDescription;
 }
 
 class _AppLocalizationsDelegate

@@ -516,4 +516,8 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'اوپن سورس لائسنسز';
+
+  @override
+  String get notificationChannelDescription =>
+      'آپ کی اختیاری روزانہ بائبل آیت کی یاد دہانی';
 }

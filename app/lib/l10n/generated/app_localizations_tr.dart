@@ -515,4 +515,8 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Açık kaynak lisansları';
+
+  @override
+  String get notificationChannelDescription =>
+      'İsteğe bağlı günlük Kutsal Kitap ayeti hatırlatıcınız';
 }

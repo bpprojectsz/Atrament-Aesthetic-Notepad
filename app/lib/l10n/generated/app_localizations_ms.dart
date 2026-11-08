@@ -516,4 +516,8 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Lesen sumber terbuka';
+
+  @override
+  String get notificationChannelDescription =>
+      'Peringatan harian ayat Alkitab pilihan anda';
 }

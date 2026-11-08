@@ -502,4 +502,8 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'רישיונות קוד פתוח';
+
+  @override
+  String get notificationChannelDescription =>
+      'התזכורת היומית האופציונלית שלך לפסוק';
 }

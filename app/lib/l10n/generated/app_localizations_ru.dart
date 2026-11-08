@@ -519,4 +519,8 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Лицензии с открытым исходным кодом';
+
+  @override
+  String get notificationChannelDescription =>
+      'Ваше необязательное ежедневное напоминание о стихе из Библии';
 }

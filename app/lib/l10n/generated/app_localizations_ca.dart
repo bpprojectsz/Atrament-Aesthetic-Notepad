@@ -518,4 +518,8 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Llicències de codi obert';
+
+  @override
+  String get notificationChannelDescription =>
+      'El teu recordatori diari opcional d’un vers de la Bíblia';
 }

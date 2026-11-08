@@ -519,4 +519,8 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Licenser för öppen källkod';
+
+  @override
+  String get notificationChannelDescription =>
+      'Din valfria dagliga påminnelse om en bibelvers';
 }

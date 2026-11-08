@@ -523,4 +523,8 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Open-Source-Lizenzen';
+
+  @override
+  String get notificationChannelDescription =>
+      'Deine optionale tägliche Erinnerung an einen Bibelvers';
 }

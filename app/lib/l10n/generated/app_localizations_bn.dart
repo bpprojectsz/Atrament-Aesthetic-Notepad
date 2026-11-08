@@ -518,4 +518,8 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'ওপেন সোর্স লাইসেন্স';
+
+  @override
+  String get notificationChannelDescription =>
+      'আপনার ঐচ্ছিক প্রতিদিনের বাইবেলের পদের রিমাইন্ডার';
 }

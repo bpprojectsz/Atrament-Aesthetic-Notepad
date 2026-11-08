@@ -520,4 +520,8 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Avoimen lähdekoodin lisenssit';
+
+  @override
+  String get notificationChannelDescription =>
+      'Valinnainen päivittäinen muistutus Raamatun jakeesta';
 }

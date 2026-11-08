@@ -486,6 +486,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => '开源许可';
+
+  @override
+  String get notificationChannelDescription => '你可选的每日经文提醒';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hans`).
@@ -975,4 +978,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get openSourceLicensesRow => '開放原始碼授權';
+
+  @override
+  String get notificationChannelDescription => '你可選用的每日經文提醒';
 }
