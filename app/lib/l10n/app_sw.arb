@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Masharti ya Huduma",
   "supportRow": "Msaada",
   "openLinkFailedMessage": "Kiungo hakikuweza kufunguliwa. Tafadhali jaribu tena.",
-  "openSourceLicensesRow": "Leseni za chanzo huria"
+  "openSourceLicensesRow": "Leseni za chanzo huria",
+  "notificationChannelDescription": "Kikumbusho chako cha hiari cha kila siku cha aya ya Biblia"
 }

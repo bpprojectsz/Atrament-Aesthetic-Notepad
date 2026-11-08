@@ -27,6 +27,11 @@ class NotificationService implements ReminderGateway {
 
   bool _initialized = false;
 
+  // Shown in Android's notification settings. English until the app calls
+  // [localizeChannel] with the user's language.
+  String _channelName = 'Daily verse reminder';
+  String _channelDescription = 'Your optional daily Bible verse reminder';
+
   /// Initializes the plugin and timezone database. Call once at app
   /// startup. Never throws — a failure here means notifications simply
   /// won't fire, which degrades gracefully rather than blocking the app.
@@ -77,10 +82,10 @@ class NotificationService implements ReminderGateway {
               AndroidFlutterLocalNotificationsPlugin
             >();
         await androidPlugin?.createNotificationChannel(
-          const AndroidNotificationChannel(
+          AndroidNotificationChannel(
             AppConstants.dailyVerseNotificationChannelId,
-            'Daily Verse',
-            description: 'Your opt-in daily scripture reminder',
+            _channelName,
+            description: _channelDescription,
             importance: Importance.defaultImportance,
           ),
         );
@@ -93,6 +98,42 @@ class NotificationService implements ReminderGateway {
         stackTrace,
         message: 'Notification service failed to initialize',
         context: 'notification_service.initialize',
+        severity: ErrorSeverity.warning,
+      );
+    }
+  }
+
+  /// Sets the channel name and description in the user's language. Android
+  /// lets an app rename an existing channel by creating it again with the
+  /// same id; the user's other channel settings are kept.
+  @override
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  }) async {
+    if (name == _channelName && description == _channelDescription) return;
+    _channelName = name;
+    _channelDescription = description;
+    if (!_initialized || !Platform.isAndroid) return;
+    try {
+      await _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >()
+          ?.createNotificationChannel(
+            AndroidNotificationChannel(
+              AppConstants.dailyVerseNotificationChannelId,
+              name,
+              description: description,
+              importance: Importance.defaultImportance,
+            ),
+          );
+    } catch (error, stackTrace) {
+      ErrorHandler.report(
+        error,
+        stackTrace,
+        message: 'Could not rename the notification channel',
+        context: 'notification_service.localizeChannel',
         severity: ErrorSeverity.warning,
       );
     }
@@ -162,8 +203,8 @@ class NotificationService implements ReminderGateway {
           notificationDetails: NotificationDetails(
             android: AndroidNotificationDetails(
               AppConstants.dailyVerseNotificationChannelId,
-              'Daily Verse',
-              channelDescription: 'Your opt-in daily scripture reminder',
+              _channelName,
+              channelDescription: _channelDescription,
               importance: Importance.defaultImportance,
               priority: Priority.defaultPriority,
               // Lets the whole verse be read when the notification expands.

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "सेवा की शर्तें",
   "supportRow": "सहायता",
   "openLinkFailedMessage": "लिंक नहीं खोला जा सका। कृपया फिर से कोशिश करें।",
-  "openSourceLicensesRow": "ओपन-सोर्स लाइसेंस"
+  "openSourceLicensesRow": "ओपन-सोर्स लाइसेंस",
+  "notificationChannelDescription": "आपका वैकल्पिक दैनिक बाइबल वचन स्मरण"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "服務條款",
   "supportRow": "支援",
   "openLinkFailedMessage": "無法開啟連結，請再試一次。",
-  "openSourceLicensesRow": "開放原始碼授權"
+  "openSourceLicensesRow": "開放原始碼授權",
+  "notificationChannelDescription": "你可選用的每日經文提醒"
 }

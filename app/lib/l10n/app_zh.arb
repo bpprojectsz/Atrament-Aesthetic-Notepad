@@ -171,5 +171,6 @@
   "termsOfServiceRow": "服务条款",
   "supportRow": "支持",
   "openLinkFailedMessage": "无法打开链接。请重试。",
-  "openSourceLicensesRow": "开源许可"
+  "openSourceLicensesRow": "开源许可",
+  "notificationChannelDescription": "你可选的每日经文提醒"
 }

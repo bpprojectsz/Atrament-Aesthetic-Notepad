@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Όροι χρήσης",
   "supportRow": "Υποστήριξη",
   "openLinkFailedMessage": "Δεν ήταν δυνατό το άνοιγμα του συνδέσμου. Δοκιμάστε ξανά.",
-  "openSourceLicensesRow": "Άδειες ανοιχτού κώδικα"
+  "openSourceLicensesRow": "Άδειες ανοιχτού κώδικα",
+  "notificationChannelDescription": "Η προαιρετική σας καθημερινή υπενθύμιση στίχου της Αγίας Γραφής"
 }

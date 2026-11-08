@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Felhasználási feltételek",
   "supportRow": "Támogatás",
   "openLinkFailedMessage": "A hivatkozás nem nyitható meg. Próbáld újra.",
-  "openSourceLicensesRow": "Nyílt forráskódú licencek"
+  "openSourceLicensesRow": "Nyílt forráskódú licencek",
+  "notificationChannelDescription": "Az opcionális napi igeemlékeztetőd"
 }

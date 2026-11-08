@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Podmínky služby",
   "supportRow": "Podpora",
   "openLinkFailedMessage": "Odkaz se nepodařilo otevřít. Zkuste to znovu.",
-  "openSourceLicensesRow": "Open source licence"
+  "openSourceLicensesRow": "Open source licence",
+  "notificationChannelDescription": "Vaše volitelné denní připomenutí biblického verše"
 }

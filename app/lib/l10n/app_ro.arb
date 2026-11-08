@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Termeni și condiții",
   "supportRow": "Asistență",
   "openLinkFailedMessage": "Linkul nu a putut fi deschis. Încearcă din nou.",
-  "openSourceLicensesRow": "Licențe open source"
+  "openSourceLicensesRow": "Licențe open source",
+  "notificationChannelDescription": "Memento-ul tău zilnic opțional cu un verset biblic"
 }

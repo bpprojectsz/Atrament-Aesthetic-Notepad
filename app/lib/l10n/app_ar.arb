@@ -171,5 +171,6 @@
   "termsOfServiceRow": "شروط الخدمة",
   "supportRow": "الدعم",
   "openLinkFailedMessage": "تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.",
-  "openSourceLicensesRow": "تراخيص المصادر المفتوحة"
+  "openSourceLicensesRow": "تراخيص المصادر المفتوحة",
+  "notificationChannelDescription": "تذكيرك الاختياري اليومي بآية من الكتاب المقدس"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Terms of Service",
   "supportRow": "Support",
   "openLinkFailedMessage": "Couldn't open the link. Please try again.",
-  "openSourceLicensesRow": "Open-source licenses"
+  "openSourceLicensesRow": "Open-source licenses",
+  "notificationChannelDescription": "Your optional daily Bible verse reminder"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "شرایط خدمات",
   "supportRow": "پشتیبانی",
   "openLinkFailedMessage": "پیوند باز نشد. لطفاً دوباره تلاش کنید.",
-  "openSourceLicensesRow": "مجوزهای متن‌باز"
+  "openSourceLicensesRow": "مجوزهای متن‌باز",
+  "notificationChannelDescription": "یادآور روزانه اختیاری شما برای آیه کتاب مقدس"
 }

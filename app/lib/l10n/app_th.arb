@@ -171,5 +171,6 @@
   "termsOfServiceRow": "ข้อกำหนดการให้บริการ",
   "supportRow": "การสนับสนุน",
   "openLinkFailedMessage": "เปิดลิงก์ไม่สำเร็จ โปรดลองอีกครั้ง",
-  "openSourceLicensesRow": "ใบอนุญาตโอเพนซอร์ส"
+  "openSourceLicensesRow": "ใบอนุญาตโอเพนซอร์ส",
+  "notificationChannelDescription": "การแจ้งเตือนข้อพระคัมภีร์ประจำวันแบบเลือกได้ของคุณ"
 }

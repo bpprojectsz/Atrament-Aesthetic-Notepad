@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Умови користування",
   "supportRow": "Підтримка",
   "openLinkFailedMessage": "Не вдалося відкрити посилання. Спробуйте ще раз.",
-  "openSourceLicensesRow": "Ліцензії з відкритим кодом"
+  "openSourceLicensesRow": "Ліцензії з відкритим кодом",
+  "notificationChannelDescription": "Ваше необов’язкове щоденне нагадування про вірш із Біблії"
 }

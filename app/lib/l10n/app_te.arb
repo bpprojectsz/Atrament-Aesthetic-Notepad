@@ -171,5 +171,6 @@
   "termsOfServiceRow": "సేవా నిబంధనలు",
   "supportRow": "మద్దతు",
   "openLinkFailedMessage": "లింక్‌ను తెరవడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
-  "openSourceLicensesRow": "ఓపెన్ సోర్స్ లైసెన్స్‌లు"
+  "openSourceLicensesRow": "ఓపెన్ సోర్స్ లైసెన్స్‌లు",
+  "notificationChannelDescription": "మీ ఐచ్ఛిక రోజువారీ బైబిల్ వచన రిమైండర్"
 }

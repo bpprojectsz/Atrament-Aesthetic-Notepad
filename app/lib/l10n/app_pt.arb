@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Termos de Serviço",
   "supportRow": "Suporte",
   "openLinkFailedMessage": "Não foi possível abrir o link. Tente novamente.",
-  "openSourceLicensesRow": "Licenças de código aberto"
+  "openSourceLicensesRow": "Licenças de código aberto",
+  "notificationChannelDescription": "Seu lembrete diário opcional de um versículo bíblico"
 }

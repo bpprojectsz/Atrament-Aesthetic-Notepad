@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Syarat Perkhidmatan",
   "supportRow": "Sokongan",
   "openLinkFailedMessage": "Pautan tidak dapat dibuka. Sila cuba lagi.",
-  "openSourceLicensesRow": "Lesen sumber terbuka"
+  "openSourceLicensesRow": "Lesen sumber terbuka",
+  "notificationChannelDescription": "Peringatan harian ayat Alkitab pilihan anda"
 }

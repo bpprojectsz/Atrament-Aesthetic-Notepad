@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Hizmet Şartları",
   "supportRow": "Destek",
   "openLinkFailedMessage": "Bağlantı açılamadı. Lütfen tekrar deneyin.",
-  "openSourceLicensesRow": "Açık kaynak lisansları"
+  "openSourceLicensesRow": "Açık kaynak lisansları",
+  "notificationChannelDescription": "İsteğe bağlı günlük Kutsal Kitap ayeti hatırlatıcınız"
 }

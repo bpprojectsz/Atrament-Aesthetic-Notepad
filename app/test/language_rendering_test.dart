@@ -45,6 +45,12 @@ class _FakeGateway implements ReminderGateway {
 
   @override
   Future<void> cancelReminders() async {}
+
+  @override
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  }) async {}
 }
 
 const double _phoneWidth = 360;

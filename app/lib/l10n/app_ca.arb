@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Condicions del servei",
   "supportRow": "Assistència",
   "openLinkFailedMessage": "No s’ha pogut obrir l’enllaç. Torna-ho a provar.",
-  "openSourceLicensesRow": "Llicències de codi obert"
+  "openSourceLicensesRow": "Llicències de codi obert",
+  "notificationChannelDescription": "El teu recordatori diari opcional d’un vers de la Bíblia"
 }

@@ -36,6 +36,16 @@ class _FakeGateway implements ReminderGateway {
     log.add('cancel');
     cancelCalls++;
   }
+
+  final List<(String, String)> channels = [];
+
+  @override
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  }) async {
+    channels.add((name, description));
+  }
 }
 
 void main() {
@@ -298,5 +308,25 @@ void main() {
       expect(ok, isTrue, reason: 'falls back to the generic text');
       expect(gateway.scheduled.single.first.title, 'Atrament');
     });
+  });
+
+  test('the notification channel name is passed on, even with reminders off', () async {
+    final gateway = _FakeGateway();
+    final scheduler = ReminderScheduler(
+      gateway: gateway,
+      loadVerses: () async => const [],
+      clock: () => DateTime(2026, 10, 15, 12),
+    );
+    await scheduler.localizeChannel(
+      name: 'Recordatorio diario de versículo',
+      description: 'Tu recordatorio diario opcional de un versículo bíblico',
+    );
+    expect(gateway.channels, [
+      (
+        'Recordatorio diario de versículo',
+        'Tu recordatorio diario opcional de un versículo bíblico',
+      ),
+    ]);
+    expect(gateway.scheduled, isEmpty);
   });
 }

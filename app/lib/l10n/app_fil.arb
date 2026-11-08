@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Mga Tuntunin ng Serbisyo",
   "supportRow": "Suporta",
   "openLinkFailedMessage": "Hindi mabuksan ang link. Pakisubukan ulit.",
-  "openSourceLicensesRow": "Mga lisensya ng open source"
+  "openSourceLicensesRow": "Mga lisensya ng open source",
+  "notificationChannelDescription": "Ang opsyonal mong pang-araw-araw na paalala ng talata sa Bibliya"
 }

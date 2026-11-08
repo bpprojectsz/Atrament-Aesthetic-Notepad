@@ -51,7 +51,7 @@
 	  compliance mapping's explicit requirement.
 	-->
 		<key>NSFaceIDUsageDescription</key>
-		<string>To lock your notes with Face ID or fingerprint</string>
+		<string>To lock your notes with Face ID</string>
 		<!--
 	  App Tracking Transparency (Section 12: ATT, required because
 	  AdMob is active). Shown once on first launch before any

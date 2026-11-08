@@ -160,6 +160,12 @@ class _AtramentAppState extends State<AtramentApp>
       final l10n = lookupAppLocalizations(
         resolveAppLocale([wanted], AppLocalizations.supportedLocales),
       );
+      // The channel name shows in Android's notification settings even when
+      // reminders are off, so it follows the language either way.
+      await ReminderScheduler.instance.localizeChannel(
+        name: l10n.dailyReminderToggle,
+        description: l10n.notificationChannelDescription,
+      );
       await ReminderScheduler.instance.refresh(
         fallbackTitle: l10n.appName,
         fallbackBody: l10n.dailyReminderBody,

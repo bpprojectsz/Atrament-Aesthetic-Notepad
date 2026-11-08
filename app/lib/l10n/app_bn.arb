@@ -171,5 +171,6 @@
   "termsOfServiceRow": "পরিষেবার শর্তাবলি",
   "supportRow": "সহায়তা",
   "openLinkFailedMessage": "লিংক খোলা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
-  "openSourceLicensesRow": "ওপেন সোর্স লাইসেন্স"
+  "openSourceLicensesRow": "ওপেন সোর্স লাইসেন্স",
+  "notificationChannelDescription": "আপনার ঐচ্ছিক প্রতিদিনের বাইবেলের পদের রিমাইন্ডার"
 }

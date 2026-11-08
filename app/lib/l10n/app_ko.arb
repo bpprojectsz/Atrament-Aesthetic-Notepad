@@ -171,5 +171,6 @@
   "termsOfServiceRow": "서비스 약관",
   "supportRow": "지원",
   "openLinkFailedMessage": "링크를 열 수 없습니다. 다시 시도해 주세요.",
-  "openSourceLicensesRow": "오픈 소스 라이선스"
+  "openSourceLicensesRow": "오픈 소스 라이선스",
+  "notificationChannelDescription": "선택적으로 설정하는 매일 성경 구절 알림"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Nutzungsbedingungen",
   "supportRow": "Support",
   "openLinkFailedMessage": "Link konnte nicht geöffnet werden. Bitte erneut versuchen.",
-  "openSourceLicensesRow": "Open-Source-Lizenzen"
+  "openSourceLicensesRow": "Open-Source-Lizenzen",
+  "notificationChannelDescription": "Deine optionale tägliche Erinnerung an einen Bibelvers"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "سروس کی شرائط",
   "supportRow": "معاونت",
   "openLinkFailedMessage": "لنک نہیں کھل سکا۔ براہ کرم دوبارہ کوشش کریں۔",
-  "openSourceLicensesRow": "اوپن سورس لائسنسز"
+  "openSourceLicensesRow": "اوپن سورس لائسنسز",
+  "notificationChannelDescription": "آپ کی اختیاری روزانہ بائبل آیت کی یاد دہانی"
 }

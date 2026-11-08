@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Warunki korzystania z usługi",
   "supportRow": "Pomoc",
   "openLinkFailedMessage": "Nie udało się otworzyć łącza. Spróbuj ponownie.",
-  "openSourceLicensesRow": "Licencje open source"
+  "openSourceLicensesRow": "Licencje open source",
+  "notificationChannelDescription": "Twoje opcjonalne codzienne przypomnienie o wersecie biblijnym"
 }

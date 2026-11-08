@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Servicevilkår",
   "supportRow": "Support",
   "openLinkFailedMessage": "Linket kunne ikke åbnes. Prøv igen.",
-  "openSourceLicensesRow": "Open source-licenser"
+  "openSourceLicensesRow": "Open source-licenser",
+  "notificationChannelDescription": "Din valgfrie daglige påmindelse om et bibelvers"
 }

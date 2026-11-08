@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Условия за ползване",
   "supportRow": "Поддръжка",
   "openLinkFailedMessage": "Връзката не можа да се отвори. Опитайте отново.",
-  "openSourceLicensesRow": "Лицензи за отворен код"
+  "openSourceLicensesRow": "Лицензи за отворен код",
+  "notificationChannelDescription": "Вашето незадължително ежедневно напомняне за стих от Библията"
 }

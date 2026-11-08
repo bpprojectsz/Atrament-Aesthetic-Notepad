@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Käyttöehdot",
   "supportRow": "Tuki",
   "openLinkFailedMessage": "Linkkiä ei voitu avata. Yritä uudelleen.",
-  "openSourceLicensesRow": "Avoimen lähdekoodin lisenssit"
+  "openSourceLicensesRow": "Avoimen lähdekoodin lisenssit",
+  "notificationChannelDescription": "Valinnainen päivittäinen muistutus Raamatun jakeesta"
 }

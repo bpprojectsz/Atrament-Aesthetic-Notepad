@@ -171,5 +171,6 @@
   "termsOfServiceRow": "சேவை விதிமுறைகள்",
   "supportRow": "ஆதரவு",
   "openLinkFailedMessage": "இணைப்பைத் திறக்க முடியவில்லை. மீண்டும் முயலவும்.",
-  "openSourceLicensesRow": "திறந்த மூல உரிமங்கள்"
+  "openSourceLicensesRow": "திறந்த மூல உரிமங்கள்",
+  "notificationChannelDescription": "உங்கள் விருப்பத்திற்குரிய தினசரி வசன நினைவூட்டல்"
 }

@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Điều khoản dịch vụ",
   "supportRow": "Hỗ trợ",
   "openLinkFailedMessage": "Không thể mở liên kết. Vui lòng thử lại.",
-  "openSourceLicensesRow": "Giấy phép nguồn mở"
+  "openSourceLicensesRow": "Giấy phép nguồn mở",
+  "notificationChannelDescription": "Lời nhắc hằng ngày tùy chọn về câu Kinh Thánh của bạn"
 }

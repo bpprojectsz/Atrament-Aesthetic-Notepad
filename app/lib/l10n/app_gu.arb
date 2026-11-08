@@ -171,5 +171,6 @@
   "termsOfServiceRow": "સેવાની શરતો",
   "supportRow": "સપોર્ટ",
   "openLinkFailedMessage": "લિંક ખોલી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
-  "openSourceLicensesRow": "ઓપન સોર્સ લાઇસન્સ"
+  "openSourceLicensesRow": "ઓપન સોર્સ લાઇસન્સ",
+  "notificationChannelDescription": "તમારું વૈકલ્પિક દૈનિક બાઇબલ વચન રિમાઇન્ડર"
 }

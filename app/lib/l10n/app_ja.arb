@@ -171,5 +171,6 @@
   "termsOfServiceRow": "利用規約",
   "supportRow": "サポート",
   "openLinkFailedMessage": "リンクを開けませんでした。もう一度お試しください。",
-  "openSourceLicensesRow": "オープンソースライセンス"
+  "openSourceLicensesRow": "オープンソースライセンス",
+  "notificationChannelDescription": "任意で設定できる毎日の聖句リマインダー"
 }
