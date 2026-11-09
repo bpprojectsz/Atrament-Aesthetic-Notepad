@@ -59,6 +59,18 @@ jobs:
           exit $code
         working-directory: app
 
+      # The sqlite3 package downloads a prebuilt Linux library for host tests and
+      # checks its hash. On 9 Nov 2026 the runners received a different copy than
+      # the published release (the release itself is fine), which failed every
+      # test run. Tests use the runner's own SQLite instead; this edits the
+      # pubspec only inside this CI job, never in the repo or in release builds.
+      - name: Use the runner's SQLite for host tests
+        run: |
+          printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
+          sqlite3 --version || true
+          ldconfig -p | grep -i libsqlite3 | head -2
+        working-directory: app
+
       - name: Unit and widget tests
         run: |
           set +e
