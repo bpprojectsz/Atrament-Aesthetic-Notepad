@@ -766,3 +766,391 @@ class AppQuillLocalizations extends FlutterQuillLocalizations {
   String get saveImagePermissionDenied => _t('saveImagePermissionDenied');
 
 }
+
+/// Quill's own labels with a few corrections laid over them. Quill ships
+/// labels for most of the app's languages, but some are wrong or still in
+/// English for the menus a user can reach (open, copy, remove, edit, apply,
+/// visit link). Keyed by the app's language tag; see `reviews/quill-labels.md`.
+const Map<String, Map<String, String>> appQuillOverrides = <String, Map<String, String>>{
+  'ar': <String, String>{
+    'pasteLink': 'لصق رابط',
+    'ok': 'موافق',
+  },
+  'bg': <String, String>{
+    'ok': 'ОК',
+  },
+  'da': <String, String>{
+    'edit': 'Rediger',
+    'apply': 'Anvend',
+    'text': 'Tekst',
+    'visitLink': 'Besøg link',
+    'remove': 'Fjern',
+  },
+  'ja': <String, String>{
+    'apply': '適用',
+    'visitLink': 'リンクを開く',
+  },
+  'ko': <String, String>{
+    'text': '텍스트',
+  },
+  'ms': <String, String>{
+    'apply': 'Guna',
+    'text': 'Teks',
+    'visitLink': 'Lawati pautan',
+  },
+  'nl': <String, String>{
+    'remove': 'Verwijderen',
+    'edit': 'Bewerken',
+    'apply': 'Toepassen',
+    'visitLink': 'Link bezoeken',
+  },
+  'pl': <String, String>{
+    'edit': 'Edytuj',
+    'apply': 'Zastosuj',
+    'visitLink': 'Odwiedź link',
+  },
+  'sw': <String, String>{
+    'edit': 'Hariri',
+  },
+  'tr': <String, String>{
+    'open': 'Aç',
+    'text': 'Metin',
+    'save': 'Kaydet',
+  },
+  'ur': <String, String>{
+    'edit': 'ترمیم کریں',
+  },
+  'zh_Hant': <String, String>{
+    'apply': '套用',
+    'visitLink': '前往連結',
+    'open': '開啟',
+  },
+};
+
+class PatchedQuillLocalizations extends FlutterQuillLocalizations {
+  PatchedQuillLocalizations(super.locale, this._inner, this._overrides);
+
+  final FlutterQuillLocalizations _inner;
+  final Map<String, String> _overrides;
+
+  @override
+  String get pasteLink => _overrides['pasteLink'] ?? _inner.pasteLink;
+
+  @override
+  String get ok => _overrides['ok'] ?? _inner.ok;
+
+  @override
+  String get selectColor => _overrides['selectColor'] ?? _inner.selectColor;
+
+  @override
+  String get gallery => _overrides['gallery'] ?? _inner.gallery;
+
+  @override
+  String get link => _overrides['link'] ?? _inner.link;
+
+  @override
+  String get open => _overrides['open'] ?? _inner.open;
+
+  @override
+  String get copy => _overrides['copy'] ?? _inner.copy;
+
+  @override
+  String get remove => _overrides['remove'] ?? _inner.remove;
+
+  @override
+  String get save => _overrides['save'] ?? _inner.save;
+
+  @override
+  String get zoom => _overrides['zoom'] ?? _inner.zoom;
+
+  @override
+  String get saved => _overrides['saved'] ?? _inner.saved;
+
+  @override
+  String get text => _overrides['text'] ?? _inner.text;
+
+  @override
+  String get resize => _overrides['resize'] ?? _inner.resize;
+
+  @override
+  String get width => _overrides['width'] ?? _inner.width;
+
+  @override
+  String get height => _overrides['height'] ?? _inner.height;
+
+  @override
+  String get size => _overrides['size'] ?? _inner.size;
+
+  @override
+  String get small => _overrides['small'] ?? _inner.small;
+
+  @override
+  String get large => _overrides['large'] ?? _inner.large;
+
+  @override
+  String get huge => _overrides['huge'] ?? _inner.huge;
+
+  @override
+  String get clear => _overrides['clear'] ?? _inner.clear;
+
+  @override
+  String get font => _overrides['font'] ?? _inner.font;
+
+  @override
+  String get search => _overrides['search'] ?? _inner.search;
+
+  @override
+  String get camera => _overrides['camera'] ?? _inner.camera;
+
+  @override
+  String get video => _overrides['video'] ?? _inner.video;
+
+  @override
+  String get undo => _overrides['undo'] ?? _inner.undo;
+
+  @override
+  String get redo => _overrides['redo'] ?? _inner.redo;
+
+  @override
+  String get fontFamily => _overrides['fontFamily'] ?? _inner.fontFamily;
+
+  @override
+  String get fontSize => _overrides['fontSize'] ?? _inner.fontSize;
+
+  @override
+  String get bold => _overrides['bold'] ?? _inner.bold;
+
+  @override
+  String get subscript => _overrides['subscript'] ?? _inner.subscript;
+
+  @override
+  String get superscript => _overrides['superscript'] ?? _inner.superscript;
+
+  @override
+  String get italic => _overrides['italic'] ?? _inner.italic;
+
+  @override
+  String get underline => _overrides['underline'] ?? _inner.underline;
+
+  @override
+  String get strikeThrough => _overrides['strikeThrough'] ?? _inner.strikeThrough;
+
+  @override
+  String get inlineCode => _overrides['inlineCode'] ?? _inner.inlineCode;
+
+  @override
+  String get fontColor => _overrides['fontColor'] ?? _inner.fontColor;
+
+  @override
+  String get backgroundColor => _overrides['backgroundColor'] ?? _inner.backgroundColor;
+
+  @override
+  String get clearFormat => _overrides['clearFormat'] ?? _inner.clearFormat;
+
+  @override
+  String get alignLeft => _overrides['alignLeft'] ?? _inner.alignLeft;
+
+  @override
+  String get alignCenter => _overrides['alignCenter'] ?? _inner.alignCenter;
+
+  @override
+  String get alignRight => _overrides['alignRight'] ?? _inner.alignRight;
+
+  @override
+  String get alignJustify => _overrides['alignJustify'] ?? _inner.alignJustify;
+
+  @override
+  String get justifyWinWidth => _overrides['justifyWinWidth'] ?? _inner.justifyWinWidth;
+
+  @override
+  String get textDirection => _overrides['textDirection'] ?? _inner.textDirection;
+
+  @override
+  String get headerStyle => _overrides['headerStyle'] ?? _inner.headerStyle;
+
+  @override
+  String get normal => _overrides['normal'] ?? _inner.normal;
+
+  @override
+  String get heading1 => _overrides['heading1'] ?? _inner.heading1;
+
+  @override
+  String get heading2 => _overrides['heading2'] ?? _inner.heading2;
+
+  @override
+  String get heading3 => _overrides['heading3'] ?? _inner.heading3;
+
+  @override
+  String get heading4 => _overrides['heading4'] ?? _inner.heading4;
+
+  @override
+  String get heading5 => _overrides['heading5'] ?? _inner.heading5;
+
+  @override
+  String get heading6 => _overrides['heading6'] ?? _inner.heading6;
+
+  @override
+  String get numberedList => _overrides['numberedList'] ?? _inner.numberedList;
+
+  @override
+  String get bulletList => _overrides['bulletList'] ?? _inner.bulletList;
+
+  @override
+  String get checkedList => _overrides['checkedList'] ?? _inner.checkedList;
+
+  @override
+  String get codeBlock => _overrides['codeBlock'] ?? _inner.codeBlock;
+
+  @override
+  String get quote => _overrides['quote'] ?? _inner.quote;
+
+  @override
+  String get increaseIndent => _overrides['increaseIndent'] ?? _inner.increaseIndent;
+
+  @override
+  String get decreaseIndent => _overrides['decreaseIndent'] ?? _inner.decreaseIndent;
+
+  @override
+  String get insertURL => _overrides['insertURL'] ?? _inner.insertURL;
+
+  @override
+  String get visitLink => _overrides['visitLink'] ?? _inner.visitLink;
+
+  @override
+  String get enterLink => _overrides['enterLink'] ?? _inner.enterLink;
+
+  @override
+  String get enterMedia => _overrides['enterMedia'] ?? _inner.enterMedia;
+
+  @override
+  String get edit => _overrides['edit'] ?? _inner.edit;
+
+  @override
+  String get apply => _overrides['apply'] ?? _inner.apply;
+
+  @override
+  String get hex => _overrides['hex'] ?? _inner.hex;
+
+  @override
+  String get material => _overrides['material'] ?? _inner.material;
+
+  @override
+  String get color => _overrides['color'] ?? _inner.color;
+
+  @override
+  String get lineheight => _overrides['lineheight'] ?? _inner.lineheight;
+
+  @override
+  String get findText => _overrides['findText'] ?? _inner.findText;
+
+  @override
+  String get moveToPreviousOccurrence => _overrides['moveToPreviousOccurrence'] ?? _inner.moveToPreviousOccurrence;
+
+  @override
+  String get moveToNextOccurrence => _overrides['moveToNextOccurrence'] ?? _inner.moveToNextOccurrence;
+
+  @override
+  String get savedUsingTheNetwork => _overrides['savedUsingTheNetwork'] ?? _inner.savedUsingTheNetwork;
+
+  @override
+  String get savedUsingLocalStorage => _overrides['savedUsingLocalStorage'] ?? _inner.savedUsingLocalStorage;
+
+  @override
+  String theImageHasBeenSavedAt(String imagePath) =>
+      _overrides['theImageHasBeenSavedAt']?.replaceAll('{imagePath}', imagePath) ??
+      _inner.theImageHasBeenSavedAt(imagePath);
+
+  @override
+  String get errorWhileSavingImage => _overrides['errorWhileSavingImage'] ?? _inner.errorWhileSavingImage;
+
+  @override
+  String get pleaseEnterTextForYourLink => _overrides['pleaseEnterTextForYourLink'] ?? _inner.pleaseEnterTextForYourLink;
+
+  @override
+  String get pleaseEnterTheLinkURL => _overrides['pleaseEnterTheLinkURL'] ?? _inner.pleaseEnterTheLinkURL;
+
+  @override
+  String get pleaseEnterAValidImageURL => _overrides['pleaseEnterAValidImageURL'] ?? _inner.pleaseEnterAValidImageURL;
+
+  @override
+  String get pleaseEnterAValidVideoURL => _overrides['pleaseEnterAValidVideoURL'] ?? _inner.pleaseEnterAValidVideoURL;
+
+  @override
+  String get photo => _overrides['photo'] ?? _inner.photo;
+
+  @override
+  String get image => _overrides['image'] ?? _inner.image;
+
+  @override
+  String get caseSensitivityAndWholeWordSearch => _overrides['caseSensitivityAndWholeWordSearch'] ?? _inner.caseSensitivityAndWholeWordSearch;
+
+  @override
+  String get caseSensitive => _overrides['caseSensitive'] ?? _inner.caseSensitive;
+
+  @override
+  String get wholeWord => _overrides['wholeWord'] ?? _inner.wholeWord;
+
+  @override
+  String get insertImage => _overrides['insertImage'] ?? _inner.insertImage;
+
+  @override
+  String get pickAPhotoFromYourGallery => _overrides['pickAPhotoFromYourGallery'] ?? _inner.pickAPhotoFromYourGallery;
+
+  @override
+  String get takeAPhotoUsingYourCamera => _overrides['takeAPhotoUsingYourCamera'] ?? _inner.takeAPhotoUsingYourCamera;
+
+  @override
+  String get pasteAPhotoUsingALink => _overrides['pasteAPhotoUsingALink'] ?? _inner.pasteAPhotoUsingALink;
+
+  @override
+  String get pickAVideoFromYourGallery => _overrides['pickAVideoFromYourGallery'] ?? _inner.pickAVideoFromYourGallery;
+
+  @override
+  String get recordAVideoUsingYourCamera => _overrides['recordAVideoUsingYourCamera'] ?? _inner.recordAVideoUsingYourCamera;
+
+  @override
+  String get pasteAVideoUsingALink => _overrides['pasteAVideoUsingALink'] ?? _inner.pasteAVideoUsingALink;
+
+  @override
+  String get close => _overrides['close'] ?? _inner.close;
+
+  @override
+  String get searchSettings => _overrides['searchSettings'] ?? _inner.searchSettings;
+
+  @override
+  String get cut => _overrides['cut'] ?? _inner.cut;
+
+  @override
+  String get paste => _overrides['paste'] ?? _inner.paste;
+
+  @override
+  String get insertTable => _overrides['insertTable'] ?? _inner.insertTable;
+
+  @override
+  String get insertVideo => _overrides['insertVideo'] ?? _inner.insertVideo;
+
+  @override
+  String get errorUnexpectedSavingImage => _overrides['errorUnexpectedSavingImage'] ?? _inner.errorUnexpectedSavingImage;
+
+  @override
+  String get successImageSavedGallery => _overrides['successImageSavedGallery'] ?? _inner.successImageSavedGallery;
+
+  @override
+  String get successImageSaved => _overrides['successImageSaved'] ?? _inner.successImageSaved;
+
+  @override
+  String get successImageDownloaded => _overrides['successImageDownloaded'] ?? _inner.successImageDownloaded;
+
+  @override
+  String get openGallery => _overrides['openGallery'] ?? _inner.openGallery;
+
+  @override
+  String get openFileLocation => _overrides['openFileLocation'] ?? _inner.openFileLocation;
+
+  @override
+  String get openFile => _overrides['openFile'] ?? _inner.openFile;
+
+  @override
+  String get saveImagePermissionDenied => _overrides['saveImagePermissionDenied'] ?? _inner.saveImagePermissionDenied;
+
+}

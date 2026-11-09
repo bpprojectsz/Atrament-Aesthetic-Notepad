@@ -98,12 +98,20 @@ void main() {
     test('Quill gets a language it supports for every app language', () {
       expect(quillLocaleFor(const Locale('nb')), const Locale('no'));
       expect(quillLocaleFor(const Locale('de')), const Locale('de'));
-      expect(quillLocaleFor(const Locale('pt', 'PT')), const Locale('pt'));
+      // Chinese and Portuguese variants are chosen by country code in Quill.
+      expect(quillLocaleFor(const Locale('pt', 'PT')), const Locale('pt', 'BR'));
+      expect(quillLocaleFor(const Locale('pt', 'BR')), const Locale('pt', 'BR'));
       expect(
         quillLocaleFor(
           const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
         ),
-        const Locale('zh'),
+        const Locale('zh', 'TW'),
+      );
+      expect(
+        quillLocaleFor(
+          const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+        ),
+        const Locale('zh', 'CN'),
       );
       // A language flutter_quill has no translations for falls back to English.
       expect(quillLocaleFor(const Locale('xx')), const Locale('en'));
@@ -129,6 +137,40 @@ void main() {
         );
         expect(l10n.theImageHasBeenSavedAt('/a/b.png'), isNot(contains('{')));
       }
+    });
+
+    test('Chinese and Portuguese get the right editor variant', () async {
+      const delegate = QuillLocalizationsFallbackDelegate();
+      final tw = await delegate.load(
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
+      );
+      final cn = await delegate.load(
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+      );
+      expect(tw.save, '儲存', reason: 'Traditional Chinese uses the Taiwan file');
+      expect(cn.save, '保存');
+      final br = await delegate.load(const Locale('pt', 'BR'));
+      final pt = await delegate.load(const Locale('pt', 'PT'));
+      expect(br.redo, 'Refazer');
+      expect(pt.redo, 'Refazer', reason: 'the plain pt file leaves “Redo” in English');
+    });
+
+    test('corrected editor labels replace the wrong ones', () async {
+      const delegate = QuillLocalizationsFallbackDelegate();
+      Future<FlutterQuillLocalizations> load(String code) =>
+          delegate.load(Locale(code));
+      expect((await load('ko')).text, '텍스트');
+      expect((await load('nl')).remove, 'Verwijderen');
+      expect((await load('nl')).edit, 'Bewerken');
+      expect((await load('ja')).apply, '適用');
+      expect((await load('tr')).open, 'Aç');
+      expect((await load('da')).visitLink, 'Besøg link');
+      expect((await load('ar')).pasteLink, 'لصق رابط');
+      expect((await load('ar')).ok, 'موافق');
+      expect((await load('pl')).apply, 'Zastosuj');
+      // The overlay changes only what it lists.
+      expect((await load('de')).open, 'Öffnen');
+      expect((await load('nl')).copy, 'Kopieer');
     });
 
     test('every set has the same labels', () {

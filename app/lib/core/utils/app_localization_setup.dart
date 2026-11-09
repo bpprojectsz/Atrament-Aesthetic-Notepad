@@ -1,22 +1,31 @@
+import 'package:atrament/core/utils/locale_utils.dart';
 import 'package:atrament/core/utils/quill_extra_localizations.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:flutter/foundation.dart' show SynchronousFuture, visibleForTesting;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_quill/flutter_quill.dart' show FlutterQuillLocalizations;
 
-/// The language flutter_quill should use for [locale].
+/// The language (and variant) flutter_quill should use for [locale].
 ///
-/// flutter_quill ships its own translations and does not cover every language
-/// the app has. It knows Norwegian as `no` (the app uses `nb`). Languages it
-/// lacks entirely either have translations of the app's own
-/// ([appQuillTranslations]) or fall back to English. Without this, the editor
-/// cannot find its labels in those languages.
+/// flutter_quill picks Chinese and Portuguese variants by *country code*, so
+/// the script and region of the app's language have to be turned into one:
+/// Traditional Chinese uses its Taiwan file, Simplified its mainland file, and
+/// both kinds of Portuguese use its Brazilian file, which is the complete one
+/// (its plain Portuguese file leaves labels in English). Norwegian is `no` in
+/// Quill. Languages Quill lacks have translations of the app's own
+/// ([appQuillTranslations]) or fall back to English.
 @visibleForTesting
 Locale quillLocaleFor(Locale locale) {
-  final code = locale.languageCode == 'nb' || locale.languageCode == 'nn'
-      ? 'no'
-      : locale.languageCode;
-  final candidate = Locale(code);
+  switch (locale.languageCode) {
+    case 'zh':
+      return Locale('zh', locale.scriptCode == 'Hant' ? 'TW' : 'CN');
+    case 'pt':
+      return const Locale('pt', 'BR');
+    case 'nb':
+    case 'nn':
+      return const Locale('no');
+  }
+  final candidate = Locale(locale.languageCode);
   return FlutterQuillLocalizations.delegate.isSupported(candidate)
       ? candidate
       : const Locale('en');
@@ -31,14 +40,21 @@ class QuillLocalizationsFallbackDelegate
   bool isSupported(Locale locale) => true;
 
   @override
-  Future<FlutterQuillLocalizations> load(Locale locale) {
+  Future<FlutterQuillLocalizations> load(Locale locale) async {
     final own = appQuillTranslations[locale.languageCode];
     if (own != null) {
       return SynchronousFuture<FlutterQuillLocalizations>(
         AppQuillLocalizations(locale.languageCode, own),
       );
     }
-    return FlutterQuillLocalizations.delegate.load(quillLocaleFor(locale));
+    final inner = await FlutterQuillLocalizations.delegate.load(
+      quillLocaleFor(locale),
+    );
+    final fixes =
+        appQuillOverrides[localeTag(locale)] ??
+        appQuillOverrides[locale.languageCode];
+    if (fixes == null) return inner;
+    return PatchedQuillLocalizations(locale.languageCode, inner, fixes);
   }
 
   @override
