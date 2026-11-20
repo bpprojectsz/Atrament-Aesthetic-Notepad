@@ -13,9 +13,9 @@ Current batch: **none started.** The next batches are planned below and wait on 
 | Repository | https://github.com/bpprojectsz/Atrament-Aesthetic-Notepad (**public**) |
 | Flutter app | `app/` |
 | `main` | `660235c` — contains phases 0–11 (merged) |
-| `languages` | `c3da42e` + the docs commit — **50+ commits ahead of `main`**, not merged |
+| `languages` | `6ae159c` (docs commit on top of `c3da42e`) — **51 commits ahead of `main`**, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `42589664459` on `c3da42e` (Compile Check, task `check`) |
+| Last green CI | run `42589664459` on `c3da42e` (Compile Check, task `check`); the docs commit changed no code, so no new run was needed |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
