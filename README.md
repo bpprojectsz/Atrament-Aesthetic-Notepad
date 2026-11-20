@@ -1,5 +1,8 @@
 # Atrament — Aesthetic Notepad
 
+> **Project docs:** start with [`docs/handoff.md`](docs/handoff.md) (current state and next steps), then
+> [`docs/blueprint.md`](docs/blueprint.md) (how the app works, file map) and [`docs/decision.md`](docs/decision.md) (why).
+
 A premium, distraction-free notepad with paper textures, freehand
 handwriting, and daily ambient scripture. Offline-first, no account
 required, no backend.
@@ -19,7 +22,7 @@ atrament/
 │   │   │                    biometrics, share) — gated behind dart:io
 │   │   ├── screens/         Top-level screens
 │   │   ├── widgets/         Reusable UI components
-│   │   ├── l10n/            ARB translation files (11 locales)
+│   │   ├── l10n/            ARB translation files (43 language options)
 │   │   └── main.dart
 │   ├── assets/               Paper textures, fonts, verse JSON data
 │   ├── android/ ios/          Platform projects
@@ -30,7 +33,9 @@ atrament/
 │                            screenshot specs
 ├── .github/workflows/       Android CI (manual trigger)
 ├── codemagic.yaml           iOS CI (TestFlight)
-└── FILE_MANIFEST.md         Running list of every file in this repo
+├── docs/                    blueprint.md · decision.md · handoff.md (project memory)
+├── reviews/ reports/        translation review records and back-translation reports
+└── tools/                   CI checks and agent helper scripts (tools/dev)
 ```
 
 ## Why the website isn't Flutter Web
@@ -48,9 +53,7 @@ flutter pub get
 flutter run
 ```
 
-Requires **Flutter 3.24.0 exactly** (pinned in `pubspec.yaml` — the
-codebase has been written and reviewed against this specific version's
-API surface; newer or older SDKs may not match).
+Requires Flutter **3.47.x** (`>=3.47.0 <3.48.0`, pinned in `pubspec.yaml`).
 
 ### Before your first build
 
@@ -58,8 +61,7 @@ Several values throughout the codebase are placeholders marked
 `com.[youraccount].atrament` or `REPLACE:` — these must be filled in with
 real values before the app will build (bundle ID/namespace) or before
 submitting to a store (AdMob unit IDs, IAP product IDs, Team ID, privacy
-policy URL). See `FILE_MANIFEST.md` for the full list of what's been
-generated and what still needs your account-specific values.
+policy URL). See `docs/handoff.md` for what is still open.
 
 **The bundle ID / namespace placeholder in particular blocks even a local
 debug build** — unlike the AdMob test IDs (which are real, working Google
