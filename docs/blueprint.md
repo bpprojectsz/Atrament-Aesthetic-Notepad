@@ -165,7 +165,9 @@ A one-time "Remove Ads" product. The provider emits typed purchase results (succ
 show localized messages. An ad-free flag is cached so paying users never see an ad flash; on iOS restore is user-initiated only.
 
 ### 6.11 Review and share prompts (`core/services/engagement_service.dart`)
-Native review sheet (`in_app_review`) after **20** successful saves and **≥5 days** since install, with a **30-day** cooldown between attempts.
+Native review sheet (`in_app_review`) after **20** successful saves on **≥3 distinct days of use** (`pref_save_days`: local dates with a successful save,
+capped at 3 entries), repeating no sooner than **60 days** after our last attempt (`reviewDue` is the pure rule). It asks `InterstitialService.claimReviewSlot()` first:
+refused while an ad is loading/showing or was shown within **10 minutes**; when granted, ads wait 10 minutes after the sheet. A refusal records nothing, so the next qualifying save asks again.
 Settings has an always-visible Rate row (opens the store listing; on iOS it needs the real App Store ID — placeholder `id0000000000` today).
 
 ### 6.12 Localization (the largest subsystem)
@@ -313,8 +315,8 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`core/services/app_lock.dart`** (193 lines) — Result of asking to open protected content.
   - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`, `platform/biometric_service.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/settings_screen.dart`, `widgets/lock_gate.dart`
-- **`core/services/engagement_service.dart`** (233 lines) — Owns all engagement gating: review prompt, share-app prompt, ATT request. Every decision is a pure predicate over counters and timestamps stored in SharedPreferences. Callers report events ("note saved", "export complete
-  - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`
+- **`core/services/engagement_service.dart`** (289 lines) — Owns all engagement gating: review prompt, share-app prompt, ATT request. Every decision is a pure predicate over counters and timestamps stored in SharedPreferences. Callers report events ("note saved", "export complete
+  - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`, `platform/interstitial_service.dart`
   - used by: `main.dart`, `screens/note_editor_screen.dart`, `screens/settings_screen.dart`
 - **`core/services/export_page_renderer.dart`** (308 lines) — One rendered page: raw RGBA pixels.
   - uses: `core/utils/export_helper.dart`
@@ -340,7 +342,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`core/utils/app_theme.dart`** (58 lines) — Carries the app's real theme choice (light, dark or parchment) inside [ThemeData]. Flutter's own `Brightness` only knows light and dark, so Parchment (a light theme with its own warm colors) was indistinguishable from Li
   - uses: `core/utils/constants.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/premium_screen.dart`, `screens/settings_screen.dart`, `widgets/app_scaffold.dart`, `widgets/chips_row.dart` (+16 more)
-- **`core/utils/constants.dart`** (318 lines) — Semantic design tokens for Atrament (Section 17 of the blueprint). Widget code must never reference raw hex values directly — always go through [AppColors], [AppTypography], [AppSpacing], or [AppRadius] so a theme mode s
+- **`core/utils/constants.dart`** (319 lines) — Semantic design tokens for Atrament (Section 17 of the blueprint). Widget code must never reference raw hex values directly — always go through [AppColors], [AppTypography], [AppSpacing], or [AppRadius] so a theme mode s
   - used by: `core/providers/locale_provider.dart`, `core/providers/subscription_provider.dart`, `core/providers/theme_provider.dart`, `core/providers/verse_provider.dart`, `core/services/app_lock.dart`, `core/services/engagement_service.dart`, `core/services/iap_service.dart`, `core/services/local_storage.dart` (+31 more)
 - **`core/utils/date_formatter.dart`** (65 lines) — Bucket returned by [DateFormatter.relativeBucket]. The widget layer maps each value to a localized label (e.g. `l10n.today`, `l10n.yesterday`).
   - used by: `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
@@ -380,9 +382,9 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`platform/debug_log_service.dart`** (121 lines) — Persists errors reported through [ErrorHandler] to a local text file, and exports that file via the system share sheet. Wired in as [ErrorHandler.reportHook] from `main.dart` — `ErrorHandler` itself stays platform-agnost
   - uses: `core/utils/error_handler.dart`
   - used by: `main.dart`, `screens/settings_screen.dart`
-- **`platform/interstitial_service.dart`** (263 lines) — Owns interstitial load-and-show. Every countable user action feeds ONE combined counter (see the `record…` methods). After [actionThreshold] actions an ad becomes PENDING, and it is shown on the first counting action at 
+- **`platform/interstitial_service.dart`** (291 lines) — Owns interstitial load-and-show. Every countable user action feeds ONE combined counter (see the `record…` methods). After [actionThreshold] actions an ad becomes PENDING, and it is shown on the first counting action at 
   - uses: `core/services/iap_service.dart`, `core/utils/error_handler.dart`, `platform/admob_service.dart`
-  - used by: `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
+  - used by: `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `core/services/engagement_service.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`platform/notification_service.dart`** (249 lines) — Local-only notification scheduling for the opt-in daily verse reminder. No server-side push infrastructure — everything here is scheduled on the device via `flutter_local_notifications` (Section 7).
   - uses: `core/services/reminder_scheduler.dart`, `core/utils/constants.dart`, `core/utils/error_handler.dart`
   - used by: `main.dart`, `screens/settings_screen.dart`

@@ -3,7 +3,7 @@
 > **New agent: start here.** Then read `docs/blueprint.md` (how the app works, file map) and `docs/decision.md` (why).
 > Update this file and `decision.md` at the end of **every** batch (checklist at the bottom).
 
-Last updated: after batch 13 (consent failure), on branch `languages`. CI green (run 44887311168). Batch 12 (ad frequency) is also done.
+Last updated: after batch 14 (review prompt), on branch `languages`. CI green (run 44888398159). Batches 12 and 13 are also done.
 Current batch: **none in progress.** Next: batch 13 (consent failure). The owner answered all five open decisions (see §5).
 
 ## 1. Where things are
@@ -15,7 +15,7 @@ Current batch: **none in progress.** Next: batch 13 (consent failure). The owner
 | `main` | `660235c` — contains phases 0–11 (merged) |
 | `languages` | see `git log` (batch 12 final = `ef8d44a`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `44887311168` on `85a7e61` (Compile Check, task `check`) — includes batches 12 and 13 |
+| Last green CI | run `44888398159` on `411ae1a` (Compile Check, task `check`) — includes batches 12, 13 and 14 |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
@@ -50,7 +50,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 ## 5. Owner decisions (all answered 21 Nov 2026; recorded as D-090…D-094)
 
 1. **Ad triggers:** 15 counting points through one combined persisted counter; every 9th action makes an ad *pending*; 9-minute gap (D-096…D-098). **Built (batch 12).**
-2. **Review prompt:** 20 saves, ≥3 distinct days of use, 60-day repeat, never on the same save as an interstitial nor within 10 minutes of one. **Batch 14.**
+2. **Review prompt:** 20 saves, ≥3 distinct days of use, 60-day repeat, never on the same save as an interstitial nor within 10 minutes of one. **Built (batch 14).**
 3. **Image-PDF memory:** measure first, then fix, then re-measure. **Batch 17.**
 4. **`file_picker`:** KEEP; it stays on the outstanding ledger (batch 16 not scheduled).
 5. **Machine re-check + device checklist:** after the batches below (batch 18).
@@ -61,7 +61,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 |---|---|---|---|
 | 12 | **BUILT, CI green** — Ad frequency | 5-minute spacing, timer persisted (guard against the clock moving backwards); triggers per decision 1; counters persisted if approved | `ads_rules_test` updated and green; blueprint §6.9 + decision.md updated |
 | 13 | **BUILT, CI green** — Consent failure | One pure function `consentOutcome` (Google yes → request; Google no incl. declined → don't; error/timeout reading the answer → **allow** and retry once at the next foreground; failed update still reads Google's saved status; also returns whether to show "Privacy choices"). Unit-tested for every combination | tests green; the real SDK error paths remain **unverifiable without a device** — say so |
-| 14 | Review prompt | Rules from decision 2; store the set of days with a successful save; never within the proximity window of an interstitial | tests green |
+| 14 | **BUILT, CI green** — Review prompt | Rules from decision 2; store the set of days with a successful save; never within the proximity window of an interstitial | tests green |
 | 15 | Privacy page (`website/privacy.html`) | Ads via AdMob and Google's consent form (EEA/UK, some US states); declining may still show limited/non-personalized ads; if the form cannot be shown the app still asks Google and Google applies the last saved choice; where "Privacy choices" is; fonts are bundled (no downloads); OS backups; iOS tracking prompt; local reminders. Page is English only and **must be deployed by the owner**. Also update `store_submission/DATA_BACKING.md` (App Store privacy label / Play Data Safety answers) so it says the same thing; the owner submits the actual forms | text matches the shipped behaviour of batches 12–14 (write it last); DATA_BACKING.md consistent |
 | 16 | *(not scheduled — owner kept `file_picker`, D-093)* | Remove `file_picker` only if the owner later asks | CI green; owner's next APK build is the real confirmation |
 | 17 | Image-PDF memory | Add a CI measurement (peak RSS for 10/50/100 pages), then render → compress → release one page at a time, then re-measure and report both numbers | before/after numbers recorded in decision.md |
