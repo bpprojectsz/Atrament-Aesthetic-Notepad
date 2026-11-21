@@ -40,10 +40,16 @@ void main() {
   });
 
   group('one combined counter', () {
+    var attempts = 0;
+
     setUp(() {
       SharedPreferences.setMockInitialValues({});
       service.resetCountersForTesting();
+      attempts = 0;
+      service.showAttemptForTesting = () async => attempts++;
     });
+
+    tearDown(() => service.showAttemptForTesting = null);
 
     test('save, create, export and delete all count', () async {
       await service.recordNoteSave();
@@ -62,10 +68,12 @@ void main() {
         await service.showAfterExport();
       }
       expect(service.pendingActionCount, 8);
+      expect(attempts, 0);
 
       await service.showAfterNotebookDelete();
 
       expect(service.pendingActionCount, 0);
+      expect(attempts, 1);
     });
   });
 
@@ -97,6 +105,7 @@ void main() {
         InterstitialService.prefActionCount: 8,
       });
       service.simulateRestartForTesting();
+      service.showAttemptForTesting = () async {};
 
       await service.showAfterExport();
 

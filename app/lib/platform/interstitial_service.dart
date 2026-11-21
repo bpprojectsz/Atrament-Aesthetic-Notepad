@@ -88,6 +88,11 @@ class InterstitialService {
     }
   }
 
+  /// Tests replace the real show step (which needs the ads and purchase
+  /// plugins) with a recorder.
+  @visibleForTesting
+  Future<void> Function()? showAttemptForTesting;
+
   /// Actions counted since the last attempt (0 to [actionThreshold] - 1).
   @visibleForTesting
   int get pendingActionCount => _actionCount;
@@ -111,6 +116,7 @@ class InterstitialService {
     _lastShownMs = null;
     _loaded = true;
     _loading = null;
+    showAttemptForTesting = null;
   }
 
   /// Forgets memory so the next action reads SharedPreferences again,
@@ -134,7 +140,7 @@ class InterstitialService {
     final due = _actionCount >= actionThreshold;
     if (due) _actionCount = 0;
     await _persist();
-    if (due) await _showIfReady();
+    if (due) await (showAttemptForTesting ?? _showIfReady)();
   }
 
   /// Called after a note is successfully persisted (except silent autosave).
