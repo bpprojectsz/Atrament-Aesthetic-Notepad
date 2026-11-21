@@ -36,13 +36,18 @@ class InterstitialService {
   /// this long before trying again, so every action does not start a load.
   static const Duration retryAfterFailure = Duration(seconds: 60);
 
+  /// An ad and the review sheet never appear within this long of each other.
+  static const Duration reviewProximity = Duration(minutes: 10);
+
   static const String prefActionCount = 'interstitial_action_count';
   static const String prefPending = 'interstitial_pending';
   static const String prefLastShownMs = 'interstitial_last_shown_ms';
+  static const String prefLastReviewMs = 'interstitial_last_review_ms';
 
   int _actionCount = 0;
   bool _pending = false;
   int? _lastShownMs;
+  int? _lastReviewMs;
   int? _lastAttemptMs; // memory only
   bool _attempting = false;
   bool _loaded = false;
@@ -66,6 +71,7 @@ class InterstitialService {
       _actionCount = prefs.getInt(prefActionCount) ?? 0;
       _pending = prefs.getBool(prefPending) ?? false;
       _lastShownMs = prefs.getInt(prefLastShownMs);
+      _lastReviewMs = prefs.getInt(prefLastReviewMs);
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,
@@ -90,6 +96,8 @@ class InterstitialService {
       await prefs.setBool(prefPending, _pending);
       final last = _lastShownMs;
       if (last != null) await prefs.setInt(prefLastShownMs, last);
+      final review = _lastReviewMs;
+      if (review != null) await prefs.setInt(prefLastReviewMs, review);
     } catch (error, stackTrace) {
       ErrorHandler.report(
         error,
@@ -130,12 +138,29 @@ class InterstitialService {
     return ms == null ? null : DateTime.fromMillisecondsSinceEpoch(ms);
   }
 
+  /// The review prompt asks for the right to appear. Granted only when no
+  /// ad is being loaded or shown right now and none was shown in the last
+  /// [reviewProximity]; if granted, the time is recorded so ads keep away
+  /// from the review sheet for the same period. The check and the
+  /// recording happen with no await between them, so an ad and the review
+  /// sheet can never both pass on the same save.
+  Future<bool> claimReviewSlot() async {
+    await _ensureLoaded();
+    final now = _now();
+    if (_attempting) return false;
+    if (!gapElapsed(now, _lastShownMs, reviewProximity)) return false;
+    _lastReviewMs = now.millisecondsSinceEpoch;
+    await _persist();
+    return true;
+  }
+
   /// Resets memory only, and marks it loaded so tests need no preferences.
   @visibleForTesting
   void resetCountersForTesting() {
     _actionCount = 0;
     _pending = false;
     _lastShownMs = null;
+    _lastReviewMs = null;
     _lastAttemptMs = null;
     _attempting = false;
     _loaded = true;
@@ -151,6 +176,7 @@ class InterstitialService {
     _actionCount = 0;
     _pending = false;
     _lastShownMs = null;
+    _lastReviewMs = null;
     _lastAttemptMs = null;
     _attempting = false;
     _loaded = false;
@@ -179,6 +205,8 @@ class InterstitialService {
     if (_attempting) return;
     final now = _now();
     if (!gapElapsed(now, _lastShownMs)) return;
+    // The review sheet was shown recently: the ad stays pending.
+    if (!gapElapsed(now, _lastReviewMs, reviewProximity)) return;
     if (!gapElapsed(now, _lastAttemptMs, retryAfterFailure)) return;
 
     _attempting = true;

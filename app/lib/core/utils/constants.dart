@@ -273,6 +273,7 @@ class AppConstants {
   static const String prefLocale = 'pref_locale';
   static const String prefInstallDate = 'pref_install_date';
   static const String prefNoteSaveCount = 'pref_note_save_count';
+  static const String prefSaveDays = 'pref_save_days';
   static const String prefExportCount = 'pref_export_count';
   static const String prefLastReviewPrompt = 'pref_last_review_prompt';
   static const String prefLastSharePrompt = 'pref_last_share_prompt';
