@@ -186,6 +186,7 @@ class _AtramentAppState extends State<AtramentApp>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       unawaited(_refreshReminders(force: false));
+      unawaited(AdMobService.instance.retryConsentIfNeeded());
     }
   }
 
