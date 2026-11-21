@@ -3,7 +3,7 @@
 > **New agent: start here.** Then read `docs/blueprint.md` (how the app works, file map) and `docs/decision.md` (why).
 > Update this file and `decision.md` at the end of **every** batch (checklist at the bottom).
 
-Last updated: after batch 12 (ad frequency, pending ad, 9-minute gap, new counting points, Home banner removed), on branch `languages`. CI green (run 44886070440).
+Last updated: after batch 13 (consent failure), on branch `languages`. CI green (run 44887311168). Batch 12 (ad frequency) is also done.
 Current batch: **none in progress.** Next: batch 13 (consent failure). The owner answered all five open decisions (see §5).
 
 ## 1. Where things are
@@ -15,7 +15,7 @@ Current batch: **none in progress.** Next: batch 13 (consent failure). The owner
 | `main` | `660235c` — contains phases 0–11 (merged) |
 | `languages` | see `git log` (batch 12 final = `ef8d44a`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `44886070440` on `ef8d44a` (Compile Check, task `check`) — includes batch 12 |
+| Last green CI | run `44887311168` on `85a7e61` (Compile Check, task `check`) — includes batches 12 and 13 |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
@@ -60,7 +60,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 | # | Batch | Scope | Done when |
 |---|---|---|---|
 | 12 | **BUILT, CI green** — Ad frequency | 5-minute spacing, timer persisted (guard against the clock moving backwards); triggers per decision 1; counters persisted if approved | `ads_rules_test` updated and green; blueprint §6.9 + decision.md updated |
-| 13 | Consent failure | One pure function `consentOutcome` (Google yes → request; Google no incl. declined → don't; error/timeout reading the answer → **allow** and retry once at the next foreground; failed update still reads Google's saved status; also returns whether to show "Privacy choices"). Unit-tested for every combination | tests green; the real SDK error paths remain **unverifiable without a device** — say so |
+| 13 | **BUILT, CI green** — Consent failure | One pure function `consentOutcome` (Google yes → request; Google no incl. declined → don't; error/timeout reading the answer → **allow** and retry once at the next foreground; failed update still reads Google's saved status; also returns whether to show "Privacy choices"). Unit-tested for every combination | tests green; the real SDK error paths remain **unverifiable without a device** — say so |
 | 14 | Review prompt | Rules from decision 2; store the set of days with a successful save; never within the proximity window of an interstitial | tests green |
 | 15 | Privacy page (`website/privacy.html`) | Ads via AdMob and Google's consent form (EEA/UK, some US states); declining may still show limited/non-personalized ads; if the form cannot be shown the app still asks Google and Google applies the last saved choice; where "Privacy choices" is; fonts are bundled (no downloads); OS backups; iOS tracking prompt; local reminders. Page is English only and **must be deployed by the owner**. Also update `store_submission/DATA_BACKING.md` (App Store privacy label / Play Data Safety answers) so it says the same thing; the owner submits the actual forms | text matches the shipped behaviour of batches 12–14 (write it last); DATA_BACKING.md consistent |
 | 16 | *(not scheduled — owner kept `file_picker`, D-093)* | Remove `file_picker` only if the owner later asks | CI green; owner's next APK build is the real confirmation |
@@ -81,7 +81,7 @@ native-speaker review (use each `reviews/<locale>.md` list); Quill's remaining ~
 - If the APK build ever fails with `Hash of downloaded file …`, it is the SQLite download problem described in decision.md D-062, not the translations (not yet observed there).
 - **Codemagic builds iOS with `flutter: stable`**, but `pubspec.yaml` pins Flutter to `>=3.47.0 <3.48.0`; if Codemagic's stable has moved past 3.47 the iOS build will refuse to resolve. Not verified (never run from here). Codemagic also runs `flutter test`, so the SQLite download problem could appear there too.
 - `README.md` was stale (said 11 locales, "Flutter 3.24 exactly", a missing `FILE_MANIFEST.md`); corrected in the documentation batch, but check it again whenever versions or folders change.
-- Consent errors currently mean "no ads" (changes in batch 13). Interstitials: batch 12 is built and tested with fakes only; the real ad show path is unverified on a device. An export or delete can be the 9th action, so an ad can follow the share sheet (owner accepted).
+- Consent: a read error now means "ads allowed" with one foreground retry (batch 13); the real UMP error paths are unverifiable without a device. Interstitials: batch 12 is built and tested with fakes only; the real ad show path is unverified on a device. An export or delete can be the 9th action, so an ad can follow the share sheet (owner accepted).
 - Image-PDF export memory grows with page count (batch 17). The database never shrinks; deleted text can remain in free pages until a `VACUUM`.
 
 ## 8. Procedures

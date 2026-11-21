@@ -147,8 +147,10 @@ topped up on launch, on foreground (at most every 30 min) and on language change
 (`kjv.json`, 4.7 MB, is unused dead code — owner chose to leave it.)
 
 ### 6.9 Ads and consent (`platform/admob_service.dart`, `platform/consent_service.dart`, `platform/interstitial_service.dart`, `widgets/banner_ad_widget.dart`)
-- Consent (Google UMP) runs before the Mobile Ads SDK starts; the SDK starts only if Google's `canRequestAds` says yes; a "Privacy choices"
-  row appears in Settings where required. An error reading Google's answer currently means "no ads" (planned to change: see handoff).
+- Consent (Google UMP) runs after the first frame. `consentOutcome` decides: Google yes → request ads; Google no (also after a decline) → no ads;
+  an error/timeout reading Google's answer → **ads allowed**, with **one** retry at the next foreground (`AdMobService.retryConsentIfNeeded`, called from the
+  resume handler). A failed update/form still reads Google's saved status. A "no" answer later (retry, or consent withdrawn via Privacy choices) blocks ad
+  requests even if the SDK is already running. The "Privacy choices" row appears in Settings where Google says it is required.
 - Banner on the notebook screen and Settings (not Home, not the editor, not Premium), retried at 30/60/120 s after a failed load. Paying users get no banner
   (the ad-free flag is cached so there is no flash).
 - Interstitial: **one combined counter**. Counting points: editor exit, backgrounding in the editor, rename, move, Home new-note, notebook-screen new-note,
@@ -275,7 +277,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 
 ### `lib/`
 
-- **`main.dart`** (257 lines) — Defines AtramentApp, _AtramentAppState
+- **`main.dart`** (258 lines) — Defines AtramentApp, _AtramentAppState
   - uses: `core/providers/locale_provider.dart`, `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `core/providers/subscription_provider.dart`, `core/providers/theme_provider.dart`, `core/providers/verse_provider.dart`, `core/services/app_lock.dart`, `core/services/engagement_service.dart`, `core/services/export_service.dart`, `core/services/reminder_scheduler.dart`, `core/utils/app_localization_setup.dart`, `core/utils/app_theme.dart`, `core/utils/constants.dart`, `core/utils/error_handler.dart`, `core/utils/locale_utils.dart`, `core/utils/route_observer.dart`, `platform/admob_service.dart`, `platform/debug_log_service.dart`, `platform/notification_service.dart`, `screens/home_screen.dart`
 
 ### `lib/core/`
@@ -366,13 +368,13 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 
 ### `lib/platform/`
 
-- **`platform/admob_service.dart`** (166 lines) — Wraps `google_mobile_ads` initialization and banner loading. Every call site treats failure as a normal, expected outcome — the banner slot collapses to zero height rather than the app crashing or blocking the home scree
+- **`platform/admob_service.dart`** (185 lines) — Wraps `google_mobile_ads` initialization and banner loading. Every call site treats failure as a normal, expected outcome — the banner slot collapses to zero height rather than the app crashing or blocking the home scree
   - uses: `core/utils/error_handler.dart`, `platform/consent_service.dart`
   - used by: `main.dart`, `platform/interstitial_service.dart`, `screens/settings_screen.dart`, `widgets/banner_ad_widget.dart`
 - **`platform/biometric_service.dart`** (98 lines) — Outcome of a biometric authentication attempt, surfaced by the caller (note_editor_screen's lock overlay) for explicit UI feedback.
   - uses: `core/utils/error_handler.dart`
   - used by: `core/services/app_lock.dart`
-- **`platform/consent_service.dart`** (126 lines) — Google's User Messaging Platform (UMP) consent flow. Required for serving ads to users in the EEA / UK: ads must not be requested until the user has made a choice (or none is required where they are). Every call degrades
+- **`platform/consent_service.dart`** (224 lines) — What to do after asking Google about consent.
   - uses: `core/utils/error_handler.dart`
   - used by: `platform/admob_service.dart`, `screens/settings_screen.dart`
 - **`platform/debug_log_service.dart`** (121 lines) — Persists errors reported through [ErrorHandler] to a local text file, and exports that file via the system share sheet. Wired in as [ErrorHandler.reportHook] from `main.dart` — `ErrorHandler` itself stays platform-agnost
