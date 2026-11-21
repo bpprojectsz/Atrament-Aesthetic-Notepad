@@ -14,7 +14,7 @@ void main() {
     }
   }
 
-  tearDown(() => service.resetCountersForTesting());
+  tearDown(service.resetCountersForTesting);
 
   group('9-minute gap rule', () {
     test('the gap is nine minutes', () {
@@ -195,7 +195,7 @@ void main() {
   });
 
   group('persistence across restarts', () {
-    setUp(() => service.resetCountersForTesting());
+    setUp(service.resetCountersForTesting);
 
     test('the counter is saved after every action', () async {
       SharedPreferences.setMockInitialValues({});
