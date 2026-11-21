@@ -150,8 +150,10 @@ topped up on launch, on foreground (at most every 30 min) and on language change
 - Consent (Google UMP) runs before the Mobile Ads SDK starts; the SDK starts only if Google's `canRequestAds` says yes; a "Privacy choices"
   row appears in Settings where required. An error reading Google's answer currently means "no ads" (planned to change: see handoff).
 - Banner on list screens, retried at 30/60/120 s after a failed load. Paying users get no banner (the ad-free flag is cached so there is no flash).
-- Interstitial: every 9th explicit editor exit and every 9th note creation, **plus after every export and every notebook delete**, subject only to a
-  30-second cooldown. All counters and the cooldown are **in memory** (reset on restart). Autosave never counts. (Planned to change: see handoff.)
+- Interstitial: **one combined counter** over four actions (real save, note creation, export, notebook delete); an attempt on every **9th** action;
+  **5-minute** minimum gap; no session/daily/hourly cap. The counter and the last-shown time are persisted in SharedPreferences
+  (`interstitial_action_count`, `interstitial_last_shown_ms`); a clock that moved backwards counts as "gap elapsed". Autosave never counts.
+  `lastShownAt()` feeds the review prompt's "not near an interstitial" rule (batch 14).
 - AdMob IDs are Google's test IDs by owner decision.
 
 ### 6.10 Premium (`core/services/iap_service.dart`, `core/providers/subscription_provider.dart`, `screens/premium_screen.dart`)
@@ -374,7 +376,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`platform/debug_log_service.dart`** (121 lines) — Persists errors reported through [ErrorHandler] to a local text file, and exports that file via the system share sheet. Wired in as [ErrorHandler.reportHook] from `main.dart` — `ErrorHandler` itself stays platform-agnost
   - uses: `core/utils/error_handler.dart`
   - used by: `main.dart`, `screens/settings_screen.dart`
-- **`platform/interstitial_service.dart`** (108 lines) — Owns interstitial load-and-show with a session-wide cooldown and per-action counters. Callers notify this service that a countable event occurred; the service decides whether to actually show an ad. Never shows an inters
+- **`platform/interstitial_service.dart`** (183 lines) — Owns interstitial load-and-show. Every countable user action (a real save, a note creation, an export, a notebook delete) feeds ONE combined counter; an ad is attempted on every [actionThreshold]-th action. The counter a
   - uses: `core/services/iap_service.dart`, `core/utils/error_handler.dart`, `platform/admob_service.dart`
   - used by: `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`platform/notification_service.dart`** (249 lines) — Local-only notification scheduling for the opt-in daily verse reminder. No server-side push infrastructure — everything here is scheduled on the device via `flutter_local_notifications` (Section 7).

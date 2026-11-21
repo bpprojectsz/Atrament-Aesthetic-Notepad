@@ -3,8 +3,8 @@
 > **New agent: start here.** Then read `docs/blueprint.md` (how the app works, file map) and `docs/decision.md` (why).
 > Update this file and `decision.md` at the end of **every** batch (checklist at the bottom).
 
-Last updated: after the documentation batch, on branch `languages`. Previous batch: Quill labels + iOS/Android localization follow-ups (CI green).
-Current batch: **none started.** The next batches are planned below and wait on five owner answers.
+Last updated: after batch 12 (ad frequency), on branch `languages`. CI green on batch 12 (run 44882045369).
+Current batch: **none in progress.** Next: batch 13 (consent failure). The owner answered all five open decisions (see §5).
 
 ## 1. Where things are
 
@@ -13,9 +13,9 @@ Current batch: **none started.** The next batches are planned below and wait on 
 | Repository | https://github.com/bpprojectsz/Atrament-Aesthetic-Notepad (**public**) |
 | Flutter app | `app/` |
 | `main` | `660235c` — contains phases 0–11 (merged) |
-| `languages` | `6ae159c` (docs commit on top of `c3da42e`) — **51 commits ahead of `main`**, not merged |
+| `languages` | see `git log` (batch 12 = `52e74d2`, on top of docs `15269d8`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `42589664459` on `c3da42e` (Compile Check, task `check`); the docs commit changed no code, so no new run was needed |
+| Last green CI | run `44882045369` on `52e74d2` (Compile Check, task `check`) — includes batch 12 |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
@@ -47,26 +47,23 @@ variant-aware locale handling, Thai/CJK/Arabic-script search, RTL for ar/fa/he/u
 localized iOS permission prompts and Android notification channel, rendering/stress tests, machine back-translation (Argos + NLLB), a **full read of all 43 files**
 with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow fix, and CI tooling (`regen`, stale check, SQLite workaround).
 
-## 5. Open owner decisions (ask these first — nothing below can start without them)
+## 5. Owner decisions (all answered 21 Nov 2026; recorded as D-090…D-094)
 
-1. **Interstitial triggers.** With the approved 5-minute gap and no caps, which events may show an ad? **A** keep all four (every 9th save, every 9th create, every export, every
-   notebook delete) · **B** saves/creates only (recommended: most predictable) · **C** B + export (risk: ad over the share sheet) · **D** one combined counter. Also: persist the
-   save/create **counters** across restarts? (today they live in memory and reset on every launch; recommended yes).
-2. **Review prompt.** Confirm: native sheet after **20** successful saves on **≥3 distinct days of use** (a day counts if ≥1 successful save), repeat no sooner than **60 days**.
-   Proposed meaning of "never near an interstitial": never on the same save as one, and neither within **10 minutes** of the other. Confirm or change.
-3. **Image-PDF memory.** Approve "measure in CI first, then fix, then re-measure" (current code holds every page as a ~4.5 MB bitmap at 1.5× scale until the PDF is written).
-4. **`file_picker`** is unused: remove? (recommended yes; only two comments in the Android files mention it).
-5. Whether to run the **machine re-check** and produce the **device checklist** now or after the batches below.
+1. **Ad triggers:** all four count through one combined counter, every 9th action, counter persisted. **Built (batch 12).**
+2. **Review prompt:** 20 saves, ≥3 distinct days of use, 60-day repeat, never on the same save as an interstitial nor within 10 minutes of one. **Batch 14.**
+3. **Image-PDF memory:** measure first, then fix, then re-measure. **Batch 17.**
+4. **`file_picker`:** KEEP; it stays on the outstanding ledger (batch 16 not scheduled).
+5. **Machine re-check + device checklist:** after the batches below (batch 18).
 
 ## 6. Next batches (in order; each = code + tests + docs update + CI green)
 
 | # | Batch | Scope | Done when |
 |---|---|---|---|
-| 12 | Ad frequency | 5-minute spacing, timer persisted (guard against the clock moving backwards); triggers per decision 1; counters persisted if approved | `ads_rules_test` updated and green; blueprint §6.9 + decision.md updated |
+| 12 | **BUILT, CI green** — Ad frequency | 5-minute spacing, timer persisted (guard against the clock moving backwards); triggers per decision 1; counters persisted if approved | `ads_rules_test` updated and green; blueprint §6.9 + decision.md updated |
 | 13 | Consent failure | One pure function `consentOutcome` (Google yes → request; Google no incl. declined → don't; error/timeout reading the answer → **allow** and retry once at the next foreground; failed update still reads Google's saved status; also returns whether to show "Privacy choices"). Unit-tested for every combination | tests green; the real SDK error paths remain **unverifiable without a device** — say so |
 | 14 | Review prompt | Rules from decision 2; store the set of days with a successful save; never within the proximity window of an interstitial | tests green |
 | 15 | Privacy page (`website/privacy.html`) | Ads via AdMob and Google's consent form (EEA/UK, some US states); declining may still show limited/non-personalized ads; if the form cannot be shown the app still asks Google and Google applies the last saved choice; where "Privacy choices" is; fonts are bundled (no downloads); OS backups; iOS tracking prompt; local reminders. Page is English only and **must be deployed by the owner**. Also update `store_submission/DATA_BACKING.md` (App Store privacy label / Play Data Safety answers) so it says the same thing; the owner submits the actual forms | text matches the shipped behaviour of batches 12–14 (write it last); DATA_BACKING.md consistent |
-| 16 | Dependency cleanup | Remove `file_picker` (pubspec + lock); confirm with `check` | CI green; owner's next APK build is the real confirmation |
+| 16 | *(not scheduled — owner kept `file_picker`, D-093)* | Remove `file_picker` only if the owner later asks | CI green; owner's next APK build is the real confirmation |
 | 17 | Image-PDF memory | Add a CI measurement (peak RSS for 10/50/100 pages), then render → compress → release one page at a time, then re-measure and report both numbers | before/after numbers recorded in decision.md |
 | 18 | Verification re-run | `python tools/dev/gh.py dispatch back-translate-nllb`; read only the newly low-scoring strings against English; device checklist for the owner (Arabic, Urdu, Hindi, Tamil, Thai, Japanese, Traditional Chinese, German; first-launch language, picker, Settings, Premium, editor, export; Face ID prompt on iOS) | `reviews/` updated |
 | 19 | Merge | Merge `languages` into `main` with a merge commit (keep history), re-run `check` on `main`, update docs. **Only then, and only on the owner's say-so,** trigger "Build and Deploy", report pass/fail and where the artifacts are | owner confirms |
@@ -84,7 +81,7 @@ native-speaker review (use each `reviews/<locale>.md` list); Quill's remaining ~
 - If the APK build ever fails with `Hash of downloaded file …`, it is the SQLite download problem described in decision.md D-062, not the translations (not yet observed there).
 - **Codemagic builds iOS with `flutter: stable`**, but `pubspec.yaml` pins Flutter to `>=3.47.0 <3.48.0`; if Codemagic's stable has moved past 3.47 the iOS build will refuse to resolve. Not verified (never run from here). Codemagic also runs `flutter test`, so the SQLite download problem could appear there too.
 - `README.md` was stale (said 11 locales, "Flutter 3.24 exactly", a missing `FILE_MANIFEST.md`); corrected in the documentation batch, but check it again whenever versions or folders change.
-- Consent errors currently mean "no ads" (changes in batch 13). Interstitials currently also fire after every export and notebook delete, with only a 30-second timer, and counters reset on restart.
+- Consent errors currently mean "no ads" (changes in batch 13). Interstitials: batch 12 is built and tested with fakes only; the real ad show path is unverified on a device. An export or delete can be the 9th action, so an ad can follow the share sheet (owner accepted).
 - Image-PDF export memory grows with page count (batch 17). The database never shrinks; deleted text can remain in free pages until a `VACUUM`.
 
 ## 8. Procedures
