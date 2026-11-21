@@ -225,6 +225,7 @@ class NoteProvider {
     if (succeeded) {
       notes.value = notes.value.where((n) => n.id != id).toList();
       persistenceWarning.value = null;
+      unawaited(InterstitialService.instance.recordNoteDelete());
     } else {
       persistenceWarning.value =
           StorageIssue.noteDeleteFailed;

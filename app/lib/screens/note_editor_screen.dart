@@ -537,7 +537,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>
                   'parchment': l10n.paperStyleParchment,
                   'vellum': l10n.paperStyleVellum,
                 },
-                onSelected: (id) => setState(() => _paperStyleId = id),
+                onSelected: (id) {
+                  setState(() => _paperStyleId = id);
+                  unawaited(InterstitialService.instance.recordPaperStyleChange());
+                },
               ),
             ),
             PopupMenuButton<ExportFormat>(

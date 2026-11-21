@@ -44,6 +44,7 @@ class NotebookProvider {
     if (succeeded) {
       notebooks.value = [...notebooks.value, notebook];
       activeNotebookId.value = notebook.id;
+      unawaited(InterstitialService.instance.recordNotebookCreate());
     } else {
       persistenceWarning.value =
           StorageIssue.notebookSaveFailed;

@@ -300,6 +300,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         await _handleMoveToNotebook(note);
         break;
       case NoteAction.edit:
+        unawaited(InterstitialService.instance.recordNoteEdit());
         _openNote(note);
         break;
       case NoteAction.export:
@@ -450,6 +451,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         SnackBar(content: Text(l10n.shareFailedMessage)),
       );
     }
+    unawaited(InterstitialService.instance.recordNoteShare());
   }
 
   ExportableNote _buildExportable(NoteModel note, AppLocalizations l10n) {

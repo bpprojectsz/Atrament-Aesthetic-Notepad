@@ -27,7 +27,6 @@ import '../core/utils/route_observer.dart';
 import '../platform/interstitial_service.dart';
 import '../platform/share_service.dart';
 import '../widgets/app_scaffold.dart';
-import '../widgets/banner_ad_widget.dart';
 import '../widgets/chips_row.dart';
 import '../widgets/confirmation_dialog.dart';
 import '../widgets/cover_color_picker.dart';
@@ -148,15 +147,17 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     final succeeded = await widget.notebookProvider.createNotebook(notebook);
     if (!mounted) return;
     if (succeeded) {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => NotebookDetailScreen(
-            notebook: notebook,
-            notebookProvider: widget.notebookProvider,
-            noteProvider: widget.noteProvider,
-          ),
-        ),
-      );
+      Navigator.of(context)
+          .push(
+            MaterialPageRoute(
+              builder: (context) => NotebookDetailScreen(
+                notebook: notebook,
+                notebookProvider: widget.notebookProvider,
+                noteProvider: widget.noteProvider,
+              ),
+            ),
+          )
+          .then((_) => unawaited(InterstitialService.instance.recordNotebookBack()));
     } else {
       _showSnackBar(l10n.saveFailedMessage);
     }
@@ -196,9 +197,11 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
           icon: const Icon(Icons.settings_outlined),
           tooltip: l10n.settingsTitle,
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const SettingsScreen()),
-            );
+            Navigator.of(context)
+                .push(
+                  MaterialPageRoute(builder: (context) => const SettingsScreen()),
+                )
+                .then((_) => unawaited(InterstitialService.instance.recordSettingsReturn()));
           },
         ),
       ],
@@ -206,15 +209,6 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         onPressed: _createNote,
         tooltip: l10n.newNoteTitle,
         child: const Icon(Icons.add),
-      ),
-      bottomAdSlot: ListenableBuilder(
-        listenable: widget.subscriptionProvider.status,
-        builder: (context, _) {
-          if (!widget.subscriptionProvider.shouldShowAds) {
-            return const SizedBox.shrink();
-          }
-          return BannerAdWidget(subscriptionProvider: widget.subscriptionProvider);
-        },
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
@@ -338,6 +332,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
       modifiedAt: now,
     );
     if (!mounted) return;
+    unawaited(InterstitialService.instance.recordNoteCreate());
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => NoteEditorScreen(
@@ -444,6 +439,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         await _handleMoveToNotebook(note);
         break;
       case NoteAction.edit:
+        unawaited(InterstitialService.instance.recordNoteEdit());
         _openNoteForEdit(note);
         break;
       case NoteAction.export:
@@ -603,6 +599,7 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
         SnackBar(content: Text(l10n.shareFailedMessage)),
       );
     }
+    unawaited(InterstitialService.instance.recordNoteShare());
   }
 
   ExportableNote _buildExportable(NoteModel note, AppLocalizations l10n) {
@@ -802,15 +799,17 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
               paperStyle: PaperStyleCatalog.byId(notebook.paperStyleDefault),
               coverColor: notebook.coverColor,
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => NotebookDetailScreen(
-                      notebook: notebook,
-                      notebookProvider: widget.notebookProvider,
-                      noteProvider: widget.noteProvider,
-                    ),
-                  ),
-                );
+                Navigator.of(context)
+                    .push(
+                      MaterialPageRoute(
+                        builder: (context) => NotebookDetailScreen(
+                          notebook: notebook,
+                          notebookProvider: widget.notebookProvider,
+                          noteProvider: widget.noteProvider,
+                        ),
+                      ),
+                    )
+                    .then((_) => unawaited(InterstitialService.instance.recordNotebookBack()));
               },
               onLongPress: () => _handleNotebookDelete(notebook),
               onMore: () => _handleNotebookAction(notebook),
