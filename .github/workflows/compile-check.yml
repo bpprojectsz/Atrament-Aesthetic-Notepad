@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'check (default), regen (regenerate localizations and commit), back-translate or back-translate-nllb (no build)'
+        description: 'check (default), regen (regenerate localizations and commit), back-translate or back-translate-nllb (no build), measure-pdf (image-PDF memory probe, no build)'
         required: false
         default: 'check'
 
@@ -260,6 +260,64 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add reports/back_translation_nllb.md reports/nllb
           git commit -m "chore: NLLB back-translation report" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  # Memory probe for the image-PDF export (batch 17). Runs the probe for three
+  # page counts, each in its own process, and commits the numbers to
+  # reports/pdf_memory/. Builds nothing.
+  measure-pdf:
+    if: ${{ inputs.task == 'measure-pdf' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        pages: [10, 50, 100]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.x'
+          channel: 'stable'
+          cache: true
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: app
+      - name: Use the runner's SQLite for host tests
+        run: printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
+        working-directory: app
+      - name: Run the probe
+        run: |
+          label=$(git rev-parse --short HEAD)
+          flutter test tool/perf/pdf_memory_probe_test.dart \
+            --dart-define=PAGES=${{ matrix.pages }} --dart-define=LABEL="$label"
+          cat ../reports/pdf_memory/*_${{ matrix.pages }}.txt >> "$GITHUB_STEP_SUMMARY"
+        working-directory: app
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfmem-${{ matrix.pages }}
+          path: reports/pdf_memory/*.txt
+
+  measure-report:
+    if: ${{ always() && inputs.task == 'measure-pdf' }}
+    needs: measure-pdf
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pdfmem-*
+          merge-multiple: true
+          path: reports/pdf_memory
+      - name: Commit the numbers to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/pdf_memory
+          git commit -m "chore: image-PDF memory measurements" || exit 0
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
 
