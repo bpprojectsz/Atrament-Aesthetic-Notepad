@@ -3,7 +3,7 @@
 > **New agent: start here.** Then read `docs/blueprint.md` (how the app works, file map) and `docs/decision.md` (why).
 > Update this file and `decision.md` at the end of **every** batch (checklist at the bottom).
 
-Last updated: after batch 12 (ad frequency), on branch `languages`. CI green on batch 12 (run 44882045369).
+Last updated: after batch 12 (ad frequency, pending ad, 9-minute gap, new counting points, Home banner removed), on branch `languages`. CI green (run 44886070440).
 Current batch: **none in progress.** Next: batch 13 (consent failure). The owner answered all five open decisions (see §5).
 
 ## 1. Where things are
@@ -13,9 +13,9 @@ Current batch: **none in progress.** Next: batch 13 (consent failure). The owner
 | Repository | https://github.com/bpprojectsz/Atrament-Aesthetic-Notepad (**public**) |
 | Flutter app | `app/` |
 | `main` | `660235c` — contains phases 0–11 (merged) |
-| `languages` | see `git log` (batch 12 = `52e74d2`, on top of docs `15269d8`) — ~54 commits ahead of `main`, not merged |
+| `languages` | see `git log` (batch 12 final = `ef8d44a`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `44882045369` on `52e74d2` (Compile Check, task `check`) — includes batch 12 |
+| Last green CI | run `44886070440` on `ef8d44a` (Compile Check, task `check`) — includes batch 12 |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
@@ -49,7 +49,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 
 ## 5. Owner decisions (all answered 21 Nov 2026; recorded as D-090…D-094)
 
-1. **Ad triggers:** all four count through one combined counter, every 9th action, counter persisted. **Built (batch 12).**
+1. **Ad triggers:** 15 counting points through one combined persisted counter; every 9th action makes an ad *pending*; 9-minute gap (D-096…D-098). **Built (batch 12).**
 2. **Review prompt:** 20 saves, ≥3 distinct days of use, 60-day repeat, never on the same save as an interstitial nor within 10 minutes of one. **Batch 14.**
 3. **Image-PDF memory:** measure first, then fix, then re-measure. **Batch 17.**
 4. **`file_picker`:** KEEP; it stays on the outstanding ledger (batch 16 not scheduled).

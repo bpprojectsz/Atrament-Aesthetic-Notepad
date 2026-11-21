@@ -149,11 +149,13 @@ topped up on launch, on foreground (at most every 30 min) and on language change
 ### 6.9 Ads and consent (`platform/admob_service.dart`, `platform/consent_service.dart`, `platform/interstitial_service.dart`, `widgets/banner_ad_widget.dart`)
 - Consent (Google UMP) runs before the Mobile Ads SDK starts; the SDK starts only if Google's `canRequestAds` says yes; a "Privacy choices"
   row appears in Settings where required. An error reading Google's answer currently means "no ads" (planned to change: see handoff).
-- Banner on list screens, retried at 30/60/120 s after a failed load. Paying users get no banner (the ad-free flag is cached so there is no flash).
-- Interstitial: **one combined counter** over four actions (real save, note creation, export, notebook delete); an attempt on every **9th** action;
-  **5-minute** minimum gap; no session/daily/hourly cap. The counter and the last-shown time are persisted in SharedPreferences
-  (`interstitial_action_count`, `interstitial_last_shown_ms`); a clock that moved backwards counts as "gap elapsed". Autosave never counts.
-  `lastShownAt()` feeds the review prompt's "not near an interstitial" rule (batch 14).
+- Banner on the notebook screen and Settings (not Home, not the editor, not Premium), retried at 30/60/120 s after a failed load. Paying users get no banner
+  (the ad-free flag is cached so there is no flash).
+- Interstitial: **one combined counter**. Counting points: editor exit, backgrounding in the editor, rename, move, Home new-note, notebook-screen new-note,
+  notebook create, Edit, export, Share as text, note delete, notebook delete, Settings return, notebook-screen return, paper style chosen. After **9** actions
+  an ad is **pending** and shows on the first counting action once **9 minutes** have passed since the last ad (retry after a failed attempt: 60 s).
+  No session/daily/hourly cap. Autosave never counts. State (`interstitial_action_count`, `interstitial_pending`, `interstitial_last_shown_ms`) is persisted;
+  a clock that moved backwards counts as "gap elapsed". `lastShownAt()` feeds the review prompt (batch 14).
 - AdMob IDs are Google's test IDs by owner decision.
 
 ### 6.10 Premium (`core/services/iap_service.dart`, `core/providers/subscription_provider.dart`, `screens/premium_screen.dart`)
@@ -291,10 +293,10 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`core/providers/locale_provider.dart`** (68 lines) — Owns the user's manual language selection. A null [preference] means "follow the device locale" — Flutter's default behaviour when [MaterialApp.locale] is null. A non-null value overrides the system locale and survives r
   - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`, `core/utils/locale_utils.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/settings_screen.dart`, `widgets/language_picker.dart`
-- **`core/providers/note_provider.dart`** (247 lines) — Defines NoteSortOrder, NoteProvider
+- **`core/providers/note_provider.dart`** (248 lines) — Defines NoteSortOrder, NoteProvider
   - uses: `core/models/note_model.dart`, `core/services/local_storage.dart`, `core/utils/quill_content_helper.dart`, `core/utils/user_issues.dart`, `platform/interstitial_service.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
-- **`core/providers/notebook_provider.dart`** (123 lines) — Owns notebook (folder) CRUD, ordering, and which notebook is currently selected. Talks to [LocalStorage] — no screen or widget touches `sqflite` directly.
+- **`core/providers/notebook_provider.dart`** (124 lines) — Owns notebook (folder) CRUD, ordering, and which notebook is currently selected. Talks to [LocalStorage] — no screen or widget touches `sqflite` directly.
   - uses: `core/models/notebook_model.dart`, `core/services/local_storage.dart`, `core/utils/user_issues.dart`, `platform/interstitial_service.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`core/providers/subscription_provider.dart`** (105 lines) — Owns ad-removal subscription state for the whole app. Wraps [IapService] so screens never import `in_app_purchase` directly.
@@ -376,7 +378,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`platform/debug_log_service.dart`** (121 lines) — Persists errors reported through [ErrorHandler] to a local text file, and exports that file via the system share sheet. Wired in as [ErrorHandler.reportHook] from `main.dart` — `ErrorHandler` itself stays platform-agnost
   - uses: `core/utils/error_handler.dart`
   - used by: `main.dart`, `screens/settings_screen.dart`
-- **`platform/interstitial_service.dart`** (183 lines) — Owns interstitial load-and-show. Every countable user action (a real save, a note creation, an export, a notebook delete) feeds ONE combined counter; an ad is attempted on every [actionThreshold]-th action. The counter a
+- **`platform/interstitial_service.dart`** (263 lines) — Owns interstitial load-and-show. Every countable user action feeds ONE combined counter (see the `record…` methods). After [actionThreshold] actions an ad becomes PENDING, and it is shown on the first counting action at 
   - uses: `core/services/iap_service.dart`, `core/utils/error_handler.dart`, `platform/admob_service.dart`
   - used by: `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`platform/notification_service.dart`** (249 lines) — Local-only notification scheduling for the opt-in daily verse reminder. No server-side push infrastructure — everything here is scheduled on the device via `flutter_local_notifications` (Section 7).
@@ -388,13 +390,13 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 
 ### `lib/screens/`
 
-- **`screens/home_screen.dart`** (823 lines) — Notebook grid dashboard — the app's landing screen. A search field switches the body between the notebook grid and full-text note search results; an FAB creates a new notebook; a banner ad renders at the bottom for free-
-  - uses: `core/models/note_model.dart`, `core/models/notebook_model.dart`, `core/models/paper_style_model.dart`, `core/providers/locale_provider.dart`, `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `core/providers/subscription_provider.dart`, `core/providers/theme_provider.dart`, `core/services/app_lock.dart`, `core/services/export_service.dart`, `core/utils/app_theme.dart`, `core/utils/constants.dart`, `core/utils/date_formatter.dart`, `core/utils/export_helper.dart`, `core/utils/id_generator.dart`, `core/utils/locale_utils.dart`, `core/utils/paper_default.dart`, `core/utils/quill_content_helper.dart`, `core/utils/route_observer.dart`, `platform/interstitial_service.dart`, `platform/share_service.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/settings_screen.dart`, `widgets/app_scaffold.dart`, `widgets/banner_ad_widget.dart`, `widgets/chips_row.dart`, `widgets/confirmation_dialog.dart`, `widgets/cover_color_picker.dart`, `widgets/empty_state.dart`, `widgets/language_picker.dart`, `widgets/loading_indicator.dart`, `widgets/lock_gate.dart`, `widgets/move_to_notebook_sheet.dart`, `widgets/new_notebook_dialog.dart`, `widgets/note_actions_menu.dart`, `widgets/note_card.dart`, `widgets/note_list_item.dart`, `widgets/notebook_actions_menu.dart`, `widgets/rename_note_dialog.dart`, `widgets/rename_notebook_dialog.dart`, `widgets/user_issue_text.dart`
+- **`screens/home_screen.dart`** (822 lines) — Notebook grid dashboard — the app's landing screen. A search field switches the body between the notebook grid and full-text note search results; an FAB creates a new notebook; a banner ad renders at the bottom for free-
+  - uses: `core/models/note_model.dart`, `core/models/notebook_model.dart`, `core/models/paper_style_model.dart`, `core/providers/locale_provider.dart`, `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `core/providers/subscription_provider.dart`, `core/providers/theme_provider.dart`, `core/services/app_lock.dart`, `core/services/export_service.dart`, `core/utils/app_theme.dart`, `core/utils/constants.dart`, `core/utils/date_formatter.dart`, `core/utils/export_helper.dart`, `core/utils/id_generator.dart`, `core/utils/locale_utils.dart`, `core/utils/paper_default.dart`, `core/utils/quill_content_helper.dart`, `core/utils/route_observer.dart`, `platform/interstitial_service.dart`, `platform/share_service.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/settings_screen.dart`, `widgets/app_scaffold.dart`, `widgets/chips_row.dart`, `widgets/confirmation_dialog.dart`, `widgets/cover_color_picker.dart`, `widgets/empty_state.dart`, `widgets/language_picker.dart`, `widgets/loading_indicator.dart`, `widgets/lock_gate.dart`, `widgets/move_to_notebook_sheet.dart`, `widgets/new_notebook_dialog.dart`, `widgets/note_actions_menu.dart`, `widgets/note_card.dart`, `widgets/note_list_item.dart`, `widgets/notebook_actions_menu.dart`, `widgets/rename_note_dialog.dart`, `widgets/rename_notebook_dialog.dart`, `widgets/user_issue_text.dart`
   - used by: `main.dart`
-- **`screens/note_editor_screen.dart`** (702 lines) — Detects whether a note's stored `content` is a handwriting stroke payload or a Quill Delta, without needing a dedicated schema field. Handwriting content is wrapped as `{"type":"handwriting","strokes":[...]}`; Quill Delt
+- **`screens/note_editor_screen.dart`** (705 lines) — Detects whether a note's stored `content` is a handwriting stroke payload or a Quill Delta, without needing a dedicated schema field. Handwriting content is wrapped as `{"type":"handwriting","strokes":[...]}`; Quill Delt
   - uses: `core/models/note_model.dart`, `core/models/paper_style_model.dart`, `core/providers/note_provider.dart`, `core/providers/verse_provider.dart`, `core/services/app_lock.dart`, `core/services/engagement_service.dart`, `core/services/export_service.dart`, `core/utils/app_theme.dart`, `core/utils/constants.dart`, `core/utils/date_formatter.dart`, `core/utils/error_handler.dart`, `core/utils/export_helper.dart`, `core/utils/locale_utils.dart`, `platform/interstitial_service.dart`, `platform/share_service.dart`, `widgets/font_selector.dart`, `widgets/handwriting_canvas.dart`, `widgets/note_toolbar.dart`, `widgets/paper_background.dart`, `widgets/paper_selector.dart`, `widgets/pen_toolbar.dart`, `widgets/scripture_footer.dart`, `widgets/scripture_header.dart`, `widgets/scripture_watermark.dart`
   - used by: `screens/home_screen.dart`, `screens/notebook_detail_screen.dart`
-- **`screens/notebook_detail_screen.dart`** (511 lines) — Lists the notes within a single notebook, with sort options, an empty state, and a new-note FAB.
+- **`screens/notebook_detail_screen.dart`** (513 lines) — Lists the notes within a single notebook, with sort options, an empty state, and a new-note FAB.
   - uses: `core/models/note_model.dart`, `core/models/notebook_model.dart`, `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`, `core/providers/subscription_provider.dart`, `core/services/app_lock.dart`, `core/services/export_service.dart`, `core/utils/app_theme.dart`, `core/utils/constants.dart`, `core/utils/date_formatter.dart`, `core/utils/export_helper.dart`, `core/utils/id_generator.dart`, `core/utils/locale_utils.dart`, `core/utils/paper_default.dart`, `core/utils/quill_content_helper.dart`, `platform/interstitial_service.dart`, `platform/share_service.dart`, `screens/note_editor_screen.dart`, `widgets/app_scaffold.dart`, `widgets/banner_ad_widget.dart`, `widgets/confirmation_dialog.dart`, `widgets/empty_state.dart`, `widgets/loading_indicator.dart`, `widgets/lock_gate.dart`, `widgets/move_to_notebook_sheet.dart`, `widgets/new_notebook_dialog.dart`, `widgets/note_actions_menu.dart`, `widgets/note_list_item.dart`, `widgets/rename_note_dialog.dart`, `widgets/user_issue_text.dart`
   - used by: `screens/home_screen.dart`
 - **`screens/premium_screen.dart`** (220 lines) — Paywall for the ad-removal subscription. Never a blocking modal — always reached from an optional "Remove Ads" row in Settings (Section 19). No feature-gating language anywhere on this screen, since every feature is alre
@@ -411,7 +413,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
   - used by: `screens/home_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/premium_screen.dart`, `screens/settings_screen.dart`
 - **`widgets/banner_ad_widget.dart`** (165 lines) — Delay before retry number [attempt] (0-based) of a failed banner load, or null once retries are used up. Backs off so a no-fill or offline start recovers without hammering the ad server.
   - uses: `core/providers/subscription_provider.dart`, `core/services/iap_service.dart`, `platform/admob_service.dart`
-  - used by: `screens/home_screen.dart`, `screens/notebook_detail_screen.dart`, `screens/settings_screen.dart`
+  - used by: `screens/notebook_detail_screen.dart`, `screens/settings_screen.dart`
 - **`widgets/chips_row.dart`** (162 lines) — Which chip is selected on the home screen. Determines which body builder is shown when the search field is empty.
   - uses: `core/utils/app_theme.dart`, `core/utils/constants.dart`
   - used by: `screens/home_screen.dart`
