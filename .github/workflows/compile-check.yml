@@ -285,7 +285,8 @@ jobs:
         run: flutter pub get
         working-directory: app
       - name: Use the runner's SQLite for host tests
-        run: printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
+        run: |
+          printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
         working-directory: app
       - name: Run the probe
         run: |
