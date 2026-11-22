@@ -15,7 +15,7 @@ Current batch: **none in progress.** Next: batch 13 (consent failure). The owner
 | `main` | `660235c` — contains phases 0–11 (merged) |
 | `languages` | see `git log` (batch 12 final = `ef8d44a`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `44929319221` on `39b5b29` (Compile Check, task `check`) — includes batches 12–15 |
+| Last green CI | run `44984663791` on `55d7674` (Compile Check, task `check`) — includes batches 12–15 and 17 |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
@@ -64,7 +64,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 | 14 | **BUILT, CI green** — Review prompt | Rules from decision 2; store the set of days with a successful save; never within the proximity window of an interstitial | tests green |
 | 15 | **BUILT, CI green** — Privacy page (`website/privacy.html`) | Ads via AdMob and Google's consent form (EEA/UK, some US states); declining may still show limited/non-personalized ads; if the form cannot be shown the app still asks Google and Google applies the last saved choice; where "Privacy choices" is; fonts are bundled (no downloads); OS backups; iOS tracking prompt; local reminders. Page is English only and **must be deployed by the owner**. Also update `store_submission/DATA_BACKING.md` (App Store privacy label / Play Data Safety answers) so it says the same thing; the owner submits the actual forms | text matches the shipped behaviour of batches 12–14 (write it last); DATA_BACKING.md consistent |
 | 16 | *(not scheduled — owner kept `file_picker`, D-093)* | Remove `file_picker` only if the owner later asks | CI green; owner's next APK build is the real confirmation |
-| 17 | **BUILT** — Image-PDF memory | Add a CI measurement (peak RSS for 10/50/100 pages), then render → compress → release one page at a time, then re-measure and report both numbers | before/after numbers recorded in decision.md |
+| 17 | **BUILT, CI green** — Image-PDF memory | Add a CI measurement (peak RSS for 10/50/100 pages), then render → compress → release one page at a time, then re-measure and report both numbers | before/after numbers recorded in decision.md |
 | 18 | Verification re-run | `python tools/dev/gh.py dispatch back-translate-nllb`; read only the newly low-scoring strings against English; device checklist for the owner (Arabic, Urdu, Hindi, Tamil, Thai, Japanese, Traditional Chinese, German; first-launch language, picker, Settings, Premium, editor, export; Face ID prompt on iOS) | `reviews/` updated |
 | 19 | Merge | Merge `languages` into `main` with a merge commit (keep history), re-run `check` on `main`, update docs. **Only then, and only on the owner's say-so,** trigger "Build and Deploy", report pass/fail and where the artifacts are | owner confirms |
 
