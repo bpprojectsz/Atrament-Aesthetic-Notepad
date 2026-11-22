@@ -72,6 +72,13 @@ void main() {
       final peakAfter = ProcessInfo.maxRss;
       final current = ProcessInfo.currentRss;
 
+      // Second build of the same note in the same process. If memory were
+      // being retained (a leak), the peak would grow by about the same
+      // amount again; if the first growth was only garbage the collector had
+      // not collected yet, the second build adds little or nothing.
+      await builder.build(_note(_pages));
+      final peakSecond = ProcessInfo.maxRss;
+
       final lines = <String>[
         'label: $_label',
         'pages requested: $_pages',
@@ -84,6 +91,8 @@ void main() {
         'peak growth MB: ${_mb(peakAfter - peakBefore).toStringAsFixed(0)}'
             '${peakAfter == peakBefore ? " (no growth: lower bound)" : ""}',
         'rss after MB: ${_mb(current).toStringAsFixed(0)}',
+        'second build extra peak growth MB: '
+            '${_mb(peakSecond - peakAfter).toStringAsFixed(0)}',
       ];
       for (final line in lines) {
         stdout.writeln(line);
