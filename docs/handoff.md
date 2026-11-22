@@ -3,7 +3,7 @@
 > **New agent: start here.** Then read `docs/blueprint.md` (how the app works, file map) and `docs/decision.md` (why).
 > Update this file and `decision.md` at the end of **every** batch (checklist at the bottom).
 
-Last updated: after batch 17 (image-PDF memory), on branch `languages`. Batches 12, 13, 14, 15 and 17 are built (see §6). Last full CI: see the table below.
+Last updated: after batch 18 (NLLB re-check done, device checklist written), on branch `languages`. Batches 12–15, 17 and 18 are built (see §6). The only commits since the last green CI touch docs and reports, not app code.
 Current batch: **none in progress.** Next: batch 13 (consent failure). The owner answered all five open decisions (see §5).
 
 ## 1. Where things are
@@ -65,7 +65,7 @@ with ~150 corrections recorded in `reviews/`, a Premium-screen scroll/overflow f
 | 15 | **BUILT, CI green** — Privacy page (`website/privacy.html`) | Ads via AdMob and Google's consent form (EEA/UK, some US states); declining may still show limited/non-personalized ads; if the form cannot be shown the app still asks Google and Google applies the last saved choice; where "Privacy choices" is; fonts are bundled (no downloads); OS backups; iOS tracking prompt; local reminders. Page is English only and **must be deployed by the owner**. Also update `store_submission/DATA_BACKING.md` (App Store privacy label / Play Data Safety answers) so it says the same thing; the owner submits the actual forms | text matches the shipped behaviour of batches 12–14 (write it last); DATA_BACKING.md consistent |
 | 16 | *(not scheduled — owner kept `file_picker`, D-093)* | Remove `file_picker` only if the owner later asks | CI green; owner's next APK build is the real confirmation |
 | 17 | **BUILT, CI green** — Image-PDF memory | Add a CI measurement (peak RSS for 10/50/100 pages), then render → compress → release one page at a time, then re-measure and report both numbers | before/after numbers recorded in decision.md |
-| 18 | Verification re-run | `python tools/dev/gh.py dispatch back-translate-nllb`; read only the newly low-scoring strings against English; device checklist for the owner (Arabic, Urdu, Hindi, Tamil, Thai, Japanese, Traditional Chinese, German; first-launch language, picker, Settings, Premium, editor, export; Face ID prompt on iOS) | `reviews/` updated |
+| 18 | **BUILT** (machine re-check done, owner device test pending) — Verification re-run | `python tools/dev/gh.py dispatch back-translate-nllb`; read only the newly low-scoring strings against English; device checklist for the owner (Arabic, Urdu, Hindi, Tamil, Thai, Japanese, Traditional Chinese, German; first-launch language, picker, Settings, Premium, editor, export; Face ID prompt on iOS) | `reviews/` updated |
 | 19 | Merge | Merge `languages` into `main` with a merge commit (keep history), re-run `check` on `main`, update docs. **Only then, and only on the owner's say-so,** trigger "Build and Deploy", report pass/fail and where the artifacts are | owner confirms |
 
 **Backlog (not scheduled):** translate the 16 cover-color names (screen-reader labels); translate the website pages (privacy is legal text); translate daily verses (needs licensed Bible

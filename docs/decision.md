@@ -128,3 +128,9 @@ history; if a decision is reversed, add a new entry that says so). Format: `ID â
 - **D-113** The slope fell from ~17 MB to ~1.5 MB per page but is not zero. A second build of the same note in the same process added only 17 / 60 / 10 MB (10 / 50 / 100 pages), far below the first build's growth, which points to garbage the collector had not reclaimed and allocator high-water marks, not retained pages. This is one sample on a test VM (JIT, test font, includes the engine), not a phone: real-device peak memory is unmeasured.
 - **D-114** Only the image path changed. Text-only PDFs still use the `pdf` package. `renderPages` (all pages at once) is kept for tests. The writer sets no document title/metadata (the old output had none either).
 
+## K. Batch 18, verification re-run (22 Nov 2026)
+
+- **D-115** NLLB re-run on the corrected strings (run 44986249585, commit 9929898): all 42 files screened. Only changed and new strings were re-checked: 178 changed, 56 flagged and all read against the English, 1 new key (`notificationChannelDescription`), 4 low ones read. **No new real error found**; mean overlap moved by at most 0.03 per language. Record: `reviews/nllb-rerun-2026-11-22.md`. Tool added: `tools/dev/compare_nllb.py`.
+- **D-116** The device checklist for the owner is `docs/device_checklist.md` (first launch, picker, screens, layout stress, export incl. a long non-Latin note, reminders and channel text, lock and iOS prompts, ads and consent, review). Nothing in it has been run: it needs the owner and a real phone.
+- **D-117** OPEN: the iOS permission prompts in `InfoPlist.strings` (Face ID, tracking; 42 languages) were never machine-screened because they are not ARB keys. The screening tool could be extended to read them.
+
