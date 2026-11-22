@@ -1,0 +1,11 @@
+label: 9c92ab6
+pages requested: 50
+pages built: 50
+pdf size MB: 1.02
+seconds: 1.8
+baseline rss MB: 193
+peak rss before MB: 193
+peak rss after MB: 296
+peak growth MB: 103
+rss after MB: 290
+second build extra peak growth MB: 60
