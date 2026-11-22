@@ -19,6 +19,10 @@ import 'package:flutter_test/flutter_test.dart';
 const int _pages = int.fromEnvironment('PAGES', defaultValue: 10);
 const String _label = String.fromEnvironment('LABEL', defaultValue: 'local');
 
+/// When true, also writes the PDF and a checksum of every page's RGB bytes,
+/// so an outside tool can confirm the file reads back to the same pixels.
+const bool _verify = bool.fromEnvironment('VERIFY');
+
 /// About 41 lines fit on a page (38 on the first, which has the header).
 ExportableNote _note(int pages) {
   final lines = 38 + 41 * (pages - 1) - 1;
@@ -35,6 +39,16 @@ ExportableNote _note(int pages) {
 
 double _mb(int bytes) => bytes / (1024 * 1024);
 
+/// 32-bit FNV-1a, matched by tool/perf/check_pdf.py.
+int _fnv1a(List<int> bytes) {
+  var h = 0x811c9dc5;
+  for (final b in bytes) {
+    h ^= b;
+    h = (h * 0x01000193) & 0xFFFFFFFF;
+  }
+  return h;
+}
+
 void main() {
   testWidgets('image PDF memory: $_pages pages', (tester) async {
     await tester.runAsync(() async {
@@ -48,7 +62,11 @@ void main() {
       final peakBefore = ProcessInfo.maxRss;
       final watch = Stopwatch()..start();
 
-      final result = await builder.build(_note(_pages));
+      final hashes = <int>[];
+      final result = await builder.build(
+        _note(_pages),
+        onPageRgb: _verify ? (i, rgb) => hashes.add(_fnv1a(rgb)) : null,
+      );
 
       watch.stop();
       final peakAfter = ProcessInfo.maxRss;
@@ -75,6 +93,12 @@ void main() {
         ..createSync(recursive: true);
       File('${dir.path}/${_label}_$_pages.txt')
           .writeAsStringSync('${lines.join('\n')}\n');
+      if (_verify) {
+        File('${dir.path}/${_label}_$_pages.pdf')
+            .writeAsBytesSync(result.bytes);
+        File('${dir.path}/${_label}_$_pages.hashes')
+            .writeAsStringSync('${hashes.join('\n')}\n');
+      }
     });
   }, timeout: const Timeout(Duration(minutes: 12)));
 }

@@ -292,9 +292,25 @@ jobs:
         run: |
           label=$(git rev-parse --short HEAD)
           flutter test tool/perf/pdf_memory_probe_test.dart \
-            --dart-define=PAGES=${{ matrix.pages }} --dart-define=LABEL="$label"
+            --dart-define=PAGES=${{ matrix.pages }} --dart-define=LABEL="$label" \
+            --dart-define=VERIFY=${{ matrix.pages == 10 }}
           cat ../reports/pdf_memory/*_${{ matrix.pages }}.txt >> "$GITHUB_STEP_SUMMARY"
         working-directory: app
+      # Only the 10-page run writes a PDF. Check it with real PDF tools:
+      # qpdf (strict structure), poppler (renders), pypdf (pixels read back).
+      - name: Verify the PDF with independent tools
+        if: ${{ matrix.pages == 10 }}
+        run: |
+          sudo apt-get install -y --no-install-recommends qpdf poppler-utils
+          pip install pypdf pillow
+          f=$(ls reports/pdf_memory/*_10.pdf)
+          qpdf --check "$f"
+          pdfimages -list "$f" | head -5
+          pdftoppm -r 40 -png -f 1 -l 2 "$f" /tmp/probe_page 2> /tmp/poppler.err || true
+          cat /tmp/poppler.err
+          test ! -s /tmp/poppler.err
+          ls -l /tmp/probe_page*.png
+          python app/tool/perf/check_pdf.py "$f" "${f%.pdf}.hashes" | tee -a "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
           name: pdfmem-${{ matrix.pages }}
