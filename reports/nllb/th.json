@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "ยืนยันตัวตนเพื่อเปิดการล็อกบันทึก",
    "back": "Confirm your identity to open the log.",
-   "score": 0.25
+   "score": 0.444
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "ยืนยันตัวตนเพื่อปิดการล็อกบันทึก",
    "back": "Confirm your identity to seal the record.",
-   "score": 0.222
+   "score": 0.4
   },
   {
    "key": "biometricShareReason",
@@ -529,9 +529,9 @@
   {
    "key": "paperStyleDotGrid",
    "english": "Dot Grid",
-   "translated": "จุดไข่ปลา",
-   "back": "Fish eggs.",
-   "score": 0.0
+   "translated": "ตารางจุด",
+   "back": "The dot chart.",
+   "score": 0.5
   },
   {
    "key": "paperStyleGrid",
@@ -641,8 +641,8 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "การแสดงพระคัมภีร์ประจำวัน",
-   "back": "A daily Bible show.",
+   "translated": "การแสดงข้อพระคัมภีร์ประจำวัน",
+   "back": "A daily Bible exhibition",
    "score": 0.333
   },
   {
@@ -683,8 +683,8 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "การแจ้งเตือนพระคัมภีร์ประจำวัน",
-   "back": "The Daily Bible Warning",
+   "translated": "การแจ้งเตือนข้อพระคัมภีร์ประจำวัน",
+   "back": "A warning of the daily scriptures.",
    "score": 0.333
   },
   {
@@ -704,8 +704,8 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "พระคัมภีร์ประจำวันของคุณพร้อมแล้ว",
-   "back": "Your daily Bible is ready.",
+   "translated": "ข้อพระคัมภีร์ประจำวันของคุณพร้อมแล้ว",
+   "back": "Your daily scripture is ready.",
    "score": 0.667
   },
   {
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "คุณมี นำโฆษณาออก แล้ว ขอบคุณ",
-   "back": "You have to take the ad out and thank you.",
-   "score": 0.4
+   "translated": "คุณมี “นำโฆษณาออก” แล้ว ขอบคุณ",
+   "back": "You've got an advertisement coming out, and thank you.",
+   "score": 0.182
   },
   {
    "key": "supportSectionTitle",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "ยังไม่มีสมุดบันทึกอื่น สร้างสักเล่มเพื่อจัดระเบียบบันทึกนี้",
    "back": "There's no other record that's ever been created to explode this record.",
    "score": 0.235
@@ -1106,6 +1106,13 @@
    "translated": "ใบอนุญาตโอเพนซอร์ส",
    "back": "License is open source.",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "การแจ้งเตือนข้อพระคัมภีร์ประจำวันแบบเลือกได้ของคุณ",
+   "back": "Your daily scripture alert is your choice.",
+   "score": 0.222
   }
  ]
 }

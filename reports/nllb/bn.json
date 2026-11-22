@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "নোট লক চালু করতে আপনার পরিচয় নিশ্চিত করুন",
    "back": "Confirm your identity to open the note lock",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "নোট লক বন্ধ করতে আপনার পরিচয় নিশ্চিত করুন",
    "back": "Confirm your identity to lock the notes.",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricShareReason",
@@ -536,9 +536,9 @@
   {
    "key": "paperStyleGrid",
    "english": "Grid",
-   "translated": "চৌকো ঘর",
-   "back": "Square house",
-   "score": 0.0
+   "translated": "গ্রিড",
+   "back": "Grid",
+   "score": 1.0
   },
   {
    "key": "paperStyleBlank",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "আজকের পদ প্রদর্শন",
-   "back": "Presentation of today's posts",
-   "score": 0.0
+   "translated": "আজকের বাইবেলের পদ প্রদর্শন",
+   "back": "Today's Bible verses are displayed",
+   "score": 0.25
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "প্রতিদিনের পদের রিমাইন্ডার",
-   "back": "A daily reminder of the position.",
-   "score": 0.667
+   "translated": "প্রতিদিনের বাইবেলের পদের রিমাইন্ডার",
+   "back": "A daily Bible verse is a reminder.",
+   "score": 0.857
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "আপনার আজকের পদ প্রস্তুত।",
-   "back": "Your post today is ready.",
-   "score": 0.333
+   "translated": "আপনার আজকের বাইবেলের পদ প্রস্তুত।",
+   "back": "Your Bible verse for today is ready.",
+   "score": 0.571
   },
   {
    "key": "privacySectionTitle",
@@ -984,8 +984,8 @@
   {
    "key": "noteActionMoveToNotebook",
    "english": "Move to Notebook",
-   "translated": "নোটবুকে সরান",
-   "back": "Remove the notebook",
+   "translated": "নোটবুকে নিয়ে যান",
+   "back": "Take it to the notebook.",
    "score": 0.5
   },
   {
@@ -1012,13 +1012,13 @@
   {
    "key": "moveToNotebookTitle",
    "english": "Move to Notebook",
-   "translated": "নোটবুকে সরান",
-   "back": "Remove the notebook",
+   "translated": "নোটবুকে নিয়ে যান",
+   "back": "Take it to the notebook.",
    "score": 0.5
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "এখনো অন্য কোনো নোটবুক নেই। এই নোটটি গুছিয়ে রাখতে একটি তৈরি করুন।",
    "back": "I don't have another notebook yet.",
    "score": 0.267
@@ -1106,6 +1106,13 @@
    "translated": "ওপেন সোর্স লাইসেন্স",
    "back": "Open source license",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "আপনার ঐচ্ছিক প্রতিদিনের বাইবেলের পদের রিমাইন্ডার",
+   "back": "The Bible reminds us that we need to do what we can to help others.",
+   "score": 0.133
   }
  ]
 }

@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Bevestig je identiteit om notitievergrendeling aan te zetten",
    "back": "Confirm your identity to activate note locking",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Bevestig je identiteit om notitievergrendeling uit te zetten",
    "back": "Confirm your identity to disable note locking",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -851,8 +851,8 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Je hebt Advertenties verwijderen al. Bedankt!",
-   "back": "You've already removed ads.",
+   "translated": "Je hebt “Advertenties verwijderen” al. Bedankt!",
+   "back": "You've already deleted ads.",
    "score": 0.444
   },
   {
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Er zijn nog geen andere notitieboeken. Maak er een om deze notitie te ordenen.",
    "back": "There are no other notebooks yet.",
    "score": 0.615
@@ -1106,6 +1106,13 @@
    "translated": "Opensourcelicenties",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Je optionele dagelijkse herinnering aan een bijbelvers",
+   "back": "Your optional daily recollection of a Bible verse",
+   "score": 0.8
   }
  ]
 }

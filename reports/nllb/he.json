@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "אמת את זהותך כדי להפעיל את נעילת הפתקיות",
    "back": "Make sure you're authenticating yourself to activate the notebook lock.",
-   "score": 0.167
+   "score": 0.154
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "אמת את זהותך כדי לכבות את נעילת הפתקיות",
    "back": "Believe your identity to turn off the notebook lock.",
-   "score": 0.545
+   "score": 0.667
   },
   {
    "key": "biometricShareReason",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "כבר יש לך הסרת פרסומות. תודה!",
-   "back": "You've already got the ads removed.",
-   "score": 0.4
+   "translated": "כבר יש לך את “הסרת פרסומות”. תודה!",
+   "back": "You've already got the ad removal.",
+   "score": 0.2
   },
   {
    "key": "supportSectionTitle",
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "אין חדש",
-   "back": "There's nothing new.",
-   "score": 0.333
+   "translated": "אין פתקים אחרונים",
+   "back": "There are no final notes.",
+   "score": 0.0
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתק הזה.",
    "back": "There are no other companies yet.",
    "score": 0.462
@@ -1106,6 +1106,13 @@
    "translated": "רישיונות קוד פתוח",
    "back": "Open-source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "התזכורת היומית האופציונלית שלך לפסוק",
+   "back": "Your optional daily reminder of the verse",
+   "score": 0.889
   }
  ]
 }

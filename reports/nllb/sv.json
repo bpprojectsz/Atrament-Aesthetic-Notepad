@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Bekräfta din identitet för att aktivera anteckningslåset",
    "back": "Confirm your identity to activate the note lock",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Bekräfta din identitet för att inaktivera anteckningslåset",
    "back": "Confirm your identity to disable the note lock",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Du har redan Ta bort annonser. Tack!",
-   "back": "You already have Remove ads.",
-   "score": 0.889
+   "translated": "Du har redan ”Ta bort annonser”. Tack!",
+   "back": "You've already deleted ads.",
+   "score": 0.444
   },
   {
    "key": "supportSectionTitle",
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Inget nyligen",
-   "back": "Nothing recently.",
-   "score": 0.5
+   "translated": "Inget nyligen redigerat",
+   "back": "Nothing recently edited",
+   "score": 0.4
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Det finns inga andra anteckningsböcker än. Skapa en för att organisera anteckningen.",
    "back": "There are no other notebooks yet, so create one to organize the notebook.",
-   "score": 0.706
+   "score": 0.824
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "Licenser för öppen källkod",
    "back": "Licences for open source",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Din valfria dagliga påminnelse om en bibelvers",
+   "back": "Your Optional Daily Reminder of a Bible Verse",
+   "score": 1.0
   }
  ]
 }

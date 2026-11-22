@@ -235,15 +235,15 @@
   {
    "key": "formatHeading",
    "english": "Heading",
-   "translated": "Capçalera",
-   "back": "Headgear",
+   "translated": "Títol de secció",
+   "back": "Title of section",
    "score": 0.0
   },
   {
    "key": "formatBulletList",
    "english": "Bullet list",
-   "translated": "Llista amb pics",
-   "back": "List of peaks",
+   "translated": "Llista amb vinyetes",
+   "back": "List of vineyards",
    "score": 0.5
   },
   {
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Confirma la teva identitat per activar el bloqueig de notes",
    "back": "Confirm your identity to activate note blocking",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Confirma la teva identitat per desactivar el bloqueig de notes",
    "back": "Confirm your identity to disable note blocking",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Ja tens Elimina els anuncis. Gràcies!",
-   "back": "You've already deleted the ads.",
-   "score": 0.444
+   "translated": "Ja tens «Elimina els anuncis». Gràcies!",
+   "back": "You've already deleted the ads. Thank you!",
+   "score": 0.6
   },
   {
    "key": "supportSectionTitle",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Encara no hi ha altres llibretes. Crea’n una per organitzar aquesta nota.",
    "back": "There are no other books yet. Create one to organize this note.",
-   "score": 0.706
+   "score": 0.824
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Llicències de codi obert",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "El teu recordatori diari opcional d’un vers de la Bíblia",
+   "back": "Your optional daily reminder of a Bible verse",
    "score": 1.0
   }
  ]

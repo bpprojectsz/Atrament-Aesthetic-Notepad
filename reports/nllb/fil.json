@@ -67,9 +67,9 @@
   {
    "key": "deleteConfirmBody",
    "english": "This can't be undone.",
-   "translated": "Hindi na ito maaaring ibalik.",
-   "back": "It can no longer be returned.",
-   "score": 0.286
+   "translated": "Hindi na ito mababawi.",
+   "back": "It can't be fixed.",
+   "score": 0.667
   },
   {
    "key": "deleteNoteTitle",
@@ -186,9 +186,9 @@
   {
    "key": "sortOptionsTitle",
    "english": "Sort",
-   "translated": "Pagsunud-sunurin",
-   "back": "Follow-up",
-   "score": 0.0
+   "translated": "I-sort",
+   "back": "Sorting",
+   "score": 1.0
   },
   {
    "key": "sortByModified",
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Kumpirmahin ang pagkakakilanlan mo para i-on ang lock ng note",
    "back": "Confirm your identity to unlock the note",
-   "score": 0.5
+   "score": 0.667
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Kumpirmahin ang pagkakakilanlan mo para i-off ang lock ng note",
    "back": "Confirm your identity to unlock the note",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricShareReason",
@@ -396,9 +396,9 @@
   {
    "key": "restoreSuccessMessage",
    "english": "Your purchase was restored.",
-   "translated": "Naibalik na ang binili mo.",
-   "back": "What you bought has been returned.",
-   "score": 0.0
+   "translated": "Na-restore na ang binili mo.",
+   "back": "Your purchase has been restored.",
+   "score": 0.571
   },
   {
    "key": "restoreNothingFoundMessage",
@@ -410,8 +410,8 @@
   {
    "key": "restoreFailedMessage",
    "english": "Could not restore purchases. Check your connection and try again.",
-   "translated": "Hindi maibalik ang mga pagbili. Tingnan ang koneksyon mo at subukan ulit.",
-   "back": "The purchases are non-refundable. Check your connection and try again.",
+   "translated": "Hindi ma-restore ang mga pagbili. Tingnan ang koneksyon mo at subukan ulit.",
+   "back": "The purchases cannot be restored. Check your connection and try again.",
    "score": 0.667
   },
   {
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "Pagpapakita ng talata ng araw",
-   "back": "Showing the sun's rays",
-   "score": 0.0
+   "translated": "Pagpapakita ng pang-araw-araw na talata",
+   "back": "Displaying the daily newsletter",
+   "score": 0.667
   },
   {
    "key": "verseModeWatermark",
@@ -739,9 +739,9 @@
   {
    "key": "restorePurchasesButton",
    "english": "Restore Purchases",
-   "translated": "Ibalik ang mga pagbili",
-   "back": "Return the purchases",
-   "score": 0.5
+   "translated": "I-restore ang mga pagbili",
+   "back": "Restore purchases",
+   "score": 1.0
   },
   {
    "key": "proLabel",
@@ -844,15 +844,15 @@
   {
    "key": "premiumRestoreButton",
    "english": "Restore Purchases",
-   "translated": "Ibalik ang mga pagbili",
-   "back": "Return the purchases",
-   "score": 0.5
+   "translated": "I-restore ang mga pagbili",
+   "back": "Restore purchases",
+   "score": 1.0
   },
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Mayroon ka na ng Alisin ang mga ad. Salamat!",
-   "back": "You already have Remove the ads. Thank you!",
+   "translated": "Mayroon ka na ng “Alisin ang mga ad”. Salamat!",
+   "back": "You already have the Remove the ads . Thank you!",
    "score": 1.0
   },
   {
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Wala pang ibang notebook. Gumawa ng isa para ayusin ang note na ito.",
    "back": "No other notebook. Make one to fix this notebook.",
    "score": 0.571
@@ -1061,8 +1061,8 @@
   {
    "key": "deleteNotebookWithCountBody",
    "english": "This will delete the notebook and its {count} notes. This can't be undone.",
-   "translated": "Buburahin ang notebook kasama ang lahat ng note nito (kabuuan: {count}). Hindi na ito maaaring ibalik.",
-   "back": "Turn off the notebook with all its notes (total: XCOUNT). It cannot be returned.",
+   "translated": "Buburahin ang notebook kasama ang lahat ng note nito (kabuuan: {count}). Hindi na ito mababawi.",
+   "back": "Turn off the notebook with all its notes (Full: XCOUNT). It cannot be repaired.",
    "score": 0.333
   },
   {
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Mga lisensya ng open source",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Ang opsyonal mong pang-araw-araw na paalala ng talata sa Bibliya",
+   "back": "Your optional daily reminder of a Bible verse",
    "score": 1.0
   }
  ]

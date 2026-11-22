@@ -102,7 +102,7 @@
   {
    "key": "shareFailedMessage",
    "english": "Couldn't open the share sheet. Please try again.",
-   "translated": "A megosztás menü nem nyitható meg. Próbáld újra.",
+   "translated": "A megosztási menü nem nyitható meg. Próbáld újra.",
    "back": "The sharing menu can't be opened.",
    "score": 0.333
   },
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Igazold magad a jegyzetzár bekapcsolásához",
    "back": "Identify yourself to turn on the notebook",
-   "score": 0.25
+   "score": 0.222
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Igazold magad a jegyzetzár kikapcsolásához",
    "back": "Identify yourself to turn off the notebook",
-   "score": 0.4
+   "score": 0.364
   },
   {
    "key": "biometricShareReason",
@@ -851,8 +851,8 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "A Hirdetések eltávolítása már megvan. Köszönjük!",
-   "back": "I've already got the ads removed.",
+   "translated": "Már megvan a „Hirdetések eltávolítása”. Köszönjük!",
+   "back": "I've already got the removal of the ads.",
    "score": 0.364
   },
   {
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Még nincs másik jegyzetfüzet. Hozz létre egyet a jegyzet rendszerezéséhez.",
    "back": "I don't have another notebook yet.",
    "score": 0.267
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Nyílt forráskódú licencek",
    "back": "Open source licences",
+   "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Az opcionális napi igeemlékeztetőd",
+   "back": "The optional daily verb reminder",
    "score": 0.667
   }
  ]

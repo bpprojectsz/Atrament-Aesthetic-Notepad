@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Xác minh danh tính của bạn để bật khóa ghi chú",
    "back": "Verify your identity to turn on the notepad",
-   "score": 0.25
+   "score": 0.444
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Xác minh danh tính của bạn để tắt khóa ghi chú",
    "back": "Verify your identity to turn off the lock.",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -851,7 +851,7 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Bạn đã có Xóa quảng cáo. Cảm ơn bạn!",
+   "translated": "Bạn đã có “Xóa quảng cáo”. Cảm ơn bạn!",
    "back": "You've already deleted the ad. Thank you!",
    "score": 0.4
   },
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Chưa có sổ tay nào khác. Hãy tạo một sổ tay để sắp xếp ghi chú này.",
    "back": "I don't have any other notebooks.",
    "score": 0.267
@@ -1106,6 +1106,13 @@
    "translated": "Giấy phép nguồn mở",
    "back": "Open source license",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Lời nhắc hằng ngày tùy chọn về câu Kinh Thánh của bạn",
+   "back": "Choose a daily recitation of your Bible text",
+   "score": 0.4
   }
  ]
 }

@@ -242,9 +242,9 @@
   {
    "key": "formatBulletList",
    "english": "Bullet list",
-   "translated": "Luettelo",
-   "back": "List",
-   "score": 0.667
+   "translated": "Luettelomerkit",
+   "back": "List markings",
+   "score": 0.5
   },
   {
    "key": "formatChecklist",
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Vahvista henkilöllisyytesi ottaaksesi muistiinpanojen lukituksen käyttöön",
    "back": "Confirm your identity to use note locking",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Vahvista henkilöllisyytesi poistaaksesi muistiinpanojen lukituksen käytöstä",
    "back": "Confirm your identity to remove note locking",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Sinulla on jo Poista mainokset. Kiitos!",
-   "back": "You already have the Take Off ads.",
-   "score": 0.6
+   "translated": "Sinulla on jo ”Poista mainokset”. Kiitos!",
+   "back": "You've already got the \"Delete ads\". Thank you!",
+   "score": 0.545
   },
   {
    "key": "supportSectionTitle",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Muita muistikirjoja ei vielä ole. Luo muistikirja järjestääksesi tämän muistiinpanon.",
    "back": "We don't have any other notebooks yet, so create a notebook to organize this entry.",
-   "score": 0.4
+   "score": 0.5
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "Avoimen lähdekoodin lisenssit",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Valinnainen päivittäinen muistutus Raamatun jakeesta",
+   "back": "A Selective Daily Reminder of a Scriptural Verse",
+   "score": 0.6
   }
  ]
 }

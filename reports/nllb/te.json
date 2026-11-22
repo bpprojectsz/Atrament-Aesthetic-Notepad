@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "నోట్ లాక్‌ను ఆన్ చేయడానికి మీ గుర్తింపును నిర్ధారించండి",
    "back": "Confirm your identity to turn on the note lock",
-   "score": 0.889
+   "score": 1.0
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "నోట్ లాక్‌ను ఆఫ్ చేయడానికి మీ గుర్తింపును నిర్ధారించండి",
    "back": "Confirm your identity to turn off the note lock",
-   "score": 0.909
+   "score": 1.0
   },
   {
    "key": "biometricShareReason",
@@ -522,22 +522,22 @@
   {
    "key": "paperStyleLined",
    "english": "Lined",
-   "translated": "గీతల",
-   "back": "The rows",
+   "translated": "గీతలతో",
+   "back": "With songs",
    "score": 0.0
   },
   {
    "key": "paperStyleDotGrid",
    "english": "Dot Grid",
-   "translated": "చుక్కల",
-   "back": "Drops",
+   "translated": "చుక్కలతో",
+   "back": "With drops",
    "score": 0.0
   },
   {
    "key": "paperStyleGrid",
    "english": "Grid",
-   "translated": "గడుల",
-   "back": "Houses",
+   "translated": "గడులతో",
+   "back": "With the holes",
    "score": 0.0
   },
   {
@@ -641,8 +641,8 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "నేటి వచన ప్రదర్శన",
-   "back": "Today's presentation of the text",
+   "translated": "నేటి బైబిల్ వచన ప్రదర్శన",
+   "back": "Today's Bible text presentation",
    "score": 0.0
   },
   {
@@ -683,8 +683,8 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "రోజువారీ వచన రిమైండర్",
-   "back": "A daily text reminder",
+   "translated": "రోజువారీ బైబిల్ వచన రిమైండర్",
+   "back": "A daily Bible reminder",
    "score": 0.667
   },
   {
@@ -704,8 +704,8 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "మీ నేటి వచనం సిద్ధంగా ఉంది.",
-   "back": "Your today's text is ready.",
+   "translated": "మీ నేటి బైబిల్ వచనం సిద్ధంగా ఉంది.",
+   "back": "Your Bible text for today is ready.",
    "score": 0.286
   },
   {
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "ఇంకా ఇతర నోట్‌బుక్‌లు లేవు. ఈ నోట్‌ను క్రమబద్ధీకరించడానికి ఒకటి సృష్టించండి.",
    "back": "No other notebooks yet. Create one to sort this note.",
    "score": 0.875
@@ -1106,6 +1106,13 @@
    "translated": "ఓపెన్ సోర్స్ లైసెన్స్‌లు",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "మీ ఐచ్ఛిక రోజువారీ బైబిల్ వచన రిమైండర్",
+   "back": "You can choose a daily Bible reminder",
+   "score": 0.6
   }
  ]
 }

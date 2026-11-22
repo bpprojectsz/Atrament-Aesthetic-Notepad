@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Conferma la tua identità per attivare il blocco delle note",
    "back": "Confirm your identity to activate note blocking",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Conferma la tua identità per disattivare il blocco delle note",
    "back": "Confirm your identity to disable the note block.",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -851,7 +851,7 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Hai già Rimuovi pubblicità. Grazie!",
+   "translated": "Hai già “Rimuovi pubblicità”. Grazie!",
    "back": "You've already removed ads.",
    "score": 0.444
   },
@@ -914,9 +914,9 @@
   {
    "key": "premiumUnlockLabel",
    "english": "Remove Ads Forever",
-   "translated": "Rimuovi la pubblicità per sempre",
-   "back": "Remove the ad for good.",
-   "score": 0.333
+   "translated": "Rimuovi pubblicità per sempre",
+   "back": "Remove the ads forever.",
+   "score": 1.0
   },
   {
    "key": "premiumUnlockPriceFallback",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Non ci sono ancora altri quaderni. Creane uno per organizzare questa nota.",
    "back": "I don't have any more notebooks yet.",
    "score": 0.25
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Licenze open source",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Il tuo promemoria giornaliero facoltativo di un versetto biblico",
+   "back": "Your optional daily reminder of a Bible verse",
    "score": 1.0
   }
  ]

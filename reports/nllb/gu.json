@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "નોંધ લૉક ચાલુ કરવા માટે તમારી ઓળખની પુષ્ટિ કરો",
    "back": "Confirm your identity to turn on the note lock",
-   "score": 0.889
+   "score": 1.0
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "નોંધ લૉક બંધ કરવા માટે તમારી ઓળખની પુષ્ટિ કરો",
    "back": "Confirm your identity to close the note lock",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -641,8 +641,8 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "આજના વચનનું પ્રદર્શન",
-   "back": "A demonstration of today's promise",
+   "translated": "આજના બાઇબલ વચનનું પ્રદર્શન",
+   "back": "A presentation of the Bible's promise today",
    "score": 0.0
   },
   {
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "દૈનિક વચન રિમાઇન્ડર",
-   "back": "A daily promising reminder",
-   "score": 0.667
+   "translated": "દૈનિક બાઇબલ વચન રિમાઇન્ડર",
+   "back": "A daily Bible Promise Reminder",
+   "score": 0.571
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "તમારું આજનું વચન તૈયાર છે.",
-   "back": "Your promise for today is ready.",
-   "score": 0.333
+   "translated": "તમારું આજનું બાઇબલ વચન તૈયાર છે.",
+   "back": "Your Bible promise for today is ready.",
+   "score": 0.286
   },
   {
    "key": "privacySectionTitle",
@@ -858,9 +858,9 @@
   {
    "key": "supportSectionTitle",
    "english": "Support",
-   "translated": "સહાય",
-   "back": "What can help us?",
-   "score": 0.0
+   "translated": "સપોર્ટ",
+   "back": "Support",
+   "score": 1.0
   },
   {
    "key": "shareDebugLogButton",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "હજી બીજી કોઈ નોટબુક નથી. આ નોંધ ગોઠવવા માટે એક બનાવો.",
    "back": "There is no other notebook yet. Make one to arrange this note.",
    "score": 0.706
@@ -1068,9 +1068,9 @@
   {
    "key": "legalAndSupportSectionTitle",
    "english": "Legal & Support",
-   "translated": "કાનૂની અને સહાય",
-   "back": "Legal aid and assistance",
-   "score": 0.4
+   "translated": "કાનૂની માહિતી અને સપોર્ટ",
+   "back": "Legal information and support",
+   "score": 0.8
   },
   {
    "key": "privacyPolicyRow",
@@ -1089,9 +1089,9 @@
   {
    "key": "supportRow",
    "english": "Support",
-   "translated": "સહાય",
-   "back": "What can help us?",
-   "score": 0.0
+   "translated": "સપોર્ટ",
+   "back": "Support",
+   "score": 1.0
   },
   {
    "key": "openLinkFailedMessage",
@@ -1106,6 +1106,13 @@
    "translated": "ઓપન સોર્સ લાઇસન્સ",
    "back": "Open source license",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "તમારું વૈકલ્પિક દૈનિક બાઇબલ વચન રિમાઇન્ડર",
+   "back": "A Bible Promise Reminder for Your Optional Daily",
+   "score": 0.8
   }
  ]
 }

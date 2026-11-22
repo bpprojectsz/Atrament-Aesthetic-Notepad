@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "برای روشن کردن قفل یادداشت، هویت خود را تأیید کنید",
    "back": "Confirm your identity to unlock the note.",
-   "score": 0.5
+   "score": 0.667
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "برای خاموش کردن قفل یادداشت، هویت خود را تأیید کنید",
    "back": "Confirm your identity to unlock the note.",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricShareReason",
@@ -529,8 +529,8 @@
   {
    "key": "paperStyleDotGrid",
    "english": "Dot Grid",
-   "translated": "نقطه‌چین",
-   "back": "The point of China.",
+   "translated": "نقطه‌ای",
+   "back": "A point.",
    "score": 0.0
   },
   {
@@ -571,9 +571,9 @@
   {
    "key": "fontSectionTitle",
    "english": "Note Font",
-   "translated": "قلم یادداشت‌ها",
-   "back": "The notebook.",
-   "score": 0.0
+   "translated": "فونت یادداشت‌ها",
+   "back": "The font of the notes.",
+   "score": 0.5
   },
   {
    "key": "fontSystem",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "نمایش آیه روز",
-   "back": "Showcase of the verse of the day",
-   "score": 0.333
+   "translated": "نمایش آیه روزانه کتاب مقدس",
+   "back": "A daily Bible verse exhibition",
+   "score": 0.571
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "یادآور روزانه آیه",
-   "back": "A daily reminder of the verse",
-   "score": 1.0
+   "translated": "یادآور روزانه آیه کتاب مقدس",
+   "back": "Remember a Bible verse every day",
+   "score": 0.25
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "آیه امروز شما آماده است.",
-   "back": "Today's verse is ready for you.",
-   "score": 0.571
+   "translated": "آیه کتاب مقدس امروز شما آماده است.",
+   "back": "Today's Bible verse is ready for you.",
+   "score": 0.5
   },
   {
    "key": "privacySectionTitle",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "هنوز دفترچه دیگری وجود ندارد. برای سازمان‌دهی این یادداشت، یکی بسازید.",
    "back": "There's no other notebook yet. Make one to organize this note.",
-   "score": 0.667
+   "score": 0.778
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "مجوزهای متن‌باز",
    "back": "Open text licenses",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "یادآور روزانه اختیاری شما برای آیه کتاب مقدس",
+   "back": "Remind yourself daily of your Bible verse selection.",
+   "score": 0.545
   }
  ]
 }

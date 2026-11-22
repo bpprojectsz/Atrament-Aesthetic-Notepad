@@ -95,9 +95,9 @@
   {
    "key": "exportFailedMessage",
    "english": "Couldn't export this note. Please try again.",
-   "translated": "یہ نوٹ برآمد نہیں کیا جا سکا۔ براہ کرم دوبارہ کوشش کریں۔",
-   "back": "This note could not be recovered. Please try again.",
-   "score": 0.5
+   "translated": "یہ نوٹ ایکسپورٹ نہیں کیا جا سکا۔ براہ کرم دوبارہ کوشش کریں۔",
+   "back": "This note could not be exported. Please try again.",
+   "score": 0.667
   },
   {
    "key": "shareFailedMessage",
@@ -116,8 +116,8 @@
   {
    "key": "searchHint",
    "english": "Search notes",
-   "translated": "نوٹس تلاش کریں",
-   "back": "Search for notices",
+   "translated": "نوٹ تلاش کریں",
+   "back": "Look for notes",
    "score": 0.5
   },
   {
@@ -346,22 +346,22 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "نوٹ لاک آن کرنے کے لیے اپنی شناخت کی تصدیق کریں",
    "back": "Verify your identity to unlock the note",
-   "score": 0.25
+   "score": 0.444
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "نوٹ لاک بند کرنے کے لیے اپنی شناخت کی تصدیق کریں",
    "back": "Verify your identity to lock the note",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricShareReason",
    "english": "Unlock to share or export this note",
-   "translated": "یہ نوٹ شیئر یا برآمد کرنے کے لیے ان لاک کریں",
+   "translated": "یہ نوٹ شیئر یا ایکسپورٹ کرنے کے لیے ان لاک کریں",
    "back": "Unlock these notes to share or export",
    "score": 0.667
   },
@@ -459,9 +459,9 @@
   {
    "key": "storageIssueNotesLoad",
    "english": "Some notes could not be loaded. Showing what is available.",
-   "translated": "کچھ نوٹس لوڈ نہیں ہو سکے۔ جو دستیاب ہے وہ دکھایا جا رہا ہے۔",
-   "back": "Some notifications could not be loaded. What is available is being displayed.",
-   "score": 0.75
+   "translated": "کچھ نوٹ لوڈ نہیں ہو سکے۔ جو دستیاب ہے وہ دکھایا جا رہا ہے۔",
+   "back": "Some notes could not be loaded. What is available is being shown.",
+   "score": 0.8
   },
   {
    "key": "storageIssueSearch",
@@ -494,21 +494,21 @@
   {
    "key": "exportTitle",
    "english": "Export",
-   "translated": "برآمد کریں",
+   "translated": "ایکسپورٹ کریں",
    "back": "Export",
    "score": 1.0
   },
   {
    "key": "exportAsTxt",
    "english": "Export as Text",
-   "translated": "متن کے طور پر برآمد کریں",
+   "translated": "متن کے طور پر ایکسپورٹ کریں",
    "back": "Export as text",
    "score": 1.0
   },
   {
    "key": "exportAsPdf",
    "english": "Export as PDF",
-   "translated": "PDF کے طور پر برآمد کریں",
+   "translated": "PDF کے طور پر ایکسپورٹ کریں",
    "back": "Export as PDF",
    "score": 1.0
   },
@@ -536,9 +536,9 @@
   {
    "key": "paperStyleGrid",
    "english": "Grid",
-   "translated": "خانہ دار",
-   "back": "Family",
-   "score": 0.0
+   "translated": "گرڈ",
+   "back": "Grid",
+   "score": 1.0
   },
   {
    "key": "paperStyleBlank",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "آج کی آیت کی نمائش",
-   "back": "The presentation of the verse",
-   "score": 0.4
+   "translated": "آج کی بائبل آیت کی نمائش",
+   "back": "Today's display of Bible verses",
+   "score": 0.25
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "روزانہ آیت کی یاد دہانی",
-   "back": "A daily reminder of the verse.",
-   "score": 1.0
+   "translated": "روزانہ بائبل آیت کی یاد دہانی",
+   "back": "A daily reminder of a Bible verse",
+   "score": 0.857
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "آپ کی آج کی آیت تیار ہے۔",
-   "back": "Your verse for today is ready.",
-   "score": 0.667
+   "translated": "آپ کی آج کی بائبل آیت تیار ہے۔",
+   "back": "Your Bible verse for today is ready.",
+   "score": 0.571
   },
   {
    "key": "privacySectionTitle",
@@ -718,8 +718,8 @@
   {
    "key": "biometricLockToggle",
    "english": "Lock notes with Face ID / fingerprint",
-   "translated": "Face ID / فنگر پرنٹ سے نوٹس لاک کریں",
-   "back": "Lock notices with Face ID/Fingerprint",
+   "translated": "Face ID / فنگر پرنٹ سے نوٹ لاک کریں",
+   "back": "Lock the note with Face ID/Fingerprint",
    "score": 0.8
   },
   {
@@ -970,7 +970,7 @@
   {
    "key": "emptyRecentNotesBody",
    "english": "Notes you edit will show up here.",
-   "translated": "آپ جو نوٹس ایڈٹ کریں گے وہ یہاں نظر آئیں گے۔",
+   "translated": "آپ جو نوٹ ایڈٹ کریں گے وہ یہاں نظر آئیں گے۔",
    "back": "The notes you edit will appear here.",
    "score": 0.727
   },
@@ -998,7 +998,7 @@
   {
    "key": "noteActionExport",
    "english": "Export",
-   "translated": "برآمد کریں",
+   "translated": "ایکسپورٹ کریں",
    "back": "Export",
    "score": 1.0
   },
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "ابھی کوئی دوسری نوٹ بک نہیں ہے۔ اس نوٹ کو ترتیب دینے کے لیے ایک بنائیں۔",
    "back": "There's no other notebook yet. Create one to set this note.",
    "score": 0.778
@@ -1061,7 +1061,7 @@
   {
    "key": "deleteNotebookWithCountBody",
    "english": "This will delete the notebook and its {count} notes. This can't be undone.",
-   "translated": "نوٹ بک اپنے تمام نوٹس سمیت حذف ہو جائے گی (کل: {count})۔ اس عمل کو واپس نہیں کیا جا سکتا۔",
+   "translated": "نوٹ بک اپنے تمام نوٹ سمیت حذف ہو جائے گی (کل: {count})۔ اس عمل کو واپس نہیں کیا جا سکتا۔",
    "back": "The notebook will be deleted with all of its notes (call: XCOUNT). This process cannot be reversed.",
    "score": 0.421
   },
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "اوپن سورس لائسنسز",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "آپ کی اختیاری روزانہ بائبل آیت کی یاد دہانی",
+   "back": "Your optional daily Bible verse reminder",
    "score": 1.0
   }
  ]

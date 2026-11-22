@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "ノートロックをオンにするには本人確認をしてください",
    "back": "Please make sure you turn on the notebook.",
-   "score": 0.25
+   "score": 0.222
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "ノートロックをオフにするには本人確認をしてください",
    "back": "If you want to turn off the notebook, make sure you turn it off yourself.",
-   "score": 0.308
+   "score": 0.286
   },
   {
    "key": "biometricShareReason",
@@ -627,8 +627,8 @@
   {
    "key": "themeParchment",
    "english": "Parchment",
-   "translated": "パーチメント",
-   "back": "It's a fragment.",
+   "translated": "羊皮紙",
+   "back": "Sheepskin paper.",
    "score": 0.0
   },
   {
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "デイリーバース表示",
-   "back": "The Daily Bears are showing.",
-   "score": 0.333
+   "translated": "今日の聖句の表示",
+   "back": "It's a reflection of today's verse.",
+   "score": 0.286
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "デイリーバースのリマインダー",
-   "back": "It's a reminder of the Daily Bears.",
-   "score": 0.571
+   "translated": "毎日の聖句リマインダー",
+   "back": "It's a reminder of every day's sacred text.",
+   "score": 0.222
   },
   {
    "key": "reminderTimeLabel",
@@ -788,9 +788,9 @@
   {
    "key": "shareAppMessage",
    "english": "Try Atrament — a distraction-free notepad with paper textures.",
-   "translated": "Atrament を試す — 紙の質感を備えた集中できるノートパッド。",
-   "back": "It's a centralized notepad with the texture of paper to test Atrament.",
-   "score": 0.429
+   "translated": "Atrament を試してみてください — 紙の質感を備えた、集中できるノートパッド。",
+   "back": "Try Atrament, a focused notepad with a paper texture.",
+   "score": 0.615
   },
   {
    "key": "languageSectionTitle",
@@ -914,8 +914,8 @@
   {
    "key": "premiumUnlockLabel",
    "english": "Remove Ads Forever",
-   "translated": "広告を完全に削除",
-   "back": "Remove the ads completely.",
+   "translated": "広告を永久に削除",
+   "back": "Remove the ads permanently.",
    "score": 0.667
   },
   {
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "他のノートブックがまだありません。作成してこのノートを整理しましょう。",
    "back": "I don't have any other notebooks yet.",
    "score": 0.375
@@ -1106,6 +1106,13 @@
    "translated": "オープンソースライセンス",
    "back": "It's an open source license.",
    "score": 0.571
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "任意で設定できる毎日の聖句リマインダー",
+   "back": "You can set up a daily verse reminder.",
+   "score": 0.545
   }
  ]
 }

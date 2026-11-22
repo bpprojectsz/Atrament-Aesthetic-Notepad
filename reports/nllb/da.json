@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Bekræft din identitet for at slå notelåsen til",
    "back": "Confirm your identity to hit the lock.",
-   "score": 0.5
+   "score": 0.667
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Bekræft din identitet for at slå notelåsen fra",
    "back": "Confirm your identity to unlock the notebook.",
-   "score": 0.222
+   "score": 0.4
   },
   {
    "key": "biometricShareReason",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "Daglig versmindelse",
-   "back": "Daily weight reduction",
-   "score": 0.333
+   "translated": "Daglig påmindelse om vers",
+   "back": "Daily Reminder of the Verses",
+   "score": 0.667
   },
   {
    "key": "reminderTimeLabel",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Du har allerede Fjern reklamer. Tak!",
-   "back": "You already have Remove ads.",
-   "score": 0.889
+   "translated": "Du har allerede “Fjern reklamer”. Tak!",
+   "back": "You've already got \"remove ads\". Thank you!",
+   "score": 0.727
   },
   {
    "key": "supportSectionTitle",
@@ -963,8 +963,8 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Intet nyligt",
-   "back": "It's nothing new.",
+   "translated": "Intet nyligt redigeret",
+   "back": "Nothing newly edited",
    "score": 0.4
   },
   {
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Der er ingen andre notesbøger endnu. Opret en for at organisere denne note.",
    "back": "There are no other notebooks yet. Create one to organize this note.",
-   "score": 0.824
+   "score": 0.941
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Open source-licenser",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Din valgfrie daglige påmindelse om et bibelvers",
+   "back": "Your Optional Daily Reminder of a Bible Verse",
    "score": 1.0
   }
  ]

@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "노트 잠금을 켜려면 본인 확인을 해 주세요",
    "back": "If you want to turn on the note lock, check in person.",
-   "score": 0.545
+   "score": 0.5
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "노트 잠금을 끄려면 본인 확인을 해 주세요",
    "back": "If you want to unlock the note, check in person.",
-   "score": 0.182
+   "score": 0.167
   },
   {
    "key": "biometricShareReason",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "다른 노트북이 없습니다. 새로 만들어 이 노트를 정리하세요.",
    "back": "There's no other notebook. Make a new notebook and clean it up.",
    "score": 0.353
@@ -1106,6 +1106,13 @@
    "translated": "오픈 소스 라이선스",
    "back": "It's an open source license.",
    "score": 0.571
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "선택적으로 설정하는 매일 성경 구절 알림",
+   "back": "Optionally set a daily Bible verse notification",
+   "score": 0.545
   }
  ]
 }

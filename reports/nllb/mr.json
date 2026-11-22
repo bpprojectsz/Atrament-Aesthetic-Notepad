@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "नोट लॉक चालू करण्यासाठी तुमची ओळख निश्चित करा",
    "back": "Identify yourself to activate the note lock.",
-   "score": 0.444
+   "score": 0.4
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "नोट लॉक बंद करण्यासाठी तुमची ओळख निश्चित करा",
    "back": "Identify yourself to close the note lock.",
-   "score": 0.4
+   "score": 0.364
   },
   {
    "key": "biometricShareReason",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "आजच्या वचनाचे प्रदर्शन",
-   "back": "Today's Word is Exhibited",
-   "score": 0.0
+   "translated": "आजच्या बायबल वचनाचे प्रदर्शन",
+   "back": "Today's display of Bible words",
+   "score": 0.25
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "दैनिक वचन स्मरणपत्र",
-   "back": "Daily Promise Reminder",
-   "score": 0.667
+   "translated": "दैनिक बायबल वचन स्मरणपत्र",
+   "back": "A daily Bible Word Reminder",
+   "score": 0.571
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "तुमचे आजचे वचन तयार आहे.",
-   "back": "Your word for today is ready.",
-   "score": 0.333
+   "translated": "तुमचे आजचे बायबल वचन तयार आहे.",
+   "back": "Your Bible Word for Today is ready.",
+   "score": 0.286
   },
   {
    "key": "privacySectionTitle",
@@ -767,9 +767,9 @@
   {
    "key": "rateAppSubtitle",
    "english": "Enjoying the app? Leave a review",
-   "translated": "अ‍ॅप आवडले का? एक परीक्षण लिहा",
-   "back": "Did you like the app? Write a test.",
-   "score": 0.222
+   "translated": "अ‍ॅप आवडले का? एक पुनरावलोकन लिहा",
+   "back": "Do you like the app? Write a review.",
+   "score": 0.444
   },
   {
    "key": "shareAppTitle",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "अजून इतर नोटबुक नाहीत. ही नोट व्यवस्थित ठेवण्यासाठी एक तयार करा.",
    "back": "There are no other notebooks yet. Make one to keep these notes in order.",
    "score": 0.526
@@ -1106,6 +1106,13 @@
    "translated": "ओपन सोर्स परवाने",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "तुमचे ऐच्छिक दैनिक बायबल वचन स्मरणपत्र",
+   "back": "The Bible promises to help us to keep our faith strong.",
+   "score": 0.154
   }
  ]
 }

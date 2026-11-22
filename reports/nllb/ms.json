@@ -235,8 +235,8 @@
   {
    "key": "formatHeading",
    "english": "Heading",
-   "translated": "Pengepala",
-   "back": "Chief",
+   "translated": "Tajuk bahagian",
+   "back": "Title of section",
    "score": 0.0
   },
   {
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Sahkan identiti anda untuk menghidupkan kunci nota",
    "back": "Verify your identity to turn on the note key",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Sahkan identiti anda untuk mematikan kunci nota",
    "back": "Verify your identity to turn off the note key",
-   "score": 0.545
+   "score": 0.667
   },
   {
    "key": "biometricShareReason",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "Paparan ayat harian",
-   "back": "Exposure to daily verses",
-   "score": 0.333
+   "translated": "Paparan ayat Alkitab harian",
+   "back": "Displays of daily Bible verses",
+   "score": 0.571
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "Peringatan ayat harian",
-   "back": "Daily verse warnings",
-   "score": 0.667
+   "translated": "Peringatan ayat Alkitab harian",
+   "back": "Daily Bible verse reminders",
+   "score": 0.857
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "Ayat harian anda sudah sedia.",
-   "back": "Your diary is ready.",
-   "score": 0.4
+   "translated": "Ayat Alkitab harian anda sudah sedia.",
+   "back": "Your daily Bible verse is ready.",
+   "score": 0.857
   },
   {
    "key": "privacySectionTitle",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Anda sudah mempunyai Alih keluar iklan. Terima kasih!",
-   "back": "You've already got the replacement out of the ad.",
-   "score": 0.182
+   "translated": "Anda sudah mempunyai “Alih keluar iklan”. Terima kasih!",
+   "back": "You've already got the ads coming out. Thank you!",
+   "score": 0.5
   },
   {
    "key": "supportSectionTitle",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Belum ada buku nota lain. Cipta satu untuk mengatur nota ini.",
    "back": "I don't have another notebook yet.",
    "score": 0.267
@@ -1106,6 +1106,13 @@
    "translated": "Lesen sumber terbuka",
    "back": "License is open source",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Peringatan harian ayat Alkitab pilihan anda",
+   "back": "Daily reminders of your favorite Bible verses",
+   "score": 0.6
   }
  ]
 }

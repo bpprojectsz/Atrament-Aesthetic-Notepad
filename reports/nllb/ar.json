@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "أكّد هويتك لتشغيل قفل الملاحظات",
    "back": "Confirm your I.D. to turn on the note lock.",
-   "score": 0.8
+   "score": 0.727
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "أكّد هويتك لإيقاف قفل الملاحظات",
    "back": "Confirm your I.D. to turn off the note lock.",
-   "score": 0.833
+   "score": 0.769
   },
   {
    "key": "biometricShareReason",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "عرض آية اليوم",
-   "back": "Today's verse show.",
-   "score": 0.286
+   "translated": "عرض آية الكتاب المقدس اليومية",
+   "back": "A presentation of the daily Bible verse",
+   "score": 0.571
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "تذكير يومي بالآية",
-   "back": "A daily reminder of the verse.",
-   "score": 1.0
+   "translated": "تذكير يومي بآية من الكتاب المقدس",
+   "back": "A daily reminder of a verse from the Bible",
+   "score": 0.75
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "آية اليوم جاهزة.",
-   "back": "Today's verse is ready.",
-   "score": 0.571
+   "translated": "آية اليوم من الكتاب المقدس جاهزة.",
+   "back": "Today's Bible verse is ready.",
+   "score": 0.5
   },
   {
    "key": "privacySectionTitle",
@@ -746,8 +746,8 @@
   {
    "key": "proLabel",
    "english": "Pro",
-   "translated": "مميز",
-   "back": "It 's special .",
+   "translated": "احترافي",
+   "back": "I 'm a professional .",
    "score": 0.0
   },
   {
@@ -788,9 +788,9 @@
   {
    "key": "shareAppMessage",
    "english": "Try Atrament — a distraction-free notepad with paper textures.",
-   "translated": "جرّب Atrament — مفكرة بلا تشتيت مع أوراق مميزة.",
-   "back": "Try Atrament  a distraction-free notebook with special cards.",
-   "score": 0.571
+   "translated": "جرّب Atrament — مفكرة بلا تشتيت بملمس الورق.",
+   "back": "Try Atrament  a distraction-free notebook with paper texture.",
+   "score": 0.714
   },
   {
    "key": "languageSectionTitle",
@@ -865,9 +865,9 @@
   {
    "key": "shareDebugLogButton",
    "english": "Share Debug Log",
-   "translated": "مشاركة سجل التصحيح",
-   "back": "Sharing the correction log",
-   "score": 0.333
+   "translated": "مشاركة سجل تصحيح الأخطاء",
+   "back": "Sharing a history of error correction",
+   "score": 0.0
   },
   {
    "key": "shareDebugLogSubtitle",
@@ -886,15 +886,15 @@
   {
    "key": "clearDebugLogButton",
    "english": "Clear Debug Log",
-   "translated": "مسح سجل التصحيح",
-   "back": "Erase the record of correction.",
+   "translated": "مسح سجل تصحيح الأخطاء",
+   "back": "Erase the error-correcting record.",
    "score": 0.0
   },
   {
    "key": "clearDebugLogTitle",
    "english": "Clear the debug log?",
-   "translated": "هل تريد مسح سجل التصحيح؟",
-   "back": "Do you want to erase the correctional record?",
+   "translated": "هل تريد مسح سجل تصحيح الأخطاء؟",
+   "back": "Do you want to erase the error-correcting record?",
    "score": 0.0
   },
   {
@@ -907,8 +907,8 @@
   {
    "key": "debugLogClearedMessage",
    "english": "Debug log cleared.",
-   "translated": "تم مسح سجل التصحيح.",
-   "back": "The record of the correction has been erased.",
+   "translated": "تم مسح سجل تصحيح الأخطاء.",
+   "back": "The error-correcting record has been erased.",
    "score": 0.0
   },
   {
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "لا شيء حديث",
-   "back": "It 's nothing new .",
-   "score": 0.4
+   "translated": "لا توجد ملاحظات حديثة",
+   "back": "There are no recent notes.",
+   "score": 0.333
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "لا توجد دفاتر أخرى بعد. أنشئ واحدًا لتنظيم هذه الملاحظة.",
    "back": "I've created one to organize this observation.",
-   "score": 0.143
+   "score": 0.286
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1068,8 +1068,8 @@
   {
    "key": "legalAndSupportSectionTitle",
    "english": "Legal & Support",
-   "translated": "الشؤون القانونية والدعم",
-   "back": "Legal affairs and support",
+   "translated": "المعلومات القانونية والدعم",
+   "back": "Legal information and support",
    "score": 0.8
   },
   {
@@ -1096,9 +1096,9 @@
   {
    "key": "openLinkFailedMessage",
    "english": "Couldn't open the link. Please try again.",
-   "translated": "تعذر فتح الرابط. حاول مرة أخرى.",
-   "back": "Couldn't open the link. Try again.",
-   "score": 1.0
+   "translated": "تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.",
+   "back": "Excuse me for opening the link. Please try again.",
+   "score": 0.667
   },
   {
    "key": "openSourceLicensesRow",
@@ -1106,6 +1106,13 @@
    "translated": "تراخيص المصادر المفتوحة",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "تذكيرك الاختياري اليومي بآية من الكتاب المقدس",
+   "back": "Choosing your daily reminder of a verse from the Bible",
+   "score": 0.727
   }
  ]
 }

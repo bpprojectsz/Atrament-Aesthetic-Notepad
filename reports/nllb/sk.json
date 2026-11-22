@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Potvrďte svoju totožnosť a zapnite zámok poznámok",
    "back": "Confirm your identity and turn on the note lock",
-   "score": 0.889
+   "score": 1.0
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Potvrďte svoju totožnosť a vypnite zámok poznámok",
    "back": "Confirm your identity and turn off the note lock",
-   "score": 0.909
+   "score": 1.0
   },
   {
    "key": "biometricShareReason",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Zatiaľ nie sú žiadne ďalšie zápisníky. Vytvorte jeden a poznámku si usporiadajte.",
    "back": "There are no other notebooks yet.",
    "score": 0.615
@@ -1106,6 +1106,13 @@
    "translated": "Licencie open source",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Vaše voliteľné denné pripomenutie biblického verša",
+   "back": "Your Choice of a Daily Reminder of a Bible Verse",
+   "score": 0.8
   }
  ]
 }

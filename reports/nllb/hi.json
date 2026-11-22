@@ -88,21 +88,21 @@
   {
    "key": "saveFailedMessage",
    "english": "Couldn't save. Please try again.",
-   "translated": "सहेजा नहीं जा सका। कृपया पुनः प्रयास करें।",
-   "back": "Could not save. Please try again.",
-   "score": 0.6
+   "translated": "सहेजा नहीं जा सका। कृपया फिर से कोशिश करें।",
+   "back": "Could not be saved. Please try again.",
+   "score": 0.4
   },
   {
    "key": "exportFailedMessage",
    "english": "Couldn't export this note. Please try again.",
-   "translated": "इस नोट को निर्यात नहीं किया जा सका। कृपया पुनः प्रयास करें।",
+   "translated": "इस नोट को निर्यात नहीं किया जा सका। कृपया फिर से कोशिश करें।",
    "back": "This note could not be exported. Please try again.",
    "score": 0.667
   },
   {
    "key": "shareFailedMessage",
    "english": "Couldn't open the share sheet. Please try again.",
-   "translated": "शेयर मेनू नहीं खुल सका। कृपया पुनः प्रयास करें।",
+   "translated": "शेयर मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।",
    "back": "Share menu could not open. Please try again.",
    "score": 0.571
   },
@@ -200,8 +200,8 @@
   {
    "key": "sortByCreated",
    "english": "Date created",
-   "translated": "निर्माण तिथि",
-   "back": "Construction date",
+   "translated": "बनाए जाने की तारीख",
+   "back": "Date of creation",
    "score": 0.5
   },
   {
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "नोट लॉक चालू करने के लिए अपनी पहचान की पुष्टि करें",
    "back": "Confirm your identity to turn on Note Lock",
-   "score": 0.889
+   "score": 1.0
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "नोट लॉक बंद करने के लिए अपनी पहचान की पुष्टि करें",
    "back": "Confirm your identity to close the note lock",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -781,16 +781,16 @@
   {
    "key": "shareAppSubtitle",
    "english": "Tell a friend",
-   "translated": "किसी दोस्त को बताएँ",
+   "translated": "किसी दोस्त को बताएं",
    "back": "Tell a friend",
    "score": 1.0
   },
   {
    "key": "shareAppMessage",
    "english": "Try Atrament — a distraction-free notepad with paper textures.",
-   "translated": "Atrament आज़माएँ — कागज़ की बनावट वाला बिना ध्यान-भंग नोटपैड।",
-   "back": "Try Atrament  paper - textured mindless notepad.",
-   "score": 0.769
+   "translated": "Atrament आज़माएं — कागज़ की बनावट वाला, ध्यान न भटकाने वाला नोटपैड।",
+   "back": "Try Atrament  Paper- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -",
+   "score": 0.6
   },
   {
    "key": "languageSectionTitle",
@@ -851,7 +851,7 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!",
+   "translated": "आपके पास पहले से “विज्ञापन हटाएं” सुविधा है। धन्यवाद!",
    "back": "You already have the option to remove ads. Thank you!",
    "score": 0.909
   },
@@ -914,7 +914,7 @@
   {
    "key": "premiumUnlockLabel",
    "english": "Remove Ads Forever",
-   "translated": "विज्ञापन हमेशा के लिए हटाएँ",
+   "translated": "विज्ञापन हमेशा के लिए हटाएं",
    "back": "Remove the advertisement forever",
    "score": 0.667
   },
@@ -956,7 +956,7 @@
   {
    "key": "emptyAllNotesBody",
    "english": "Tap the + button to write your first note.",
-   "translated": "अपना पहला नोट लिखने के लिए + बटन दबाएँ।",
+   "translated": "अपना पहला नोट लिखने के लिए + बटन दबाएं।",
    "back": "Press the + button to write your first note.",
    "score": 0.8
   },
@@ -984,7 +984,7 @@
   {
    "key": "noteActionMoveToNotebook",
    "english": "Move to Notebook",
-   "translated": "नोटबुक में ले जाएँ",
+   "translated": "नोटबुक में ले जाएं",
    "back": "Take it to the notebook",
    "score": 0.5
   },
@@ -1012,21 +1012,21 @@
   {
    "key": "moveToNotebookTitle",
    "english": "Move to Notebook",
-   "translated": "नोटबुक में ले जाएँ",
+   "translated": "नोटबुक में ले जाएं",
    "back": "Take it to the notebook",
    "score": 0.5
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
-   "translated": "अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएँ।",
+   "english": "No other notebooks yet. Create one to organize this note.",
+   "translated": "अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएं।",
    "back": "There is no other notebook yet. Create one to organize this note.",
-   "score": 0.824
+   "score": 0.941
   },
   {
    "key": "moveToNotebookCreateRow",
    "english": "Create new notebook",
-   "translated": "नई नोटबुक बनाएँ",
+   "translated": "नई नोटबुक बनाएं",
    "back": "Create a new notebook",
    "score": 1.0
   },
@@ -1061,7 +1061,7 @@
   {
    "key": "deleteNotebookWithCountBody",
    "english": "This will delete the notebook and its {count} notes. This can't be undone.",
-   "translated": "इससे नोटबुक और उसके {count} नोट हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।",
+   "translated": "इससे नोटबुक और उसके {count} नोट हटा दिए जाएंगे। इसे पूर्ववत नहीं किया जा सकता।",
    "back": "This will remove the notebook and its XCOUNT notes. It cannot be revoked.",
    "score": 0.5
   },
@@ -1096,8 +1096,8 @@
   {
    "key": "openLinkFailedMessage",
    "english": "Couldn't open the link. Please try again.",
-   "translated": "लिंक नहीं खोल सका। कृपया पुनः प्रयास करें।",
-   "back": "Could not open the link. Please try again.",
+   "translated": "लिंक नहीं खोला जा सका। कृपया फिर से कोशिश करें।",
+   "back": "Link could not be opened. Please try again.",
    "score": 0.667
   },
   {
@@ -1106,6 +1106,13 @@
    "translated": "ओपन-सोर्स लाइसेंस",
    "back": "Open source license",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "आपका वैकल्पिक दैनिक बाइबल वचन स्मरण",
+   "back": "Remembering the Bible - Your Optional Daily Word",
+   "score": 0.6
   }
  ]
 }

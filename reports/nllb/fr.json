@@ -88,23 +88,23 @@
   {
    "key": "saveFailedMessage",
    "english": "Couldn't save. Please try again.",
-   "translated": "Impossible d'enregistrer. Veuillez réessayer.",
+   "translated": "Impossible d’enregistrer. Veuillez réessayer.",
    "back": "I can't record it, please try again.",
    "score": 0.545
   },
   {
    "key": "exportFailedMessage",
    "english": "Couldn't export this note. Please try again.",
-   "translated": "Impossible d'exporter cette note. Veuillez réessayer.",
-   "back": "I can't export this note, so please try again.",
-   "score": 0.714
+   "translated": "Impossible d’exporter cette note. Veuillez réessayer.",
+   "back": "I can't export this note, please try again.",
+   "score": 0.769
   },
   {
    "key": "shareFailedMessage",
    "english": "Couldn't open the share sheet. Please try again.",
-   "translated": "Impossible d'ouvrir le menu de partage. Veuillez réessayer.",
-   "back": "I can't open the sharing menu, so please try again.",
-   "score": 0.5
+   "translated": "Impossible d’ouvrir le menu de partage. Veuillez réessayer.",
+   "back": "I can't open the sharing menu, please try again.",
+   "score": 0.533
   },
   {
    "key": "settingsTitle",
@@ -123,7 +123,7 @@
   {
    "key": "emptyNotebooksTitle",
    "english": "No notebooks yet",
-   "translated": "Aucun carnet pour l'instant",
+   "translated": "Aucun carnet pour l’instant",
    "back": "No notebook at the moment.",
    "score": 0.571
   },
@@ -151,9 +151,9 @@
   {
    "key": "emptyNotebookTitle",
    "english": "No notes yet",
-   "translated": "Aucune note pour l'instant",
-   "back": "No notes at the moment.",
-   "score": 0.571
+   "translated": "Aucune note pour l’instant",
+   "back": "No notes yet.",
+   "score": 1.0
   },
   {
    "key": "emptyNotebookBody",
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Confirmez votre identité pour activer le verrouillage des notes",
    "back": "Confirm your identity to activate the note lock.",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Confirmez votre identité pour désactiver le verrouillage des notes",
    "back": "Confirm your identity to disable the note locking",
-   "score": 0.6
+   "score": 0.727
   },
   {
    "key": "biometricShareReason",
@@ -767,9 +767,9 @@
   {
    "key": "rateAppSubtitle",
    "english": "Enjoying the app? Leave a review",
-   "translated": "L'app vous plaît ? Laissez un avis",
-   "back": "Do you like the app?",
-   "score": 0.286
+   "translated": "L’app vous plaît ? Laissez un avis",
+   "back": "Do you like Lapp?",
+   "score": 0.0
   },
   {
    "key": "shareAppTitle",
@@ -788,7 +788,7 @@
   {
    "key": "shareAppMessage",
    "english": "Try Atrament — a distraction-free notepad with paper textures.",
-   "translated": "Essayez Atrament — un bloc-notes sans distraction avec textures papier.",
+   "translated": "Essayez Atrament — un bloc-notes sans distraction avec des textures de papier.",
    "back": "Try Atrament  a distraction-free notebook with paper textures.",
    "score": 0.857
   },
@@ -837,7 +837,7 @@
   {
    "key": "premiumBody",
    "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
-   "translated": "Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d'autre — toutes les fonctionnalités sont déjà à vous.",
+   "translated": "Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d’autre — toutes les fonctionnalités sont déjà à vous.",
    "back": "Atrament is free with a small banner ad. Deleting it is a one-time purchase that unlocks nothing else  all the features are already yours.",
    "score": 0.706
   },
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Vous avez déjà Supprimer les publicités. Merci !",
-   "back": "You've already deleted the ads.",
-   "score": 0.444
+   "translated": "Vous avez déjà « Supprimer les publicités ». Merci !",
+   "back": "You already have  Delete ads . Thank you!",
+   "score": 0.8
   },
   {
    "key": "supportSectionTitle",
@@ -879,9 +879,9 @@
   {
    "key": "noDebugLogMessage",
    "english": "No issues to report yet.",
-   "translated": "Aucun problème à signaler pour l'instant.",
-   "back": "There's no problem to report at this time.",
-   "score": 0.364
+   "translated": "Aucun problème à signaler pour l’instant.",
+   "back": "No problem to report so far.",
+   "score": 0.444
   },
   {
    "key": "clearDebugLogButton",
@@ -914,7 +914,7 @@
   {
    "key": "premiumUnlockLabel",
    "english": "Remove Ads Forever",
-   "translated": "Supprimer les pubs définitivement",
+   "translated": "Supprimer les publicités définitivement",
    "back": "Removing advertising permanently",
    "score": 0.0
   },
@@ -949,9 +949,9 @@
   {
    "key": "emptyAllNotesTitle",
    "english": "No notes yet",
-   "translated": "Aucune note pour l'instant",
-   "back": "No notes at the moment.",
-   "score": 0.571
+   "translated": "Aucune note pour l’instant",
+   "back": "No notes yet.",
+   "score": 1.0
   },
   {
    "key": "emptyAllNotesBody",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
-   "translated": "Aucun autre carnet pour l'instant. Créez-en un pour organiser cette note.",
-   "back": "I don't have another notebook yet, so create one to organize this note.",
-   "score": 0.5
+   "english": "No other notebooks yet. Create one to organize this note.",
+   "translated": "Aucun autre carnet pour l’instant. Créez-en un pour organiser cette note.",
+   "back": "No other notebook yet, so create one to organize this note.",
+   "score": 0.941
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1082,7 +1082,7 @@
   {
    "key": "termsOfServiceRow",
    "english": "Terms of Service",
-   "translated": "Conditions d'utilisation",
+   "translated": "Conditions d’utilisation",
    "back": "Conditions of use",
    "score": 0.0
   },
@@ -1096,7 +1096,7 @@
   {
    "key": "openLinkFailedMessage",
    "english": "Couldn't open the link. Please try again.",
-   "translated": "Impossible d'ouvrir le lien. Veuillez réessayer.",
+   "translated": "Impossible d’ouvrir le lien. Veuillez réessayer.",
    "back": "I can't open the link, please try again.",
    "score": 0.769
   },
@@ -1106,6 +1106,13 @@
    "translated": "Licences open source",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Votre rappel quotidien facultatif d’un verset biblique",
+   "back": "Your optional daily recall of a Bible verse",
+   "score": 0.8
   }
  ]
 }

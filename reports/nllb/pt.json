@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Confirme que é você para ativar o bloqueio de notas",
    "back": "Confirm that it's you to activate the note block.",
-   "score": 0.444
+   "score": 0.4
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Confirme que é você para desativar o bloqueio de notas",
    "back": "Confirm that it's you to disable the note block.",
-   "score": 0.4
+   "score": 0.364
   },
   {
    "key": "biometricShareReason",
@@ -648,7 +648,7 @@
   {
    "key": "verseModeWatermark",
    "english": "Watermark",
-   "translated": "Marca d'água",
+   "translated": "Marca d’água",
    "back": "Watermark",
    "score": 1.0
   },
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Você já tem Remover anúncios. Obrigado!",
-   "back": "You already have Remove ads.",
-   "score": 0.889
+   "translated": "Você já tem “Remover anúncios”. Obrigado!",
+   "back": "You already have Remove ads. Thank you!",
+   "score": 1.0
   },
   {
    "key": "supportSectionTitle",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Ainda não há outros cadernos. Crie um para organizar esta nota.",
    "back": "There are no other notebooks yet, so create one to organize this note.",
-   "score": 0.778
+   "score": 0.889
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1068,9 +1068,9 @@
   {
    "key": "legalAndSupportSectionTitle",
    "english": "Legal & Support",
-   "translated": "Jurídico e suporte",
-   "back": "Legal and support",
-   "score": 1.0
+   "translated": "Informações legais e suporte",
+   "back": "Legal information and support",
+   "score": 0.8
   },
   {
    "key": "privacyPolicyRow",
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Licenças de código aberto",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Seu lembrete diário opcional de um versículo bíblico",
+   "back": "Your optional daily reminder of a Bible verse",
    "score": 1.0
   }
  ]

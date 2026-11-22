@@ -221,8 +221,8 @@
   {
    "key": "formatItalic",
    "english": "Italic",
-   "translated": "Mlalo",
-   "back": "The future",
+   "translated": "Italiki",
+   "back": "Italian",
    "score": 0.0
   },
   {
@@ -235,8 +235,8 @@
   {
    "key": "formatHeading",
    "english": "Heading",
-   "translated": "Kichwa cha habari",
-   "back": "Headline",
+   "translated": "Kichwa cha sehemu",
+   "back": "Title of the section",
    "score": 0.0
   },
   {
@@ -291,8 +291,8 @@
   {
    "key": "penHighlighter",
    "english": "Highlighter",
-   "translated": "Kialamisho cha kung’arisha",
-   "back": "A petition for a writ of certiorari",
+   "translated": "Kalamu ya kuangazia",
+   "back": "A light pen",
    "score": 0.0
   },
   {
@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Thibitisha utambulisho wako ili uwashe kufunga madokezo",
    "back": "Verify your identity to prompt the closing of comments",
-   "score": 0.0
+   "score": 0.2
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Thibitisha utambulisho wako ili uzime kufunga madokezo",
    "back": "Verify your identity to turn off the tip",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -557,8 +557,8 @@
   {
    "key": "paperStyleParchment",
    "english": "Parchment",
-   "translated": "Ngozi ya karatasi",
-   "back": "Paper leather",
+   "translated": "Karatasi ya ngozi",
+   "back": "Leather paper",
    "score": 0.0
   },
   {
@@ -627,8 +627,8 @@
   {
    "key": "themeParchment",
    "english": "Parchment",
-   "translated": "Ngozi ya karatasi",
-   "back": "Paper leather",
+   "translated": "Karatasi ya ngozi",
+   "back": "Leather paper",
    "score": 0.0
   },
   {
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "Onyesho la aya ya siku",
-   "back": "Presentation of the day's verse",
-   "score": 0.286
+   "translated": "Onyesho la aya ya Biblia ya siku",
+   "back": "A presentation of the day's Bible verse",
+   "score": 0.25
   },
   {
    "key": "verseModeWatermark",
@@ -655,8 +655,8 @@
   {
    "key": "verseModeHeader",
    "english": "Header",
-   "translated": "Kichwa",
-   "back": "The Head",
+   "translated": "Kichwa cha ukurasa",
+   "back": "Title of the page",
    "score": 0.0
   },
   {
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "Kikumbusho cha kila siku cha aya",
-   "back": "A daily reminder of the verses",
-   "score": 0.667
+   "translated": "Kikumbusho cha kila siku cha aya ya Biblia",
+   "back": "A daily reminder of a Bible verse",
+   "score": 0.857
   },
   {
    "key": "reminderTimeLabel",
@@ -704,9 +704,9 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "Aya yako ya siku iko tayari.",
-   "back": "Your sign of the day is ready.",
-   "score": 0.333
+   "translated": "Aya yako ya Biblia ya siku iko tayari.",
+   "back": "Your Bible verse for the day is ready.",
+   "score": 0.571
   },
   {
    "key": "privacySectionTitle",
@@ -851,7 +851,7 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Tayari una Ondoa matangazo. Asante!",
+   "translated": "Tayari una “Ondoa matangazo”. Asante!",
    "back": "You already have Remove ads. Thank you!",
    "score": 1.0
   },
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Bado hakuna madaftari mengine. Tengeneza moja ili upange dokezo hili.",
    "back": "There are no other manuals yet.",
    "score": 0.462
@@ -1106,6 +1106,13 @@
    "translated": "Leseni za chanzo huria",
    "back": "Licenses from free source",
    "score": 0.571
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Kikumbusho chako cha hiari cha kila siku cha aya ya Biblia",
+   "back": "Your voluntary daily reminder of a Bible verse",
+   "score": 0.8
   }
  ]
 }

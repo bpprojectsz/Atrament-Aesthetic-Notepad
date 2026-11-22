@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Підтвердьте особу, щоб увімкнути блокування нотаток",
    "back": "Encourage the person to enable the note-blocking",
-   "score": 0.222
+   "score": 0.2
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Підтвердьте особу, щоб вимкнути блокування нотаток",
    "back": "Reassure the person to turn off the blocking of the notes",
-   "score": 0.364
+   "score": 0.333
   },
   {
    "key": "biometricShareReason",
@@ -522,22 +522,22 @@
   {
    "key": "paperStyleLined",
    "english": "Lined",
-   "translated": "Лінійка",
-   "back": "Line",
+   "translated": "У лінійку",
+   "back": "In the line.",
    "score": 0.0
   },
   {
    "key": "paperStyleDotGrid",
    "english": "Dot Grid",
-   "translated": "Крапки",
-   "back": "Cracks",
+   "translated": "У крапку",
+   "back": "At the drop.",
    "score": 0.0
   },
   {
    "key": "paperStyleGrid",
    "english": "Grid",
-   "translated": "Клітинка",
-   "back": "The cage",
+   "translated": "У клітинку",
+   "back": "In the cell.",
    "score": 0.0
   },
   {
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Нічого нещодавнього",
-   "back": "Nothing recent",
-   "score": 1.0
+   "translated": "Немає нещодавніх нотаток",
+   "back": "No recent notes",
+   "score": 0.4
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Інших блокнотів ще немає. Створіть блокнот, щоб упорядкувати цю нотатку.",
    "back": "I don't have any other notebooks yet.",
    "score": 0.375
@@ -1106,6 +1106,13 @@
    "translated": "Ліцензії з відкритим кодом",
    "back": "Open-source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Ваше необов’язкове щоденне нагадування про вірш із Біблії",
+   "back": "Your unnecessary daily reminder of a Bible verse",
+   "score": 0.8
   }
  ]
 }

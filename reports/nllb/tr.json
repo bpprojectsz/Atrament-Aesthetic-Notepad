@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Not kilidini etkinleştirmek için kimliğinizi doğrulayın",
    "back": "Verify your identity to enable the note lock",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Not kilidini devre dışı bırakmak için kimliğinizi doğrulayın",
    "back": "Verify your identity to disable the note lock",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -641,9 +641,9 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "Günün ayeti görünümü",
-   "back": "View of the day's text",
-   "score": 0.0
+   "translated": "Günün Kutsal Kitap ayeti görünümü",
+   "back": "View of the Bible verse for the day",
+   "score": 0.286
   },
   {
    "key": "verseModeWatermark",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "Günlük ayet hatırlatıcısı",
-   "back": "A daily verse reminder",
-   "score": 1.0
+   "translated": "Günlük Kutsal Kitap ayeti hatırlatıcısı",
+   "back": "A daily Bible reminder",
+   "score": 0.667
   },
   {
    "key": "reminderTimeLabel",
@@ -704,8 +704,8 @@
   {
    "key": "dailyReminderBody",
    "english": "Your daily verse is ready.",
-   "translated": "Günün ayeti hazır.",
-   "back": "The day's text is ready.",
+   "translated": "Günün Kutsal Kitap ayeti hazır.",
+   "back": "The Bible text for the day is ready.",
    "score": 0.286
   },
   {
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Reklamları kaldır zaten sizde. Teşekkürler!",
-   "back": "You already have the ads.",
-   "score": 0.75
+   "translated": "Zaten “Reklamları kaldır” seçeneğine sahipsiniz. Teşekkürler!",
+   "back": "You already have the option to remove ads.",
+   "score": 0.8
   },
   {
    "key": "supportSectionTitle",
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Yakın zamanda bir şey yok",
-   "back": "There's nothing in the near future.",
-   "score": 0.286
+   "translated": "Son düzenlenen not yok",
+   "back": "No last edited note",
+   "score": 0.0
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Henüz başka defter yok. Bu notu düzenlemek için bir defter oluşturun.",
    "back": "No other notebook yet. Create a notebook to edit this notebook.",
    "score": 0.714
@@ -1106,6 +1106,13 @@
    "translated": "Açık kaynak lisansları",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "İsteğe bağlı günlük Kutsal Kitap ayeti hatırlatıcınız",
+   "back": "A voluntary reminder of the daily Bible verse",
+   "score": 0.8
   }
  ]
 }

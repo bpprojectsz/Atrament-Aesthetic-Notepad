@@ -4,48 +4,48 @@ Each non-English string was machine-translated back to English and compared with
 
 | Locale | Mean overlap | Strings below 0.25 |
 |---|---|---|
-| ar | 0.51 | 50 |
-| bg | 0.46 | 58 |
-| bn | 0.63 | 31 |
-| ca | 0.50 | 51 |
-| cs | 0.48 | 53 |
-| da | 0.52 | 46 |
-| de | 0.53 | 52 |
+| ar | 0.50 | 50 |
+| bg | 0.47 | 57 |
+| bn | 0.64 | 30 |
+| ca | 0.51 | 51 |
+| cs | 0.49 | 53 |
+| da | 0.53 | 45 |
+| de | 0.54 | 51 |
 | el | 0.44 | 60 |
-| es | 0.55 | 49 |
-| fa | 0.47 | 55 |
+| es | 0.54 | 49 |
+| fa | 0.47 | 54 |
 | fi | 0.47 | 56 |
-| fil | 0.70 | 28 |
-| fr | 0.51 | 50 |
-| gu | 0.68 | 30 |
-| he | 0.44 | 60 |
+| fil | 0.73 | 25 |
+| fr | 0.52 | 51 |
+| gu | 0.70 | 28 |
+| he | 0.44 | 62 |
 | hi | 0.74 | 24 |
-| hu | 0.43 | 60 |
-| id | 0.54 | 46 |
+| hu | 0.43 | 61 |
+| id | 0.55 | 45 |
 | it | 0.53 | 50 |
-| ja | 0.53 | 41 |
+| ja | 0.53 | 43 |
 | ko | 0.41 | 60 |
-| mr | 0.65 | 35 |
-| ms | 0.50 | 47 |
-| nb | 0.56 | 47 |
-| nl | 0.54 | 46 |
-| pl | 0.51 | 49 |
-| pt | 0.54 | 49 |
-| pt_PT | 0.50 | 54 |
-| ro | 0.48 | 54 |
+| mr | 0.65 | 34 |
+| ms | 0.51 | 46 |
+| nb | 0.57 | 46 |
+| nl | 0.55 | 46 |
+| pl | 0.51 | 50 |
+| pt | 0.55 | 49 |
+| pt_PT | 0.51 | 54 |
+| ro | 0.49 | 54 |
 | ru | 0.54 | 44 |
-| sk | 0.46 | 55 |
+| sk | 0.47 | 55 |
 | sv | 0.54 | 48 |
-| sw | 0.44 | 58 |
-| ta | 0.60 | 39 |
-| te | 0.67 | 31 |
+| sw | 0.45 | 58 |
+| ta | 0.61 | 39 |
+| te | 0.68 | 31 |
 | th | 0.37 | 63 |
 | tr | 0.58 | 39 |
 | uk | 0.49 | 52 |
-| ur | 0.64 | 35 |
+| ur | 0.65 | 34 |
 | vi | 0.43 | 59 |
 | zh | 0.50 | 47 |
-| zh_Hant | 0.40 | 59 |
+| zh_Hant | 0.40 | 58 |
 
 All 42 language files were screened by this engine.
 
@@ -112,11 +112,11 @@ All 42 language files were screened by this engine.
 - `penStrokeWidth` (0.0): EN “Stroke width” → “রেখার পুরুত্ব” → back “The thickness of the line”
 - `paperStyleLined` (0.0): EN “Lined” → “রুলটানা” → back “The Rultana”
 - `paperStyleDotGrid` (0.0): EN “Dot Grid” → “বিন্দুযুক্ত” → back “Dotted”
-- `paperStyleGrid` (0.0): EN “Grid” → “চৌকো ঘর” → back “Square house”
 - `paperStyleBlank` (0.0): EN “Blank” → “ফাঁকা” → back “It's empty.”
 - `paperStyleVellum` (0.0): EN “Vellum” → “ভেলাম” → back “What's wrong with you?”
 - `fontSerif` (0.0): EN “Serif” → “সেরিফ” → back “Sheriff.”
 - `themeSectionTitle` (0.0): EN “Appearance” → “চেহারা” → back “The face.”
+- `verseModeFooter` (0.0): EN “Footer” → “ফুটার” → back “The foot.”
 
 ## ca
 
@@ -133,7 +133,7 @@ All 42 language files were screened by this engine.
 - `formatBold` (0.0): EN “Bold” → “Negreta” → back “The Negro”
 - `formatItalic` (0.0): EN “Italic” → “Cursiva” → back “Cursive”
 - `formatUnderline` (0.0): EN “Underline” → “Subratllat” → back “Subtitled”
-- `formatHeading` (0.0): EN “Heading” → “Capçalera” → back “Headgear”
+- `formatHeading` (0.0): EN “Heading” → “Títol de secció” → back “Title of section”
 - `formatChecklist` (0.0): EN “Checklist” → “Llista de comprovació” → back “List of proofs”
 - `formatQuote` (0.0): EN “Quote” → “Cita” → back “It quotes”
 - `penHighlighter` (0.0): EN “Highlighter” → “Marcador” → back “Marker”
@@ -312,18 +312,18 @@ All 42 language files were screened by this engine.
 - `redo` (0.0): EN “Redo” → “I-redo” → back “Reduced”
 - `untitledNote` (0.0): EN “Untitled” → “Walang pamagat” → back “No title”
 - `deleteNotebookTitle` (0.0): EN “Delete "{name}"?” → “Burahin ang “{name}”?” → back “Shut down the XNAME?”
-- `sortOptionsTitle` (0.0): EN “Sort” → “Pagsunud-sunurin” → back “Follow-up”
 - `sortByCreated` (0.0): EN “Date created” → “Petsa ng paggawa” → back “Hours of work”
 - `formatQuote` (0.0): EN “Quote” → “Sipi” → back “Sheep”
 - `penPencil` (0.0): EN “Pencil” → “Lapis” → back “Flat”
 - `penEraser` (0.0): EN “Eraser” → “Pambura” → back “Unemployment”
 - `penStrokeWidth` (0.0): EN “Stroke width” → “Kapal ng guhit” → back “Drawing ship”
-- `restoreSuccessMessage` (0.0): EN “Your purchase was restored.” → “Naibalik na ang binili mo.” → back “What you bought has been returned.”
 - `paperStyleLined` (0.0): EN “Lined” → “May guhit” → back “There's a drawing”
 - `paperStyleDotGrid` (0.0): EN “Dot Grid” → “May tuldok” → back “There is a point”
 - `paperStyleGrid` (0.0): EN “Grid” → “May kuwadrado” → back “There's a square”
 - `paperStyleParchment` (0.0): EN “Parchment” → “Pergamino” → back “Pergamon”
 - `fontSerif` (0.0): EN “Serif” → “Serif” → back “Sheriff”
+- `themeLight` (0.0): EN “Light” → “Maliwanag” → back “Clearly”
+- `themeParchment` (0.0): EN “Parchment” → “Pergamino” → back “Pergamon”
 
 ## fr
 
@@ -458,10 +458,10 @@ All 42 language files were screened by this engine.
 - `formatUnderline` (0.0): EN “Underline” → “Garis bawah” → back “The bottom line”
 - `formatHeading` (0.0): EN “Heading” → “Judul” → back “Title”
 - `formatQuote` (0.0): EN “Quote” → “Kutipan” → back “Quotes”
-- `penFountainPen` (0.0): EN “Fountain Pen” → “Pulpen tinta” → back “The ink pulp”
 - `penHighlighter` (0.0): EN “Highlighter” → “Stabilo” → back “Stabilo”
 - `penEraser` (0.0): EN “Eraser” → “Penghapus” → back “The remover”
 - `penStrokeWidth` (0.0): EN “Stroke width” → “Ketebalan garis” → back “Line thickness”
+- `biometricLockReason` (0.0): EN “Unlock to view this note” → “Buka kunci untuk melihat catatan” → back “Open the key to see the notes.”
 
 ## it
 
@@ -553,7 +553,7 @@ All 42 language files were screened by this engine.
 - `paperStyleVellum` (0.0): EN “Vellum” → “वेलम” → back “What is the meaning of life?”
 - `fontSerif` (0.0): EN “Serif” → “सेरिफ” → back “Sheriff”
 - `themeSectionTitle` (0.0): EN “Appearance” → “स्वरूप” → back “Nature”
-- `verseSectionTitle` (0.0): EN “Daily Verse Display” → “आजच्या वचनाचे प्रदर्शन” → back “Today's Word is Exhibited”
+- `verseModeOff` (0.0): EN “Off” → “बंद” → back “Closed”
 
 ## ms
 
@@ -572,7 +572,7 @@ All 42 language files were screened by this engine.
 - `formatBold` (0.0): EN “Bold” → “Tebal” → back “It's all right.”
 - `formatItalic` (0.0): EN “Italic” → “Condong” → back “The convex”
 - `formatUnderline` (0.0): EN “Underline” → “Garis bawah” → back “The bottom line”
-- `formatHeading` (0.0): EN “Heading” → “Pengepala” → back “Chief”
+- `formatHeading` (0.0): EN “Heading” → “Tajuk bahagian” → back “Title of section”
 - `formatQuote` (0.0): EN “Quote” → “Petikan” → back “Quoting”
 - `penFountainPen` (0.0): EN “Fountain Pen” → “Pen dakwat” → back “Pencils”
 - `penHighlighter` (0.0): EN “Highlighter” → “Penyerlah” → back “The transmitter”
@@ -737,7 +737,7 @@ All 42 language files were screened by this engine.
 - `penEraser` (0.0): EN “Eraser” → “Ластик” → back “It 's rubber .”
 - `penStrokeWidth` (0.0): EN “Stroke width” → “Толщина линии” → back “Line thickness”
 - `privacyChoicesTitle` (0.0): EN “Privacy choices” → “Параметры конфиденциальности” → back “Confidentiality parameters”
-- `paperStyleLined` (0.0): EN “Lined” → “Линейка” → back “The line”
+- `paperStyleLined` (0.0): EN “Lined” → “В линейку” → back “In the line.”
 
 ## sk
 
@@ -803,9 +803,9 @@ All 42 language files were screened by this engine.
 - `sortOptionsTitle` (0.0): EN “Sort” → “Panga” → back “The Sword”
 - `sortByTitle` (0.0): EN “Title” → “Kichwa” → back “The Head”
 - `formatBold` (0.0): EN “Bold” → “Herufi nzito” → back “Heavy letters”
-- `formatItalic` (0.0): EN “Italic” → “Mlalo” → back “The future”
+- `formatItalic` (0.0): EN “Italic” → “Italiki” → back “Italian”
 - `formatUnderline` (0.0): EN “Underline” → “Mstari chini” → back “The bottom line”
-- `formatHeading` (0.0): EN “Heading” → “Kichwa cha habari” → back “Headline”
+- `formatHeading` (0.0): EN “Heading” → “Kichwa cha sehemu” → back “Title of the section”
 - `formatChecklist` (0.0): EN “Checklist” → “Orodha ya kukagua” → back “A list to be reviewed”
 
 ## ta
@@ -847,9 +847,9 @@ All 42 language files were screened by this engine.
 - `penHighlighter` (0.0): EN “Highlighter” → “హైలైటర్” → back “Highlighting”
 - `penEraser` (0.0): EN “Eraser” → “ఎరేజర్” → back “Erase”
 - `penStrokeWidth` (0.0): EN “Stroke width” → “గీత మందం” → back “The thickness of the line”
-- `paperStyleLined` (0.0): EN “Lined” → “గీతల” → back “The rows”
-- `paperStyleDotGrid` (0.0): EN “Dot Grid” → “చుక్కల” → back “Drops”
-- `paperStyleGrid` (0.0): EN “Grid” → “గడుల” → back “Houses”
+- `paperStyleLined` (0.0): EN “Lined” → “గీతలతో” → back “With songs”
+- `paperStyleDotGrid` (0.0): EN “Dot Grid” → “చుక్కలతో” → back “With drops”
+- `paperStyleGrid` (0.0): EN “Grid” → “గడులతో” → back “With the holes”
 - `paperStyleBlank` (0.0): EN “Blank” → “ఖాళీ” → back “Free of charge”
 - `paperStyleParchment` (0.0): EN “Parchment” → “పార్చ్‌మెంట్” → back “Purchasing”
 - `paperStyleVellum` (0.0): EN “Vellum” → “వెల్లం” → back “The Light”

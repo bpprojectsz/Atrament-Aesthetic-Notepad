@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Bekreft identiteten din for å slå på notatlåsen",
    "back": "Confirm your identity to turn on the key",
-   "score": 0.5
+   "score": 0.667
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Bekreft identiteten din for å slå av notatlåsen",
    "back": "Confirm your identity to turn off the note lock",
-   "score": 0.909
+   "score": 1.0
   },
   {
    "key": "biometricShareReason",
@@ -683,9 +683,9 @@
   {
    "key": "dailyReminderToggle",
    "english": "Daily verse reminder",
-   "translated": "Daglig versvarsel",
-   "back": "Diary of a Wimpy Kid",
-   "score": 0.0
+   "translated": "Daglig påminnelse om vers",
+   "back": "Daily reminder of the verses",
+   "score": 0.667
   },
   {
    "key": "reminderTimeLabel",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Du har allerede Fjern annonser. Takk!",
-   "back": "You already have Remove ads.",
-   "score": 0.889
+   "translated": "Du har allerede «Fjern annonser». Takk!",
+   "back": "You already have Remove ads. Thank you!",
+   "score": 1.0
   },
   {
    "key": "supportSectionTitle",
@@ -963,9 +963,9 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Ingenting nylig",
-   "back": "Nothing recently",
-   "score": 0.5
+   "translated": "Ingenting nylig redigert",
+   "back": "Nothing recently edited",
+   "score": 0.4
   },
   {
    "key": "emptyRecentNotesBody",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Det finnes ingen andre notatbøker ennå. Opprett en for å organisere dette notatet.",
    "back": "There are no other notebooks yet. Create one to organize this notebook.",
-   "score": 0.75
+   "score": 0.875
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Åpen kildekode-lisenser",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Din valgfrie daglige påminnelse om et bibelvers",
+   "back": "Your Optional Daily Reminder of a Bible Verse",
    "score": 1.0
   }
  ]

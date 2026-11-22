@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "请验证身份以开启笔记锁定",
    "back": "Please verify your identity to open the note lock",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "请验证身份以关闭笔记锁定",
    "back": "Please verify your identity to close the note lock",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "还没有其他笔记本。创建一个来整理这条笔记。",
    "back": "There is no other notebook. Create one to organize this notebook.",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "开源许可",
    "back": "Open source license",
    "score": 0.667
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "你可选的每日经文提醒",
+   "back": "A daily reminder of a scripture of your choice",
+   "score": 0.444
   }
  ]
 }

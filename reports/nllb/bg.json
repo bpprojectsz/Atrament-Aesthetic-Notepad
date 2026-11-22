@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Потвърдете самоличността си, за да включите заключването на бележките",
    "back": "Confirm your identity to include the note locking",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Потвърдете самоличността си, за да изключите заключването на бележките",
    "back": "Confirm your identity to exclude the locking of the notes.",
-   "score": 0.4
+   "score": 0.545
   },
   {
    "key": "biometricShareReason",
@@ -606,9 +606,9 @@
   {
    "key": "themeSectionTitle",
    "english": "Appearance",
-   "translated": "Облик",
-   "back": "Furniture and articles of clothing, of knitted or crocheted textiles",
-   "score": 0.0
+   "translated": "Външен вид",
+   "back": "External appearance",
+   "score": 0.667
   },
   {
    "key": "themeLight",
@@ -1018,7 +1018,7 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Още няма други тетрадки. Създайте една, за да подредите тази бележка.",
    "back": "I don't have any other notebooks yet.",
    "score": 0.375
@@ -1106,6 +1106,13 @@
    "translated": "Лицензи за отворен код",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Вашето незадължително ежедневно напомняне за стих от Библията",
+   "back": "Your unnecessary daily reminder of a Bible verse",
+   "score": 0.8
   }
  ]
 }

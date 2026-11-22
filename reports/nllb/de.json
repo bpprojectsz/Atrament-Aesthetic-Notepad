@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Identität bestätigen, um die Notizsperre einzuschalten",
    "back": "Confirm identity to activate the note lock",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Identität bestätigen, um die Notizsperre auszuschalten",
    "back": "Confirm identity to turn off the note lock",
-   "score": 0.909
+   "score": 1.0
   },
   {
    "key": "biometricShareReason",
@@ -571,8 +571,8 @@
   {
    "key": "fontSectionTitle",
    "english": "Note Font",
-   "translated": "Notizschrift",
-   "back": "Notes",
+   "translated": "Schriftart der Notizen",
+   "back": "Type of notes",
    "score": 0.0
   },
   {
@@ -788,9 +788,9 @@
   {
    "key": "shareAppMessage",
    "english": "Try Atrament — a distraction-free notepad with paper textures.",
-   "translated": "Probier Atrament — ein ablenkungsfreier Notizblock mit Papiermustern.",
-   "back": "Try Atrament  a distraction-free notebook with paper patterns.",
-   "score": 0.714
+   "translated": "Probier Atrament — ein ablenkungsfreier Notizblock mit Papiertexturen.",
+   "back": "Try Atrament  a distraction-free notebook with paper textures.",
+   "score": 0.857
   },
   {
    "key": "languageSectionTitle",
@@ -837,9 +837,9 @@
   {
    "key": "premiumBody",
    "english": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
-   "translated": "Atrament ist kostenlos mit einem kleinen Banner-Werbeplatz. Die Entfernung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.",
-   "back": "Atrament is free with a small banner ad space. The distance is a one-time purchase that unlocks nothing else  all the features are already yours.",
-   "score": 0.686
+   "translated": "Atrament ist kostenlos und zeigt einen kleinen Werbebanner. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.",
+   "back": "Atrament is free and features a small advertising banner. Removing the ad is a one-time purchase that unlocks nothing else  all the features are already yours.",
+   "score": 0.743
   },
   {
    "key": "premiumRestoreButton",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Du hast bereits Werbung entfernen. Danke!",
-   "back": "You've already removed advertisements.",
-   "score": 0.222
+   "translated": "Du hast „Werbung entfernen“ bereits. Danke!",
+   "back": "You've already removed ads.",
+   "score": 0.444
   },
   {
    "key": "supportSectionTitle",
@@ -963,8 +963,8 @@
   {
    "key": "emptyRecentNotesTitle",
    "english": "Nothing recent",
-   "translated": "Nichts Neues",
-   "back": "It 's nothing new .",
+   "translated": "Nichts Aktuelles",
+   "back": "Nothing up to date",
    "score": 0.4
   },
   {
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Noch keine weiteren Notizbücher. Erstelle eins, um diese Notiz zu organisieren.",
    "back": "No more notebooks yet. Make one to organize this note.",
-   "score": 0.625
+   "score": 0.75
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "Open-Source-Lizenzen",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Deine optionale tägliche Erinnerung an einen Bibelvers",
+   "back": "Optional daily recall of a Bible verse",
+   "score": 0.8
   }
  ]
 }

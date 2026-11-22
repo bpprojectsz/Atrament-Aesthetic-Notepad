@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "Confirma que eres tú para activar el bloqueo de notas",
    "back": "Confirm it's you to activate the note block.",
-   "score": 0.444
+   "score": 0.4
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "Confirma que eres tú para desactivar el bloqueo de notas",
    "back": "Confirm it's you to disable the note block.",
-   "score": 0.4
+   "score": 0.364
   },
   {
    "key": "biometricShareReason",
@@ -851,9 +851,9 @@
   {
    "key": "premiumAlreadyProMessage",
    "english": "You already have Remove Ads. Thank you!",
-   "translated": "Ya tienes Quitar anuncios. ¡Gracias!",
-   "back": "You already have Remove ads. Thank you!",
-   "score": 1.0
+   "translated": "Ya tienes “Quitar anuncios”. ¡Gracias!",
+   "back": "You've already taken off ads. Thank you!",
+   "score": 0.545
   },
   {
    "key": "supportSectionTitle",
@@ -914,9 +914,9 @@
   {
    "key": "premiumUnlockLabel",
    "english": "Remove Ads Forever",
-   "translated": "Eliminar anuncios para siempre",
-   "back": "Remove ads forever",
-   "score": 1.0
+   "translated": "Quitar anuncios para siempre",
+   "back": "Removing ads forever",
+   "score": 0.667
   },
   {
    "key": "premiumUnlockPriceFallback",
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "Aún no hay otros cuadernos. Crea uno para organizar esta nota.",
    "back": "There are no other notebooks yet. Create one to organize this note.",
-   "score": 0.824
+   "score": 0.941
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1105,6 +1105,13 @@
    "english": "Open-source licenses",
    "translated": "Licencias de código abierto",
    "back": "Open source licenses",
+   "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "Tu recordatorio diario opcional de un versículo bíblico",
+   "back": "Your optional daily reminder of a Bible verse",
    "score": 1.0
   }
  ]

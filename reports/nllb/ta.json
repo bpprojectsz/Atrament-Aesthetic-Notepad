@@ -346,17 +346,17 @@
   },
   {
    "key": "biometricEnableReason",
-   "english": "Confirm it is you to turn on note lock",
+   "english": "Confirm your identity to turn on note lock",
    "translated": "குறிப்புப் பூட்டை இயக்க உங்கள் அடையாளத்தை உறுதிப்படுத்தவும்",
    "back": "Confirm your identity to activate the reference lock",
-   "score": 0.444
+   "score": 0.6
   },
   {
    "key": "biometricDisableReason",
-   "english": "Confirm it is you to turn off note lock",
+   "english": "Confirm your identity to turn off note lock",
    "translated": "குறிப்புப் பூட்டை அணைக்க உங்கள் அடையாளத்தை உறுதிப்படுத்தவும்",
    "back": "Confirm your identity to turn off the reference lock",
-   "score": 0.727
+   "score": 0.833
   },
   {
    "key": "biometricShareReason",
@@ -641,7 +641,7 @@
   {
    "key": "verseSectionTitle",
    "english": "Daily Verse Display",
-   "translated": "இன்றைய வசன காட்சி",
+   "translated": "இன்றைய வசனக் காட்சி",
    "back": "Today's Scriptural scene",
    "score": 0.0
   },
@@ -662,15 +662,15 @@
   {
    "key": "verseModeFooter",
    "english": "Footer",
-   "translated": "அடிக்குறிப்பு",
-   "back": "footnote",
+   "translated": "அடிப்பகுதி",
+   "back": "The bottom line",
    "score": 0.0
   },
   {
    "key": "verseModeOff",
    "english": "Off",
-   "translated": "அணைவு",
-   "back": "dam",
+   "translated": "முடக்கம்",
+   "back": "locked",
    "score": 0.0
   },
   {
@@ -1018,10 +1018,10 @@
   },
   {
    "key": "moveToNotebookEmptyBody",
-   "english": "No other notebooks yet. Create one to organise this note.",
+   "english": "No other notebooks yet. Create one to organize this note.",
    "translated": "இன்னும் வேறு நோட்புக்குகள் இல்லை. இந்தக் குறிப்பை ஒழுங்கமைக்க ஒன்றை உருவாக்குங்கள்.",
    "back": "No more notebooks. Create one to organize this note.",
-   "score": 0.667
+   "score": 0.8
   },
   {
    "key": "moveToNotebookCreateRow",
@@ -1106,6 +1106,13 @@
    "translated": "திறந்த மூல உரிமங்கள்",
    "back": "Open source licenses",
    "score": 1.0
+  },
+  {
+   "key": "notificationChannelDescription",
+   "english": "Your optional daily Bible verse reminder",
+   "translated": "உங்கள் விருப்பத்திற்குரிய தினசரி வசன நினைவூட்டல்",
+   "back": "Your preferred daily subjunctive reminder",
+   "score": 0.444
   }
  ]
 }
