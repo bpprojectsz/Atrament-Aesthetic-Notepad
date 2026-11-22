@@ -137,7 +137,9 @@ It is a screen lock, not encryption (the database is not encrypted).
 ### 6.7 Export and share (`core/services/export_service.dart`, `core/services/export_page_renderer.dart`, `core/utils/export_helper.dart`, `platform/share_service.dart`)
 `.txt` and `.pdf`. Filenames keep letters/digits of every script, are capped, and carry a timestamp (no overwrites). Text the standard PDF
 fonts cannot draw (CJK, Arabic, Hebrew, Indic, Thai, Cyrillic, Greek, emoji…) and handwriting notes are drawn page by page with Flutter's
-own text layout at 1.5× scale **into memory, all pages at once**, then placed in the PDF (memory grows with page count — see handoff). Files go to the
+own text layout at 1.5× scale, **one page at a time** (`ExportPageRenderer.renderPageStream`). `ImagePdfBuilder` converts each page to RGB and hands it to
+`ImagePdfWriter`, a small self-contained PDF 1.4 writer that deflates the page at once (lossless FlateDecode) and keeps only the compressed bytes (about 20 KB per
+page). The text-only PDF path still uses the `pdf` package. Measured growth in a test VM: ~1.7 GB → ~175 MB for 100 pages (see D-111). Files go to the
 temp folder; `pruneOldExports` removes those older than a day at app start.
 
 ### 6.8 Daily verse and reminders (`core/services/verse_service.dart`, `core/providers/verse_provider.dart`, `core/services/reminder_scheduler.dart`, `platform/notification_service.dart`)
@@ -318,15 +320,20 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`core/services/engagement_service.dart`** (289 lines) — Owns all engagement gating: review prompt, share-app prompt, ATT request. Every decision is a pure predicate over counters and timestamps stored in SharedPreferences. Callers report events ("note saved", "export complete
   - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`, `platform/interstitial_service.dart`
   - used by: `main.dart`, `screens/note_editor_screen.dart`, `screens/settings_screen.dart`
-- **`core/services/export_page_renderer.dart`** (308 lines) — One rendered page: raw RGBA pixels.
+- **`core/services/export_page_renderer.dart`** (312 lines) — One rendered page: raw RGBA pixels.
   - uses: `core/utils/export_helper.dart`
-  - used by: `core/services/export_service.dart`
-- **`core/services/export_service.dart`** (180 lines) — Outcome of an export attempt, surfaced by the caller as an explicit success/error message (Section 15: "every save/delete/share shows explicit success/error feedback").
-  - uses: `core/services/export_page_renderer.dart`, `core/utils/error_handler.dart`, `core/utils/export_helper.dart`
+  - used by: `core/services/image_pdf_builder.dart`
+- **`core/services/export_service.dart`** (157 lines) — Outcome of an export attempt, surfaced by the caller as an explicit success/error message (Section 15: "every save/delete/share shows explicit success/error feedback").
+  - uses: `core/services/image_pdf_builder.dart`, `core/utils/error_handler.dart`, `core/utils/export_helper.dart`
   - used by: `main.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`core/services/iap_service.dart`** (402 lines) — Current subscription state, emitted to `subscription_provider.dart`.
   - uses: `core/utils/constants.dart`, `core/utils/error_handler.dart`, `core/utils/user_issues.dart`
   - used by: `core/providers/subscription_provider.dart`, `platform/interstitial_service.dart`, `screens/premium_screen.dart`, `screens/settings_screen.dart`, `widgets/banner_ad_widget.dart`
+- **`core/services/image_pdf_builder.dart`** (44 lines) — A finished image-based PDF.
+  - uses: `core/services/export_page_renderer.dart`, `core/services/image_pdf_writer.dart`, `core/utils/export_helper.dart`
+  - used by: `core/services/export_service.dart`
+- **`core/services/image_pdf_writer.dart`** (137 lines) — Writes a PDF whose pages are full-page RGB images, keeping only the compressed bytes of each page. Every page is deflated (lossless, standard `FlateDecode`) the moment it is added, so the caller can drop its page bitmap 
+  - used by: `core/services/image_pdf_builder.dart`
 - **`core/services/local_storage.dart`** (553 lines) — Result wrapper so callers (providers) can distinguish "empty on purpose" from "failed and fell back to empty," which matters for the visible warning banner required by Section 15.
   - uses: `core/models/note_model.dart`, `core/models/notebook_model.dart`, `core/utils/constants.dart`, `core/utils/error_handler.dart`
   - used by: `core/providers/note_provider.dart`, `core/providers/notebook_provider.dart`
@@ -349,7 +356,7 @@ Generated from the real import graph — do not edit by hand; run `python tools/
 - **`core/utils/error_handler.dart`** (118 lines) — Severity classification for reported errors. Used to decide whether a user-facing warning banner is warranted (Section 15: "graceful in-memory fallback + visible warning banner if persistence fails").
   - used by: `core/providers/locale_provider.dart`, `core/providers/theme_provider.dart`, `core/providers/verse_provider.dart`, `core/services/app_lock.dart`, `core/services/engagement_service.dart`, `core/services/export_service.dart`, `core/services/iap_service.dart`, `core/services/local_storage.dart` (+12 more)
 - **`core/utils/export_helper.dart`** (272 lines) — One handwriting stroke, in the canvas's own coordinates. Mirrors what is stored in a handwriting note but is independent of the widget layer.
-  - used by: `core/services/export_page_renderer.dart`, `core/services/export_service.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
+  - used by: `core/services/export_page_renderer.dart`, `core/services/export_service.dart`, `core/services/image_pdf_builder.dart`, `screens/home_screen.dart`, `screens/note_editor_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`core/utils/id_generator.dart`** (20 lines) — Generates locally-unique identifiers for new notes and notebooks. Atrament is offline-first with no cross-device sync (Section 1), so a full RFC-4122 UUID (and the extra `uuid` package dependency it would require) isn't 
   - used by: `screens/home_screen.dart`, `screens/notebook_detail_screen.dart`
 - **`core/utils/locale_utils.dart`** (139 lines) — Languages that read right-to-left. Keep in sync with lib/l10n.

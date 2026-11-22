@@ -115,4 +115,16 @@ history; if a decision is reversed, add a new entry that says so). Format: `ID �
 - **D-108** `store_submission/DATA_BACKING.md` rewritten to match: purchase is a one-time non-consumable (was called a subscription); diagnostics are a local log wired through `reportHook` (was "unset"); fonts are Merriweather, Inter and Lora with their OFL files; checklist now includes deploying the pages, consent message in the AdMob console, real AdMob IDs, App Store ID and SKAdNetwork list.
 - **D-109** OPEN, owner decision: the Apple "Data Used to Track You" answer. The old file said "None" while the app shows the ATT prompt and uses AdMob; the new file recommends declaring Identifiers → Device ID for third-party advertising. Not legal advice.
 - **D-110** OBSERVED, not changed (owner decision needed): the consent flow, ad SDK start and the iOS ATT prompt run for ad-free purchasers too (only ad *requests* are skipped). The privacy page says exactly that. If undesired, skip SDK start, consent and ATT when ad-free is known.
+- **D-111** Batch 17 (image-PDF memory), measured then fixed. Probe: `app/tool/perf/pdf_memory_probe_test.dart`, run by the CI task `measure-pdf` (one fresh process per page count; 1-page warm-up; peak RSS growth over the warm-up peak; Chinese note on the test font). Numbers are committed in `reports/pdf_memory/`.
+
+  | Pages | Before (`1a31432`) | After (`9c92ab6`) | PDF size before → after |
+  |---|---|---|---|
+  | 10 | 241 MB | 44 MB | 0.21 → 0.20 MB |
+  | 50 | 888 MB | 103 MB | 1.08 → 1.02 MB |
+  | 100 | 1,722 MB | 175 MB | 2.17 → 2.05 MB |
+
+  Cause: every page was kept as a 4.5 MB RGBA bitmap, then the `pdf` package made an RGB copy (3.4 MB) and an alpha copy (1.1 MB) per page and held them all until save, about 17 MB per page. Fix: `renderPageStream` draws one page at a time; `ImagePdfBuilder` converts to RGB and `ImagePdfWriter` deflates it at once and drops the bitmap. Lossless (same pixels), slightly smaller files, faster (100 pages 4.2 s → 2.7–3.6 s).
+- **D-112** Verification of the new PDF writer. Unit tests parse the output back (header, every xref offset points at its object, stream lengths, page tree, each image decompresses to exactly the pixels added). In CI the 10-page probe PDF is also checked by `qpdf --check` (strict structure), poppler (`pdftoppm`/`pdfimages`, no errors on stderr) and `pypdf` (every page read back with identical pixels to the Dart checksum, A4 media box). All passed. NOT verified: opening the file in real phone viewers (iOS Files/Quick Look, Google Drive, Android viewers).
+- **D-113** The slope fell from ~17 MB to ~1.5 MB per page but is not zero. A second build of the same note in the same process added only 17 / 60 / 10 MB (10 / 50 / 100 pages), far below the first build's growth, which points to garbage the collector had not reclaimed and allocator high-water marks, not retained pages. This is one sample on a test VM (JIT, test font, includes the engine), not a phone: real-device peak memory is unmeasured.
+- **D-114** Only the image path changed. Text-only PDFs still use the `pdf` package. `renderPages` (all pages at once) is kept for tests. The writer sets no document title/metadata (the old output had none either).
 
