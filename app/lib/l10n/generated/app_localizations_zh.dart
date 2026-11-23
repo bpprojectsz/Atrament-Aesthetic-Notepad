@@ -368,8 +368,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumHeadline => '专注写作，无干扰';
 
   @override
-  String get premiumBody =>
-      'Atrament 免费使用，含广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。';
+  String get premiumBody => 'Atrament 免费使用，含广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。';
 
   @override
   String get premiumRestoreButton => '恢复购买';

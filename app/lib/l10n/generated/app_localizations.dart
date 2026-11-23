@@ -897,7 +897,7 @@ abstract class AppLocalizations {
   /// No description provided for @premiumBody.
   ///
   /// In en, this message translates to:
-  /// **'Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn\'t unlock anything else — every feature is already yours.'**
+  /// **'Atrament is free with ads. Removing them is a one-time purchase that doesn\'t unlock anything else — every feature is already yours.'**
   String get premiumBody;
 
   /// No description provided for @premiumRestoreButton.
@@ -1089,7 +1089,7 @@ abstract class AppLocalizations {
   /// No description provided for @deleteNotebookWithCountBody.
   ///
   /// In en, this message translates to:
-  /// **'This will delete the notebook and its {count} notes. This can\'t be undone.'**
+  /// **'This will delete the notebook and all its notes (total: {count}). This can\'t be undone.'**
   String deleteNotebookWithCountBody(int count);
 
   /// No description provided for @legalAndSupportSectionTitle.

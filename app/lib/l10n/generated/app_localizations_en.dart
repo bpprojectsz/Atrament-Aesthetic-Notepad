@@ -392,7 +392,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      "Atrament is free with ads. Removing them is a one-time purchase that doesn't unlock anything else — every feature is already yours.";
+      'Atrament is free with ads. Removing them is a one-time purchase that doesn\'t unlock anything else — every feature is already yours.';
 
   @override
   String get premiumRestoreButton => 'Restore Purchases';
@@ -493,7 +493,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return "This will delete the notebook and all its notes (total: $count). This can't be undone.";
+    return 'This will delete the notebook and all its notes (total: $count). This can\'t be undone.';
   }
 
   @override
