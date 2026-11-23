@@ -15,7 +15,7 @@ Current batch: **none in progress.** Next: batch 13 (consent failure). The owner
 | `main` | `660235c` — contains phases 0–11 (merged) |
 | `languages` | see `git log` (batch 12 final = `ef8d44a`) — ~54 commits ahead of `main`, not merged |
 | Old branch | `audit-fixes` (`84dec49`) — fully contained in `main`; can be deleted |
-| Last green CI | run `44984663791` on `55d7674` (Compile Check, task `check`) — includes batches 12–15 and 17 |
+| Last green CI | run `45222017927` on `6fc99d6` (Compile Check, task `check`) — includes batches 12–15, 17, 18 and the final full read |
 | Owner's build | workflow **Build and Deploy** (manual) — never run, never edited |
 
 **Access token.** A GitHub fine-grained token with write access + workflow scope exists. **Ask the owner for it in chat.** It is deliberately
