@@ -16,6 +16,7 @@ import '../core/utils/constants.dart';
 import '../core/utils/date_formatter.dart';
 import '../core/utils/export_helper.dart';
 import '../core/utils/id_generator.dart';
+import '../core/utils/locale_utils.dart';
 import '../core/utils/paper_default.dart';
 import '../core/utils/quill_content_helper.dart';
 import '../platform/interstitial_service.dart';
@@ -277,7 +278,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
             previewText: _previewFor(note),
             dateLabel: DateFormatter.short(
               note.modifiedAt,
-              localeCode: Localizations.localeOf(context).languageCode,
+              localeCode: dateLocaleName(Localizations.localeOf(context)),
             ),
             onTap: () => _openNote(note),
             onMore: () => _handleNoteAction(note),
@@ -299,6 +300,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         await _handleMoveToNotebook(note);
         break;
       case NoteAction.edit:
+        unawaited(InterstitialService.instance.recordNoteEdit());
         _openNote(note);
         break;
       case NoteAction.export:
@@ -449,6 +451,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
         SnackBar(content: Text(l10n.shareFailedMessage)),
       );
     }
+    unawaited(InterstitialService.instance.recordNoteShare());
   }
 
   ExportableNote _buildExportable(NoteModel note, AppLocalizations l10n) {
@@ -457,7 +460,7 @@ class _NotebookDetailScreenState extends State<NotebookDetailScreen> {
       plainTextContent: plainTextFromContent(note.content),
       createdAtLabel: DateFormatter.short(
         note.createdAt,
-        localeCode: Localizations.localeOf(context).languageCode,
+        localeCode: dateLocaleName(Localizations.localeOf(context)),
       ),
       verseReferenceLabel: note.verseReference,
       ink: ExportInk.fromNoteContent(note.content),

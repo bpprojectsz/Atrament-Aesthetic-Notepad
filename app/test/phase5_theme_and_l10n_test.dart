@@ -1,6 +1,7 @@
 import 'package:atrament/core/utils/app_localization_setup.dart';
 import 'package:atrament/core/utils/app_theme.dart';
 import 'package:atrament/core/utils/constants.dart';
+import 'package:atrament/core/utils/quill_extra_localizations.dart';
 import 'package:atrament/l10n/generated/app_localizations.dart';
 import 'package:atrament/widgets/app_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -85,9 +86,100 @@ void main() {
 
   group('localization delegates', () {
     test('include flutter_quill\'s', () {
-      expect(appLocalizationsDelegates, contains(FlutterQuillLocalizations.delegate));
+      expect(
+        appLocalizationsDelegates.any((d) => d.type == FlutterQuillLocalizations),
+        isTrue,
+      );
       for (final delegate in AppLocalizations.localizationsDelegates) {
         expect(appLocalizationsDelegates, contains(delegate));
+      }
+    });
+
+    test('Quill gets a language it supports for every app language', () {
+      expect(quillLocaleFor(const Locale('nb')), const Locale('no'));
+      expect(quillLocaleFor(const Locale('de')), const Locale('de'));
+      // Chinese and Portuguese variants are chosen by country code in Quill.
+      expect(quillLocaleFor(const Locale('pt', 'PT')), const Locale('pt', 'BR'));
+      expect(quillLocaleFor(const Locale('pt', 'BR')), const Locale('pt', 'BR'));
+      expect(
+        quillLocaleFor(
+          const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
+        ),
+        const Locale('zh', 'TW'),
+      );
+      expect(
+        quillLocaleFor(
+          const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+        ),
+        const Locale('zh', 'CN'),
+      );
+      // A language flutter_quill has no translations for falls back to English.
+      expect(quillLocaleFor(const Locale('xx')), const Locale('en'));
+    });
+
+    test('the app supplies editor labels for languages Quill lacks', () async {
+      for (final code in ['ta', 'te', 'mr', 'fil']) {
+        expect(
+          FlutterQuillLocalizations.delegate.isSupported(Locale(code)),
+          isFalse,
+          reason: '$code is now in flutter_quill: drop our copy',
+        );
+        final l10n = await const QuillLocalizationsFallbackDelegate().load(
+          Locale(code),
+        );
+        expect(l10n, isA<AppQuillLocalizations>());
+        expect(l10n.undo, isNotEmpty);
+        expect(l10n.undo, isNot('Undo'), reason: code);
+        expect(
+          l10n.theImageHasBeenSavedAt('/a/b.png'),
+          contains('/a/b.png'),
+          reason: code,
+        );
+        expect(l10n.theImageHasBeenSavedAt('/a/b.png'), isNot(contains('{')));
+      }
+    });
+
+    test('Chinese and Portuguese get the right editor variant', () async {
+      const delegate = QuillLocalizationsFallbackDelegate();
+      final tw = await delegate.load(
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
+      );
+      final cn = await delegate.load(
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+      );
+      expect(tw.save, '儲存', reason: 'Traditional Chinese uses the Taiwan file');
+      expect(cn.save, '保存');
+      final br = await delegate.load(const Locale('pt', 'BR'));
+      final pt = await delegate.load(const Locale('pt', 'PT'));
+      expect(br.redo, 'Refazer');
+      expect(pt.redo, 'Refazer', reason: 'the plain pt file leaves “Redo” in English');
+    });
+
+    test('corrected editor labels replace the wrong ones', () async {
+      const delegate = QuillLocalizationsFallbackDelegate();
+      Future<FlutterQuillLocalizations> load(String code) =>
+          delegate.load(Locale(code));
+      expect((await load('ko')).text, '텍스트');
+      expect((await load('nl')).remove, 'Verwijderen');
+      expect((await load('nl')).edit, 'Bewerken');
+      expect((await load('ja')).apply, '適用');
+      expect((await load('tr')).open, 'Aç');
+      expect((await load('da')).visitLink, 'Besøg link');
+      expect((await load('ar')).pasteLink, 'لصق رابط');
+      expect((await load('ar')).ok, 'موافق');
+      expect((await load('pl')).apply, 'Zastosuj');
+      // The overlay changes only what it lists.
+      expect((await load('de')).open, 'Öffnen');
+      expect((await load('nl')).copy, 'Kopieer');
+    });
+
+    test('every set has the same labels', () {
+      final sizes = appQuillTranslations.values.map((m) => m.length).toSet();
+      expect(sizes, {106});
+      final first = appQuillTranslations.values.first.keys.toSet();
+      for (final m in appQuillTranslations.values) {
+        expect(m.keys.toSet(), first);
+        expect(m.values.where((v) => v.trim().isEmpty), isEmpty);
       }
     });
 

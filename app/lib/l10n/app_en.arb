@@ -56,8 +56,8 @@
   "noteLockedMessage": "This note is locked",
   "unlockButton": "Unlock",
   "noteLockTurnedOffMessage": "Note lock was turned off because this device has no screen lock or biometrics set up.",
-  "biometricEnableReason": "Confirm it is you to turn on note lock",
-  "biometricDisableReason": "Confirm it is you to turn off note lock",
+  "biometricEnableReason": "Confirm your identity to turn on note lock",
+  "biometricDisableReason": "Confirm your identity to turn off note lock",
   "biometricShareReason": "Unlock to share or export this note",
   "biometricAuthFailedMessage": "Unable to verify your identity.",
   "biometricSetupNeededMessage": "Set up a screen lock or fingerprint in your device settings first.",
@@ -126,7 +126,7 @@
   "languagePickerTitle": "Choose language",
   "premiumScreenTitle": "Remove Ads",
   "premiumHeadline": "Write without distraction",
-  "premiumBody": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+  "premiumBody": "Atrament is free with ads. Removing them is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
   "premiumRestoreButton": "Restore Purchases",
   "premiumAlreadyProMessage": "You already have Remove Ads. Thank you!",
   "supportSectionTitle": "Support",
@@ -152,13 +152,13 @@
   "noteActionExport": "Export",
   "noteActionShare": "Share",
   "moveToNotebookTitle": "Move to Notebook",
-  "moveToNotebookEmptyBody": "No other notebooks yet. Create one to organise this note.",
+  "moveToNotebookEmptyBody": "No other notebooks yet. Create one to organize this note.",
   "moveToNotebookCreateRow": "Create new notebook",
   "notebookActionRename": "Rename",
   "notebookActionChangeCover": "Change cover",
   "notebookRenameDialogTitle": "Rename Notebook",
   "notebookCoverPickerTitle": "Choose a cover color",
-  "deleteNotebookWithCountBody": "This will delete the notebook and its {count} notes. This can't be undone.",
+  "deleteNotebookWithCountBody": "This will delete the notebook and all its notes (total: {count}). This can't be undone.",
   "@deleteNotebookWithCountBody": {
     "placeholders": {
       "count": {
@@ -171,5 +171,6 @@
   "termsOfServiceRow": "Terms of Service",
   "supportRow": "Support",
   "openLinkFailedMessage": "Couldn't open the link. Please try again.",
-  "openSourceLicensesRow": "Open-source licenses"
+  "openSourceLicensesRow": "Open-source licenses",
+  "notificationChannelDescription": "Your optional daily Bible verse reminder"
 }

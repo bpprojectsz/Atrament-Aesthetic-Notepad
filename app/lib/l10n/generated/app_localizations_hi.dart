@@ -47,15 +47,15 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get saveFailedMessage => 'सहेजा नहीं जा सका। कृपया पुनः प्रयास करें।';
+  String get saveFailedMessage => 'सहेजा नहीं जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get exportFailedMessage =>
-      'इस नोट को निर्यात नहीं किया जा सका। कृपया पुनः प्रयास करें।';
+      'इस नोट को निर्यात नहीं किया जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get shareFailedMessage =>
-      'शेयर मेनू नहीं खुल सका। कृपया पुनः प्रयास करें।';
+      'साझा करने का मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get settingsTitle => 'सेटिंग्स';
@@ -98,7 +98,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get sortByModified => 'अंतिम संपादन';
 
   @override
-  String get sortByCreated => 'निर्माण तिथि';
+  String get sortByCreated => 'बनाए जाने की तारीख';
 
   @override
   String get sortByTitle => 'शीर्षक';
@@ -146,7 +146,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get penStrokeWidth => 'स्ट्रोक चौड़ाई';
 
   @override
-  String get toggleHandwritingMode => 'टाइप करने और बनाने के बीच स्विच करें';
+  String get toggleHandwritingMode => 'टाइप करने और ड्रॉइंग के बीच स्विच करें';
 
   @override
   String get biometricLockReason => 'इस नोट को देखने के लिए अनलॉक करें';
@@ -158,70 +158,88 @@ class AppLocalizationsHi extends AppLocalizations {
   String get unlockButton => 'अनलॉक करें';
 
   @override
-  String get noteLockTurnedOffMessage => 'इस डिवाइस पर स्क्रीन लॉक या बायोमेट्रिक सेट न होने के कारण नोट लॉक बंद कर दिया गया है।';
+  String get noteLockTurnedOffMessage =>
+      'इस डिवाइस पर स्क्रीन लॉक या बायोमेट्रिक सेट न होने के कारण नोट लॉक बंद कर दिया गया है।';
 
   @override
-  String get biometricEnableReason => 'नोट लॉक चालू करने के लिए अपनी पहचान की पुष्टि करें';
+  String get biometricEnableReason =>
+      'नोट लॉक चालू करने के लिए अपनी पहचान की पुष्टि करें';
 
   @override
-  String get biometricDisableReason => 'नोट लॉक बंद करने के लिए अपनी पहचान की पुष्टि करें';
+  String get biometricDisableReason =>
+      'नोट लॉक बंद करने के लिए अपनी पहचान की पुष्टि करें';
 
   @override
-  String get biometricShareReason => 'इस नोट को शेयर या एक्सपोर्ट करने के लिए अनलॉक करें';
+  String get biometricShareReason =>
+      'इस नोट को साझा या निर्यात करने के लिए अनलॉक करें';
 
   @override
   String get biometricAuthFailedMessage => 'आपकी पहचान सत्यापित नहीं हो सकी।';
 
   @override
-  String get biometricSetupNeededMessage => 'पहले डिवाइस सेटिंग में स्क्रीन लॉक या फ़िंगरप्रिंट सेट करें।';
+  String get biometricSetupNeededMessage =>
+      'पहले डिवाइस सेटिंग में स्क्रीन लॉक या फ़िंगरप्रिंट सेट करें।';
 
   @override
   String get privacyChoicesTitle => 'गोपनीयता विकल्प';
 
   @override
-  String get purchaseFailedMessage => 'खरीदारी पूरी नहीं हो सकी। कृपया फिर से कोशिश करें।';
+  String get purchaseFailedMessage =>
+      'खरीदारी पूरी नहीं हो सकी। कृपया फिर से कोशिश करें।';
 
   @override
   String get restoreSuccessMessage => 'आपकी खरीदारी बहाल कर दी गई है।';
 
   @override
-  String get restoreNothingFoundMessage => 'इस खाते के लिए कोई पिछली खरीदारी नहीं मिली।';
+  String get restoreNothingFoundMessage =>
+      'इस खाते के लिए कोई पिछली खरीदारी नहीं मिली।';
 
   @override
-  String get restoreFailedMessage => 'खरीदारी बहाल नहीं हो सकी। अपना कनेक्शन जाँचें और फिर कोशिश करें।';
+  String get restoreFailedMessage =>
+      'खरीदारी बहाल नहीं हो सकी। अपना कनेक्शन जाँचें और फिर कोशिश करें।';
 
   @override
-  String get reminderScheduleFailedMessage => 'रिमाइंडर शेड्यूल नहीं हो सका। कृपया फिर से कोशिश करें।';
+  String get reminderScheduleFailedMessage =>
+      'रिमाइंडर शेड्यूल नहीं हो सका। कृपया फिर से कोशिश करें।';
 
   @override
-  String get storageIssueNotebooksLoad => 'कुछ नोटबुक लोड नहीं हो सकीं। जो उपलब्ध है वही दिखाया जा रहा है।';
+  String get storageIssueNotebooksLoad =>
+      'कुछ नोटबुक लोड नहीं हो सकीं। जो उपलब्ध है वही दिखाया जा रहा है।';
 
   @override
-  String get storageIssueNotebookSave => 'हो सकता है यह नोटबुक सहेजी न गई हो। कृपया फिर से कोशिश करें।';
+  String get storageIssueNotebookSave =>
+      'हो सकता है यह नोटबुक सहेजी न गई हो। कृपया फिर से कोशिश करें।';
 
   @override
-  String get storageIssueNotebookChange => 'हो सकता है यह बदलाव सहेजा न गया हो। कृपया फिर से कोशिश करें।';
+  String get storageIssueNotebookChange =>
+      'हो सकता है यह बदलाव सहेजा न गया हो। कृपया फिर से कोशिश करें।';
 
   @override
-  String get storageIssueNotebookDelete => 'नोटबुक हटाई नहीं जा सकी। कृपया फिर से कोशिश करें।';
+  String get storageIssueNotebookDelete =>
+      'नोटबुक हटाई नहीं जा सकी। कृपया फिर से कोशिश करें।';
 
   @override
-  String get storageIssueNotebookOrder => 'हो सकता है नया क्रम सहेजा न गया हो। कृपया फिर से कोशिश करें।';
+  String get storageIssueNotebookOrder =>
+      'हो सकता है नया क्रम सहेजा न गया हो। कृपया फिर से कोशिश करें।';
 
   @override
-  String get storageIssueNotesLoad => 'कुछ नोट लोड नहीं हो सके। जो उपलब्ध है वही दिखाया जा रहा है।';
+  String get storageIssueNotesLoad =>
+      'कुछ नोट लोड नहीं हो सके। जो उपलब्ध है वही दिखाया जा रहा है।';
 
   @override
   String get storageIssueSearch => 'खोज के परिणाम अभी अधूरे हो सकते हैं।';
 
   @override
-  String get storageIssueNoteSave => 'हो सकता है यह नोट सहेजा न गया हो। कृपया डिवाइस का स्टोरेज जाँचें।';
+  String get storageIssueNoteSave =>
+      'हो सकता है यह नोट सहेजा न गया हो। कृपया डिवाइस का स्टोरेज जाँचें।';
 
   @override
-  String get storageIssueNoteDelete => 'नोट हटाया नहीं जा सका। कृपया फिर से कोशिश करें।';
+  String get storageIssueNoteDelete =>
+      'नोट हटाया नहीं जा सका। कृपया फिर से कोशिश करें।';
 
   @override
-  String get purchaseUnavailableMessage => 'यह खरीदारी अभी उपलब्ध नहीं है। कृपया बाद में फिर से कोशिश करें।';
+  String get purchaseUnavailableMessage =>
+      'यह खरीदारी अभी उपलब्ध नहीं है। कृपया बाद में फिर से कोशिश करें।';
 
   @override
   String get exportTitle => 'निर्यात करें';
@@ -287,7 +305,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get themeSystem => 'सिस्टम';
 
   @override
-  String get verseSectionTitle => 'दैनिक वचन प्रदर्शन';
+  String get verseSectionTitle => 'दैनिक बाइबल वचन प्रदर्शन';
 
   @override
   String get verseModeWatermark => 'वॉटरमार्क';
@@ -305,17 +323,17 @@ class AppLocalizationsHi extends AppLocalizations {
   String get notificationsSectionTitle => 'सूचनाएं';
 
   @override
-  String get dailyReminderToggle => 'दैनिक वचन अनुस्मारक';
+  String get dailyReminderToggle => 'दैनिक बाइबल वचन रिमाइंडर';
 
   @override
-  String get reminderTimeLabel => 'अनुस्मारक समय';
+  String get reminderTimeLabel => 'रिमाइंडर का समय';
 
   @override
   String get notificationPermissionDenied =>
       'सिस्टम सेटिंग्स में सूचनाएं बंद हैं।';
 
   @override
-  String get dailyReminderBody => 'आपका दैनिक वचन तैयार है।';
+  String get dailyReminderBody => 'आपका दैनिक बाइबल वचन तैयार है।';
 
   @override
   String get privacySectionTitle => 'गोपनीयता';
@@ -345,14 +363,14 @@ class AppLocalizationsHi extends AppLocalizations {
   String get rateAppSubtitle => 'ऐप पसंद आ रहा है? समीक्षा छोड़ें';
 
   @override
-  String get shareAppTitle => 'Atrament शेयर करें';
+  String get shareAppTitle => 'Atrament साझा करें';
 
   @override
-  String get shareAppSubtitle => 'किसी दोस्त को बताएँ';
+  String get shareAppSubtitle => 'किसी दोस्त को बताएं';
 
   @override
   String get shareAppMessage =>
-      'Atrament आज़माएँ — कागज़ की बनावट वाला बिना ध्यान-भंग नोटपैड।';
+      'Atrament आज़माएं — कागज़ की बनावट वाला, ध्यान न भटकाने वाला नोटपैड।';
 
   @override
   String get languageSectionTitle => 'भाषा';
@@ -375,14 +393,14 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament एक छोटे बैनर विज्ञापन के साथ मुफ़्त है। इसे हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।';
+      'Atrament विज्ञापनों के साथ मुफ़्त है। इन्हें हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।';
 
   @override
   String get premiumRestoreButton => 'खरीदारी पुनर्स्थापित करें';
 
   @override
   String get premiumAlreadyProMessage =>
-      'आपके पास पहले से ही विज्ञापन हटाएं सुविधा है। धन्यवाद!';
+      'आपके पास पहले से “विज्ञापन हटाएं” सुविधा है। धन्यवाद!';
 
   @override
   String get supportSectionTitle => 'सहायता';
@@ -411,7 +429,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get debugLogClearedMessage => 'डीबग लॉग साफ़ कर दिया गया।';
 
   @override
-  String get premiumUnlockLabel => 'विज्ञापन हमेशा के लिए हटाएँ';
+  String get premiumUnlockLabel => 'विज्ञापन हमेशा के लिए हटाएं';
 
   @override
   String get premiumUnlockPriceFallback => '\$14.99';
@@ -429,7 +447,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get emptyAllNotesTitle => 'अभी कोई नोट नहीं';
 
   @override
-  String get emptyAllNotesBody => 'अपना पहला नोट लिखने के लिए + बटन दबाएँ।';
+  String get emptyAllNotesBody => 'अपना पहला नोट लिखने के लिए + बटन दबाएं।';
 
   @override
   String get emptyRecentNotesTitle => 'कुछ भी हाल का नहीं';
@@ -441,7 +459,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get noteActionRename => 'नाम बदलें';
 
   @override
-  String get noteActionMoveToNotebook => 'नोटबुक में ले जाएँ';
+  String get noteActionMoveToNotebook => 'नोटबुक में ले जाएं';
 
   @override
   String get noteActionEdit => 'संपादित करें';
@@ -453,14 +471,14 @@ class AppLocalizationsHi extends AppLocalizations {
   String get noteActionShare => 'साझा करें';
 
   @override
-  String get moveToNotebookTitle => 'नोटबुक में ले जाएँ';
+  String get moveToNotebookTitle => 'नोटबुक में ले जाएं';
 
   @override
   String get moveToNotebookEmptyBody =>
-      'अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएँ।';
+      'अभी कोई अन्य नोटबुक नहीं है। इस नोट को व्यवस्थित करने के लिए एक बनाएं।';
 
   @override
-  String get moveToNotebookCreateRow => 'नई नोटबुक बनाएँ';
+  String get moveToNotebookCreateRow => 'नई नोटबुक बनाएं';
 
   @override
   String get notebookActionRename => 'नाम बदलें';
@@ -476,7 +494,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'इससे नोटबुक और उसके $count नोट हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।';
+    return 'इससे नोटबुक और उसके $count नोट हटा दिए जाएंगे। इसे पूर्ववत नहीं किया जा सकता।';
   }
 
   @override
@@ -493,8 +511,12 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get openLinkFailedMessage =>
-      'लिंक नहीं खोल सका। कृपया पुनः प्रयास करें।';
+      'लिंक नहीं खोला जा सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get openSourceLicensesRow => 'ओपन-सोर्स लाइसेंस';
+
+  @override
+  String get notificationChannelDescription =>
+      'आपका वैकल्पिक दैनिक बाइबल वचन रिमाइंडर';
 }

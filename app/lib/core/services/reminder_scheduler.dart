@@ -29,6 +29,13 @@ abstract class ReminderGateway {
 
   /// Removes every pending reminder.
   Future<void> cancelReminders();
+
+  /// Names the notification channel (shown in the phone's notification
+  /// settings) in the user's language. A no-op where there are no channels.
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  });
 }
 
 /// A planned reminder before its text is chosen.
@@ -117,6 +124,13 @@ class ReminderScheduler {
   /// Schedules the reminders for the given time, replacing any existing
   /// ones. Used right after the user switches the reminder on or changes its
   /// time. Returns whether scheduling succeeded.
+  /// Passes the localized notification channel name and description to the
+  /// operating system. Safe to call whether or not reminders are on.
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  }) => _gateway.localizeChannel(name: name, description: description);
+
   Future<bool> schedule({
     required int hour,
     required int minute,

@@ -157,7 +157,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get unlockButton => 'فتح القفل';
 
   @override
-  String get noteLockTurnedOffMessage => 'تم إيقاف قفل الملاحظات لأن هذا الجهاز لا يحتوي على قفل شاشة أو مصادقة حيوية مُعدّة.';
+  String get noteLockTurnedOffMessage =>
+      'تم إيقاف قفل الملاحظات لأن هذا الجهاز لا يحتوي على قفل شاشة أو مصادقة حيوية مُعدّة.';
 
   @override
   String get biometricEnableReason => 'أكّد هويتك لتشغيل قفل الملاحظات';
@@ -166,61 +167,76 @@ class AppLocalizationsAr extends AppLocalizations {
   String get biometricDisableReason => 'أكّد هويتك لإيقاف قفل الملاحظات';
 
   @override
-  String get biometricShareReason => 'افتح القفل لمشاركة هذه الملاحظة أو تصديرها';
+  String get biometricShareReason =>
+      'افتح القفل لمشاركة هذه الملاحظة أو تصديرها';
 
   @override
   String get biometricAuthFailedMessage => 'تعذّر التحقق من هويتك.';
 
   @override
-  String get biometricSetupNeededMessage => 'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
+  String get biometricSetupNeededMessage =>
+      'قم أولاً بإعداد قفل للشاشة أو بصمة في إعدادات الجهاز.';
 
   @override
   String get privacyChoicesTitle => 'خيارات الخصوصية';
 
   @override
-  String get purchaseFailedMessage => 'تعذّر إتمام عملية الشراء. يُرجى المحاولة مرة أخرى.';
+  String get purchaseFailedMessage =>
+      'تعذّر إتمام عملية الشراء. يُرجى المحاولة مرة أخرى.';
 
   @override
   String get restoreSuccessMessage => 'تمت استعادة مشترياتك.';
 
   @override
-  String get restoreNothingFoundMessage => 'لم يتم العثور على عملية شراء سابقة لهذا الحساب.';
+  String get restoreNothingFoundMessage =>
+      'لم يتم العثور على عملية شراء سابقة لهذا الحساب.';
 
   @override
-  String get restoreFailedMessage => 'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
+  String get restoreFailedMessage =>
+      'تعذّرت استعادة المشتريات. تحقّق من اتصالك وحاول مرة أخرى.';
 
   @override
-  String get reminderScheduleFailedMessage => 'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
+  String get reminderScheduleFailedMessage =>
+      'تعذّر جدولة التذكير. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebooksLoad => 'تعذّر تحميل بعض الدفاتر. يتم عرض المتاح فقط.';
+  String get storageIssueNotebooksLoad =>
+      'تعذّر تحميل بعض الدفاتر. يتم عرض المتاح فقط.';
 
   @override
-  String get storageIssueNotebookSave => 'قد لا يكون هذا الدفتر قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookSave =>
+      'قد لا يكون هذا الدفتر قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookChange => 'قد لا يكون هذا التغيير قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookChange =>
+      'قد لا يكون هذا التغيير قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookDelete => 'تعذّر حذف الدفتر. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookDelete =>
+      'تعذّر حذف الدفتر. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotebookOrder => 'قد لا يكون الترتيب الجديد قد حُفظ. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNotebookOrder =>
+      'قد لا يكون الترتيب الجديد قد حُفظ. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get storageIssueNotesLoad => 'تعذّر تحميل بعض الملاحظات. يتم عرض المتاح فقط.';
+  String get storageIssueNotesLoad =>
+      'تعذّر تحميل بعض الملاحظات. يتم عرض المتاح فقط.';
 
   @override
   String get storageIssueSearch => 'قد تكون نتائج البحث غير مكتملة حاليًا.';
 
   @override
-  String get storageIssueNoteSave => 'قد لا تكون هذه الملاحظة قد حُفظت. يُرجى التحقق من مساحة تخزين الجهاز.';
+  String get storageIssueNoteSave =>
+      'قد لا تكون هذه الملاحظة قد حُفظت. يُرجى التحقق من مساحة تخزين الجهاز.';
 
   @override
-  String get storageIssueNoteDelete => 'تعذّر حذف الملاحظة. يُرجى المحاولة مرة أخرى.';
+  String get storageIssueNoteDelete =>
+      'تعذّر حذف الملاحظة. يُرجى المحاولة مرة أخرى.';
 
   @override
-  String get purchaseUnavailableMessage => 'هذه العملية الشرائية غير متاحة حاليًا. يُرجى المحاولة لاحقًا.';
+  String get purchaseUnavailableMessage =>
+      'هذه العملية الشرائية غير متاحة حاليًا. يُرجى المحاولة لاحقًا.';
 
   @override
   String get exportTitle => 'تصدير';
@@ -286,7 +302,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get themeSystem => 'النظام';
 
   @override
-  String get verseSectionTitle => 'عرض آية اليوم';
+  String get verseSectionTitle => 'عرض آية الكتاب المقدس اليومية';
 
   @override
   String get verseModeWatermark => 'علامة مائية';
@@ -304,7 +320,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get notificationsSectionTitle => 'الإشعارات';
 
   @override
-  String get dailyReminderToggle => 'تذكير يومي بالآية';
+  String get dailyReminderToggle => 'تذكير يومي بآية من الكتاب المقدس';
 
   @override
   String get reminderTimeLabel => 'وقت التذكير';
@@ -314,7 +330,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'الإشعارات معطّلة في إعدادات النظام.';
 
   @override
-  String get dailyReminderBody => 'آية اليوم جاهزة.';
+  String get dailyReminderBody => 'آية اليوم من الكتاب المقدس جاهزة.';
 
   @override
   String get privacySectionTitle => 'الخصوصية';
@@ -332,7 +348,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get restorePurchasesButton => 'استعادة المشتريات';
 
   @override
-  String get proLabel => 'مميز';
+  String get proLabel => 'احترافي';
 
   @override
   String get engagementSectionTitle => 'المزيد';
@@ -350,8 +366,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get shareAppSubtitle => 'أخبر صديقًا';
 
   @override
-  String get shareAppMessage =>
-      'جرّب Atrament — مفكرة بلا تشتيت مع أوراق مميزة.';
+  String get shareAppMessage => 'جرّب Atrament — مفكرة بلا تشتيت بملمس الورق.';
 
   @override
   String get languageSectionTitle => 'اللغة';
@@ -373,7 +388,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament مجاني مع إعلان بانر صغير واحد. إزالته عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.';
+      'Atrament مجاني مع الإعلانات. إزالتها عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.';
 
   @override
   String get premiumRestoreButton => 'استعادة المشتريات';
@@ -386,7 +401,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get supportSectionTitle => 'الدعم';
 
   @override
-  String get shareDebugLogButton => 'مشاركة سجل التصحيح';
+  String get shareDebugLogButton => 'مشاركة سجل تصحيح الأخطاء';
 
   @override
   String get shareDebugLogSubtitle => 'أرسل تقريرًا تقنيًا إذا كان هناك خلل ما';
@@ -395,17 +410,17 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noDebugLogMessage => 'لا توجد مشكلات للإبلاغ عنها بعد.';
 
   @override
-  String get clearDebugLogButton => 'مسح سجل التصحيح';
+  String get clearDebugLogButton => 'مسح سجل تصحيح الأخطاء';
 
   @override
-  String get clearDebugLogTitle => 'هل تريد مسح سجل التصحيح؟';
+  String get clearDebugLogTitle => 'هل تريد مسح سجل تصحيح الأخطاء؟';
 
   @override
   String get clearDebugLogBody =>
       'سيؤدي هذا إلى إزالة التقرير التقني المحفوظ من جهازك.';
 
   @override
-  String get debugLogClearedMessage => 'تم مسح سجل التصحيح.';
+  String get debugLogClearedMessage => 'تم مسح سجل تصحيح الأخطاء.';
 
   @override
   String get premiumUnlockLabel => 'إزالة الإعلانات نهائيًا';
@@ -429,7 +444,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emptyAllNotesBody => 'اضغط على + لكتابة ملاحظتك الأولى.';
 
   @override
-  String get emptyRecentNotesTitle => 'لا شيء حديث';
+  String get emptyRecentNotesTitle => 'لا توجد ملاحظات حديثة';
 
   @override
   String get emptyRecentNotesBody => 'ستظهر الملاحظات التي تحررها هنا.';
@@ -477,7 +492,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get legalAndSupportSectionTitle => 'الشؤون القانونية والدعم';
+  String get legalAndSupportSectionTitle => 'المعلومات القانونية والدعم';
 
   @override
   String get privacyPolicyRow => 'سياسة الخصوصية';
@@ -489,8 +504,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get supportRow => 'الدعم';
 
   @override
-  String get openLinkFailedMessage => 'تعذر فتح الرابط. حاول مرة أخرى.';
+  String get openLinkFailedMessage =>
+      'تعذّر فتح الرابط. يُرجى المحاولة مرة أخرى.';
 
   @override
   String get openSourceLicensesRow => 'تراخيص المصادر المفتوحة';
+
+  @override
+  String get notificationChannelDescription =>
+      'تذكيرك الاختياري اليومي بآية من الكتاب المقدس';
 }

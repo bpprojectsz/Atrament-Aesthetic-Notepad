@@ -55,6 +55,12 @@ class _FakeGateway implements ReminderGateway {
 
   @override
   Future<void> cancelReminders() async => cancelCalls++;
+
+  @override
+  Future<void> localizeChannel({
+    required String name,
+    required String description,
+  }) async {}
 }
 
 class _Env {

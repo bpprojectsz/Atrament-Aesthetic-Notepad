@@ -1,0 +1,10 @@
+label: 1a31432
+pages requested: 50
+pages built: 50
+pdf size MB: 1.08
+seconds: 1.8
+baseline rss MB: 213
+peak rss before MB: 213
+peak rss after MB: 1100
+peak growth MB: 888
+rss after MB: 998

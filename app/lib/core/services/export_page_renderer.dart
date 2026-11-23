@@ -52,7 +52,15 @@ class ExportPageRenderer {
     )..layout(minWidth: width, maxWidth: width);
   }
 
-  Future<List<RenderedPage>> renderPages(ExportableNote note) async {
+  /// All pages at once. Holds every page bitmap (about 4.5 MB each) in
+  /// memory together, so long notes should use [renderPageStream] instead.
+  Future<List<RenderedPage>> renderPages(ExportableNote note) =>
+      renderPageStream(note).toList();
+
+  /// Renders the pages one at a time. A page is only drawn when the
+  /// consumer asks for the next one, so a caller that compresses each page
+  /// and drops it keeps memory flat however long the note is.
+  Stream<RenderedPage> renderPageStream(ExportableNote note) async* {
     const margin = ExportLayout.pdfPageMarginPt;
     const contentWidth = pageWidthPt - 2 * margin;
     const contentHeight = pageHeightPt - 2 * margin;
@@ -135,65 +143,61 @@ class ExportPageRenderer {
       }
     }
 
-    final pages = <RenderedPage>[];
     for (var index = 0; index < pageCount; index++) {
       final isFirst = index == 0;
       final isLast = index == pageCount - 1;
       final bodyIndex = verseOnOwnPage && isLast ? -1 : index;
 
-      pages.add(
-        await _renderPage((canvas) {
-          var y = 0.0;
-          if (isFirst) {
-            title.paint(canvas, Offset.zero);
-            date.paint(canvas, Offset(0, title.height + _titleGapPt));
-            y = headerHeight;
-          }
+      yield await _renderPage((canvas) {
+        var y = 0.0;
+        if (isFirst) {
+          title.paint(canvas, Offset.zero);
+          date.paint(canvas, Offset(0, title.height + _titleGapPt));
+          y = headerHeight;
+        }
 
-          final verseSpace =
-              verse == null ? 0.0 : verse.height + _footerGapPt;
+        final verseSpace =
+            verse == null ? 0.0 : verse.height + _footerGapPt;
 
-          if (note.hasInk && isFirst) {
-            _drawInk(
-              canvas,
-              note.ink!,
-              ui.Rect.fromLTWH(
-                0,
-                y,
-                contentWidth,
-                contentHeight - y - verseSpace,
-              ),
-            );
-          }
+        if (note.hasInk && isFirst) {
+          _drawInk(
+            canvas,
+            note.ink!,
+            ui.Rect.fromLTWH(
+              0,
+              y,
+              contentWidth,
+              contentHeight - y - verseSpace,
+            ),
+          );
+        }
 
-          if (body != null && bodyIndex >= 0) {
-            final start = breaks[bodyIndex];
-            final end = bodyIndex + 1 < breaks.length
-                ? breaks[bodyIndex + 1]
-                : body.height;
-            canvas.save();
-            canvas.clipRect(ui.Rect.fromLTWH(0, y, contentWidth, end - start));
-            canvas.translate(0, y - start);
-            body.paint(canvas, Offset.zero);
-            canvas.restore();
-            y += end - start;
-          }
+        if (body != null && bodyIndex >= 0) {
+          final start = breaks[bodyIndex];
+          final end = bodyIndex + 1 < breaks.length
+              ? breaks[bodyIndex + 1]
+              : body.height;
+          canvas.save();
+          canvas.clipRect(ui.Rect.fromLTWH(0, y, contentWidth, end - start));
+          canvas.translate(0, y - start);
+          body.paint(canvas, Offset.zero);
+          canvas.restore();
+          y += end - start;
+        }
 
-          if (verse != null && isLast) {
-            final double verseY;
-            if (verseOnOwnPage) {
-              verseY = 0;
-            } else if (note.hasInk) {
-              verseY = contentHeight - verse.height;
-            } else {
-              verseY = y + _footerGapPt;
-            }
-            verse.paint(canvas, Offset(0, verseY));
+        if (verse != null && isLast) {
+          final double verseY;
+          if (verseOnOwnPage) {
+            verseY = 0;
+          } else if (note.hasInk) {
+            verseY = contentHeight - verse.height;
+          } else {
+            verseY = y + _footerGapPt;
           }
-        }),
-      );
+          verse.paint(canvas, Offset(0, verseY));
+        }
+      });
     }
-    return pages;
   }
 
   Future<RenderedPage> _renderPage(void Function(Canvas canvas) draw) async {

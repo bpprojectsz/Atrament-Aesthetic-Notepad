@@ -28,13 +28,18 @@ class AdMobService {
   bool _sdkStarted = false;
   bool _initializationFailed = false;
 
+  /// Google's latest answer says ads may not be requested (declined or
+  /// withdrawn consent). Checked by [isAvailable] so no ad is requested.
+  bool _consentBlocked = false;
+
 
   /// Flipped to true once the SDK finishes initializing successfully.
   /// Banner call sites listen for the false-to-true transition to retry
   /// a load that was requested before the SDK was ready.
   final ValueNotifier<bool> availability = ValueNotifier(false);
 
-  bool get isAvailable => _sdkStarted && !_initializationFailed;
+  bool get isAvailable =>
+      _sdkStarted && !_initializationFailed && !_consentBlocked;
 
   String get bannerAdUnitId {
     if (Platform.isIOS) {
@@ -91,14 +96,28 @@ class AdMobService {
     _initialized = true;
 
     final canRequestAds = await ConsentService.instance.gatherConsent();
-    await _startSdkIfAllowed(canRequestAds);
+    await _applyConsent(canRequestAds);
   }
 
   /// Call after the user changes their privacy choices: starts the SDK if
   /// ads are now allowed and it was not started yet.
   Future<void> onConsentChanged() async {
     final canRequestAds = await ConsentService.instance.refreshState();
+    await _applyConsent(canRequestAds);
+  }
+
+  /// Call when the app returns to the foreground. If reading Google's
+  /// consent answer failed earlier, asks again, once (see [consentOutcome]).
+  Future<void> retryConsentIfNeeded() async {
+    final canRequestAds = await ConsentService.instance.retryIfNeeded();
+    if (canRequestAds == null) return;
+    await _applyConsent(canRequestAds);
+  }
+
+  Future<void> _applyConsent(bool canRequestAds) async {
+    _consentBlocked = !canRequestAds;
     await _startSdkIfAllowed(canRequestAds);
+    availability.value = isAvailable;
   }
 
   Future<void> _startSdkIfAllowed(bool canRequestAds) async {

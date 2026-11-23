@@ -160,70 +160,90 @@ class AppLocalizationsDe extends AppLocalizations {
   String get unlockButton => 'Entsperren';
 
   @override
-  String get noteLockTurnedOffMessage => 'Die Notizsperre wurde ausgeschaltet, weil auf diesem Gerät keine Bildschirmsperre oder Biometrie eingerichtet ist.';
+  String get noteLockTurnedOffMessage =>
+      'Die Notizsperre wurde ausgeschaltet, weil auf diesem Gerät keine Bildschirmsperre oder Biometrie eingerichtet ist.';
 
   @override
-  String get biometricEnableReason => 'Identität bestätigen, um die Notizsperre einzuschalten';
+  String get biometricEnableReason =>
+      'Identität bestätigen, um die Notizsperre einzuschalten';
 
   @override
-  String get biometricDisableReason => 'Identität bestätigen, um die Notizsperre auszuschalten';
+  String get biometricDisableReason =>
+      'Identität bestätigen, um die Notizsperre auszuschalten';
 
   @override
-  String get biometricShareReason => 'Entsperren, um diese Notiz zu teilen oder zu exportieren';
+  String get biometricShareReason =>
+      'Entsperren, um diese Notiz zu teilen oder zu exportieren';
 
   @override
-  String get biometricAuthFailedMessage => 'Die Identität konnte nicht bestätigt werden.';
+  String get biometricAuthFailedMessage =>
+      'Die Identität konnte nicht bestätigt werden.';
 
   @override
-  String get biometricSetupNeededMessage => 'Zuerst in den Geräteeinstellungen eine Bildschirmsperre oder einen Fingerabdruck einrichten.';
+  String get biometricSetupNeededMessage =>
+      'Zuerst in den Geräteeinstellungen eine Bildschirmsperre oder einen Fingerabdruck einrichten.';
 
   @override
   String get privacyChoicesTitle => 'Datenschutzoptionen';
 
   @override
-  String get purchaseFailedMessage => 'Der Kauf konnte nicht abgeschlossen werden. Bitte erneut versuchen.';
+  String get purchaseFailedMessage =>
+      'Der Kauf konnte nicht abgeschlossen werden. Bitte erneut versuchen.';
 
   @override
   String get restoreSuccessMessage => 'Dein Kauf wurde wiederhergestellt.';
 
   @override
-  String get restoreNothingFoundMessage => 'Für dieses Konto wurde kein früherer Kauf gefunden.';
+  String get restoreNothingFoundMessage =>
+      'Für dieses Konto wurde kein früherer Kauf gefunden.';
 
   @override
-  String get restoreFailedMessage => 'Käufe konnten nicht wiederhergestellt werden. Verbindung prüfen und erneut versuchen.';
+  String get restoreFailedMessage =>
+      'Käufe konnten nicht wiederhergestellt werden. Verbindung prüfen und erneut versuchen.';
 
   @override
-  String get reminderScheduleFailedMessage => 'Die Erinnerung konnte nicht eingerichtet werden. Bitte erneut versuchen.';
+  String get reminderScheduleFailedMessage =>
+      'Die Erinnerung konnte nicht eingerichtet werden. Bitte erneut versuchen.';
 
   @override
-  String get storageIssueNotebooksLoad => 'Einige Notizbücher konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+  String get storageIssueNotebooksLoad =>
+      'Einige Notizbücher konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
 
   @override
-  String get storageIssueNotebookSave => 'Dieses Notizbuch wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+  String get storageIssueNotebookSave =>
+      'Dieses Notizbuch wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
 
   @override
-  String get storageIssueNotebookChange => 'Diese Änderung wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+  String get storageIssueNotebookChange =>
+      'Diese Änderung wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
 
   @override
-  String get storageIssueNotebookDelete => 'Das Notizbuch konnte nicht gelöscht werden. Bitte erneut versuchen.';
+  String get storageIssueNotebookDelete =>
+      'Das Notizbuch konnte nicht gelöscht werden. Bitte erneut versuchen.';
 
   @override
-  String get storageIssueNotebookOrder => 'Die neue Reihenfolge wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
+  String get storageIssueNotebookOrder =>
+      'Die neue Reihenfolge wurde möglicherweise nicht gespeichert. Bitte erneut versuchen.';
 
   @override
-  String get storageIssueNotesLoad => 'Einige Notizen konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
+  String get storageIssueNotesLoad =>
+      'Einige Notizen konnten nicht geladen werden. Es wird angezeigt, was verfügbar ist.';
 
   @override
-  String get storageIssueSearch => 'Die Suchergebnisse sind derzeit möglicherweise unvollständig.';
+  String get storageIssueSearch =>
+      'Die Suchergebnisse sind derzeit möglicherweise unvollständig.';
 
   @override
-  String get storageIssueNoteSave => 'Diese Notiz wurde möglicherweise nicht gespeichert. Bitte den Gerätespeicher prüfen.';
+  String get storageIssueNoteSave =>
+      'Diese Notiz wurde möglicherweise nicht gespeichert. Bitte den Gerätespeicher prüfen.';
 
   @override
-  String get storageIssueNoteDelete => 'Die Notiz konnte nicht gelöscht werden. Bitte erneut versuchen.';
+  String get storageIssueNoteDelete =>
+      'Die Notiz konnte nicht gelöscht werden. Bitte erneut versuchen.';
 
   @override
-  String get purchaseUnavailableMessage => 'Dieser Kauf ist derzeit nicht verfügbar. Bitte später erneut versuchen.';
+  String get purchaseUnavailableMessage =>
+      'Dieser Kauf ist derzeit nicht verfügbar. Bitte später erneut versuchen.';
 
   @override
   String get exportTitle => 'Exportieren';
@@ -259,7 +279,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get paperStyleVellum => 'Velin';
 
   @override
-  String get fontSectionTitle => 'Notizschrift';
+  String get fontSectionTitle => 'Schriftart der Notizen';
 
   @override
   String get fontSystem => 'System';
@@ -356,7 +376,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get shareAppMessage =>
-      'Probier Atrament — ein ablenkungsfreier Notizblock mit Papiermustern.';
+      'Probier Atrament — ein ablenkungsfreier Notizblock mit Papiertexturen.';
 
   @override
   String get languageSectionTitle => 'Sprache';
@@ -379,14 +399,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ist kostenlos mit einem kleinen Banner-Werbeplatz. Die Entfernung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
+      'Atrament ist kostenlos mit Werbung. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
 
   @override
   String get premiumRestoreButton => 'Käufe wiederherstellen';
 
   @override
   String get premiumAlreadyProMessage =>
-      'Du hast bereits Werbung entfernen. Danke!';
+      'Du hast „Werbung entfernen“ bereits. Danke!';
 
   @override
   String get supportSectionTitle => 'Support';
@@ -437,7 +457,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Tippe auf +, um deine erste Notiz zu schreiben.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nichts Neues';
+  String get emptyRecentNotesTitle => 'Noch nichts bearbeitet';
 
   @override
   String get emptyRecentNotesBody =>
@@ -482,7 +502,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Dadurch werden das Notizbuch und seine $count Notizen gelöscht. Dies kann nicht rückgängig gemacht werden.';
+    return 'Dadurch werden das Notizbuch und alle seine Notizen gelöscht (insgesamt: $count). Dies kann nicht rückgängig gemacht werden.';
   }
 
   @override
@@ -503,4 +523,8 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => 'Open-Source-Lizenzen';
+
+  @override
+  String get notificationChannelDescription =>
+      'Deine optionale tägliche Erinnerung an einen Bibelvers';
 }

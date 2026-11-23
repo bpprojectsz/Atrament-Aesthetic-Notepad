@@ -4,9 +4,15 @@ name: Compile Check
 # and needs no signing secrets. The "Build and Deploy" workflow is separate.
 on:
   workflow_dispatch:
+    inputs:
+      task:
+        description: 'check (default), regen (regenerate localizations and commit), back-translate or back-translate-nllb (no build), measure-pdf (image-PDF memory probe, no build)'
+        required: false
+        default: 'check'
 
 jobs:
   compile-check:
+    if: ${{ inputs.task == '' || inputs.task == 'check' }}
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -27,6 +33,19 @@ jobs:
         run: flutter pub get
         working-directory: app
 
+      # The generated localization files are committed. Fail if they are out of
+      # date with the .arb files, so a translation change cannot ship without
+      # regenerating them (run `flutter gen-l10n` in app/ and commit).
+      - name: Check generated localizations are up to date
+        run: |
+          flutter gen-l10n
+          if [ -n "$(git status --porcelain lib/l10n/generated)" ]; then
+            echo "::error::lib/l10n/generated is out of date. Run 'flutter gen-l10n' in app/ and commit the result."
+            git status --short lib/l10n/generated
+            exit 1
+          fi
+        working-directory: app
+
       - name: Lint and compile Dart (flutter analyze)
         run: |
           set +e
@@ -38,6 +57,18 @@ jobs:
             echo "::error title=Analyzer findings::$msg"
           fi
           exit $code
+        working-directory: app
+
+      # The sqlite3 package downloads a prebuilt Linux library for host tests and
+      # checks its hash. On 9 Nov 2026 the runners received a different copy than
+      # the published release (the release itself is fine), which failed every
+      # test run. Tests use the runner's own SQLite instead; this edits the
+      # pubspec only inside this CI job, never in the repo or in release builds.
+      - name: Use the runner's SQLite for host tests
+        run: |
+          printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
+          sqlite3 --version || true
+          ldconfig -p | grep -i libsqlite3 | head -2
         working-directory: app
 
       - name: Unit and widget tests
@@ -118,3 +149,220 @@ jobs:
           fi
           exit $code
         working-directory: app/android
+
+  # Back-translation screen: translates each non-English string back to English
+  # with a free offline model and writes reports/back_translation.md. No build.
+  bt-shard:
+    if: ${{ inputs.task == 'back-translate' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: g1, locales: "ar bg bn ca"}
+          - {id: g2, locales: "cs da de el"}
+          - {id: g3, locales: "es fa fi fil"}
+          - {id: g4, locales: "fr he hi hu"}
+          - {id: g5, locales: "id it ja ko"}
+          - {id: g6, locales: "ms nb nl pl"}
+          - {id: g7, locales: "pt pt_PT ro ru sk"}
+          - {id: g8, locales: "sv sw th tr"}
+          - {id: g9, locales: "uk ur vi zh zh_Hant"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install argostranslate
+      - run: python tools/back_translate.py shard ${{ matrix.locales }} --out shard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bt-${{ matrix.id }}
+          path: shard
+
+  bt-report:
+    if: ${{ always() && inputs.task == 'back-translate' }}
+    needs: bt-shard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bt-*
+          merge-multiple: true
+          path: shards
+      - run: python tools/back_translate.py report shards --out reports/back_translation.md
+      - name: Commit the report to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/back_translation.md
+          git commit -m "chore: back-translation report" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  # NLLB-200 back-translation: covers every app language. No build.
+  nllb-shard:
+    if: ${{ inputs.task == 'back-translate-nllb' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: n1, locales: "ar bg bn ca cs da de el nb"}
+          - {id: n2, locales: "es fa fi fil fr gu he hi hu"}
+          - {id: n3, locales: "id it ja ko mr ms nl pl pt"}
+          - {id: n4, locales: "pt_PT ro ru sk sv sw ta te th"}
+          - {id: n5, locales: "tr uk ur vi zh zh_Hant"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers sentencepiece
+      - run: python tools/back_translate.py shard ${{ matrix.locales }} --engine nllb --out shard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nllb-${{ matrix.id }}
+          path: shard
+
+  nllb-report:
+    if: ${{ always() && inputs.task == 'back-translate-nllb' }}
+    needs: nllb-shard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: nllb-*
+          merge-multiple: true
+          path: shards
+      - run: |
+          python tools/back_translate.py report shards --out reports/back_translation_nllb.md --worst 20
+          mkdir -p reports/nllb && cp shards/*.json reports/nllb/
+      - name: Commit the report to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/back_translation_nllb.md reports/nllb
+          git commit -m "chore: NLLB back-translation report" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  # Memory probe for the image-PDF export (batch 17). Runs the probe for three
+  # page counts, each in its own process, and commits the numbers to
+  # reports/pdf_memory/. Builds nothing.
+  measure-pdf:
+    if: ${{ inputs.task == 'measure-pdf' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        pages: [10, 50, 100]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.x'
+          channel: 'stable'
+          cache: true
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: app
+      - name: Use the runner's SQLite for host tests
+        run: |
+          printf '\nhooks:\n  user_defines:\n    sqlite3:\n      source: system\n' >> pubspec.yaml
+        working-directory: app
+      - name: Run the probe
+        run: |
+          label=$(git rev-parse --short HEAD)
+          flutter test tool/perf/pdf_memory_probe_test.dart \
+            --dart-define=PAGES=${{ matrix.pages }} --dart-define=LABEL="$label" \
+            --dart-define=VERIFY=${{ matrix.pages == 10 }}
+          cat ../reports/pdf_memory/*_${{ matrix.pages }}.txt >> "$GITHUB_STEP_SUMMARY"
+        working-directory: app
+      # Only the 10-page run writes a PDF. Check it with real PDF tools:
+      # qpdf (strict structure), poppler (renders), pypdf (pixels read back).
+      - name: Verify the PDF with independent tools
+        if: ${{ matrix.pages == 10 }}
+        run: |
+          sudo apt-get install -y --no-install-recommends qpdf poppler-utils
+          pip install pypdf pillow
+          f=$(ls reports/pdf_memory/*_10.pdf)
+          qpdf --check "$f"
+          pdfimages -list "$f" | head -5
+          pdftoppm -r 40 -png -f 1 -l 2 "$f" /tmp/probe_page 2> /tmp/poppler.err || true
+          cat /tmp/poppler.err
+          test ! -s /tmp/poppler.err
+          ls -l /tmp/probe_page*.png
+          python app/tool/perf/check_pdf.py "$f" "${f%.pdf}.hashes" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfmem-${{ matrix.pages }}
+          path: reports/pdf_memory/*.txt
+
+  measure-report:
+    if: ${{ always() && inputs.task == 'measure-pdf' }}
+    needs: measure-pdf
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pdfmem-*
+          merge-multiple: true
+          path: reports/pdf_memory
+      - name: Commit the numbers to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/pdf_memory
+          git commit -m "chore: image-PDF memory measurements" || exit 0
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+  # Regenerates lib/l10n/generated from the .arb files with the real generator
+  # and commits the result to this branch. Run it after editing translations.
+  regen:
+    if: ${{ inputs.task == 'regen' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.x'
+          channel: 'stable'
+          cache: true
+      - run: flutter pub get
+        working-directory: app
+      - run: flutter gen-l10n
+        working-directory: app
+      - name: Commit regenerated files
+        run: |
+          if [ -z "$(git status --porcelain app/lib/l10n/generated)" ]; then echo "already up to date"; exit 0; fi
+          git status --short app/lib/l10n/generated
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add app/lib/l10n/generated
+          git commit -m "chore: regenerate localizations"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

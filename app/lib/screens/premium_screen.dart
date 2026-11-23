@@ -66,7 +66,9 @@ class PremiumScreen extends StatelessWidget {
           final isProcessing = subscriptionProvider.isProcessingPurchase.value;
           final failure = subscriptionProvider.lastFailure.value;
 
-          return Padding(
+          // Scrolls, so on a small phone or with large text the purchase and
+          // Restore buttons can always be reached.
+          return SingleChildScrollView(
             padding: const EdgeInsets.all(AppSpacing.lg),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -188,14 +190,19 @@ class _PlanOption extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: AppTypography.body.size,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.textPrimary.resolve(mode),
+              // The label wraps instead of overflowing when a translation is
+              // long; the price keeps its width.
+              Expanded(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: AppTypography.body.size,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.textPrimary.resolve(mode),
+                  ),
                 ),
               ),
+              const SizedBox(width: AppSpacing.md),
               Text(
                 price,
                 style: TextStyle(

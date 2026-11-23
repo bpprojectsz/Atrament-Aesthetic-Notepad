@@ -66,7 +66,7 @@
   "restoreSuccessMessage": "Sua compra foi restaurada.",
   "restoreNothingFoundMessage": "Nenhuma compra anterior foi encontrada para esta conta.",
   "restoreFailedMessage": "Não foi possível restaurar as compras. Verifique sua conexão e tente novamente.",
-  "reminderScheduleFailedMessage": "Não foi possível programar o lembrete. Tente novamente.",
+  "reminderScheduleFailedMessage": "Não foi possível agendar o lembrete. Tente novamente.",
   "storageIssueNotebooksLoad": "Alguns cadernos não puderam ser carregados. Mostrando o que está disponível.",
   "storageIssueNotebookSave": "Este caderno pode não ter sido salvo. Tente novamente.",
   "storageIssueNotebookChange": "Esta alteração pode não ter sido salva. Tente novamente.",
@@ -99,7 +99,7 @@
   "themeParchment": "Pergaminho",
   "themeSystem": "Sistema",
   "verseSectionTitle": "Exibição do versículo diário",
-  "verseModeWatermark": "Marca d'água",
+  "verseModeWatermark": "Marca d’água",
   "verseModeHeader": "Cabeçalho",
   "verseModeFooter": "Rodapé",
   "verseModeOff": "Desativado",
@@ -126,9 +126,9 @@
   "languagePickerTitle": "Escolher idioma",
   "premiumScreenTitle": "Remover anúncios",
   "premiumHeadline": "Escreva sem distrações",
-  "premiumBody": "O Atrament é gratuito com um pequeno banner de anúncio. Removê-lo é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.",
+  "premiumBody": "O Atrament é gratuito com anúncios. Removê-los é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.",
   "premiumRestoreButton": "Restaurar compras",
-  "premiumAlreadyProMessage": "Você já tem Remover anúncios. Obrigado!",
+  "premiumAlreadyProMessage": "Você já tem “Remover anúncios”. Obrigado!",
   "supportSectionTitle": "Suporte",
   "shareDebugLogButton": "Compartilhar registro de depuração",
   "shareDebugLogSubtitle": "Envie um relatório técnico se algo não estiver funcionando",
@@ -158,7 +158,7 @@
   "notebookActionChangeCover": "Alterar capa",
   "notebookRenameDialogTitle": "Renomear caderno",
   "notebookCoverPickerTitle": "Escolher uma cor de capa",
-  "deleteNotebookWithCountBody": "Isso excluirá o caderno e suas {count} notas. Esta ação não pode ser desfeita.",
+  "deleteNotebookWithCountBody": "Isso excluirá o caderno e todas as suas notas (total: {count}). Esta ação não pode ser desfeita.",
   "@deleteNotebookWithCountBody": {
     "placeholders": {
       "count": {
@@ -166,10 +166,11 @@
       }
     }
   },
-  "legalAndSupportSectionTitle": "Jurídico e suporte",
+  "legalAndSupportSectionTitle": "Informações legais e suporte",
   "privacyPolicyRow": "Política de Privacidade",
   "termsOfServiceRow": "Termos de Serviço",
   "supportRow": "Suporte",
   "openLinkFailedMessage": "Não foi possível abrir o link. Tente novamente.",
-  "openSourceLicensesRow": "Licenças de código aberto"
+  "openSourceLicensesRow": "Licenças de código aberto",
+  "notificationChannelDescription": "Seu lembrete diário opcional de um versículo bíblico"
 }

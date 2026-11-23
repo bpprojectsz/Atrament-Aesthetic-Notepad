@@ -3,12 +3,10 @@ import 'dart:typed_data';
 
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
-import 'package:pdf/pdf.dart';
-import 'package:pdf/widgets.dart' as pw;
 
 import '../utils/error_handler.dart';
 import '../utils/export_helper.dart';
-import 'export_page_renderer.dart';
+import 'image_pdf_builder.dart';
 
 /// Outcome of an export attempt, surfaced by the caller as an explicit
 /// success/error message (Section 15: "every save/delete/share shows
@@ -96,28 +94,7 @@ class ExportService {
     if (!note.needsImageRendering) {
       return ExportHelper.buildPdfDocument(note).save();
     }
-    final pages = await const ExportPageRenderer().renderPages(note);
-    final document = pw.Document();
-    for (final page in pages) {
-      final image = pw.RawImage(
-        bytes: page.rgba,
-        width: page.width,
-        height: page.height,
-      );
-      document.addPage(
-        pw.Page(
-          pageFormat: PdfPageFormat.a4,
-          margin: pw.EdgeInsets.zero,
-          build: (_) => pw.Image(
-            image,
-            width: PdfPageFormat.a4.width,
-            height: PdfPageFormat.a4.height,
-            fit: pw.BoxFit.fill,
-          ),
-        ),
-      );
-    }
-    return document.save();
+    return (await const ImagePdfBuilder().build(note)).bytes;
   }
 
   /// Exports [note] as a formatted `.pdf` file.

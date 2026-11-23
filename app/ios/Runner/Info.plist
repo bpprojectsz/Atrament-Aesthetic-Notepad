@@ -51,7 +51,7 @@
 	  compliance mapping's explicit requirement.
 	-->
 		<key>NSFaceIDUsageDescription</key>
-		<string>To lock your notes with Face ID or fingerprint</string>
+		<string>To lock your notes with Face ID</string>
 		<!--
 	  App Tracking Transparency (Section 12: ATT, required because
 	  AdMob is active). Shown once on first launch before any
@@ -109,8 +109,40 @@
 			<string>hi</string>
 			<string>ja</string>
 			<string>ko</string>
-			<string>pt</string>
-			<string>zh</string>
+			<string>pt-BR</string>
+			<string>pt-PT</string>
+			<string>zh-Hans</string>
+			<string>zh-Hant</string>
+			<string>bg</string>
+			<string>cs</string>
+			<string>el</string>
+			<string>pl</string>
+			<string>ro</string>
+			<string>ru</string>
+			<string>sk</string>
+			<string>uk</string>
+			<string>ca</string>
+			<string>da</string>
+			<string>fi</string>
+			<string>hu</string>
+			<string>it</string>
+			<string>nb</string>
+			<string>nl</string>
+			<string>sv</string>
+			<string>fil</string>
+			<string>id</string>
+			<string>ms</string>
+			<string>sw</string>
+			<string>th</string>
+			<string>tr</string>
+			<string>vi</string>
+			<string>bn</string>
+			<string>gu</string>
+			<string>mr</string>
+			<string>ta</string>
+			<string>te</string>
+			<string>fa</string>
+			<string>ur</string>
 		</array>
 		<!-- Export compliance: the app only uses the encryption built into the
 		     operating system (HTTPS), which is exempt. Answers the question App

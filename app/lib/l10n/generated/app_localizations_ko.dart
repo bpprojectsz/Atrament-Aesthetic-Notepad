@@ -155,7 +155,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get unlockButton => '잠금 해제';
 
   @override
-  String get noteLockTurnedOffMessage => '이 기기에 화면 잠금이나 생체 인식이 설정되어 있지 않아 노트 잠금을 껐습니다.';
+  String get noteLockTurnedOffMessage =>
+      '이 기기에 화면 잠금이나 생체 인식이 설정되어 있지 않아 노트 잠금을 껐습니다.';
 
   @override
   String get biometricEnableReason => '노트 잠금을 켜려면 본인 확인을 해 주세요';
@@ -197,7 +198,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get storageIssueNotebookSave => '이 노트북이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
 
   @override
-  String get storageIssueNotebookChange => '이 변경 사항이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
+  String get storageIssueNotebookChange =>
+      '이 변경 사항이 저장되지 않았을 수 있습니다. 다시 시도해 주세요.';
 
   @override
   String get storageIssueNotebookDelete => '노트북을 삭제하지 못했습니다. 다시 시도해 주세요.';
@@ -212,13 +214,15 @@ class AppLocalizationsKo extends AppLocalizations {
   String get storageIssueSearch => '검색 결과가 불완전할 수 있습니다.';
 
   @override
-  String get storageIssueNoteSave => '이 노트가 저장되지 않았을 수 있습니다. 기기 저장 공간을 확인해 주세요.';
+  String get storageIssueNoteSave =>
+      '이 노트가 저장되지 않았을 수 있습니다. 기기 저장 공간을 확인해 주세요.';
 
   @override
   String get storageIssueNoteDelete => '노트를 삭제하지 못했습니다. 다시 시도해 주세요.';
 
   @override
-  String get purchaseUnavailableMessage => '지금은 이 구매를 이용할 수 없습니다. 나중에 다시 시도해 주세요.';
+  String get purchaseUnavailableMessage =>
+      '지금은 이 구매를 이용할 수 없습니다. 나중에 다시 시도해 주세요.';
 
   @override
   String get exportTitle => '내보내기';
@@ -233,7 +237,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get paperStyleSectionTitle => '용지 스타일';
 
   @override
-  String get paperStyleLined => '줄무늬';
+  String get paperStyleLined => '줄 노트';
 
   @override
   String get paperStyleDotGrid => '점 격자';
@@ -269,7 +273,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get fontLora => 'Lora';
 
   @override
-  String get themeSectionTitle => '모양';
+  String get themeSectionTitle => '외관';
 
   @override
   String get themeLight => '라이트';
@@ -369,7 +373,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament은 작은 배너 광고와 함께 무료입니다. 광고 제거는 일회성 구매이며 다른 것은 잠금 해제되지 않습니다 — 모든 기능은 이미 당신의 것입니다.';
+      'Atrament는 광고와 함께 무료로 제공됩니다. 광고 제거는 일회성 구매이며 다른 기능이 추가로 열리지는 않습니다 — 모든 기능을 이미 이용하실 수 있습니다.';
 
   @override
   String get premiumRestoreButton => '구매 복원';
@@ -486,4 +490,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get openSourceLicensesRow => '오픈 소스 라이선스';
+
+  @override
+  String get notificationChannelDescription => '선택적으로 설정하는 매일 성경 구절 알림';
 }

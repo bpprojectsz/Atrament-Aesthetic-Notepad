@@ -273,6 +273,7 @@ class AppConstants {
   static const String prefLocale = 'pref_locale';
   static const String prefInstallDate = 'pref_install_date';
   static const String prefNoteSaveCount = 'pref_note_save_count';
+  static const String prefSaveDays = 'pref_save_days';
   static const String prefExportCount = 'pref_export_count';
   static const String prefLastReviewPrompt = 'pref_last_review_prompt';
   static const String prefLastSharePrompt = 'pref_last_share_prompt';
@@ -282,7 +283,7 @@ class AppConstants {
 
   // SQLite
   static const String dbName = 'atrament.db';
-  static const int dbVersion = 4; // v4: search index folds ß to ss; v3: notes.notebookId nullable
+  static const int dbVersion = 5; // v5: search index folds Arabic-script spellings and digits; v4: folds ß to ss; v3: notes.notebookId nullable
   static const String tableNotes = 'notes';
   static const String tableNotebooks = 'notebooks';
   static const String tableNotesFts = 'notes_fts';
