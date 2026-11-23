@@ -237,7 +237,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get paperStyleSectionTitle => '용지 스타일';
 
   @override
-  String get paperStyleLined => '줄무늬';
+  String get paperStyleLined => '줄 노트';
 
   @override
   String get paperStyleDotGrid => '점 격자';
@@ -273,7 +273,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get fontLora => 'Lora';
 
   @override
-  String get themeSectionTitle => '모양';
+  String get themeSectionTitle => '외관';
 
   @override
   String get themeLight => '라이트';
@@ -373,7 +373,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament은 작은 배너 광고와 함께 무료입니다. 광고 제거는 일회성 구매이며 다른 것은 잠금 해제되지 않습니다 — 모든 기능은 이미 당신의 것입니다.';
+      'Atrament는 광고와 함께 무료로 제공됩니다. 광고 제거는 일회성 구매이며 다른 기능이 추가로 열리지는 않습니다 — 모든 기능을 이미 이용하실 수 있습니다.';
 
   @override
   String get premiumRestoreButton => '구매 복원';

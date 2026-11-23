@@ -396,7 +396,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'O Atrament é gratuito com um pequeno banner de anúncio. Removê-lo é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.';
+      'O Atrament é gratuito com anúncios. Removê-los é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.';
 
   @override
   String get premiumRestoreButton => 'Restaurar compras';
@@ -498,7 +498,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Isso excluirá o caderno e suas $count notas. Esta ação não pode ser desfeita.';
+    return 'Isso excluirá o caderno e todas as suas notas (total: $count). Esta ação não pode ser desfeita.';
   }
 
   @override
@@ -923,7 +923,7 @@ class AppLocalizationsPtPt extends AppLocalizationsPt {
 
   @override
   String get premiumBody =>
-      'O Atrament é gratuito, com um pequeno banner publicitário. Removê-lo é uma compra única que não desbloqueia mais nada — todas as funcionalidades já são suas.';
+      'O Atrament é gratuito, com anúncios. Removê-los é uma compra única que não desbloqueia mais nada — todas as funcionalidades já são suas.';
 
   @override
   String get premiumRestoreButton => 'Restaurar compras';
@@ -1024,7 +1024,7 @@ class AppLocalizationsPtPt extends AppLocalizationsPt {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Isto eliminará o caderno e as respetivas $count notas. Esta ação não pode ser anulada.';
+    return 'Isto eliminará o caderno e todas as suas notas (total: $count). Esta ação não pode ser anulada.';
   }
 
   @override

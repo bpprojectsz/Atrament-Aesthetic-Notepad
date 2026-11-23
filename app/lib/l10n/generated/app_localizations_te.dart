@@ -396,7 +396,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ఉచితం, ఒక చిన్న ప్రకటన బ్యానర్‌ను మాత్రమే చూపుతుంది. ప్రకటనలను తీసివేయడం ఒక్కసారి చేసే కొనుగోలు, ఇది మరేదీ అన్‌లాక్ చేయదు — అన్ని ఫీచర్లు ఇప్పటికే మీవే.';
+      'Atrament ప్రకటనలతో ఉచితం. ప్రకటనలను తీసివేయడం ఒక్కసారి చేసే కొనుగోలు, ఇది మరేదీ అన్‌లాక్ చేయదు — అన్ని ఫీచర్లు ఇప్పటికే మీవే.';
 
   @override
   String get premiumRestoreButton => 'కొనుగోళ్లను పునరుద్ధరించండి';

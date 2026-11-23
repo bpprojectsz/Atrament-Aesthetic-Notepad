@@ -393,7 +393,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament percuma dan hanya memaparkan satu sepanduk iklan kecil. Mengalih keluar iklan ialah pembelian sekali sahaja yang tidak membuka apa-apa lagi: semua ciri sudah menjadi milik anda.';
+      'Atrament percuma dengan iklan. Mengalih keluar iklan ialah pembelian sekali sahaja yang tidak membuka apa-apa lagi: semua ciri sudah menjadi milik anda.';
 
   @override
   String get premiumRestoreButton => 'Pulihkan pembelian';

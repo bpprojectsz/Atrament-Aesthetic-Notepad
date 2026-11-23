@@ -146,7 +146,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get penStrokeWidth => 'Spessore del tratto';
 
   @override
-  String get toggleHandwritingMode => 'Passa dalla digitazione al disegno';
+  String get toggleHandwritingMode => 'Alterna tra digitazione e disegno';
 
   @override
   String get biometricLockReason => 'Sblocca per visualizzare la nota';
@@ -395,7 +395,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament è gratuito e mostra un solo piccolo banner pubblicitario. Rimuovere la pubblicità è un acquisto una tantum che non sblocca altro: tutte le funzioni sono già tue.';
+      'Atrament è gratuito con pubblicità. Rimuovere la pubblicità è un acquisto una tantum che non sblocca altro: tutte le funzioni sono già tue.';
 
   @override
   String get premiumRestoreButton => 'Ripristina acquisti';

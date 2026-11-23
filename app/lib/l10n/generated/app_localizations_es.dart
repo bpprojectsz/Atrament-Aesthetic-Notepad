@@ -396,7 +396,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament es gratis con un pequeño banner publicitario. Eliminarlo es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.';
+      'Atrament es gratis con anuncios. Quitarlos es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.';
 
   @override
   String get premiumRestoreButton => 'Restaurar compras';
@@ -497,7 +497,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Esto eliminará el cuaderno y sus $count notas. Esta acción no se puede deshacer.';
+    return 'Esto eliminará el cuaderno y todas sus notas (en total: $count). Esta acción no se puede deshacer.';
   }
 
   @override

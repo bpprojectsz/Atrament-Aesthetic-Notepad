@@ -1,0 +1,163 @@
+{
+ "en": {
+  "premiumBody": "Atrament is free with ads. Removing them is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+  "deleteNotebookWithCountBody": "This will delete the notebook and all its notes (total: {count}). This can't be undone."
+ },
+ "ar": {
+  "premiumBody": "Atrament مجاني مع الإعلانات. إزالتها عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل."
+ },
+ "bg": {
+  "premiumBody": "Atrament е безплатно с реклами. Премахването им е еднократна покупка, която не отключва нищо друго — всички функции вече са ваши."
+ },
+ "bn": {
+  "premiumBody": "Atrament বিজ্ঞাপনসহ বিনামূল্যে। বিজ্ঞাপন সরানো একবারের কেনাকাটা, যা অন্য কিছু আনলক করে না—সব ফিচার ইতিমধ্যেই আপনার।"
+ },
+ "ca": {
+  "premiumBody": "Atrament és gratuït amb anuncis. Eliminar-los és una compra única que no desbloqueja res més: totes les funcions ja són teves.",
+  "noDebugLogMessage": "Encara no hi ha cap problema per notificar."
+ },
+ "cs": {
+  "premiumBody": "Atrament je zdarma s reklamami. Jejich odstranění je jednorázový nákup, který nic dalšího neodemyká — všechny funkce už máte."
+ },
+ "da": {
+  "premiumBody": "Atrament er gratis med reklamer. At fjerne dem er et engangskøb, der ikke låser noget andet op – alle funktioner er allerede dine."
+ },
+ "de": {
+  "premiumBody": "Atrament ist kostenlos mit Werbung. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.",
+  "emptyRecentNotesTitle": "Noch nichts bearbeitet",
+  "deleteNotebookWithCountBody": "Dadurch werden das Notizbuch und alle seine Notizen gelöscht (insgesamt: {count}). Dies kann nicht rückgängig gemacht werden."
+ },
+ "el": {
+  "premiumBody": "Το Atrament είναι δωρεάν με διαφημίσεις. Η κατάργησή τους είναι μια εφάπαξ αγορά που δεν ξεκλειδώνει τίποτα άλλο — όλες οι λειτουργίες είναι ήδη δικές σας."
+ },
+ "es": {
+  "premiumBody": "Atrament es gratis con anuncios. Quitarlos es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.",
+  "deleteNotebookWithCountBody": "Esto eliminará el cuaderno y todas sus notas (en total: {count}). Esta acción no se puede deshacer."
+ },
+ "fa": {
+  "premiumBody": "Atrament با تبلیغات رایگان است. حذف تبلیغات یک خرید یک‌باره است که چیز دیگری را باز نمی‌کند — همه قابلیت‌ها از قبل مال شماست."
+ },
+ "fi": {
+  "premiumBody": "Atrament on ilmainen mainoksilla. Mainosten poisto on kertaostos, joka ei avaa mitään muuta – kaikki ominaisuudet ovat jo sinun."
+ },
+ "fil": {
+  "premiumBody": "Libre ang Atrament na may mga ad. Ang pag-alis ng mga ad ay isang beses na pagbili na walang ibang bubuksan: sa iyo na ang lahat ng feature."
+ },
+ "fr": {
+  "premiumBody": "Atrament est gratuit avec des publicités. Les supprimer est un achat unique qui ne débloque rien d’autre — toutes les fonctionnalités sont déjà à vous.",
+  "deleteNotebookWithCountBody": "Cela supprimera le carnet et toutes ses notes (au total : {count}). Cette action est irréversible."
+ },
+ "gu": {
+  "premiumBody": "Atrament જાહેરાતો સાથે મફત છે. જાહેરાતો દૂર કરવી એ એક વારની ખરીદી છે જે બીજું કંઈ અનલૉક કરતી નથી — બધી સુવિધાઓ પહેલેથી જ તમારી છે."
+ },
+ "he": {
+  "premiumBody": "Atrament חינמית עם פרסומות. הסרתן היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.",
+  "emptyAllNotesTitle": "אין עדיין פתקיות",
+  "emptyAllNotesBody": "הקש על + כדי לכתוב את הפתקית הראשונה שלך.",
+  "emptyRecentNotesTitle": "אין פתקיות אחרונות",
+  "emptyRecentNotesBody": "פתקיות שתערוך יופיעו כאן.",
+  "moveToNotebookEmptyBody": "אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתקית הזאת.",
+  "deleteNotebookWithCountBody": "פעולה זו תמחק את המחברת ואת כל הפתקיות שבה (סה״כ: {count}). לא ניתן לבטל פעולה זו."
+ },
+ "hi": {
+  "premiumBody": "Atrament विज्ञापनों के साथ मुफ़्त है। इन्हें हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।",
+  "shareFailedMessage": "साझा करने का मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।",
+  "toggleHandwritingMode": "टाइप करने और ड्रॉइंग के बीच स्विच करें",
+  "biometricShareReason": "इस नोट को साझा या निर्यात करने के लिए अनलॉक करें",
+  "verseSectionTitle": "दैनिक बाइबल वचन प्रदर्शन",
+  "dailyReminderToggle": "दैनिक बाइबल वचन रिमाइंडर",
+  "reminderTimeLabel": "रिमाइंडर का समय",
+  "dailyReminderBody": "आपका दैनिक बाइबल वचन तैयार है।",
+  "shareAppTitle": "Atrament साझा करें",
+  "notificationChannelDescription": "आपका वैकल्पिक दैनिक बाइबल वचन रिमाइंडर"
+ },
+ "hu": {
+  "premiumBody": "Az Atrament hirdetésekkel ingyenes. A hirdetések eltávolítása egyszeri vásárlás, amely semmi mást nem old fel – minden funkció már a tiéd."
+ },
+ "id": {
+  "premiumBody": "Atrament gratis dengan iklan. Menghapus iklan adalah pembelian sekali bayar yang tidak membuka hal lain: semua fitur sudah menjadi milik Anda."
+ },
+ "it": {
+  "premiumBody": "Atrament è gratuito con pubblicità. Rimuovere la pubblicità è un acquisto una tantum che non sblocca altro: tutte le funzioni sono già tue.",
+  "toggleHandwritingMode": "Alterna tra digitazione e disegno"
+ },
+ "ja": {
+  "premiumBody": "Atrament は広告付きで無料です。広告の削除は一度きりの購入で、他の機能が解除されるわけではありません — すべての機能はすでにあなたのものです。"
+ },
+ "ko": {
+  "premiumBody": "Atrament는 광고와 함께 무료로 제공됩니다. 광고 제거는 일회성 구매이며 다른 기능이 추가로 열리지는 않습니다 — 모든 기능을 이미 이용하실 수 있습니다.",
+  "paperStyleLined": "줄 노트",
+  "themeSectionTitle": "외관"
+ },
+ "mr": {
+  "premiumBody": "Atrament जाहिरातींसह विनामूल्य आहे. जाहिराती काढणे ही एकदाची खरेदी आहे जी दुसरे काहीही अनलॉक करत नाही — सर्व वैशिष्ट्ये आधीच तुमची आहेत."
+ },
+ "ms": {
+  "premiumBody": "Atrament percuma dengan iklan. Mengalih keluar iklan ialah pembelian sekali sahaja yang tidak membuka apa-apa lagi: semua ciri sudah menjadi milik anda."
+ },
+ "nb": {
+  "premiumBody": "Atrament er gratis med annonser. Å fjerne dem er et engangskjøp som ikke låser opp noe annet – alle funksjoner er allerede dine."
+ },
+ "nl": {
+  "premiumBody": "Atrament is gratis met advertenties. Advertenties verwijderen is een eenmalige aankoop die verder niets ontgrendelt: alle functies zijn al van jou."
+ },
+ "pl": {
+  "premiumBody": "Atrament jest bezpłatny z reklamami. Usunięcie reklam to jednorazowy zakup, który niczego innego nie odblokowuje — wszystkie funkcje są już Twoje."
+ },
+ "pt": {
+  "premiumBody": "O Atrament é gratuito com anúncios. Removê-los é uma compra única que não desbloqueia mais nada — todos os recursos já são seus.",
+  "deleteNotebookWithCountBody": "Isso excluirá o caderno e todas as suas notas (total: {count}). Esta ação não pode ser desfeita."
+ },
+ "pt_PT": {
+  "premiumBody": "O Atrament é gratuito, com anúncios. Removê-los é uma compra única que não desbloqueia mais nada — todas as funcionalidades já são suas.",
+  "deleteNotebookWithCountBody": "Isto eliminará o caderno e todas as suas notas (total: {count}). Esta ação não pode ser anulada."
+ },
+ "ro": {
+  "premiumBody": "Atrament este gratuit, cu reclame. Eliminarea reclamelor este o achiziție unică ce nu deblochează nimic altceva — toate funcțiile sunt deja ale tale."
+ },
+ "ru": {
+  "premiumBody": "Atrament бесплатен и показывает рекламу. Отключение рекламы — разовая покупка, которая ничего больше не открывает: все функции уже доступны вам."
+ },
+ "sk": {
+  "premiumBody": "Atrament je zadarmo s reklamami. Odstránenie reklám je jednorazový nákup, ktorý nič ďalšie neodomyká — všetky funkcie už máte."
+ },
+ "sv": {
+  "premiumBody": "Atrament är gratis med annonser. Att ta bort annonserna är ett engångsköp som inte låser upp något annat – alla funktioner är redan dina."
+ },
+ "sw": {
+  "premiumBody": "Atrament ni bure ikiwa na matangazo. Kuondoa matangazo ni ununuzi wa mara moja usiofungua kitu kingine: vipengele vyote tayari ni vyako.",
+  "noteLockTurnedOffMessage": "Kufunga madokezo kumezimwa kwa sababu kifaa hiki hakina kufuli ya skrini wala bayometriki iliyosanidiwa.",
+  "biometricSetupNeededMessage": "Weka kufuli ya skrini au alama ya kidole kwenye mipangilio ya kifaa kwanza."
+ },
+ "ta": {
+  "premiumBody": "Atrament விளம்பரங்களுடன் இலவசம். விளம்பரங்களை அகற்றுவது ஒருமுறை வாங்கும் வசதி; அது வேறெதையும் திறக்காது — எல்லா அம்சங்களும் ஏற்கெனவே உங்களுடையவை."
+ },
+ "te": {
+  "premiumBody": "Atrament ప్రకటనలతో ఉచితం. ప్రకటనలను తీసివేయడం ఒక్కసారి చేసే కొనుగోలు, ఇది మరేదీ అన్‌లాక్ చేయదు — అన్ని ఫీచర్లు ఇప్పటికే మీవే."
+ },
+ "th": {
+  "premiumBody": "Atrament ใช้ฟรีโดยมีโฆษณา การนำโฆษณาออกเป็นการซื้อครั้งเดียวที่ไม่ปลดล็อกสิ่งอื่น ฟีเจอร์ทั้งหมดเป็นของคุณอยู่แล้ว"
+ },
+ "tr": {
+  "premiumBody": "Atrament reklamlarla birlikte ücretsizdir. Reklamları kaldırmak, başka hiçbir şeyin kilidini açmayan tek seferlik bir satın alımdır: tüm özellikler zaten sizin."
+ },
+ "uk": {
+  "premiumBody": "Atrament безкоштовний і містить рекламу. Вимкнення реклами — разова покупка, яка нічого більше не відкриває: усі функції вже доступні вам."
+ },
+ "ur": {
+  "premiumBody": "Atrament اشتہارات کے ساتھ مفت ہے۔ اشتہارات ہٹانا ایک بار کی خریداری ہے جو کچھ اور ان لاک نہیں کرتی — تمام فیچرز پہلے ہی آپ کے ہیں۔",
+  "paperStyleGrid": "خانے دار",
+  "emptyRecentNotesTitle": "کوئی حالیہ نوٹ نہیں"
+ },
+ "vi": {
+  "premiumBody": "Atrament miễn phí nhưng có quảng cáo. Xóa quảng cáo là giao dịch mua một lần và không mở khóa thêm gì khác: mọi tính năng đều đã thuộc về bạn.",
+  "shareAppSubtitle": "Giới thiệu cho bạn bè",
+  "shareAppMessage": "Hãy thử Atrament, cuốn sổ ghi chú không gây xao nhãng với kết cấu giấy."
+ },
+ "zh": {
+  "premiumBody": "Atrament 免费使用，含广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。"
+ },
+ "zh_Hant": {
+  "premiumBody": "Atrament 可免費使用，內含廣告。移除廣告為一次性購買，不會解鎖其他內容——所有功能本來就已屬於你。"
+ }
+}

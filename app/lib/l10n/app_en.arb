@@ -126,7 +126,7 @@
   "languagePickerTitle": "Choose language",
   "premiumScreenTitle": "Remove Ads",
   "premiumHeadline": "Write without distraction",
-  "premiumBody": "Atrament is free with one small banner ad. Removing it is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
+  "premiumBody": "Atrament is free with ads. Removing them is a one-time purchase that doesn't unlock anything else — every feature is already yours.",
   "premiumRestoreButton": "Restore Purchases",
   "premiumAlreadyProMessage": "You already have Remove Ads. Thank you!",
   "supportSectionTitle": "Support",
@@ -158,7 +158,7 @@
   "notebookActionChangeCover": "Change cover",
   "notebookRenameDialogTitle": "Rename Notebook",
   "notebookCoverPickerTitle": "Choose a cover color",
-  "deleteNotebookWithCountBody": "This will delete the notebook and its {count} notes. This can't be undone.",
+  "deleteNotebookWithCountBody": "This will delete the notebook and all its notes (total: {count}). This can't be undone.",
   "@deleteNotebookWithCountBody": {
     "placeholders": {
       "count": {

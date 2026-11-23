@@ -396,7 +396,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Az Atrament ingyenes, és egyetlen kis hirdetési sávot jelenít meg. A hirdetések eltávolítása egyszeri vásárlás, amely semmi mást nem old fel – minden funkció már a tiéd.';
+      'Az Atrament hirdetésekkel ingyenes. A hirdetések eltávolítása egyszeri vásárlás, amely semmi mást nem old fel – minden funkció már a tiéd.';
 
   @override
   String get premiumRestoreButton => 'Vásárlások visszaállítása';

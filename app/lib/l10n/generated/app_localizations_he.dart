@@ -383,7 +383,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament חינמית עם באנר פרסום קטן אחד. הסרתו היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.';
+      'Atrament חינמית עם פרסומות. הסרתן היא רכישה חד-פעמית שאינה פותחת דבר נוסף — כל התכונות כבר שלך.';
 
   @override
   String get premiumRestoreButton => 'שחזור רכישות';
@@ -432,16 +432,16 @@ class AppLocalizationsHe extends AppLocalizations {
   String get chipRecent => 'אחרונים';
 
   @override
-  String get emptyAllNotesTitle => 'אין פתקים עדיין';
+  String get emptyAllNotesTitle => 'אין עדיין פתקיות';
 
   @override
-  String get emptyAllNotesBody => 'הקש על + כדי לכתוב את הפתק הראשון שלך.';
+  String get emptyAllNotesBody => 'הקש על + כדי לכתוב את הפתקית הראשונה שלך.';
 
   @override
-  String get emptyRecentNotesTitle => 'אין פתקים אחרונים';
+  String get emptyRecentNotesTitle => 'אין פתקיות אחרונות';
 
   @override
-  String get emptyRecentNotesBody => 'פתקים שתערוך יופיעו כאן.';
+  String get emptyRecentNotesBody => 'פתקיות שתערוך יופיעו כאן.';
 
   @override
   String get noteActionRename => 'שנה שם';
@@ -463,7 +463,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get moveToNotebookEmptyBody =>
-      'אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתק הזה.';
+      'אין מחברות אחרות עדיין. צור אחת כדי לארגן את הפתקית הזאת.';
 
   @override
   String get moveToNotebookCreateRow => 'צור מחברת חדשה';
@@ -482,7 +482,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'פעולה זו תמחק את המחברת ואת $count הפתקים שבה. לא ניתן לבטל פעולה זו.';
+    return 'פעולה זו תמחק את המחברת ואת כל הפתקיות שבה (סה״כ: $count). לא ניתן לבטל פעולה זו.';
   }
 
   @override

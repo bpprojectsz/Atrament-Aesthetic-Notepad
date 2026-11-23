@@ -393,7 +393,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament મફત છે અને માત્ર એક નાનું જાહેરાત બેનર બતાવે છે. જાહેરાતો દૂર કરવી એ એક વારની ખરીદી છે જે બીજું કંઈ અનલૉક કરતી નથી — બધી સુવિધાઓ પહેલેથી જ તમારી છે.';
+      'Atrament જાહેરાતો સાથે મફત છે. જાહેરાતો દૂર કરવી એ એક વારની ખરીદી છે જે બીજું કંઈ અનલૉક કરતી નથી — બધી સુવિધાઓ પહેલેથી જ તમારી છે.';
 
   @override
   String get premiumRestoreButton => 'ખરીદીઓ પુનઃસ્થાપિત કરો';

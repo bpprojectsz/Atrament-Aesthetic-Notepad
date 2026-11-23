@@ -126,7 +126,7 @@
   "languagePickerTitle": "Elegir idioma",
   "premiumScreenTitle": "Quitar anuncios",
   "premiumHeadline": "Escribe sin distracciones",
-  "premiumBody": "Atrament es gratis con un pequeño banner publicitario. Eliminarlo es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.",
+  "premiumBody": "Atrament es gratis con anuncios. Quitarlos es una compra única que no desbloquea nada más — todas las funciones ya son tuyas.",
   "premiumRestoreButton": "Restaurar compras",
   "premiumAlreadyProMessage": "Ya tienes “Quitar anuncios”. ¡Gracias!",
   "supportSectionTitle": "Soporte",
@@ -158,7 +158,7 @@
   "notebookActionChangeCover": "Cambiar portada",
   "notebookRenameDialogTitle": "Renombrar cuaderno",
   "notebookCoverPickerTitle": "Elige un color de portada",
-  "deleteNotebookWithCountBody": "Esto eliminará el cuaderno y sus {count} notas. Esta acción no se puede deshacer.",
+  "deleteNotebookWithCountBody": "Esto eliminará el cuaderno y todas sus notas (en total: {count}). Esta acción no se puede deshacer.",
   "@deleteNotebookWithCountBody": {
     "placeholders": {
       "count": {

@@ -17,7 +17,7 @@ and freehand handwriting, notebooks, search, an optional biometric lock, export 
 
 Principles that shape every decision:
 - **Private by default.** Notes live in a local SQLite database. No accounts, no sync, no servers.
-- **Free with one small banner ad.** A one-time purchase ("Remove Ads") removes ads; it unlocks nothing else.
+- **Free with ads** (banners on the notebook screen and Settings, and an occasional full-screen ad). A one-time purchase ("Remove Ads") removes ads; it unlocks nothing else.
 - **43 language options** (41 requested languages + Traditional Chinese and European Portuguese), including
   right-to-left languages. The UI follows the system language on first install and can be overridden manually.
 - **Calm.** No onboarding, no nagging; review and share prompts are rate-limited.

@@ -55,7 +55,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get shareFailedMessage =>
-      'शेयर मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।';
+      'साझा करने का मेनू नहीं खुल सका। कृपया फिर से कोशिश करें।';
 
   @override
   String get settingsTitle => 'सेटिंग्स';
@@ -146,7 +146,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get penStrokeWidth => 'स्ट्रोक चौड़ाई';
 
   @override
-  String get toggleHandwritingMode => 'टाइप करने और बनाने के बीच स्विच करें';
+  String get toggleHandwritingMode => 'टाइप करने और ड्रॉइंग के बीच स्विच करें';
 
   @override
   String get biometricLockReason => 'इस नोट को देखने के लिए अनलॉक करें';
@@ -171,7 +171,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get biometricShareReason =>
-      'इस नोट को शेयर या एक्सपोर्ट करने के लिए अनलॉक करें';
+      'इस नोट को साझा या निर्यात करने के लिए अनलॉक करें';
 
   @override
   String get biometricAuthFailedMessage => 'आपकी पहचान सत्यापित नहीं हो सकी।';
@@ -305,7 +305,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get themeSystem => 'सिस्टम';
 
   @override
-  String get verseSectionTitle => 'दैनिक वचन प्रदर्शन';
+  String get verseSectionTitle => 'दैनिक बाइबल वचन प्रदर्शन';
 
   @override
   String get verseModeWatermark => 'वॉटरमार्क';
@@ -323,17 +323,17 @@ class AppLocalizationsHi extends AppLocalizations {
   String get notificationsSectionTitle => 'सूचनाएं';
 
   @override
-  String get dailyReminderToggle => 'दैनिक वचन अनुस्मारक';
+  String get dailyReminderToggle => 'दैनिक बाइबल वचन रिमाइंडर';
 
   @override
-  String get reminderTimeLabel => 'अनुस्मारक समय';
+  String get reminderTimeLabel => 'रिमाइंडर का समय';
 
   @override
   String get notificationPermissionDenied =>
       'सिस्टम सेटिंग्स में सूचनाएं बंद हैं।';
 
   @override
-  String get dailyReminderBody => 'आपका दैनिक वचन तैयार है।';
+  String get dailyReminderBody => 'आपका दैनिक बाइबल वचन तैयार है।';
 
   @override
   String get privacySectionTitle => 'गोपनीयता';
@@ -363,7 +363,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get rateAppSubtitle => 'ऐप पसंद आ रहा है? समीक्षा छोड़ें';
 
   @override
-  String get shareAppTitle => 'Atrament शेयर करें';
+  String get shareAppTitle => 'Atrament साझा करें';
 
   @override
   String get shareAppSubtitle => 'किसी दोस्त को बताएं';
@@ -393,7 +393,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament एक छोटे बैनर विज्ञापन के साथ मुफ़्त है। इसे हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।';
+      'Atrament विज्ञापनों के साथ मुफ़्त है। इन्हें हटाना एक बार की खरीद है जो और कुछ अनलॉक नहीं करती — हर सुविधा पहले से आपकी है।';
 
   @override
   String get premiumRestoreButton => 'खरीदारी पुनर्स्थापित करें';
@@ -518,5 +518,5 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get notificationChannelDescription =>
-      'आपका वैकल्पिक दैनिक बाइबल वचन स्मरण';
+      'आपका वैकल्पिक दैनिक बाइबल वचन रिमाइंडर';
 }

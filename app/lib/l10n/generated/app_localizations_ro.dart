@@ -394,7 +394,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament este gratuit și afișează un singur banner publicitar mic. Eliminarea reclamelor este o achiziție unică ce nu deblochează nimic altceva — toate funcțiile sunt deja ale tale.';
+      'Atrament este gratuit, cu reclame. Eliminarea reclamelor este o achiziție unică ce nu deblochează nimic altceva — toate funcțiile sunt deja ale tale.';
 
   @override
   String get premiumRestoreButton => 'Restaurează achizițiile';

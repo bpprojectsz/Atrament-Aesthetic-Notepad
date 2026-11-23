@@ -367,11 +367,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get shareAppTitle => 'Chia sẻ Atrament';
 
   @override
-  String get shareAppSubtitle => 'Kể cho một người bạn';
+  String get shareAppSubtitle => 'Giới thiệu cho bạn bè';
 
   @override
   String get shareAppMessage =>
-      'Hãy thử Atrament, một cuốn sổ ghi chú không xao nhãng với kết cấu giấy.';
+      'Hãy thử Atrament, cuốn sổ ghi chú không gây xao nhãng với kết cấu giấy.';
 
   @override
   String get languageSectionTitle => 'Ngôn ngữ';
@@ -393,7 +393,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament miễn phí và chỉ hiển thị một biểu ngữ quảng cáo nhỏ. Xóa quảng cáo là giao dịch mua một lần và không mở khóa thêm gì khác: mọi tính năng đều đã thuộc về bạn.';
+      'Atrament miễn phí nhưng có quảng cáo. Xóa quảng cáo là giao dịch mua một lần và không mở khóa thêm gì khác: mọi tính năng đều đã thuộc về bạn.';
 
   @override
   String get premiumRestoreButton => 'Khôi phục giao dịch mua';

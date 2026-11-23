@@ -393,7 +393,7 @@ class AppLocalizationsNb extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament er gratis og viser ett lite annonsebanner. Å fjerne annonsene er et engangskjøp som ikke låser opp noe annet – alle funksjoner er allerede dine.';
+      'Atrament er gratis med annonser. Å fjerne dem er et engangskjøp som ikke låser opp noe annet – alle funksjoner er allerede dine.';
 
   @override
   String get premiumRestoreButton => 'Gjenopprett kjøp';

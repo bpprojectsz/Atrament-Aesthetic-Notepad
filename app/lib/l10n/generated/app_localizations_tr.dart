@@ -392,7 +392,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ücretsizdir ve tek bir küçük reklam bannerı gösterir. Reklamları kaldırmak, başka hiçbir şeyin kilidini açmayan tek seferlik bir satın alımdır: tüm özellikler zaten sizin.';
+      'Atrament reklamlarla birlikte ücretsizdir. Reklamları kaldırmak, başka hiçbir şeyin kilidini açmayan tek seferlik bir satın alımdır: tüm özellikler zaten sizin.';
 
   @override
   String get premiumRestoreButton => 'Satın alımları geri yükle';

@@ -399,7 +399,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ist kostenlos und zeigt einen kleinen Werbebanner. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
+      'Atrament ist kostenlos mit Werbung. Das Entfernen der Werbung ist ein einmaliger Kauf, der nichts anderes freischaltet — alle Funktionen gehören dir bereits.';
 
   @override
   String get premiumRestoreButton => 'Käufe wiederherstellen';
@@ -457,7 +457,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Tippe auf +, um deine erste Notiz zu schreiben.';
 
   @override
-  String get emptyRecentNotesTitle => 'Nichts Aktuelles';
+  String get emptyRecentNotesTitle => 'Noch nichts bearbeitet';
 
   @override
   String get emptyRecentNotesBody =>
@@ -502,7 +502,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String deleteNotebookWithCountBody(int count) {
-    return 'Dadurch werden das Notizbuch und seine $count Notizen gelöscht. Dies kann nicht rückgängig gemacht werden.';
+    return 'Dadurch werden das Notizbuch und alle seine Notizen gelöscht (insgesamt: $count). Dies kann nicht rückgängig gemacht werden.';
   }
 
   @override

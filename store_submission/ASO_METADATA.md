@@ -46,11 +46,17 @@ and share however you like.
 
 Every feature is free, permanently — handwriting, every paper texture,
 every font, unlimited notes, exports, biometric lock, and notifications.
-Removing the one small banner ad is a one-time $14.99 purchase that
-doesn't unlock anything else, because there's nothing left to unlock.
+Atrament is supported by ads. Removing them is a one-time $14.99
+purchase that doesn't unlock anything else, because there's nothing left
+to unlock.
 
-Available in English, Spanish, French, German, Portuguese, Arabic, Hindi,
-Japanese, Korean, Chinese, and Hebrew.
+Available in 41 languages, including English, Chinese (Simplified and
+Traditional), Spanish, Hindi, Arabic, Portuguese (Brazil and Portugal),
+Bengali, Russian, Japanese, German, French, Urdu, Indonesian, Korean,
+Turkish, Vietnamese, Italian, Thai, Persian, Tamil, Telugu, Marathi,
+Gujarati, Polish, Ukrainian, Dutch, Malay, Swahili, Romanian, Greek,
+Czech, Swedish, Hungarian, Hebrew, Danish, Finnish, Norwegian, Slovak,
+Bulgarian, Catalan, and Filipino.
 
 ## Target Keywords Reference (from market research)
 

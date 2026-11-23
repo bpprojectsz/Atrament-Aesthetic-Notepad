@@ -374,7 +374,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament は小さなバナー広告付きで無料です。広告の削除は一度きりの購入で、他の機能は何もロックされていません — すべての機能はすでにあなたのものです。';
+      'Atrament は広告付きで無料です。広告の削除は一度きりの購入で、他の機能が解除されるわけではありません — すべての機能はすでにあなたのものです。';
 
   @override
   String get premiumRestoreButton => '購入を復元';

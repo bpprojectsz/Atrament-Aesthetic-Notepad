@@ -393,7 +393,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament विनामूल्य आहे आणि फक्त एक लहान जाहिरात बॅनर दाखवते. जाहिराती काढणे ही एकदाची खरेदी आहे जी दुसरे काहीही अनलॉक करत नाही — सर्व वैशिष्ट्ये आधीच तुमची आहेत.';
+      'Atrament जाहिरातींसह विनामूल्य आहे. जाहिराती काढणे ही एकदाची खरेदी आहे जी दुसरे काहीही अनलॉक करत नाही — सर्व वैशिष्ट्ये आधीच तुमची आहेत.';
 
   @override
   String get premiumRestoreButton => 'खरेदी पुनर्संचयित करा';

@@ -86,11 +86,14 @@ flutter test
 - **Persistence**: `sqflite` (notes/notebooks, with an FTS5 full-text
   search index) + `SharedPreferences` (settings). No backend, no cloud
   sync, entirely local.
-- **Monetization**: free tier with every feature fully functional; a
-  single small banner ad; a one-time $14.99 purchase removes the ad and
+- **Monetization**: free tier with every feature fully functional; ads
+  (a banner on the notebook screen and in Settings, and an occasional
+  full-screen ad); a one-time $14.99 purchase removes the ads and
   unlocks nothing else, since nothing is gated.
-- **Localization**: 11 languages via ARB files and
-  `flutter_localizations`, including RTL support for Arabic and Hebrew.
+- **Localization**: 43 language options (41 languages plus Traditional
+  Chinese and European Portuguese) via ARB files and
+  `flutter_localizations`, including RTL support for Arabic, Hebrew,
+  Persian and Urdu.
 - **Error handling**: a global `ErrorHandler` (installed in `main.dart`)
   catches framework and platform errors; every storage/plugin operation
   degrades gracefully rather than crashing (e.g. AdMob failures collapse

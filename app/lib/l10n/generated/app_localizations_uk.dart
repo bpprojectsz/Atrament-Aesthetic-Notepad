@@ -394,7 +394,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament безкоштовний і показує один невеликий рекламний банер. Вимкнення реклами — разова покупка, яка нічого більше не відкриває: усі функції вже доступні вам.';
+      'Atrament безкоштовний і містить рекламу. Вимкнення реклами — разова покупка, яка нічого більше не відкриває: усі функції вже доступні вам.';
 
   @override
   String get premiumRestoreButton => 'Відновити покупки';

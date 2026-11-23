@@ -391,7 +391,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament رایگان است و فقط یک بنر تبلیغاتی کوچک نشان می‌دهد. حذف تبلیغات یک خرید یک‌باره است که چیز دیگری را باز نمی‌کند — همه قابلیت‌ها از قبل مال شماست.';
+      'Atrament با تبلیغات رایگان است. حذف تبلیغات یک خرید یک‌باره است که چیز دیگری را باز نمی‌کند — همه قابلیت‌ها از قبل مال شماست.';
 
   @override
   String get premiumRestoreButton => 'بازیابی خریدها';

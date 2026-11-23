@@ -397,7 +397,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament on ilmainen ja näyttää yhden pienen mainosbannerin. Mainosten poisto on kertaostos, joka ei avaa mitään muuta – kaikki ominaisuudet ovat jo sinun.';
+      'Atrament on ilmainen mainoksilla. Mainosten poisto on kertaostos, joka ei avaa mitään muuta – kaikki ominaisuudet ovat jo sinun.';
 
   @override
   String get premiumRestoreButton => 'Palauta ostokset';

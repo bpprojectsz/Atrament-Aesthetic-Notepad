@@ -396,7 +396,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament är gratis och visar en liten annonsbanner. Att ta bort annonserna är ett engångsköp som inte låser upp något annat – alla funktioner är redan dina.';
+      'Atrament är gratis med annonser. Att ta bort annonserna är ett engångsköp som inte låser upp något annat – alla funktioner är redan dina.';
 
   @override
   String get premiumRestoreButton => 'Återställ köp';

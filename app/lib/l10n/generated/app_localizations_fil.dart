@@ -396,7 +396,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Libre ang Atrament at nagpapakita lang ng isang maliit na ad banner. Ang pag-alis ng mga ad ay isang beses na pagbili na walang ibang bubuksan: sa iyo na ang lahat ng feature.';
+      'Libre ang Atrament na may mga ad. Ang pag-alis ng mga ad ay isang beses na pagbili na walang ibang bubuksan: sa iyo na ang lahat ng feature.';
 
   @override
   String get premiumRestoreButton => 'I-restore ang mga pagbili';

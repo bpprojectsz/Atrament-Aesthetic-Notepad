@@ -394,7 +394,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament gratis dan hanya menampilkan satu banner iklan kecil. Menghapus iklan adalah pembelian sekali bayar yang tidak membuka hal lain: semua fitur sudah menjadi milik Anda.';
+      'Atrament gratis dengan iklan. Menghapus iklan adalah pembelian sekali bayar yang tidak membuka hal lain: semua fitur sudah menjadi milik Anda.';
 
   @override
   String get premiumRestoreButton => 'Pulihkan pembelian';

@@ -395,7 +395,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament jest bezpłatny i pokazuje jeden mały baner reklamowy. Usunięcie reklam to jednorazowy zakup, który niczego innego nie odblokowuje — wszystkie funkcje są już Twoje.';
+      'Atrament jest bezpłatny z reklamami. Usunięcie reklam to jednorazowy zakup, który niczego innego nie odblokowuje — wszystkie funkcje są już Twoje.';
 
   @override
   String get premiumRestoreButton => 'Przywróć zakupy';

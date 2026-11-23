@@ -383,7 +383,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ใช้ฟรีและแสดงแบนเนอร์โฆษณาเล็ก ๆ เพียงอันเดียว การนำโฆษณาออกเป็นการซื้อครั้งเดียวที่ไม่ปลดล็อกสิ่งอื่น ฟีเจอร์ทั้งหมดเป็นของคุณอยู่แล้ว';
+      'Atrament ใช้ฟรีโดยมีโฆษณา การนำโฆษณาออกเป็นการซื้อครั้งเดียวที่ไม่ปลดล็อกสิ่งอื่น ฟีเจอร์ทั้งหมดเป็นของคุณอยู่แล้ว';
 
   @override
   String get premiumRestoreButton => 'กู้คืนการซื้อ';

@@ -261,7 +261,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get paperStyleDotGrid => 'نقطہ دار';
 
   @override
-  String get paperStyleGrid => 'گرڈ';
+  String get paperStyleGrid => 'خانے دار';
 
   @override
   String get paperStyleBlank => 'خالی';
@@ -393,7 +393,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament مفت ہے اور صرف ایک چھوٹا اشتہاری بینر دکھاتا ہے۔ اشتہارات ہٹانا ایک بار کی خریداری ہے جو کچھ اور ان لاک نہیں کرتی — تمام فیچرز پہلے ہی آپ کے ہیں۔';
+      'Atrament اشتہارات کے ساتھ مفت ہے۔ اشتہارات ہٹانا ایک بار کی خریداری ہے جو کچھ اور ان لاک نہیں کرتی — تمام فیچرز پہلے ہی آپ کے ہیں۔';
 
   @override
   String get premiumRestoreButton => 'خریداریاں بحال کریں';
@@ -450,7 +450,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get emptyAllNotesBody => 'اپنا پہلا نوٹ لکھنے کے لیے + پر ٹیپ کریں۔';
 
   @override
-  String get emptyRecentNotesTitle => 'کچھ حالیہ نہیں';
+  String get emptyRecentNotesTitle => 'کوئی حالیہ نوٹ نہیں';
 
   @override
   String get emptyRecentNotesBody =>

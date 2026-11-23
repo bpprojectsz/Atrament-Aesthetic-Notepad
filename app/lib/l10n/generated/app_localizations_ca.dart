@@ -395,7 +395,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament és gratuït i mostra un petit bàner publicitari. Eliminar els anuncis és una compra única que no desbloqueja res més: totes les funcions ja són teves.';
+      'Atrament és gratuït amb anuncis. Eliminar-los és una compra única que no desbloqueja res més: totes les funcions ja són teves.';
 
   @override
   String get premiumRestoreButton => 'Restaura les compres';
@@ -415,7 +415,7 @@ class AppLocalizationsCa extends AppLocalizations {
       'Envia un informe tècnic si alguna cosa no funciona';
 
   @override
-  String get noDebugLogMessage => 'Encara no hi ha res per informar.';
+  String get noDebugLogMessage => 'Encara no hi ha cap problema per notificar.';
 
   @override
   String get clearDebugLogButton => 'Esborra el registre de depuració';

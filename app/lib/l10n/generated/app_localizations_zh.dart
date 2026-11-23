@@ -369,7 +369,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament 免费使用，附带一个小型横幅广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。';
+      'Atrament 免费使用，含广告。移除广告为一次性购买，不会解锁其他内容——所有功能已经属于你。';
 
   @override
   String get premiumRestoreButton => '恢复购买';
@@ -861,7 +861,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get premiumBody =>
-      'Atrament 可免費使用，僅顯示一個小型橫幅廣告。移除廣告為一次性購買，不會解鎖其他內容——所有功能本來就已屬於你。';
+      'Atrament 可免費使用，內含廣告。移除廣告為一次性購買，不會解鎖其他內容——所有功能本來就已屬於你。';
 
   @override
   String get premiumRestoreButton => '還原購買項目';

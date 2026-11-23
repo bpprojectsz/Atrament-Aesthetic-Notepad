@@ -395,7 +395,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament বিনামূল্যে এবং এতে মাত্র একটি ছোট বিজ্ঞাপন ব্যানার দেখানো হয়। বিজ্ঞাপন সরানো একবারের কেনাকাটা, যা অন্য কিছু আনলক করে না—সব ফিচার ইতিমধ্যেই আপনার।';
+      'Atrament বিজ্ঞাপনসহ বিনামূল্যে। বিজ্ঞাপন সরানো একবারের কেনাকাটা, যা অন্য কিছু আনলক করে না—সব ফিচার ইতিমধ্যেই আপনার।';
 
   @override
   String get premiumRestoreButton => 'কেনাকাটা পুনরুদ্ধার করুন';

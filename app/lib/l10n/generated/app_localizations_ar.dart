@@ -388,7 +388,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament مجاني مع إعلان بانر صغير واحد. إزالته عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.';
+      'Atrament مجاني مع الإعلانات. إزالتها عملية شراء لمرة واحدة لا تفتح أي شيء آخر — كل الميزات لك بالفعل.';
 
   @override
   String get premiumRestoreButton => 'استعادة المشتريات';

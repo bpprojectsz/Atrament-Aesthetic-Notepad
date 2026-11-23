@@ -395,7 +395,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament is gratis en toont één kleine advertentiebanner. Advertenties verwijderen is een eenmalige aankoop die verder niets ontgrendelt: alle functies zijn al van jou.';
+      'Atrament is gratis met advertenties. Advertenties verwijderen is een eenmalige aankoop die verder niets ontgrendelt: alle functies zijn al van jou.';
 
   @override
   String get premiumRestoreButton => 'Aankopen herstellen';

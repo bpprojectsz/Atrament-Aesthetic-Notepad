@@ -126,7 +126,7 @@
   "languagePickerTitle": "Choisir la langue",
   "premiumScreenTitle": "Supprimer les publicités",
   "premiumHeadline": "Écrivez sans distraction",
-  "premiumBody": "Atrament est gratuit avec une petite bannière publicitaire. La supprimer est un achat unique qui ne débloque rien d’autre — toutes les fonctionnalités sont déjà à vous.",
+  "premiumBody": "Atrament est gratuit avec des publicités. Les supprimer est un achat unique qui ne débloque rien d’autre — toutes les fonctionnalités sont déjà à vous.",
   "premiumRestoreButton": "Restaurer les achats",
   "premiumAlreadyProMessage": "Vous avez déjà « Supprimer les publicités ». Merci !",
   "supportSectionTitle": "Assistance",
@@ -158,7 +158,7 @@
   "notebookActionChangeCover": "Changer la couverture",
   "notebookRenameDialogTitle": "Renommer le carnet",
   "notebookCoverPickerTitle": "Choisir une couleur de couverture",
-  "deleteNotebookWithCountBody": "Cela supprimera le carnet et ses {count} notes. Cette action est irréversible.",
+  "deleteNotebookWithCountBody": "Cela supprimera le carnet et toutes ses notes (au total : {count}). Cette action est irréversible.",
   "@deleteNotebookWithCountBody": {
     "placeholders": {
       "count": {

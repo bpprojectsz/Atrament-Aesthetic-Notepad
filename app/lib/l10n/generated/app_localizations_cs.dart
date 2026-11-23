@@ -393,7 +393,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament je zdarma a zobrazuje jeden malý reklamní banner. Odstranění reklam je jednorázový nákup, který nic dalšího neodemyká — všechny funkce už máte.';
+      'Atrament je zdarma s reklamami. Jejich odstranění je jednorázový nákup, který nic dalšího neodemyká — všechny funkce už máte.';
 
   @override
   String get premiumRestoreButton => 'Obnovit nákupy';

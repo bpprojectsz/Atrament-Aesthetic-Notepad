@@ -160,7 +160,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get noteLockTurnedOffMessage =>
-      'Kufunga madokezo kumezimwa kwa sababu kifaa hiki hakina kufunga skrini wala bayometriki.';
+      'Kufunga madokezo kumezimwa kwa sababu kifaa hiki hakina kufuli ya skrini wala bayometriki iliyosanidiwa.';
 
   @override
   String get biometricEnableReason =>
@@ -180,7 +180,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get biometricSetupNeededMessage =>
-      'Weka kufunga skrini au alama ya kidole kwenye mipangilio ya kifaa kwanza.';
+      'Weka kufuli ya skrini au alama ya kidole kwenye mipangilio ya kifaa kwanza.';
 
   @override
   String get privacyChoicesTitle => 'Chaguo za faragha';
@@ -398,7 +398,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament ni bure na huonyesha tangazo moja dogo. Kuondoa matangazo ni ununuzi wa mara moja usiofungua kitu kingine: vipengele vyote tayari ni vyako.';
+      'Atrament ni bure ikiwa na matangazo. Kuondoa matangazo ni ununuzi wa mara moja usiofungua kitu kingine: vipengele vyote tayari ni vyako.';
 
   @override
   String get premiumRestoreButton => 'Rejesha ununuzi';

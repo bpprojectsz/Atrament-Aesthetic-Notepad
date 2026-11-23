@@ -396,7 +396,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament е безплатно и показва един малък рекламен банер. Премахването на рекламите е еднократна покупка, която не отключва нищо друго — всички функции вече са ваши.';
+      'Atrament е безплатно с реклами. Премахването им е еднократна покупка, която не отключва нищо друго — всички функции вече са ваши.';
 
   @override
   String get premiumRestoreButton => 'Възстановяване на покупките';

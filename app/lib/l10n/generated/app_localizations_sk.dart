@@ -392,7 +392,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get premiumBody =>
-      'Atrament je zadarmo a zobrazuje jeden malý reklamný banner. Odstránenie reklám je jednorazový nákup, ktorý nič ďalšie neodomyká — všetky funkcie už máte.';
+      'Atrament je zadarmo s reklamami. Odstránenie reklám je jednorazový nákup, ktorý nič ďalšie neodomyká — všetky funkcie už máte.';
 
   @override
   String get premiumRestoreButton => 'Obnoviť nákupy';
