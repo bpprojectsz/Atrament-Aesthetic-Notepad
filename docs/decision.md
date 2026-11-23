@@ -134,3 +134,10 @@ history; if a decision is reversed, add a new entry that says so). Format: `ID �
 - **D-116** The device checklist for the owner is `docs/device_checklist.md` (first launch, picker, screens, layout stress, export incl. a long non-Latin note, reminders and channel text, lock and iOS prompts, ads and consent, review). Nothing in it has been run: it needs the owner and a real phone.
 - **D-117** OPEN: the iOS permission prompts in `InfoPlist.strings` (Face ID, tracking; 42 languages) were never machine-screened because they are not ARB keys. The screening tool could be extended to read them.
 
+## L. Final full read of every language (22-23 Nov 2026)
+
+- **D-118** Owner rule applied: at the end of the language work every string is read in full by me, one language at a time, key name, English and translation side by side; no agents; no script choosing what to read; the machine back-translation is not the basis. Done for the English source (159 keys) and all 42 language files. **75 corrections in 43 files.** Record: `reviews/final-read-2026-11-22.md`; the applied set is `reviews/final_fixes.json`. This supersedes D-115's "only changed strings were re-read": the whole of every file was read again in its final state.
+- **D-119** English source corrected: `premiumBody` now says Atrament is free with ads (the old "one small banner ad" was wrong: banners on two screens plus full-screen ads), and `deleteNotebookWithCountBody` uses the count-neutral "(total: {count})". All 42 languages carry the new `premiumBody`. `README.md`, `store_submission/ASO_METADATA.md` and `docs/blueprint.md` had the same wrong claim and were fixed; README and the store text said 11 languages and now say 43 options / 41 languages.
+- **D-120** Within-language consistency fixes: Hebrew note term unified to "פתקית"; Hindi reminder/share/export terms unified. Singular-count fixes in de, es, fr, he, pt, pt_PT.
+- **D-121** Still open for a native speaker: see the "Still open" list in the review record (appName script in ar/he/hi, Thai "บันทึก", Swahili terms, Korean "노트북", and others). iOS `InfoPlist.strings` prompts and Quill labels were not part of this read.
+

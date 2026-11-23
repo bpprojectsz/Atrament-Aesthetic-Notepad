@@ -56,3 +56,23 @@ All 159 keys of each of the 42 non-English files are read (the display tool stop
 | vi | 159/159 | premiumBody, shareAppMessage, shareAppSubtitle | 112 "Kể cho một người bạn" = narrate to a friend; now "Giới thiệu cho bạn bè" (recommend). 113 "không xao nhãng" = "not distracted": now "không gây xao nhãng". "Chấm bi" for Dot Grid is used for dotted notebooks (kept). |
 | zh | 159/159 | premiumBody | No wording errors (Simplified, mainland terms: 中性笔, 面容 ID, 高级版). |
 | zh_Hant | 159/159 | premiumBody | No wording errors. Taiwan wording confirmed (儲存, 設定, 匯出, 檢視, 裝置, 隱私權, 偵錯, 浮水印). 159 "你可選用的每日經文提醒" is correct but a little stiff. |
+
+## Result
+
+All 42 non-English files (159 keys each, 6,678 strings) and the English source (159 keys) were read in full by me, one language at a time, with key name, English and translation side by side. No agent and no script chose what to read. The machine back-translation was not the basis for any verdict here.
+
+**75 strings corrected in 43 files** (the English source and 42 languages), applied with `tools/dev/apply_l10n_fixes.py` and confirmed by the real generator (CI `regen`: only English doc comments and one line wrap changed).
+
+Kinds of correction:
+
+1. **Wrong claim in the English source, all 42 languages** (`premiumBody`): said "free with one small banner ad". The app shows banners on two screens and full-screen ads after some actions. Rewritten in English and in every language. Same wrong claim fixed in `README.md`, `store_submission/ASO_METADATA.md` and `docs/blueprint.md`. README ("11 languages") and the store text (11 languages) updated to the real 43 options.
+2. **Plural noun after a count** (`deleteNotebookWithCountBody`: "its {count} notes" reads "its 1 notes"): English, de, es, fr, he, pt, pt_PT now use the count-neutral "(total: {count})" pattern the other languages already had.
+3. **Inconsistent terms inside one language**: Hebrew note ("פתקית" vs "פתק/פתקים", 6 strings unified); Hindi reminder (3 forms), share (शेयर/साझा) and export (एक्सपोर्ट/निर्यात).
+4. **Wrong or vague wording**: German "Nichts Aktuelles" (nothing current), Catalan "res per informar" (calque), Hindi "बनाने" for drawing, Italian one-way switch label, Korean "줄무늬"/"모양"/particle "은" and stiff "당신의", Swahili "kufunga skrini" (verb where a noun is needed, 2 strings), Urdu "گرڈ" and terse "کچھ حالیہ نہیں", Vietnamese "Kể cho một người bạn" and "không xao nhãng", Hindi "वचन" alone (can mean promise; "बाइबल" added).
+
+## Still open (needs a native speaker or the owner)
+
+- App name: Arabic, Hebrew and Hindi write it in their own script in `appName` but Latin "Atrament" in rows 109/111/113/120 (owner decision).
+- Thai "บันทึก" is Save, note and log. Swahili "dokezo", "Karatasi ya ngozi", "Italiki". Korean "노트북" also means laptop. Tamil "முடக்கம்" for Off. Persian "نقطه‌ای" vs "نقطه‌چین". Italian "Velina" for Vellum. Russian/Ukrainian "Вернуть/Повернути" for Redo. Urdu "کور" for cover. Arabic "بصمة الوجه" for Face ID.
+- Not covered by this read: the iOS permission prompts (`InfoPlist.strings`) and the Quill editor labels for Tamil, Telugu, Marathi and Filipino (read earlier, separately).
+- No native-speaker review and no device test of any language.
