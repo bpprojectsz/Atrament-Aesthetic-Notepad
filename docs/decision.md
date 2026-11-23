@@ -141,3 +141,8 @@ history; if a decision is reversed, add a new entry that says so). Format: `ID �
 - **D-120** Within-language consistency fixes: Hebrew note term unified to "פתקית"; Hindi reminder/share/export terms unified. Singular-count fixes in de, es, fr, he, pt, pt_PT.
 - **D-121** Still open for a native speaker: see the "Still open" list in the review record (appName script in ar/he/hi, Thai "บันทึก", Swahili terms, Korean "노트북", and others). iOS `InfoPlist.strings` prompts and Quill labels were not part of this read.
 
+## M. Batch 19 (23 Nov 2026)
+
+- **D-122** On the owner's "merge": `languages` (`ea84f09`) merged into `main` with a merge commit (`70c4fdf`, history kept); `main`'s tree equals `languages`. Checked first: both workflows are `workflow_dispatch` only, so the push to `main` cannot start the APK build. CI on `main`: run 45284970440 green. **The APK build was not triggered** (still the owner's call).
+- **D-123** Still open after the merge: device testing (`docs/device_checklist.md`), native-speaker review, the iOS Codemagic build, real AdMob IDs / consent message / App Store ID / SKAdNetwork list, deploying the website, the Apple tracking-label decision (D-109), whether ad-free users should skip consent/ATT (D-110), `file_picker` (D-093), the app-name script in ar/he/hi, and the English-only website, cover-colour names and daily verses.
+
